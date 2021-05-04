@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Calendar Problem &mdash; Leo Irakliotis&#39; courses  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Fencepost techniques" href="fencepost.html" />
+    <link rel="prev" title="Nested Loops" href="nestedLoops.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Leo Irakliotis' courses
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Courses</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html">Course operations in response to the COVID-19 measures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html#recordings">Recordings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#ground-rules">Ground rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#deadlines">Deadlines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#academic-integrity">Academic integrity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#professionalism">Professionalism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#zoom">Zoom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#formal-notices">Formal notices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#inclusion-statement">Inclusion statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../notes.html">Leo's notes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="searsTower.html">Drawing Sears Tower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="integerDivision.html">Integer division and modular arithmetic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nestedLoops.html">Nested Loops</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The Calendar Problem</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-blue-week">The “blue” week</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-yellow-week">The “yellow” week</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remaining-analysis-and-observations">Remaining analysis and observations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fencepost.html">Fencepost techniques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batman.html">Riddler’s next caper</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP180/introduction.html">COMP 180 Data Analysis for the Sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Computer Algorithms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../DEI/DEI.html">DEI initiative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DBD/introduction.html">Databases Design</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../introduction.html">COMP 170 Introduction to Java Programming</a> &raquo;</li>
+        
+          <li><a href="../notes.html">Leo’s notes</a> &raquo;</li>
+        
+      <li>The Calendar Problem</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/COMP170/notes/calendar.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-calendar-problem">
+<h1>The Calendar Problem<a class="headerlink" href="#the-calendar-problem" title="Permalink to this headline">¶</a></h1>
+<p>The calendar problem is seemingly a difficult one. There are several different scenarios and we do not really know how to navigate them. One way to navigate different scenarios in programming is to use conditional statements, like <cite>if-then-else</cite>. At this stage in the course however, we have not “discovered” conditionals. And it is worth trying to solve the problem without looking ahead in the course material.</p>
+<p>Solving the calendar problem without conditional statements is a fantastic learning moment. A solution without conditional statements requires some serious analysis first, illustrating that most computing problems follow the 80-20 rule: 80% thinking, 20% coding. The analysis begins by turning off our IDE, moving our focus from coding to thinking. Next, we draw a few scenarios on paper, on a notes app, whatever works for you.</p>
+<div class="figure align-right" id="id1" style="width: 60%">
+<img alt="../../_images/Calendar.png" src="../../_images/Calendar.png" />
+<p class="caption"><span class="caption-text">A 31-day month with Sunday as its <strong>second</strong> day.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>As we try different combinations, e.g., 31-day month whose first day is a Sunday, or a 28-day month whose first day is a Tuesday, etc, we begin to see a pattern like the one to the right. The lines of the calendar are separated into three groups. The first group (yellow) <em>may</em> have a few empty spaces in the front. The second group (blue) has every space filled with a date. And the third group (green) <em>may</em> have a few empty spaces at the back.</p>
+<div class="section" id="the-blue-week">
+<h2>The “blue” week<a class="headerlink" href="#the-blue-week" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-left" id="id2" style="width: 60%">
+<img alt="../../_images/sundayDate.png" src="../../_images/sundayDate.png" />
+<p class="caption"><span class="caption-text">Printing the “blue” week.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>The middle group (blue), shown to the left, may be the easiest to describe. It prints the dates for a full week, starting with Sunday. It adds 1 for every subsequent day. We do this for as many days as there are in a week. This is an operation easily implemented with a for-loop. Let’s call the loop’s variable <span class="math notranslate nohighlight">\(\texttt{day}\)</span>; its range will be <span class="math notranslate nohighlight">\(0\leq\texttt{day}&lt;7\)</span>.</p>
+<p>The code now becomes straight forward. We need a method that prints seven numbers, starting with the date of the starting Sunday, which we assign to <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">sundayDate</span></code>. The first value of the loop variable is 0 and so <code class="docutils literal notranslate"><span class="pre">sundayDate+0</span></code> prints the date of the starting Sunday. The constant <code class="docutils literal notranslate"><span class="pre">DAYS_IN_A_WEEK</span></code> is assigned the value 7, to make our code more descriptive.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">blueWeek</span><span class="p">(</span><span class="kt">int</span> <span class="n">sundayDate</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">day</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="n">day</span> <span class="o">&lt;</span> <span class="n">DAYS_IN_A_WEEK</span><span class="p">;</span> <span class="n">day</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// print the date: sundayDate + day;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-yellow-week">
+<h2>The “yellow” week<a class="headerlink" href="#the-yellow-week" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id3" style="width: 60%">
+<img alt="../../_images/yellow.png" src="../../_images/yellow.png" />
+<p class="caption"><span class="caption-text">Printing the “yellow” week.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Next let’s look at the first line of the calendar, the “yellow” week. After a few hours of head-scratching we observe that the yellow week comprises two groups. A group of empty cells (in orange outlines) and a group of filled cells (pink outline). The total number of cells in these two groups is always 7 (<code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">DAYS_IN_A_WEEK</span></code>).</p>
+<p>Can we tell how many cells are in each group? In the example here, we see that if the first Sunday of the month is its second day, there are 6 empty cells. Pretty fast we come with the following table:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><dl>
+<dt>Sunday</dt><dd><div class="line-block">
+<div class="line">date</div>
+</div>
+</dd>
+</dl>
+</th>
+<th class="head"><dl>
+<dt>Empty</dt><dd><div class="line-block">
+<div class="line">cells</div>
+</div>
+</dd>
+</dl>
+</th>
+<th class="head"><dl>
+<dt>Filled</dt><dd><div class="line-block">
+<div class="line">cells</div>
+</div>
+</dd>
+</dl>
+</th>
+<th class="head"><p>Expressions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>7</p></td>
+<td rowspan="7"></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>6</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>5</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>2</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>1</p></td>
+<td><p>6</p></td>
+</tr>
+</tbody>
+</table>
+<p>The analysis above necessitates two loops: one loop to print the empty cells, followed by another loop to print the filled cells. Notice that the loop for empty cells <em>may</em> not run at all (in case Sunday falls on the first of the month).</p>
+</div>
+<div class="section" id="remaining-analysis-and-observations">
+<h2>Remaining analysis and observations<a class="headerlink" href="#remaining-analysis-and-observations" title="Permalink to this headline">¶</a></h2>
+<p>The analysis above can be used to determine how to print the “green” week. After that, the only thing remaining is to determine how many “blue” weeks to print. And the final code will take the following form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">yellowWeek</span>
+<span class="nb">print</span> <span class="n">blueWeek</span> <span class="o">//</span> \
+<span class="o">...</span>            <span class="o">//</span>   <span class="n">Do</span> <span class="n">this</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">4</span> <span class="n">times</span>
+<span class="nb">print</span> <span class="n">blueWeek</span> <span class="o">//</span> <span class="o">/</span>
+<span class="nb">print</span> <span class="n">greenWeek</span>
+</pre></div>
+</div>
+<p>It is left as an exercise to determine the <code class="docutils literal notranslate"><span class="pre">greenWeek</span></code> method and the number of times we invoke <code class="docutils literal notranslate"><span class="pre">blueWeek</span></code>.</p>
+<p>Let’s close with an <strong>observation.</strong> The problem starts with the requirement to not use conditional statements. To be precise, what we have avoided so far is the explicit use of <cite>if-then-else</cite> statements. Because our code will contain for-loops, there will be <em>implied</em> conditions: the loops’ terminating conditions.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fencepost.html" class="btn btn-neutral float-right" title="Fencepost techniques" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nestedLoops.html" class="btn btn-neutral float-left" title="Nested Loops" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019-2021, Leo Irakliotis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
