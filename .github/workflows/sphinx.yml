@@ -5,4 +5,4 @@ jobs:
         name: Course Documentation Project
         runs-on: ubuntu-latest
         steps:
-            -uses: lgreco/cdp@master
+            - uses: lgreco/cdp@master
