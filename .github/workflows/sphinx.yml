@@ -12,10 +12,13 @@ jobs:
     build-and-publish-cdp:
         runs-on: ubuntu-latest
         steps:
-            name: build
-            uses: actions/checkout@main # make local copy of repo
+            - uses: actions/checkout@main # make local copy of repo
             - run: pip install sphinx
             - run: pip install sphinx-rtd-theme
             - run: pip install sphinxcontrib.gist
             - run: sphinx-build -b html docs/source xyz # need to parameterize later
+            - uses: uses: ad-m/github-push-action@master
+            with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                branch: gh-pages
             
