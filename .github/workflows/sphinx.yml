@@ -19,6 +19,4 @@ jobs:
             - run: sphinx-build -b html docs/source xyz # need to parameterize later
             - uses: ad-m/github-push-action@main
             with:
-                github_token: ${{ secrets.GITHUB_TOKEN }}
                 branch: gh-pages
-            
