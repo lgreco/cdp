@@ -10,6 +10,3 @@ jobs:
             - run: pip install sphinxcontrib.gist
             - run: travis-sphinx build
             - run: travis-sphinx deploy
-              with:
-                  - provider: releases
-                  - api_key: $GH_TOKEN
