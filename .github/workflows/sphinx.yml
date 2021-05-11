@@ -3,5 +3,5 @@ jobs:
     publish-cdp:
         runs-on: ubuntu-latest
         steps:
-            - run: pip install -r ../../requirements.txt
+            - run: pip install -r requirements.txt
             
