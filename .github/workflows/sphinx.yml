@@ -5,7 +5,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             #- run: pip install sphinx
-            #- run: pip install travis-sphinx
+            - run: pip install travis-sphinx
             #- run: pip install sphinx-rtd-theme
             #- run: pip install sphinxcontrib.gist
             - run: travis-sphinx build
