@@ -3,10 +3,10 @@ jobs:
     publish-cdp:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@main
             - run: pip install sphinx
             #- run: pip install travis-sphinx
             - run: pip install sphinx-rtd-theme
             - run: pip install sphinxcontrib.gist
-            - run: sphinx-build -b html docs/source xyz
+            - run: sphinx-build -b html docs/source xyz # need to parameterize later
             #- run: travis-sphinx deploy
