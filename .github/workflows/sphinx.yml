@@ -3,6 +3,8 @@ jobs:
     publish-cdp:
         runs-on: ubuntu-latest
         steps:
-            - run: python -m pip install sphinx
+            - run: pip install sphinx
+            - run: pip install travis-sphinx
             - run: pip install sphinx-rtd-theme
+            - run: pip install sphinxcontrib.gist
             
