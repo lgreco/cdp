@@ -9,7 +9,7 @@
 
 on: [push]
 jobs:
-    name: build-and-publish-cdp
+    build-and-publish-cdp:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@main # make local copy of repo
