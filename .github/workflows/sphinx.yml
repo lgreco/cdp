@@ -3,7 +3,7 @@ jobs:
     publish-cdp:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@main
+            - uses: actions/checkout@main # make local copy of repo
             - run: pip install sphinx
             #- run: pip install travis-sphinx
             - run: pip install sphinx-rtd-theme

@@ -36,7 +36,8 @@ master_doc = 'index'
 # ones.
 extensions = [
     "sphinx_rtd_theme",
-    "sphinxcontrib.gist"
+    "sphinxcontrib.gist",
+    "sphinx.ext.githubpages" # needed for GH actions
 ]
 
 # allows sphinx to ignore errors in parsing ipynb files
