@@ -1,3 +1,12 @@
+#
+# Action to build and publish Leo's Course Documentation Project.
+# This action launces on GitHub, checks out the main brach (immediately
+# after a push), builds the sphinx documents into an html tree,
+# and deploys the html content on the gh-pages.
+# 
+# Leo Irakliotis - lgreco@gmail.com
+#
+
 on: [push]
 jobs:
     publish-cdp:
