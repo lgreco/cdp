@@ -4,6 +4,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: lgreco/cdp@main
+            with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
             - run: pip install sphinx
             - run: pip install travis-sphinx
             - run: pip install sphinx-rtd-theme
