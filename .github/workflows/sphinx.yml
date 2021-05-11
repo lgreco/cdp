@@ -1,6 +1,5 @@
 on: [push]
 jobs:
-    publish-cdp
     runs-on: ubuntu-latest
     steps:
         run: pip install -r requirements.txt
