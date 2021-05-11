@@ -1,9 +1,7 @@
 on: [push]
 
 jobs:
-    build:
-        name: Course Documentation Project
-        runs-on: ubuntu-latest
-        steps:
-            run:
-                pip intall -r requirements.txt
+    publish-cdp
+    runs-on: ubuntu-latest
+    steps:
+        run: pip install -r requirements.txt
