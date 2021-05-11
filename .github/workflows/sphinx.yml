@@ -4,5 +4,6 @@ jobs:
     build:
         name: Course Documentation Project
         runs-on: ubuntu-latest
-        run:
-            pip intall -r requirements.txt
+        steps:
+            run:
+                pip intall -r requirements.txt
