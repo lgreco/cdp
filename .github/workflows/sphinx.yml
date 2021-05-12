@@ -7,37 +7,14 @@
 # Leo Irakliotis - lgreco@gmail.com
 #
 
-#on: [push]
-#jobs:
-#    build-and-publish-cdp:
-#        runs-on: ubuntu-latest
-#        steps:
-#            - uses: actions/checkout@main # make local copy of repo
-#            - run: pip install sphinx
-#            - run: pip install sphinx-rtd-theme
-#            - run: pip install sphinxcontrib.gist
-#            - run: sphinx-build -b html docs/source xyz # need to parameterize later
-#            - uses: ad-m/github-push-action@master
-#            with:
-#                github_token: ${{ secrets.GITHUB_TOKEN }}
-#                branch: gh-pages
-
-name: Pages
 on: [push]
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@master
-      with:
-        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-    - run: pip install sphinx
-    - run: pip install sphinx-rtd-theme
-    - run: pip install sphinxcontrib.gist
-    - run: sphinx-build -b html docs/source xyz # need to parameterize later
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages
+    build-and-publish-cdp:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@main # make local copy of repo
+            - run: pip install sphinx
+            - run: pip install sphinx-rtd-theme
+            - run: pip install sphinxcontrib.gist
+            - run: sphinx-build -b html docs/source xyz # need to parameterize later
+            
