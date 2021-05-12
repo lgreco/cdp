@@ -40,4 +40,4 @@ deploy:
   skip_cleanup: true
   on:
     repo: lgreco/cdp
-    tags: true
+#    tags: true
