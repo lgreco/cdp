@@ -39,5 +39,5 @@ deploy:
     - ./**/cdp.pdf
   skip_cleanup: true
   on:
-    repo: lgreco/cdpn
+    repo: lgreco/cdp
     tags: false 
