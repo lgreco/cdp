@@ -8,6 +8,9 @@ DEI initiative
 PDF files available
 -------------------
 
+* :download:`USC Syllabus Review Tool <USC_syllabus_review.pdf>`
+
+* :download:`Leo's presentation of 26 February 2021 <./26FEB faculty meeting.pdf>`
 
 
 
