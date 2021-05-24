@@ -20,3 +20,4 @@ jobs:
             # Next:
             # Now that we have a directory with the html build, deploy it on gh-pages.
             - run: git branch gh-pages
+            - run: git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
