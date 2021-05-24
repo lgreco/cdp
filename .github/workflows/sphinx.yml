@@ -18,6 +18,7 @@ jobs:
             - run: pip install sphinxcontrib.gist
             - run: sphinx-build -b html docs/source xyz # put everything in new xyz dir; need to parameterize later
             - run: cd xyz
+            - run: git config --global user.email "lgreco@gmail.com"
             - run: git add .
             - run: git commit -m "auto build"
             - run: git push origin gh-pages
