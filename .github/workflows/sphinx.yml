@@ -16,4 +16,6 @@ jobs:
             - run: pip install sphinx
             - run: pip install sphinx-rtd-theme
             - run: pip install sphinxcontrib.gist
-            - run: sphinx-build -b html docs/source xyz # need to parameterize later
+            - run: sphinx-build -b html docs/source xyz # put everything in new xyz dir; need to parameterize later
+            # Next:
+            # Now that we have a directory with the html build, deploy it on gh-pages.
