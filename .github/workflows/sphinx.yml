@@ -17,10 +17,10 @@ jobs:
             - run: pip install sphinx-rtd-theme
             - run: pip install sphinxcontrib.gist
             - run: sphinx-build -b html docs/source xyz # put everything in new xyz dir; need to parameterize later
+            - run: cd xyz
             # Next:
             # Now that we have a directory with the html build, deploy it on gh-pages.
             - run: git branch gh-pages
             - run: git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
             - run: rm .git/index
             - run: git clean -fdx
-            - run: cd xyz
