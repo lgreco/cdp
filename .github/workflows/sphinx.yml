@@ -23,3 +23,4 @@ jobs:
             - run: git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
             - run: rm .git/index
             - run: git clean -fdx
+            - run: cd xyz
