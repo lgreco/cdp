@@ -18,13 +18,14 @@ jobs:
             - run: pip install sphinx
             - run: pip install sphinx-rtd-theme
             - run: pip install sphinxcontrib.gist
-            - run: sphinx-build -b html docs/source xyz # put everything in new xyz dir; need to parameterize later
-            - run: cd xyz
+            - run: sphinx-build -b html docs/source . # put everything in current dir; need to parameterize later
+            # - run: cd xyz
             - run: git config --global user.email "lgreco@gmail.com"
             - run: git config --global user.name "Leo Irakliotis"
+            - run: git pull
             - run: git add .
             - run: git commit -m "auto build"
-            - run: git push origin gh-pages
+            - run: git push 
             # Next:
             # Now that we have a directory with the html build, deploy it on gh-pages.
 #            - run: git branch gh-pages
