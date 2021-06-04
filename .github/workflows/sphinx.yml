@@ -26,7 +26,7 @@ jobs:
             - run: git add .
             - run: git commit -m "auto build"
             - run: git push 
-            - run: rm -fr *.rst 
+            - run: rm -fr ./*.rst 
             # Next:
             # Now that we have a directory with the html build, deploy it on gh-pages.
 #            - run: git branch gh-pages
