@@ -12,7 +12,7 @@ jobs:
     build-and-publish-cdp:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@main # make local copy of repo
+            - uses: actions/checkout@gh-pages # checkout gh-pages branch
             - run: pip install sphinx
             - run: pip install sphinx-rtd-theme
             - run: pip install sphinxcontrib.gist
