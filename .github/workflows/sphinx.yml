@@ -12,17 +12,21 @@ jobs:
     build-and-publish-cdp:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@main # make local copy of repo
+            - uses: actions/checkout@v2 # checkout gh-pages branch
+              with:
+                ref: gh-pages
             - run: pip install sphinx
             - run: pip install sphinx-rtd-theme
             - run: pip install sphinxcontrib.gist
-            - run: sphinx-build -b html docs/source xyz # put everything in new xyz dir; need to parameterize later
-            - run: cd xyz
+            - run: sphinx-build -b html docs/source . # put everything in current dir; need to parameterize later
+            # - run: cd xyz
             - run: git config --global user.email "lgreco@gmail.com"
             - run: git config --global user.name "Leo Irakliotis"
+            - run: git pull
             - run: git add .
             - run: git commit -m "auto build"
-            - run: git push origin gh-pages
+            - run: git push 
+            - run: rm -fr COMP180
             # Next:
             # Now that we have a directory with the html build, deploy it on gh-pages.
 #            - run: git branch gh-pages
