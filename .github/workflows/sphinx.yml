@@ -15,6 +15,8 @@ jobs:
             - uses: actions/checkout@v2 # checkout gh-pages branch
               with:
                 ref: gh-pages
+            - run: git config --global user.email "lgreco@gmail.com"
+            - run: git config --global user.name "Leo Irakliotis"
             - run: git pull
             - run: git merge origin/main --allow-unrelated-histories
             - run: pip install sphinx
@@ -22,8 +24,8 @@ jobs:
             - run: pip install sphinxcontrib.gist
             - run: sphinx-build -b html docs/source . # put everything in current dir; need to parameterize later
             # - run: cd xyz
-            - run: git config --global user.email "lgreco@gmail.com"
-            - run: git config --global user.name "Leo Irakliotis"
+            #- run: git config --global user.email "lgreco@gmail.com"
+            #- run: git config --global user.name "Leo Irakliotis"
             - run: git pull
             - run: git add .
             - run: git commit -m "auto build"
