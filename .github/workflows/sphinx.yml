@@ -16,7 +16,7 @@ jobs:
               with:
                 ref: gh-pages
             - run: git pull
-            - run: git merge main
+            - run: git merge origin/main
             - run: pip install sphinx
             - run: pip install sphinx-rtd-theme
             - run: pip install sphinxcontrib.gist
