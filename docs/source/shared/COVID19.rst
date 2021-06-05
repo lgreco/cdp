@@ -1,7 +1,7 @@
 Course operations in response to the COVID-19 measures
 ------------------------------------------------------
 
-As of 3/13/20, Loyola University Chicago has suspended most of face-to-face class meetings. The university is preparing to open for the fall term of 2021. In summer of 2021, **COMP 271** is offered as a *HyFlex* course: you may attend in person or via Zoom.
+As of 3/13/20, Loyola University Chicago has suspended most of face-to-face class meetings. The university is preparing to open for the fall term of 2021. In summer of 2021, **COMP 271** is offered as a *HyFlex* course: you may attend in person or remotely via Zoom.
 
 * The principal method for online meetings is Zoom. You must `have it installed on your computer, tablet, or smartphone <https://zoom.us/download>`_. A link to our Zoom "classroom" is available on the course's Sakai site, on the left side navigation menu. There will be no separate emails with the Zoom link. 
 
