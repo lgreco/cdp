@@ -17,8 +17,6 @@ jobs:
                 ref: gh-pages
             - run: git config --global user.email "lgreco@gmail.com"
             - run: git config --global user.name "Leo Irakliotis"
-            - run: git pull --no-ff
-            - run: git merge origin/main --allow-unrelated-histories
             - run: pip install sphinx
             - run: pip install sphinx-rtd-theme
             - run: pip install sphinxcontrib.gist
