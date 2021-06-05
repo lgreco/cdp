@@ -21,3 +21,6 @@ jobs:
             - run: pip install sphinx-rtd-theme
             - run: pip install sphinxcontrib.gist
             - run: sphinx-build -b html docs/source . 
+            - run: git add .
+            - run: git commit -m "Auto deployment"
+            - run: git push
