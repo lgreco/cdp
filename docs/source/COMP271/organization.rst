@@ -29,8 +29,7 @@ Time permitting the course will cover unusual data strutures like blockchain and
 Textbook
 ++++++++
 
-Recommended but **not required:** 
-*Building Java Programs: A Back to Basics Approach,* 5th Edition, by Stuart Reges and Marty Stepp.
+*Building Java Programs: A Back to Basics Approach,* 5th Edition, by Stuart Reges and Marty Stepp. (Yes, this is the textbook used in COMP 170)
 
 Computer Equipment
 ++++++++++++++++++
