@@ -29,7 +29,7 @@ Do
 
 * Bookmark and review (but don't expect to grasp everything right away) the `Collections Framework Overview <https://docs.oracle.com/javase/8/docs/technotes/guides/collections/overview.html>`__ from Oracle's Java Documentation.
 
-* Download, install, and configure Microsoft Teams on your computer (if it is not already installed). Use your LUC UVID to log in to Teams. Then `join the course's Teams Group <https://teams.microsoft.com/l/team/19%3ab1671b32850c47869365a881336740c2%40thread.tacv2/conversations?groupId=3adb03d2-55e9-4172-b3d6-a88bf4744238&tenantId=021f4fe3-2b9c-4824-8378-bbcf9ec5accb>`__. You will need this code to join the group: **s17d7a2.**
+* Download, install, and configure Microsoft Teams on your computer (if it is not already installed). Use your LUC UVID to log in to Teams. `Contacting Leo via Teams <https://teams.microsoft.com/l/chat/0/0?users=lirakliotis@luc.edu>`__  is usually faster than email.
 
 * Optionally, `sign up for a GitHub account <https://github.com/>`__. It's free and it's cool. You can sign up for GitHub with your personal email address, i.e., an address you expect to use even after you graduate from LUC. Once you establish your GitHub account, you can always receive the student benefits the site offers, by adding your LUC email address to the account.
 
