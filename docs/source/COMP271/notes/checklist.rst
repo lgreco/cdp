@@ -29,7 +29,7 @@ Do
 
 * Bookmark and review (but don't expect to grasp everything right away) the `Collections Framework Overview <https://docs.oracle.com/javase/8/docs/technotes/guides/collections/overview.html>`__ from Oracle's Java Documentation.
 
-* Download, install, and configure Microsoft Teams on your computer (if it is not already installed). Use your LUC UVID to log in to Teams. `Contacting Leo via Teams <https://teams.microsoft.com/l/chat/0/0?users=lirakliotis@luc.edu>`__  is usually faster than email.
+* Download, install, and configure Microsoft Teams on your computer (if it is not already installed). Use your LUC UVID to log in to Teams. `Contacting Leo via Teams <https://teams.microsoft.com/l/chat/0/0?users=lirakliotis@luc.edu>`__  is usually faster than email. 
 
 * Optionally, `sign up for a GitHub account <https://github.com/>`__. It's free and it's cool. You can sign up for GitHub with your personal email address, i.e., an address you expect to use even after you graduate from LUC. Once you establish your GitHub account, you can always receive the student benefits the site offers, by adding your LUC email address to the account.
 
@@ -44,6 +44,8 @@ Know
 * How to use Microsoft Teams with your LUC UVID.
 
 * Learn something new, before the course starts. Can you `figure out how to use ENUMerations <https://blogs.oracle.com/javamagazine/java-quiz-enums-initialization>`__, for example?
+
+* (Re)familiarise yourself with the syntax of the `printf <https://docs.oracle.com/javase/tutorial/java/data/numberformat.html>`__ command, as well as the syntax of the `String.format <https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html#format(java.lang.String,java.lang.Object...)>`__ method.
 
 
 Demonstrate
