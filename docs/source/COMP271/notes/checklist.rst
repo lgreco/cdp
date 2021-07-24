@@ -8,7 +8,7 @@
 Checklist before starting the course
 ------------------------------------
 
-This checklist comprised four sections: *Do, Know, Demonstrate,* and *Read.* It is important that you work through this checklist before the first class meeting.
+This checklist comprises four sections: *Do, Know, Demonstrate,* and *Read.* It is important that you work through this checklist before the first class meeting.
 
 
 Do
