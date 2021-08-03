@@ -6,7 +6,7 @@ In March of 2020, Loyola University Chicago has suspended most of face-to-face c
 * The principal method for online meetings is Zoom. You must `have it installed on your computer, tablet, or smartphone <https://zoom.us/download>`_. A link to our Zoom "classroom" is available on the course's Sakai site, on the left side navigation menu. There will be no separate emails with the Zoom link. 
 
 
-* If, at any time, Zoom is unavailable due to high-demand or any other reason, our fall-back method for online meetings will be Google Hangouts. You will need to `sign up for a free Google account <https://accounts.google.com/signup/>`_, if you do not already have one. (If you have a gmail address, you have a Google account). In case we need to switch to Google Hangouts for a class meeting, you will be notified by email. 
+* If, at any time, Zoom is unavailable due to high-demand or any other reason, our fall-back method for online meetings will be Google Hangouts. You will need to `sign up for a free Google account <https://accounts.google.com/signup/>`_, if you do not already have one. (If you have a gmail address, you have a Google account). In case we need to switch to Google Hangouts for a class meeting, you will be notified by email sent to your official LUC.EDU address. 
 
 
 * If we experience a Zoom disruption during the first half of class meeting, we will switch to Google Hangouts immediately. If the disruption occurs during the second half of the class meeting, we'll cancel the rest of the meeting, and I will provide notes and reading suggestions to make up for the lost time.
