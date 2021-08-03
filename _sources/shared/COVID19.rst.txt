@@ -1,7 +1,7 @@
-Course operations in response to the COVID-19 measures
-------------------------------------------------------
+Course operations and COVID19
+--------------------------------------------------------
 
-As of 3/13/20, Loyola University Chicago has suspended most of face-to-face class meetings. The university is preparing to open for the fall term of 2021. In summer of 2021, **COMP 271** is offered as a *HyFlex* course: you may attend in person or remotely via Zoom.
+In March of 2020, Loyola University Chicago has suspended most of face-to-face class meetings. The university is preparing to open for the fall term of 2021. As of August 2021, **COMP 271** (all section) and **COMP 363** (section 002) will meet in person. **COMP 363**-001 is offered as an online coursel.
 
 * The principal method for online meetings is Zoom. You must `have it installed on your computer, tablet, or smartphone <https://zoom.us/download>`_. A link to our Zoom "classroom" is available on the course's Sakai site, on the left side navigation menu. There will be no separate emails with the Zoom link. 
 
@@ -18,14 +18,16 @@ As of 3/13/20, Loyola University Chicago has suspended most of face-to-face clas
 
 * Zoom sessions are recorded and available to watch later if, for some reason you may not be able to attend a class meeting. Notice that the availability of recordings is not a reason to skip class. Zoom provides me with attendance information and I will be monitoring it closely. Remember that some courses include in-class assessments as part of the grading scheme. I am planning to continue conducting these assessments, so your attendance is critical. Links to recordings are provided at the end of this section.
 
-* **Student hours** (aka, office hours) are **by appointment only**. `Please use the Calendly website to schedule an appointment <https://calendly.com/leo_irakliotis/20min>`__. 
+* **Student hours** (aka, office hours) are **by appointment and via Zoom only**. `Please use the Calendly website to schedule an appointment <https://calendly.com/leo_irakliotis/20min>`__. 
 
-* During these challenging times, I am committed to making online classes as engaging and productive as possible. To achieve that, I will need your help. Please reach out to me at any time with suggestions, concerns, and ideas related to the course and to your studies. If you prefer to share your thoughts in a confidential way, you can `use an anonymous feedback form <https://docs.google.com/forms/d/e/1FAIpQLSfbbQkdO0buLZp17udHjphZYgZwkcZBgp3Tx6k0f6iMV_TykQ/viewform?usp=sf_link>`_. Communications are key at a time like this!
-
-
+* It is my commitment to make my courses as classes as engaging and productive as possible. To achieve that, I will need your help. Please reach out to me at any time with suggestions, concerns, and ideas related to the course and to your studies. If you prefer to share your thoughts in a confidential way, you can `use an anonymous feedback form <https://docs.google.com/forms/d/e/1FAIpQLSfbbQkdO0buLZp17udHjphZYgZwkcZBgp3Tx6k0f6iMV_TykQ/viewform?usp=sf_link>`_. Communications are key!
 
 
-Recordings
+
+
+Recordings 
 ----------
+
+*This applies to online and hybrid sections only*.
 
 Notice that at times of high network traffic or high demand, these recordings may be temporarily unavailable. The university is attempting to address this issue. Recordings are made available only to Loyola Students. Authentication (using your LUC login credentials) is required. These recordings will be removed after the semester is over. Downloading of these recordings is not possible.
