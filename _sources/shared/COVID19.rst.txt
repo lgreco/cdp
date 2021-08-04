@@ -1,4 +1,4 @@
-Course operations and COVID19
+fCourse operations and COVID19
 --------------------------------------------------------
 
 In March of 2020, Loyola University Chicago has suspended most of face-to-face class meetings. The university is preparing to open for the fall term of 2021. As of August 2021, **COMP 271** (all section) and **COMP 363** (section 002) will meet in person. **COMP 363**-001 is offered as an online course.
