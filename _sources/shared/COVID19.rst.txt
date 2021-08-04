@@ -1,7 +1,7 @@
 Course operations and COVID19
 --------------------------------------------------------
 
-In March of 2020, Loyola University Chicago has suspended most of face-to-face class meetings. The university is preparing to open for the fall term of 2021. As of August 2021, **COMP 271** (all section) and **COMP 363** (section 002) will meet in person. **COMP 363**-001 is offered as an online coursel.
+In March of 2020, Loyola University Chicago has suspended most of face-to-face class meetings. The university is preparing to open for the fall term of 2021. As of August 2021, **COMP 271** (all section) and **COMP 363** (section 002) will meet in person. **COMP 363**-001 is offered as an online course.
 
 * The principal method for online meetings is Zoom. You must `have it installed on your computer, tablet, or smartphone <https://zoom.us/download>`_. A link to our Zoom "classroom" is available on the course's Sakai site, on the left side navigation menu. There will be no separate emails with the Zoom link. 
 
