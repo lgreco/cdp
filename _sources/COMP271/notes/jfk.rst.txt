@@ -45,7 +45,7 @@ At the very least, read the assignment, and internalize what it asks and how you
    boolean isLowerCase(String s) {
      boolean result = false; // assume answer is no
      // do some magic here to determine actual value of result
-     return result; // 
+     return result; 
   } // method isLowerCase
   
 So now you can focus on how to tell if a String is all in lower case. You can write some *pseudocode* or draw a simple flow chart, trying to solve the problem. After 10 minutes you may have a solution. Or you may have **something better than a solution:** a question for the instructor. Reach out to the instructor with your question. You may not get a direct answer, but you may get hints that will get you closer to the answer. By the way, the correct code for this example problem is:
@@ -57,8 +57,8 @@ So now you can focus on how to tell if a String is all in lower case. You can wr
        for (int i = 0; i < s.length(); i++) { // tranverse the string, letter by letter
            result = result && ('a' <= s.charAt(i) && s.charAt(i) <= 'z'); // one non lower case letter spoils the boolean
        }
-       return result;
-   }
+       return result; // report back
+   } // method isLowerCase
    
 Communicate
 =================
