@@ -5,7 +5,7 @@
 
   <br clear="both"/>
 
-Getting Started With Code Step By Step
+Getting Started With *Code Step By Step*
 ---------------------------------------------------
 
 *Code Step By Step* is a website to practice programming skills. We use it for assignments in COMP 170 and COMP 271. The following instructions walk you through setting up an account with Code Step By Step. Before you begin the registration process make sure that you have the following information:
