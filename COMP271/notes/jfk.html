@@ -229,7 +229,7 @@ At the very least, read the assignment, and internalize what it asks and how you
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span> <span class="kt">boolean</span> <span class="nf">isLowerCase</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
    <span class="kt">boolean</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span> <span class="c1">// assume answer is no</span>
    <span class="c1">// do some magic here to determine actual value of result</span>
-   <span class="k">return</span> <span class="n">result</span><span class="o">;</span> <span class="c1">//</span>
+   <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
 <span class="o">}</span> <span class="c1">// method isLowerCase</span>
 </pre></div>
 </div>
@@ -239,8 +239,8 @@ At the very least, read the assignment, and internalize what it asks and how you
     <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span> <span class="c1">// tranverse the string, letter by letter</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">&amp;&amp;</span> <span class="o">(</span><span class="sc">&#39;a&#39;</span> <span class="o">&lt;=</span> <span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">&lt;=</span> <span class="sc">&#39;z&#39;</span><span class="o">);</span> <span class="c1">// one non lower case letter spoils the boolean</span>
     <span class="o">}</span>
-    <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-<span class="o">}</span>
+    <span class="k">return</span> <span class="n">result</span><span class="o">;</span> <span class="c1">// report back</span>
+<span class="o">}</span> <span class="c1">// method isLowerCase</span>
 </pre></div>
 </div>
 </div>
