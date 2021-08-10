@@ -54,7 +54,7 @@ So now you can focus on how to tell if a String is all in lower case. You can wr
 
    static boolean isLowerCase(String s) {
        boolean result = true; // Assume the answer is yes
-       for (int i = 0; i < s.length(); i++) { // tranverse the string, letter by letter
+       for (int i = 0; i < s.length(); i++) { // traverse the string, letter by letter
            result = result && ('a' <= s.charAt(i) && s.charAt(i) <= 'z'); // one non lower case letter spoils the boolean
        }
        return result; // report back
