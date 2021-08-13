@@ -24,7 +24,7 @@ Course Objectives
 
 - Design and implement algorithms
 
-- Increase proficiency in scripting programming languages
+- Increase proficiency in scripting programming languages 
 
 .. include:: ../shared/groundRules.rst
 
