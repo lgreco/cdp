@@ -33,7 +33,7 @@ Course Objectives
 Textbook
 ++++++++
 
-The required textbook for COMP 363 is *Python Algorithms: Mastering Basic Algorithms in the Python Language,* by Magnus Lie Hetland. The book is available  from major online booksellers for about $40-50.
+The required textbook for COMP 363 is *Algorithms,* by Jeff Erickson. `The book is available online at no cost <https://jeffe.cs.illinois.edu/teaching/algorithms/>`__. Printed copies can be purchased from online retailers for about $30.
 
 Grading scheme
 ++++++++++++++
