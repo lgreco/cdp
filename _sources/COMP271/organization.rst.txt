@@ -48,9 +48,7 @@ Course performance is determined using in-class assignments or weekly homework, 
 
 Exam dates
 ++++++++++
-The final exam will be a take-home assignment. It will become available on Sakai at #:## PM on ##/##/## and due at #:## PM on Monday ##/##/## (subject to change).
-
-The midterm exam will be a take-home assignment. It will become available on Sakai at #:## PM on ##/##/## and due at #:## PM on Monday ##/##/## (subject to change).
+The final and midterm exams will be a take-home assignments. Exact dates will be posted on Sakai.
 
 
 
