@@ -39,7 +39,7 @@ Part 2: Sign up for your course
    :figwidth: 66%
    :align: right
 
-At this stage, I assume that you have completed Step 1 earlier and that your account is verified. You can return to the `Code Step by Step <codestepbystep.com>`__ site and login using your **@luc.edu** email address and the password you provided during Step 1.
+At this stage, I assume that you have completed Step 1 earlier and that your account is verified. You can return to the `Code Step By Step <https://www.codestepbystep.com/>`__ site and login using your **@luc.edu** email address and the password you provided during Step 1.
 
 After you login, click on *My Courses* (4). |br|
 

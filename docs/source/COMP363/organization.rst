@@ -57,9 +57,7 @@ No late homework will be accepted. If you anticipate an issue with late submissi
 
 Exam dates
 ++++++++++
-The final exam will be a take-home assignment. It will become available at TBD on TBD and due at TBD PM on TBD (subject to change).
-
-The midterm exam will be a take-home assignment. It will become available on Sakai at TBD on TBD and due at TBD on TBD (subject to change).
+The final and midterm exams will be a take-home assignments. Exact dates will be posted on Sakai.
 
 
 .. include:: ../shared/studentHours.rst
