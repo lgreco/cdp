@@ -300,10 +300,11 @@ n=5,\ \ 1+2+3+4+5 = 15 &amp;= \frac{5(5+1)}{2}=\frac{30}{2}\end{split}\]</div>
 <h3>Step 3<a class="headerlink" href="#step-3" title="Permalink to this headline">¶</a></h3>
 <p>Start with <span class="math notranslate nohighlight">\(L(k+1)\)</span> and show that it equals <span class="math notranslate nohighlight">\(R(k+1)\)</span>. You will notice that the expression   <span class="math notranslate nohighlight">\(L(k+1)\)</span> always contains <span class="math notranslate nohighlight">\(L(k)\)</span>. And since you just assumed that <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> in Step 2, you can write</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}L(k+1) &amp;= L(k) + (k+1) \\
-&amp;= R(k) + (k+1)\end{split}\]</div>
+\[\begin{split}L(k+1) &amp;= L(k) + \lambda(k+1) \\
+&amp;= R(k) + \rho(k+1)\end{split}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\lambda(k+1)\)</span> and <span class="math notranslate nohighlight">\(\rho(k+1)\)</span> are expressions involving <span class="math notranslate nohighlight">\(k+1\)</span>.</p>
 <p>From here, the problem is reduced to simple (usually) derivations to show that
-<span class="math notranslate nohighlight">\(R(k) + (k+1) = R(k+1)\)</span>. Showing that, completes the proof.</p>
+<span class="math notranslate nohighlight">\(R(k) + \rho(k+1) = R(k+1)\)</span>. Showing that, completes the proof.</p>
 </div>
 </div>
 <div class="section" id="examples">
@@ -329,7 +330,7 @@ R(1)&amp;=\frac{1(1+1)}{2}=1\end{split}\]</div>
 </div>
 <div class="section" id="id2">
 <h3>Step 2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>This is a simple and quick step. We only have to state that for an arbritrary <span class="math notranslate nohighlight">\(n=k\)</span> the expression <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> is true; in other words:</p>
+<p>This is a simple and quick step. We only have to state that for an arbitrary <span class="math notranslate nohighlight">\(n=k\)</span> the expression <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> is true; in other words:</p>
 <div class="math notranslate nohighlight">
 \[1+2+\ldots +k = \frac{k(k+1)}{2}\]</div>
 </div>
