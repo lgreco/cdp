@@ -141,11 +141,13 @@ Start with :math:`L(k+1)` and show that it equals :math:`R(k+1)`. You will notic
 
 .. math::
 
- L(k+1) &= L(k) + (k+1) \\
- &= R(k) + (k+1)
+ L(k+1) &= L(k) + \lambda(k+1) \\
+ &= R(k) + \rho(k+1)
  
+Where :math:`\lambda(k+1)` and :math:`\rho(k+1)` are expressions involving :math:`k+1`.
+
 From here, the problem is reduced to simple (usually) derivations to show that 
-:math:`R(k) + (k+1) = R(k+1)`. Showing that, completes the proof.
+:math:`R(k) + \rho(k+1) = R(k+1)`. Showing that, completes the proof.
 
 Examples
 --------
@@ -184,7 +186,7 @@ So, :math:`L(1)=R(1)`.
 Step 2
 ,,,,,,
 
-This is a simple and quick step. We only have to state that for an arbritrary :math:`n=k` the expression :math:`L(k)=R(k)` is true; in other words:
+This is a simple and quick step. We only have to state that for an arbitrary :math:`n=k` the expression :math:`L(k)=R(k)` is true; in other words:
 
 .. math::
 
