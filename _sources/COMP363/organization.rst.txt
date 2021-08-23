@@ -2,7 +2,15 @@
 
 .. include:: ../shared/organizationHeader.rst
 
-..  .. include:: ../shared/courseOutline.rst
+.. include:: ../shared/courseOutline.rst
+
+* Asymptotic notation, space and time complexity: why it matters?
+* The source of all evil and good: recursion and its master theorem.
+* Dynamic programming (i.e., recursion done right).
+* Greedy algorithms.
+* Trees and how to traverse, rotate, and rebalance them. And why bother?
+* Graph algorithms (bomb your enemies' train tracks!)
+* Stuff that can win you the *Turing Award:* NP-hardness
 
 The central goal of this course is to impart basic skills in designing and implementing efficient and effective computer programs. The course begins by developing models and mathematical tools for measuring the efficiency of algorithms, followed by a variety of useful data structures and to algorithms for a variety of fundamental problems. Finally, the course will provide an introduction to classification of computational problems into different complexity classes. Actual programming will be interspersed with theoretical analysis, to demonstrate practical issues in the implementation of algorithmic solutions.
 
