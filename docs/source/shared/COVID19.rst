@@ -5,6 +5,7 @@ In March of 2020, Loyola University Chicago has suspended most of face-to-face c
 
 * Per university policy, everyone is required to wear a face mask in all public spaces and in all buildings at all Loyola campuses. There are no exceptions or exemptions. This includes in classrooms, labs, meeting rooms, lounges, shared office space, cubicles, hallways, and elevators. Faculty must wear masks while teaching. All students must wear a face mask properly, and that means covering the nose, mouth, and chin. Infractions will be reported online through the Office of Student Conduct and Conflict Resolution.
 
+* Students removing their mask to take a drink is acceptable, but removing the mask to eat is not. Students who need to have food available during class should work with the Student Accessibility Center to have that accommodation documented.
 
 * The principal method for online meetings is Zoom. You must `have it installed on your computer, tablet, or smartphone <https://zoom.us/download>`_. A link to our Zoom "classroom" is available on the course's Sakai site, on the left side navigation menu. There will be no separate emails with the Zoom link. 
 
