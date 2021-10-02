@@ -1,0 +1,26 @@
+#
+# Action to build and publish Leo's Course Documentation Project.
+# This action launces on GitHub, checks out the main brach (immediately
+# after a push), builds the sphinx documents into an html tree,
+# and deploys the html content on the gh-pages.
+# 
+# Leo Irakliotis - lgreco@gmail.com
+#
+
+on: [push]
+jobs:
+    build-and-publish-cdp:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2 # checkout gh-pages branch
+              with:
+                ref: gh-pages
+            - run: git config --global user.email "lgreco@gmail.com"
+            - run: git config --global user.name "Leo Irakliotis"
+            - run: pip install sphinx
+            - run: pip install sphinx-rtd-theme
+            - run: pip install sphinxcontrib.gist
+            - run: sphinx-build -b html docs/source . 
+            - run: git add .
+            - run: git commit -m "Auto deployment"
+            - run: git push
