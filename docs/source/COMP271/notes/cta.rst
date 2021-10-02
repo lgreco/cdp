@@ -27,7 +27,10 @@ that capture the geographic coordinates of a location. These coordinates are par
        this.longitude = longitude;
     }
     
-The highlighted line above is a call to the class's basic constructor. Once that basic constructor initializes the object, the constructor above assigns values to the ``latitude`` and ``longitude` fields.
+The highlighted line above is a call to the class's basic constructor. Once that basic constructor initializes the object, the constructor above assigns values to the ``latitude`` and ``longitude`` fields.
+
+Implement an interface
+========================
 
 The next step in this mini-project was to implement the ``Comparable`` interface in ``CTALocation``:
 
@@ -55,6 +58,9 @@ We don't know yet how ``distanceFromDowntown`` works but we can assume that it r
    int x = ohare.compareTo(western);
    
 and assume that ``ohare`` and ``western`` are ``CTALocation`` objects for the CTA stations at O'Hare airport and on Western (and Lawrence) avenue. Intuitively, we know that O'Hare is further away from downtown that Western. Indeed, the O'Hare station is about 15.5 miles from downtown; the Western station, 6.5 miles. We can verify these distances with a tool like Google Earth. Based on that, we expect variable ``x`` above to be positive, with a value of ``8`` or ``9``, depending on the exact distances and their difference.
+
+Help is always given to those who ask for it
+========================================================
 
 All that remains is the method that computes the distance from downtown. At this point the programming becomes highly specialized and we must ask for help. *Help is always given at Loyola to those who ask for it.* The ``distance`` method is shown in the next section. It computes the distance between any two points on earth, specified by the respective latitudes and longitudes. We need to compute distances from downtown, so we can **overload** the method as follows.
 
