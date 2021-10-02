@@ -5,5 +5,5 @@ I am a Chicago-based educator, researcher, and college manager. In 1999, I earne
 
 As a consultant, I have worked with small and medium-size enterprises on technology and strategy. And as an expert in credential evaluations, I have conducted over 200 Direct Assessments for academic degree equivalency.
 
-In my free time, I am a photographer, diver, aviator, amateur radio operator, and the guardian of two dogs.
+In my free time, I am a photographer, diver, aviator, amateur radio operator, and the guardian of two dogs (Martin and Mina).
 
