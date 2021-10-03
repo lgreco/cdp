@@ -72,7 +72,7 @@ All that remains is the method that computes the distance from downtown. At this
        return distance(lat, lon, MADISON_STATE_LAT, MADISON_STATE_LON);
    }
 
-Alternatively, we can overload ``distance`` by passing a `CTALocation` object and let the method pull the date, as follows:
+Alternatively, we can overload ``distance`` by passing a ``CTALocation`` object and let the method pull the data, as follows:
 
 
 .. code-block:: java
