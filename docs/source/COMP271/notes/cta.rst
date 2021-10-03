@@ -51,7 +51,7 @@ The ``Comparable`` interface, for example, `lists only one method <https://docs.
        return (int) (thisDistance-otherDistance);
    }
 
-We don't know yet how ``distanceFromDowntown`` works but we can assume that it returns the distance between downtown Chicago and a location specified by latitude and longitude. The important thing is the return line above. Consider the following invocation of the method:
+We don't know yet how method ``distance``, shown above, works but we can assume that it returns the distance between downtown Chicago and a location specified by latitude and longitude. The important thing is the return line above. Consider the following invocation of the method:
 
 .. code:: java
 
