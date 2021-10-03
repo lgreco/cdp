@@ -3,7 +3,7 @@
 The CTA Class
 ---------------------------------------------------
 
-`The CTA class <https://github.com/lgreco/DataStructures/tree/master/LabSessions/The%20CTA/src>`__ is a nice playground to explore interfaces and inheritance. The class is based on data about the train and bus services offered by the Chicago Transit Authority. The data are available from the city's data portal. This example is based on familiarity with CTA train and bus routes.
+`The CTA class <https://github.com/lgreco/DataStructures/tree/master/LabSessions/The%20CTA/src>`__ is a nice playground to explore interfaces and inheritance. The class is based on data about the train and bus services offered by the Chicago Transit Authority. The data are available from the city's data portal. This example requires some familiarity with CTA train and bus routes, so if you are not a Chicago resident you may want to open a map!
 
 We begin with a simple model: one superclass for locations, extended by two class one for train stations and one for bus stops. The class diagram is shown below.
 
