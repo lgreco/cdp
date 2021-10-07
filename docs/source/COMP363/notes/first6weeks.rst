@@ -98,3 +98,4 @@ Simple exercises
 * Show that :math:`n\sin^2{(n)}\in\mathcal{O}(n)`.
 * Show that :math:`n^x\in\mathcal{O}(n)` for :math:`0<x<1`.
 * Show that :math:`(1+2+3+\ldots +(n-1)+n)\in\mathcal{O}(n^2)`.
+* Explain why :math:`\cos{(n)}\not\in\mathcal{O}(g(n))` for any :math:`g(n): \mathbb{N}_+ \mapsto\mathbb{R}_+`.
