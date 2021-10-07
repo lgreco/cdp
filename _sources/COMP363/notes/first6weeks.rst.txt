@@ -68,7 +68,7 @@ Optimal Stopping
 
 Optimal stopping is a very practical algorithm that optimizes the outcome of certain selection searches. The algorithm works in cases when we do not know the range of rankings and also when we cannot go back and select something after we passed it. If we plan to search up to :math:`N` items, the algorithm suggests that we go through the first :math:`N/e` items and get an idea of the rankings based on some metric (e.g., quality, during an apartment hunt). Then go through the remaining :math:`N(e-1)/e` items and select the first one that is better than the best of the earlier group. We also saw that the algorithm works well only when the range of ranking is in the same range as :math:`N`. 
 
-For example, if we rank items on a scale of 1-10, the algorithm works well for :math:`N<20`. After than, the output fails and soon becomes 0, i.e., no selection can be made. That's reasonable consider that if :math:`N=1000` then :math:`N/e\approx 368`. Among 368 items in the sample group, it is almost certain that one of them will be ranked at 10, assuming some uniform distribution. Moving to the second group of 623 items, it will be impossible to find something with a better ranking than 10.
+For example, if we rank items on a scale of 1-10, the algorithm works well for :math:`N<20`. After that, the output fails and soon becomes 0, i.e., no selection can be made. That's reasonable consider that if :math:`N=1000` then :math:`N/e\approx 368`. Among 368 items in the sample group, it is almost certain that one of them will be ranked at 10, assuming some uniform distribution. Moving to the second group of 623 items, it will be impossible to find something with a better ranking than 10.
 
 Asymptotic Formalism
 --------------------
