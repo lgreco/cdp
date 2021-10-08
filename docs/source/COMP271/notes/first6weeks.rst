@@ -22,7 +22,7 @@ Binary search trees
 
 Enchanted Arrays and ArrayLists are fine, but we run into another problem now that we have a size-on-demand storage mechanism: duplicates. We want every palindrome found in a book to be stored only once. And also we want to have them sorted alphabetically. Certainly we can write additional methods in our ``EnchantedArrary`` class to add only unique data; for example a method ``addUnique(String palindrome)``. And another method to sort the palindromes alphabetically. Together, these two tasks may take some time to complete. Maybe resizeable arrays are not the right data structure for this problem. And so we turned our attention to the *binary search tree,* the computational equivalent of how we record and search for information in a printed dictionary or phone book.
 
-Here we discovered something *major:* cooperating classes. A binary search tree comprises two classes: ``Node`` and ``Tree``. A Tree object is build on a single Node object; we name that Node ``root``. This root branches out to other nodes within the Tree object. A tree may have thousands of nodes branching out from its root and yet it still have only one field: that root. Pretty wild, huh?
+Here we discovered something *major:* `cooperating classes <https://github.com/lgreco/DataStructures/tree/master/Assignments/TreesAndNodes>`__. A binary search tree comprises two classes: ``Node`` and ``Tree``. A Tree object is built on a single Node object; we name that Node ``root``. This root branches out to other nodes within the Tree object. A tree may have thousands of nodes branching out from its root and yet it still have only one field: that root. Pretty wild, huh?
 
 Interfaces and Inheritance
 ===========================
