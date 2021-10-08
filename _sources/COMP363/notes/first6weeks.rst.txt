@@ -3,7 +3,7 @@
 First 6 weeks
 =============
 
-In the first five weeks of the course we covered the following topics.
+In the first six weeks of the course we covered the following topics.
 
 Python and Jupyter notebooks
 -----------------------------------------------------------------------------
