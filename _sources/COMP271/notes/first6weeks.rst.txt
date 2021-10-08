@@ -1,7 +1,7 @@
 :orphan:
 
-First 6 weeks of the course
----------------------------
+Six weeks of Data Structures
+------------------------------
 
 In the first six weeks of the course, we covered the following topics.
 

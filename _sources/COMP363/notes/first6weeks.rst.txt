@@ -1,7 +1,7 @@
 :orphan:
 
-First 6 weeks
-=============
+Six weeks of Algorithms
+==========================
 
 In the first six weeks of the course we covered the following topics.
 
