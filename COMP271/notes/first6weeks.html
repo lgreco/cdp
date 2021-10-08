@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First 6 weeks of the course &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="COMP 363 Design and Analysis of Computer Algorithms" href="../../COMP363/introduction.html" />
+    <link rel="prev" title="The CTA Class" href="cta.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP180/introduction.html">COMP 180 Data Analysis for the Sciences</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 271 Data Structures</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html">Course operations and COVID19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html#recordings">Recordings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#ground-rules">Ground rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#deadlines">Deadlines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#academic-integrity">Academic integrity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#professionalism">Professionalism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#zoom">Zoom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#formal-notices">Formal notices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#inclusion-statement">Inclusion statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../notes.html">Leo's notes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="checklist.html">Checklist prior to starting COMP271</a></li>
+<li class="toctree-l3"><a class="reference internal" href="csbs.html">Getting Started With Code Step By Step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jfk.html">JFK Jr.'s Last Flight and What We Learnt From It</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cta.html">The CTA Class</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">First 6 weeks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#palindromes">Palindromes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#breaking-and-mending-arrays">Breaking and mending arrays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#binary-search-trees">Binary search trees</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interfaces-and-inheritance">Interfaces and Inheritance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-cta-project">The CTA project</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Computer Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../DEI/DEI.html">DEI initiative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DBD/introduction.html">Databases Design</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../introduction.html">COMP 271 Data Structures</a> &raquo;</li>
+          <li><a href="../notes.html">Leo’s notes</a> &raquo;</li>
+      <li>First 6 weeks of the course</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP271/notes/first6weeks.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="first-6-weeks-of-the-course">
+<h1>First 6 weeks of the course<a class="headerlink" href="#first-6-weeks-of-the-course" title="Permalink to this headline"></a></h1>
+<p>In the first six weeks of the course, we covered the following topics.</p>
+<section id="palindromes">
+<h2>Palindromes<a class="headerlink" href="#palindromes" title="Permalink to this headline"></a></h2>
+<p>The course started with writing <a class="reference external" href="https://github.com/lgreco/DataStructures/blob/master/ClassroomCoding/ThePalindromeSaga/src/StringUtilities.java">methods to determine if a string is a palindrome</a>. This was a refresher of basic programming techniques including class <a class="reference external" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html">String and some of its methods</a>. We looked at code efficiency asking ourselves if we really need a <em>for-loop</em> or are we better off with a <em>while-loop</em>.</p>
+</section>
+<section id="breaking-and-mending-arrays">
+<h2>Breaking and mending arrays<a class="headerlink" href="#breaking-and-mending-arrays" title="Permalink to this headline"></a></h2>
+<p>We put our palindrome method to test, scanning an actual book, and storing its palindromes to a String array. <a class="reference external" href="https://www.gutenberg.org/">Project Gutenberg</a> offers a great variety of books to use. We implemented a <cite>Scanner</cite> object to access the plain text of a book, via a web datastream (employing instances of classes <code class="docutils literal notranslate"><span class="pre">URL</span></code> and <code class="docutils literal notranslate"><span class="pre">InputStream</span></code> along the way), writing <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code> blocks to prevent embarrassing program failures. Soon we run into a major issue with arrays: we cannot resize them, and if we run out of space, bad things happen. And so we set off to design our own array storage mechanism, that changes its size on demand. The mechanisms we developed for <a class="reference external" href="https://github.com/lgreco/DataStructures/blob/master/TodaysLab/src/EnchantedArray.java">our Enchanted Arrays</a> are simpler but accurate representations of how Java’s <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">ArrayList class</a> works.</p>
+</section>
+<section id="binary-search-trees">
+<h2>Binary search trees<a class="headerlink" href="#binary-search-trees" title="Permalink to this headline"></a></h2>
+<p>Enchanted Arrays and ArrayLists are fine, but we run into another problem now that we have a size-on-demand storage mechanism: duplicates. We want every palindrome found in a book to be stored only once. And also we want to have them sorted alphabetically. Certainly we can write additional methods in our <code class="docutils literal notranslate"><span class="pre">EnchantedArrary</span></code> class to add only unique data; for example a method <code class="docutils literal notranslate"><span class="pre">addUnique(String</span> <span class="pre">palindrome)</span></code>. And another method to sort the palindromes alphabetically. Together, these two tasks may take some time to complete. Maybe resizeable arrays are not the right data structure for this problem. And so we turned our attention to the <em>binary search tree,</em> the computational equivalent of how we record and search for information in a printed dictionary or phone book.</p>
+<p>Here we discovered something <em>major:</em> cooperating classes. A binary search tree comprises two classes: <code class="docutils literal notranslate"><span class="pre">Node</span></code> and <code class="docutils literal notranslate"><span class="pre">Tree</span></code>. A Tree object is build on a single Node object; we name that Node <code class="docutils literal notranslate"><span class="pre">root</span></code>. This root branches out to other nodes within the Tree object. A tree may have thousands of nodes branching out from its root and yet it still have only one field: that root. Pretty wild, huh?</p>
+</section>
+<section id="interfaces-and-inheritance">
+<h2>Interfaces and Inheritance<a class="headerlink" href="#interfaces-and-inheritance" title="Permalink to this headline"></a></h2>
+<p>Right after trees, it was a good time to take a different direction and talk about <a class="reference external" href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">interfaces</a> and <a class="reference external" href="https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html">inheritance</a>. We discussed how the interface is a contract for the methods a class will have and what they’ll do. The <code class="docutils literal notranslate"><span class="pre">String</span></code> class, for example, implements the <code class="docutils literal notranslate"><span class="pre">Comparable</span></code> interface. The class promises (and delivers) a method to compares its objects. The comparison is described by an integer number that the method returns. The method’s name is specified in the interface; in this case it is the <code class="docutils literal notranslate"><span class="pre">compareTo</span></code> method. We even implemented the <code class="docutils literal notranslate"><span class="pre">Comparable</span></code> interface on a <a class="reference external" href="https://github.com/lgreco/DataStructures/blob/master/LabSessions/The%20CTA/src/CTALocation.java">class that we wrote</a> for the next topic in our adventure.</p>
+</section>
+<section id="the-cta-project">
+<h2>The CTA project<a class="headerlink" href="#the-cta-project" title="Permalink to this headline"></a></h2>
+<p>The <a class="reference external" href="https://github.com/lgreco/DataStructures/tree/master/LabSessions/The%20CTA/src">CTA project</a> is the most complex topic we studied in the course so far. The project focuses on sequential data structures and introduces the concepts of <em>linked lists.</em> Prior to exploring linked lists however, we use the premises of this project to build our own inherited classes (<code class="docutils literal notranslate"><span class="pre">CTAStation</span></code> and <code class="docutils literal notranslate"><span class="pre">CTAStop</span></code> are extensions of <code class="docutils literal notranslate"><span class="pre">CTALocation</span></code>), implement the <code class="docutils literal notranslate"><span class="pre">Comparable</span></code> interface, and extract actual data from the Chicago Data Portal, tranform them, and load them into <code class="docutils literal notranslate"><span class="pre">CTAStation</span></code> objects held together in an ArrayList or even a humble array.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cta.html" class="btn btn-neutral float-left" title="The CTA Class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../COMP363/introduction.html" class="btn btn-neutral float-right" title="COMP 363 Design and Analysis of Computer Algorithms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2021, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
