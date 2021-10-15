@@ -1,7 +1,6 @@
 .DS_Store*
 .buildinfo
 repo_management_notes.txt
-searching*`
 .doctrees/
 build/
 *.html

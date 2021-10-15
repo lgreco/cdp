@@ -1,4 +1,17 @@
-g
+
+14 OCT 2021
+
+I think I got it down to
+
+while on .... git checkout gh-pages
+
+git commit -am "blah blah"
+git pull --rebase
+git push
+
+
+
+
 This seems verbose but it works... seems to be working when doing this after
 
 git checkout main / add . / commit / pull --rebase // push
