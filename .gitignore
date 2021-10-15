@@ -1,6 +1,10 @@
 .DS_Store*
 .buildinfo*
 repo_management_notes.txt
+<<<<<<< HEAD
 searching*
+=======
+>>>>>>> gh-pages
 .doctrees/
 build/
+*.html

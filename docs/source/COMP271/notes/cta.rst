@@ -3,7 +3,7 @@
 The CTA Class
 ---------------------------------------------------
 
-`The CTA class <https://github.com/lgreco/DataStructures/tree/master/LabSessions/The%20CTA/src>`__ is a nice playground to explore interfaces and inheritance. The class is based on data about the train and bus services offered by the Chicago Transit Authority. The data are available from the city's data portal. This example is based on familiarity with CTA train and bus routes.
+`The CTA class <https://github.com/lgreco/DataStructures/tree/master/LabSessions/The%20CTA/src>`__ is a nice playground to explore interfaces and inheritance. The class is based on data about the train and bus services offered by the Chicago Transit Authority. The data are available from the city's data portal. This example requires some familiarity with CTA train and bus routes, so if you are not a Chicago resident you may want to open a map!
 
 We begin with a simple model: one superclass for locations, extended by two class one for train stations and one for bus stops. The class diagram is shown below.
 
@@ -51,7 +51,7 @@ The ``Comparable`` interface, for example, `lists only one method <https://docs.
        return (int) (thisDistance-otherDistance);
    }
 
-We don't know yet how ``distanceFromDowntown`` works but we can assume that it returns the distance between downtown Chicago and a location specified by latitude and longitude. The important thing is the return line above. Consider the following invocation of the method:
+We don't know yet how method ``distance``, shown above, works but we can assume that it returns the distance between downtown Chicago and a location specified by latitude and longitude. The important thing is the return line above. Consider the following invocation of the method:
 
 .. code:: java
 
@@ -72,7 +72,7 @@ All that remains is the method that computes the distance from downtown. At this
        return distance(lat, lon, MADISON_STATE_LAT, MADISON_STATE_LON);
    }
 
-Alternatively, we can overload ``distance`` as follows:
+Alternatively, we can overload ``distance`` by passing a ``CTALocation`` object and let the method pull the data, as follows:
 
 
 .. code-block:: java
