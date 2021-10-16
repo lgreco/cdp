@@ -1,67 +1,34 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Review of Weeks 10, 11: counting and probabilities &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> Leo Irakliotis' courses
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -69,18 +36,8 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Courses</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 163 Discrete Structures</a></li>
@@ -89,99 +46,61 @@
 <li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Computer Algorithms</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Projects</span></p>
+<p class="caption" role="heading"><span class="caption-text">Projects</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../DEI/DEI.html">DEI initiative</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../DBD/introduction.html">Databases Design</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Misc</span></p>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Leo Irakliotis' courses</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
-        
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Review of Weeks 10, 11: counting and probabilities</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../../_sources/COMP163/notes/week1011.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="review-of-weeks-10-11-counting-and-probabilities">
-<h1>Review of Weeks 10, 11: counting and probabilities<a class="headerlink" href="#review-of-weeks-10-11-counting-and-probabilities" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="review-of-weeks-10-11-counting-and-probabilities">
+<h1>Review of Weeks 10, 11: counting and probabilities<a class="headerlink" href="#review-of-weeks-10-11-counting-and-probabilities" title="Permalink to this headline"></a></h1>
 <p>Weeks 10 and 11 focus on discrete probabilities.</p>
 <ul class="simple">
 <li><p>From the recommended textbook: Chapters 6.7.</p></li>
 <li><p><a class="reference external" href="https://github.com/lgreco/cdp/blob/master/source/COMP163/OER/Aspnes-probability.pdf">Aspnes’ chapter on probability</a>. (Made available under a CC BY SA license).</p></li>
 </ul>
-<div class="section" id="solutions-to-in-class-assignment-7-conducted-4-1-20">
-<h2>Solutions to in-class assignment 7 (conducted 4/1/20)<a class="headerlink" href="#solutions-to-in-class-assignment-7-conducted-4-1-20" title="Permalink to this headline">¶</a></h2>
+<section id="solutions-to-in-class-assignment-7-conducted-4-1-20">
+<h2>Solutions to in-class assignment 7 (conducted 4/1/20)<a class="headerlink" href="#solutions-to-in-class-assignment-7-conducted-4-1-20" title="Permalink to this headline"></a></h2>
 <p><strong>Problem 1</strong>. There are <span class="math notranslate nohighlight">\(6^3\)</span> possible outcomes when rolling three dice.</p>
 <p><strong>Problem 2</strong>. The most likely sum to roll two fair dice to is 7. Because this sum can be achieved by the largest possible combinations between the two dice, i.e., 1+6, 2+5, 3+4, 4+3, 5+2, and 6+1. (Grading notes: solutions that do not answer the “why” part of this problem, are incomplete).</p>
 <p><strong>Problem 3</strong>. The planes with heavy damage in the outer wings and the rear fuselage, made it safely to their base. It means that such heavy damage did not affect the plane’s ability to fly. Therefore these areas are the least likely candidates for armor plating. (This problem is a simplified rendering of a <a class="reference external" href="https://www.motherjones.com/kevin-drum/2010/09/counterintuitive-world/">true story</a>).</p>
-</div>
-<div class="section" id="solutions-to-in-class-assigment-8-conducted-4-8-20">
-<h2>Solutions to in-class assigment 8 (conducted 4/8/20)<a class="headerlink" href="#solutions-to-in-class-assigment-8-conducted-4-8-20" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="solutions-to-in-class-assigment-8-conducted-4-8-20">
+<h2>Solutions to in-class assigment 8 (conducted 4/8/20)<a class="headerlink" href="#solutions-to-in-class-assigment-8-conducted-4-8-20" title="Permalink to this headline"></a></h2>
 <p><strong>Problem 1</strong>. Assuming that the coins as properly glued, i.e., the head side of one coin is glued to the tail side of the other, the odds of tossing a head is the same as a single coin: 1/2. If the coins are glued tail-to-tail, the odds of tossing a head is 1. And if they are glued head-to-head, the odds are 0.</p>
 <p><strong>Problem 2</strong>. If the coins as properly glued, i.e., the head side of one coin is glued to the tail side of the other, the odds of tossing two heads back-to-back is the same as with a single coin: 1/4. If the coins are glued tail-to-tail, the odds of tossing back-to-back heads is 1. And if they are glued head-to-head, the odds are 0.</p>
 <p><strong>Problem 3</strong>. There are two correct answers to this problem, depending on how you interpret it: either 1/2 or 1/4.</p>
-</div>
-<div class="section" id="bayes-theorem-example">
-<h2>Bayes Theorem Example<a class="headerlink" href="#bayes-theorem-example" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="bayes-theorem-example">
+<h2>Bayes Theorem Example<a class="headerlink" href="#bayes-theorem-example" title="Permalink to this headline"></a></h2>
 <p>The standard expression of Bayes Theorem is:</p>
 <div class="math notranslate nohighlight">
 \[P(A|B) = \frac{P(B|A)P(A)}{P(B)}\]</div>
@@ -207,9 +126,9 @@
 <div class="math notranslate nohighlight">
 \[P(D|+) = \frac{(0.9)(0.13)}{P(+)} = \frac{0.117}{0.1605} = 0.7289\]</div>
 <p>In other words, someone who tests positive for a disease with a 13% prevalence, using a test with 90% sensitivity and 95% specificity, has a 73% chance that actually has the disease.</p>
-</div>
-<div class="section" id="bayes-theorem-in-context-with-the-covid-19-pandemic">
-<h2>Bayes Theorem in context with the COVID-19 pandemic<a class="headerlink" href="#bayes-theorem-in-context-with-the-covid-19-pandemic" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="bayes-theorem-in-context-with-the-covid-19-pandemic">
+<h2>Bayes Theorem in context with the COVID-19 pandemic<a class="headerlink" href="#bayes-theorem-in-context-with-the-covid-19-pandemic" title="Permalink to this headline"></a></h2>
 <p>Various countries across the world contemplate the manner in which they will “reopen” after lockdown measures taken in response to the SARS-CoV-2 virus. This is the virus that causes the COVID-19 disease. One of the candidate criteria for allowing individuals to return to their offices and other public work spaces, is whether or not they were infected by the virus. Those infected are <em>presumed</em> to be immune to new infections; if not permanently, at least for a while. And therefore safe to be in public, without risk of being infected and infecting others.</p>
 <p>Many people seem to have been infected by the virus but remained asymptomatic, or dismissed their light symptoms. Determining if someone was infected and, presuma]bly, is now immune to the disease requires a test that detects the presence of virus-specific antibodies.</p>
 <p>In terms of conditional probabilities, we are interested in:</p>
@@ -243,47 +162,35 @@
 <p>We don’t know yet what the actual prevalence of COVID-19 is. The <a class="reference external" href="https://www.cdc.gov/mmwr/volumes/69/wr/mm6915e4.htm">CDC reports incidence rates from 20.6 to 915.3 cases per 100,000</a>. Assuming, arbitrarily, a 100X factor between incidence and prevalence, we can guesstimate prevalence rate as: <span class="math notranslate nohighlight">\(0.0206\leq p\leq 0.9153\)</span>. For the low-end <span class="math notranslate nohighlight">\(p\)</span>, the conditional probability <span class="math notranslate nohighlight">\(P(I|+)\)</span>, given an antibody test with 95% sensitivity and specificity, is <span class="math notranslate nohighlight">\(P_{\text{low}}(I|+)\approx 31\%\)</span>. For the high-end prevalence indicating that 91.53% of the population gets infected, the conditional probability becomes: <span class="math notranslate nohighlight">\(P_{\text{high}}(I|+)\approx 99\%\)</span>.</p>
 <p>The truth is somewhere in-between. But if the disease prevalence is in the low-end, e.g., below 25%, then the antibody tests will miss more than 13% of those tested. Meaning that individuals not immune to the virus will be thought to be immune and will be allowed to mingle with the general population. This may lead to subsequent flare ups of the infection.</p>
 <p>On the other hand, if the disease is very prevalent, e.g. <span class="math notranslate nohighlight">\(p\geq 0.5\)</span>, then the tests will miss less than 4% of the cases, and this may be a manageable load.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019-2021, Leo Irakliotis
-
-    </p>
+    <p>&#169; Copyright 2019-2021, Leo Irakliotis.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
