@@ -31,7 +31,7 @@ Divide and Conquer splits a problem into smaller pieces until a trivial solution
 
 .. math::
 
- xy = ac10^{2s} + (ad+cb)10^s + bd10^0
+ xy = a c10^{2s} + (ad+cb)10^s + bd10^0
 
 
 Products :math:`ac`, :math:`ad`, :math:`cb`, and :math:`bd` above can be broken down in similar fashion, splitting the numbers into halves, until each number has a single digit. Such numbers are very easy to multiply. Beginning with these single digit products, we can go back assembling the solution back to the initial product :math:`xy`.
