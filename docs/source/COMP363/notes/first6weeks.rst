@@ -8,7 +8,7 @@ In the first six weeks of the course we covered the following topics.
 Python and Jupyter notebooks
 -----------------------------------------------------------------------------
 
-`Jupyter notebooks <https://jupyter.org/>`__ are very popular among data scientists. They are also extremely useful for our course because they allow us to mix `marked-up documentation <https://en.wikipedia.org/wiki/Markup_language>`__ and code together. The programming environment these notebooks offer is not as sophisticated as that of an IDE, but it provides basic functionality such as autocompletion. Of course we can always download and use a fuller integrated development environment such as `PyCharm <https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&code=PCC>`__ (the sibling application to IntelliJ); `Spyder <https://www.spyder-ide.org/>`__, etc; not to mention the awesomness of *vim* and *emacs*.
+`Jupyter notebooks <https://jupyter.org/>`__ are very popular tools among data scientists. They are also extremely useful for our course because they allow us to mix `marked-up documentation <https://en.wikipedia.org/wiki/Markup_language>`__ and code together. The programming environment these notebooks offer is not as sophisticated as that of an IDE, but it provides basic functionality such as autocompletion. Of course we can always download and use a fuller integrated development environment such as `PyCharm <https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&code=PCC>`__ (the sibling application to IntelliJ); `Spyder <https://www.spyder-ide.org/>`__, etc; not to mention the awesomness of *vim* and *emacs*.
 
 Trade off between code reusability and performance
 ------------------------------------------------------
