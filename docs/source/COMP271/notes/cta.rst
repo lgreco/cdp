@@ -205,6 +205,7 @@ With that sequence file, we can execute a simple procedure as follows:
       add the station object to the trainRoute
     return trainRoute
 
+
 This simple procedure can be implemented with the following method. The method, if successful, returns a ``CTATrainRoute`` object, which is essentially a linked list. To build the train route, the method first creates a collection of **all stations**, as described above. This collection is ``ArrayList<CTAStation> allStations``. Its contents are assigned with the ``pullCTAData`` method in line 9 below. 
 
 For every station name pulled from the sequence file, we search every station in the collection ``allStations`` to find a matching one. The match is determined by comparing the name pulled from the sequence file and the name field of the ``CTAStation`` objects in ``allStations`` (line 17, below).
@@ -239,3 +240,11 @@ For every station name pulled from the sequence file, we search every station in
        // Return the (hopefully populated) route.
        return ctaTrainRoute;
    } // method buildRoute
+   
+The process in method ``buildRoute`` above, can be visualized as follows.
+
+.. figure:: images/buildRoute.png
+   :scale: 20%
+   :align: center
+
+The method receives data from two sources: the CSV file with all stations and the text file with the sequence of station in a particular route. Using the data from these sources, method ``buildRoute`` creates a ``CTATrainRoute`` object with a starting station object (the ``head`` node), pointing to the next station object, and so on. The last station in the route can be recognized by its ``.next`` pointer set to ``null``.
