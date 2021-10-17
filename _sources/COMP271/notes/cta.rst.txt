@@ -248,3 +248,5 @@ The process in method ``buildRoute`` above, can be visualized as follows.
    :align: center
 
 The method receives data from two sources: the CSV file with all stations and the text file with the sequence of station in a particular route. Using the data from these sources, method ``buildRoute`` creates a ``CTATrainRoute`` object with a starting station object (the ``head`` node), pointing to the next station object, and so on. The last station in the route can be recognized by its ``.next`` pointer set to ``null``.
+
+One last thing to discuss about ``buildRoute`` is its place: do we add this method in the ``CTAUtilities`` class or somewhere else? Our initial choice may be ``CTAUtilities``. But when we look closer, we see that method ``buildRoute`` is basically a construction process for a new train route object. Not quite a **constructor** but we could turn it into such, with a few minor edits. Because the method is so close related to the ``CTATrainRoute`` class, it should be placed there.
