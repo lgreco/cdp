@@ -194,6 +194,7 @@ This collection of station objects is not very useful by itself. Train stations 
    :scale: 20%
    :align: center
 
+
 With that sequence file, we can execute a simple procedure as follows:
 
 ::
@@ -206,7 +207,7 @@ With that sequence file, we can execute a simple procedure as follows:
 
 This simple procedure can be implemented with the following method. The method, if successful, returns a ``CTATrainRoute`` object, which is essentially a linked list. To build the train route, the method first creates a collection of **all stations**, as described above. This collection is ``ArrayList<CTAStation> allStations``. Its contents are assigned with the ``pullCTAData`` method in line 9 below. 
 
-For every station name pulled from the sequence file, we search every station in the collection ``allStations`` to find a matching one. The match is determined by comparing the name pulled from the sequence file and the name field of the ``CTAStation`` objects in ``allStations``.
+For every station name pulled from the sequence file, we search every station in the collection ``allStations`` to find a matching one. The match is determined by comparing the name pulled from the sequence file and the name field of the ``CTAStation`` objects in ``allStations`` (line 17, below).
 
 
 .. code-block:: java 
