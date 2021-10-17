@@ -306,6 +306,11 @@
 <span class="lineno">25 </span><span class="o">}</span> <span class="c1">// method buildRoute</span>
 </pre></div>
 </div>
+<p>The process in method <code class="docutils literal notranslate"><span class="pre">buildRoute</span></code> above, can be visualized as follows.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/buildRoute.png"><img alt="../../_images/buildRoute.png" src="../../_images/buildRoute.png" style="width: 523.2px; height: 289.0px;" /></a>
+</figure>
+<p>The method receives data from two sources: the CSV file with all stations and the text file with the sequence of station in a particular route. Using the data from these sources, method <code class="docutils literal notranslate"><span class="pre">buildRoute</span></code> creates a <code class="docutils literal notranslate"><span class="pre">CTATrainRoute</span></code> object with a starting station object (the <code class="docutils literal notranslate"><span class="pre">head</span></code> node), pointing to the next station object, and so on. The last station in the route can be recognized by its <code class="docutils literal notranslate"><span class="pre">.next</span></code> pointer set to <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
 </section>
 </section>
 
