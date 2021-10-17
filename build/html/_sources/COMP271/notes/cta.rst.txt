@@ -175,3 +175,66 @@ The ``distance`` method
         return d;
     } // method distance
 
+
+
+Building a train route
+=======================
+
+As our CTA project continues to grow, we have designed and build quite some useful tools. In addition to method ``distance`` above, class ``CTAUtilities`` has one more useful method: ``pullCTAData``. `This method <https://github.com/lgreco/DataStructures/blob/52a5312ebc713edecd10bf9be15aa48d93bb4b11/LabSessions/The%20CTA/src/CTAUtilities.java#L88>`__ reads a CSV file, creates ``CTAStation`` objects, and stores them in an arraylist. There are about 100 stations in the CTA system. Each of them is described in a detailed CSV file that is available from the Chicago Data Portal.  Method ``pullCTAData`` creates about 100 ``CTAStation`` objects, complete with station name, latitude and longitude, ADA accessibility, etc. The method access the CSV file with the help of another method, ``CTAScanner`` that establishes a ``Scanner`` connection to the data. 
+
+The output of ``pullCTAData`` is an ``ArrayList<CTAStation>`` collection, illustrated below.
+
+.. figure:: images/allStations.png
+   :scale: 20%
+   :align: center
+
+This collection of station objects is not very useful by itself. Train stations are located along train routes. If we want to construct a train route, we need to know the order in which it traverses stations. For example, the southbound route for CTA's **Red Line** travels from *Howard*, to *Jarvis*, to *Morse*, ..., and ends at the *95th/Dan Ryan* station. For an accurate representation of the Red Line, we need to select some stations from the collection above, and place them in a specified order. To do that, we need a list of the stations to select and the order to place them. And because this information is not available in the CSV file, we have to provide ourselves. The easiest way to do this, is to write a plain text file with just the names of the stations in the order they should appear. That's the sequence file below (also `available on GitHub <https://raw.githubusercontent.com/lgreco/DataStructures/master/data/stations.csv>`__).
+
+.. figure:: images/sequence.png
+   :scale: 20%
+   :align: center
+
+With that sequence file, we can execute a simple procedure as follows:
+
+::
+
+  Create a trainRoute:
+    for every station name from sequence file:
+      find the corresponding station object in the array list
+      add the station object to the trainRoute
+    return trainRoute
+
+This simple procedure can be implemented with the following method. The method, if successful, returns a ``CTATrainRoute`` object, which is essentially a linked list. To build the train route, the method first creates a collection of **all stations**, as described above. This collection is ``ArrayList<CTAStation> allStations``. Its contents are assigned with the ``pullCTAData`` method in line 9 below. 
+
+For every station name pulled from the sequence file, we search every station in the collection ``allStations`` to find a matching one. The match is determined by comparing the name pulled from the sequence file and the name field of the ``CTAStation`` objects in ``allStations``.
+
+
+.. code-block:: java 
+   :linenos:
+   :emphasize-lines: 9
+   
+   public CTATrainRoute buildRoute(String linkToSequenceFile) {
+       // Set up the train route object we'll be returning.
+       CTATrainRoute ctaTrainRoute = new CTATrainRoute();
+       // Set up a scanner to the file with the station sequence.
+       Scanner sequence = CTAUtilities.CTAScanner(linkToSequenceFile);
+       // If null, we can't connect to file.
+       if (sequence != null) {
+           // Pull all stations into an array list.
+           ArrayList<CTAStation> allStations = CTAUtilities.pullCTAData(ALL_STATIONS_CSV);
+           // Go through the sequence file, line by line.
+           while(sequence.hasNext()) {
+               // Each line in the sequence file is the name of a station.
+               String nameFromSequence = sequence.nextLine();
+               // Use the enhanced for-loop go over the CTAStation objects in the array list.
+               for (CTAStation station: allStations) {
+                   // If a CTAStation has the same name as what we get from sequence, add the object to the route.
+                   if(station.getName().equals(nameFromSequence)) {
+                       ctaTrainRoute.add(station);
+                   }
+               }
+           }
+       }
+       // Return the (hopefully populated) route.
+       return ctaTrainRoute;
+   } // method buildRoute

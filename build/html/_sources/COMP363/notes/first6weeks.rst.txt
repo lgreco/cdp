@@ -8,7 +8,7 @@ In the first six weeks of the course we covered the following topics.
 Python and Jupyter notebooks
 -----------------------------------------------------------------------------
 
-`Jupyter notebooks <https://jupyter.org/>`__ are very popular among data scientists. They are also extremely useful for our course because they allow us to mix `marked-up documentation <https://en.wikipedia.org/wiki/Markup_language>`__ and code together. The programming environment these notebooks offer is not as sophisticated as that of an IDE, but it provides basic functionality such as autocompletion. Of course we can always download and use a fuller integrated development environment such as `PyCharm <https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&code=PCC>`__ (the sibling application to IntelliJ); `Spyder <https://www.spyder-ide.org/>`__, etc; not to mention the awesomness of *vim* and *emacs*.
+`Jupyter notebooks <https://jupyter.org/>`__ are very popular tools among data scientists. They are also extremely useful for our course because they allow us to mix `marked-up documentation <https://en.wikipedia.org/wiki/Markup_language>`__ and code together. The programming environment these notebooks offer is not as sophisticated as that of an IDE, but it provides basic functionality such as autocompletion. Of course we can always download and use a fuller integrated development environment such as `PyCharm <https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&code=PCC>`__ (the sibling application to IntelliJ); `Spyder <https://www.spyder-ide.org/>`__, etc; not to mention the awesomness of *vim* and *emacs*.
 
 Trade off between code reusability and performance
 ------------------------------------------------------
@@ -31,7 +31,7 @@ Divide and Conquer splits a problem into smaller pieces until a trivial solution
 
 .. math::
 
- xy = ac10^{2s} + (ad+cb)10^s + bd10^0
+ xy = a c10^{2s} + (ad+cb)10^s + bd10^0
 
 
 Products :math:`ac`, :math:`ad`, :math:`cb`, and :math:`bd` above can be broken down in similar fashion, splitting the numbers into halves, until each number has a single digit. Such numbers are very easy to multiply. Beginning with these single digit products, we can go back assembling the solution back to the initial product :math:`xy`.
