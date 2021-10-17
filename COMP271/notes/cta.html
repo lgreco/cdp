@@ -260,6 +260,52 @@
 </section>
 <section id="building-a-train-route">
 <h2>Building a train route<a class="headerlink" href="#building-a-train-route" title="Permalink to this headline"></a></h2>
+<p>As our CTA project continues to grow, we have designed and build quite some useful tools. In addition to method <code class="docutils literal notranslate"><span class="pre">distance</span></code> above, class <code class="docutils literal notranslate"><span class="pre">CTAUtilities</span></code> has one more useful method: <code class="docutils literal notranslate"><span class="pre">pullCTAData</span></code>. <a class="reference external" href="https://github.com/lgreco/DataStructures/blob/52a5312ebc713edecd10bf9be15aa48d93bb4b11/LabSessions/The%20CTA/src/CTAUtilities.java#L88">This method</a> reads a CSV file, creates <code class="docutils literal notranslate"><span class="pre">CTAStation</span></code> objects, and stores them in an arraylist. There are about 100 stations in the CTA system. Each of them is described in a detailed CSV file that is available from the Chicago Data Portal.  Method <code class="docutils literal notranslate"><span class="pre">pullCTAData</span></code> creates about 100 <code class="docutils literal notranslate"><span class="pre">CTAStation</span></code> objects, complete with station name, latitude and longitude, ADA accessibility, etc. The method access the CSV file with the help of another method, <code class="docutils literal notranslate"><span class="pre">CTAScanner</span></code> that establishes a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> connection to the data.</p>
+<p>The output of <code class="docutils literal notranslate"><span class="pre">pullCTAData</span></code> is an <code class="docutils literal notranslate"><span class="pre">ArrayList&lt;CTAStation&gt;</span></code> collection, illustrated below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="COMP271/notes/images/allStations.png"><img alt="COMP271/notes/images/allStations.png" src="COMP271/notes/images/allStations.png" /></a>
+</figure>
+<p>This collection of station objects is not very useful by itself. Train stations are located along train routes. If we want to construct a train route, we need to know the order in which it traverses stations. For example, the southbound route for CTA’s <strong>Red Line</strong> travels from <em>Howard</em>, to <em>Jarvis</em>, to <em>Morse</em>, …, and ends at the <em>95th/Dan Ryan</em> station. For an accurate representation of the Red Line, we need to select some stations from the collection above, and place them in a specified order. To do that, we need a list of the stations to select and the order to place them. And because this information is not available in the CSV file, we have to provide ourselves. The easiest way to do this, is to write a plain text file with just the names of the stations in the order they should appear. That’s the sequence file below (also <a class="reference external" href="https://raw.githubusercontent.com/lgreco/DataStructures/master/data/stations.csv">available on GitHub</a>).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="COMP271/notes/images/sequence.png"><img alt="COMP271/notes/images/sequence.png" src="COMP271/notes/images/sequence.png" /></a>
+</figure>
+<p>With that sequence file, we can execute a simple procedure as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Create</span> <span class="n">a</span> <span class="n">trainRoute</span><span class="p">:</span>
+  <span class="k">for</span> <span class="n">every</span> <span class="n">station</span> <span class="n">name</span> <span class="kn">from</span> <span class="nn">sequence</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">find</span> <span class="n">the</span> <span class="n">corresponding</span> <span class="n">station</span> <span class="nb">object</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">array</span> <span class="nb">list</span>
+    <span class="n">add</span> <span class="n">the</span> <span class="n">station</span> <span class="nb">object</span> <span class="n">to</span> <span class="n">the</span> <span class="n">trainRoute</span>
+  <span class="k">return</span> <span class="n">trainRoute</span>
+</pre></div>
+</div>
+<p>This simple procedure can be implemented with the following method. The method, if successful, returns a <code class="docutils literal notranslate"><span class="pre">CTATrainRoute</span></code> object, which is essentially a linked list. To build the train route, the method first creates a collection of <strong>all stations</strong>, as described above. This collection is <code class="docutils literal notranslate"><span class="pre">ArrayList&lt;CTAStation&gt;</span> <span class="pre">allStations</span></code>. Its contents are assigned with the <code class="docutils literal notranslate"><span class="pre">pullCTAData</span></code> method in line 9 below.</p>
+<p>For every station name pulled from the sequence file, we search every station in the collection <code class="docutils literal notranslate"><span class="pre">allStations</span></code> to find a matching one. The match is determined by comparing the name pulled from the sequence file and the name field of the <code class="docutils literal notranslate"><span class="pre">CTAStation</span></code> objects in <code class="docutils literal notranslate"><span class="pre">allStations</span></code>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="kd">public</span> <span class="n">CTATrainRoute</span> <span class="nf">buildRoute</span><span class="o">(</span><span class="n">String</span> <span class="n">linkToSequenceFile</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno"> 2 </span>    <span class="c1">// Set up the train route object we&#39;ll be returning.</span>
+<span class="lineno"> 3 </span>    <span class="n">CTATrainRoute</span> <span class="n">ctaTrainRoute</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CTATrainRoute</span><span class="o">();</span>
+<span class="lineno"> 4 </span>    <span class="c1">// Set up a scanner to the file with the station sequence.</span>
+<span class="lineno"> 5 </span>    <span class="n">Scanner</span> <span class="n">sequence</span> <span class="o">=</span> <span class="n">CTAUtilities</span><span class="o">.</span><span class="na">CTAScanner</span><span class="o">(</span><span class="n">linkToSequenceFile</span><span class="o">);</span>
+<span class="lineno"> 6 </span>    <span class="c1">// If null, we can&#39;t connect to file.</span>
+<span class="lineno"> 7 </span>    <span class="k">if</span> <span class="o">(</span><span class="n">sequence</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno"> 8 </span>        <span class="c1">// Pull all stations into an array list.</span>
+<span class="lineno"> 9 </span><span class="hll">        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">CTAStation</span><span class="o">&gt;</span> <span class="n">allStations</span> <span class="o">=</span> <span class="n">CTAUtilities</span><span class="o">.</span><span class="na">pullCTAData</span><span class="o">(</span><span class="n">ALL_STATIONS_CSV</span><span class="o">);</span>
+</span><span class="lineno">10 </span>        <span class="c1">// Go through the sequence file, line by line.</span>
+<span class="lineno">11 </span>        <span class="k">while</span><span class="o">(</span><span class="n">sequence</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+<span class="lineno">12 </span>            <span class="c1">// Each line in the sequence file is the name of a station.</span>
+<span class="lineno">13 </span>            <span class="n">String</span> <span class="n">nameFromSequence</span> <span class="o">=</span> <span class="n">sequence</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+<span class="lineno">14 </span>            <span class="c1">// Use the enhanced for-loop go over the CTAStation objects in the array list.</span>
+<span class="lineno">15 </span>            <span class="k">for</span> <span class="o">(</span><span class="n">CTAStation</span> <span class="n">station</span><span class="o">:</span> <span class="n">allStations</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno">16 </span>                <span class="c1">// If a CTAStation has the same name as what we get from sequence, add the object to the route.</span>
+<span class="lineno">17 </span>                <span class="k">if</span><span class="o">(</span><span class="n">station</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="n">nameFromSequence</span><span class="o">))</span> <span class="o">{</span>
+<span class="lineno">18 </span>                    <span class="n">ctaTrainRoute</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">station</span><span class="o">);</span>
+<span class="lineno">19 </span>                <span class="o">}</span>
+<span class="lineno">20 </span>            <span class="o">}</span>
+<span class="lineno">21 </span>        <span class="o">}</span>
+<span class="lineno">22 </span>    <span class="o">}</span>
+<span class="lineno">23 </span>    <span class="c1">// Return the (hopefully populated) route.</span>
+<span class="lineno">24 </span>    <span class="k">return</span> <span class="n">ctaTrainRoute</span><span class="o">;</span>
+<span class="lineno">25 </span><span class="o">}</span> <span class="c1">// method buildRoute</span>
+</pre></div>
+</div>
 </section>
 </section>
 
