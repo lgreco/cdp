@@ -250,3 +250,41 @@ The process in method ``buildRoute`` above, can be visualized as follows.
 The method receives data from two sources: the CSV file with all stations and the text file with the sequence of station in a particular route. Using the data from these sources, method ``buildRoute`` creates a ``CTATrainRoute`` object with a starting station object (the ``head`` node), pointing to the next station object, and so on. The last station in the route can be recognized by its ``.next`` pointer set to ``null``.
 
 One last thing to discuss about ``buildRoute`` is its place: do we add this method in the ``CTAUtilities`` class or somewhere else? Our initial choice may be ``CTAUtilities``. But when we look closer, we see that method ``buildRoute`` is basically a construction process for a new train route object. Not quite a **constructor** but we could turn it into such, with a few minor edits. Because the method is so close related to the ``CTATrainRoute`` class, it should be placed there.
+
+Reverse a route
+=================
+
+This is an interesting problem: can we reverse a route while traversing it forward? One analogy would be to board a southbound train, and by the time it reaches its destination, have its stations written in the northbound direction. We can accomplish this with pen and paper, writing station names from the bottom of the page and moving up. If something can be done on paper, it can be done with coding! Here's how.
+
+We start with a plain traversal. In addition to the all familiar by now ``current`` pointer, we employ two more points: ``previous`` and ``following``.
+
+
+.. figure:: images/invertList.png
+   :scale: 20%
+   :align: center
+   
+Pointers ``previous`` and ``following`` help us remember what is before and after the current station. When ``current`` moves to a new station, we can assign ``following = current.getNext()``. Then we can "disconnect" ``current`` from ``following`` by reassigning ``current.setNext(previous)``. We are ready to advance to the next node. Because ``current`` now points backwards, we cannot use its ``.next`` to find where to move next. That's why we need the pointer ``following`` to remind us where to go. And thus ``following`` becomes ``current`` as shown below.
+
+
+.. figure:: images/invertListDetail.png
+   :scale: 20%
+   :align: center
+   
+The basic mechanism is straight forward. Pointer ``following`` keeps track of where to slide the ``current`` pointer. Usually, we really on ``current.getNext()`` to traverse down the route. Here, however, we reassign ``current``'s ``next`` field to point to its ``previous`` node. Invoking ``getNext()`` on ``current`` will send us backwards. Pointer ``following`` comes to our rescue. The basic code is below:
+
+.. code-block:: java
+   :linenos:
+
+   CTATStation current = head;
+   CTAStation previous = null;
+   CTAStation following = null;
+   while (current != null) {
+     following = current.getNext();
+     current.setNext(previous);
+     previous = current;
+     current = following;
+   }
+
+Every train route has two special stations. Correspondigly every linked list has two special nodes: the head and the end. We need to take extra care to process them. After we complete the loop above, pointer ``head`` still points to the first station of the original route. We want it to point to the first station of the reversed route. Luckily, pointer ``previous`` is already at the last station of the original route (which is the first station of the reversed route). So we assign ``head = previous``.
+
+The second special case is the last node of the reversed list, the last station of the reversed route. That's the ``head`` of the original structure. Notice, in the code above, that where we are at the beginning, when ``current`` is the ``head``, ``previous`` is ``null``.   And the assignment of line 6 above reassigns that station to point to null: making it the last station of the reversed route.
