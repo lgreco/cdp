@@ -263,6 +263,7 @@ We start with a plain traversal. In addition to the all familiar by now ``curren
    :scale: 20%
    :align: center
    
+
 Pointers ``previous`` and ``following`` help us remember what is before and after the current station. When ``current`` moves to a new station, we can assign ``following = current.getNext()``. Then we can "disconnect" ``current`` from ``following`` by reassigning ``current.setNext(previous)``. We are ready to advance to the next node. Because ``current`` now points backwards, we cannot use its ``.next`` to find where to move next. That's why we need the pointer ``following`` to remind us where to go. And thus ``following`` becomes ``current`` as shown below.
 
 
@@ -270,6 +271,7 @@ Pointers ``previous`` and ``following`` help us remember what is before and afte
    :scale: 20%
    :align: center
    
+
 The basic mechanism is straight forward. Pointer ``following`` keeps track of where to slide the ``current`` pointer. Usually, we really on ``current.getNext()`` to traverse down the route. Here, however, we reassign ``current``'s ``next`` field to point to its ``previous`` node. Invoking ``getNext()`` on ``current`` will send us backwards. Pointer ``following`` comes to our rescue. The basic code is below:
 
 .. code-block:: java
