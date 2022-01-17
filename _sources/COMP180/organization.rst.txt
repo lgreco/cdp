@@ -3,7 +3,13 @@
 
 .. include:: ../shared/courseOutline.rst
 
-COMP 180 serves two purposes: one is to introduce you to simple programming, using *Python*. The other is to show you how you can process and manage data (using Python, of course). Data processing and data management require some mathema**g**ical skills. Any college-level course in algebra or calculus is sufficient background.
+COMP 180 serves two purposes: one is to introduce you to simple programming, using *Python*. The other is to show you how you can process and manage data (using Python, of course). Data processing and data management require some mathema**g**ical skills. Any college-level course in algebra or calculus is sufficient background. The course has three parts: 
+
+* Introduction to programming with Python, using interactive Python notebooks. If you have taken an introductory programming course before, this part may appear redundant. However, it will be worth your time as we'll explore the comforts and and features of interactive Python notebooks, and discuss some practical topics in programming. Expect 3-4 weeks.
+
+* Managing and processing numerical (mostly) data. Computing was (and is) about manipulating numbers. Where do these numbers come from? How we obtain them? How we represent them? How we turn them into information, insight, and knowledge? Expect 6-7 weeks.
+
+* Working with text data. There is so much content published on the web. Can we plow through it? Can we find reliable information? Can we tell fake news from facts? These questions can be answered with text analysis that is often considered a gateway to artificial intelligence and machine learning. Expect 4-5 weeks.
 
 
 
