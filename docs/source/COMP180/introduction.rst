@@ -1,6 +1,8 @@
 COMP 180 Data Analysis for the Sciences
 =======================================
 
+.. include:: ../shared/leo.rst
+
 ..	toctree::
 	:maxdepth: 2
     

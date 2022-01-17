@@ -1,6 +1,8 @@
 COMP 170 Introduction to Java Programming
 =========================================
 
+.. include:: ../shared/leo.rst
+
 ..	toctree::
 	:maxdepth: 1
 	
