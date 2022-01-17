@@ -1,6 +1,8 @@
 
 .. include:: ../shared/organizationHeader.rst
 
+.. include:: ../shared/leo.rst
+
 
 COMP 180 serves two purposes: one is to introduce you to simple programming, using *Python*. The other is to show you how you can process and manage data (using Python, of course). Data processing and data management require some mathemagical skills. Any college-level course in algebra or calculus is sufficient background. The course has three parts: 
 
