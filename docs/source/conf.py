@@ -23,7 +23,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Leo Irakliotis\' courses'
-copyright = '2019-2021, Leo Irakliotis'
+copyright = '2019-2022, Leo Irakliotis'
 author = 'Leo Irakliotis'
 
 
