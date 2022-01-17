@@ -1,5 +1,5 @@
 
 Deadlines
----------
++++++++++
 
-(Deadlines are posted on Sakai )
+Deadlines are posted on the source's Sakai page.
