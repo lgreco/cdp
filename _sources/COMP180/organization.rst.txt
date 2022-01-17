@@ -70,7 +70,6 @@ Exam dates
 tbd
 
 .. include:: ./reading.rst
-.. include:: ./notes.rst
 
 
 .. include:: ../shared/groundRules.rst
@@ -79,3 +78,6 @@ tbd
 .. include:: ../shared/professionalism.rst
 .. include:: ../shared/zoom.rst
 .. include:: ../shared/formalStuff.rst
+
+
+.. include:: ./notes.rst
