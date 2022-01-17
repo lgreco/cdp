@@ -1,4 +1,7 @@
 
+    
+.. include:: ../shared/COVID19.rst
+    
 .. include:: ../shared/organizationHeader.rst
 
 .. include:: ../shared/leo.rst
@@ -64,6 +67,9 @@ Exam dates
 ++++++++++
 
 tbd
+
+.. include:: ./reading.rst
+.. include:: ./notes.rst
 
 
 .. include:: ../shared/groundRules.rst
