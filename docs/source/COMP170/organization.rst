@@ -11,7 +11,7 @@ The textbook for this course is *Building Java Programs,* 5th edition, by Stuart
 
 Computer Equipment
 ++++++++++++++++++
-You will need access to a desktop or laptop computer with the appropriate software. This course uses IntelliJ as the development environment. A virtual machine with all the necessary tools is available to you, and `instructions on how to access it are published on Sakai <https://sakai.luc.edu/portal/directtool/a1d92f4e-687b-482a-8951-97138a723ad8/>`__.
+You will need access to a desktop or laptop computer with the appropriate software. This course uses IntelliJ as the development environment. A virtual machine with all the necessary tools is available to you, and instructions on how to access it are published on the course's Sakai site.
 
 .. include:: ../shared/groundRules.rst
 
