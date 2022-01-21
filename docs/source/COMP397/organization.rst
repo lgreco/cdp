@@ -4,7 +4,7 @@
 
 .. include:: ../shared/courseOutline.rst
 
-.. include:: ../shared/leo.rst
+.. include:: ../shared/william_leo.rst
 
 
 
