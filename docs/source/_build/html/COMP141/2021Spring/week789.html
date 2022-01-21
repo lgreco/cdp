@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Review of Weeks 7, 8, and 9: Binary trees; counting &mdash; Leo Irakliotis&#39; courses  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Review of Weeks 10, 11: counting and probabilities" href="week1011.html" />
+    <link rel="prev" title="Review of Week 6: Proofs" href="week6.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Leo Irakliotis' courses
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Courses</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#ground-rules">Ground rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#academic-integrity">Academic integrity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#be-cool-like-a-pro">Be cool, like a <em>pro</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#zoom">Zoom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#formal-notices">Formal notices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#inclusion-statement">Inclusion statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notes.html">Leo's notes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="weeklyReviews.html">Spring 2021 weekly reviews</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="week2.html">Review of Week 1 and Week 2: Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="week3.html">Review of Week 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="week4.html">Review of Weeks 4 and 5: Algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="week6.html">Review of Week 6: Proofs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Review of Weeks 7, 8, and 9: Binary trees; counting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="week1011.html">Review of Weeks 10, 11: counting and probabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="week12.html">Review of Weeks 12: course review and Turing machines</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP180/introduction.html">COMP 180 Data Analysis for the Sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Computer Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP367/introduction.html">COMP 363 Research Methods in Computer Science</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../DEI/DEI.html">DEI initiative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DBD/introduction.html">Databases Design</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a> &raquo;</li>
+        
+          <li><a href="weeklyReviews.html">Weekly Reviews - Spring 2020</a> &raquo;</li>
+        
+      <li>Review of Weeks 7, 8, and 9: Binary trees; counting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/COMP141/2021Spring/week789.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="review-of-weeks-7-8-and-9-binary-trees-counting">
+<h1>Review of Weeks 7, 8, and 9: Binary trees; counting<a class="headerlink" href="#review-of-weeks-7-8-and-9-binary-trees-counting" title="Permalink to this headline">¶</a></h1>
+<p>Weeks 7, 8, and 9 spanned over the Spring Break and were interrupted by the COVID-19 outbreak. As we transitioned from face-to-face to online class meetings, we discussed the concept of data structures and, specifically, binary trees, binary search trees, tree traversal algorithms, and decision trees.</p>
+<blockquote>
+<div><p><strong>Reading material about trees:</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>From the recommended textbook: Chapters 9.5, 9.6, and 9.7.</p></li>
+<li><p><a class="reference external" href="https://github.com/lgreco/cdp/blob/master/source/COMP163/OER/LovaszVesztergombi-trees.pdf">L. Lovasz and K. Vesztergombi’s have an advanced chapter on trees</a>. (Published on L. Lovasz’s website).</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Reading material about counting:</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>From the recommended textbook: Chapters 6.1, 6.2, 6.3, and 6.4.</p></li>
+<li><p><a class="reference external" href="https://github.com/lgreco/cdp/blob/master/source/COMP163/OER/Levin-counting.pdf">O. Levin’s section counting</a>. (Made available under a CC BY SA license).</p></li>
+<li><p><a class="reference external" href="https://github.com/lgreco/cdp/blob/master/source/COMP163/OER/Aspnes-counting.pdf">Aspnes’ chapter on counting</a>. (Made available under a CC BY SA license).</p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="week1011.html" class="btn btn-neutral float-right" title="Review of Weeks 10, 11: counting and probabilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="week6.html" class="btn btn-neutral float-left" title="Review of Week 6: Proofs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019-2022, Leo Irakliotis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
