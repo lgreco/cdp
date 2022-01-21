@@ -1,5 +1,5 @@
 ===================================================
-COMP 367 Research Methods in Computer Science
+COMP 397 Research Methods in Computer Science
 ===================================================
 
 ..	toctree::

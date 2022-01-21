@@ -14,32 +14,23 @@ If you are taking this course to pursue a specific research topic or idea, pleas
 
 The course requires you to do a fair amount of reading and writing. The papers introduced in this email are an indication of the commitment we expect from you.
 
-#. Introductions. Foundations by Bush and von Neumann. A quick approach to critical reading of papers.
-Assignment: critical summaries of papers (200 words/paper/max) for non-technical audience, due in class. Require some formatting, maybe Google Docs.
+#. Introductions. Foundations by Bush and von Neumann. A quick approach to critical reading of papers. Assignment: critical summaries of papers (200 words/paper/max) for non-technical audience, due in class. Require some formatting, maybe Google Docs.
 
-#. In-class peer review of last week's critical summaries. Discussion about writing style, comment and review style.
-Assignment. Cryptography: read the DH paper.
+#. In-class peer review of last week's critical summaries. Discussion about writing style, comment and review style. Assignment. Cryptography: read the DH paper.
 
-#. DH review. Introduction to paper taxonomies, repositories, library searches.
-Assignment: a non-technical review of cryptography applications since DH. What is the most foundation paper cited by DH?
+#. DH review. Introduction to paper taxonomies, repositories, library searches. Assignment: a non-technical review of cryptography applications since DH. What is the most foundation paper cited by DH?
 
-#. In-class peer review of last week's paper. Writing tools and styles. Bibliographies and literature searches.
-Assignment. read Codd's original paper.
+#. In-class peer review of last week's paper. Writing tools and styles. Bibliographies and literature searches. Assignment. read Codd's original paper.
 
-#. In-class discussion of Codd: can you draw parallels to OOP? What/which? What was the transformational concept? The foundation?
-Assignment: Peter Chen's ERD paper and NAS' report on Database industry
+#. In-class discussion of Codd: can you draw parallels to OOP? What/which? What was the transformational concept? The foundation? Assignment: Peter Chen's ERD paper and NAS' report on Database industry
 
-#. In-class review of ERD concepts and the emergence of UML. 
-Assignment: commonalities of seminal papers: write a 200w critical review of any commonalities you see across DH and Codd.
+#. In-class review of ERD concepts and the emergence of UML.  Assignment: commonalities of seminal papers: write a 200w critical review of any commonalities you see across DH and Codd.
 
-#. The Dijkstra archive at the U of Texas. Why are these papers important. A review of his work.
-Assignment: tbd critical summary one of Dijkstra's papers.
+#. The Dijkstra archive at the U of Texas. Why are these papers important. A review of his work. Assignment: tbd critical summary one of Dijkstra's papers.
 
-#In-class peer review of last week's summary.
-Assignment: Cerf/Khan, and a non-technical summary of packet switching and best-effort protocols.
+#In-class peer review of last week's summary. Assignment: Cerf/Khan, and a non-technical summary of packet switching and best-effort protocols.
 
-# .In-class peer review of last week's summary.
-Assignments: Metropolis and a 200w review
+# .In-class peer review of last week's summary. Assignments: Metropolis and a 200w review
 
 #. In-class peer review of last week's summary. Numerical computations: Monte Carlo, simulations, data science.
 
