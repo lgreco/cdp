@@ -1,3 +1,3 @@
- | Leo Irakliotis: leo@cs.luc.edu
+ | William **Honig** (whonig@luc.edu) & Leo **Irakliotis** (leo@cs.luc.edu)
  | *Department of Computer Science*
  | Loyola University Chicago
