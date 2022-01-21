@@ -12,7 +12,7 @@ In this course, we'll look at the foundations of research in computing, the moti
 
 If you are taking this course to pursue a specific research topic or idea, please talk with your instructor sooner than later. Depending on your interests they may (or may not) be able to accommodate your plans. 
 
-The course requires you to do a fair amount of reading and writing. The papers introduced in this email are an indication of the commitment we expect from you.
+The course requires you to do a fair amount of reading and writing.  
 
 #. Introductions. Foundations by Bush and von Neumann. A quick approach to critical reading of papers. Assignment: critical summaries of papers (200 words/paper/max) for non-technical audience, due in class. Require some formatting, maybe Google Docs.
 
