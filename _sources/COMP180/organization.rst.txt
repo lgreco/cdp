@@ -53,6 +53,8 @@ Grading scheme
 
 Course performance is determined using homework, a take-home midterm, and a take-home final. Each assessment component carries a 33.33% weight. There will be about 10 homework assignments. Grading scheme aside, the objective of assessments in this course is to ensure **that students are learning.** In this context students make mistakes, understand them, and do not repeat them.
 
+For courses with asynchronous components, the assessments above are worth 30% each; engangement with asynchronous material (watching videos, completing the in-video quizzes, etc) carries a weight of 10%.
+
 .. include:: ../shared/gradeScale.rst
 
 .. include:: ../shared/deadlines.rst
