@@ -1,6 +1,8 @@
+:orphan:
+
 Leo's notes
 -----------
 
 .. toctree::
 
-	2020Spring/weeklyReviews
+	2022Spring/weeklyReviews
