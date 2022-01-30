@@ -1,3 +1,5 @@
+:orphan:
+
 Weekly Reviews - Spring 2020
 ============================
 
