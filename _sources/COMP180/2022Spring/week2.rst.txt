@@ -142,5 +142,13 @@ Some time in the 1930s, comedians Bud Abbott and Lou Costello popularized a skit
 
 - Costello: I'm asking YOU who's on first.
 
+And the skit goes on to even more bizarre and hilarious interplay between names and pronouns. The two characters seem to be out of sync. Of course it's more funny to watch or listen to it than to read the script.
+
+Counting in computer programs feels a little bit like the *Who's on first* skit. As the figure below shows, the first person is line is not the "number one" person. In fact, the "number one" person, is the second person in line. Who's on first? It's the number zero.
+
+
 .. image:: ../figures/zeroBasedCounting.png
    :align: center
+   
+In programming, we begin counting from zero. There is a an apocryphal story about the origin of this practice. In the 1950s, IBM donated a powerful computer to MIT. There were strings attached to the gift. Every time IBM's CEO Thomas J. Watson Jr. wanted to take his sailboat *Palawan* out for a race, MIT had to run a special program on the donated computer. It was a program that given wind conditions at the boat's location, produce the best possible sail configuration to win the race. Whatever program ran on the computer at the time the call from IBM came, had to be dropped. It was a time that even powerful computers were slow. It took hours, even days, for programs to complete. And the computer could execute one program at a time. The dropped program had to go to the back of the line and wait days before getting a chance to be executed again. It was in the programmers' best interest to have their program complete as fast as possible, lest the dreaded call for another sailboat race came in. And so -- goes the story -- the programming language BCPL was modified to start counting from zero to match the hardware architecture of the computer. That, presumably, sped things up.
+
