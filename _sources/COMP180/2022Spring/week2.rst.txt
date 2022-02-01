@@ -96,3 +96,5 @@ Mathemagicians tell us that integer numbers are part of the set of real numbers.
 First, integer numbers are very useful for counting indivisible items, e.g., people waiting in line, seats in a theater, books on a shelf, etc. Second, because storing an integer number is technically less demanding than storing a real number. 
 
 Computer programs do a lot of counting. It make sense to have a more efficient and economical way to keep track of that counting. That's why we separate between integers and real numbers in programming, even though mathematically integers *are* real numbers.
+
+s
