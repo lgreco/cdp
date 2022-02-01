@@ -97,4 +97,5 @@ First, integer numbers are very useful for counting indivisible items, e.g., peo
 
 Computer programs do a lot of counting. It make sense to have a more efficient and economical way to keep track of that counting. That's why we separate between integers and real numbers in programming, even though mathematically integers *are* real numbers.
 
-s
+.. image:: ../figures/zeroBasedCounting.png
+   :align: center
