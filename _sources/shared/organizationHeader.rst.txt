@@ -1,0 +1,2 @@
+Course organization and logistics
+---------------------------------
