@@ -151,12 +151,14 @@ Counting in computer programs feels a little bit like the *Who's on first* skit.
    :align: center
    
    
+   
 In programming, we begin counting from zero. 
 
 There is a an apocryphal story about the origin of this practice. In the 1950s, IBM donated a powerful computer to MIT. There were strings attached to the gift. Every time IBM's CEO Thomas J. Watson Jr. wanted to take his sailboat *Palawan* out for a race, MIT had to run a special program on the donated computer. It was a program that given wind conditions at the boat's location, produce the best possible sail configuration to win the race. Whatever program ran on the computer at the time the call from IBM came, had to be dropped. It was a time that even powerful computers were slow. It took hours, even days, for programs to complete. And the computer could execute one program at a time. The dropped program had to go to the back of the line and wait days before getting a chance to be executed again. It was in the programmers' best interest to have their program complete as fast as possible, lest the dreaded call for another sailboat race came in. And so -- goes the story -- the programming language BCPL was modified to start counting from zero to match the hardware architecture of the computer. That, presumably, sped things up.
 
 In 1982, Edsger W. Dijkstra offered a more nuanced justification for 0-based counting. After examining different ways to enumerate things, he wrote:
 
-    *an element's ordinal (subscript) equals the number of elements preceding it in the sequence.* (`EWD paper 381 <https://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF>`__)
+    *an element's ordinal (subscript) equals the number of elements preceding it in the sequence.* 
+    (`EWD paper 381 <https://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF>`__)
 
 The ordinal is a the number defining the position. And so, the first person in line is assigned the ordinal 0 because that's how many people are ahead in line. The second person is assigned the ordinal 1, because there is one person in front of them, and so on.
