@@ -162,4 +162,4 @@ In 1982, Edsger W. Dijkstra offered a more nuanced justification for 0-based cou
     *an element's ordinal (subscript) equals the number of elements preceding it in the sequence.* 
     (`EWD paper 831 <https://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF>`__)
 
-The ordinal is a the number defining the position. And so, the first person in line is assigned the ordinal 0 because that's how many people are ahead in line. The second person is assigned the ordinal 1, because there is one person in front of them, and so on.
+The ordinal is the number defining the position of an item. And so, the first person in line is assigned the ordinal 0 because that's how many people are ahead in line. The second person is assigned the ordinal 1, because there is one person in front of them, and so on.
