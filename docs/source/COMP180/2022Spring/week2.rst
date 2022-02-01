@@ -147,6 +147,7 @@ And the skit goes on to even more bizarre and hilarious interplay between names 
 Counting in computer programs feels a little bit like the *Who's on first* skit. As the figure below shows, the first person is line is not the "number one" person. In fact, the "number one" person, is the second person in line. Who's on first? It's the number zero.
 
 
+
 .. image:: ../figures/zeroBasedCounting.png
    :align: center
    
