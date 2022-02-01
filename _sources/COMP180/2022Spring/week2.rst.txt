@@ -97,5 +97,50 @@ First, integer numbers are very useful for counting indivisible items, e.g., peo
 
 Computer programs do a lot of counting. It make sense to have a more efficient and economical way to keep track of that counting. That's why we separate between integers and real numbers in programming, even though mathematically integers *are* real numbers.
 
+Counting from Zero
+------------------
+
+Some time in the 1930s, comedians Bud Abbott and Lou Costello popularized a skit that came to be known as *Who's on first?*  Lou wants to join  Bud's baseball team, the fictitious St. Louis Wolves. And Bud begins to describe the team's players and positions. Their exchange goes like this:
+
+- Abbott: [...] Well, let's see, we have on the bags, Who's on first, What's on second, I Don't Know is on third...
+
+- Costello: That's what I want to find out.
+
+- Abbott: I say Who's on first, What's on second, I Don't Know's on third.
+
+- Costello: Are you the manager?
+
+- Abbott: Yes.
+
+- Costello: You gonna be the coach too?
+
+- Abbott: Yes.
+
+- Costello: And you don't know the fellows' names?
+
+- Abbott: Well I should.
+
+- Costello: Well then who's on first?
+
+- Abbott: Yes.
+
+- Costello: I mean the fellow's name.
+
+- Abbott: Who.
+
+- Costello: The guy on first.
+
+- Abbott: Who.
+
+- Costello: The first baseman.
+
+- Abbott: Who.
+
+- Costello: The guy playing...
+
+- Abbott: Who is on first!
+
+- Costello: I'm asking YOU who's on first.
+
 .. image:: ../figures/zeroBasedCounting.png
    :align: center
