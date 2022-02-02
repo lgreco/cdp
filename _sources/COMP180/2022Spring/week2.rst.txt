@@ -148,9 +148,10 @@ Counting in computer programs feels a little bit like the *Who's on first* skit.
 
 
 
-.. image:: ../figures/zeroBasedCounting.png
+.. figure:: ../figures/zeroBasedCounting.png
    :align: center
    
+   Counting as humans (1st, 2nd, etc) and counting as computers (0, 1, etc)
 
 
 
@@ -160,7 +161,7 @@ There is a an apocryphal story about the origin of this practice. In the 1950s, 
 
 In 1982, Edsger W. Dijkstra offered a more nuanced justification for 0-based counting. After examining different ways to enumerate things, he wrote:
 
-    *an element's ordinal (subscript) equals the number of elements preceding it in the sequence.* 
+    *an element's ordinal (subscript) equals the number of elements preceding it in the sequence.*
     (`EWD paper 831 <https://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF>`__)
 
 The ordinal is the number defining the position of an item. And so, the first person in line is assigned the ordinal 0 because that's how many people are ahead in line. The second person is assigned the ordinal 1, because there is one person in front of them, and so on.
