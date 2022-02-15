@@ -3,7 +3,7 @@
 Method parameters
 =======================================
 
-For one of the assignments we developed a class called ``Window`` with methods that drew the following pattern::
+For one of the assignments, we developed a class called ``Window`` with methods that drew the following pattern::
 
   +===+===+
   |   |   |
