@@ -18,6 +18,6 @@ The only variable that needs to be determined by the user, is the heigh of the t
 
 The rest of the dimensions, as shown in the schematic, are derived based on that variable ``N``. The highlighted code below shows the corresponding calculations.
 
-.. literalinclude:: ./IntroProgramming/Sears/src/SearsTower.java 
+.. literalinclude:: ../../../../../Projects/IntroProgramming/Sears/src/SearsTower.java 
    :linenos:
    :language: java
