@@ -1,2 +1,0 @@
-firstclass  5000 coach   1500  coach
-100 firstclass 2000  discount 300
