@@ -90,16 +90,6 @@
 <div class="math notranslate nohighlight">
 \[\underbrace{ \underbrace{0}_{N} + 1 + 2 + 3 + 4 }_{M=5\ \text{numbers}} = 10\]</div>
 <p>The relevant code is shown below and the full code is available on <a class="reference external" href="https://github.com/lgreco/cdp/blob/master/source/COMP170/notes/IntroProgramming/Loops/NestedLoops/src/ASimpleProblem.java">GitHub</a>. A method takes two arguments, the beginning number <span class="math notranslate nohighlight">\(N\)</span> and how many subsequent integers to add, <span class="math notranslate nohighlight">\(M\)</span>. Then it builds a loop beginning at <span class="math notranslate nohighlight">\(i=N\)</span> and continuing while <span class="math notranslate nohighlight">\(i&lt;N+M\)</span>. The last term that satisfies this condition is <span class="math notranslate nohighlight">\(N+M-1\)</span>.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="lineno">1 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">rollingSum</span><span class="o">(</span><span class="kt">int</span> <span class="n">N</span><span class="o">,</span> <span class="kt">int</span> <span class="n">M</span><span class="o">)</span> <span class="o">{</span>
-<span class="lineno">2 </span>        <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="c1">// initialize sum variable</span>
-<span class="lineno">3 </span>        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">N</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="o">+</span><span class="n">M</span> <span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span> <span class="c1">// loop from N to N+M-1</span>
-<span class="lineno">4 </span>            <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span><span class="o">+</span><span class="n">i</span><span class="o">;</span>
-<span class="lineno">5 </span>        <span class="o">}</span>
-<span class="lineno">6 </span>        <span class="c1">// report result</span>
-<span class="lineno">7 </span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;\n\nSum of the first %d integers beginning at %d = %d\n\n&quot;</span><span class="o">,</span> <span class="n">M</span><span class="o">,</span><span class="n">N</span><span class="o">,</span><span class="n">sum</span><span class="o">);</span>
-<span class="lineno">8 </span>    <span class="o">}</span> <span class="c1">// method rollingSum</span>
-</pre></div>
-</div>
 <p>Thus to compute the sum <span class="math notranslate nohighlight">\(0+1+2+3+4\)</span>, we must invoke <code class="docutils literal notranslate"><span class="pre">rollingSum(0,5)</span></code>. Now, let’s say that for some weird reason we also wish to compute the following sums.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}1 + 2 + 3 + 4 + 5 &amp; \\
