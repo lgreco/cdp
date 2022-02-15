@@ -5,9 +5,11 @@ Leo's notes
 
 .. toctree::
 
-   notes/booleanVariables
+   
    notes/methodParameters
+   
 ..
+   notes/booleanVariables
    notes/searsTower
    notes/integerDivision
    notes/nestedLoops
