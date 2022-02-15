@@ -55,9 +55,9 @@ All that changes is the value of characters ``C1`` and ``C2``. These similar pat
      for (int height = 0; height < SIZE; height++) {
        for (int pane = 0; pane < PANES; pane++) {
          System.out.print(VERTICAL);
-           for (int i = 0; i < SIZE; i++) {
-             System.out.print(GLASS);
-           }
+         for (int i = 0; i < SIZE; i++) {
+           System.out.print(GLASS);
+         }
        }
      System.out.println(VERTICAL);
      }
