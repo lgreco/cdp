@@ -20,7 +20,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="COMP 180 Data Analysis for the Sciences" href="../../COMP180/introduction.html" />
+    <link rel="next" title="The Calendar Problem" href="calendar.html" />
     <link rel="prev" title="Leo’s notes" href="../notes.html" /> 
 </head>
 
@@ -58,6 +58,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../notes.html">Leo's notes</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Method parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">The Calendar Problem</a></li>
 </ul>
 </li>
 </ul>
@@ -152,7 +153,7 @@
 </span><span class="o">}</span>
 </pre></div>
 </div>
-<p>In both methods above, the outer loop runs <code class="docutils literal notranslate"><span class="pre">PANES</span></code> times. The inner loop runs <code class="docutils literal notranslate"><span class="pre">SIZE</span></code> times. All that is different is the characters printed. Such similarity, in fact duplication of code, is an opportunity to simplify things. Simplification, here, means extracting the duplicate code in a separate method, and replace the code with that new method. The new method must recognize what characters we want to print. We provide that information as arguments when we call the method. The need for these arguments is specified in the method header as parameters.</p>
+<p>In both methods above, the outer loop runs <code class="docutils literal notranslate"><span class="pre">PANES</span></code> times. The inner loop runs <code class="docutils literal notranslate"><span class="pre">SIZE</span></code> times. The only difference between them is the characters printed. Such similarity, in fact duplication of code, is an opportunity to simplify things. Simplification, here, means extracting the duplicate code in a separate method, and replace the code with that new method. The new method must recognize what characters we want to print. We provide that information as arguments when we call the method. The need for these arguments is specified in the method header as parameters.</p>
 <p>Let’s call the new method, that will simplify the code above, <code class="docutils literal notranslate"><span class="pre">printCharacters</span></code>:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printCharacters</span><span class="o">(</span><span class="kt">char</span> <span class="n">C1</span><span class="o">,</span> <span class="kt">char</span> <span class="n">C2</span><span class="o">)</span> <span class="o">{</span>
   <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">pane</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">pane</span> <span class="o">&lt;</span> <span class="n">PANES</span><span class="o">;</span> <span class="n">pane</span><span class="o">++)</span> <span class="o">{</span>
@@ -214,7 +215,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../notes.html" class="btn btn-neutral float-left" title="Leo’s notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../COMP180/introduction.html" class="btn btn-neutral float-right" title="COMP 180 Data Analysis for the Sciences" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="calendar.html" class="btn btn-neutral float-right" title="The Calendar Problem" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

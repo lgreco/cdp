@@ -63,7 +63,7 @@ All that changes is the value of characters ``C1`` and ``C2``. These similar pat
      }
    }  
 
-In both methods above, the outer loop runs ``PANES`` times. The inner loop runs ``SIZE`` times. All that is different is the characters printed. Such similarity, in fact duplication of code, is an opportunity to simplify things. Simplification, here, means extracting the duplicate code in a separate method, and replace the code with that new method. The new method must recognize what characters we want to print. We provide that information as arguments when we call the method. The need for these arguments is specified in the method header as parameters.
+In both methods above, the outer loop runs ``PANES`` times. The inner loop runs ``SIZE`` times. The only difference between them is the characters printed. Such similarity, in fact duplication of code, is an opportunity to simplify things. Simplification, here, means extracting the duplicate code in a separate method, and replace the code with that new method. The new method must recognize what characters we want to print. We provide that information as arguments when we call the method. The need for these arguments is specified in the method header as parameters.
 
 Let's call the new method, that will simplify the code above, ``printCharacters``:
 

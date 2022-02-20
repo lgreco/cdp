@@ -48,27 +48,7 @@ The "yellow" week
    
 Next let's look at the first line of the calendar, the "yellow" week. After a few hours of head-scratching we observe that the yellow week comprises two groups. A group of empty cells (in orange outlines) and a group of filled cells (pink outline). The total number of cells in these two groups is always 7 (``= DAYS_IN_A_WEEK``).
 
-Can we tell how many cells are in each group? In the example here, we see that if the first Sunday of the month is its second day, there are 6 empty cells. Pretty fast we come with the following table:
-
-
-+---------+----------+----------+----------------------------------+
-| Sunday  | Empty    | Filled   | Expressions                      |
-|  | date |  | cells |  | cells |                                  |
-+=========+==========+==========+==================================+
-| 1       | 0        | 7        |                                  |
-+---------+----------+----------+                                  |
-| 2       | 6        | 1        |                                  |
-+---------+----------+----------+                                  |
-| 3       | 5        | 2        |                                  |
-+---------+----------+----------+                                  |
-| 4       | 4        | 3        |                                  |
-+---------+----------+----------+                                  |
-| 5       | 3        | 4        |                                  |
-+---------+----------+----------+                                  |
-| 6       | 2        | 5        |                                  |
-+---------+----------+----------+                                  |
-| 7       | 1        | 6        |                                  |
-+---------+----------+----------+----------------------------------+
+Can we tell how many cells are in each group? In the example here, we see that if the first Sunday of the month is its second day, there are 6 empty cells. Pretty soon, we can see that the number of empty and filled cells for the yellow line depends on the date of the first Sunday of the month.
 
 The analysis above necessitates two loops: one loop to print the empty cells, followed by another loop to print the filled cells. Notice that the loop for empty cells *may* not run at all (in case Sunday falls on the first of the month).
 
