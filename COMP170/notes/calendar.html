@@ -62,6 +62,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#the-blue-week">The “blue” week</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#the-yellow-week">The “yellow” week</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#remaining-analysis-and-observations">Remaining analysis and observations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-kf-code">The KF code</a></li>
 </ul>
 </li>
 </ul>
@@ -146,9 +147,17 @@
 <p><span class="caption-text">Printing the “yellow” week.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>Next let’s look at the first line of the calendar, the “yellow” week. After a few hours of head-scratching we observe that the yellow week comprises two groups. A group of empty cells (in orange outlines) and a group of filled cells (pink outline). The total number of cells in these two groups is always 7 (<code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">DAYS_IN_A_WEEK</span></code>).</p>
-<p>Can we tell how many cells are in each group? In the example here, we see that if the first Sunday of the month is its second day, there are 6 empty cells. Pretty soon, we can see that the number of empty and filled cells for the yellow line depends on the date of the first Sunday of the month.</p>
-<p>The analysis above necessitates two loops: one loop to print the empty cells, followed by another loop to print the filled cells. Notice that the loop for empty cells <em>may</em> not run at all (in case Sunday falls on the first of the month).</p>
+<p>Next let’s look at the first line of the calendar, the “yellow” week. After a few hours of head-scratching we observe that the yellow week comprises two groups. A group of empty cells (in orange outlines) and a group of filled cells (pink outline). The total number of cells in these two groups is always 7 (<code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">DAYS_IN_WEEK</span></code>).</p>
+<p>Can we tell how many cells are in each group? In the example here, we see that if the first Sunday of the month is its second day, there are 6 empty cells. Pretty soon, we can see that the number of empty and filled cells for the yellow line depends on the date of the first Sunday of the month. The best formula for computing the number of blank cells is:</p>
+<div class="math notranslate nohighlight">
+\[\text{number of blank cells} = (8 - \text{first Sunday}) \bmod 7\]</div>
+<p>Parameterizing <span class="math notranslate nohighlight">\(D=7\)</span> as the variable with the number of days in the week, the expression above becomes:</p>
+<div class="math notranslate nohighlight">
+\[\text{number of blank cells} = ((D+1) - \text{first Sunday}) \bmod D\]</div>
+<p>The corresponding Java statement (line 124 in the code below) uses the constant <code class="docutils literal notranslate"><span class="pre">DAYS_IN_WEEK</span></code> instead of <span class="math notranslate nohighlight">\(D\)</span>, and becomes:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">blanksAtBeginning</span> <span class="o">=</span> <span class="o">((</span><span class="n">DAYS_IN_WEEK</span> <span class="o">+</span><span class="mi">1</span><span class="o">)</span> <span class="o">-</span> <span class="n">firstSunday</span><span class="o">)</span> <span class="o">%</span> <span class="n">DAYS_IN_WEEK</span><span class="o">;</span>
+</pre></div>
+</div>
 </section>
 <section id="remaining-analysis-and-observations">
 <h2>Remaining analysis and observations<a class="headerlink" href="#remaining-analysis-and-observations" title="Permalink to this headline"></a></h2>
@@ -162,6 +171,236 @@
 </div>
 <p>It is left as an exercise to determine the <code class="docutils literal notranslate"><span class="pre">greenWeek</span></code> method and the number of times we invoke <code class="docutils literal notranslate"><span class="pre">blueWeek</span></code>.</p>
 <p>Let’s close with an <strong>observation.</strong> The problem starts with the requirement to not use conditional statements. To be precise, what we have avoided so far is the explicit use of <cite>if-then-else</cite> statements. Because our code will contain for-loops, there will be <em>implied</em> conditions: the loops’ terminating conditions.</p>
+</section>
+<section id="the-kf-code">
+<h2>The KF code<a class="headerlink" href="#the-kf-code" title="Permalink to this headline"></a></h2>
+<p>The best solution, to date, for this problem came from KF, a student who took COMP 170 in Spring 2021. Her code is shown below. I have only made style and commend edits, and added a few class constants. Also, I added one if-statement in spite of the problem forbiting us to use them. The if-statement is not related to the construction of the calendar grid, but makes sure that the arguments we pass are valid. In other words, if we ask for the calendar of a month with 43 days, whose first Sunday is the 11th day in the month, nothing will appear on our screens.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="lineno">  1 </span><span class="cm">/**</span>
+<span class="lineno">  2 </span><span class="cm"> * Class that creates a monthly calendar on a grid with 7 columns. Each column corresponds to a day of</span>
+<span class="lineno">  3 </span><span class="cm"> * the week, beginning with Sunday.</span>
+<span class="lineno">  4 </span><span class="cm"> *</span>
+<span class="lineno">  5 </span><span class="cm"> *              Sun    Mon    Tue    Wed    Thu    Fri    Sat</span>
+<span class="lineno">  6 </span><span class="cm"> *            +------+------+------+------+------+------+------+</span>
+<span class="lineno">  7 </span><span class="cm"> *            |      |      |      |      |      |      |      |</span>
+<span class="lineno">  8 </span><span class="cm"> *            +------+------+------+------+------+------+------+</span>
+<span class="lineno">  9 </span><span class="cm"> *</span>
+<span class="lineno"> 10 </span><span class="cm"> * The first row of the grid may include empty cells until the first day of the month is marked. The two extreme</span>
+<span class="lineno"> 11 </span><span class="cm"> * scenarios are when the first day of the month is Sunday or Saturday:</span>
+<span class="lineno"> 12 </span><span class="cm"> *</span>
+<span class="lineno"> 13 </span><span class="cm"> *              Sun    Mon    Tue    Wed    Thu    Fri    Sat           There are no empty cells</span>
+<span class="lineno"> 14 </span><span class="cm"> *            +------+------+------+------+------+------+------+        in the grid for the first</span>
+<span class="lineno"> 15 </span><span class="cm"> *            |  1   |  2   |   3  |  4   |  5   |  6   |  7   |        week when the first day of</span>
+<span class="lineno"> 16 </span><span class="cm"> *            +------+------+------+------+------+------+------+        the month is Sunday</span>
+<span class="lineno"> 17 </span><span class="cm"> *</span>
+<span class="lineno"> 18 </span><span class="cm"> *</span>
+<span class="lineno"> 19 </span><span class="cm"> *              Sun    Mon    Tue    Wed    Thu    Fri    Sat           There are 6 empty cells</span>
+<span class="lineno"> 20 </span><span class="cm"> *            +------+------+------+------+------+------+------+        in the grid for the first</span>
+<span class="lineno"> 21 </span><span class="cm"> *            |      |      |      |      |      |      |  1   |        week when the first day of</span>
+<span class="lineno"> 22 </span><span class="cm"> *            +------+------+------+------+------+------+------+        the month is Saturday</span>
+<span class="lineno"> 23 </span><span class="cm"> *</span>
+<span class="lineno"> 24 </span><span class="cm"> * Once we determine the occupancy of the grid for the first week, the grids for the remaining weeks can be</span>
+<span class="lineno"> 25 </span><span class="cm"> * computed easily.</span>
+<span class="lineno"> 26 </span><span class="cm"> *</span>
+<span class="lineno"> 27 </span><span class="cm"> * The code to compute correctly the contents of the grid for the first week of the month, was developed by KF,</span>
+<span class="lineno"> 28 </span><span class="cm"> * a student in COMP 170, Spring 2021. Leo Irakliotis rewrote the code to introduce class constants and additional</span>
+<span class="lineno"> 29 </span><span class="cm"> * comments.</span>
+<span class="lineno"> 30 </span><span class="cm"> *</span>
+<span class="lineno"> 31 </span><span class="cm"> */</span>
+<span class="lineno"> 32 </span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calendar</span> <span class="o">{</span>
+<span class="lineno"> 33 </span>
+<span class="lineno"> 34 </span>    <span class="cm">/** Number of days in shortest month */</span>
+<span class="lineno"> 35 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">SHORTEST_MONTH</span> <span class="o">=</span> <span class="mi">28</span><span class="o">;</span>
+<span class="lineno"> 36 </span>    <span class="cm">/** Number of days in longest month */</span>
+<span class="lineno"> 37 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">LONGEST_MONTH</span> <span class="o">=</span> <span class="mi">31</span><span class="o">;</span>
+<span class="lineno"> 38 </span>    <span class="cm">/** Number of days in a week */</span>
+<span class="lineno"> 39 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">DAYS_IN_WEEK</span> <span class="o">=</span> <span class="mi">7</span><span class="o">;</span>
+<span class="lineno"> 40 </span>    <span class="cm">/** Size of cell padding */</span>
+<span class="lineno"> 41 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">PADDING</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+<span class="lineno"> 42 </span>    <span class="cm">/** Grid header */</span>
+<span class="lineno"> 43 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">DAYS_NAMES</span> <span class="o">=</span> <span class="s">&quot;  Sun    Mon    Tue    Wed    Thu    Fri    Sat   &quot;</span><span class="o">;</span>
+<span class="lineno"> 44 </span>
+<span class="lineno"> 45 </span>
+<span class="lineno"> 46 </span>    <span class="cm">/** Driver method to test the code. */</span>
+<span class="lineno"> 47 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno"> 48 </span>        <span class="c1">// A few test calls</span>
+<span class="lineno"> 49 </span>        <span class="n">printCalendarMonth</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span> <span class="mi">30</span><span class="o">);</span>
+<span class="lineno"> 50 </span>        <span class="n">printCalendarMonth</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">31</span><span class="o">);</span>
+<span class="lineno"> 51 </span>        <span class="n">printCalendarMonth</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">28</span><span class="o">);</span>
+<span class="lineno"> 52 </span>        <span class="n">printCalendarMonth</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">30</span><span class="o">);</span>
+<span class="lineno"> 53 </span>        <span class="n">printCalendarMonth</span><span class="o">(</span><span class="mi">7</span><span class="o">,</span> <span class="mi">31</span><span class="o">);</span>
+<span class="lineno"> 54 </span>    <span class="o">}</span>  <span class="c1">// method main</span>
+<span class="lineno"> 55 </span>
+<span class="lineno"> 56 </span>
+<span class="lineno"> 57 </span>    <span class="cm">/**</span>
+<span class="lineno"> 58 </span><span class="cm">     * Method to produce the calendar, by calling other methods for various parts of the calendar.</span>
+<span class="lineno"> 59 </span><span class="cm">     * @param firstSunday int date of the first Sunday of the month</span>
+<span class="lineno"> 60 </span><span class="cm">     * @param numberOfDays int number of days in the month.</span>
+<span class="lineno"> 61 </span><span class="cm">     */</span>
+<span class="lineno"> 62 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printCalendarMonth</span> <span class="o">(</span><span class="kt">int</span> <span class="n">firstSunday</span><span class="o">,</span> <span class="kt">int</span> <span class="n">numberOfDays</span><span class="o">){</span>
+<span class="lineno"> 63 </span>        <span class="c1">// Valid arguments: Month has 28, 29, 30, or 31 days? First Sunday on 1st-thru-7th day?</span>
+<span class="lineno"> 64 </span>        <span class="kt">boolean</span> <span class="n">argumentsAreValid</span> <span class="o">=</span> <span class="o">(</span><span class="n">numberOfDays</span> <span class="o">&gt;=</span> <span class="n">SHORTEST_MONTH</span> <span class="o">&amp;&amp;</span> <span class="n">numberOfDays</span> <span class="o">&lt;=</span> <span class="n">LONGEST_MONTH</span><span class="o">)</span> <span class="o">&amp;&amp;</span>
+<span class="lineno"> 65 </span>                <span class="o">(</span><span class="n">firstSunday</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">firstSunday</span> <span class="o">&lt;=</span> <span class="n">DAYS_IN_WEEK</span><span class="o">);</span>
+<span class="lineno"> 66 </span>        <span class="k">if</span> <span class="o">(</span><span class="n">argumentsAreValid</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno"> 67 </span>            <span class="n">printHeader</span><span class="o">();</span>
+<span class="lineno"> 68 </span>            <span class="n">printBlankDaysBeg</span><span class="o">(</span><span class="n">firstSunday</span><span class="o">);</span>
+<span class="lineno"> 69 </span>            <span class="n">printFirstWeek</span><span class="o">(</span><span class="n">firstSunday</span><span class="o">);</span>
+<span class="lineno"> 70 </span>            <span class="n">printOtherWeeks</span><span class="o">(</span><span class="n">firstSunday</span><span class="o">,</span> <span class="n">numberOfDays</span><span class="o">);</span>
+<span class="lineno"> 71 </span>            <span class="n">printLastWeek</span><span class="o">(</span><span class="n">firstSunday</span><span class="o">,</span> <span class="n">numberOfDays</span><span class="o">);</span>
+<span class="lineno"> 72 </span>            <span class="n">printBlankDaysEnd</span><span class="o">(</span><span class="n">firstSunday</span><span class="o">,</span> <span class="n">numberOfDays</span><span class="o">);</span>
+<span class="lineno"> 73 </span>            <span class="n">separator</span><span class="o">();</span>
+<span class="lineno"> 74 </span>        <span class="o">}</span>
+<span class="lineno"> 75 </span>    <span class="o">}</span>  <span class="c1">// method printCalendarMonth</span>
+<span class="lineno"> 76 </span>
+<span class="lineno"> 77 </span>
+<span class="lineno"> 78 </span>    <span class="cm">/**</span>
+<span class="lineno"> 79 </span><span class="cm">     * Method to print a calendar header showing the days of the week, followed by a separator line.</span>
+<span class="lineno"> 80 </span><span class="cm">     */</span>
+<span class="lineno"> 81 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printHeader</span><span class="o">(){</span>
+<span class="lineno"> 82 </span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">DAYS_NAMES</span><span class="o">);</span>
+<span class="lineno"> 83 </span>        <span class="n">separator</span><span class="o">();</span>
+<span class="lineno"> 84 </span>    <span class="o">}</span>  <span class="c1">// method printHeader</span>
+<span class="lineno"> 85 </span>
+<span class="lineno"> 86 </span>
+<span class="lineno"> 87 </span>    <span class="cm">/**</span>
+<span class="lineno"> 88 </span><span class="cm">     * Method to print a line with spacing marks to indicate a grid pattern.</span>
+<span class="lineno"> 89 </span><span class="cm">     */</span>
+<span class="lineno"> 90 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">separator</span><span class="o">(){</span>
+<span class="lineno"> 91 </span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;+------&quot;</span><span class="o">.</span><span class="na">repeat</span><span class="o">(</span><span class="n">DAYS_IN_WEEK</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot;+&quot;</span><span class="o">);</span>
+<span class="lineno"> 92 </span>    <span class="o">}</span>  <span class="c1">// method separator</span>
+<span class="lineno"> 93 </span>
+<span class="lineno"> 94 </span>
+<span class="lineno"> 95 </span>    <span class="cm">/**</span>
+<span class="lineno"> 96 </span><span class="cm">     * Prints the number of blank days at the beginning of the calendar. To compute how many blank dates (and</span>
+<span class="lineno"> 97 </span><span class="cm">     * therefore blank cells) needed, we obseeve that when the first Sunday falls on the first day of the month</span>
+<span class="lineno"> 98 </span><span class="cm">     * there are 0 blank cells, is Sunday is the 2nd day of the month, there are 6 empty cells and so on. These</span>
+<span class="lineno"> 99 </span><span class="cm">     * observations are summarized below, leading to the expression that computes the number of empty cells.</span>
+<span class="lineno">100 </span><span class="cm">     *</span>
+<span class="lineno">101 </span><span class="cm">     * if first Sunday          there are this          expression to generate</span>
+<span class="lineno">102 </span><span class="cm">     * falls on this            many blank cells        the number of empty</span>
+<span class="lineno">103 </span><span class="cm">     * day of the month         in first week           cells required</span>
+<span class="lineno">104 </span><span class="cm">     *</span>
+<span class="lineno">105 </span><span class="cm">     *      1                           0               (8-7) % 7 = 0</span>
+<span class="lineno">106 </span><span class="cm">     *      2                           6               (8-6) % 7 = 6</span>
+<span class="lineno">107 </span><span class="cm">     *      3                           5               (8-5) % 7 = 5</span>
+<span class="lineno">108 </span><span class="cm">     *      4                           4               (8-4) % 7 = 4</span>
+<span class="lineno">109 </span><span class="cm">     *      5                           3               (8-3) % 7 = 3</span>
+<span class="lineno">110 </span><span class="cm">     *      6                           2               (8-2) % 7 = 2</span>
+<span class="lineno">111 </span><span class="cm">     *      7                           1               (8-1) % 7 = 1</span>
+<span class="lineno">112 </span><span class="cm">     *</span>
+<span class="lineno">113 </span><span class="cm">     * Based on the observation above, we can compute the number of blank cells with the formula:</span>
+<span class="lineno">114 </span><span class="cm">     *</span>
+<span class="lineno">115 </span><span class="cm">     *      blankCells = (8 - firstSunday) % 7</span>
+<span class="lineno">116 </span><span class="cm">     *</span>
+<span class="lineno">117 </span><span class="cm">     * and since we have a constant daysInWeek to represent number seven, the formula is rewritten:</span>
+<span class="lineno">118 </span><span class="cm">     *</span>
+<span class="lineno">119 </span><span class="cm">     *      blankCells = ( (daysInWeek + 1) - firstSunday )  %  daysInWeek</span>
+<span class="lineno">120 </span><span class="cm">     *</span>
+<span class="lineno">121 </span><span class="cm">     * @param firstSunday int date of first Sunday of the month</span>
+<span class="lineno">122 </span><span class="cm">     */</span>
+<span class="lineno">123 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printBlankDaysBeg</span><span class="o">(</span><span class="kt">int</span> <span class="n">firstSunday</span><span class="o">){</span>
+<span class="lineno">124 </span>        <span class="kt">int</span> <span class="n">blanksAtBeginning</span> <span class="o">=</span> <span class="o">((</span><span class="n">DAYS_IN_WEEK</span> <span class="o">+</span><span class="mi">1</span><span class="o">)</span> <span class="o">-</span> <span class="n">firstSunday</span><span class="o">)</span> <span class="o">%</span> <span class="n">DAYS_IN_WEEK</span><span class="o">;</span>
+<span class="lineno">125 </span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&quot;|      &quot;</span><span class="o">.</span><span class="na">repeat</span><span class="o">(</span> <span class="n">blanksAtBeginning</span> <span class="o">)</span> <span class="o">+</span> <span class="s">&quot;|&quot;</span><span class="o">.</span><span class="na">repeat</span><span class="o">(</span><span class="n">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">firstSunday</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">)));</span>
+<span class="lineno">126 </span>    <span class="o">}</span>  <span class="c1">// method printBlankDaysBeg</span>
+<span class="lineno">127 </span>
+<span class="lineno">128 </span>
+<span class="lineno">129 </span>    <span class="cm">/**</span>
+<span class="lineno">130 </span><span class="cm">     * Prints the first week, taking into account the number of blanks at the beginning of the month</span>
+<span class="lineno">131 </span><span class="cm">     * @param firstSunday int date of first Sunday of the month</span>
+<span class="lineno">132 </span><span class="cm">     */</span>
+<span class="lineno">133 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printFirstWeek</span><span class="o">(</span><span class="kt">int</span> <span class="n">firstSunday</span><span class="o">){</span>
+<span class="lineno">134 </span>        <span class="c1">// Print squares with dates in them, continuing on the same line as printBlankDays</span>
+<span class="lineno">135 </span>        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">day</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">day</span> <span class="o">&lt;=</span> <span class="n">firstSunday</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">;</span> <span class="n">day</span><span class="o">++)</span> <span class="o">{</span>
+<span class="lineno">136 </span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">padded</span><span class="o">(</span><span class="n">day</span><span class="o">,</span> <span class="n">PADDING</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot; |&quot;</span><span class="o">);</span>
+<span class="lineno">137 </span>        <span class="o">}</span>
+<span class="lineno">138 </span>        <span class="c1">// Only go to a new line if we printed anything in the first loop.</span>
+<span class="lineno">139 </span>        <span class="c1">// If not, our first week stars on Sunday and it will be taken care of by printOtherWeeks.</span>
+<span class="lineno">140 </span>        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">firstSunday</span><span class="o">;</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">100</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno">141 </span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+<span class="lineno">142 </span>        <span class="o">}</span>
+<span class="lineno">143 </span>    <span class="o">}</span>  <span class="c1">// method printFirstWeek</span>
+<span class="lineno">144 </span>
+<span class="lineno">145 </span>
+<span class="lineno">146 </span>    <span class="cm">/**</span>
+<span class="lineno">147 </span><span class="cm">     * Prints the more standard weeks</span>
+<span class="lineno">148 </span><span class="cm">     *</span>
+<span class="lineno">149 </span><span class="cm">     * @param firstSunday int date of the first Sunday of the month</span>
+<span class="lineno">150 </span><span class="cm">     * @param numberOfDays int number of days in the month.</span>
+<span class="lineno">151 </span><span class="cm">     */</span>
+<span class="lineno">152 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printOtherWeeks</span><span class="o">(</span><span class="kt">int</span> <span class="n">firstSunday</span><span class="o">,</span> <span class="kt">int</span> <span class="n">numberOfDays</span><span class="o">){</span>
+<span class="lineno">153 </span>        <span class="c1">// Tells us the number of weeks we&#39;ll need, since if 7 doesn&#39;t divide evenly into our numberOfDays</span>
+<span class="lineno">154 </span>        <span class="c1">// we need to round it up to print the final, shorter week</span>
+<span class="lineno">155 </span>        <span class="kt">int</span> <span class="n">numberOfRows</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">((</span><span class="n">numberOfDays</span> <span class="o">-</span> <span class="n">firstSunday</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span> <span class="o">/</span> <span class="o">((</span><span class="kt">double</span><span class="o">)</span> <span class="n">DAYS_IN_WEEK</span><span class="o">));</span>
+<span class="lineno">156 </span>        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">week</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">week</span> <span class="o">&lt;</span> <span class="n">numberOfRows</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">;</span> <span class="n">week</span><span class="o">++)</span> <span class="o">{</span>
+<span class="lineno">157 </span>            <span class="c1">// Adds 7 to firstSunday to give us the first day of each week</span>
+<span class="lineno">158 </span>            <span class="kt">int</span> <span class="n">firstDayOfWeek</span> <span class="o">=</span> <span class="n">firstSunday</span> <span class="o">+</span> <span class="o">(</span><span class="n">week</span> <span class="o">*</span> <span class="n">DAYS_IN_WEEK</span><span class="o">);</span>
+<span class="lineno">159 </span>            <span class="c1">// The last day of the week is whichever is smaller, the total numberOfDays in the month</span>
+<span class="lineno">160 </span>            <span class="c1">// or the Saturday of that week. This takes care of what happens if the month ends in the middle of a week.</span>
+<span class="lineno">161 </span>            <span class="kt">int</span> <span class="n">lastDayOfWeek</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">min</span><span class="o">((</span><span class="n">firstSunday</span> <span class="o">+</span> <span class="o">(</span><span class="n">week</span> <span class="o">*</span> <span class="n">DAYS_IN_WEEK</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="n">DAYS_IN_WEEK</span> <span class="o">-</span><span class="mi">1</span><span class="o">)),</span> <span class="n">numberOfDays</span><span class="o">);</span>
+<span class="lineno">162 </span>            <span class="c1">// left edge formatting</span>
+<span class="lineno">163 </span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&quot;|&quot;</span><span class="o">);</span>
+<span class="lineno">164 </span>            <span class="c1">// This loop prints the days in padded formatting</span>
+<span class="lineno">165 </span>            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">day</span> <span class="o">=</span> <span class="n">firstDayOfWeek</span><span class="o">;</span> <span class="n">day</span> <span class="o">&lt;=</span> <span class="n">lastDayOfWeek</span> <span class="o">;</span> <span class="n">day</span><span class="o">++)</span> <span class="o">{</span>
+<span class="lineno">166 </span>                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">padded</span><span class="o">(</span><span class="n">day</span><span class="o">,</span> <span class="n">PADDING</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot; |&quot;</span><span class="o">);</span>
+<span class="lineno">167 </span>            <span class="o">}</span>
+<span class="lineno">168 </span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+<span class="lineno">169 </span>        <span class="o">}</span>
+<span class="lineno">170 </span>    <span class="o">}</span>  <span class="c1">// method printOtherWeeks</span>
+<span class="lineno">171 </span>
+<span class="lineno">172 </span>
+<span class="lineno">173 </span>    <span class="cm">/**</span>
+<span class="lineno">174 </span><span class="cm">     * Prints the final week of the calendar</span>
+<span class="lineno">175 </span><span class="cm">     *</span>
+<span class="lineno">176 </span><span class="cm">     * @param firstSunday int date of the first Sunday of the month</span>
+<span class="lineno">177 </span><span class="cm">     * @param numberOfDays int number of days in the month.</span>
+<span class="lineno">178 </span><span class="cm">     */</span>
+<span class="lineno">179 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printLastWeek</span><span class="o">(</span><span class="kt">int</span> <span class="n">firstSunday</span><span class="o">,</span> <span class="kt">int</span> <span class="n">numberOfDays</span><span class="o">){</span>
+<span class="lineno">180 </span>        <span class="kt">int</span> <span class="n">numberOfRows</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">((</span><span class="n">numberOfDays</span> <span class="o">-</span> <span class="n">firstSunday</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span> <span class="o">/</span> <span class="o">((</span><span class="kt">double</span><span class="o">)</span> <span class="n">DAYS_IN_WEEK</span><span class="o">));</span>
+<span class="lineno">181 </span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&quot;|&quot;</span><span class="o">);</span> <span class="c1">// left edge formatting</span>
+<span class="lineno">182 </span>        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">day</span> <span class="o">=</span> <span class="n">firstSunday</span> <span class="o">+</span> <span class="o">((</span><span class="n">numberOfRows</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">*</span> <span class="n">DAYS_IN_WEEK</span><span class="o">)</span> <span class="o">;</span> <span class="n">day</span> <span class="o">&lt;=</span> <span class="n">numberOfDays</span><span class="o">;</span> <span class="n">day</span><span class="o">++)</span> <span class="o">{</span>
+<span class="lineno">183 </span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">padded</span><span class="o">(</span><span class="n">day</span><span class="o">,</span> <span class="n">PADDING</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot; |&quot;</span><span class="o">);</span>
+<span class="lineno">184 </span>        <span class="o">}</span>
+<span class="lineno">185 </span>    <span class="o">}</span>  <span class="c1">// method printLastWeek</span>
+<span class="lineno">186 </span>
+<span class="lineno">187 </span>
+<span class="lineno">188 </span>    <span class="cm">/**</span>
+<span class="lineno">189 </span><span class="cm">     * Prints the blank days at the end of the calendar.</span>
+<span class="lineno">190 </span><span class="cm">     * @param firstSunday int date of the first Sunday of the month</span>
+<span class="lineno">191 </span><span class="cm">     * @param numberOfDays int number of days in the month.</span>
+<span class="lineno">192 </span><span class="cm">     */</span>
+<span class="lineno">193 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printBlankDaysEnd</span><span class="o">(</span><span class="kt">int</span> <span class="n">firstSunday</span><span class="o">,</span> <span class="kt">int</span> <span class="n">numberOfDays</span><span class="o">){</span>
+<span class="lineno">194 </span>        <span class="kt">int</span> <span class="n">blanksAtBeginning</span> <span class="o">=</span> <span class="o">(((</span><span class="n">DAYS_IN_WEEK</span> <span class="o">+</span><span class="mi">1</span><span class="o">)</span> <span class="o">-</span> <span class="n">firstSunday</span><span class="o">)</span> <span class="o">%</span> <span class="n">DAYS_IN_WEEK</span><span class="o">);</span>
+<span class="lineno">195 </span>        <span class="cm">/*</span>
+<span class="lineno">196 </span><span class="cm">        This is just like our other int numberOfRows used earlier, except for the Math.min statement at the end</span>
+<span class="lineno">197 </span><span class="cm">        which adds an additional row iff we have any blanks at the beginning. We need it to do this otherwise it will</span>
+<span class="lineno">198 </span><span class="cm">        print one extra row at the bottom if the firstSunday is 1.</span>
+<span class="lineno">199 </span><span class="cm">        */</span>
+<span class="lineno">200 </span>        <span class="kt">int</span> <span class="n">numberOfRows2</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">((</span><span class="n">numberOfDays</span> <span class="o">-</span> <span class="n">firstSunday</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">)</span> <span class="o">/</span> <span class="o">((</span><span class="kt">double</span><span class="o">)</span> <span class="n">DAYS_IN_WEEK</span><span class="o">))</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">blanksAtBeginning</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+<span class="lineno">201 </span>        <span class="cm">/*</span>
+<span class="lineno">202 </span><span class="cm">        The repeat statement comes from the fact that the total number of squares in the calendar (numberOfRows2 * 7)</span>
+<span class="lineno">203 </span><span class="cm">        minus the total numberOfDays and blanksAtBeginning will tell us how many leftover squares we have at the endt</span>
+<span class="lineno">204 </span><span class="cm">        hat need to be printed blank.</span>
+<span class="lineno">205 </span><span class="cm">        */</span>
+<span class="lineno">206 </span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;      |&quot;</span><span class="o">.</span><span class="na">repeat</span><span class="o">((</span><span class="n">numberOfRows2</span> <span class="o">*</span> <span class="n">DAYS_IN_WEEK</span><span class="o">)</span> <span class="o">-</span> <span class="o">(</span><span class="n">numberOfDays</span> <span class="o">+</span> <span class="n">blanksAtBeginning</span><span class="o">)));</span>
+<span class="lineno">207 </span>    <span class="o">}</span>  <span class="c1">// method printBlankDaysEnd</span>
+<span class="lineno">208 </span>
+<span class="lineno">209 </span>
+<span class="lineno">210 </span>    <span class="cm">/**</span>
+<span class="lineno">211 </span><span class="cm">     * Helper method provided by the book assignment</span>
+<span class="lineno">212 </span><span class="cm">     * @param n int Number to display in padded string</span>
+<span class="lineno">213 </span><span class="cm">     * @param width int width of the string</span>
+<span class="lineno">214 </span><span class="cm">     * @return String with padded content</span>
+<span class="lineno">215 </span><span class="cm">     */</span>
+<span class="lineno">216 </span>    <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">padded</span> <span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span> <span class="n">width</span><span class="o">){</span>
+<span class="lineno">217 </span>        <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;&quot;</span> <span class="o">+</span> <span class="n">n</span><span class="o">;</span>
+<span class="lineno">218 </span>        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">width</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+<span class="lineno">219 </span>            <span class="n">s</span> <span class="o">=</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">s</span><span class="o">;</span>
+<span class="lineno">220 </span>        <span class="o">}</span>
+<span class="lineno">221 </span>        <span class="k">return</span> <span class="n">s</span><span class="o">;</span>
+<span class="lineno">222 </span>    <span class="o">}</span>  <span class="c1">// method padded</span>
+<span class="lineno">223 </span>
+<span class="lineno">224 </span><span class="o">}</span>  <span class="c1">// class Calendar</span>
+</pre></div>
+</div>
 </section>
 </section>
 
