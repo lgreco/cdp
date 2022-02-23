@@ -197,13 +197,13 @@ The best solution, to date, for this problem came from KF, a student who took CO
         * falls on this            many blank cells        the number of empty
         * day of the month         in first week           cells required
         *
-        *      1                           0               (8-7) % 7 = 0
-        *      2                           6               (8-6) % 7 = 6
-        *      3                           5               (8-5) % 7 = 5
+        *      1                           0               (8-1) % 7 = 0
+        *      2                           6               (8-2) % 7 = 6
+        *      3                           5               (8-3) % 7 = 5
         *      4                           4               (8-4) % 7 = 4
-        *      5                           3               (8-3) % 7 = 3
-        *      6                           2               (8-2) % 7 = 2
-        *      7                           1               (8-1) % 7 = 1
+        *      5                           3               (8-5) % 7 = 3
+        *      6                           2               (8-6) % 7 = 2
+        *      7                           1               (8-7) % 7 = 1
         *
         * Based on the observation above, we can compute the number of blank cells with the formula:
         *
