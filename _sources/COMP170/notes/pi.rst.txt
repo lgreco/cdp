@@ -75,11 +75,12 @@ This can be accomplished with the following expression:
 
 .. math::
 
-   \text{random number from}\ -a\ \text{to}\ a = -a +2a\rho
+   (\text{random number from}\ -a\ \text{to}\ a)\ =\ -a +2a\rho
 
 where :math:`\rho` is a Java-generated random number. The final code is shown below.
 
 .. code-block:: java
+   :linenos:
  
    /**
     * Computes pi by throwing N points, at random, inside a square and counting how many 
@@ -106,9 +107,7 @@ where :math:`\rho` is a Java-generated random number. The final code is shown be
            if (z <= r)
                M++;
        }
-       return 4.0*((double) M/(double)N);
+       return 4.0*((double) M/(double) N);
    }  // method pi
-   
-   
 
-
+Casting both ``M`` and ``N`` as ``double`` variables in the return statement is a bit redundant. It suffices to cast as ``double`` only one of them. Nevertheless, it makes the code appear more purposeful, at least in my eyes.
