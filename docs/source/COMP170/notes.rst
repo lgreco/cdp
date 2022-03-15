@@ -8,6 +8,7 @@ Leo's notes
    
    notes/methodParameters
    notes/calendar
+   notes/pi
    
 ..
    notes/booleanVariables
