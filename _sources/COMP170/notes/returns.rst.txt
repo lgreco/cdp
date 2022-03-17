@@ -116,7 +116,24 @@ Personal (and questionable) taste aside, there are times when the use of multipl
 
 It looks reasonable -- not a masterpiece, but adequate -- and as long as we feed it with the *correct* input, it will provide the correct season. And yet, the presence of lines 16 and 17 shows that we don't always expect proper values to to passed to the method. That's when a second return statement makes sense, as shown below.
 
-
+.. code-block:: java
+   :linenos:
+   :emphasize-lines: 2-3
+   
+   public static String season(int month) {
+       if (month < 1 || month > 12)
+           return "Invalid data";
+       String result;
+       if (month > 2 && month < 6)
+           result = "Spring";
+       else if (month > 5 && month < 9)
+           result = "Summer";
+       else if (month > 8 && month < 12)
+           result = "Autumn";
+       else
+           result = "Winter";
+       return result;
+   }  // method season
 
 The first ``return`` above, in line 3, protects the rest of the method from invalid data. If the program continues past line 3, we can be certain that :math:`1\leq\texttt{month}\leq 12`. Because of this guarantee, we can simplify the rest of the if-statements to default to winter, when a month is not in spring, summer, or autumn.
 
