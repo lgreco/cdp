@@ -10,6 +10,6 @@ Boolean variables are one of the most useful primitive data types in programming
    boolean isChicagoAwesome = true;
    
 
-The assignment above
+The assignment above ...
 
 
