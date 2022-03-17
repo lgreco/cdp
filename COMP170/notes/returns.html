@@ -115,7 +115,7 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">return</span></code> statement serves two purposes. First it passes data to the outside of a method. And second, it stops executing that method and returns control to the part of the program that called the method.</p>
 <p>Methods in Java (and in most languages, for that matter) have a single line of entry. That is a single place where data enters the method. That single line, is the method declaration. For example, let’s write  a method to return the largest of two integers.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">largestOf</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
-  <span class="c1">// ...</span>
+  <span class="c1">// ... magnificent code will be added here ...</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -200,7 +200,7 @@ the most influential technical notes on programming. In his <a class="reference 
 <p>It looks reasonable – not a masterpiece, but adequate – and as long as we feed it with the <em>correct</em> input, it will provide the correct season. And yet, the presence of lines 16 and 17 shows that we don’t always expect proper values to to passed to the method. That’s when a second return statement makes sense, as shown below.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">season</span><span class="o">(</span><span class="kt">int</span> <span class="n">month</span><span class="o">)</span> <span class="o">{</span>
 <span class="lineno"> 2 </span><span class="hll">    <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">month</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="o">)</span>
-</span><span class="lineno"> 3 </span><span class="hll">        <span class="k">return</span> <span class="s">&quot;Invalid data&quot;</span><span class="o">;</span>
+</span><span class="lineno"> 3 </span><span class="hll">         <span class="k">return</span> <span class="s">&quot;Invalid data&quot;</span><span class="o">;</span>
 </span><span class="lineno"> 4 </span>    <span class="n">String</span> <span class="n">result</span><span class="o">;</span>
 <span class="lineno"> 5 </span>    <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">month</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="o">)</span>
 <span class="lineno"> 6 </span>        <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Spring&quot;</span><span class="o">;</span>

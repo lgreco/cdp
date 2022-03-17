@@ -10,7 +10,7 @@ Methods in Java (and in most languages, for that matter) have a single line of e
 .. code-block:: java
 
    public static int largestOf(int a, int b) { 
-     // ...
+     // ... magnificent code will be added here ...
    }
    
 We started by declaring the method name (``largestOf``) and by listing two parameters. Data enter the method as values for these two parameters when the method is called, e.g.
@@ -124,7 +124,7 @@ It looks reasonable -- not a masterpiece, but adequate -- and as long as we feed
    
    public static String season(int month) {
        if (month < 1 || month > 12)
-           return "Invalid data";
+            return "Invalid data";
        String result;
        if (month > 2 && month < 6)
            result = "Spring";
