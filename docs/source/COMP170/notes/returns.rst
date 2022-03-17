@@ -120,7 +120,7 @@ It looks reasonable -- not a masterpiece, but adequate -- and as long as we feed
 .. code-block:: java
    :linenos:
    :emphasize-lines: 2, 3
-
+   
    public static String season(int month) {
      if (month < 1 || month > 12)
        return "Invalid data";
@@ -130,7 +130,7 @@ It looks reasonable -- not a masterpiece, but adequate -- and as long as we feed
      else if (month > 5 && month < 9)
        result = "Summer";
      else if (month > 8 && month < 12)
-       tesult = "Autumn";
+       result = "Autumn";
      else
        result = "Winter";
      return result;
