@@ -92,7 +92,6 @@ To ask when is something acceptable is to imply that sometimes it is not accepta
 Personal (and questionable) taste aside, there are times when the use of multiple returns can be justified in a convincing manner. Consider the following method.
 
 .. code-block:: java
-   :emphasize-lines: 2, 3
    :linenos:
 
    /**
@@ -118,7 +117,6 @@ Personal (and questionable) taste aside, there are times when the use of multipl
 It looks reasonable -- not a masterpiece, but adequate -- and as long as we feed it with the *correct* input, it will provide the correct season. And yet, the presence of lines 16 and 17 shows that we don't always expect proper values to to passed to the method. That's when a second return statement makes sense, as shown below.
 
 .. code-block:: java
-   :linenos:
    :emphasize-lines: 2, 3
    
    public static String season(int month) {
