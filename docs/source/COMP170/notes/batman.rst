@@ -25,7 +25,7 @@ A novice programmer may attack this problem with brute force:
         System.out.println("The street number is " + number);
       }
     }
-  }
+  }  // method useBruteForce
   
 The loop in the code above, works every possible address number up to 9999. The lines 3-7 disassemble the address number to digits for units (``u``), tens (``d``), hundreds (``h``), and thousands (``k``),. For example, if ``number=1234``, the corresponding values will be: ::
 
