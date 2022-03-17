@@ -117,7 +117,6 @@ Personal (and questionable) taste aside, there are times when the use of multipl
 It looks reasonable -- not a masterpiece, but adequate -- and as long as we feed it with the *correct* input, it will provide the correct season. And yet, the presence of lines 16 and 17 shows that we don't always expect proper values to to passed to the method. That's when a second return statement makes sense, as shown below.
 
 .. code-block:: java
-   :emphasize-lines: 2, 3
    :linenos:
    
    public static String season(int month) {
