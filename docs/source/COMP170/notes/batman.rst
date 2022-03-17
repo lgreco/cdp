@@ -1,7 +1,7 @@
 :orphan:
 
 Riddler's next caper
-=====================
+=======================
 
 In the assignment *Holy Digits Batman* we are trying to guess the street number for for Riddler's next caper on Pennsylvania Avenue. We are told that the address on Pennsylvania is a four-digit number; all four digits are different; the digit in the thousands place is three times the digit in the tens place; the number is odd; and the sum of the digits is 27. Based on that information, can we find the street number?
 
