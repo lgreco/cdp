@@ -146,18 +146,18 @@ If you are committed to writing single returns, there is a way to protect the me
    :linenos:
    
    public static String season(int month) {
-       String result = "Invalid data";
-       if (month >= 1 && month <= 12) {
-           if (month > 2 && month < 6)
-               result = "Spring";
-           else if (month > 5 && month < 9)
-               result = "Summer";
-           else if (month > 8 && month < 12)
-               result = "Autumn";
-           else
-               result = "Winter";
-       }
-       return result;
+     String result = "Invalid data";
+     if (month >= 1 && month <= 12) {
+       if (month > 2 && month < 6)
+         result = "Spring";
+       else if (month > 5 && month < 9)
+         result = "Summer";
+       else if (month > 8 && month < 12)
+         result = "Autumn";
+       else
+         result = "Winter";
+     }
+     return result;
    }  // method season
 
 This version begins pessimistically: it assumes that the data passed to it are invalid. Then, in line 3, it checks the value of ``month``. If it is within the acceptable range, then it allows us to change the value of ``result`` to a specific season. The price we pay here is the nested if-statements. They may reduce the readability of the code.  Personally, I believe that we can compensate for the loss of readability, with some well written and placed comments.
