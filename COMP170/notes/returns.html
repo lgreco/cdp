@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On multiple returns &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="COMP 180 Data Analysis for the Sciences" href="../../COMP180/introduction.html" />
+    <link rel="prev" title="Computing pi (on pi day!)" href="pi.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html">Course operations and COVID19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html#recordings">Recordings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#ground-rules">Ground rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#academic-integrity">Academic integrity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#be-cool-like-a-pro">Be cool, like a <em>pro</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#zoom">Zoom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#formal-notices">Formal notices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#inclusion-statement">Inclusion statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../notes.html">Leo's notes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="methodParameters.html">Method parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">The Calendar Problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pi.html">Computing pi (on pi day!)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">On multiple returns</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#is-there-a-technique-to-ensure-single-returns">Is there a technique to ensure single returns?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#when-are-multiple-returns-acceptable">When are multiple returns acceptable?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP180/introduction.html">COMP 180 Data Analysis for the Sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Computer Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP397/introduction.html">COMP 397 Research Methods in Computer Science</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../DEI/DEI.html">DEI initiative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DBD/introduction.html">Databases Design</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../introduction.html">COMP 170 Introduction to Java Programming</a> &raquo;</li>
+          <li><a href="../notes.html">Leo’s notes</a> &raquo;</li>
+      <li>On multiple returns</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP170/notes/returns.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="on-multiple-returns">
+<h1>On multiple returns<a class="headerlink" href="#on-multiple-returns" title="Permalink to this headline"></a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">return</span></code> statement serves two purposes. First it passes data to the outside of a method. And second, it stops executing that method and returns control to the part of the program that called the method.</p>
+<p>Methods in Java (and in most languages, for that matter) have a single line of entry. That is a single place where data enters the method. That single line, is the method declaration. For example, let’s write  a method to return the largest of two integers.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">largestOf</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// ...</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>We started by declaring the method name (<code class="docutils literal notranslate"><span class="pre">largestOf</span></code>) and by listing two parameters. Data enter the method as values for these two parameters when the method is called, e.g.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">largestOf</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">);</span>
+</pre></div>
+</div>
+<p>If methods have a single point of entry, shouldn’t they also have a single point of exit? This question stirs as much controversy as the placement of pineapple on pizza!</p>
+<p>It all started in August 1969, when Edsger W. Dijkstra published one of
+the most influential technical notes on programming. In his <a class="reference external" href="https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD249.PDF">Notes on Structured Programming</a>, Dijkstra introduced the requirement of single-entry, single-exit for program modules – today, we call these modules <em>methods</em> in Java and <em>functions</em> in Python.</p>
+<p>Many programers take this requirement literally, writing methods that have one and only one return statement. I strive to write methods with a single return statement, recognizing that in some cases I may need two and, rarely, more.</p>
+<p>Earlier, above, we started writing a method called <code class="docutils literal notranslate"><span class="pre">largestOf</span></code>, so let’s see a couple of ways we can build it. First let’s write it with two <code class="docutils literal notranslate"><span class="pre">return</span></code> statements.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">largestOf</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">)</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">;</span>
+  <span class="k">else</span>
+    <span class="k">return</span> <span class="n">b</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>In my opinion, there is no need for both <code class="docutils literal notranslate"><span class="pre">return</span></code> statements above. The method can be written with a single return:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">largestOf</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">largest</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">b</span> <span class="o">&gt;</span> <span class="n">a</span><span class="o">)</span>
+    <span class="n">largest</span> <span class="o">=</span> <span class="n">b</span><span class="o">;</span>
+  <span class="k">return</span> <span class="n">largest</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>And even more compactly, we can write</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">largestOf</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="o">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">)</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<section id="is-there-a-technique-to-ensure-single-returns">
+<h2>Is there a technique to ensure single returns?<a class="headerlink" href="#is-there-a-technique-to-ensure-single-returns" title="Permalink to this headline"></a></h2>
+<p>As I mentioned earlier, I strive to write methods with just one return statements, every time that I can justify the effort and the need. My technique is simple. Before I write any other code, I create a return variable and I return it. Usually I call that variable <code class="docutils literal notranslate"><span class="pre">result</span></code> and often I rename it to something more appropriate when I am done. For example,</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">largestOf</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">result</span><span class="o">;</span>     <span class="c1">// The int that the method will return.</span>
+<span class="hll">                  <span class="c1">// Placeholder for code that assigns value to result.</span>
+</span>  <span class="k">return</span> <span class="n">result</span><span class="o">;</span>  <span class="c1">// The return statement.</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Then all I have to do is to figure out the code that goes between the declaration of <code class="docutils literal notranslate"><span class="pre">result</span></code> and its return, without writing another <code class="docutils literal notranslate"><span class="pre">return</span></code> statement. In this case:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">largestOf</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">result</span><span class="o">;</span>     <span class="c1">// The int that the method will return.</span>
+<span class="hll">  <span class="n">result</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>     <span class="c1">// Assume a is the largest number.</span>
+</span><span class="hll">  <span class="k">if</span> <span class="o">(</span><span class="n">b</span> <span class="o">&gt;</span> <span class="n">a</span><span class="o">)</span>      <span class="c1">// Validate the assumption and ...</span>
+</span><span class="hll">    <span class="n">result</span> <span class="o">=</span> <span class="n">b</span><span class="o">;</span>   <span class="c1">// ... correct if assumption was wrong.</span>
+</span>  <span class="k">return</span> <span class="n">result</span><span class="o">;</span>  <span class="c1">// result now is correct and we return it.</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+<section id="when-are-multiple-returns-acceptable">
+<h2>When are multiple returns acceptable?<a class="headerlink" href="#when-are-multiple-returns-acceptable" title="Permalink to this headline"></a></h2>
+<p>To ask when is something acceptable is to imply that sometimes it is not acceptable. There is no universal rule stating that multiple returns are unacceptable. Also, there is no universal rule prohibiting ketchup on pasta, or pineapple on pizza, or fish sticks and custard.</p>
+<p>Personal (and questionable) taste aside, there are times when the use of multiple returns can be justified in a convincing manner. Consider the following method.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="cm">/**</span>
+<span class="lineno"> 2 </span><span class="cm">  * Returns the season of the year for a given month number</span>
+<span class="lineno"> 3 </span><span class="cm">  * @param month int value of month, 1-12</span>
+<span class="lineno"> 4 </span><span class="cm">  * @return String with corresponding season</span>
+<span class="lineno"> 5 </span><span class="cm">  */</span>
+<span class="lineno"> 6 </span> <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">season</span><span class="o">(</span><span class="kt">int</span> <span class="n">month</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno"> 7 </span>     <span class="n">String</span> <span class="n">result</span><span class="o">;</span>
+<span class="lineno"> 8 </span>     <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">month</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="o">)</span>
+<span class="lineno"> 9 </span>         <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Spring&quot;</span><span class="o">;</span>
+<span class="lineno">10 </span>     <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="n">month</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">)</span>
+<span class="lineno">11 </span>         <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Summer&quot;</span><span class="o">;</span>
+<span class="lineno">12 </span>     <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">8</span> <span class="o">&amp;&amp;</span> <span class="n">month</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="o">)</span>
+<span class="lineno">13 </span>         <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Autumn&quot;</span><span class="o">;</span>
+<span class="lineno">14 </span>     <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">==</span> <span class="mi">12</span> <span class="o">||</span> <span class="n">month</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">month</span> <span class="o">==</span> <span class="mi">2</span><span class="o">)</span>
+<span class="lineno">15 </span>         <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Winter&quot;</span><span class="o">;</span>
+<span class="lineno">16 </span>     <span class="k">else</span>
+<span class="lineno">17 </span>         <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Invalid data&quot;</span><span class="o">;</span>
+<span class="lineno">18 </span>     <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="lineno">19 </span> <span class="o">}</span>  <span class="c1">// method season</span>
+</pre></div>
+</div>
+<p>It looks reasonable – not a masterpiece, but adequate – and as long as we feed it with the <em>correct</em> input, it will provide the correct season. And yet, the presence of lines 16 and 17 shows that we don’t always expect proper values to to passed to the method. That’s when a second return statement makes sense, as shown below.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">season</span><span class="o">(</span><span class="kt">int</span> <span class="n">month</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno"> 2 </span><span class="hll">    <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">month</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="o">)</span>
+</span><span class="lineno"> 3 </span><span class="hll">        <span class="k">return</span> <span class="s">&quot;Invalid data&quot;</span><span class="o">;</span>
+</span><span class="lineno"> 4 </span>    <span class="n">String</span> <span class="n">result</span><span class="o">;</span>
+<span class="lineno"> 5 </span>    <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">month</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="o">)</span>
+<span class="lineno"> 6 </span>        <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Spring&quot;</span><span class="o">;</span>
+<span class="lineno"> 7 </span>    <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="n">month</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">)</span>
+<span class="lineno"> 8 </span>        <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Summer&quot;</span><span class="o">;</span>
+<span class="lineno"> 9 </span>    <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">8</span> <span class="o">&amp;&amp;</span> <span class="n">month</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="o">)</span>
+<span class="lineno">10 </span>        <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Autumn&quot;</span><span class="o">;</span>
+<span class="lineno">11 </span>    <span class="k">else</span>
+<span class="lineno">12 </span>        <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Winter&quot;</span><span class="o">;</span>
+<span class="lineno">13 </span>    <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="lineno">14 </span><span class="o">}</span>  <span class="c1">// method season</span>
+</pre></div>
+</div>
+<p>The first <code class="docutils literal notranslate"><span class="pre">return</span></code> above, in line 3, protects the rest of the method from invalid data. If the program continues past line 3, we can be certain that <span class="math notranslate nohighlight">\(1\leq\texttt{month}\leq 12\)</span>. Because of this guarantee, we can simplify the rest of the if-statements to default to winter, when a month is not in spring, summer, or autumn.</p>
+<p>For the price of an extra return statement, we protect the method from invalid data <strong>and</strong> we simplify the logic to process valid data.</p>
+<p>Like everything else in computing, lines 2 and 3 above have a special name: <em>guard statement</em>.</p>
+<p>If you are committed to writing single returns, there is a way to protect the method with just one return statement. This is shown below.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">season</span><span class="o">(</span><span class="kt">int</span> <span class="n">month</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno"> 2 </span>    <span class="n">String</span> <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Invalid data&quot;</span><span class="o">;</span>
+<span class="lineno"> 3 </span>    <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">month</span> <span class="o">&lt;=</span> <span class="mi">12</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno"> 4 </span>        <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">month</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="o">)</span>
+<span class="lineno"> 5 </span>            <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Spring&quot;</span><span class="o">;</span>
+<span class="lineno"> 6 </span>        <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="n">month</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">)</span>
+<span class="lineno"> 7 </span>            <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Summer&quot;</span><span class="o">;</span>
+<span class="lineno"> 8 </span>        <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&gt;</span> <span class="mi">8</span> <span class="o">&amp;&amp;</span> <span class="n">month</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="o">)</span>
+<span class="lineno"> 9 </span>            <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Autumn&quot;</span><span class="o">;</span>
+<span class="lineno">10 </span>        <span class="k">else</span>
+<span class="lineno">11 </span>            <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;Winter&quot;</span><span class="o">;</span>
+<span class="lineno">12 </span>    <span class="o">}</span>
+<span class="lineno">13 </span>    <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="lineno">14 </span><span class="o">}</span>  <span class="c1">// method season</span>
+</pre></div>
+</div>
+<p>This version begins pessimistically: it assumes that the data passed to it are invalid. Then, in line 3, it checks the value of <code class="docutils literal notranslate"><span class="pre">month</span></code>. If it is within the acceptable range, then it allows us to change the value of <code class="docutils literal notranslate"><span class="pre">result</span></code> to a specific season. The price we pay here is the nested if-statements that may make our code a bit less readable.  Personally, I believe that we can compensate for the loss of readability, with some well written and placed comments.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pi.html" class="btn btn-neutral float-left" title="Computing pi (on pi day!)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../COMP180/introduction.html" class="btn btn-neutral float-right" title="COMP 180 Data Analysis for the Sciences" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2022, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
