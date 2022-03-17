@@ -57,7 +57,7 @@ And even more compactly, we can write
      return (a > b) ? a : b;
    }
 
-Is there a technique to ensure single returns?
+Is there a technique for single returns?
 ----------------------------------------------
 
 As I mentioned earlier, I strive to write methods with just one return statements, every time that I can justify the effort and the need. My technique is simple. Before I write any other code, I create a return variable and I return it. Usually I call that variable ``result`` and often I rename it to something more appropriate when I am done. For example,

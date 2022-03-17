@@ -61,7 +61,7 @@
 <li class="toctree-l3"><a class="reference internal" href="calendar.html">The Calendar Problem</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pi.html">Computing pi (on pi day!)</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">On multiple returns</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#is-there-a-technique-to-ensure-single-returns">Is there a technique to ensure single returns?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#is-there-a-technique-for-single-returns">Is there a technique for single returns?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#when-are-multiple-returns-acceptable">When are multiple returns acceptable?</a></li>
 </ul>
 </li>
@@ -151,8 +151,8 @@ the most influential technical notes on programming. In his <a class="reference 
 <span class="o">}</span>
 </pre></div>
 </div>
-<section id="is-there-a-technique-to-ensure-single-returns">
-<h2>Is there a technique to ensure single returns?<a class="headerlink" href="#is-there-a-technique-to-ensure-single-returns" title="Permalink to this headline"></a></h2>
+<section id="is-there-a-technique-for-single-returns">
+<h2>Is there a technique for single returns?<a class="headerlink" href="#is-there-a-technique-for-single-returns" title="Permalink to this headline"></a></h2>
 <p>As I mentioned earlier, I strive to write methods with just one return statements, every time that I can justify the effort and the need. My technique is simple. Before I write any other code, I create a return variable and I return it. Usually I call that variable <code class="docutils literal notranslate"><span class="pre">result</span></code> and often I rename it to something more appropriate when I am done. For example,</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">largestOf</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
   <span class="kt">int</span> <span class="n">result</span><span class="o">;</span>     <span class="c1">// The int that the method will return.</span>
