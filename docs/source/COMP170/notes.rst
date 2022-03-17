@@ -9,7 +9,6 @@ Leo's notes
    notes/methodParameters   
    notes/calendar   
    notes/pi   
-   notes/returns
    
 ..
    notes/booleanVariables
@@ -18,3 +17,4 @@ Leo's notes
    notes/nestedLoops
    notes/fencepost
    notes/batman
+   notes/returns
