@@ -93,6 +93,7 @@ Personal (and questionable) taste aside, there are times when the use of multipl
 
 .. code-block:: java
    :linenos:
+   :emphasize-lines: 2, 3
 
    /**
      * Returns the season of the year for a given month number
@@ -119,7 +120,7 @@ It looks reasonable -- not a masterpiece, but adequate -- and as long as we feed
 .. code-block:: java
    :linenos:
    :emphasize-lines: 2, 3
-   
+
    public static String season(int month) {
      if (month < 1 || month > 12)
        return "Invalid data";
