@@ -92,8 +92,8 @@ To ask when is something acceptable is to imply that sometimes it is not accepta
 Personal (and questionable) taste aside, there are times when the use of multiple returns can be justified in a convincing manner. Consider the following method.
 
 .. code-block:: java
-   :linenos:
    :emphasize-lines: 2, 3
+   :linenos:
 
    /**
      * Returns the season of the year for a given month number
