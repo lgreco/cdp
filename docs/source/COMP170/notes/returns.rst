@@ -118,7 +118,7 @@ It looks reasonable -- not a masterpiece, but adequate -- and as long as we feed
 
 .. code-block:: java
    :linenos:
-   :emphasize-lines: 2-3
+   :emphasize-lines: 2, 3
    
    public static String season(int month) {
        if (month < 1 || month > 12)
