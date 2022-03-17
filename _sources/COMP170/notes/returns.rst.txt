@@ -160,4 +160,4 @@ If you are committed to writing single returns, there is a way to protect the me
        return result;
    }  // method season
 
-This version begins pessimistically: it assumes that the data passed to it are invalid. Then, in line 3, it checks the value of ``month``. If it is within the acceptable range, then it allows us to change the value of ``result`` to a specific season. The price we pay here is the nested if-statements that may make our code a bit less readable.  Personally, I believe that we can compensate for the loss of readability, with some well written and placed comments.
+This version begins pessimistically: it assumes that the data passed to it are invalid. Then, in line 3, it checks the value of ``month``. If it is within the acceptable range, then it allows us to change the value of ``result`` to a specific season. The price we pay here is the nested if-statements. They may reduce the readability of the code.  Personally, I believe that we can compensate for the loss of readability, with some well written and placed comments.
