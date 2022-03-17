@@ -121,18 +121,18 @@ It looks reasonable -- not a masterpiece, but adequate -- and as long as we feed
    :emphasize-lines: 2, 3
    
    public static String season(int month) {
-       if (month < 1 || month > 12)
-           return "Invalid data";
-       String result;
-       if (month > 2 && month < 6)
-           result = "Spring";
-       else if (month > 5 && month < 9)
-           result = "Summer";
-       else if (month > 8 && month < 12)
-           result = "Autumn";
-       else
-           result = "Winter";
-       return result;
+     if (month < 1 || month > 12)
+       return "Invalid data";
+     String result;
+     if (month > 2 && month < 6)
+       result = "Spring";
+     else if (month > 5 && month < 9)
+       result = "Summer";
+     else if (month > 8 && month < 12)
+       tesult = "Autumn";
+     else
+       result = "Winter";
+     return result;
    }  // method season
 
 The first ``return`` above, in line 3, protects the rest of the method from invalid data. If the program continues past line 3, we can be certain that :math:`1\leq\texttt{month}\leq 12`. Because of this guarantee, we can simplify the rest of the if-statements to default to winter, when a month is not in spring, summer, or autumn.
