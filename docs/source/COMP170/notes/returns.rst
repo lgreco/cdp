@@ -95,29 +95,30 @@ Personal (and questionable) taste aside, there are times when the use of multipl
    :linenos:
 
    /**
-     * Returns the season of the year for a given month number
-     * @param month int value of month, 1-12
-     * @return String with corresponding season
-     */
-    public static String season(int month) {
-        String result;
-        if (month > 2 && month < 6)
-            result = "Spring";
-        else if (month > 5 && month < 9)
-            result = "Summer";
-        else if (month > 8 && month < 12)
-            result = "Autumn";
-        else if (month == 12 || month == 1 || month == 2)
-            result = "Winter";
-        else
-            result = "Invalid data";
-        return result;
-    }  // method season
+    * Returns the season of the year for a given month number
+    * @param month int value of month, 1-12
+    * @return String with corresponding season
+    */
+   public static String season(int month) {
+     String result;
+     if (month > 2 && month < 6)
+       result = "Spring";
+     else if (month > 5 && month < 9)
+       result = "Summer";
+     else if (month > 8 && month < 12)
+       result = "Autumn";
+     else if (month == 12 || month == 1 || month == 2)
+       result = "Winter";
+     else
+       result = "Invalid data";
+     return result;
+   }  // method season
 
 It looks reasonable -- not a masterpiece, but adequate -- and as long as we feed it with the *correct* input, it will provide the correct season. And yet, the presence of lines 16 and 17 shows that we don't always expect proper values to to passed to the method. That's when a second return statement makes sense, as shown below.
 
 .. code-block:: java
    :emphasize-lines: 2, 3
+   :linenos:
    
    public static String season(int month) {
      if (month < 1 || month > 12)
