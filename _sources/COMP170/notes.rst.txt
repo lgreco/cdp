@@ -6,12 +6,9 @@ Leo's notes
 .. toctree::
 
    
-   notes/methodParameters
-   
-   notes/calendar
-   
-   notes/pi
-   
+   notes/methodParameters   
+   notes/calendar   
+   notes/pi   
    notes/returns
    
 ..
