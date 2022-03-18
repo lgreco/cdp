@@ -5,7 +5,7 @@ On multiple returns
 
 The ``return`` statement serves two purposes. First it passes data to the outside of a method. And second, it stops executing that method and returns control to the part of the program that called the method.
 
-Methods in Java (and in most languages, for that matter) have a single line of entry. That is a single place where data enters the method. That single line, is the method declaration. For example, let's write  a method to return the largest of two integers.
+Methods in Java (and in most languages, for that matter) have a single point of entry. Let's write  a method to return the largest of two integers.
 
 .. code-block:: java
 
@@ -13,7 +13,7 @@ Methods in Java (and in most languages, for that matter) have a single line of e
      // ... magnificent code will be added here ...
    }
    
-We started by declaring the method name (``largestOf``) and by listing two parameters. Data enter the method as values for these two parameters when the method is called, e.g.
+We started by declaring the method name (``largestOf``) and by listing two parameters. This declaration is the method's single point of entry. Data enter the method as values for these two parameters when the method is called, e.g.
 
 .. code-block:: java
 
