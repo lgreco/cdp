@@ -13,7 +13,7 @@ Methods in Java (and in most languages, for that matter) have a single point of 
      // ... magnificent code will be added here ...
    }
    
-We started by declaring the method name (``largestOf``) and by listing two parameters. This declaration is the method's single point of entry. Data enter the method as values for these two parameters when the method is called, e.g.
+We started by declaring the method name (``largestOf``) and by listing two parameters. This declaration is the method's single point of entry. Data enter the method as values for its two parameters when the method is called, e.g.
 
 .. code-block:: java
 
