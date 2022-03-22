@@ -5,7 +5,7 @@ Caesar Cipher
 =========================
 
  
-Implementing Caesar's Cipher is a simple (and therefore not very safe) encryption technique. It is also a good opportunity to discuss a few useful ideas. 
+Caesar's Cipher is a simple (and therefore not very safe) encryption technique. It's implementation is a good opportunity to discuss a few useful ideas. 
 
 The implementation requires a method that accepts a string and an integer. The method transforms the string by shifting every letter by as many positions as indicated by the integer number. Then it returns the encoded string with the scrambled letters. For example, ``caesarCipher("HAL", 1)`` will result to ``"IBM"`` because ``'H'``, ``'A'``, and ``'L'`` will all be shifted one letter to the right. Based on that, we may rush to code something like this.
 
@@ -79,7 +79,7 @@ The cyclic approach tells us that one step to the right of Z is the letter A. Bu
 
 The desired cycling can be obtained by the expression :math:`65+(m\bmod 26)`. Any value of :math:`m` will return a value between 65 and 90, inclusive. 
 
-Now that we have an expression to stay within the ASCII codes for letters A through Z, we can use it for our cipher. The cipher replaces a letter with another letter ``key`` positions away. If the letter's ASCII value is stored in variable``c``, we want the expression ``c+key`` to stay between 65 and 90. The corresponding Java expression will be
+Now that we have an expression to stay within the ASCII codes for letters A through Z, we can use it for our cipher. The cipher replaces a letter with another letter, ``key`` positions away. If the letter's ASCII value is stored in variable``c``, we want the expression ``c+key`` to stay between 65 and 90. The corresponding Java expression will be
 
 .. code-block:: java
 
@@ -101,9 +101,9 @@ What we have done here is to write an expression that finds the ciphered value f
     */
    public static String caesarCipher(String message, int key) {
        // These variables can be moved outside the method as class constants.
-       final int ASCII_A = (int)'A';  //  ASCII value for letter A
-       final int ASCII_Z = (int)'Z';  //  ASCII value for letter Z
-       final int alphabetLetters = 1+ASCII_Z-ASCII_A;  //  Number of letters in the alphabet
+       final int ASCII_A = (int)'A';  // ASCII value for letter A
+       final int ASCII_Z = (int)'Z';  // ASCII value for letter Z
+       final int alphabetLetters = 1+ASCII_Z-ASCII_A;  // Number of letters in the alphabet
        // Bring input message to upper case
        message = message.toUpperCase();
        // Initialize output string
