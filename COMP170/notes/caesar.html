@@ -107,8 +107,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <p>he</p>
-<section id="caesar-cipher">
+  <section id="caesar-cipher">
 <h1>Caesar Cipher<a class="headerlink" href="#caesar-cipher" title="Permalink to this headline"></a></h1>
 <p>Caesar’s Cipher is a simple (and therefore not very safe) encryption technique. Its implementation is a good opportunity to discuss a few useful ideas.</p>
 <p>The implementation requires a method that accepts a string and an integer. The method transforms the string by shifting every letter by as many positions as indicated by the integer number. Then it returns the encoded string with the scrambled letters. For example, <code class="docutils literal notranslate"><span class="pre">caesarCipher(&quot;HAL&quot;,</span> <span class="pre">1)</span></code> will result to <code class="docutils literal notranslate"><span class="pre">&quot;IBM&quot;</span></code> because <code class="docutils literal notranslate"><span class="pre">'H'</span></code>, <code class="docutils literal notranslate"><span class="pre">'A'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'L'</span></code> will all be shifted one letter to the right. Based on that, we may rush to code something like this.</p>
