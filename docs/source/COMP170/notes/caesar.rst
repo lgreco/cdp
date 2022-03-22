@@ -66,7 +66,7 @@ Variable :math:`m` above corresponds to variable ``key`` in the method we are tr
 
    int newLetter = currentLetter + (key%26)
 
-If it were only that simple! This formula works on the alphabet wheel because it tells that the letter 27 steps to the right of Z is still A. On a circle. Computers, however, are very linear things.
+If only it were that simple! This formula works on the alphabet wheel because it tells that the letter 27 steps to the right of Z is still A. On a circle. Computers, however, are very linear things.
 
 .. figure:: images/alphabetLine.png
    :figwidth: 50%
