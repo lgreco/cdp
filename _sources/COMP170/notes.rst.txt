@@ -9,6 +9,7 @@ Leo's notes
    notes/calendar   
    notes/pi   
    notes/returns
+   notes/caesar
 
 ..
    notes/booleanVariables
