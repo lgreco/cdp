@@ -5,7 +5,7 @@ Caesar Cipher
 =========================
 
  
-Caesar's Cipher is a simple (and therefore not very safe) encryption technique. It's implementation is a good opportunity to discuss a few useful ideas. 
+Caesar's Cipher is a simple (and therefore not very safe) encryption technique. Its implementation is a good opportunity to discuss a few useful ideas. 
 
 The implementation requires a method that accepts a string and an integer. The method transforms the string by shifting every letter by as many positions as indicated by the integer number. Then it returns the encoded string with the scrambled letters. For example, ``caesarCipher("HAL", 1)`` will result to ``"IBM"`` because ``'H'``, ``'A'``, and ``'L'`` will all be shifted one letter to the right. Based on that, we may rush to code something like this.
 
