@@ -10,6 +10,7 @@ Leo's notes
    notes/pi   
    notes/returns
    notes/caesar
+   notes/fileToArray
 
 ..
    notes/booleanVariables
