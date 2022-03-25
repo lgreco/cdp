@@ -55,45 +55,39 @@ The code below goes into the file twice: first it counts its lines. It uses this
      names[i] = s.next();
    s.close();
 
-A complete method is shown below. The method can handle the possibility that the input file cannot be found. Instead of throwing an exception, it returns an empty array.
+
+A complete method is shown below. This method returns an empty array when it cannot complete its task, instead of throwing an exception.
+
+To wrap up this note, let me mention two things. **First,** it is absolutely ok to ask the computer to do repetitive tasks, especially when that takes them away from people! In this example, the computer goes through the data file twice: one time to count and a second time to copy data to the array. That's better than having an individual count the records in a file manually and update the first line of that file with the proper number.  **Second,** we are forced to go through the file twice because we need to size  the array before we add data to it. But, as we'll find out eventually, there are data structures more flexible that humble arrays. One of them is Java's ``Arraylist``: it can accept data and adjust its size on the fly. Exploring how arraylists work, will have to wait for a bit longer, however.
 
 .. code-block:: java
 
-   /**
-    * Returns records from file in a string array.
-    *
-    * Method assumes that there is one record per line. If file not found or empty, 
-    * the returned array has 0 length.
-    *
-    * @param f File pointer to data source
-    * @return String array with contents of f;
-    *         if f does not exist or is empty, array is also empty.
-    */
-   public static String[] getRecordsByCounting(File f) {
-       // This is the array that we'll return
-       String[] records;
-       try {
-           // To establish a scanner connection to the passed File f.
-           Scanner s = new Scanner(f);
-           // Counter for number of records in the file.
-           int numberOfRecords = 0;
-           // Go through the file counting the number of lines.
-           while (s.hasNext()) {
-               numberOfRecords++;
-               s.nextLine();
-           }
-           s.close();
-           // Initialize return array with number of records found
-           records = new String[numberOfRecords];
-           // Re-establish scanner
-           s = new Scanner(f);
-           // Read records into array
-           for (int i = 0; i < numberOfRecords; i++) {
-               records[i] = s.next();
-           }
-       } catch (Exception e){
-           // In case something goes wrong, prepare to return an empty array
-           records = new String[0];
-       }
-       return records;
-   }  // method getRecordsByCounting
+    public static String[] getRecordsByCounting(File f) {
+        // This is the array that we'll return
+        String[] records;
+        try {
+            // To establish a scanner connection to the passed File f.
+            Scanner s = new Scanner(f);
+            // Counter for number of records in the file.
+            int numberOfRecords = 0;
+            // Go through the file counting the number of lines.
+            while (s.hasNextLine()) {
+                numberOfRecords++;
+                s.nextLine();
+            }
+            s.close();
+            // Initialize return array with number of records found
+            records = new String[numberOfRecords];
+            // Re-establish scanner
+            s = new Scanner(f);
+            // Read records into array
+            for (int i = 0; i < numberOfRecords; i++) {
+                records[i] = s.nextLine();
+            }
+            s.close();
+        } catch (Exception e){
+            // In case something goes wrong, prepare to return an empty array
+            records = new String[0];
+        }
+        return records;
+    }  // method getRecordsByCounting

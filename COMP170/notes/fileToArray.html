@@ -151,18 +151,9 @@ Maryam
 <span class="lineno">15 </span><span class="n">s</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>A complete method is shown below. The method can handle the possibility that the input file cannot be found. Instead of throwing an exception, it returns an empty array.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
-<span class="cm"> * Returns records from file in a string array.</span>
-<span class="cm"> *</span>
-<span class="cm"> * Method assumes that there is one record per line. If file not found or empty,</span>
-<span class="cm"> * the returned array has 0 length.</span>
-<span class="cm"> *</span>
-<span class="cm"> * @param f File pointer to data source</span>
-<span class="cm"> * @return String array with contents of f;</span>
-<span class="cm"> *         if f does not exist or is empty, array is also empty.</span>
-<span class="cm"> */</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span><span class="o">[]</span> <span class="nf">getRecordsByCounting</span><span class="o">(</span><span class="n">File</span> <span class="n">f</span><span class="o">)</span> <span class="o">{</span>
+<p>A complete method is shown below. This method returns an empty array when it cannot complete its task, instead of throwing an exception.</p>
+<p>To wrap up this note, let me mention two things. <strong>First,</strong> it is absolutely ok to ask the computer to do repetitive tasks, especially when that takes them away from people! In this example, the computer goes through the data file twice: one time to count and a second time to copy data to the array. That’s better than having an individual count the records in a file manually and update the first line of that file with the proper number.  <strong>Second,</strong> we are forced to go through the file twice because we need to size  the array before we add data to it. But, as we’ll find out eventually, there are data structures more flexible that humble arrays. One of them is Java’s <code class="docutils literal notranslate"><span class="pre">Arraylist</span></code>: it can accept data and adjust its size on the fly. Exploring how arraylists work, will have to wait for a bit longer, however.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span><span class="o">[]</span> <span class="nf">getRecordsByCounting</span><span class="o">(</span><span class="n">File</span> <span class="n">f</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// This is the array that we&#39;ll return</span>
     <span class="n">String</span><span class="o">[]</span> <span class="n">records</span><span class="o">;</span>
     <span class="k">try</span> <span class="o">{</span>
@@ -171,7 +162,7 @@ Maryam
         <span class="c1">// Counter for number of records in the file.</span>
         <span class="kt">int</span> <span class="n">numberOfRecords</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
         <span class="c1">// Go through the file counting the number of lines.</span>
-        <span class="k">while</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">hasNextLine</span><span class="o">())</span> <span class="o">{</span>
             <span class="n">numberOfRecords</span><span class="o">++;</span>
             <span class="n">s</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
         <span class="o">}</span>
@@ -182,8 +173,9 @@ Maryam
         <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">f</span><span class="o">);</span>
         <span class="c1">// Read records into array</span>
         <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">numberOfRecords</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-            <span class="n">records</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+            <span class="n">records</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
         <span class="o">}</span>
+        <span class="n">s</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
     <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
         <span class="c1">// In case something goes wrong, prepare to return an empty array</span>
         <span class="n">records</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
