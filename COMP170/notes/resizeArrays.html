@@ -141,7 +141,7 @@
 </div>
 <p>Using the method above, we can easily change the size of an existing array and preserve its contents; for example:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">usStates</span> <span class="o">=</span> <span class="n">resize</span><span class="o">(</span><span class="n">usStates</span><span class="o">);</span>  <span class="c1">// Now we have room for 50 more states</span>
-<span class="n">usStates</span><span class="o">[</span><span class="mi">50</span><span class="o">]</span> <span class="o">=</span> <span class="s">&quot;District of Columbia&quot;</span><span class="o">;</span>
+<span class="n">usStates</span><span class="o">[</span><span class="mi">50</span><span class="o">]</span> <span class="o">=</span> <span class="s">&quot;District of Columbia&quot;</span><span class="o">;</span>  <span class="c1">// Start adding new ones!</span>
 </pre></div>
 </div>
 <p>The simplicity of method <code class="docutils literal notranslate"><span class="pre">resize</span></code> above is at the heart of more sophisticated tools like <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> mentioned earlier. The difference between our humble implementation and <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> is the software engineering that makes <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> work with just about any kind of data, not just Strings. Fundamentally, it’s the same principle: take a fixed-size collection, create a temporary one with more room, copy the old stuff into the new one, and replace the old one with the new one.</p>

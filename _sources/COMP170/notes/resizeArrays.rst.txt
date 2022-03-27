@@ -48,7 +48,7 @@ Using the method above, we can easily change the size of an existing array and p
 .. code-block:: java
 
    usStates = resize(usStates);  // Now we have room for 50 more states
-   usStates[50] = "District of Columbia";
+   usStates[50] = "District of Columbia";  // Start adding new ones!
 
 
 The simplicity of method ``resize`` above is at the heart of more sophisticated tools like ``ArrayList`` mentioned earlier. The difference between our humble implementation and ``ArrayList`` is the software engineering that makes ``ArrayList`` work with just about any kind of data, not just Strings. Fundamentally, it's the same principle: take a fixed-size collection, create a temporary one with more room, copy the old stuff into the new one, and replace the old one with the new one.
