@@ -51,4 +51,4 @@ Using the method above, we can easily change the size of an existing array and p
    usStates[50] = "District of Columbia";
 
 
-The simplicity of method ``resize`` above is at the heart of more sophisticated tools like ``ArrayList`` mentioned earlier. The difference between our humble implementation and ``ArrayList`` is the software engineering to make it work with just about any kind of data, not just Strings, and the ability to add and remove data from the data structure. The principle is the same: take a fixed-size collection, create a temporary one with more room, copy the old stuff into the new one, and replace the old one with the new one.
+The simplicity of method ``resize`` above is at the heart of more sophisticated tools like ``ArrayList`` mentioned earlier. The difference between our humble implementation and ``ArrayList`` is the software engineering that makes ``ArrayList``work with just about any kind of data, not just Strings. Fundamentally, it's the same principle: take a fixed-size collection, create a temporary one with more room, copy the old stuff into the new one, and replace the old one with the new one.
