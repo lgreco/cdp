@@ -11,6 +11,7 @@ Leo's notes
    notes/returns
    notes/caesar
    notes/fileToArray
+   notes/resizeArrays
 
 ..
    notes/booleanVariables
