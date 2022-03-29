@@ -103,7 +103,7 @@ The condition we really need is
 
    entered > largest || entered > nextLargest
 
-This condition tells us if the entered letter is greater than either of the two largest (so far) letters. Now, we can implement the last pseudocode statement:
+This condition tells us if the entered letter is greater than either of the two largest (so far) letters. It is also the equivalent of ``entered > nextLargest``. However, I prefer the slightly more complex expression above to communicate the logic I am trying to implement. Now, we can implement the last pseudocode statement:
  
 .. code-block:: java
 
