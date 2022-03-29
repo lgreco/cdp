@@ -3,7 +3,7 @@
 Largest letters
 ==============================
 
-This is a design example we worked in class on 3/28. The specification is to write a program that asks users to type letters (one letter at a time). When the user types a number instead of a letter, the program reports the two *largest* letters typed by the user thus far, and stops. Size is defined by the position of the letter in the alphabet. We assume that only lower case letters are entered. Smallest letter is ``'a'`` and largest letter  is  ``'z'``.  The code  must have  at least two methods (including ``main``). We can assume that the first two items entered by the user will be letters.
+This is a design example we worked in class on 3/28. The specification is to write a program that asks users to type letters (one letter at a time). When the user types a number instead of a letter, the program reports the two *largest* letters typed by the user thus far, and stops. Size is defined by the position of the letter in the alphabet. We assume that only lower case letters are entered. Smallest letter is ``'a'`` and largest letter  is  ``'z'``.  The code must have at least two methods (including ``main``). We can assume that the first two items entered by the user will be letters.
 
 The overall structure for our pseudocode is as follows.
 
@@ -88,14 +88,14 @@ What if ``entered < largest`` and ``entered > nextLargest``? For example, if
    largest = 'z'
    nextLargest = 'd';
 
-and then we type the letter ``'f'`` as the next entered, the condition
+and then we type the letter ``'f'`` as the next entered? The condition
 
 .. code-block:: java
 
    entered > Math.max(largest, nextLargest)   
    
    
-evaluates to ``false``. And yet, in the example above, the new value (``'f'``) needs to replace ``'d'`` as one of the two largest letters. 
+will evaluate to ``false``. And yet, in the example above, the new value (``'f'``) needs to replace ``'d'`` as one of the two largest letters. 
 
 The condition we really need is
 
