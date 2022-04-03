@@ -167,7 +167,7 @@
 <span class="c1">// Now we can guarantee largest &gt; nextLargest</span>
 </pre></div>
 </div>
-<p>According to the earlier pseudocode, we should check if the letter just entered is greater than either of the two largest letters. And for that, we may think that the condition</p>
+<p>Next, according to the earlier pseudocode, we should check if the letter just entered is greater than either of the two largest letters. And for that, we may think that the condition</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span> <span class="o">&gt;</span> <span class="n">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">largest</span><span class="o">,</span> <span class="n">nextLargest</span><span class="o">))</span>
 </pre></div>
 </div>
@@ -186,16 +186,28 @@
 </div>
 <p>will evaluate to <code class="docutils literal notranslate"><span class="pre">false</span></code>. And yet, in the example above, the new value (<code class="docutils literal notranslate"><span class="pre">'f'</span></code>) needs to replace <code class="docutils literal notranslate"><span class="pre">'d'</span></code> as one of the two largest letters.</p>
 <p>The condition we really need is</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span> <span class="o">&gt;</span> <span class="n">largest</span> <span class="o">||</span> <span class="n">entered</span> <span class="o">&gt;</span> <span class="n">nextLargest</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span> <span class="o">&gt;</span> <span class="n">nextLargest</span>
 </pre></div>
 </div>
-<p>This condition tells us if the entered letter is greater than either of the two largest (so far) letters. It is also the equivalent of <code class="docutils literal notranslate"><span class="pre">entered</span> <span class="pre">&gt;</span> <span class="pre">nextLargest</span></code> or even <code class="docutils literal notranslate"><span class="pre">entered</span> <span class="pre">&gt;</span> <span class="pre">Math.min(largest,</span> <span class="pre">nextLargest)</span></code>. However, I prefer the slightly more complex expression above to communicate the logic I am trying to implement. Now, we can implement the last pseudocode statement:</p>
+<p>This condition tells us if the entered letter is greater than the lesser of the two largest letter. If it is, the entered letter takes the place of the lesser of the two largest letters. Now, we can implement the last pseudocode statement:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// if letter just entered &gt; than either of the two largest letters so far, then:</span>
 <span class="c1">// replace smallest of two largest letters with letter just entered</span>
-<span class="k">if</span> <span class="o">(</span><span class="n">entered</span> <span class="o">&gt;</span> <span class="n">largest</span> <span class="o">||</span> <span class="n">entered</span> <span class="o">&gt;</span> <span class="n">nextLargest</span><span class="o">)</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">entered</span> <span class="o">&gt;</span> <span class="n">nextLargest</span><span class="o">)</span>
   <span class="n">nextLargest</span> <span class="o">=</span> <span class="n">entered</span><span class="o">;</span>
 </pre></div>
 </div>
+<p>Every time we change a value in the pair of the two largest letters, we need to ensure that <code class="docutils literal notranslate"><span class="pre">largest</span> <span class="pre">&gt;</span> <span class="pre">nextLargest</span></code>. That’s because the value we change is always the <code class="docutils literal notranslate"><span class="pre">nextLargest</span></code>. For example, if</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nextLargest</span> <span class="p">:</span> <span class="n">f</span>
+<span class="n">largest</span>     <span class="p">:</span> <span class="n">g</span>
+<span class="n">entered</span>     <span class="p">:</span> <span class="n">h</span>
+</pre></div>
+</div>
+<p>we see that `` h &gt; f `` and therefore we replace the contents of <code class="docutils literal notranslate"><span class="pre">nextLargest</span></code> with <code class="docutils literal notranslate"><span class="pre">h</span></code>. Now we have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nextLargest</span> <span class="p">:</span> <span class="n">h</span>
+<span class="n">largest</span>     <span class="p">:</span> <span class="n">g</span>
+</pre></div>
+</div>
+<p>The implied order <code class="docutils literal notranslate"><span class="pre">largest</span> <span class="pre">&gt;</span> <span class="pre">nextLargest</span></code> is not longer present, and it must be restored. That’s why we always check for this order at the beginning of the while loo.</p>
 <p>Finally, we can put the code together in a method.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">findTwoLargestLetters</span><span class="o">()</span> <span class="o">{</span>
   <span class="c1">// Set up a scanner</span>
@@ -215,7 +227,7 @@
       <span class="n">nextLargest</span> <span class="o">=</span> <span class="n">temporary</span><span class="o">;</span>
     <span class="o">}</span>
     <span class="c1">// Is newly entered letter greater than either of large letters?</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">entered</span> <span class="o">&gt;</span> <span class="n">largest</span> <span class="o">||</span> <span class="n">entered</span> <span class="o">&gt;</span> <span class="n">nextLargest</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">entered</span> <span class="o">&gt;</span> <span class="n">nextLargest</span><span class="o">)</span> <span class="o">{</span>
       <span class="c1">// replace smallest of the two largest letters with newly entered one</span>
       <span class="n">nextLargest</span> <span class="o">=</span> <span class="n">entered</span><span class="o">;</span>
     <span class="o">}</span>
