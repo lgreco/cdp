@@ -69,7 +69,7 @@ The variables ``largest`` and ``nextLargest`` imply a relative order. We rely on
    }
    // Now we can guarantee largest > nextLargest
 
-According to the earlier pseudocode, we should check if the letter just entered is greater than either of the two largest letters. And for that, we may think that the condition
+Next, according to the earlier pseudocode, we should check if the letter just entered is greater than either of the two largest letters. And for that, we may think that the condition
 
 .. code-block:: java
 
@@ -101,16 +101,33 @@ The condition we really need is
 
 .. code-block:: java
 
-   entered > largest || entered > nextLargest
+   entered > nextLargest
 
-This condition tells us if the entered letter is greater than either of the two largest (so far) letters. It is also the equivalent of ``entered > nextLargest`` or even ``entered > Math.min(largest, nextLargest)``. However, I prefer the slightly more complex expression above to communicate the logic I am trying to implement. Now, we can implement the last pseudocode statement:
+This condition tells us if the entered letter is greater than the lesser of the two largest letter. If it is, the entered letter takes the place of the lesser of the two largest letters. Now, we can implement the last pseudocode statement:
  
 .. code-block:: java
 
    // if letter just entered > than either of the two largest letters so far, then:
    // replace smallest of two largest letters with letter just entered
-   if (entered > largest || entered > nextLargest)
+   if (entered > nextLargest)
      nextLargest = entered;
+
+Every time we change a value in the pair of the two largest letters, we need to ensure that ``largest > nextLargest``. That's because the value we change is always the ``nextLargest``. For example, if
+
+::
+
+   nextLargest : f
+   largest     : g
+   entered     : h
+
+we see that `` h > f `` and therefore we replace the contents of ``nextLargest`` with ``h``. Now we have:
+
+::
+
+   nextLargest : h
+   largest     : g
+   
+The implied order ``largest > nextLargest`` is not longer present, and it must be restored. That's why we always check for this order at the beginning of the while loo.
 
 Finally, we can put the code together in a method.
 
@@ -134,7 +151,7 @@ Finally, we can put the code together in a method.
          nextLargest = temporary;
        }
        // Is newly entered letter greater than either of large letters?
-       if (entered > largest || entered > nextLargest) {
+       if (entered > nextLargest) {
          // replace smallest of the two largest letters with newly entered one
          nextLargest = entered;
        }
