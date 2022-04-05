@@ -13,6 +13,7 @@ Leo's notes
    notes/fileToArray
    notes/resizeArrays
    notes/largestLetters
+   notes/fractionSum
 
 ..
    notes/booleanVariables

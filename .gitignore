@@ -1,0 +1,8 @@
+.DS_Store
+.buildinfo
+.git/
+.github/
+.travis.yml
+get-current-version.sh
+requirements*
+build/
