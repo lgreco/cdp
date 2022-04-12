@@ -7,6 +7,8 @@ In the **Spring 2022,** I teach **COMP 170** (Introduction to Object Oriented Pr
 
 * Per university policy, everyone is required to wear a face mask in a classroom or lab. There are no exceptions or exemptions. Faculty must wear masks while teaching. All students must wear a face mask properly, and that means covering the nose, mouth, and chin. Infractions will be reported online through the Office of Student Conduct and Conflict Resolution.
 
+* **Leo's mask policy for Student Hours:** as the university is relaxing its mask requirements, I no longer wear a mask at my office. If you arrive for an in-person meeting, wearing a mask, I'll put on mine right away. If you arrive without a mask, I'll keep mine off as well. I am convinced that masks help mitigative the risk of spreading the virus, and I'll do my best to make you feel safe and comfortable while visiting my office.
+
 * Students removing their mask to take a drink is acceptable, but removing the mask to eat is not. Students who need to have food available during class should work with the Student Accessibility Center to have that accommodation documented.
 
 * The principal method for online meetings is Zoom. You must `have it installed on your computer, tablet, or smartphone <https://zoom.us/download>`_. A link to our Zoom "classroom" is available on the course's Sakai site. There will be no separate emails with the Zoom link. 
