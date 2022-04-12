@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>&lt;no title&gt; &mdash; Leo Irakliotis&#39; courses  documentation</title>
+  <title>Binary Search &mdash; Leo Irakliotis&#39; courses  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
@@ -18,7 +18,9 @@
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="COMP 180 Data Analysis for the Sciences" href="../../COMP180/introduction.html" />
+    <link rel="prev" title="The fractionSum problem" href="fractionSum.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -37,10 +39,40 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html">Course operations and COVID19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html#recordings">Recordings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#ground-rules">Ground rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#academic-integrity">Academic integrity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#be-cool-like-a-pro">Be cool, like a <em>pro</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#zoom">Zoom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#formal-notices">Formal notices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#inclusion-statement">Inclusion statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../notes.html">Leo's notes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="methodParameters.html">Method parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">The Calendar Problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pi.html">Computing pi (on pi day!)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="returns.html">On multiple returns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="caesar.html">Caesar Cipher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fileToArray.html">Reading a file into an array</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resizeArrays.html">Resizing an array</a></li>
+<li class="toctree-l3"><a class="reference internal" href="largestLetters.html">Largest letters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fractionSum.html">The <code class="docutils literal notranslate"><span class="pre">fractionSum</span></code> problem</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Binary Search</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#working-with-files-is-fun-but">Working with files is fun, but …</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP180/introduction.html">COMP 180 Data Analysis for the Sciences</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Computer Algorithms</a></li>
@@ -70,7 +102,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>&lt;no title&gt;</li>
+          <li><a href="../introduction.html">COMP 170 Introduction to Java Programming</a> &raquo;</li>
+          <li><a href="../notes.html">Leo’s notes</a> &raquo;</li>
+      <li>Binary Search</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/COMP170/notes/binarySearch.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -80,15 +114,84 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <p>ddsd <code class="docutils literal notranslate"><span class="pre">dd</span></code> dd <em>aa</em> <strong>d</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span>
+  <section id="binary-search">
+<h1>Binary Search<a class="headerlink" href="#binary-search" title="Permalink to this headline"></a></h1>
+<p>How did we end up talking about <em>binary search?</em> We started with a simple question: what are the chances that a few random letters put together can form an actual word? Here’s a simple strategy to answer this question.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">form</span> <span class="n">a</span> <span class="n">random</span> <span class="n">word</span>
+<span class="n">look</span> <span class="n">up</span> <span class="n">that</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">dictionary</span>
 </pre></div>
 </div>
+</div></blockquote>
+<p>The first part of the strategy is straight forward. It requires a method that returns a string with a given number of letters, chosen at random. In the code below <code class="docutils literal notranslate"><span class="pre">ASCII_a</span></code> and <code class="docutils literal notranslate"><span class="pre">ALPHABET</span></code> are integer constants with values 97 and 26 respectively. Constant <code class="docutils literal notranslate"><span class="pre">ASCII_a</span></code> points to the lower case <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">'a'</span></code>. And <code class="docutils literal notranslate"><span class="pre">ALPHABET</span></code> is the number of letters in the English alphabet.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">static</span> <span class="n">String</span> <span class="nf">randomWord</span><span class="o">(</span><span class="kt">int</span> <span class="n">howManyLetters</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Initialize string to return</span>
+    <span class="n">String</span> <span class="n">word</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="o">;</span>
+    <span class="c1">// Setup random number generator</span>
+    <span class="n">Random</span> <span class="n">rng</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="o">();</span>
+    <span class="c1">// Repeat for as many letters as required</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">letter</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">letter</span> <span class="o">&lt;</span> <span class="n">howManyLetters</span><span class="o">;</span> <span class="n">letter</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="c1">// select a letter a-z at random</span>
+        <span class="kt">char</span> <span class="n">randomCharacter</span> <span class="o">=</span>  <span class="o">(</span><span class="kt">char</span><span class="o">)</span> <span class="o">(</span><span class="n">ASCII_a</span> <span class="o">+</span> <span class="n">rng</span><span class="o">.</span><span class="na">nextInt</span><span class="o">(</span><span class="n">ALPHABET</span><span class="o">));</span>
+        <span class="c1">// add it to string</span>
+        <span class="n">word</span> <span class="o">+=</span> <span class="n">randomCharacter</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">word</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>The challenge now is to check if randomly formed strings like <code class="docutils literal notranslate"><span class="pre">&quot;ajopw&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;uyvgq&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code> etc, are actual words.</p>
+<p>Let’s assume that we have a file with all the English words. We can tell if a given string is an actual word, based on the following pseudocode.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="ow">not</span> <span class="n">at</span> <span class="n">end</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">file</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">wordReadFromFile</span> <span class="o">==</span> <span class="n">givenRandomString</span>
+    <span class="k">return</span> <span class="n">true</span>
+<span class="k">return</span> <span class="n">false</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The pseudocode above, can be implemented in Java, line-for-line:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">hasNextLine</span><span class="o">())</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">nextLine</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="n">givenRandomString</span><span class="o">))</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>The code snippet above assumes that <code class="docutils literal notranslate"><span class="pre">file</span></code> is a properly declared and initialized <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> object. This object connects to a file with all english words, accessible from the computer’s filesystem.</p>
+<p>Sometimes, often actually, the data we need are available online and they are not immediately accessible through our computer’s filesystem. In this case we have two choices: copy the file to our computer (if we have permission to do so and also space to store it) or access its contents over a computer network (again, if we have permission to do so). The Internet is a readily available network for most of us. And Java, like most programming languages, has a mechanism to access remote files that are available on the Web.</p>
+<p>Let’s consider a file at the following location:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/lgreco/IntroProgramming/main/data/words.txt">https://raw.githubusercontent.com/lgreco/IntroProgramming/main/data/words.txt</a></p>
+<p>If we don’t want a copy of the file on our computer, we can write a program to scan it remotely. All we need is to tell <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> where to find the file on the web:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">URL</span> <span class="n">url</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">&quot;https://raw.githubusercontent.com/lgreco/IntroProgramming/main/data/words.txt&quot;</span><span class="o">);</span>
+<span class="n">Scanner</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="k">new</span> <span class="n">InputStreamReader</span><span class="o">(</span><span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">()));</span>
+</pre></div>
+</div>
+<p>The code snippet aove creates a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> object that connects to an <code class="docutils literal notranslate"><span class="pre">InputStreamReader</span></code>. This reader is a conduit, over the internet, between our computer and the website with the file we wish to process. That website is identified by a <code class="docutils literal notranslate"><span class="pre">URL</span></code> object.</p>
+<section id="working-with-files-is-fun-but">
+<h2>Working with files is fun, but …<a class="headerlink" href="#working-with-files-is-fun-but" title="Permalink to this headline"></a></h2>
+<p>Files are, usually, slow to access. Specifically, they are slower compared to computer memory. <em>Ideally,</em> we want to read them once (maaaaybe twice) and bring their data into the computer memory (if there is room). The easiest (and often best) memory container we have at our disposal is, of course, the humble array.</p>
+<p>How can we bring data from a file into an array? First, by making our life easier: let’s assume that each line in the file contains a single piece of data. Which is the case for the file with the english words.</p>
+<p>How can we bring the data from the file into an array? Here, we hit a snag. Before adding data to an array, we must declare and initialize it. For that, we need to know how many elements the array will store. And so it is necessary to know how much data are stored in the file that we want to move to the array. The surrest way is to go through the file, count the data, use that number of initialize the array, and then move the data from the file to the array, i.e.:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">&lt;---</span> <span class="n">count</span> <span class="n">of</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">file</span>
+<span class="n">ourArray</span><span class="p">[]</span> <span class="o">&lt;---</span> <span class="n">new</span> <span class="n">array</span><span class="p">[</span><span class="n">N</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">to</span> <span class="n">N</span>
+  <span class="n">ourArray</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;---</span> <span class="n">data</span> <span class="kn">from</span> <span class="nn">file</span>
+  <span class="n">move</span> <span class="n">to</span> <span class="nb">next</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">file</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The pseudocode above suggests that we scan the file twice. First to count its data and then to move that data, one line at a time, to the array. The alternative is to anticipate the number of data we want to store, add a safety margin, and hope that we are correct. For example, we can guess that we need room for 50,000 elements in the array, double it to 100,000 to be safe, and try it. Worst case scenario, we’ll run into an <em>out of bounds</em> exception. Personally, I’d rather scan the file twice: once to count the data and make a precise declaration for the array, and once more to move the data from the file to the array.</p>
+</section>
+</section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="fractionSum.html" class="btn btn-neutral float-left" title="The fractionSum problem" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../COMP180/introduction.html" class="btn btn-neutral float-right" title="COMP 180 Data Analysis for the Sciences" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

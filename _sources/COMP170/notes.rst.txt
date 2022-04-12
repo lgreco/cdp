@@ -14,6 +14,7 @@ Leo's notes
    notes/resizeArrays
    notes/largestLetters
    notes/fractionSum
+   notes/binarySearch
 
 ..
    notes/booleanVariables

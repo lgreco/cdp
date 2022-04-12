@@ -16,11 +16,10 @@ The central goal of this course is to impart basic skills in designing and imple
 
 Designing *good* algorithms is central to software design. So, what makes an algorithm good? This goes beyond just arriving at the right answer, to arriving at this right answer efficiently. After all, you don't want to be staring at your computer all day just to get the sum of a dozen numbers. Efficiency is not just with respect to time, but also the resources required to solve the problem. Central to our discussion of algorithms will be the evaluation of solutions. Algorithms at its heart is problem solving. 
 
-In this course we will focus on tapping into our creativity to identify possible solutions to a given problem. The course will blend application and theory. We will use a programming language (to be determined) to practice design and implementation of algorithms. 
+In this course we will focus on tapping into our creativity to identify possible solutions to a given problem. The course will blend application and theory. We will use a programming language (Python) to practice design and implementation of algorithms. 
 
 You must have access to a computer (Mac, Windows, or
-Ubuntu operating system) that s/he has administrative rights, i.e. can install software. Computers must
-have a minimum of 4 GB of RAM and a reliable internet connection.
+Ubuntu operating system), capable of accessing the web. 
 
 
 Course Objectives
