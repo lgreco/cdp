@@ -15,6 +15,7 @@ Leo's notes
    notes/largestLetters
    notes/fractionSum
    notes/binarySearch
+   notes/throwOrCatch
 
 ..
    notes/booleanVariables

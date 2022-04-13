@@ -182,6 +182,25 @@
 </div>
 </div></blockquote>
 <p>The pseudocode above suggests that we scan the file twice. First to count its data and then to move that data, one line at a time, to the array. The alternative is to anticipate the number of data we want to store, add a safety margin, and hope that we are correct. For example, we can guess that we need room for 50,000 elements in the array, double it to 100,000 to be safe, and try it. Worst case scenario, we’ll run into an <em>out of bounds</em> exception. Personally, I’d rather scan the file twice: once to count the data and make a precise declaration for the array, and once more to move the data from the file to the array.</p>
+<p>The method to count the number of lines in a file is based on the following code:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// assume file is a properly assigned scanner object</span>
+<span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">hasNextLine</span><span class="o">())</span> <span class="o">{</span>
+  <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+  <span class="n">counter</span><span class="o">++;</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="n">counter</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>And the method to bring the data to an array is based on the following code</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// assume N is the number of lines in the file, obtained by previous method</span>
+<span class="n">String</span> <span class="n">data</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="n">N</span><span class="o">];</span>
+<span class="c1">// assume file is a properly assigned scanner object</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+  <span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+<span class="k">return</span> <span class="n">data</span><span class="o">;</span>
+</pre></div>
+</div>
 </section>
 </section>
 

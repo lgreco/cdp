@@ -86,9 +86,28 @@ How can we bring the data from the file into an array? Here, we hit a snag. Befo
 
 The pseudocode above suggests that we scan the file twice. First to count its data and then to move that data, one line at a time, to the array. The alternative is to anticipate the number of data we want to store, add a safety margin, and hope that we are correct. For example, we can guess that we need room for 50,000 elements in the array, double it to 100,000 to be safe, and try it. Worst case scenario, we'll run into an *out of bounds* exception. Personally, I'd rather scan the file twice: once to count the data and make a precise declaration for the array, and once more to move the data from the file to the array.
 
+The method to count the number of lines in a file is based on the following code:
 
+.. code-block:: java
 
+ // assume file is a properly assigned scanner object
+ int counter = 0;
+ while (file.hasNextLine()) {
+   String s = file.nextLine();
+   counter++;
+ }
+ return counter;
 
+And the method to bring the data to an array is based on the following code
+
+.. code-block:: java
+
+ // assume N is the number of lines in the file, obtained by previous method
+ String data[] = new String[N];
+ // assume file is a properly assigned scanner object
+ for (int i=0; i < N; i++) 
+   data[i] = file.nextLine();
+ return data;
 
 
 
