@@ -1,5 +1,7 @@
 :orphan:
 
+** DRAFT ** NOT READY YET **
+
 Binary Search
 ================
 
