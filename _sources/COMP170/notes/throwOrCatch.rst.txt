@@ -13,7 +13,7 @@ A method that employs a ``Scanner`` to process a ``File`` item often requires an
 
 If the file doesn't exist or if users made an error typing the file name, the ``File`` connection cannot be established. The method will throw a fit (in Java, fits are called *exceptions*) and the program will end abruptly (in other words, the program with crash). There are many reasons that a file may not be where we expect it. And most of these reasons can be anticipated, which means that we can prevent the exception (and the subsequent program crash).
 
-I am not a big fan of predictable and preventable crashes. We know that things can go wrong with files. May users will type the wrong name. Maybe the file is located on a flash drive that is not plugged into the computer. Maybe the file is on cloud storage like Google Drive, and the computer is temporarily disconnected from the internet.
+I am not a big fan of predictable and preventable crashes. We know that things can go wrong with files. Maybe users will type the wrong name. Maybe the file is located on a flash drive that is not plugged into the computer. Maybe the file is on cloud storage like Google Drive, and the computer is temporarily disconnected from the internet.
 
 If we can predict an exception we can prevent it. And by preventing it, we allow our program to end gracefully. That's when it is preferable to use a ``try/catch`` block than to throw a fit, sorry, exception.
 
