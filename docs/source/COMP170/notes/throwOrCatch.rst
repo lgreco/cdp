@@ -47,7 +47,4 @@ The method above returns either a *good* scanner or a *null* reference, but does
 
 Some may argue that the approach above simply postpones a program crash. Maybe so. At least, if our program crashes, it will be from an unanticipated cause. Which, once analyzed, can also be avoided.
 
-
-
-
-
+2022-04
