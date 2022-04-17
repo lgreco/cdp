@@ -71,6 +71,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="throwOrCatch.html">Throw or Catch?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="courseRecap.html">Course Recap</a></li>
 </ul>
 </li>
 </ul>
@@ -120,12 +121,10 @@
 <section id="binary-search">
 <h1>Binary Search<a class="headerlink" href="#binary-search" title="Permalink to this headline"></a></h1>
 <p>How did we end up talking about <em>binary search?</em> We started with a simple question: what are the chances that a few random letters put together can form an actual word? Here’s a simple strategy to answer this question.</p>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">form</span> <span class="n">a</span> <span class="n">random</span> <span class="n">word</span>
-<span class="n">look</span> <span class="n">up</span> <span class="n">that</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">dictionary</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">form</span> <span class="n">a</span> <span class="n">random</span> <span class="n">word</span>
+<span class="n">look</span> <span class="n">up</span> <span class="n">that</span> <span class="n">word</span> <span class="n">in</span> <span class="n">a</span> <span class="n">dictionary</span>
 </pre></div>
 </div>
-</div></blockquote>
 <p>The first part of the strategy is straight forward. It requires a method that returns a string with a given number of letters, chosen at random. In the code below <code class="docutils literal notranslate"><span class="pre">ASCII_a</span></code> and <code class="docutils literal notranslate"><span class="pre">ALPHABET</span></code> are integer constants with values 97 and 26 respectively. Constant <code class="docutils literal notranslate"><span class="pre">ASCII_a</span></code> points to the lower case <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">'a'</span></code>. And <code class="docutils literal notranslate"><span class="pre">ALPHABET</span></code> is the number of letters in the English alphabet.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">static</span> <span class="n">String</span> <span class="nf">randomWord</span><span class="o">(</span><span class="kt">int</span> <span class="n">howManyLetters</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// Initialize string to return</span>
