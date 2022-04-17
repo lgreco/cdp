@@ -141,6 +141,90 @@
 </pre></div>
 </div>
 </section>
+<section id="ternary-operator">
+<h3>Ternary operator<a class="headerlink" href="#ternary-operator" title="Permalink to this headline"></a></h3>
+<p>The ternary operator <code class="docutils literal notranslate"><span class="pre">?:</span></code>, is a compact form of the if-else statement. For example, the expression</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">parity</span><span class="o">;</span>      <span class="c1">//   This can also be written as:</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>       <span class="c1">//   String parity = &quot;Odd&quot;;</span>
+  <span class="n">parity</span> <span class="o">=</span> <span class="s">&quot;Even&quot;</span>   <span class="c1">//   if (n%2 == 0)</span>
+<span class="k">else</span>                <span class="c1">//     parity = &quot;Even&quot;;</span>
+  <span class="n">parity</span> <span class="o">=</span> <span class="s">&quot;Odd&quot;</span><span class="o">;</span>   <span class="c1">//</span>
+</pre></div>
+</div>
+<p>Can be written as a single-line assignment with the ternary operator:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">parity</span> <span class="o">=</span> <span class="o">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">?</span> <span class="s">&quot;Even&quot;</span> <span class="o">:</span> <span class="s">&quot;Odd&quot;</span><span class="o">;</span>
+</pre></div>
+</div>
+</section>
+<section id="cumulative-operations">
+<h3>Cumulative operations<a class="headerlink" href="#cumulative-operations" title="Permalink to this headline"></a></h3>
+<p>There are two basic types of cumulative operations: additive and multiplicative. The additive operation has the following pattern.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">accumulator</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>  <span class="c1">// often renamed to sum</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">someCondition</span><span class="o">)</span>
+  <span class="n">accumulator</span> <span class="o">=</span> <span class="n">accumulator</span> <span class="o">+</span> <span class="n">someValue</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>In the multiplicative operation, the pattern changes to:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">accumulator</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>  <span class="c1">// often renamed to product or prod</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">someCondition</span><span class="o">)</span>
+  <span class="n">accumulator</span> <span class="o">=</span> <span class="n">accumulator</span> <span class="o">*</span> <span class="n">someValue</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>The example above use <code class="docutils literal notranslate"><span class="pre">int</span></code> data types. They will work with any kind of numeric data. The additive operation also works with strings. The <code class="docutils literal notranslate"><span class="pre">+</span></code> between two strings is the concatenation operator. The <code class="docutils literal notranslate"><span class="pre">while</span></code>-loops above can be replaced with <code class="docutils literal notranslate"><span class="pre">for</span></code>-loops, as needed.</p>
+</section>
+<section id="cast-if-you-must-and-only-then">
+<h3>Cast if you must – and only then<a class="headerlink" href="#cast-if-you-must-and-only-then" title="Permalink to this headline"></a></h3>
+<p>Casting between types is, sometimes, a sign of poor design. For example,</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">preciseValue</span><span class="o">;</span>
+<span class="c1">// some awesome computing later ...</span>
+<span class="kt">int</span> <span class="n">simpleValue</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">preciseValue</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>may suggest some poor planning prior to implementing the code. There are, however, instances when casting is unavoidable and practical. Consider, for example, computing the average value of numbers stored in an <code class="docutils literal notranslate"><span class="pre">int</span></code> array; let’s call it <code class="docutils literal notranslate"><span class="pre">a</span></code>. My preferred technique is the following:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>                         <span class="c1">//  Notice that we have a</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>   <span class="c1">//  practical application of</span>
+  <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>                  <span class="c1">//  a cumulative operation here!</span>
+<span class="kt">double</span> <span class="n">average</span> <span class="o">=</span> <span class="o">((</span><span class="kt">double</span><span class="o">)</span> <span class="n">sum</span><span class="o">)</span> <span class="o">/</span> <span class="o">((</span><span class="kt">double</span><span class="o">)</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+</pre></div>
+</div>
+<p>Both <code class="docutils literal notranslate"><span class="pre">sum</span></code> and <code class="docutils literal notranslate"><span class="pre">a.length</span></code> are <code class="docutils literal notranslate"><span class="pre">int</span></code> values. It suffices to cast only one of them to <code class="docutils literal notranslate"><span class="pre">double</span></code>, so why the dual casting above? Either</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">average</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">/</span> <span class="o">((</span><span class="kt">double</span><span class="o">)</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">average</span> <span class="o">=</span> <span class="o">((</span><span class="kt">double</span><span class="o">)</span> <span class="n">sum</span><span class="o">)</span> <span class="o">/</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>would have sufficed. However, by casting them both as doubles I leave no doubt about my intentions here.</p>
+</section>
+<section id="while-and-for-loops">
+<h3><code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops<a class="headerlink" href="#while-and-for-loops" title="Permalink to this headline"></a></h3>
+<p>When to use one instead of the other? My simple rule of thumb is this: use <code class="docutils literal notranslate"><span class="pre">for</span></code> loops if you know in advance how many iterations you need. And use the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop when you don’t know in advance how many iterations you need.</p>
+<p>For example, to count how many times a value appears in an array <code class="docutils literal notranslate"><span class="pre">a</span></code>, we have to look at every element of the array. We know, in advance that we need <code class="docutils literal notranslate"><span class="pre">a.length</span></code> iterations. This is a good case for a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
+<p>On the other hand, to tell if a value is merely present in the array, we need to check every element of the array until we find a matching value or until we reach the end of the array. This is a good case for a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
+</section>
+<section id="the-difference-between-while-and-do-while-loops">
+<h3>The difference between <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loops<a class="headerlink" href="#the-difference-between-while-and-do-while-loops" title="Permalink to this headline"></a></h3>
+</section>
+<section id="boolean-variables-are-versatile">
+<h3>Boolean variables are versatile<a class="headerlink" href="#boolean-variables-are-versatile" title="Permalink to this headline"></a></h3>
+<p>Early in their development, programmers seem to be more comfortable with boolean <em>expressions</em> than boolean <em>variables.</em> For example, a programmer may prefer to write code like the following:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">((</span><span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">80</span> <span class="o">&amp;&amp;</span> <span class="n">humidity</span> <span class="o">&gt;</span> <span class="mi">65</span> <span class="o">&amp;&amp;</span> <span class="n">windSpeed</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">||</span> <span class="o">(</span><span class="n">temperature</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">))</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Better stay inside.&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>than</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">hot</span> <span class="o">=</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">80</span><span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">humid</span> <span class="o">=</span> <span class="n">humidity</span> <span class="o">&gt;</span> <span class="mi">65</span><span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">noWind</span> <span class="o">=</span> <span class="n">windSpeed</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">frigid</span> <span class="o">=</span> <span class="n">temperature</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">;</span>
+
+<span class="k">if</span> <span class="o">((</span><span class="n">hot</span> <span class="o">&amp;&amp;</span> <span class="n">humid</span> <span class="o">&amp;&amp;</span> <span class="n">noWind</span><span class="o">)</span> <span class="o">||</span> <span class="n">frigid</span><span class="o">)</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Better stay inside.&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Boolean variables can improve the readability of the code. They are definitely worth using.</p>
+</section>
 <section id="sequential-traversal-with-option-to-stop-early">
 <h3>Sequential traversal with option to stop early<a class="headerlink" href="#sequential-traversal-with-option-to-stop-early" title="Permalink to this headline"></a></h3>
 <p>This technique allows us to search for something in a sequential fashion. Consider an array with names, e.g., <code class="docutils literal notranslate"><span class="pre">String[]</span> <span class="pre">names</span></code>, in which we wish to find if the name <code class="docutils literal notranslate"><span class="pre">&quot;Java&quot;</span></code> is present. A naive search may look like this:</p>
