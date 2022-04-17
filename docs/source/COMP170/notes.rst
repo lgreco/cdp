@@ -16,6 +16,7 @@ Leo's notes
    notes/fractionSum
    notes/binarySearch
    notes/throwOrCatch
+   notes/courseRecap
 
 ..
    notes/booleanVariables

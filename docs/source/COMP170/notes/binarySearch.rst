@@ -7,7 +7,7 @@ Binary Search
 
 How did we end up talking about *binary search?* We started with a simple question: what are the chances that a few random letters put together can form an actual word? Here's a simple strategy to answer this question.
 
-  ::
+.. code-block:: java
   
    form a random word
    look up that word in a dictionary
