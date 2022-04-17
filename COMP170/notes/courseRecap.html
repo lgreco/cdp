@@ -153,9 +153,10 @@
 <p>Let’s say that the name <code class="docutils literal notranslate"><span class="pre">&quot;Java&quot;</span></code> happens to be the first element of the array. We won’t know if the the name is present in the array until the loop above ends. Do we really need to wait for the loop to process every element of the array <em>after</em> it finds what we are looking for? How about the more efficient approach below?</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">found</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
 <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="k">while</span> <span class="o">(!</span><span class="n">found</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">names</span><span class="o">.</span><span class="na">length</span><span class="o">)</span>
+<span class="k">while</span> <span class="o">(!</span><span class="n">found</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">names</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">{</span>
   <span class="n">found</span> <span class="o">=</span> <span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;Java&quot;</span><span class="o">);</span>
   <span class="n">i</span><span class="o">++;</span>
+<span class="o">}</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">while</span></code> loop above stops when a match is found or when it reaches the end of the array. Because the loop stops as soon as it finds a match, it is a bit faster than a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop as long as a match is found and it’s not in the last element of the array.</p>

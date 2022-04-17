@@ -49,8 +49,9 @@ Let's say that the name ``"Java"`` happens to be the first element of the array.
 
   boolean found = false;
   int i = 0;
-  while (!found && i < names.length)
+  while (!found && i < names.length) {
     found = names[i].equals("Java");
     i++;
+  }
 
 The ``while`` loop above stops when a match is found or when it reaches the end of the array. Because the loop stops as soon as it finds a match, it is a bit faster than a ``for`` loop as long as a match is found and it's not in the last element of the array.
