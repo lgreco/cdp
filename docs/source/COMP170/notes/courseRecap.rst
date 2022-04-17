@@ -5,20 +5,24 @@ Course Recap
 
 Here's a list of things that I wish everyone could remember from an introductory programming course.
 
+
 The 80/20 rule in programming
 -----------------------------
 
 Spend 80% of your time analyzing the problem you need to solve, then 20% coding the solution. 
+
 
 Document your analysis
 ----------------------
 
 Use comments in the program to describe the analysis that led to the solution you are implementing.
 
+
 Remember a few useful techniques
 --------------------------------
 
 The following are a few simple programming techniques that are worth memorizing.
+
 
 Swap values of two variables
 ............................
@@ -30,6 +34,122 @@ To swap the values of two variables ``a`` and ``b``, we need to introduce a thir
   temporary = a
   a = b
   b = temporary
+
+
+Ternary operator
+................
+The ternary operator ``?:``, is a compact form of the if-else statement. For example, the expression
+
+.. code-block:: java
+
+   String parity;      //   This can also be written as:
+   if (n%2 == 0)       //   String parity = "Odd";
+     parity = "Even"   //   if (n%2 == 0)
+   else                //     parity = "Even";
+     parity = "Odd";   //
+
+Can be written as a single-line assignment with the ternary operator:
+
+.. code-block:: java
+
+   String parity = (n%2 == 0) ? "Even" : "Odd";
+
+
+Cumulative operations
+.....................
+
+There are two basic types of cumulative operations: additive and multiplicative. The additive operation has the following pattern.
+
+.. code-block:: java
+
+   int accumulator = 0;  // often renamed to sum
+   while (someCondition)
+     accumulator = accumulator + someValue;
+
+In the multiplicative operation, the pattern changes to:
+
+.. code-block:: java
+
+   int accumulator = 1;  // often renamed to product or prod
+   while (someCondition)
+     accumulator = accumulator * someValue;
+
+The example above use ``int`` data types. They will work with any kind of numeric data. The additive operation also works with strings. The ``+`` between two strings is the concatenation operator. The ``while``-loops above can be replaced with ``for``-loops, as needed.
+
+
+Cast if you must -- and only then
+.................................
+
+Casting between types is, sometimes, a sign of poor design. For example,
+
+.. code-block:: java
+
+   double preciseValue;
+   // some awesome computing later ...
+   int simpleValue = (int) preciseValue;
+
+may suggest some poor planning prior to implementing the code. There are, however, instances when casting is unavoidable and practical. Consider, for example, computing the average value of numbers stored in an ``int`` array; let's call it ``a``. My preferred technique is the following:
+
+.. code-block:: java
+
+   int sum = 0;                         //  Notice that we have a
+   for (int i = 0; i < a.length; i++)   //  practical application of 
+     sum = sum + a[i];                  //  a cumulative operation here!
+   double average = ((double) sum) / ((double) a.length);
+
+Both ``sum`` and ``a.length`` are ``int`` values. It suffices to cast only one of them to ``double``, so why the dual casting above? Either
+
+.. code-block:: java
+
+   double average = sum / ((double) a.length);
+
+or
+
+.. code-block:: java
+
+   double average = ((double) sum) / a.length;
+
+would have sufficed. However, by casting them both as doubles I leave no doubt about my intentions here. 
+
+
+``while`` and ``for`` loops
+...........................
+
+When to use one instead of the other? My simple rule of thumb is this: use ``for`` loops if you know in advance how many iterations you need. And use the ``while`` loop when you don't know in advance how many iterations you need. 
+
+For example, to count how many times a value appears in an array ``a``, we have to look at every element of the array. We know, in advance that we need ``a.length`` iterations. This is a good case for a ``for`` loop.
+
+On the other hand, to tell if a value is merely present in the array, we need to check every element of the array until we find a matching value or until we reach the end of the array. This is a good case for a ``while`` loop.
+
+
+The difference between ``while`` and ``do-while`` loops
+.......................................................
+
+
+Boolean variables are versatile
+...............................
+
+Early in their development, programmers seem to be more comfortable with boolean *expressions* than boolean *variables.* For example, a programmer may prefer to write code like the following:
+
+.. code-block:: java
+
+   if ((temperature > 80 && humidity > 65 && windSpeed < 5) || (temperature < 5))
+     System.out.println("Better stay inside.")
+
+than
+
+.. code-block:: java
+
+   boolean hot = temperature > 80;
+   boolean humid = humidity > 65;
+   boolean noWind = windSpeed < 5;
+   boolean frigid = temperature < 5;
+   
+   if ((hot && humid && noWind) || frigid)
+     System.out.println("Better stay inside.")
+
+Boolean variables can improve the readability of the code. They are definitely worth using.
+
 
 Sequential traversal with option to stop early
 ..............................................
