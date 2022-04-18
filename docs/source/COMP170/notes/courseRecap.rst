@@ -74,7 +74,7 @@ In the multiplicative operation, the pattern changes to:
    while (someCondition)
      accumulator = accumulator * someValue;
 
-The example above use ``int`` data types. They will work with any kind of numeric data. The additive operation also works with strings. The ``+`` between two strings is the concatenation operator. The ``while``-loops above can be replaced with ``for``-loops, as needed.
+The examples above use ``int`` data types. They will work with any kind of numeric data. The additive operation also works with strings. The ``+`` between two strings is the concatenation operator. The ``while``-loops above can be replaced with ``for``-loops, as needed.
 
 
 Cast if you must -- and only then
