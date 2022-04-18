@@ -133,7 +133,14 @@ The difference between ``while`` and ``do-while`` loops
 
 The ``for`` and ``while`` loops cover all of our needs for repeating and iterating tasks. Why do we need a third kind of a loop mechanism? And so similar to an existing one? As the cartoon to the right shows, the two loops have one key difference. The ``do`` loop always executes at least one iteration. The while loop may not execute at all. 
 
-| To illustrate this difference, consider the following code:
+.. raw:: html
+
+   <br clear="both" />
+   
+
+
+ To illustrate this difference, consider the following code:
+ 
 
 .. code-block:: java
 
@@ -218,7 +225,7 @@ or
 
    if (someOtherBooleanVariable == false)
 
-This is redundant. The proper way to write these expressions are
+This is redundant. The proper way to write these expressions is
 
 .. code-block:: java
 
