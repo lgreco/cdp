@@ -125,6 +125,58 @@ On the other hand, to tell if a value is merely present in the array, we need to
 The difference between ``while`` and ``do-while`` loops
 .......................................................
 
+.. figure:: images/coyote.jpg
+   :figwidth: 66%
+   :align: right
+   
+   An excellent illustration of the difference between ``while`` and ``do`` loops. The best attribution I have for this image is a `2018 post <https://www.reddit.com/r/ProgrammerHumor/comments/a5mghb/the_importance_of_knowing_how_to_correctly_use/>`__ in the **ProgrammerHumor** Reddit thread.
+
+The ``for`` and ``while`` loops cover all of our needs for repeating and iterating tasks. Why do we need a third kind of a loop mechanism? And so similar to an existing one? As the cartoon to the right shows, the two loops have one key difference. The ``do`` loop always executes at least one iteration. The while loop may not execute at all. 
+
+| To illustrate this difference, consider the following code:
+
+.. code-block:: java
+
+   boolean condition = false;
+   
+   while (condition) {
+     System.out.println("I am the while loop!");
+   }
+   
+   do {
+     System.out.println("I am the do loop!");
+   } while (condition);
+
+The output of the code above will be::
+
+   I am the do loop!
+
+Let's consider a scenario where the ``do`` loop is actually useful. We'll start with the following code that employs a ``while`` loop.
+
+.. code-block:: java
+
+   Scanner sc = new Scanner(System.in);
+   System.out.println("Enter an integer number: ");
+   int n = sc.nextInt();
+   while (n < 50) {
+     System.out.println("Enter an integer number: ");
+     n = sc.nextInt();
+   }
+   System.out.println("Finally! You entered a number greater than 50.");
+
+This silly code keeps asking for a number and stops users enter 50 or greater. Now, let's do the same with a ``do`` loops:
+
+.. code-block:: java
+
+   Scanner sc = new Scanner(System.in);
+   do {
+     System.out.println("Enter an integer number: ");
+     int n = sc.nextInt()
+   } while (n < 50);
+   System.out.println("Finally! You entered a number greater than 50.");
+
+With the ``while`` loop, we need obtain a value both outside and inside the loop, to carry on with our program. The ``do`` loop simplifies things. 
+
 
 Boolean variables are versatile
 ...............................
@@ -149,6 +201,36 @@ than
      System.out.println("Better stay inside.")
 
 Boolean variables can improve the readability of the code. They are definitely worth using.
+
+
+The equal-to operator ``==`` and boolean variables
+...................................................
+
+May programmers are tempted, in their early code to write expressions like
+
+.. code-block:: java
+
+   if (someBooleanVariable == true)
+   
+or
+
+.. code-block:: java
+
+   if (someOtherBooleanVariable == false)
+
+This is redundant. The proper way to write these expressions are
+
+.. code-block:: java
+
+   if (someBooleanVariable)
+   
+and
+
+.. code-block:: java
+
+   if (!someOtherBooleanVariable)
+
+respectively.
 
 
 Sequential traversal with option to stop early
