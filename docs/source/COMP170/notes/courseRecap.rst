@@ -158,7 +158,7 @@ The output of the code above will be::
 
    I am the do loop!
 
-Let's consider a scenario where the ``do`` loop is actually useful. We'll start with the following code that employs a ``while`` loop.
+Let's consider a scenario where the ``do`` loop is actually useful. We'll start with the following code that employs a ``while`` loop. This silly code keeps asking for a number and stops users enter 50 or greater.
 
 .. code-block:: java
 
@@ -171,7 +171,7 @@ Let's consider a scenario where the ``do`` loop is actually useful. We'll start 
    }
    System.out.println("Finally! You entered a number greater than 50.");
 
-This silly code keeps asking for a number and stops users enter 50 or greater. Now, let's do the same with a ``do`` loops:
+Now, let's do the same with a ``do`` loops:
 
 .. code-block:: java
 
@@ -182,7 +182,7 @@ This silly code keeps asking for a number and stops users enter 50 or greater. N
    } while (n < 50);
    System.out.println("Finally! You entered a number greater than 50.");
 
-With the ``while`` loop, we need obtain a value both outside and inside the loop, to carry on with our program. The ``do`` loop simplifies things. 
+With the ``while`` loop, we need to obtain a value both outside and inside the loop, to carry on with our program. The ``do`` loop simplifies things because it does not require a value obtained outside itself.
 
 
 Boolean variables are versatile
@@ -263,4 +263,4 @@ Let's say that the name ``"Java"`` happens to be the first element of the array.
     i++;
   }
 
-The ``while`` loop above stops when a match is found or when it reaches the end of the array. Because the loop stops as soon as it finds a match, it is a bit faster than a ``for`` loop as long as a match is found and it's not in the last element of the array.
+The ``while`` loop above stops when a match is found or when it reaches the end of the array. Because the loop stops as soon as it finds a match, it is a bit faster than a ``for`` loop as long as there is a match to be found and it's not in the last element of the array.
