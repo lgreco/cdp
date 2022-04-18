@@ -213,31 +213,7 @@ Boolean variables can improve the readability of the code. They are definitely w
 The equal-to operator ``==`` and boolean variables
 ...................................................
 
-May programmers are tempted, in their early code to write expressions like
-
-.. code-block:: java
-
-   if (someBooleanVariable == true)
-   
-or
-
-.. code-block:: java
-
-   if (someOtherBooleanVariable == false)
-
-This is redundant. The proper way to write these expressions is
-
-.. code-block:: java
-
-   if (someBooleanVariable)
-   
-and
-
-.. code-block:: java
-
-   if (!someOtherBooleanVariable)
-
-respectively.
+May programmers are tempted, in their early code to write expressions like ``if (someBooleanVariable == true)`` or ``if (someOtherBooleanVariable == false)``. This is redundant. The proper way to write these expressions is ``if (someBooleanVariable)`` and ``if (!someOtherBooleanVariable)`` respectively.
 
 
 Sequential traversal with option to stop early
