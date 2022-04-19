@@ -305,6 +305,34 @@ To illustrate this difference, consider the following code:<div class="highlight
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">while</span></code> loop above stops when a match is found or when it reaches the end of the array. Because the loop stops as soon as it finds a match, it is a bit faster than a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop as long as there is a match to be found and it’s not in the last element of the array.</p>
 </section>
+<section id="sentinel-values">
+<h3>Sentinel values<a class="headerlink" href="#sentinel-values" title="Permalink to this headline"></a></h3>
+<p>Sentinel values is a way to signal the end of a loop or the unsuccessful conclusion of some  process. To illustrave a sentinel value as a signal of an unsuccessful process, let’s expand the example above where we look for a specific word in a string array. Only this time we are interested not only in the presence (or absence) of that word, but also in its location within the array. And what if the word does not exist in the array? What will be the resulting position? That’s where a sentinel value comes handy: we declare that -1 will indicate the absence of the word.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">location</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>  <span class="c1">// Assume word is not present</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>  <span class="c1">//  index for array</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">location</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">names</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;Java&quot;</span><span class="o">))</span>
+    <span class="n">location</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>  <span class="c1">// This will end loop</span>
+  <span class="n">i</span><span class="o">++;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>If, at the end of the loop above, <code class="docutils literal notranslate"><span class="pre">location</span> <span class="pre">&gt;</span> <span class="pre">-1</span></code>, the word we are looking for (<code class="docutils literal notranslate"><span class="pre">&quot;Java&quot;</span></code>, in this example) is at <code class="docutils literal notranslate"><span class="pre">names[location]</span></code>. If the value of <code class="docutils literal notranslate"><span class="pre">location</span></code> is still <code class="docutils literal notranslate"><span class="pre">-1</span></code>, the word is not present in the array.</p>
+<p>Sentinel values can be used to end a repetitive process. For example, consider the following snippet.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+<span class="n">String</span> <span class="n">terminate</span> <span class="o">=</span> <span class="s">&quot;---&quot;</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">input</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="o">;</span>
+<span class="k">while</span> <span class="o">(!</span><span class="n">input</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">terminate</span><span class="o">))</span> <span class="o">{</span>
+  <span class="n">input</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+  <span class="c1">// do some stuff</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>The loop above ends when the user enters the string <code class="docutils literal notranslate"><span class="pre">&quot;---&quot;`</span></code>. This string is the sentinel value that we are watching for, and when we detect it, we know it’s time to end the repetitive cycle.</p>
+</section>
+<section id="off-by-one-errors-fencepost">
+<h3>Off-by-one errors (fencepost)<a class="headerlink" href="#off-by-one-errors-fencepost" title="Permalink to this headline"></a></h3>
+</section>
 </section>
 </section>
 
