@@ -346,3 +346,26 @@ Then try the following program.
 
 Notice the difference? Try again the program with the ``printf`` statement, changing the valued inside its formatting string; for example, try ``%10d`` instead of ``%5d``. And, as 
 you begin to develop familiarity with simple formatted output, `begin reading the formatting documentation from Java <https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html>`__.
+
+Pulling digits out of an integer
+................................
+
+| Assuming that we have an integer number proberly initilized, e.g,
+| ``int n = 1234;``
+| how can we pull its digits apart from right to left? One *easy* way is to covert the number to a string and traverse it from its rightmost place to its leftmost:
+
+.. code-block:: java
+
+   String s = String.valueOf(n);
+   for (int i = s.length()-1; i >= 0; i--)
+     System.out.println(s.charAt(i));
+
+And yet, it is a matter of **programmer's pride** if we can accomplish the same numerically:
+
+.. code-block:: java
+
+   while (n > 0) { // while the number has digits left
+    int digit = n % 10; // pull out the right-most digit
+    System.out.println(digit);
+    n /= 10; // throw away the right-most digit
+   } // note: this only works with integer numbers
