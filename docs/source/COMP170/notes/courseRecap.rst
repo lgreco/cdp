@@ -250,7 +250,7 @@ The ``while`` loop above stops when a match is found or when it reaches the end 
 Sentinel values
 ...............
 
-Sentinel values is a way to signal the end of a loop or the unsuccessful conclusion of some  process. To illustrave a sentinel value as a signal of an unsuccessful process, let's expand the example above where we look for a specific word in a string array. Only this time we are interested not only in the presence (or absence) of that word, but also in its location within the array. And what if the word does not exist in the array? What will be the resulting position? That's where a sentinel value comes handy: we declare that -1 will indicate the absence of the word.
+Sentinel values signal the end of a loop or the unsuccessful conclusion of some  process. To illustrate a sentinel value as a signal of an unsuccessful process, let's expand the example above where we look for a specific word in a string array. Only this time we are interested not only in the presence (or absence) of that word, but also in its location within the array. And what if the word does not exist in the array? What will be the resulting position? That's where a sentinel value comes handy: we declare that -1 will indicate the absence of the word.
 
 .. code-block:: java
 
@@ -315,3 +315,28 @@ In the modified code above the loop terminating condition was revised from ``i <
    System.out.print(start)
    for (int i = start+1; i < finish; i++)
      System.out.print(", "+i);
+
+
+``printf`` instead of ``print`` or ``println``
+................................................
+
+Printing information with the ``println`` command is quick and therefore convenient. Together with the plain ``print`` command, programmers can separate the output across multiple lines. And that's as much control they have over the appearance of the output.
+
+The formatted print command, ``printf`` offers significantly more control over the output of the program. Admittedly, the command can be intimidating in the beginning, but it is worth the effort. First, because the flexibility it offers and second because once we learn how to use it, we can transfer the skill to other programming languages.
+
+Start with a simple program like the one below.
+
+.. code-block:: java
+
+  for (int n = 0; n < 10; n++)
+    System.out.println(n + " " + n*n + " " + Math.sqrt(n));
+
+Then try the following program.
+
+.. code-block:: java
+
+  for (int n = 0; n < 10; n++)
+    System.out.printf("%5d %6d %8.4f", n, n*n, Math.sqrt(n));
+
+Notice the difference? Try again the program with the ``printf`` statement, changing the valued inside its formatting string; for example, try ``%10d`` instead of ``%5d``. And, as 
+you begin to develop familiarity with simple formatted output, `begin reading the formatting documentation from Java <https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html>`__.
