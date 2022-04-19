@@ -3,7 +3,7 @@
 Course Recap
 =============
 
-Here's a list of things that I wish everyone could remember from an introductory programming course.
+Here's a list of things that I wish everyone could remember from an introductory programming course. Software is not written only to compile and run. It must be written so that others can read and maintain it. Those *others* include yourself 6 or more months after you wrote the program.
 
 
 The 80/20 rule in programming
@@ -18,6 +18,14 @@ Document your analysis
 Use comments in the program to describe the analysis that led to the solution you are implementing.
 
 
+Naming things
+-------------
+
+Phil Karlton, an iconic programmer and computer pioneer said that *there are only two hard things in Computer Science: cache invalidation and naming things*. I am not so sure about the first thing but I am absolutely certain that naming variables, methods, etc, can be challenging. `Style guides <https://google.github.io/styleguide/javaguide.html#s5-naming>`__ can be helpful and worth reading.
+
+(Karlton's aphorism has been verified by his son David, in a `StackExchange post dated 8/10/2017 <https://skeptics.stackexchange.com/questions/19836/has-phil-karlton-ever-said-there-are-only-two-hard-things-in-computer-science>`__).
+
+ 
 Remember a few useful techniques
 --------------------------------
 
