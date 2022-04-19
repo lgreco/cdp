@@ -115,7 +115,7 @@ would have sufficed. However, by casting them both as doubles I leave no doubt a
 ``while`` and ``for`` loops
 ...........................
 
-When to use one instead of the other? My simple rule of thumb is this: use ``for`` loops if you know in advance how many iterations you need. And use the ``while`` loop when you don't know in advance how many iterations you need. 
+When to use one instead of the other? My simple rule of thumb is this: use ``for`` loops if you know in advance how many iterations you need; or you can easily calculate how many iterations you need. And use the ``while`` loop when you don't know in advance how many iterations you need. 
 
 For example, to count how many times a value appears in an array ``a``, we have to look at every element of the array. We know, in advance that we need ``a.length`` iterations. This is a good case for a ``for`` loop. Or, if we want to print numbers in some sequence; for example, the first 10 odd numbers:
 
