@@ -207,10 +207,10 @@ than
 
    boolean isHot = temperature > 80;
    boolean isHumid = humidity > 65;
-   boolean thereIsNoWind = windSpeed < 5;
+   boolean isCalm = windSpeed < 5;
    boolean isFrigid = temperature < 5;
    
-   if ((isHot && isHumid && thereIsNoWind) || isFrigid)
+   if ((isHot && isHumid && isCalm) || isFrigid)
      System.out.println("Better stay inside.")
 
 Boolean variables can improve the readability of the code. They are definitely worth using.
