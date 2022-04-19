@@ -121,7 +121,7 @@
              
   <section id="course-recap">
 <h1>Course Recap<a class="headerlink" href="#course-recap" title="Permalink to this headline"></a></h1>
-<p>Here’s a list of things that I wish everyone could remember from an introductory programming course. Software is not written only to compile and run. It must be written so that others can read and maintain it. Those <em>others</em> include yourself 6 or more months after you wrote the program.</p>
+<p>Here’s a list of things that I wish everyone could remember from an introductory programming course. Software is not written only to compile and run. It must be written so that others can read and maintain it. Those <em>others</em> include yourself 6 or more months after you wrote the program. The items below have been written with Java in mind. They apply to other languages as well.</p>
 <section id="the-80-20-rule-in-programming">
 <h2>The 80/20 rule in programming<a class="headerlink" href="#the-80-20-rule-in-programming" title="Permalink to this headline"></a></h2>
 <p>Delayed programming, is good programming! Spend some time thinking before you start writing code. Spending 80% of your time analyzing the problem you need to solve, leads to a very productive 20% of your time writing good code!</p>
@@ -149,7 +149,7 @@
 </section>
 <section id="ternary-operator">
 <h3>Ternary operator<a class="headerlink" href="#ternary-operator" title="Permalink to this headline"></a></h3>
-<p>The ternary operator <code class="docutils literal notranslate"><span class="pre">?:</span></code>, is a compact form of the if-else statement. For example, the expression</p>
+<p>The ternary operator <code class="docutils literal notranslate"><span class="pre">?:</span></code>, is a compact form of the if-else statement. For example, consider the code below.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">parity</span><span class="o">;</span>      <span class="c1">//   This can also be written as:</span>
 <span class="k">if</span> <span class="o">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>       <span class="c1">//   String parity = &quot;Odd&quot;;</span>
   <span class="n">parity</span> <span class="o">=</span> <span class="s">&quot;Even&quot;</span>   <span class="c1">//   if (n%2 == 0)</span>
@@ -157,7 +157,7 @@
   <span class="n">parity</span> <span class="o">=</span> <span class="s">&quot;Odd&quot;</span><span class="o">;</span>   <span class="c1">//</span>
 </pre></div>
 </div>
-<p>Can be written as a single-line assignment with the ternary operator:</p>
+<p>The same result is possible with a single-line assignment that uses the ternary operator:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">parity</span> <span class="o">=</span> <span class="o">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">?</span> <span class="s">&quot;Even&quot;</span> <span class="o">:</span> <span class="s">&quot;Odd&quot;</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -193,19 +193,15 @@
 <span class="kt">double</span> <span class="n">average</span> <span class="o">=</span> <span class="o">((</span><span class="kt">double</span><span class="o">)</span> <span class="n">sum</span><span class="o">)</span> <span class="o">/</span> <span class="o">((</span><span class="kt">double</span><span class="o">)</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
 </pre></div>
 </div>
-<p>Both <code class="docutils literal notranslate"><span class="pre">sum</span></code> and <code class="docutils literal notranslate"><span class="pre">a.length</span></code> are <code class="docutils literal notranslate"><span class="pre">int</span></code> values. It suffices to cast only one of them to <code class="docutils literal notranslate"><span class="pre">double</span></code>, so why the dual casting above? Either</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">average</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">/</span> <span class="o">((</span><span class="kt">double</span><span class="o">)</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
-</pre></div>
+<div class="line-block">
+<div class="line">Both <code class="docutils literal notranslate"><span class="pre">sum</span></code> and <code class="docutils literal notranslate"><span class="pre">a.length</span></code> are <code class="docutils literal notranslate"><span class="pre">int</span></code> values. It suffices to cast only one of them to <code class="docutils literal notranslate"><span class="pre">double</span></code>, so why the dual casting above? Either</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">average</span> <span class="pre">=</span> <span class="pre">sum</span> <span class="pre">/</span> <span class="pre">((double)</span> <span class="pre">a.length);</span></code> or</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">average</span> <span class="pre">=</span> <span class="pre">((double)</span> <span class="pre">sum)</span> <span class="pre">/</span> <span class="pre">a.length;</span></code> would have sufficed. However, by casting them both as doubles I leave no doubt, about my intentions here.</div>
 </div>
-<p>or</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">average</span> <span class="o">=</span> <span class="o">((</span><span class="kt">double</span><span class="o">)</span> <span class="n">sum</span><span class="o">)</span> <span class="o">/</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
-</pre></div>
-</div>
-<p>would have sufficed. However, by casting them both as doubles I leave no doubt about my intentions here.</p>
 </section>
 <section id="while-and-for-loops">
 <h3><code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops<a class="headerlink" href="#while-and-for-loops" title="Permalink to this headline"></a></h3>
-<p>When to use one instead of the other? My simple rule of thumb is this: use <code class="docutils literal notranslate"><span class="pre">for</span></code> loops if you know in advance how many iterations you need; or you can easily calculate how many iterations you need. And use the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop when you don’t know in advance how many iterations you need.</p>
+<p>When to use one instead of the other? My simple rule of thumb is this: use <code class="docutils literal notranslate"><span class="pre">for</span></code> loops if you know in advance how many iterations you need; or you can easily calculate how many iterations you need. And use the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop when you don’t know in advance how many iterations you need or there is no way to compute them.</p>
 <p>For example, to count how many times a value appears in an array <code class="docutils literal notranslate"><span class="pre">a</span></code>, we have to look at every element of the array. We know, in advance that we need <code class="docutils literal notranslate"><span class="pre">a.length</span></code> iterations. This is a good case for a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Or, if we want to print numbers in some sequence; for example, the first 10 odd numbers:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
 <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">N</span><span class="o">;</span> <span class="n">n</span><span class="o">++)</span>
@@ -391,7 +387,7 @@ you begin to develop familiarity with simple formatted output, <a class="referen
 <section id="pulling-digits-out-of-an-integer">
 <h3>Pulling digits out of an integer<a class="headerlink" href="#pulling-digits-out-of-an-integer" title="Permalink to this headline"></a></h3>
 <div class="line-block">
-<div class="line">Assuming that we have an integer number proberly initilized, e.g,</div>
+<div class="line">Assuming that we have an integer number properly initialized, e.g,</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">n</span> <span class="pre">=</span> <span class="pre">1234;</span></code></div>
 <div class="line">how can we pull its digits apart from right to left? One <em>easy</em> way is to covert the number to a string and traverse it from its rightmost place to its leftmost:</div>
 </div>
