@@ -282,4 +282,36 @@ The loop above ends when the user enters the string ``"---"```. This string is t
 Off-by-one errors (fencepost)
 .............................
 
-These errors arise from the difference between *spans* and *counts*. For example, the span between the numbers 8 and 11 is 3; but the count of numbers between 8 and 11 is 4. Spans and counts are *off-by-one*.
+These errors arise from the difference between *spans* and *counts*. For example, the span between the numbers 8 and 11 is 3; but the count of numbers between 8 and 11 is 4. Spans and counts are *off-by-one*. Usually, this is not a big deal, but it can be quite annoying when using loops and expect some uniformity in the appearance of our data. For example:
+
+.. code-block:: java
+
+   int N = 10
+   for (int i = 0; i < N; i++) {
+     System.out.print(i+", ")
+   }
+
+The code above will result in::
+
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+
+That dangling comma at the end of the output is pretty annoying. The number of commas needed in the output is *off-by-one* from the span of the output. We print 10 numbers but we need only 10-1 commas. To get rid of off-by-one errors (also known as fencepost errors), we need to modify our code as follows:
+
+
+.. code-block:: java
+
+   int start = 0;
+   int finish = 10
+   for (int i = 0; i < finish-1; i++)
+     System.out.print(i+", ")
+   System.out.print(finish-1);
+
+In the modified code above the loop terminating condition was revised from ``i < finish`` to ``i < finish-1``. And a print statement was added outside the loop to print the last number (``finish-1``), without a comma after it. The same result can be obtained by adjusting the beginning of the loop:
+
+.. code-block:: java
+
+   int start = 0;
+   int finish = 10
+   System.out.print(start)
+   for (int i = start+1; i < finish; i++)
+     System.out.print(", "+i);
