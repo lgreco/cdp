@@ -9,7 +9,7 @@ Here's a list of things that I wish everyone could remember from an introductory
 The 80/20 rule in programming
 -----------------------------
 
-Spend 80% of your time analyzing the problem you need to solve, then 20% coding the solution. 
+Delayed programming, is good programming! Spend some time thinking before you start writing code. Spending 80% of your time analyzing the problem you need to solve, leads to a very productive 20% of your time writing good code!
 
 
 Document your analysis
@@ -199,12 +199,12 @@ than
 
 .. code-block:: java
 
-   boolean hot = temperature > 80;
-   boolean humid = humidity > 65;
-   boolean noWind = windSpeed < 5;
-   boolean frigid = temperature < 5;
+   boolean isHot = temperature > 80;
+   boolean isHumid = humidity > 65;
+   boolean thereIsNoWind = windSpeed < 5;
+   boolean isFrigid = temperature < 5;
    
-   if ((hot && humid && noWind) || frigid)
+   if ((isHot && isHumid && thereIsNoWind) || isFrigid)
      System.out.println("Better stay inside.")
 
 Boolean variables can improve the readability of the code. They are definitely worth using.
