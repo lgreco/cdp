@@ -117,7 +117,13 @@ would have sufficed. However, by casting them both as doubles I leave no doubt a
 
 When to use one instead of the other? My simple rule of thumb is this: use ``for`` loops if you know in advance how many iterations you need. And use the ``while`` loop when you don't know in advance how many iterations you need. 
 
-For example, to count how many times a value appears in an array ``a``, we have to look at every element of the array. We know, in advance that we need ``a.length`` iterations. This is a good case for a ``for`` loop.
+For example, to count how many times a value appears in an array ``a``, we have to look at every element of the array. We know, in advance that we need ``a.length`` iterations. This is a good case for a ``for`` loop. Or, if we want to print numbers in some sequence; for example, the first 10 odd numbers:
+
+.. code-block:: java
+
+   int N = 10;
+   for (int n = 0; n < N; n++)
+     System.out.println(2*n+1);
 
 On the other hand, to tell if a value is merely present in the array, we need to check every element of the array until we find a matching value or until we reach the end of the array. This is a good case for a ``while`` loop.
 
@@ -131,7 +137,7 @@ The difference between ``while`` and ``do-while`` loops
    
    An excellent illustration of the difference between ``while`` and ``do`` loops. The best attribution I have for this image is a `2018 post <https://www.reddit.com/r/ProgrammerHumor/comments/a5mghb/the_importance_of_knowing_how_to_correctly_use/>`__ in the **ProgrammerHumor** Reddit thread.
 
-The ``for`` and ``while`` loops cover all of our needs for repeating and iterating tasks. Why do we need a third kind of a loop mechanism? And so similar to an existing one? As the cartoon to the right shows, the two loops have one key difference. The ``do`` loop always executes at least one iteration. The while loop may not execute at all. 
+The ``for`` and ``while`` loops cover all of our needs for repeating and iterating tasks. Why do we need a third kind of a loop mechanism? And so similar to an existing one? As the cartoon to the right shows, there is one key difference between the ``do`` loop and the ``while`` loop. The ``do`` loop always executes at least one iteration. The while loop may not execute at all. 
 
 .. raw:: html
 
