@@ -171,7 +171,7 @@ Let's consider a scenario where the ``do`` loop is actually useful. We'll start 
    }
    System.out.println("Finally! You entered a number greater than 50.");
 
-Now, let's do the same with a ``do`` loops:
+Now, let's do the same with a ``do`` loop:
 
 .. code-block:: java
 
@@ -281,3 +281,5 @@ The loop above ends when the user enters the string ``"---"```. This string is t
 
 Off-by-one errors (fencepost)
 .............................
+
+These errors arise from the difference between *spans* and *counts*. For example, the span between the numbers 8 and 11 is 3; but the count of numbers between 8 and 11 is 4. Spans and counts are *off-by-one*.
