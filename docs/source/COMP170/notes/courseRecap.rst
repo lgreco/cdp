@@ -3,7 +3,7 @@
 Course Recap
 =============
 
-Here's a list of things that I wish everyone could remember from an introductory programming course. Software is not written only to compile and run. It must be written so that others can read and maintain it. Those *others* include yourself 6 or more months after you wrote the program.
+Here's a list of things that I wish everyone could remember from an introductory programming course. Software is not written only to compile and run. It must be written so that others can read and maintain it. Those *others* include yourself 6 or more months after you wrote the program. The items below have been written with Java in mind. They apply to other languages as well.
 
 
 The 80/20 rule in programming
@@ -46,7 +46,7 @@ To swap the values of two variables ``a`` and ``b``, we need to introduce a thir
 
 Ternary operator
 ................
-The ternary operator ``?:``, is a compact form of the if-else statement. For example, the expression
+The ternary operator ``?:``, is a compact form of the if-else statement. For example, consider the code below.
 
 .. code-block:: java
 
@@ -56,7 +56,7 @@ The ternary operator ``?:``, is a compact form of the if-else statement. For exa
    else                //     parity = "Even";
      parity = "Odd";   //
 
-Can be written as a single-line assignment with the ternary operator:
+The same result is possible with a single-line assignment that uses the ternary operator:
 
 .. code-block:: java
 
@@ -105,25 +105,15 @@ may suggest some poor planning prior to implementing the code. There are, howeve
      sum = sum + a[i];                  //  a cumulative operation here!
    double average = ((double) sum) / ((double) a.length);
 
-Both ``sum`` and ``a.length`` are ``int`` values. It suffices to cast only one of them to ``double``, so why the dual casting above? Either
-
-.. code-block:: java
-
-   double average = sum / ((double) a.length);
-
-or
-
-.. code-block:: java
-
-   double average = ((double) sum) / a.length;
-
-would have sufficed. However, by casting them both as doubles I leave no doubt about my intentions here. 
+| Both ``sum`` and ``a.length`` are ``int`` values. It suffices to cast only one of them to ``double``, so why the dual casting above? Either
+| ``double average = sum / ((double) a.length);`` or
+| ``double average = ((double) sum) / a.length;`` would have sufficed. However, by casting them both as doubles I leave no doubt, about my intentions here. 
 
 
 ``while`` and ``for`` loops
 ...........................
 
-When to use one instead of the other? My simple rule of thumb is this: use ``for`` loops if you know in advance how many iterations you need; or you can easily calculate how many iterations you need. And use the ``while`` loop when you don't know in advance how many iterations you need. 
+When to use one instead of the other? My simple rule of thumb is this: use ``for`` loops if you know in advance how many iterations you need; or you can easily calculate how many iterations you need. And use the ``while`` loop when you don't know in advance how many iterations you need or there is no way to compute them. 
 
 For example, to count how many times a value appears in an array ``a``, we have to look at every element of the array. We know, in advance that we need ``a.length`` iterations. This is a good case for a ``for`` loop. Or, if we want to print numbers in some sequence; for example, the first 10 odd numbers:
 
@@ -358,7 +348,7 @@ you begin to develop familiarity with simple formatted output, `begin reading th
 Pulling digits out of an integer
 ................................
 
-| Assuming that we have an integer number proberly initilized, e.g,
+| Assuming that we have an integer number properly initialized, e.g,
 | ``int n = 1234;``
 | how can we pull its digits apart from right to left? One *easy* way is to covert the number to a string and traverse it from its rightmost place to its leftmost:
 
