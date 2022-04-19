@@ -246,3 +246,38 @@ Let's say that the name ``"Java"`` happens to be the first element of the array.
   }
 
 The ``while`` loop above stops when a match is found or when it reaches the end of the array. Because the loop stops as soon as it finds a match, it is a bit faster than a ``for`` loop as long as there is a match to be found and it's not in the last element of the array.
+
+Sentinel values
+...............
+
+Sentinel values is a way to signal the end of a loop or the unsuccessful conclusion of some  process. To illustrave a sentinel value as a signal of an unsuccessful process, let's expand the example above where we look for a specific word in a string array. Only this time we are interested not only in the presence (or absence) of that word, but also in its location within the array. And what if the word does not exist in the array? What will be the resulting position? That's where a sentinel value comes handy: we declare that -1 will indicate the absence of the word.
+
+.. code-block:: java
+
+  int location = -1;  // Assume word is not present
+  int i = 0;  //  index for array
+  while (location < 0 && i < names.length) {
+    if (names[i].equals("Java")) 
+      location = i;  // This will end loop
+    i++;
+  }
+
+
+If, at the end of the loop above, ``location > -1``, the word we are looking for (``"Java"``, in this example) is at ``names[location]``. If the value of ``location`` is still ``-1``, the word is not present in the array.
+
+Sentinel values can be used to end a repetitive process. For example, consider the following snippet.
+
+.. code-block:: java
+
+  Scanner sc = new Scanner(System.in);
+  String terminate = "---";
+  String input = "";
+  while (!input.equals(terminate)) {
+    input = sc.next();
+    // do some stuff
+  }
+
+The loop above ends when the user enters the string ``"---"```. This string is the sentinel value that we are watching for, and when we detect it, we know it's time to end the repetitive cycle.
+
+Off-by-one errors (fencepost)
+.............................
