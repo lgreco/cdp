@@ -306,7 +306,7 @@ That dangling comma at the end of the output is pretty annoying. The number of c
 
    int start = 0;
    int finish = 10
-   for (int i = 0; i < finish-1; i++)
+   for (int i = start; i < finish-1; i++)
      System.out.print(i+", ")
    System.out.print(finish-1);
 
