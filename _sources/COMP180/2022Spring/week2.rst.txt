@@ -4,7 +4,7 @@
 
 
 Variables
-==============
+============
 
 Variables are nicknames for data. Data can be numbers, sequences of symbols (letters *are* symbols), images, etc. For example can have a variable for the year a person was born
 
