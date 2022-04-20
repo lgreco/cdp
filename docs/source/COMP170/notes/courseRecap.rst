@@ -310,7 +310,7 @@ That dangling comma at the end of the output is pretty annoying. The number of c
      System.out.print(i+", ")
    System.out.print(finish-1);
 
-In the modified code above the loop terminating condition was revised from ``i < finish`` to ``i < finish-1``. And a print statement was added outside the loop to print the last number (``finish-1``), without a comma after it. The same result can be obtained by adjusting the beginning of the loop:
+In the modified code above, the loop terminating condition was revised from ``i < finish`` to ``i < finish-1``. And a print statement was added outside the loop to print the last number (``finish-1``), without a comma after it. The same result can be obtained by adjusting the beginning of the loop:
 
 .. code-block:: java
 
