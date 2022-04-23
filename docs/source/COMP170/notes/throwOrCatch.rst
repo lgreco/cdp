@@ -15,7 +15,7 @@ If the file doesn't exist or if users made an error typing the file name, the ``
 
 I am not a big fan of predictable and preventable crashes. We know that things can go wrong with files. Maybe users will type the wrong name. Maybe the file is located on a flash drive that is not plugged into the computer. Maybe the file is on cloud storage like Google Drive, and the computer is temporarily disconnected from the internet.
 
-If we can predict an exception, we can prevent it. And by preventing it, we allow our program to end gracefully. That's when it is preferable to use a ``try/catch`` block than to throw a fit, sorry, AN exception.
+If we can predict an exception, we can prevent it. And by preventing it, we allow our program to end gracefully. That's when it is preferable to use a ``try/catch`` block than to throw a fit, sorry, an exception.
 
 Let's rewrite method ``scanFile`` in a gentler manner:
 
@@ -47,4 +47,3 @@ The method above returns either a *good* scanner or a *null* reference, but does
 
 Some may argue that the approach above simply postpones a program crash. Maybe so. At least, if our program crashes, it will be from an unanticipated cause. Which, once analyzed, can also be avoided.
 
-2022-04
