@@ -1,15 +1,7 @@
 Course operations and COVID19
 --------------------------------------------------------
 
-In the **Spring 2022,** I teach **COMP 170** (Introduction to Object Oriented Programming), **COMP 180** (Computing and Data), and together with William Honig, **COMP 397** (Research Methods in CS). All my courses are setup for **Hybrid** delivery: you can come to class or you can join the meeting via Zoom. With one exception, all class meetings are **synchronous**. 
-
-* However, ALL CLASS MEETINGS THROUGH JANUALY 31, 2022 WILL BE ONLINE ONLY in compliance with the University's COVID mitigation practices.
-
-* Per university policy, everyone is required to wear a face mask in a classroom or lab. There are no exceptions or exemptions. Faculty must wear masks while teaching. All students must wear a face mask properly, and that means covering the nose, mouth, and chin. Infractions will be reported online through the Office of Student Conduct and Conflict Resolution.
-
-* **Leo's mask policy for Student Hours:** as the university is relaxing its mask requirements, I no longer wear a mask at my office. If you arrive for an in-person meeting, wearing a mask, I'll put on mine right away. If you arrive without a mask, I'll keep mine off as well. I am convinced that masks help mitigative the risk of spreading the virus, and I'll do my best to make you feel safe and comfortable while visiting my office.
-
-* Students removing their mask to take a drink is acceptable, but removing the mask to eat is not. Students who need to have food available during class should work with the Student Accessibility Center to have that accommodation documented.
+In the **Summer 2022,** I teach **COMP 271** (Data Structures and Applications). This is **synchronous** online course. 
 
 * The principal method for online meetings is Zoom. You must `have it installed on your computer, tablet, or smartphone <https://zoom.us/download>`_. A link to our Zoom "classroom" is available on the course's Sakai site. There will be no separate emails with the Zoom link. 
 
@@ -29,8 +21,6 @@ In the **Spring 2022,** I teach **COMP 170** (Introduction to Object Oriented Pr
 Recordings 
 ----------
 
-*This applies to online and hybrid sections only*.
-
-Zoom sessions are recorded and available to watch later if, for some serious reason you may not be able to attend a class meeting. Notice that the availability of recordings is not a reason to skip class. Zoom provides me with attendance information and I will be monitoring it closely. Some courses include in-class assessments as part of the grading scheme. I am planning to continue conducting these assessments even when meeting remotely, so your attendance is critical.   
+Zoom sessions are recorded and available to watch later if, for some serious reason you may not be able to attend a class meeting. **Notice that the availability of recordings is not a reason to skip class without a justifiable reason.** Zoom provides me with attendance information and I will be monitoring it closely. Some courses include in-class assessments as part of the grading scheme. I am planning to continue conducting these assessments even when meeting remotely, so your attendance is critical.   
 
 Recordings are made available only to Loyola Students. You must contact me and provide a justification as to why you missed class if you wish access to a recorded meeting. Authentication (using your LUC login credentials) is required to access a recording. These recordings will be removed after the semester is over. Downloading of these recordings is not possible.
