@@ -15,6 +15,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -116,9 +117,9 @@
            <div itemprop="articleBody">
              
   <section id="outlines">
-<h1>Outlines<a class="headerlink" href="#outlines" title="Permalink to this headline"></a></h1>
+<h1>Outlines<a class="headerlink" href="#outlines" title="Permalink to this heading"></a></h1>
 <section id="sets">
-<h2>Sets<a class="headerlink" href="#sets" title="Permalink to this headline"></a></h2>
+<h2>Sets<a class="headerlink" href="#sets" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Notion of set as a collection of items with some relevance to each other. No order. No duplicates.</p></li>
 <li><p>Explicit and implicit definition of sets. How to evaluate set membership conditions (ie how to read and apply a condition like <span class="math notranslate nohighlight">\(\{x|x^2-4=0\}\)</span>).</p></li>
@@ -134,7 +135,7 @@
 </ul>
 </section>
 <section id="direct-proofs">
-<h2>Direct proofs<a class="headerlink" href="#direct-proofs" title="Permalink to this headline"></a></h2>
+<h2>Direct proofs<a class="headerlink" href="#direct-proofs" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Mathematical systems: axioms, definitions, undefined terms. Theorems, lemmas, corollaries. Examples.</p></li>
 <li><p>Direct proofs.</p></li>
@@ -145,7 +146,7 @@
 <li><p>Focus on <span class="math notranslate nohighlight">\(p\ \textrm{then}\ q\)</span>: we assume <span class="math notranslate nohighlight">\(p\)</span> is true and we work our way to show that <span class="math notranslate nohighlight">\(q\)</span> is true, using the mathematical systems’ axioms, definitions, and already proven theorems.</p></li>
 </ul>
 <section id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h3>
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>if <span class="math notranslate nohighlight">\(m\)</span> is odd and <span class="math notranslate nohighlight">\(n\)</span> is even then <span class="math notranslate nohighlight">\(m+n\)</span> is odd. Here it is implied that we want to prove this for all <span class="math notranslate nohighlight">\(n,m\in\mathbb{Z}\)</span>. Use <em>definition</em> of odd and even numbers. <span class="math notranslate nohighlight">\(m=2k, n=2j+1\)</span> and see what happens when applying these into the expression we want to prove: <span class="math notranslate nohighlight">\(m+n = 2k+2j+1 = 2(k+j)+1=2l+1\)</span> with <span class="math notranslate nohighlight">\(l=k+j\)</span>; showing that <span class="math notranslate nohighlight">\(n+m\)</span> is written in the form of an odd number definition (multiple of two plus 1).</p></li>
 <li><p>the sum of two odd integers is an even integer. Since <span class="math notranslate nohighlight">\(a=2m+1\)</span> and <span class="math notranslate nohighlight">\(a=2n+1\)</span>, their sum can be written as <span class="math notranslate nohighlight">\(a+b = (2m+1) + (2n+1) = 2m+2n+2 = 2(m+n+1)\)</span>, i.e., a multiple of 2.</p></li>
@@ -167,18 +168,18 @@
 </ul>
 </section>
 <section id="proof-by-counterexample">
-<h3>Proof by counterexample<a class="headerlink" href="#proof-by-counterexample" title="Permalink to this headline"></a></h3>
+<h3>Proof by counterexample<a class="headerlink" href="#proof-by-counterexample" title="Permalink to this heading"></a></h3>
 <p>The statement <span class="math notranslate nohighlight">\(\forall n \in\mathbb{Z}^+: 2^n+1\ \textrm{is prime}\)</span>, can be proven wrong with just one counterexample: for <span class="math notranslate nohighlight">\(n=3, 2^3+1 = 9\)</span> which is not a prime.</p>
 </section>
 <section id="common-mistakes-in-proofs">
-<h3>Common mistakes in proofs<a class="headerlink" href="#common-mistakes-in-proofs" title="Permalink to this headline"></a></h3>
+<h3>Common mistakes in proofs<a class="headerlink" href="#common-mistakes-in-proofs" title="Permalink to this heading"></a></h3>
 <section id="stoping-short-of-a-definition">
-<h4>Stoping short of a definition<a class="headerlink" href="#stoping-short-of-a-definition" title="Permalink to this headline"></a></h4>
+<h4>Stoping short of a definition<a class="headerlink" href="#stoping-short-of-a-definition" title="Permalink to this heading"></a></h4>
 <p>Definitions are not negotiable! For example, an odd number is <span class="math notranslate nohighlight">\(2n+1\)</span>, with <span class="math notranslate nohighlight">\(n\in\mathbb{Z}\)</span>, i.e., a multiple of two plus 1. So if you arrive at the conclusion that some number equals <span class="math notranslate nohighlight">\(2n+3\)</span> and you then state this is an odd number, you have not met the rigor of proof. Yes, <span class="math notranslate nohighlight">\(2n+3\)</span> <em>looks</em> like an odd number. But within the mathematical system of integer numbers it is not proven to be odd until you can demonstrate that it’s a multiple of two plus one, i.e., <span class="math notranslate nohighlight">\(2n+3 = 2n+2+1=2(n+1)+1\)</span>.</p>
 <p>Of course, in the interest of time you may end up with <span class="math notranslate nohighlight">\(2n+5\)</span> and then simply state that “by further factorization, this is <span class="math notranslate nohighlight">\(2k+1\)</span>”. That’s fine too, as long as you communicate that there is one more step needed, what it involves (“further factorization”, in this example), and where it leads (<span class="math notranslate nohighlight">\(2k+1\)</span>, the definition of an odd number). In such case, the further step that you narrate instead of executing, needs to be trivial. For example, further factorization of <span class="math notranslate nohighlight">\(2n+5\)</span> leads to <span class="math notranslate nohighlight">\(2(n+2)+1\)</span> and this is – or should be – obvious to everyone.</p>
 </section>
 <section id="symbology-issues">
-<h4>Symbology issues<a class="headerlink" href="#symbology-issues" title="Permalink to this headline"></a></h4>
+<h4>Symbology issues<a class="headerlink" href="#symbology-issues" title="Permalink to this heading"></a></h4>
 <p>You are asked to prove that the sum of two odd numbers is an even number. You proceed in defining the odd numbers as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}a = 2n+1 \\
@@ -190,7 +191,7 @@ b = 2m+1,\ \textit{or}\ b = 2n_b+1\end{split}\]</div>
 <p>In other words: do not hesitate to use different symbols.</p>
 </section>
 <section id="attempts-at-proofs-by-miracle">
-<h4>Attempts at proofs by miracle<a class="headerlink" href="#attempts-at-proofs-by-miracle" title="Permalink to this headline"></a></h4>
+<h4>Attempts at proofs by miracle<a class="headerlink" href="#attempts-at-proofs-by-miracle" title="Permalink to this heading"></a></h4>
 <p>Miraculous proofs are known to happen late at night or within seconds before an assignment deadline. Such proofs should be avoided at all cost as they are considered harmful to one’s reputation and detrimental for a final grade.</p>
 <figure class="align-center" id="id1" style="width: 350px">
 <a class="reference internal image-reference" href="../_images/miracle.jpg"><img alt="../_images/miracle.jpg" src="../_images/miracle.jpg" style="width: 333px;" /></a>
@@ -200,7 +201,7 @@ b = 2m+1,\ \textit{or}\ b = 2n_b+1\end{split}\]</div>
 </figure>
 </section>
 <section id="attempts-at-proofs-by-brute-force">
-<h4>Attempts at proofs by brute force<a class="headerlink" href="#attempts-at-proofs-by-brute-force" title="Permalink to this headline"></a></h4>
+<h4>Attempts at proofs by brute force<a class="headerlink" href="#attempts-at-proofs-by-brute-force" title="Permalink to this heading"></a></h4>
 <p>Use of violence is often illegal, totally inappropriate, probably grounds for expulsion, and always unconvincing.</p>
 <figure class="align-center" id="id2" style="width: 350px">
 <a class="reference internal image-reference" href="../_images/brute_force.jpg"><img alt="../_images/brute_force.jpg" src="../_images/brute_force.jpg" style="width: 333px;" /></a>
@@ -212,7 +213,7 @@ b = 2m+1,\ \textit{or}\ b = 2n_b+1\end{split}\]</div>
 </section>
 </section>
 <section id="indirect-proofs">
-<h2>Indirect proofs<a class="headerlink" href="#indirect-proofs" title="Permalink to this headline"></a></h2>
+<h2>Indirect proofs<a class="headerlink" href="#indirect-proofs" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>The direct approach, if <span class="math notranslate nohighlight">\(p\)</span> then <span class="math notranslate nohighlight">\(q\)</span> does not always work.</p></li>
 <li><p>If <span class="math notranslate nohighlight">\(n^2\)</span> is even, then <span class="math notranslate nohighlight">\(n\)</span> is even too. Where to start? Writing <span class="math notranslate nohighlight">\(n^2=2k\)</span> can takes us only as far as <span class="math notranslate nohighlight">\(n=\sqrt{2k}\)</span>. We cannot tell if <span class="math notranslate nohighlight">\(\sqrt{2k}\)</span> is a multiple of 2. Instead,  try: if <span class="math notranslate nohighlight">\((n^2:\textit{even}\Rightarrow n:\textit{odd})\)</span>.</p></li>
@@ -228,7 +229,7 @@ b = 2m+1,\ \textit{or}\ b = 2n_b+1\end{split}\]</div>
 </ul>
 </section>
 <section id="propositional-logic">
-<h2>Propositional logic<a class="headerlink" href="#propositional-logic" title="Permalink to this headline"></a></h2>
+<h2>Propositional logic<a class="headerlink" href="#propositional-logic" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Definition of proposition: statement that can be proved to be true or false but not both.</p></li>
 </ul>
@@ -292,7 +293,7 @@ b = 2m+1,\ \textit{or}\ b = 2n_b+1\end{split}\]</div>
 </table>
 </section>
 <section id="from-simple-logic-functions-to-biconditional-propositions">
-<h2>From simple logic functions to biconditional propositions<a class="headerlink" href="#from-simple-logic-functions-to-biconditional-propositions" title="Permalink to this headline"></a></h2>
+<h2>From simple logic functions to biconditional propositions<a class="headerlink" href="#from-simple-logic-functions-to-biconditional-propositions" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>AND, OR, NOT</p></li>
 <li><p>Combinations thereof: NAND, NOR</p></li>
@@ -320,7 +321,7 @@ b = 2m+1,\ \textit{or}\ b = 2n_b+1\end{split}\]</div>
 </div></blockquote>
 </section>
 <section id="binary-relations-br">
-<h2>Binary relations (BR)<a class="headerlink" href="#binary-relations-br" title="Permalink to this headline"></a></h2>
+<h2>Binary relations (BR)<a class="headerlink" href="#binary-relations-br" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>BR describe how elements from one set relate to elements of another set (or the set itself)</p></li>
 <li><p><span class="math notranslate nohighlight">\(R: X\mapsto Y: R\subset X\times Y\)</span>.</p></li>
@@ -368,7 +369,7 @@ b = 2m+1,\ \textit{or}\ b = 2n_b+1\end{split}\]</div>
 </table>
 </section>
 <section id="induction">
-<h2>Induction<a class="headerlink" href="#induction" title="Permalink to this headline"></a></h2>
+<h2>Induction<a class="headerlink" href="#induction" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Peano’s axioms: 0 is a natural number; <span class="math notranslate nohighlight">\(x=x\)</span> (equality reflexive); <span class="math notranslate nohighlight">\(x=y\Rightarrow y=x\)</span> (symmetry of equality); <span class="math notranslate nohighlight">\(x=y\)</span> and <span class="math notranslate nohighlight">\(y=z\)</span> then <span class="math notranslate nohighlight">\(x=z\)</span> (equality is transitive); if <span class="math notranslate nohighlight">\(a\in\mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(a=b\)</span> then <span class="math notranslate nohighlight">\(b\in\mathbb{N}\)</span> (closed under equality); <span class="math notranslate nohighlight">\(\forall n\in\mathbb{N}, S(n)\in\mathbb{N}\)</span> (closure under <span class="math notranslate nohighlight">\(S\)</span>);  <span class="math notranslate nohighlight">\(\forall m,n\in\mathbb{N}\)</span>, if <span class="math notranslate nohighlight">\(S(n)=S(m)\)</span> then <span class="math notranslate nohighlight">\(n=m\)</span> (<span class="math notranslate nohighlight">\(S\)</span> is injective); <span class="math notranslate nohighlight">\(\not\exists n\in\mathbb{N}: S(n)=0\)</span>; if <span class="math notranslate nohighlight">\(K\)</span> is a set such that <span class="math notranslate nohighlight">\(0\in K\)</span> and <span class="math notranslate nohighlight">\(\forall n\in\mathbb{N}: n\in K\Rightarrow S(n)\in\mathbb{K}\)</span> then <span class="math notranslate nohighlight">\(K=\mathbb{N}\)</span> (induction).</p></li>
 <li><p>Climb-the-ladder analogy (Knuth).</p></li>

@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -119,7 +120,7 @@
            <div itemprop="articleBody">
              
   <section id="on-multiple-returns">
-<h1>On multiple returns<a class="headerlink" href="#on-multiple-returns" title="Permalink to this headline"></a></h1>
+<h1>On multiple returns<a class="headerlink" href="#on-multiple-returns" title="Permalink to this heading"></a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">return</span></code> statement serves two purposes. First it passes data to the outside of a method. And second, it stops executing that method and returns control to the part of the program that called the method.</p>
 <p>Methods in Java (and in most languages, for that matter) have a single point of entry. Let’s write  a method to return the largest of two integers.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">largestOf</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
@@ -160,7 +161,7 @@ the most influential technical notes on programming. In his <a class="reference 
 </pre></div>
 </div>
 <section id="is-there-a-technique-for-single-returns">
-<h2>Is there a technique for single returns?<a class="headerlink" href="#is-there-a-technique-for-single-returns" title="Permalink to this headline"></a></h2>
+<h2>Is there a technique for single returns?<a class="headerlink" href="#is-there-a-technique-for-single-returns" title="Permalink to this heading"></a></h2>
 <p>As I mentioned earlier, I strive to write methods with just one return statements, every time that I can justify the effort and the need. My technique is simple. Before I write any other code, I create a return variable and I return it. Usually I call that variable <code class="docutils literal notranslate"><span class="pre">result</span></code> and often I rename it to something more appropriate when I am done. For example,</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">largestOf</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
   <span class="kt">int</span> <span class="n">result</span><span class="o">;</span>     <span class="c1">// The int that the method will return.</span>
@@ -181,7 +182,7 @@ the most influential technical notes on programming. In his <a class="reference 
 </div>
 </section>
 <section id="when-are-multiple-returns-acceptable">
-<h2>When are multiple returns acceptable?<a class="headerlink" href="#when-are-multiple-returns-acceptable" title="Permalink to this headline"></a></h2>
+<h2>When are multiple returns acceptable?<a class="headerlink" href="#when-are-multiple-returns-acceptable" title="Permalink to this heading"></a></h2>
 <p>To ask when is something acceptable is to imply that sometimes it is not acceptable. There is no universal rule stating that multiple returns are unacceptable. Also, there is no universal rule prohibiting ketchup on pasta, or pineapple on pizza, or fish sticks and custard.</p>
 <p>Personal (and questionable) taste aside, there are times when the use of multiple returns can be justified in a convincing manner. Consider the following method.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="cm">/**</span>

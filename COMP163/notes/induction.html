@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -120,7 +121,7 @@
            <div itemprop="articleBody">
              
   <section id="mathematical-induction">
-<h1>Mathematical Induction<a class="headerlink" href="#mathematical-induction" title="Permalink to this headline"></a></h1>
+<h1>Mathematical Induction<a class="headerlink" href="#mathematical-induction" title="Permalink to this heading"></a></h1>
 <p>Mathematical induction – often, just induction – is one of the simplest and yet most challenging concepts to master. It is also one of the most rewarding proof techniques. Induction allows us to prove a property for natural numbers, for which we have a hunch but we need solid proof. For example, we believe that the sum of the first <span class="math notranslate nohighlight">\(n\)</span> numbers is <span class="math notranslate nohighlight">\(n(n+1)/2\)</span>. In fact, every time we try for a different <span class="math notranslate nohighlight">\(n\)</span>, our hunch turns out to be true:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}n=3,\ \ 1+2+3 = 6 &amp;= \frac{3(3+1)}{2}=\frac{12}{2} \\ \\
@@ -148,7 +149,7 @@ n=5,\ \ 1+2+3+4+5 = 15 &amp;= \frac{5(5+1)}{2}=\frac{30}{2}\end{split}\]</div>
 3 &amp;= S(S(S(0)))\\
 &amp;\vdots\end{split}\]</div>
 <section id="peano-s-axioms">
-<h2>Peano’s Axioms<a class="headerlink" href="#peano-s-axioms" title="Permalink to this headline"></a></h2>
+<h2>Peano’s Axioms<a class="headerlink" href="#peano-s-axioms" title="Permalink to this heading"></a></h2>
 <p>There are 9 axioms that Peano stated about natural numbers. We are interested in the following X:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(0\)</span> is a natural number.</p></li>
@@ -189,22 +190,22 @@ n=5,\ \ 1+2+3+4+5 = 15 &amp;= \frac{5(5+1)}{2}=\frac{30}{2}\end{split}\]</div>
 <p>The “price of admission” to set <span class="math notranslate nohighlight">\(K\)</span> is for a natural number <span class="math notranslate nohighlight">\(k\)</span> to satisfy the formula <span class="math notranslate nohighlight">\(1+2+\ldots + k = k(k+1)/2\)</span>. And since we showed that all natural numbers are in <span class="math notranslate nohighlight">\(K\)</span>, we have proved that the formula works for any natural number.</p>
 </section>
 <section id="a-template-for-induction-proofs">
-<h2>A template for induction proofs<a class="headerlink" href="#a-template-for-induction-proofs" title="Permalink to this headline"></a></h2>
+<h2>A template for induction proofs<a class="headerlink" href="#a-template-for-induction-proofs" title="Permalink to this heading"></a></h2>
 <p>Induction problems ask us to prove a property that may be of the form</p>
 <div class="math notranslate nohighlight">
 \[L(n) = R(n)\]</div>
 <p>In the example above, <span class="math notranslate nohighlight">\(L(n)= 1+2+\ldots+n\)</span> and <span class="math notranslate nohighlight">\(R(n)=n(n+1)/2\)</span>.</p>
 <p>Given a problem in the form <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span>, the induction proof can be done in three steps.</p>
 <section id="step-1">
-<h3>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline"></a></h3>
+<h3>Step 1<a class="headerlink" href="#step-1" title="Permalink to this heading"></a></h3>
 <p>Show that <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span> holds for <span class="math notranslate nohighlight">\(n=1\)</span>. (Yes, Peano says to show for <span class="math notranslate nohighlight">\(n=0\)</span> but <span class="math notranslate nohighlight">\(1\)</span> is just as good).</p>
 </section>
 <section id="step-2">
-<h3>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline"></a></h3>
+<h3>Step 2<a class="headerlink" href="#step-2" title="Permalink to this heading"></a></h3>
 <p>Assume that <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span> holds for <span class="math notranslate nohighlight">\(n=k\)</span>, i.e., <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> is true.</p>
 </section>
 <section id="step-3">
-<h3>Step 3<a class="headerlink" href="#step-3" title="Permalink to this headline"></a></h3>
+<h3>Step 3<a class="headerlink" href="#step-3" title="Permalink to this heading"></a></h3>
 <p>Start with <span class="math notranslate nohighlight">\(L(k+1)\)</span> and show that it equals <span class="math notranslate nohighlight">\(R(k+1)\)</span>. You will notice that the expression   <span class="math notranslate nohighlight">\(L(k+1)\)</span> always contains <span class="math notranslate nohighlight">\(L(k)\)</span>. And since you just assumed that <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> in Step 2, you can write</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}L(k+1) &amp;= L(k) + \Lambda(k+1) \\
@@ -215,16 +216,16 @@ n=5,\ \ 1+2+3+4+5 = 15 &amp;= \frac{5(5+1)}{2}=\frac{30}{2}\end{split}\]</div>
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
 </section>
 <section id="the-summation-formula">
-<h2>The summation formula<a class="headerlink" href="#the-summation-formula" title="Permalink to this headline"></a></h2>
+<h2>The summation formula<a class="headerlink" href="#the-summation-formula" title="Permalink to this heading"></a></h2>
 <p>Prove that</p>
 <div class="math notranslate nohighlight">
 \[1+2+\ldots + n = \frac{n(n+1)}{2}\]</div>
 <p>We worked this formula above to demonstrate the inductive method. We repeat the proof here in a more formal manner.</p>
 <section id="id1">
-<h3>Step 1<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<h3>Step 1<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
 <p>For this step, first we need to identify the expressions <span class="math notranslate nohighlight">\(L(n)\)</span> and <span class="math notranslate nohighlight">\(R(n)\)</span>. In this case, it’s fairly easy:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}L(n) &amp;= 1+2+\ldots + n \\ \\
@@ -236,13 +237,13 @@ R(1)&amp;=\frac{1(1+1)}{2}=1\end{split}\]</div>
 <p>So, <span class="math notranslate nohighlight">\(L(1)=R(1)\)</span>.</p>
 </section>
 <section id="id2">
-<h3>Step 2<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<h3>Step 2<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
 <p>This is a simple and quick step. We only have to state that for an arbitrary <span class="math notranslate nohighlight">\(n=k\)</span> the expression <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> is true; in other words:</p>
 <div class="math notranslate nohighlight">
 \[1+2+\ldots +k = \frac{k(k+1)}{2}\]</div>
 </section>
 <section id="id3">
-<h3>Step 3<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
+<h3>Step 3<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
 <p>Here we use the next number up from the previous step. In Step 2 we looked at <span class="math notranslate nohighlight">\(n=k\)</span>. The next number up is <span class="math notranslate nohighlight">\(k+1\)</span>. The question we must answer in this step now is if <span class="math notranslate nohighlight">\(L(k+1)\)</span> equals <span class="math notranslate nohighlight">\(R(k+1)\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[L(k+1) = 1+2+\ldots +k + (k+1)\]</div>
@@ -260,10 +261,10 @@ R(1)&amp;=\frac{1(1+1)}{2}=1\end{split}\]</div>
 </section>
 </section>
 <section id="the-stamps-problems">
-<h2>The stamps problems<a class="headerlink" href="#the-stamps-problems" title="Permalink to this headline"></a></h2>
+<h2>The stamps problems<a class="headerlink" href="#the-stamps-problems" title="Permalink to this heading"></a></h2>
 <p>Show that any postage amount greater than $0.17 can be formed with $0.03 and $0.10 stamps. For example, $0.22 worth of postage comprises one $0.10 stamp and four $0.03 stamps.</p>
 <section id="id4">
-<h3>Step 1<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h3>
+<h3>Step 1<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
 <p>Problems like this one do not have a readily available expression of the form <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span>. We have to derive the formula by restating the problem. Basically, the problem says that any number greater than 17 can be written as the sum of multiples of 3 and multiples of 10:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}n&amp;=3a+10b\\n&amp;\geq 18\end{aligned}\end{align} \]</div>
@@ -275,11 +276,11 @@ R(1)&amp;=\frac{1(1+1)}{2}=1\end{split}\]</div>
 \[ \begin{align}\begin{aligned}18 =3a+10b\\\text{when}\ a=6, b=0\end{aligned}\end{align} \]</div>
 </section>
 <section id="id5">
-<h3>Step 2<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h3>
+<h3>Step 2<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
 <p>This is the easiest step of the proof. We assume that the property holds for an arbitrary integer <span class="math notranslate nohighlight">\(k\)</span>, i.e., <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span>.</p>
 </section>
 <section id="id6">
-<h3>Step 3<a class="headerlink" href="#id6" title="Permalink to this headline"></a></h3>
+<h3>Step 3<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
 <p>Can we now prove that the property works for <span class="math notranslate nohighlight">\(S(k)\)</span>, by working our way from <span class="math notranslate nohighlight">\(L(k+1)\)</span> to <span class="math notranslate nohighlight">\(R(k+1)\)</span>. Just remember that for this problem, <span class="math notranslate nohighlight">\(R\)</span> simply means a sum of multiples of 3 and 10.</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}L(k+1) &amp;= k+1\ \ \ \ (\text{and from step 2,}\ k=3a+10b)\\               &amp;=3a+10b+1\ \ \ \ (\text{rewrite}\ 1=10-9)\\               &amp;=3a+10b+10-9\\               &amp;=3(a-3)+10(b+1)\ \ \ \ (\text{substituting}\ a'=a-3,\ b'=b+1)\\               &amp;=3a'+10b'\end{aligned}\end{align} \]</div>
@@ -287,7 +288,7 @@ R(1)&amp;=\frac{1(1+1)}{2}=1\end{split}\]</div>
 </section>
 </section>
 <section id="a-checklist">
-<h2>A checklist<a class="headerlink" href="#a-checklist" title="Permalink to this headline"></a></h2>
+<h2>A checklist<a class="headerlink" href="#a-checklist" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Write the left and right side expressions, clearly. In some cases these expressions may not be immediately clear. For example, in the problem where we try to prove that any postage value can be obtained with $0.05 and $0.04 stamps, the actual deliverable is the proof that every number greater than 11 can be written as the sum of multiples of 4 and multiples of 5. Mathematically that means <span class="math notranslate nohighlight">\(n=4x+5y\)</span>, for <span class="math notranslate nohighlight">\(n\geq 12\)</span>. Here <span class="math notranslate nohighlight">\(L(n)=n\)</span> and <span class="math notranslate nohighlight">\(R(n)=4x+5y\)</span>. In the problem where we try to prove that <span class="math notranslate nohighlight">\(6^n-1\)</span> is always divisible by 5, <span class="math notranslate nohighlight">\(L(n) =6^n-1\)</span> and <span class="math notranslate nohighlight">\(R(n)=5q\)</span>.</p></li>
 <li><p>Check if <span class="math notranslate nohighlight">\(L(1)=R(1)\)</span> (for some problems you may have to check for another specific value; for example if the property you are trying to prove is limited to values <span class="math notranslate nohighlight">\(n\geq 16\)</span>, you shall check for <span class="math notranslate nohighlight">\(L(16)=R(16)\)</span>).</p></li>

@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -114,7 +115,7 @@
            <div itemprop="articleBody">
              
   <section id="throw-or-catch">
-<h1>Throw or Catch?<a class="headerlink" href="#throw-or-catch" title="Permalink to this headline"></a></h1>
+<h1>Throw or Catch?<a class="headerlink" href="#throw-or-catch" title="Permalink to this heading"></a></h1>
 <p>A method that employs a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to process a <code class="docutils literal notranslate"><span class="pre">File</span></code> item often requires an exception in its signature. For example, method <code class="docutils literal notranslate"><span class="pre">scanFile</span></code> below accepts a string as input and returns a Scanner connected to a file with the name provided in the string:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="n">Scanner</span> <span class="nf">scanFile</span><span class="o">(</span><span class="n">String</span> <span class="n">fileName</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">FileNotFoundException</span> <span class="o">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">fileName</span><span class="o">));</span>

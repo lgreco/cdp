@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -121,7 +122,7 @@
            <div itemprop="articleBody">
              
   <section id="the-calendar-problem">
-<h1>The Calendar Problem<a class="headerlink" href="#the-calendar-problem" title="Permalink to this headline"></a></h1>
+<h1>The Calendar Problem<a class="headerlink" href="#the-calendar-problem" title="Permalink to this heading"></a></h1>
 <p>The calendar problem is seemingly a difficult one. There are several different scenarios and we do not really know how to navigate them. One way to navigate different scenarios in programming is to use conditional statements, like <cite>if-then-else</cite>. At this stage in the course however, we have not “discovered” conditionals. And it is worth trying to solve the problem without looking ahead in the course material.</p>
 <p>Solving the calendar problem without conditional statements is a fantastic learning moment. A solution without conditional statements requires some serious analysis first, illustrating that most computing problems follow the 80-20 rule: 80% thinking, 20% coding. The analysis begins by turning off our IDE, moving our focus from coding to thinking. Next, we draw a few scenarios on paper, on a notes app, whatever works for you.</p>
 <figure class="align-right" id="id1" style="width: 60%">
@@ -132,7 +133,7 @@
 </figure>
 <p>As we try different combinations, e.g., 31-day month whose first day is a Sunday, or a 28-day month whose first day is a Tuesday, etc, we begin to see a pattern like the one to the right. The lines of the calendar are separated into three groups. The first group (yellow) <em>may</em> have a few empty spaces in the front. The second group (blue) has every space filled with a date. And the third group (green) <em>may</em> have a few empty spaces at the back.</p>
 <section id="the-blue-week">
-<h2>The “blue” week<a class="headerlink" href="#the-blue-week" title="Permalink to this headline"></a></h2>
+<h2>The “blue” week<a class="headerlink" href="#the-blue-week" title="Permalink to this heading"></a></h2>
 <figure class="align-left" id="id2" style="width: 60%">
 <img alt="../../_images/sundayDate.png" src="../../_images/sundayDate.png" />
 <figcaption>
@@ -150,7 +151,7 @@
 </div>
 </section>
 <section id="the-yellow-week">
-<h2>The “yellow” week<a class="headerlink" href="#the-yellow-week" title="Permalink to this headline"></a></h2>
+<h2>The “yellow” week<a class="headerlink" href="#the-yellow-week" title="Permalink to this heading"></a></h2>
 <figure class="align-right" id="id3" style="width: 60%">
 <img alt="../../_images/yellow.png" src="../../_images/yellow.png" />
 <figcaption>
@@ -170,7 +171,7 @@
 </div>
 </section>
 <section id="remaining-analysis-and-observations">
-<h2>Remaining analysis and observations<a class="headerlink" href="#remaining-analysis-and-observations" title="Permalink to this headline"></a></h2>
+<h2>Remaining analysis and observations<a class="headerlink" href="#remaining-analysis-and-observations" title="Permalink to this heading"></a></h2>
 <p>The analysis above can be used to determine how to print the “green” week. After that, the only thing remaining is to determine how many “blue” weeks to print. And the final code will take the following form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">yellowWeek</span>
 <span class="nb">print</span> <span class="n">blueWeek</span> <span class="o">//</span> \
@@ -183,7 +184,7 @@
 <p>Let’s close with an <strong>observation.</strong> The problem starts with the requirement to not use conditional statements. To be precise, what we have avoided so far is the explicit use of <cite>if-then-else</cite> statements. Because our code will contain for-loops, there will be <em>implied</em> conditions: the loops’ terminating conditions.</p>
 </section>
 <section id="the-kf-code">
-<h2>The KF code<a class="headerlink" href="#the-kf-code" title="Permalink to this headline"></a></h2>
+<h2>The KF code<a class="headerlink" href="#the-kf-code" title="Permalink to this heading"></a></h2>
 <p>The best solution, to date, for this problem came from KF, a student who took COMP 170 in Spring 2021. Her code is shown below. I have only made style and commend edits, and added a few class constants. Also, I added one if-statement in spite of the problem forbiting us to use them. The if-statement is not related to the construction of the calendar grid, but makes sure that the arguments we pass are valid. In other words, if we ask for the calendar of a month with 43 days, whose first Sunday is the 11th day in the month, nothing will appear on our screens.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="lineno">  1 </span><span class="cm">/**</span>
 <span class="lineno">  2 </span><span class="cm"> * Class that creates a monthly calendar on a grid with 7 columns. Each column corresponds to a day of</span>

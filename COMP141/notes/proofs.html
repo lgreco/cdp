@@ -15,6 +15,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -82,11 +83,11 @@
            <div itemprop="articleBody">
              
   <section id="proofs">
-<h1>Proofs<a class="headerlink" href="#proofs" title="Permalink to this headline"></a></h1>
+<h1>Proofs<a class="headerlink" href="#proofs" title="Permalink to this heading"></a></h1>
 <p>Proofs have been an central element of our civilization for thousands of years. In Odyssey, Homer gives us proof of Ulysses identity when he describes how he is recognized by his aged, faithful dog. In Bible, the resurrected Christ allows Thomas to touch his wounds, leading to the first acclamation of Jesus as God (John 20:24–29). In the Lord of the Rings, Aragorn’s rightful claim to the thrones of Arnor and Gondor is established by the Ring of Barahir and his wielding of the Andúril sword. In fiction and scripture, proofs have been used to establish veracity of deeds and royal or divine status. Proofs satisfy our doubts and skepticism and give meaning to faith and theory alike.</p>
 <p>In mathematics, proofs are arguments that establish the truthfulness of various statements. These arguments are based on the building blocks of mathematical systems: axioms, definitions, and theorems.</p>
 <section id="direct-proofs">
-<h2>Direct proofs<a class="headerlink" href="#direct-proofs" title="Permalink to this headline"></a></h2>
+<h2>Direct proofs<a class="headerlink" href="#direct-proofs" title="Permalink to this heading"></a></h2>
 <p>This is the easiest kind of proofs, relatively speaking.
 In direct proofs we usually have a statement of the form:</p>
 <div class="math notranslate nohighlight">
@@ -102,7 +103,7 @@ In direct proofs we usually have a statement of the form:</p>
 \[\begin{split}n^2&amp;=(2x+1)^2\\ &amp;=4x^2+4x+1\\ &amp;=2(2x^2+2x)+1\\ &amp;= 2z+1\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(z=2x^2+2x\)</span>. So we showed that <span class="math notranslate nohighlight">\(n^2=2z+1\)</span> which is an odd number.</p>
 <section id="sum-of-two-odd-numbers-is-an-even-number">
-<h3>Sum of two odd numbers is an even number<a class="headerlink" href="#sum-of-two-odd-numbers-is-an-even-number" title="Permalink to this headline"></a></h3>
+<h3>Sum of two odd numbers is an even number<a class="headerlink" href="#sum-of-two-odd-numbers-is-an-even-number" title="Permalink to this heading"></a></h3>
 <p>Another example of a direct proof is to show that if two numbers are odd, their sum is an even number, i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\text{if}\ m,n\ \text{odd} \Rightarrow m+n\ \text{even}\]</div>
@@ -112,19 +113,19 @@ In direct proofs we usually have a statement of the form:</p>
 <p>with <span class="math notranslate nohighlight">\(k=x+y+1\)</span>. Thus we showed that the sum of two odd numbers is a multiple of 2, which by definition is an even number.</p>
 </section>
 <section id="the-product-of-odd-and-even-numbers-is-an-even-number">
-<h3>The product of odd and even numbers is an even number<a class="headerlink" href="#the-product-of-odd-and-even-numbers-is-an-even-number" title="Permalink to this headline"></a></h3>
+<h3>The product of odd and even numbers is an even number<a class="headerlink" href="#the-product-of-odd-and-even-numbers-is-an-even-number" title="Permalink to this heading"></a></h3>
 <p>Another direct proof is to show that the product of an odd and an even number is an even number. Assuming <span class="math notranslate nohighlight">\(m=2x+1\)</span> (the odd number) and <span class="math notranslate nohighlight">\(n=2y\)</span> (the even number), their product <span class="math notranslate nohighlight">\(mn\)</span> is:</p>
 <div class="math notranslate nohighlight">
 \[mn = (2x+1)2y = 4xy+2y = 2(2xy+y)\]</div>
 <p>In other words, <span class="math notranslate nohighlight">\(mn\)</span> is a multiple of 2, therefore an even number.</p>
 </section>
 <section id="the-square-of-an-even-number-is-an-even-number">
-<h3>The square of an even number is an even number<a class="headerlink" href="#the-square-of-an-even-number-is-an-even-number" title="Permalink to this headline"></a></h3>
+<h3>The square of an even number is an even number<a class="headerlink" href="#the-square-of-an-even-number-is-an-even-number" title="Permalink to this heading"></a></h3>
 <p>Can show that if <span class="math notranslate nohighlight">\(n\)</span> is even, then <span class="math notranslate nohighlight">\(n^2\)</span> is also even? An even number is a multiple of 2, so we can write <span class="math notranslate nohighlight">\(n=2x\)</span>. Squaring both sides gives us <span class="math notranslate nohighlight">\(n^2=4x^2=2(2x^2)=2z\)</span>, where <span class="math notranslate nohighlight">\(z=2x^2\)</span>. By showing that <span class="math notranslate nohighlight">\(n^2=2z\)</span> we have proved that <span class="math notranslate nohighlight">\(n^2\)</span> is even.</p>
 </section>
 </section>
 <section id="proofs-by-contradiction">
-<h2>Proofs by contradiction<a class="headerlink" href="#proofs-by-contradiction" title="Permalink to this headline"></a></h2>
+<h2>Proofs by contradiction<a class="headerlink" href="#proofs-by-contradiction" title="Permalink to this heading"></a></h2>
 <p>Some times, a direct proof may not be possible. For example, can we prove that if <span class="math notranslate nohighlight">\(n^2\)</span> is even then <span class="math notranslate nohighlight">\(n\)</span> is also even? Trying a direct proof we can write:</p>
 <div class="math notranslate nohighlight">
 \[n^2=2x \Rightarrow n=\sqrt{2x}\]</div>
@@ -156,7 +157,7 @@ n^2&amp;=(2x+1)^2 \\
 n^2&amp;:\ \text{odd}\\
 \text{but}&amp;:\ \text{we assumed}\ h\ (n^2\ \text{even})\\\end{split}\]</div>
 <section id="example-if-n-2-is-odd-then-n-is-odd">
-<h3>Example: if <span class="math notranslate nohighlight">\(n^2\)</span> is odd then <span class="math notranslate nohighlight">\(n\)</span> is odd<a class="headerlink" href="#example-if-n-2-is-odd-then-n-is-odd" title="Permalink to this headline"></a></h3>
+<h3>Example: if <span class="math notranslate nohighlight">\(n^2\)</span> is odd then <span class="math notranslate nohighlight">\(n\)</span> is odd<a class="headerlink" href="#example-if-n-2-is-odd-then-n-is-odd" title="Permalink to this heading"></a></h3>
 <p>If we tried direct proof here, we’ll end with the expression <span class="math notranslate nohighlight">\(n=\sqrt{2x+1}\)</span> which is of inconclusive parity. Therefore, a proof by contradiction may be a better strategy. Our hypothesis is <span class="math notranslate nohighlight">\(h:\ n^2\ \text{odd}\)</span>. Our conclusion is <span class="math notranslate nohighlight">\(c:\ n\ \text{odd}\)</span>. And since we cannot prove directly <span class="math notranslate nohighlight">\(h\Rightarrow c\)</span>, we will assume that <span class="math notranslate nohighlight">\(h\Rightarrow\neg c\)</span> is true. Given this assumption, <span class="math notranslate nohighlight">\(n\)</span> is odd and therefore <span class="math notranslate nohighlight">\(n=2x\)</span>. Squaring both sides of the equation:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}n^2&amp;=4x^2 \\
@@ -165,7 +166,7 @@ n^2&amp;:\ \text{odd}\\
 <p>Therefore <span class="math notranslate nohighlight">\(n^2\)</span> is an even number contrary to the assumed truthfulness of <span class="math notranslate nohighlight">\(h\Rightarrow\neg c\)</span>. Our assumption <span class="math notranslate nohighlight">\(h\Rightarrow\neg c\)</span> is false, leading to the conclusion that <span class="math notranslate nohighlight">\(h\Rightarrow c\)</span> is true. In other words,  if <span class="math notranslate nohighlight">\(n^2\)</span> is odd then <span class="math notranslate nohighlight">\(n\)</span> is also odd.</p>
 </section>
 <section id="example-if-a-b-in-mathbb-z-then-a-2-4b-neq-2">
-<h3>Example: if <span class="math notranslate nohighlight">\(a,b \in \mathbb{Z}\)</span> then <span class="math notranslate nohighlight">\(a^2-4b\neq 2\)</span><a class="headerlink" href="#example-if-a-b-in-mathbb-z-then-a-2-4b-neq-2" title="Permalink to this headline"></a></h3>
+<h3>Example: if <span class="math notranslate nohighlight">\(a,b \in \mathbb{Z}\)</span> then <span class="math notranslate nohighlight">\(a^2-4b\neq 2\)</span><a class="headerlink" href="#example-if-a-b-in-mathbb-z-then-a-2-4b-neq-2" title="Permalink to this heading"></a></h3>
 <p>The hypothesis here is <span class="math notranslate nohighlight">\(h:\ a,b \in \mathbb{Z}\)</span>. And the conclusion is <span class="math notranslate nohighlight">\(c:\ a^2-4b\neq 2\)</span>. There is no direct way to show <span class="math notranslate nohighlight">\(h\Rightarrow c\)</span>, and it would seem that a proof by contradiction is the preferred strategy. We begin by assuming that <span class="math notranslate nohighlight">\(h\Rightarrow\neg c\)</span> is true, i.e., there are integer numbers <span class="math notranslate nohighlight">\(a,b\)</span> such that <span class="math notranslate nohighlight">\(a^2-4b=2\)</span>. Given that, we can write:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}a^2-4b&amp;=2 \\
@@ -182,7 +183,7 @@ a^2&amp;=4b+2 \\
 <p>We just concluded that <span class="math notranslate nohighlight">\(1\)</span> is an even number! That’s because the assumption that led us to this astonishing conclusion is false. The assumption was that there are integer numbers <span class="math notranslate nohighlight">\(a,b\)</span> such that <span class="math notranslate nohighlight">\(a^2-4b=2\)</span>. This assumption is false which means that there are no integers <span class="math notranslate nohighlight">\(a,b\)</span> such that  <span class="math notranslate nohighlight">\(a^2-4b=2\)</span>. Therefore, the original statement <span class="math notranslate nohighlight">\(a,b \in \mathbb{Z}\Rightarrow a^2-4b\neq 2\)</span>, is true.</p>
 </section>
 <section id="example-there-is-no-largest-number">
-<h3>Example: there is no largest number<a class="headerlink" href="#example-there-is-no-largest-number" title="Permalink to this headline"></a></h3>
+<h3>Example: there is no largest number<a class="headerlink" href="#example-there-is-no-largest-number" title="Permalink to this heading"></a></h3>
 <p>Let’s suppose that there is a largest number, <span class="math notranslate nohighlight">\(L\)</span>, such that <span class="math notranslate nohighlight">\(L\geq x,\ \forall x\)</span>. Given that <span class="math notranslate nohighlight">\(1&gt;0\)</span>, we can add <span class="math notranslate nohighlight">\(L\)</span> to both sides, resulting to <span class="math notranslate nohighlight">\(L+1 &gt; L\)</span> which cannot be true, because we assumed that <span class="math notranslate nohighlight">\(L\)</span> is the greatest number, and we just showed that it’s less than <span class="math notranslate nohighlight">\(L+1\)</span>.</p>
 </section>
 </section>
