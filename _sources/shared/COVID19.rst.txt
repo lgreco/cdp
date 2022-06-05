@@ -1,7 +1,7 @@
 Course operations and COVID19
 --------------------------------------------------------
 
-In the **Summer 2022,** I teach **COMP 271** (Data Structures and Applications). This is **synchronous** online course. 
+In the **Summer 2022,** I teach **COMP 271** (Data Structures and Applications). This is a **synchronous** online course. 
 
 * The principal method for online meetings is Zoom. You must `have it installed on your computer, tablet, or smartphone <https://zoom.us/download>`_. A link to our Zoom "classroom" is available on the course's Sakai site. There will be no separate emails with the Zoom link. 
 
