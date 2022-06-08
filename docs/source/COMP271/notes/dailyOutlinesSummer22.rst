@@ -14,3 +14,12 @@ Monday, June 6
 * Programmers Pack
 * Plan for module 1: from arrays to arraylists. Why do we need to "reinvent" arraylists?
 * How to detect a palindrome?
+
+Tuesday, June 7
+===============
+
+* Reminder about email communications.
+* Problem solving practicalities: 15-20 min before asking for help.
+* Internalizing v. merely copying code.
+* Pascal triangle analysis.
+* Palindrome analysis.
