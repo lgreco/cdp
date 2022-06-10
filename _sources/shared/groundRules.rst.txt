@@ -1,4 +1,4 @@
-Ground rules
+Expectations
 ------------
 
 Be proactive
