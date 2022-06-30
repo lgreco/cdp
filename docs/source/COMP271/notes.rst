@@ -8,4 +8,4 @@ Leo's notes
     Getting Started With Code Step By Step <notes/csbs.rst>
     JFK Jr.'s Last Flight and What We Learnt From It <notes/jfk>
     The CTA Class <notes/cta.rst>
-    Summer 2022 Daily Outlines <notes/dailyOutlinesSummer22>
+    Traversing in sequence <notes/sequentialTraversals>
