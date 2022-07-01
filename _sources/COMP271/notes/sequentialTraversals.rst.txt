@@ -101,6 +101,7 @@ Methods ``hasNext`` and ``getNext`` above are different than those we used for t
 Using classes ``Node`` and ``LinkedList`` above, we can build a simple linked list as an example:
 
 .. code-block:: java
+   :linenos:
 
    Node chi = new Node(); // Create node object called chi
    Node smt = new Node(); // Create node object called smt
@@ -116,7 +117,20 @@ Using classes ``Node`` and ``LinkedList`` above, we can build a simple linked li
    smt.next = jol;        // Assign jol as smt's next node
    jol.next = dwi;        // Assign dwi as jol's next node
 
-For the code above, we dropped the requirement that all class fields must be private, to keep the example simple. 
+For the code above, we dropped the requirement that all class fields must be private, to keep the example simple. If the Node fields were private and we had a basic constructor, the code would be as follows.
+
+
+.. code-block:: java
+   :linenos:
+
+   Node chi = new Node("Chicago"); // Create node object called chi and assign string field
+   Node smt = new Node("Summit");  // Create node object called smt and assign string field
+   Node jol = new Node("Joliet");  // Create node object called jol and assign string field
+   Node dwi = new Node("Dwight");  // Create node object called dwi and assign string field
+   
+   chi.setNExt(smt);               // Assign smt as chi's next node
+   smt.setNExt(jol);               // Assign jol as smt's next node
+   jol.setNExt(dwi);               // Assign dwi as jol's next node
 
 
 
