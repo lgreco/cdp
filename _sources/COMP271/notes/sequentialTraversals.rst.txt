@@ -117,7 +117,14 @@ Using classes ``Node`` and ``LinkedList`` above, we can build a simple linked li
    smt.next = jol;        // Assign jol as smt's next node
    jol.next = dwi;        // Assign dwi as jol's next node
 
-For the code above, we dropped the requirement that all class fields must be private, to keep the example simple. If the Node fields were private and we had a basic constructor, the code would be as follows.
+For the code above, we dropped the requirement that all class fields must be private, to keep the example simple. If the Node fields were private and we had a basic constructor:
+
+.. code-block:: java
+
+   public Node(String data) { this.data = data; }
+
+
+the code would be as follows.
 
 
 .. code-block:: java

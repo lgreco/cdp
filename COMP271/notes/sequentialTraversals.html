@@ -199,7 +199,11 @@
 <span class="lineno">13 </span><span class="n">jol</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">dwi</span><span class="o">;</span>        <span class="c1">// Assign dwi as jol&#39;s next node</span>
 </pre></div>
 </div>
-<p>For the code above, we dropped the requirement that all class fields must be private, to keep the example simple. If the Node fields were private and we had a basic constructor, the code would be as follows.</p>
+<p>For the code above, we dropped the requirement that all class fields must be private, to keep the example simple. If the Node fields were private and we had a basic constructor:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="nf">Node</span><span class="o">(</span><span class="n">String</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">;</span> <span class="o">}</span>
+</pre></div>
+</div>
+<p>the code would be as follows.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="n">Node</span> <span class="n">chi</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="o">(</span><span class="s">&quot;Chicago&quot;</span><span class="o">);</span> <span class="c1">// Create node object called chi and assign string field</span>
 <span class="lineno">2 </span><span class="n">Node</span> <span class="n">smt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="o">(</span><span class="s">&quot;Summit&quot;</span><span class="o">);</span>  <span class="c1">// Create node object called smt and assign string field</span>
 <span class="lineno">3 </span><span class="n">Node</span> <span class="n">jol</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="o">(</span><span class="s">&quot;Joliet&quot;</span><span class="o">);</span>  <span class="c1">// Create node object called jol and assign string field</span>
