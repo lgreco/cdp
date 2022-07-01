@@ -116,7 +116,7 @@ Using classes ``Node`` and ``LinkedList`` above, we can build a simple linked li
    smt.next = jol;        // Assign jol as smt's next node
    jol.next = dwi;        // Assign dwi as jol's next node
 
-
+For the code above, we dropped the requirement that all class fields must be private, to keep the example simple. 
 
 
 
