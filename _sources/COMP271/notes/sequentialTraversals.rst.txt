@@ -105,7 +105,7 @@ Using classes ``Node`` and ``LinkedList`` above, we can build a simple linked li
    Node chi = new Node(); // Create node object called chi
    Node smt = new Node(); // Create node object called smt
    Node jol = new Node(); // Create node object called jol
-   Node dwi = New Node(); // Create node object called dwi
+   Node dwi = new Node(); // Create node object called dwi
    
    chi.data = "Chicago";  // Assign value to chi's data string
    smt.data = "Summit";   // Assign value to smt's data string
