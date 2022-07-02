@@ -101,7 +101,6 @@ Methods ``hasNext`` and ``getNext`` above are different than those we used for t
 Using classes ``Node`` and ``LinkedList`` above, we can build a simple linked list as an example:
 
 .. code-block:: java
-   :linenos:
 
    Node chi = new Node(); // Create node object called chi
    Node smt = new Node(); // Create node object called smt
@@ -128,7 +127,6 @@ the code would be as follows.
 
 
 .. code-block:: java
-   :linenos:
 
    Node chi = new Node("Chicago"); // Create node object called chi and assign string field
    Node smt = new Node("Summit");  // Create node object called smt and assign string field
