@@ -1,9 +1,10 @@
 Course operations and COVID19
 --------------------------------------------------------
 
-In the **Summer 2022,** I teach **COMP 271** (Data Structures and Applications). This is a **synchronous** online course. 
+In the **Fall 2022,** I teach **COMP 271** (Data Structures I) and **COMP 363* (Algorithms). COMP 363-001 is asynchronous. All other sections are synchronous and on-campus.
 
-* The principal method for online meetings is Zoom. You must `have it installed on your computer, tablet, or smartphone <https://zoom.us/download>`_. A link to our Zoom "classroom" is available on the course's Sakai site. There will be no separate emails with the Zoom link. 
+
+* Synchronous sessions will be available on Zoom. You must `have it installed on your computer, tablet, or smartphone <https://zoom.us/download>`_. A link to our Zoom "classroom" is available on the course's Sakai site. There will be no separate emails with the Zoom link. Zoom availability is provided for emergencies only. Students are expected to be in class. You may use Zoom if you are isolating for health reason, if you are traveling, if you are facing a family emergency, if commute to campus is horrendous due to traffic, or if weather conditions make it difficult to come to class.
 
 
 * If, at any time, Zoom is unavailable due to high-demand or any other reason, our fall-back method for online meetings will be Google Hangouts. You will need to `sign up for a free Google account <https://accounts.google.com/signup/>`_, if you do not already have one. (If you have a gmail address, you have a Google account). In case we need to switch to Google Hangouts for a class meeting, you will be notified by email sent to your official LUC.EDU address. 

@@ -9,3 +9,4 @@ Leo's notes
     JFK Jr.'s Last Flight and What We Learnt From It <notes/jfk>
     The CTA Class <notes/cta.rst>
     Traversing in sequence <notes/sequentialTraversals>
+    The saga of reversing a linked list <notes/reversal>
