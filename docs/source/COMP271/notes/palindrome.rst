@@ -17,13 +17,13 @@ There is, however, a more advanced way to tell ``replaceAll`` what characters to
    :linenos:
    :emphasize-lines: 3, 6
 
-    public static boolean isPalindromeCompact(final String s) {
-        boolean result = true;
-        String t = s.toLowerCase().replaceAll("[^a-z]", "");
-        int i = 0;
-        while (result && i < t.length()/2)
-            result = (t.charAt(i) >= LOWER_A) && (t.charAt(t.length()-1-i++) <= LOWER_Z);
-        return result;
+   public static boolean isPalindromeCompact(final String s) {
+     boolean result = true;
+     String t = s.toLowerCase().replaceAll("[^a-z]", "");
+     int i = 0;
+     while (result && i < t.length()/2)
+       result = (t.charAt(i) >= LOWER_A) && (t.charAt(t.length()-1-i++) <= LOWER_Z);
+     return result;
     }  // method isPalindromeCompact
 
 Also notice that there is no separate command in the method above to increment the string index. The increment (`i++`) takes place near the end of line 6. After the curren value of ``i`` is subtracted from ``t.length()-1``, the increment operator (``++``) is applied to variable ``i``. This is **poor coding** and it is used here for illustrative purposes. If someone challenged you to write the most compact code you can, there you have it.
