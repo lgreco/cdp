@@ -10,3 +10,4 @@ Leo's notes
     The CTA Class <notes/cta.rst>
     Traversing in sequence <notes/sequentialTraversals>
     The saga of reversing a linked list <notes/reversal>
+    Palindrome <notes/palindrome.rst>
