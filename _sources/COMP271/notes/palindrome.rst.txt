@@ -26,6 +26,6 @@ There is, however, a more advanced way to tell ``replaceAll`` what characters to
      return result;
     }  // method isPalindromeCompact
 
-Also notice that there is no separate command in the method above to increment the string index. The increment (`i++`) takes place near the end of line 6. After the curren value of ``i`` is subtracted from ``t.length()-1``, the increment operator (``++``) is applied to variable ``i``. This is **poor coding** and it is used here for illustrative purposes. If someone challenged you to write the most compact code you can, there you have it.
+Also notice that there is no separate command in the method above to increment the string index. The increment (`i++`) takes place near the end of line 6. After the curren value of ``i`` is subtracted from ``t.length()-1``, the increment operator (``++``) is applied to variable ``i``. This is **poor coding**. It is used here as an example of something to avoid, in general. If someone challenged you to write the most compact code you can, there you have it.
 
 Speaking of poor coding, here's another instance of it in the method above. The processed string is called ``String t``. Usually it is not a good idea to give variables such simple names (single-letter names). Some variables (like loop indices, e.g., ``for (int i=...)``) can be named so, but for everything else it's a good idea to use more descriptive names. Here, I used a single-letter name (``String t``) to keep line 6 from getting too long.
