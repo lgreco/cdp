@@ -1,4 +1,4 @@
-Expectations
+Ground Rules
 ------------
 
 Be proactive
@@ -10,7 +10,7 @@ Here's how you can be proactive, so you can succeed in this coure.
 
 * Review homework (or other take-home tests) within 24 hours of assignment. Identify questions that may be challenging. Contact the instructor or seek tutoring to work on these questions. `The Department of Computer Science offers tutoring services almost on a daily basis. <https://www.luc.edu/cs/academics/tutoring/>`_
 
-* A grade of less than 50% in any assignment, is a warning sign. Compare your solution to the published solution. Try to identify the differences. Speak with the instructor or a tutor if the differences are not clear.
+* Significantly incomplete assignments and skipped assigments arena warning sign. Compare your solution to the published solution. Try to identify the differences. Speak with the instructor or a tutor if the differences are not clear.
 
 * Come to class and take notes. Form or join a study group comprising fellow students.
 
@@ -18,3 +18,6 @@ Here's how you can be proactive, so you can succeed in this coure.
 
 * Check your official Loyola email at least daily and absolutely an hour before class meetings.
 
+
+.. include:: ../shared/expectations.rst
+.. include:: ../shared/ungrading.rst
