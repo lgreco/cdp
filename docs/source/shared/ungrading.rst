@@ -24,6 +24,8 @@ A good way to demonstrate that you incorporate feedback into your work is to avo
 
 In general, technical issues are based on requirements, specifications, and the Programmer's Pact. Soft issues may be more challenging: skipping assignment, turning assignments late, not attending class meetings, not reaching out for assistance, etc. 
 
+One thing I learned as a teacher, is that most students know how well they do in a course. *Ungrading* helps me work with students to articulate that sense of learning, affirm the skills they develop, and focus on skills that may need a bit more effort. 
+
 Reflection statements
 +++++++++++++++++++++
 
@@ -55,7 +57,7 @@ Frequently Asked Questions about *Ungrading*
 
 **What is the grade I see in Sakai?** Everytime you submit an assignment, you will earn 1 point. This is not the score of the assignment. This is just Sakai's way of keeping track who submitted an assignment. Whether your assignment is spot on or off the mark, you will earn 1 point for submitting it. These points do not translate to a score that determines a course grade.
 
-**Is there a grade scale?** Yes. Students who do not get the same feedback throughout their assignments, usually finish with an A or an A-. Students that require 2-3 reminders for certain things may end the course with a grade in the B range. Students that require more frequent feedback for various technical issues but do finally move on, will end the course with a grade in the C range. Students that do not incorporate the feedback will probably finish the course with a D. Rarely, a student may finish the course with an F. I try to avoid this grade; if I feel that you are heading towards an F, I'll reach out to you to discuss improvement or alternative plans.
+**Is there a grade scale?** Yes. Students that do not get the same feedback throughout their assignments, usually finish with an A or an A-. Students that require 2-3 reminders for certain things may end the course with a grade in the B range. Students that require more frequent feedback for various technical issues but do finally move on, will end the course with a grade in the C range. Students that do not incorporate the feedback will probably finish the course with a D. Rarely, a student may finish the course with an F. I try to avoid this grade; if I feel that you are heading towards an F, I'll reach out to you to discuss improvement or alternative plans.
 
 **Will there be make-up assignments?** Every assignment is a make-up assignment: an opportunity to improve on issues that were identified in previous assignments. There will be no extra assignments, however.
 
