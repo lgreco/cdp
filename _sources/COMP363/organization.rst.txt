@@ -33,12 +33,11 @@ Course Objectives
 
 - Increase proficiency in scripting programming languages 
 
-.. include:: ../shared/groundRules.rst
-
 
 
 Textbook
-++++++++
++++++++++++++++++
+
 
 The required textbook for COMP 363 is *Algorithms,* by Jeff Erickson. `The book is available online at no cost <https://jeffe.cs.illinois.edu/teaching/algorithms/>`__. Printed copies can be purchased from online retailers for about $30.
 
@@ -48,7 +47,9 @@ The required textbook for COMP 363 is *Algorithms,* by Jeff Erickson. `The book 
 .. .. include:: ../shared/deadlines.rst
 
 Deadlines
-+++++++++
++++++++++++++++++
+
+
 
 No late homework will be accepted. If you anticipate an issue with late submission, it is your responsibility to contact the instructor as soon as possible. *Bona fide* emergencies will be handled on a case-by-case basis.
 
@@ -56,8 +57,14 @@ No late homework will be accepted. If you anticipate an issue with late submissi
 
 
 Exam dates
-++++++++++
++++++++++++++++++
+
+
 The final and midterm exams will be a take-home assignments. Exact dates will be posted on Sakai.
+
+
+.. include:: ../shared/groundRules.rst
+
 
 
 .. include:: ../shared/studentHours.rst
