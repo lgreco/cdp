@@ -1,6 +1,15 @@
 :orphan:
 
 
+Grading scheme
+--------------------------------------------------------
+
+Course performance is determined using weekly assignments, a take-home midterm, and a take-home final. Each assessment component carries a 33.3% weight. Grading scheme aside, the objective of assessments in this course is to ensure **that students are learning.** In this context students make mistakes, understand them, and do not repeat them. To focus on improved performance, there will no grades given to assignments and exams. You will receive feedback about what you did well and what you need to work on. Your adherence to this feedback, as demonstrated in subsequent assignments, will determine your course grade. This style of assessment is called *ungrading* or *consultative assessment.*
+
+
+At midterm and at the end of the course, in addition to technical problems, you will be asked to write a brief reflection paper. In it you will assess how well you adhered to the feedback you received in the assignments, and you will propose your course grade. While I have the final say over your course grade, over the years I found that most students propose the correct grade for themselves. More often I give a higher grade than proposed; occasionally, a lower. 
+
+
 *Ungrading* and how it works
 --------------------------------------------------------
 
@@ -17,7 +26,8 @@ A good way to demonstrate that you incorporate feedback into your work is to avo
 In general, technical issues are based on requirements, specifications, and the Programmer's Pact. Soft issues may be more challenging: skipping assignment, turning assignments late, not attending class meetings, not reaching out for assistance, etc. 
 
 Reflection statements
-----------------------
++++++++++++++++++++++
+
 
 For the midterm and end-of-term reflections statements, I use `Jesse Stommel's suggestions <https://www.jessestommel.com/ungrading-an-faq/>`__ with some additional questions.
 
@@ -41,7 +51,8 @@ End-of-term reflection
 * What letter grade would you give yourself in this course? Choose from A, B, C, or D. (Ideally, I would give everyone the grade they give themselves, but I reserve the right to raise or lower grades as appropriate.)
 
 Frequently Asked Questions about *Ungrading*
----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+
 
 **What is the grade I see in Sakai?** Everytime you submit an assignment, you will earn 1 point. This is not the score of the assignment. This is just Sakai's way of keeping track who submitted an assignment. Whether your assignment is spot on or off the mark, you will earn 1 point for submitting it. These points do not translate to a score that determines a course grade.
 
