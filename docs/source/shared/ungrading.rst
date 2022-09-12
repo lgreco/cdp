@@ -61,4 +61,4 @@ Frequently Asked Questions about *Ungrading*
 
 **Will there be make-up assignments?** Every assignment is a make-up assignment: an opportunity to improve on issues that were identified in previous assignments. There will be no extra assignments, however.
 
-**Why are doing this?**  *Ungrading* is very similar to a job situation. We receive feedback from peers and supervisors. The feedback tells us what we do well and what needs more attention. We use the feedback to meet new challenges, improve our skills, and advance our careers. *Ungrading* is also less stressful because you do not have to worry about a grade scale. It allows you to focus on learning and it is forgiving with mistakes that are not repeated.)
+**Why?**  *Ungrading* is very similar to a job situation. We receive feedback from peers and supervisors. The feedback tells us what we do well and what needs more attention. We use the feedback to meet new challenges, improve our skills, and advance our careers. *Ungrading* is also less stressful because you do not have to worry about a grade scale. It allows you to focus on learning and it is forgiving with mistakes that are not repeated.)
