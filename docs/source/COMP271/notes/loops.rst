@@ -50,7 +50,7 @@ There is a simple rule: if we know beforehand how many times a loop repeats, we 
 
    int i = 0;
    boolean someBoolean = false;
-   while (!someBoolean && i < someArray.length) {
+   while (!someBoolean && i < someArray.length) {  // Notice the !
      someBoolean = someArray[i].equals(whatEver);
      i++;
    }
