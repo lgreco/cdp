@@ -31,7 +31,7 @@ And then we try this. Which is still a "break" statement, only hiding in an assi
    for (int i = 0; i < someArray.length; i++) {
      if (someArray[i].equals(whatEver)) {
        someBoolean = true;
-       i = someArray.length;
+       i = someArray.length; // Really? :-)
      }
    }
 
