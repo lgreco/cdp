@@ -72,7 +72,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Loops</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#this-is-bad">This is bad</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#this-is-bad-too">This is bad too</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#what-s-the-alternative">What’s the alternative</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-s-the-alternative">What’s the alternative?</a></li>
 </ul>
 </li>
 </ul>
@@ -148,11 +148,11 @@
 <p>See, no <cite>break</cite>! Well, this is worst!  It <em>is</em> a break statement, masquerading as an assignment for the loop variable. It assings a value that will terminate the loop. Again, it works but this is poor coding. (Maybe it was <em>state of the art</em> programming, back in my day, in languages that only support the for-loops and did not have while-loops).</p>
 </section>
 <section id="what-s-the-alternative">
-<h2>What’s the alternative<a class="headerlink" href="#what-s-the-alternative" title="Permalink to this heading"></a></h2>
+<h2>What’s the alternative?<a class="headerlink" href="#what-s-the-alternative" title="Permalink to this heading"></a></h2>
 <p>There is a simple rule: if we know beforehand how many times a loop repeats, we use the for loop. If the number of repetitions varies, it’s best to use a while loop. The example above can be implemented nicely with a while loop.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 <span class="kt">boolean</span> <span class="n">someBoolean</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-<span class="k">while</span> <span class="o">(!</span><span class="n">someBoolean</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">someArray</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">{</span>
+<span class="k">while</span> <span class="o">(!</span><span class="n">someBoolean</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">someArray</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">{</span>  <span class="c1">// Notice the !</span>
   <span class="n">someBoolean</span> <span class="o">=</span> <span class="n">someArray</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="n">whatEver</span><span class="o">);</span>
   <span class="n">i</span><span class="o">++;</span>
 <span class="o">}</span>
