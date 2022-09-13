@@ -36,7 +36,7 @@ To placate the obsessed instructor (or manager) we may try the following trick.
      }
    }
 
-See, no `break`! Well, this is worst!  It is a "break" statement, masquerading as an assignment for the loop variable. It assings a value that will terminate the loop. Again, it works but this is poor coding. (Maybe it was *state of the art* programming, back in my day, in languages that only support the for-loops and did not have while-loops).
+See, no `break`! Well, this is worst!  It *is* a break statement, masquerading as an assignment for the loop variable. It assings a value that will terminate the loop. Again, it works but this is poor coding. (Maybe it was *state of the art* programming, back in my day, in languages that only support the for-loops and did not have while-loops).
 
 
 What's the alternative
