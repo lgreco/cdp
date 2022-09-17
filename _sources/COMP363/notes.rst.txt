@@ -4,4 +4,4 @@ Leo's notes
 ..	toctree::
     :maxdepth: 1
     
-    Recursion Trees and th Master Theorem <notes/recursionTrees.rst>
+    Recursion Trees and the Master Theorem <notes/recursionTrees.rst>
