@@ -17,6 +17,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -85,10 +86,10 @@
   <section id="review-of-week-3">
 <h1>Review of Week 3<a class="headerlink" href="#review-of-week-3" title="Permalink to this heading"></a></h1>
 <p>For week 3 we started looking at realistic problems in data analysis, while we continued to sharpen our Python skills. On the Python side, we looked at manipulating arrays with <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="lineno">2 </span>
-<span class="lineno">3 </span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="lineno">4 </span><span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">4</span><span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span>
 </pre></div>
 </div>
 <p>In the code above, line 3 creates an array with 10 numbers:</p>
@@ -96,9 +97,9 @@
 \[[0,1,2,3,4,5,6,7,8,9]\]</div>
 <p>Then, line 4 creates a second array, called <code class="docutils literal notranslate"><span class="pre">y</span></code> also with 10 numbers, where each number is the square of the corresponding number from <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">arange</span></code> is a very useful command in the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> library, because it creates an array of numbers in any interval and with any step we want. For example, if we want to produce 10 numbers in the interval between 4 and 5, the command would be</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="lineno">2 </span>
-<span class="lineno">3 </span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The syntax for <code class="docutils literal notranslate"><span class="pre">arange</span></code> is:</p>
