@@ -12,3 +12,4 @@ Leo's notes
     The saga of reversing a linked list <notes/reversal>
     Palindrome <notes/palindrome.rst>
     Loops <notes/loops.rst>
+    Iterative merge sort <notes/iterativeMergeSort.rst>
