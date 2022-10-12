@@ -13,3 +13,4 @@ Leo's notes
     Palindrome <notes/palindrome.rst>
     Loops <notes/loops.rst>
     Iterative merge sort <notes/iterativeMergeSort.rst>
+    The keyword this <notes/this.rst>

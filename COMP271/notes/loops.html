@@ -77,6 +77,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="iterativeMergeSort.html">Iterative merge sort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="this.html">The keyword this</a></li>
 </ul>
 </li>
 </ul>
@@ -125,7 +126,7 @@
 <p>When to use the for-loop and when <em>not</em> to use it?</p>
 <section id="this-is-bad">
 <h2>This is bad<a class="headerlink" href="#this-is-bad" title="Permalink to this heading"></a></h2>
-<p>Often, we are tempted to use the <cite>break</cite> statement to exit a loop before it runs its full cycle. For example, the code snippet below finds if an array contains some value. The idea is to stop the search as soon as we find a match or when we reach the end of the array; whichever happens first.</p>
+<p>Often, we are tempted to use the <code class="docutils literal notranslate"><span class="pre">break</span></code> statement to exit a loop before it runs its full cycle. For example, the code snippet below finds if an array contains some value. The idea is to stop the search as soon as we find a match or when we reach the end of the array; whichever happens first.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">someArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">someArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">whatEver</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">someBoolean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
@@ -134,7 +135,7 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The moment we find a match, we issue a <cite>break</cite> statement to stop the loop. It works but it’s poor coding. And sometimes we run into an obsessed instructor or manager who doesn’t want us to use the <cite>break</cite> statement.</p>
+<p>The moment we find a match, we issue a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement to stop the loop. It works but it’s poor coding. And sometimes we run into an obsessed instructor or manager who doesn’t want us to use the <code class="docutils literal notranslate"><span class="pre">break</span></code> statement.</p>
 </section>
 <section id="this-is-bad-too">
 <h2>This is bad too<a class="headerlink" href="#this-is-bad-too" title="Permalink to this heading"></a></h2>
@@ -147,7 +148,7 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>See, no <cite>break</cite>! Well, this is worst!  It <em>is</em> a break statement, masquerading as an assignment for the loop variable. It assings a value that will terminate the loop. Again, it works but this is poor coding. (Maybe it was <em>state of the art</em> programming, back in my day, in languages that only supported the for-loops and did not have while-loops; FORTRAN77 for example.).</p>
+<p>See, no <code class="docutils literal notranslate"><span class="pre">break</span></code>! Well, this is worst!  It <em>is</em> a break statement, masquerading as an assignment for the loop variable. It assings a value that will terminate the loop. Again, it works but this is poor coding. (Maybe it was <em>state of the art</em> programming, back in my day, in languages that only supported the for-loops and did not have while-loops; FORTRAN77 for example.).</p>
 </section>
 <section id="what-s-the-alternative">
 <h2>What’s the alternative?<a class="headerlink" href="#what-s-the-alternative" title="Permalink to this heading"></a></h2>
