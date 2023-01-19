@@ -47,14 +47,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP180/introduction.html">COMP 180 Data Analysis for the Sciences</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 271 Data Structures</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html">Course operations and COVID19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html">Course operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html#recordings">Recordings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../organization.html#ground-rules">Ground Rules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../organization.html#instructor-s-expectations">Instructor’s expectations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#grading-scheme">Grading scheme</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#ungrading-and-how-it-works"><em>Ungrading</em> and how it works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#ground-rules">Ground Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#instructor-s-expectations">Instructor’s expectations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#academic-integrity">Academic integrity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#be-cool-like-a-pro">Be cool, like a <em>pro</em></a></li>
@@ -109,10 +109,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../introduction.html">COMP 271 Data Structures</a> &raquo;</li>
-          <li><a href="../notes.html">Leo’s notes</a> &raquo;</li>
-      <li>Checklist before starting the course</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 271 Data Structures</a></li>
+          <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
+      <li class="breadcrumb-item active">Checklist before starting the course</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/COMP271/notes/checklist.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -154,14 +154,14 @@
 <h3>Understanding basic elements of the language<a class="headerlink" href="#understanding-basic-elements-of-the-language" title="Permalink to this heading"></a></h3>
 <p>🔹 What is scope? Can you explain why the following code is wrong?</p>
 <blockquote>
-<div><div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"></span>
+<div><div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -186,19 +186,19 @@
 <p>🔹 Do you know how to use the <a class="reference external" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html">ternary operator</a>? (This may not have been covered in COMP 170 but it’s quite useful and straightforward to explore).</p>
 <p>🔹 Can you explain the difference between</p>
 <blockquote>
-<div><div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Code block A</span><span class="w"></span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Code block B</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div><div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Code block A</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Code block B</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>and</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Code block C</span><span class="w"></span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Code block D</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Code block C</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Code block D</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>

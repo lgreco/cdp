@@ -3,7 +3,7 @@ Instructor's expectations
 --------------------------------------------------------
 
 
-* Read your **email** regularly (like, twice a day). 
+* Read your **email** regularly and *always* before heading out to class.  
 
 * **Read** everything carefully! Assignments, announcements, class notes, and program contents contain 99% of the information you need.
 
@@ -13,7 +13,7 @@ Instructor's expectations
 
 * The internet is full of sites with “solutions” to problems. Be careful when using them. Most of the stuff posted there is **junk.** If you use code from these sites, you must **demonstrate** that you understand it fully.
 
-* Use the Programmer’s Pact as a checklist before you submit code for evaluation. (COMP 170, 271 only).
+* Use the Programmer’s Pact as a checklist before you submit code for evaluation. 
 
 * No communications starting with the greeting **“hey”.**
  
@@ -24,9 +24,7 @@ Instructor's expectations
 
 * If you make an **appointment** for Student Hours but cannot keep it, notify me as soon as possible.
 
-* When on Zoom, your **camera must be on.** (If your computer has no camera, if camera is broken etc, please let me know).
-
-* If I ask you a question in a message, please **answer it.**
+* If I ask you a question in a email/message, please **answer it.**
 
 * Waiting for the **last day** to work on an assignment is risky. Ideally, you want to look at an assignment within the first 24 hours it is posted. Formulate a strategy. See if you have any questions to ask. Put some pseudocode to share with me.
 

@@ -1,7 +1,7 @@
-Course operations and COVID19
+Course operations
 --------------------------------------------------------
 
-In the **Fall 2022,** I teach **COMP 271** (Data Structures I) and **COMP 363** (Algorithms). COMP 363-001 is asynchronous. All other sections are synchronous and on-campus.
+In the **Spring 2023,** I teach **COMP 306/406** (Data Mining), and **COMP 363/460** (Algorithms), and COMP 170 (Introductory Programming). 
 
 
 * Synchronous sessions will be available on Zoom. You must `have it installed on your computer, tablet, or smartphone <https://zoom.us/download>`_. A link to our Zoom "classroom" is available on the course's Sakai site. There will be no separate emails with the Zoom link. Zoom availability is provided for emergencies only. Students are expected to be in class. You may use Zoom if you are isolating for health reason, if you are traveling, if you are facing a family emergency, if commute to campus is horrendous due to traffic, or if weather conditions make it difficult to come to class.

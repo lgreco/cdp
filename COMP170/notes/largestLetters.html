@@ -45,14 +45,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html">Course operations and COVID19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html">Course operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html#recordings">Recordings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#ground-rules">Ground Rules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#instructor-s-expectations">Instructor’s expectations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../organization.html#grading-scheme">Grading scheme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../organization.html#ungrading-and-how-it-works"><em>Ungrading</em> and how it works</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#academic-integrity">Academic integrity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#be-cool-like-a-pro">Be cool, like a <em>pro</em></a></li>
@@ -110,10 +108,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../introduction.html">COMP 170 Introduction to Java Programming</a> &raquo;</li>
-          <li><a href="../notes.html">Leo’s notes</a> &raquo;</li>
-      <li>Largest letters</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
+          <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
+      <li class="breadcrumb-item active">Largest letters</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/COMP170/notes/largestLetters.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -141,13 +139,13 @@
 <section id="initializing-data">
 <h2>Initializing data<a class="headerlink" href="#initializing-data" title="Permalink to this heading"></a></h2>
 <p>What data are we tracking in this program? At the very least, the two letters we print at the end. And because we need to compare both letters with a newly entered character, we need a third variable as well. Additionally, we’ll need a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to accept the keyboard inputs. To complete the initialization, we need to obtain the first values for the required variables.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// initialize data</span><span class="w"></span>
-<span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="s">&quot;System.in&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="kt">char</span><span class="w"> </span><span class="n">largest</span><span class="p">,</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">,</span><span class="w"> </span><span class="n">entered</span><span class="p">;</span><span class="w"></span>
-<span class="c1">// Obtain the first values for the required variables</span><span class="w"></span>
-<span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="n">entered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// initialize data</span>
+<span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="s">&quot;System.in&quot;</span><span class="p">);</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">largest</span><span class="p">,</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">,</span><span class="w"> </span><span class="n">entered</span><span class="p">;</span>
+<span class="c1">// Obtain the first values for the required variables</span>
+<span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">entered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The use of <code class="docutils literal notranslate"><span class="pre">next().charAt(0)</span></code> is a substitute for <code class="docutils literal notranslate"><span class="pre">Scanner</span></code>’s lack of a method to read <code class="docutils literal notranslate"><span class="pre">char</span></code> data. Instead we read a String through <code class="docutils literal notranslate"><span class="pre">next()</span></code> and we take the first character (<code class="docutils literal notranslate"><span class="pre">charAt(0)</span></code>) from that string.</p>
@@ -155,11 +153,11 @@
 <section id="loop-condition">
 <h2>Loop condition<a class="headerlink" href="#loop-condition" title="Permalink to this heading"></a></h2>
 <p>The loop runs while the the character entered is not a number. So we need a condition for that.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>We can make this condition a bit more tight. We can let the loop run only when the entered character is a lower case letter:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Thus the loop will end when we type a non-letter character: a number, for example.</p>
@@ -167,42 +165,42 @@
 <section id="loop-contents">
 <h2>Loop contents<a class="headerlink" href="#loop-contents" title="Permalink to this heading"></a></h2>
 <p>The variables <code class="docutils literal notranslate"><span class="pre">largest</span></code> and <code class="docutils literal notranslate"><span class="pre">nextLargest</span></code> imply a relative order. We rely on this order when, inside the loop, we need to replace the smallest of two largest letters with the letter just entered. Therefore, at the beginning of the loop we must ensure that <code class="docutils literal notranslate"><span class="pre">largest</span></code> is indeed greater than <code class="docutils literal notranslate"><span class="pre">nextLargest</span></code>; otherwise swap them.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Ensure that largest &gt; nextLargest ... if not, swap them</span><span class="w"></span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nextLargest</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">largest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">temporary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">largest</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temporary</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="c1">// Now we can guarantee largest &gt; nextLargest</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Ensure that largest &gt; nextLargest ... if not, swap them</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nextLargest</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">largest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">temporary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">largest</span><span class="p">;</span>
+<span class="w">  </span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">;</span>
+<span class="w">  </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temporary</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// Now we can guarantee largest &gt; nextLargest</span>
 </pre></div>
 </div>
 <p>Next, according to the earlier pseudocode, we should check if the letter just entered is greater than either of the two largest letters. And for that, we may think that the condition</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">largest</span><span class="p">,</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">))</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">largest</span><span class="p">,</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>would suffice. It does not. We guarantee that <code class="docutils literal notranslate"><span class="pre">largest</span> <span class="pre">&gt;</span> <span class="pre">nextLargest</span></code> always. And so the <code class="docutils literal notranslate"><span class="pre">max</span></code> function above will always return <code class="docutils literal notranslate"><span class="pre">largest</span></code>. The condition is essentially the same as</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">largest</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">largest</span>
 </pre></div>
 </div>
 <p>What if <code class="docutils literal notranslate"><span class="pre">entered</span> <span class="pre">&lt;</span> <span class="pre">largest</span></code> and <code class="docutils literal notranslate"><span class="pre">entered</span> <span class="pre">&gt;</span> <span class="pre">nextLargest</span></code>? For example, if</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="w"></span>
-<span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;d&#39;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span>
+<span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;d&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>and then we type the letter <code class="docutils literal notranslate"><span class="pre">'f'</span></code> as the next entered? The condition</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">largest</span><span class="p">,</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">largest</span><span class="p">,</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>will evaluate to <code class="docutils literal notranslate"><span class="pre">false</span></code>. And yet, in the example above, the new value (<code class="docutils literal notranslate"><span class="pre">'f'</span></code>) needs to replace <code class="docutils literal notranslate"><span class="pre">'d'</span></code> as one of the two largest letters.</p>
 <p>The condition we really need is</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nextLargest</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nextLargest</span>
 </pre></div>
 </div>
 <p>This condition tells us if the entered letter is greater than the lesser of the two largest letter. If it is, the entered letter takes the place of the lesser of the two largest letters. Now, we can implement the last pseudocode statement:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// if letter just entered &gt; than either of the two largest letters so far, then:</span><span class="w"></span>
-<span class="c1">// replace smallest of two largest letters with letter just entered</span><span class="w"></span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entered</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// if letter just entered &gt; than either of the two largest letters so far, then:</span>
+<span class="c1">// replace smallest of two largest letters with letter just entered</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">)</span>
+<span class="w">  </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entered</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Every time we change a value in the pair of the two largest letters, we need to ensure that <code class="docutils literal notranslate"><span class="pre">largest</span> <span class="pre">&gt;</span> <span class="pre">nextLargest</span></code>. That’s because the value we change is always the <code class="docutils literal notranslate"><span class="pre">nextLargest</span></code>. For example, if</p>
@@ -218,34 +216,34 @@
 </div>
 <p>The implied order <code class="docutils literal notranslate"><span class="pre">largest</span> <span class="pre">&gt;</span> <span class="pre">nextLargest</span></code> is not longer present, and it must be restored. That’s why we always check for this order at the beginning of the while loo.</p>
 <p>Finally, we can put the code together in a method.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">findTwoLargestLetters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Set up a scanner</span><span class="w"></span>
-<span class="w">  </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Set up two variables to track the two largest letters and obtain initial values</span><span class="w"></span>
-<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// set up a variable for the recurring entries and obtain initial value</span><span class="w"></span>
-<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Run a loop as long as entered is a lower case letter</span><span class="w"></span>
-<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Make sure that largest is always &gt; nextLargest</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nextLargest</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">largest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="c1">// Otherwise, swap them</span><span class="w"></span>
-<span class="w">      </span><span class="kt">char</span><span class="w"> </span><span class="n">temporary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">largest</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temporary</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Is newly entered letter greater than either of large letters?</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="c1">// replace smallest of the two largest letters with newly entered one</span><span class="w"></span>
-<span class="w">      </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entered</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Get a new character and try again</span><span class="w"></span>
-<span class="w">    </span><span class="n">entered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// After loop ends, print the two largest letters</span><span class="w"></span>
-<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;The two largest letters are %s and %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">largest</span><span class="p">,</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">findTwoLargestLetters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Set up a scanner</span>
+<span class="w">  </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Set up two variables to track the two largest letters and obtain initial values</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// set up a variable for the recurring entries and obtain initial value</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Run a loop as long as entered is a lower case letter</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Make sure that largest is always &gt; nextLargest</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nextLargest</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">largest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Otherwise, swap them</span>
+<span class="w">      </span><span class="kt">char</span><span class="w"> </span><span class="n">temporary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">largest</span><span class="p">;</span>
+<span class="w">      </span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">;</span>
+<span class="w">      </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temporary</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// Is newly entered letter greater than either of large letters?</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// replace smallest of the two largest letters with newly entered one</span>
+<span class="w">      </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entered</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// Get a new character and try again</span>
+<span class="w">    </span><span class="n">entered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// After loop ends, print the two largest letters</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;The two largest letters are %s and %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">largest</span><span class="p">,</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>

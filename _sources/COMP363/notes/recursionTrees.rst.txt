@@ -123,8 +123,8 @@ Eventually, we will reach a value :math:`L` for which :math:`n/c^L=1`. At this p
 
 .. math::
 
-   T(n) & = & r^L f\underbrace{\left(\frac{n}{c^L}\right)}_{T(n/c^L)=f(1)} + r^{L-1} f\left(\frac{n}{c^{L-1}}\right) +\ldots  + r^2 f(\frac{n}{c^2}) + r f\left(\frac{n}{c}\right) + f(n) \\ \\   
-   & = & \sum_{i=0}^L r^i f\left(\frac{n}{c^i}\right) \\
+   T(n) & =  r^L f\underbrace{\left(\frac{n}{c^L}\right)}_{T(n/c^L)=f(1)} + r^{L-1} f\left(\frac{n}{c^{L-1}}\right) +\ldots  + r^2 f(\frac{n}{c^2}) + r f\left(\frac{n}{c}\right) + f(n) \\ \\   
+   & =  \sum_{i=0}^L r^i f\left(\frac{n}{c^i}\right) \\
 
 For :math:`i=0`, the first term of the sum is just :math:`f(n)`. When :math:`i=L`, the last term of the sum is :math:`r^L f(n/c^L)`. Since :math:`n/c^L=1`, the last term of the sum is just :math:`r^Lf(1)`. As we saw earlier, these two terms are important. If the terms of the sum are decreasing monotonically, the first term :math:`f(n)` is the dominant term. And if the terms of the sum increase monotonically, the last term :math:`r^Lf(1)` dominates.
 
@@ -138,7 +138,7 @@ If the terms of the sum are equal (or equal-ish) to each other, we can write:
 
 :math:`L` is the number of problem reductions we go before we reach the smallest possible problem size. If we start with a problem of size :math:`n` and we keep reducing it into smaller problems scaled by :math:`1/c`, it will take :math:`\log_cn` reductions to get there. So :math:`L=\log_cn`.
 
-Now that we have a fully parametric expression for the time required by th
+Now that we have a fully parametric expression for the time required by the recursion
 
 .. math::
 

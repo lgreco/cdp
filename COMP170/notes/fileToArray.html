@@ -45,14 +45,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html">Course operations and COVID19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html">Course operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html#recordings">Recordings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#ground-rules">Ground Rules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#instructor-s-expectations">Instructor’s expectations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../organization.html#grading-scheme">Grading scheme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../organization.html#ungrading-and-how-it-works"><em>Ungrading</em> and how it works</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#academic-integrity">Academic integrity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#be-cool-like-a-pro">Be cool, like a <em>pro</em></a></li>
@@ -105,10 +103,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../introduction.html">COMP 170 Introduction to Java Programming</a> &raquo;</li>
-          <li><a href="../notes.html">Leo’s notes</a> &raquo;</li>
-      <li>Reading a file into an array</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
+          <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
+      <li class="breadcrumb-item active">Reading a file into an array</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/COMP170/notes/fileToArray.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -128,11 +126,11 @@ Gandalf
 </pre></div>
 </div>
 <p>Assuming that we already have a <code class="docutils literal notranslate"><span class="pre">File</span></code> pointer <code class="docutils literal notranslate"><span class="pre">f</span></code> to the file above, we can instantiate a scanner and perform the following operations.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Scanner</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">f</span><span class="p">);</span><span class="w"></span>
-<span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="n">s</span><span class="p">.</span><span class="na">nextInt</span><span class="p">()</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">names</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">next</span><span class="p">();</span><span class="w"></span>
-<span class="n">s</span><span class="p">.</span><span class="na">close</span><span class="p">()</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Scanner</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+<span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="n">s</span><span class="p">.</span><span class="na">nextInt</span><span class="p">()</span><span class="o">]</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">names</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<span class="n">s</span><span class="p">.</span><span class="na">close</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>I am not fond of this technique because it requires extra work: every time we add or remove a name from the file, we have to update the first line with the count of records. The great thing about programming is that it can take on mundane and repetitive tasks for us. Here’s how.</p>
@@ -145,54 +143,54 @@ Maryam
 </pre></div>
 </div>
 <p>The code below goes into the file twice: first it counts its lines. It uses this information to setup an array. And then it goes through the file a second time to read its contents and place them into the array. Here, again, we assume that we already have a <code class="docutils literal notranslate"><span class="pre">File</span></code> pointer <code class="docutils literal notranslate"><span class="pre">f</span></code> to the data file.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">Scanner</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">f</span><span class="p">);</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="c1">// Count how may records are in the file</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="kt">int</span><span class="w"> </span><span class="n">numberOfRecords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="linenos"> 4</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="w">  </span><span class="n">numberOfRecords</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">  </span><span class="n">s</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="p">}</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="n">s</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="c1">// Create an array for that number of records</span><span class="w"></span>
-<span class="linenos">10</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="n">numberOfRecords</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">11</span><span class="c1">// Scan file again to copy records to the array</span><span class="w"></span>
-<span class="linenos">12</span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">f</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">13</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numberOfRecords</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">  </span><span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">next</span><span class="p">();</span><span class="w"></span>
-<span class="linenos">15</span><span class="n">s</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">Scanner</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+<span class="linenos"> 2</span><span class="c1">// Count how may records are in the file</span>
+<span class="linenos"> 3</span><span class="kt">int</span><span class="w"> </span><span class="n">numberOfRecords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos"> 4</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 5</span><span class="w">  </span><span class="n">numberOfRecords</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos"> 6</span><span class="w">  </span><span class="n">s</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="linenos"> 7</span><span class="p">}</span>
+<span class="linenos"> 8</span><span class="n">s</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="linenos"> 9</span><span class="c1">// Create an array for that number of records</span>
+<span class="linenos">10</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="n">numberOfRecords</span><span class="o">]</span><span class="p">;</span>
+<span class="linenos">11</span><span class="c1">// Scan file again to copy records to the array</span>
+<span class="linenos">12</span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+<span class="linenos">13</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numberOfRecords</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="linenos">14</span><span class="w">  </span><span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<span class="linenos">15</span><span class="n">s</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>A complete method is shown below. This method returns an empty array when it cannot complete its task, instead of throwing an exception.</p>
 <p>To wrap up this note, let me mention two things. <strong>First,</strong> it is absolutely ok to ask the computer to do repetitive tasks, especially when that takes them away from people! In this example, the computer goes through the data file twice: one time to count and a second time to copy data to the array. That’s better than having an individual count the records in a file manually and update the first line of that file with the proper number.  <strong>Second,</strong> we are forced to go through the file twice because we need to size  the array before we add data to it. But, as we’ll find out eventually, there are data structures more flexible that humble arrays. One of them is Java’s <code class="docutils literal notranslate"><span class="pre">Arraylist</span></code>: it can accept data and adjust its size on the fly. Exploring how arraylists work, will have to wait for a bit longer, however.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="nf">getRecordsByCounting</span><span class="p">(</span><span class="n">File</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// This is the array that we&#39;ll return</span><span class="w"></span>
-<span class="w">    </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">records</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// To establish a scanner connection to the passed File f.</span><span class="w"></span>
-<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">f</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Counter for number of records in the file.</span><span class="w"></span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numberOfRecords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Go through the file counting the number of lines.</span><span class="w"></span>
-<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">hasNextLine</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">numberOfRecords</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="n">s</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="n">s</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Initialize return array with number of records found</span><span class="w"></span>
-<span class="w">        </span><span class="n">records</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="n">numberOfRecords</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Re-establish scanner</span><span class="w"></span>
-<span class="w">        </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">f</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Read records into array</span><span class="w"></span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numberOfRecords</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">records</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="n">s</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">){</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// In case something goes wrong, prepare to return an empty array</span><span class="w"></span>
-<span class="w">        </span><span class="n">records</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">records</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w">  </span><span class="c1">// method getRecordsByCounting</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="nf">getRecordsByCounting</span><span class="p">(</span><span class="n">File</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// This is the array that we&#39;ll return</span>
+<span class="w">    </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">records</span><span class="p">;</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// To establish a scanner connection to the passed File f.</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Counter for number of records in the file.</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numberOfRecords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">// Go through the file counting the number of lines.</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">hasNextLine</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">numberOfRecords</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="n">s</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">s</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">// Initialize return array with number of records found</span>
+<span class="w">        </span><span class="n">records</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="n">numberOfRecords</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">// Re-establish scanner</span>
+<span class="w">        </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Read records into array</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numberOfRecords</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">records</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">s</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">){</span>
+<span class="w">        </span><span class="c1">// In case something goes wrong, prepare to return an empty array</span>
+<span class="w">        </span><span class="n">records</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">records</span><span class="p">;</span>
+<span class="p">}</span><span class="w">  </span><span class="c1">// method getRecordsByCounting</span>
 </pre></div>
 </div>
 </section>

@@ -24,8 +24,10 @@ site.
    COMP170/introduction
    COMP180/introduction
    COMP271/introduction
+   COMP306/introduction
    COMP363/introduction
    COMP397/introduction
+   COMP460/introduction
 
    
 .. toctree::

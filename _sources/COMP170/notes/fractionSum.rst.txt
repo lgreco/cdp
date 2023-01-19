@@ -6,10 +6,11 @@ The ``fractionSum`` problem
 
 The ``fractionSum`` is a favorite problem that shows in midterm tests now and then. The problem asks you to write a method, called ``fractionSum`` that accepts a double variable ``target`` and prints out the following output
 
-  ::
-  
+::
+   
   1 + 1/2 + 1/3 + 1/4 + ...
-  
+
+
 with as many terms as it takes for the sum to just exceed the value of ``target``.
 
 The implementation for this problem is shown below.

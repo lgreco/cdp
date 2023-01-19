@@ -45,14 +45,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html">Course operations and COVID19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html">Course operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../shared/COVID19.html#recordings">Recordings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#ground-rules">Ground Rules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#instructor-s-expectations">Instructor’s expectations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../organization.html#grading-scheme">Grading scheme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../organization.html#ungrading-and-how-it-works"><em>Ungrading</em> and how it works</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#academic-integrity">Academic integrity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#be-cool-like-a-pro">Be cool, like a <em>pro</em></a></li>
@@ -105,10 +103,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../introduction.html">COMP 170 Introduction to Java Programming</a> &raquo;</li>
-          <li><a href="../notes.html">Leo’s notes</a> &raquo;</li>
-      <li>Throw or Catch?</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
+          <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
+      <li class="breadcrumb-item active">Throw or Catch?</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/COMP170/notes/throwOrCatch.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -121,34 +119,34 @@
   <section id="throw-or-catch">
 <h1>Throw or Catch?<a class="headerlink" href="#throw-or-catch" title="Permalink to this heading"></a></h1>
 <p>A method that employs a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to process a <code class="docutils literal notranslate"><span class="pre">File</span></code> item often requires an exception in its signature. For example, method <code class="docutils literal notranslate"><span class="pre">scanFile</span></code> below accepts a string as input and returns a Scanner connected to a file with the name provided in the string:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="nf">scanFile</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">fileName</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">fileName</span><span class="p">));</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="nf">scanFile</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">fileName</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">fileName</span><span class="p">));</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>If the file doesn’t exist or if users made an error typing the file name, the <code class="docutils literal notranslate"><span class="pre">File</span></code> connection cannot be established. The method will throw a fit (in Java, fits are called <em>exceptions</em>) and the program will end abruptly (in other words, the program with crash). There are many reasons that a file may not be where we expect it. And most of these reasons can be anticipated, which means that we can prevent the exception (and the subsequent program crash).</p>
 <p>I am not a big fan of predictable and preventable crashes. We know that things can go wrong with files. Maybe users will type the wrong name. Maybe the file is located on a flash drive that is not plugged into the computer. Maybe the file is on cloud storage like Google Drive, and the computer is temporarily disconnected from the internet.</p>
 <p>If we can predict an exception, we can prevent it. And by preventing it, we allow our program to end gracefully. That’s when it is preferable to use a <code class="docutils literal notranslate"><span class="pre">try/catch</span></code> block than to throw a fit, sorry, an exception.</p>
 <p>Let’s rewrite method <code class="docutils literal notranslate"><span class="pre">scanFile</span></code> in a gentler manner:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="nf">scanFile</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">fileName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">2</span><span class="w">  </span><span class="n">scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">3</span><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">4</span><span class="w">    </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">fileName</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">5</span><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">6</span><span class="w">    </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">7</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">8</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">sc</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">9</span><span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="nf">scanFile</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">fileName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">  </span><span class="n">scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">;</span>
+<span class="linenos">3</span><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">4</span><span class="w">    </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">fileName</span><span class="p">);</span>
+<span class="linenos">5</span><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">6</span><span class="w">    </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="linenos">7</span><span class="w">  </span><span class="p">}</span>
+<span class="linenos">8</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">sc</span><span class="p">;</span>
+<span class="linenos">9</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>The method above returns either a <em>good</em> scanner or a <em>null</em> reference, but doesn’t crash. What we do with the returned item is up to us. For example, we may have code somewhere else working as follows:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Attempt to read a file</span><span class="w"></span>
-<span class="n">Scanner</span><span class="w"> </span><span class="n">myData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanFile</span><span class="p">(</span><span class="s">&quot;precious_data.txt&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">myData</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sorry, I cannot connect to the file&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// do something with myData ...</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Attempt to read a file</span>
+<span class="n">Scanner</span><span class="w"> </span><span class="n">myData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanFile</span><span class="p">(</span><span class="s">&quot;precious_data.txt&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">myData</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sorry, I cannot connect to the file&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// do something with myData ...</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Some may argue that the approach above simply postpones a program crash. Maybe so. At least, if our program crashes, it will be from an unanticipated cause. Which, once analyzed, can also be avoided.</p>

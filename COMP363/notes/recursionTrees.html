@@ -49,14 +49,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../COMP180/introduction.html">COMP 180 Data Analysis for the Sciences</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 363 Design and Analysis of Computer Algorithms</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course operations and COVID19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#recordings">Recordings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#course-organization-and-logistics">Course organization and logistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../organization.html#ground-rules">Ground Rules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../organization.html#instructor-s-expectations">Instructor’s expectations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#grading-scheme">Grading scheme</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#ungrading-and-how-it-works"><em>Ungrading</em> and how it works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#ground-rules">Ground Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#instructor-s-expectations">Instructor’s expectations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#academic-integrity">Academic integrity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../organization.html#be-cool-like-a-pro">Be cool, like a <em>pro</em></a></li>
@@ -102,10 +102,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../introduction.html">COMP 363 Design and Analysis of Computer Algorithms</a> &raquo;</li>
-          <li><a href="../notes.html">Leo’s notes</a> &raquo;</li>
-      <li>Recursion trees and the idea behind the <em>Master Theorem</em></li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 363 Design and Analysis of Computer Algorithms</a></li>
+          <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
+      <li class="breadcrumb-item active">Recursion trees and the idea behind the <em>Master Theorem</em></li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/COMP363/notes/recursionTrees.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -187,8 +187,8 @@ Finally, dealing with the problems of size 1 will require <span class="math notr
 \[ \begin{align}\begin{aligned}\begin{split}T(n) = &amp; r^2\underbrace{ \left[r T\left(\frac{n}{c^3}\right) + f(\frac{n}{c^2})\right]}_{T(n/c^2)} + rf\left(\frac{n}{c}\right) + f(n) \\ \\\end{split}\\\begin{split}= &amp; r^3T\left(\frac{n}{c^3}\right) + r^2f(\frac{n}{c^2}) + rf\left(\frac{n}{c}\right) + f(n) \\\end{split}\end{aligned}\end{align} \]</div>
 <p>Eventually, we will reach a value <span class="math notranslate nohighlight">\(L\)</span> for which <span class="math notranslate nohighlight">\(n/c^L=1\)</span>. At this point we cannot continue scaling the problem by <span class="math notranslate nohighlight">\(1/c\)</span>, i.e,. we cannot write that <span class="math notranslate nohighlight">\(T(1) = rT(1/c) +f(1)\)</span>. Instead, we reached the point where we can directly solve the problem of size 1 without kicking the proverbial can any further down the road. Here, <span class="math notranslate nohighlight">\(T(1)=f(1)\)</span>. And so, the sum for <span class="math notranslate nohighlight">\(T(n)\)</span> can be rewritten as:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}T(n) &amp; = &amp; r^L f\underbrace{\left(\frac{n}{c^L}\right)}_{T(n/c^L)=f(1)} + r^{L-1} f\left(\frac{n}{c^{L-1}}\right) +\ldots  + r^2 f(\frac{n}{c^2}) + r f\left(\frac{n}{c}\right) + f(n) \\ \\
-&amp; = &amp; \sum_{i=0}^L r^i f\left(\frac{n}{c^i}\right) \\\end{split}\]</div>
+\[\begin{split}T(n) &amp; =  r^L f\underbrace{\left(\frac{n}{c^L}\right)}_{T(n/c^L)=f(1)} + r^{L-1} f\left(\frac{n}{c^{L-1}}\right) +\ldots  + r^2 f(\frac{n}{c^2}) + r f\left(\frac{n}{c}\right) + f(n) \\ \\
+&amp; =  \sum_{i=0}^L r^i f\left(\frac{n}{c^i}\right) \\\end{split}\]</div>
 <p>For <span class="math notranslate nohighlight">\(i=0\)</span>, the first term of the sum is just <span class="math notranslate nohighlight">\(f(n)\)</span>. When <span class="math notranslate nohighlight">\(i=L\)</span>, the last term of the sum is <span class="math notranslate nohighlight">\(r^L f(n/c^L)\)</span>. Since <span class="math notranslate nohighlight">\(n/c^L=1\)</span>, the last term of the sum is just <span class="math notranslate nohighlight">\(r^Lf(1)\)</span>. As we saw earlier, these two terms are important. If the terms of the sum are decreasing monotonically, the first term <span class="math notranslate nohighlight">\(f(n)\)</span> is the dominant term. And if the terms of the sum increase monotonically, the last term <span class="math notranslate nohighlight">\(r^Lf(1)\)</span> dominates.</p>
 <p>If the terms of the sum are equal (or equal-ish) to each other, we can write:</p>
 <div class="math notranslate nohighlight">
@@ -196,7 +196,7 @@ Finally, dealing with the problems of size 1 will require <span class="math notr
      &amp; =\, &amp; (L+1) f(n) \\
      &amp;\approx&amp; L f(n)\end{split}\]</div>
 <p><span class="math notranslate nohighlight">\(L\)</span> is the number of problem reductions we go before we reach the smallest possible problem size. If we start with a problem of size <span class="math notranslate nohighlight">\(n\)</span> and we keep reducing it into smaller problems scaled by <span class="math notranslate nohighlight">\(1/c\)</span>, it will take <span class="math notranslate nohighlight">\(\log_cn\)</span> reductions to get there. So <span class="math notranslate nohighlight">\(L=\log_cn\)</span>.</p>
-<p>Now that we have a fully parametric expression for the time required by th</p>
+<p>Now that we have a fully parametric expression for the time required by the recursion</p>
 <div class="math notranslate nohighlight">
 \[T(n) = r T \left(\frac{n}{c}\right) + f(n)\]</div>
 <p>we can look for the conditions that cause the series <span class="math notranslate nohighlight">\(\sum_i r^if(n/c^i)\)</span> to converge, diverge, or remain the same.</p>
