@@ -47,8 +47,8 @@ Textbook
 There is no required textbook for COMP 460. A good book to have is *Algorithms,* by Jeff Erickson. `The book is available online at no cost <https://jeffe.cs.illinois.edu/teaching/algorithms/>`__. Printed copies can be purchased from online retailers at reasonable cost. Other useful (but not required) books for this course include:
 
 * `Algorithms Illuminated <http://www.algorithmsilluminated.org/>`_;
-* the `standard text in the field <http://mitpress.mit.edu/9780262046305/introduction-to-algorithms/>`_, and; 
-naturally the `Art of Computer Programming <https://en.wikipedia.org/wiki/The_Art_of_Computer_Programming>`_. 
+* the `standard text in the field <http://mitpress.mit.edu/9780262046305/introduction-to-algorithms/>`_, and;
+* naturally the `Art of Computer Programming <https://en.wikipedia.org/wiki/The_Art_of_Computer_Programming>`_. 
 
 .. .. include:: ../shared/deadlines.rst
 
