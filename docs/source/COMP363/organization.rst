@@ -62,7 +62,7 @@ Exam dates
 
 The final and midterm exams will be a take-home assignments. Exact dates will be posted on Sakai.
 
-
+.. include:: ../shared/ungrading.rst
 .. include:: ../shared/groundRules.rst
 
 

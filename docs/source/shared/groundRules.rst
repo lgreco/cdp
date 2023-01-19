@@ -20,4 +20,3 @@ Here's how you can be proactive, so you can succeed in this coure.
 
 
 .. include:: ../shared/expectations.rst
-.. include:: ../shared/ungrading.rst

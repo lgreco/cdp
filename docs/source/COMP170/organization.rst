@@ -3,7 +3,7 @@
 .. include:: ../shared/courseOutline.rst
 
 
-(`See syllabus posted on Sakai  <https://sakai.luc.edu/access/content/attachment/COMP_170_003_4150_1206/Syllabus/143e15f6-aa0c-4814-89e4-54a1d029c92d/COMP%20170%20Fall%202020%20Syllabus.pdf>`__.)
+(`See syllabus posted on Sakai  <tbd>`__.)
 
 Textbook
 ++++++++
@@ -18,7 +18,7 @@ You will need access to a desktop or laptop computer with the appropriate softwa
 Grading scheme
 ++++++++++++++
 
-(`See syllabus posted on Sakai  <https://sakai.luc.edu/access/content/attachment/COMP_170_003_4150_1206/Syllabus/143e15f6-aa0c-4814-89e4-54a1d029c92d/COMP%20170%20Fall%202020%20Syllabus.pdf>`__. )
+(`See syllabus posted on Sakai  <tbd>`__. )
 
 
 .. include:: ../shared/deadlines.rst
