@@ -2,7 +2,7 @@
 
 .. include:: ../shared/courseOutline.rst
 
-This graduate course reprises topics from the typical undergraduate course in algorithms, placing more emphasis on analysis, proofs, and advanced designs and implementations. The course also looks at more advanced topics, like graph homomorphism, reductions for NP-hard problems, cryptography algorithms, etc.
+This graduate course reprises topics from the typical undergraduate course in algorithms, placing more emphasis on analysis, proofs, and advanced designs and implementations. The course also looks at more advanced topics, like graph isomorphism, reductions for NP-hard problems, cryptography algorithms, etc.
 
 The actual outline for the course varies depending on the interest and backgrounds of participating students. Usually we begin with a review of topics that you may have encountered in advanced undergraduate courses in data structures and algorithms.
 
@@ -13,7 +13,7 @@ The actual outline for the course varies depending on the interest and backgroun
 * Graph algorithms (destroy your enemies' train network!)
 * String algorithms
 
-From there we begin to explore a few more advanced topics: the commonalities of some algorithms for graphs, topological sorting, graph homomorphism, and verifiability.
+From there we begin to explore a few more advanced topics: the commonalities of some algorithms for graphs, topological sorting, graph isomorphism, and verifiability.
 
 Next we explore some challenging problems that are very difficult to solve (NP-hard problems) and how we can compromise our approach to reach acceptable, but not perfect, solutions. Usually we look at the satisfiability problem, weight independent sets, etc.
 
