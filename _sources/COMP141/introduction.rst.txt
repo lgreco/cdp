@@ -1,3 +1,5 @@
+:orphan:
+
 COMP 141 Introduction to Computing Tools and Techniques
 =======================================================
 
