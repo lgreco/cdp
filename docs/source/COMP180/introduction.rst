@@ -1,3 +1,5 @@
+:orphan:
+
 COMP 180 Data Analysis for the Sciences
 =======================================
 
