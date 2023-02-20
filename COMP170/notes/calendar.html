@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Calendar Problem &mdash; Leo Irakliotis&#39; courses  documentation</title>
@@ -12,10 +12,8 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -31,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Leo Irakliotis' courses
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -109,7 +111,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
           <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
       <li class="breadcrumb-item active">The Calendar Problem</li>
@@ -141,8 +143,8 @@
 <p><span class="caption-text">Printing the “blue” week.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>The middle group (blue), shown to the left, may be the easiest to describe. It prints the dates for a full week, starting with Sunday. It adds 1 for every subsequent day. We do this for as many days as there are in a week. This is an operation easily implemented with a for-loop. Let’s call the loop’s variable <span class="math notranslate nohighlight">\(\texttt{day}\)</span>; its range will be <span class="math notranslate nohighlight">\(0\leq\texttt{day}&lt;7\)</span>.</p>
-<p>The code now becomes straight forward. We need a method that prints seven numbers, starting with the date of the starting Sunday, which we assign to <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">sundayDate</span></code>. The first value of the loop variable is 0 and so <code class="docutils literal notranslate"><span class="pre">sundayDate+0</span></code> prints the date of the starting Sunday. The constant <code class="docutils literal notranslate"><span class="pre">DAYS_IN_A_WEEK</span></code> is assigned the value 7, to make our code more descriptive.</p>
+<p>The middle group (blue), shown to the left, may be the easiest to describe. It prints the dates for a full week, starting with Sunday. It adds 1 for every subsequent day. We do this for as many days as there are in a week (hint: 7). This is an operation easily implemented with a for-loop. Let’s call the loop’s variable <span class="math notranslate nohighlight">\(\texttt{day}\)</span>; its range will be <span class="math notranslate nohighlight">\(0\leq\texttt{day}&lt;7\)</span>.</p>
+<p>The code now becomes straight forward. We need a method that prints seven numbers, starting with the date of the that week’s Sunday. That date is assigned to <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">sundayDate</span></code>. The first value of the loop variable is 0 and so <code class="docutils literal notranslate"><span class="pre">sundayDate+0</span></code> prints the date of that week’s Sunday. The constant <code class="docutils literal notranslate"><span class="pre">DAYS_IN_A_WEEK</span></code> is assigned the value 7, to make our code more descriptive.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">blueWeek</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">sundayDate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="n">day</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">DAYS_IN_A_WEEK</span><span class="p">;</span><span class="w"> </span><span class="n">day</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// print the date: sundayDate + day;</span>
@@ -159,7 +161,7 @@
 <p><span class="caption-text">Printing the “yellow” week.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>Next let’s look at the first line of the calendar, the “yellow” week. After a few hours of head-scratching we observe that the yellow week comprises two groups. A group of empty cells (in orange outlines) and a group of filled cells (pink outline). The total number of cells in these two groups is always 7 (<code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">DAYS_IN_WEEK</span></code>).</p>
+<p>Next let’s look at the first line of the calendar, the “yellow” week. After a bit of head-scratching, we observe that the yellow week comprises two groups. A group of empty cells (in orange outlines) and a group of filled cells (pink outline). The total number of cells in these two groups is always 7 (<code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">DAYS_IN_WEEK</span></code>).</p>
 <p>Can we tell how many cells are in each group? In the example here, we see that if the first Sunday of the month is its second day, there are 6 empty cells. Pretty soon, we can see that the number of empty and filled cells for the yellow line depends on the date of the first Sunday of the month. The best formula for computing the number of blank cells is:</p>
 <div class="math notranslate nohighlight">
 \[\text{number of blank cells} = (8 - \text{first Sunday}) \bmod 7\]</div>
@@ -173,7 +175,7 @@
 </section>
 <section id="remaining-analysis-and-observations">
 <h2>Remaining analysis and observations<a class="headerlink" href="#remaining-analysis-and-observations" title="Permalink to this heading"></a></h2>
-<p>The analysis above can be used to determine how to print the “green” week. After that, the only thing remaining is to determine how many “blue” weeks to print. And the final code will take the following form:</p>
+<p>The analysis above can be used to determine how to print the “green” week and the “blue” weeks. And the final code will take the following form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">yellowWeek</span>
 <span class="nb">print</span> <span class="n">blueWeek</span> <span class="o">//</span> \
 <span class="o">...</span>            <span class="o">//</span>   <span class="n">Do</span> <span class="n">this</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">4</span> <span class="n">times</span>
@@ -181,8 +183,8 @@
 <span class="nb">print</span> <span class="n">greenWeek</span>
 </pre></div>
 </div>
-<p>It is left as an exercise to determine the <code class="docutils literal notranslate"><span class="pre">greenWeek</span></code> method and the number of times we invoke <code class="docutils literal notranslate"><span class="pre">blueWeek</span></code>.</p>
-<p>Let’s close with an <strong>observation.</strong> The problem starts with the requirement to not use conditional statements. To be precise, what we have avoided so far is the explicit use of <cite>if-then-else</cite> statements. Because our code will contain for-loops, there will be <em>implied</em> conditions: the loops’ terminating conditions.</p>
+<p>To determine the <code class="docutils literal notranslate"><span class="pre">greenWeek</span></code> method and the number of times we invoke <code class="docutils literal notranslate"><span class="pre">blueWeek</span></code>, it’s important to realize the importance of the <code class="docutils literal notranslate"><span class="pre">yelloWeek</span></code>.  It tells us how many days are printed on the first row of the calendar. i And so, it tells us how many days are left to be printed. We can use that information to determine how may of <code class="docutils literal notranslate"><span class="pre">blueWeek</span></code> calls we need and also how many days to print in a <code class="docutils literal notranslate"><span class="pre">greenWeek</span></code> – if one is needed.</p>
+<p>Let’s close with an <strong>observation.</strong> The problem starts with the requirement to not use conditional statements. To be precise, what we have avoided so far is the explicit use of <cite>if-then-else</cite> statements. Because our code will contain for-loops, there will be <em>implied</em> conditions: the loops’ terminating conditions. It can also be argued that the modulo operator represents a conditional evaluation.</p>
 </section>
 <section id="the-kf-code">
 <h2>The KF code<a class="headerlink" href="#the-kf-code" title="Permalink to this heading"></a></h2>

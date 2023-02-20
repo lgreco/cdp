@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Caesar Cipher &mdash; Leo Irakliotis&#39; courses  documentation</title>
@@ -12,10 +12,8 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -31,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Leo Irakliotis' courses
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -103,7 +105,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
           <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
       <li class="breadcrumb-item active">Caesar Cipher</li>
@@ -144,13 +146,6 @@
 <p>The letter one place after ‘A’ is the same as the letter <span class="math notranslate nohighlight">\(1+26\)</span> positions after ‘A’, and also <span class="math notranslate nohighlight">\(1+(26+26)\)</span> positions, <span class="math notranslate nohighlight">\(1+(26+26+26)\)</span> positions, and so on. If we start at ‘A’ and we make 90, 53, or 27 steps to its right, we’ll always end up in the same place as if we had made only one step: at the letter ‘B’.</p>
 <p>Similar results exist for the other letters in the alphabet wheel. This behavior can be summarized in the following table. The first row is the number of steps we make to the right of the letter shown in the first column. The corresponding cell shows the letter we end up with. For example, <span class="math notranslate nohighlight">\(\text{'B'}+2 = \text{'D'}\)</span>. The numbers in parentheses are the numeric codes for the letters (the <a class="reference external" href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> values).</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 11%" />
-<col style="width: 20%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td></td>
 <td><p><strong>1</strong></p></td>

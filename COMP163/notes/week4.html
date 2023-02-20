@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Review of Weeks 4 and 5: Algorithms &mdash; Leo Irakliotis&#39; courses  documentation</title>
@@ -12,10 +12,8 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -29,11 +27,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Leo Irakliotis' courses
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -71,7 +73,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Review of Weeks 4 and 5: Algorithms</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/COMP163/notes/week4.rst.txt" rel="nofollow"> View page source</a>
@@ -193,11 +195,6 @@
 </div>
 <p>The parameter <code class="docutils literal notranslate"><span class="pre">epsilon</span></code> is a measure of convergence. As successive values of <code class="docutils literal notranslate"><span class="pre">nextx</span></code> are computed, we measure how close they are to each other. If they are sufficiently close, we consider the approximation good enough and we terminate the algorithm. Usually for values of epsilon around <span class="math notranslate nohighlight">\(0.00001\)</span>, the algorithm above yields very accurate results. For example, the following table shows the progression as we try to compute <span class="math notranslate nohighlight">\(\sqrt{10}\)</span>:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 42%" />
-<col style="width: 29%" />
-<col style="width: 30%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Term</strong>  (<span class="math notranslate nohighlight">\(n=10\)</span>)</p></td>
 <td><p><strong>Value</strong></p></td>
@@ -211,27 +208,27 @@
 <td><p>5.5</p></td>
 <td><p>4.5</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_2=(x_1+n/x_1)/2\)</span></p></td>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_2=(x_1+n/x_1)/2`\)</span></p></td>
 <td><p>3.659090909</p></td>
 <td><p>1.840909091</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_3=(x_2+n/x_2)/2\)</span></p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_3=(x_2+n/x_2)/2`\)</span></p></td>
 <td><p>3.196005082</p></td>
 <td><p>0.4630858272</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_4=(x_3+n/x_3)/2\)</span></p></td>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_4=(x_3+n/x_3)/2`\)</span></p></td>
 <td><p>3.162455623</p></td>
 <td><p>0.03354945907</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_5=(x_4+n/x_4)/2\)</span></p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_5=(x_4+n/x_4)/2`\)</span></p></td>
 <td><p>3.162277665</p></td>
 <td><p>0.0001779576282</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_6=(x_5+n/x_5)/2\)</span></p></td>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_6=(x_5+n/x_5)/2`\)</span></p></td>
 <td><p>3.16227766</p></td>
 <td><p>0.000000005007295911</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_7=(x_6+n/x_6)/2\)</span></p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_7=(x_6+n/x_6)/2`\)</span></p></td>
 <td><p>3.16227766</p></td>
 <td><p>0</p></td>
 </tr>

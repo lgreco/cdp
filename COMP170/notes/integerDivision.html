@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Integer division and modular arithmetic &mdash; Leo Irakliotis&#39; courses  documentation</title>
@@ -12,10 +12,8 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -29,11 +27,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Leo Irakliotis' courses
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -71,7 +73,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Integer division and modular arithmetic</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/COMP170/notes/integerDivision.rst.txt" rel="nofollow"> View page source</a>
@@ -87,7 +89,7 @@
 <p>The “<code class="docutils literal notranslate"><span class="pre">mod</span></code>” operator is a good opportunity to discuss integer division and modular arithmetic in programming. The <em>modulo</em> operation in Java is assigned to the operator <code class="docutils literal notranslate"><span class="pre">%</span></code>. The standard definition is that <code class="docutils literal notranslate"><span class="pre">m%n</span></code> returns the (integer) remainder of the (integer division) of <span class="math notranslate nohighlight">\(m\)</span> by <span class="math notranslate nohighlight">\(n\)</span>. The mathemagics of the operation are captured by the equation:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}m= \left[\frac{m}{n}\right]n+r&amp;\\ &amp;m,n,r\in\mathbb{Z}\end{split}\]</div>
-<p>The square brackets above are the <em>integer</em> part, <a class="footnote-reference brackets" href="#id2" id="id1">1</a> e.g. <span class="math notranslate nohighlight">\([3.14] = 3\)</span>. The operator <code class="docutils literal notranslate"><span class="pre">%</span></code> returns <span class="math notranslate nohighlight">\(r\)</span> from the equation above. It can be shown that <span class="math notranslate nohighlight">\(0\leq r\leq n-1,\forall m\in\mathbb{Z}\)</span>. This is an interesting property of the remainder operation <code class="docutils literal notranslate"><span class="pre">m%n</span></code>. For a fixed <span class="math notranslate nohighlight">\(n\)</span>, as <span class="math notranslate nohighlight">\(m\)</span> assumes different values, the result of <code class="docutils literal notranslate"><span class="pre">m%n</span></code> steps from <span class="math notranslate nohighlight">\(0\)</span>, to <span class="math notranslate nohighlight">\(1, \ldots\)</span> to <span class="math notranslate nohighlight">\(n-1\)</span>, and then back to <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>The square brackets above are the <em>integer</em> part, <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> e.g. <span class="math notranslate nohighlight">\([3.14] = 3\)</span>. The operator <code class="docutils literal notranslate"><span class="pre">%</span></code> returns <span class="math notranslate nohighlight">\(r\)</span> from the equation above. It can be shown that <span class="math notranslate nohighlight">\(0\leq r\leq n-1,\forall m\in\mathbb{Z}\)</span>. This is an interesting property of the remainder operation <code class="docutils literal notranslate"><span class="pre">m%n</span></code>. For a fixed <span class="math notranslate nohighlight">\(n\)</span>, as <span class="math notranslate nohighlight">\(m\)</span> assumes different values, the result of <code class="docutils literal notranslate"><span class="pre">m%n</span></code> steps from <span class="math notranslate nohighlight">\(0\)</span>, to <span class="math notranslate nohighlight">\(1, \ldots\)</span> to <span class="math notranslate nohighlight">\(n-1\)</span>, and then back to <span class="math notranslate nohighlight">\(0\)</span>.</p>
 <p>We can use this modular property in many ways, computationally. A popular use is to convert a serial collection to a two-dimensional arrangement. Imagine, for example, 16 people waiting to be seated in a (very) small theater with 4 rows, each with 4 seats. How can we group these people, 4-to-row, as shown below?</p>
 <figure class="align-default" id="id3">
 <img alt="../../_images/linear_2d.png" src="../../_images/linear_2d.png" />
@@ -121,24 +123,25 @@
 <p>The mechanism illustrated above can be implemente, naively for now, as follows.</p>
 <dl class="simple">
 <dt>..literalinclude:: ../codeExamples/IntroProgramming/IntegerOperations/src/NaiveLinearTo2D.java</dt><dd><dl class="field-list simple">
-<dt class="field-odd">linenos</dt>
+<dt class="field-odd">linenos<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
-<dt class="field-even">language</dt>
+<dt class="field-even">language<span class="colon">:</span></dt>
 <dd class="field-even"><p>java</p>
 </dd>
 </dl>
 </dd>
 </dl>
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Technically, the integer part <span class="math notranslate nohighlight">\([x]\)</span> is defined as:</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Technically, the integer part <span class="math notranslate nohighlight">\([x]\)</span> is defined as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}[x] = \left\{ \begin{align*} \lfloor x \rfloor,\ \textit{if}\  x\geq 0 \\
                               \lceil x \rceil,\ \textit{if}\ x&lt;0
                                                                    \end{align*} \right.\end{split}\]</div>
 <p>with <span class="math notranslate nohighlight">\(\lfloor x \rfloor = \max{\{m\in\mathbb{Z}: m\leq x\}}\)</span> and <span class="math notranslate nohighlight">\(\lceil x \rceil = \min{\{n\in\mathbb{Z}: n\geq x\}}\)</span>.</p>
-</dd>
-</dl>
+</aside>
+</aside>
 </section>
 
 

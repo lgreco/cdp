@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Outlines &mdash; Leo Irakliotis&#39; courses  documentation</title>
@@ -12,10 +12,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -29,11 +27,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Leo Irakliotis' courses
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -71,7 +73,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Outlines</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/COMP163/outlines.rst.txt" rel="nofollow"> View page source</a>
@@ -227,11 +229,6 @@ b = 2m+1,\ \textit{or}\ b = 2n_b+1\end{split}\]</div>
 </div></blockquote>
 <p>Simple table:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 36%" />
-<col style="width: 33%" />
-<col style="width: 31%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(p\)</span></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(q\)</span></p></th>
@@ -295,7 +292,7 @@ b = 2m+1,\ \textit{or}\ b = 2n_b+1\end{split}\]</div>
 <li><p><span class="math notranslate nohighlight">\(X\)</span> is called the domain of <span class="math notranslate nohighlight">\(R\)</span>. <span class="math notranslate nohighlight">\(Y\)</span> is the codomain. (Set of departure and set of destination, respectively).</p></li>
 <li><p>Infix notation: <span class="math notranslate nohighlight">\((x,y)\in R\equiv x\ R\ y\)</span>. Here, <span class="math notranslate nohighlight">\(R\)</span> can be replaced with a symbol operationalizing the relation, e.g., if <span class="math notranslate nohighlight">\(R\)</span> is the equality over elements of <span class="math notranslate nohighlight">\(X\)</span>, then <span class="math notranslate nohighlight">\((x,y)\in R \equiv x=y\)</span>.</p></li>
 <li><p>Digraphs for <span class="math notranslate nohighlight">\(R:X\mapsto X\)</span>: vertices, directed edges, loops.</p></li>
-<li><p><span class="math notranslate nohighlight">\(R: X\mapsto X\)</span> is reflexive if <span class="math notranslate nohighlight">\((x,x)\in R, \forall x\in X\)</span>. Examples of reflexive relations: <span class="math notranslate nohighlight">\(\forall x\in\mathbb{Z}, x=x\)</span>; <span class="math notranslate nohighlight">\(\forall x\in\mathbb{R}, x\geq x\)</span>; etc. Non reflexive relations: <span class="math notranslate nohighlight">\(x&gt;x\)</span>. Worth noting that <span class="math notranslate nohighlight">\(xy:\textrm{even}\)</span> is reflexive in <span class="math notranslate nohighlight">\(\mathbb{Z}_{\textrm{even}}\)</span> and irreflexive in <span class="math notranslate nohighlight">\(\mathbb{Z}_{\textrm{odd}}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R: X\mapsto X\)</span> is reflexive if <span class="math notranslate nohighlight">\((x,x)\in R, \forall x\in X\)</span>. Examples of reflexive relations: <span class="math notranslate nohighlight">\(\forall x\in\mathbb{Z}, x=x\)</span>; <span class="math notranslate nohighlight">\(\forall x\in\mathbb{R}, x\geq x\)</span>; etc. Non reflexive relations: <span class="math notranslate nohighlight">\(x&gt;x`(NB: loop terminating condition); :math:`x\neq x\)</span>. Worth noting that <span class="math notranslate nohighlight">\(xy:\textrm{even}\)</span> is reflexive in <span class="math notranslate nohighlight">\(\mathbb{Z}_{\textrm{even}}\)</span> and irreflexive in <span class="math notranslate nohighlight">\(\mathbb{Z}_{\textrm{odd}}\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(R: X\mapsto X\)</span> is symmetric if <span class="math notranslate nohighlight">\(\forall x,y \in X\)</span>, if <span class="math notranslate nohighlight">\((x,y)\in R\)</span> then <span class="math notranslate nohighlight">\((y,x)\in R\)</span>. Examples of symmetric relations: <span class="math notranslate nohighlight">\(\forall x,y\in\mathbb{R}: x=y\Leftrightarrow y=x\)</span>; <span class="math notranslate nohighlight">\(R=\textrm{sibling of}: x\ R\ y\Leftrightarrow y\ R\ x\)</span>. Example of non symmetric relation: <span class="math notranslate nohighlight">\(R=\textrm{student of}: x\ R\ y\not\Leftrightarrow y\ R\ x\)</span>.  Special case, <span class="math notranslate nohighlight">\(R=\textrm{student of Leo}: x\ R\ y\Leftrightarrow y\ R\ x\)</span> (I am learning from each and every one of my students).</p></li>
 <li><p><span class="math notranslate nohighlight">\(R: X\mapsto X\)</span> is antisymmetric if <span class="math notranslate nohighlight">\(\forall x,y\in X\)</span>, if <span class="math notranslate nohighlight">\((x,y)\in R\)</span> and <span class="math notranslate nohighlight">\((y,x)\in R\)</span> then <span class="math notranslate nohighlight">\(x=y\)</span>. Example <span class="math notranslate nohighlight">\(\forall x,y\in\mathbb{Z}\)</span>, if <span class="math notranslate nohighlight">\(x\setminus y\)</span> and <span class="math notranslate nohighlight">\(y\setminus x\)</span> then <span class="math notranslate nohighlight">\(x=y\)</span> (illustrate with <span class="math notranslate nohighlight">\(9\setminus 3\)</span> true but <span class="math notranslate nohighlight">\(3\setminus 9\)</span> not true. Only <span class="math notranslate nohighlight">\(9\setminus 9\)</span> is true; also <span class="math notranslate nohighlight">\(3\setminus 3\)</span>). Notice that if <span class="math notranslate nohighlight">\(x\leq y\)</span> and <span class="math notranslate nohighlight">\(y\leq x\)</span> then <span class="math notranslate nohighlight">\(x=y\)</span>. So the relation <span class="math notranslate nohighlight">\(\leq\)</span> is antisymmetric.</p></li>
 <li><p>Alternative notation for antisymmetric relation: if <span class="math notranslate nohighlight">\(x\neq y\)</span> then <span class="math notranslate nohighlight">\((x,y)\not\in R\)</span> or <span class="math notranslate nohighlight">\((y,x)\not\in R\)</span>.</p></li>
@@ -307,11 +304,6 @@ b = 2m+1,\ \textit{or}\ b = 2n_b+1\end{split}\]</div>
 <li><p>Functional relation: <span class="math notranslate nohighlight">\(\forall x\in X\)</span> and <span class="math notranslate nohighlight">\(\forall y,z\in Y\)</span> if <span class="math notranslate nohighlight">\(xRy\)</span> and <span class="math notranslate nohighlight">\(xRz\)</span> then <span class="math notranslate nohighlight">\(y=z\)</span>. <span class="math notranslate nohighlight">\(X\)</span> is a primary key for <span class="math notranslate nohighlight">\(R\)</span>. Example <span class="math notranslate nohighlight">\(y=x\)</span> (again!); also <span class="math notranslate nohighlight">\(y=x^2\)</span>.</p></li>
 </ul>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 32%" />
-<col style="width: 30%" />
-<col style="width: 38%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td></td>
 <td><p>injective</p></td>
