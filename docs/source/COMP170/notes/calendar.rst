@@ -25,9 +25,9 @@ The "blue" week
    
    Printing the "blue" week. 
 
-The middle group (blue), shown to the left, may be the easiest to describe. It prints the dates for a full week, starting with Sunday. It adds 1 for every subsequent day. We do this for as many days as there are in a week. This is an operation easily implemented with a for-loop. Let's call the loop's variable :math:`\texttt{day}`; its range will be :math:`0\leq\texttt{day}<7`. 
+The middle group (blue), shown to the left, may be the easiest to describe. It prints the dates for a full week, starting with Sunday. It adds 1 for every subsequent day. We do this for as many days as there are in a week (hint: 7). This is an operation easily implemented with a for-loop. Let's call the loop's variable :math:`\texttt{day}`; its range will be :math:`0\leq\texttt{day}<7`. 
 
-The code now becomes straight forward. We need a method that prints seven numbers, starting with the date of the starting Sunday, which we assign to ``int sundayDate``. The first value of the loop variable is 0 and so ``sundayDate+0`` prints the date of the starting Sunday. The constant ``DAYS_IN_A_WEEK`` is assigned the value 7, to make our code more descriptive.
+The code now becomes straight forward. We need a method that prints seven numbers, starting with the date of the that week's Sunday. That date is assigned to ``int sundayDate``. The first value of the loop variable is 0 and so ``sundayDate+0`` prints the date of that week's Sunday. The constant ``DAYS_IN_A_WEEK`` is assigned the value 7, to make our code more descriptive.
 
 .. code-block:: java
 
@@ -46,7 +46,7 @@ The "yellow" week
    
    Printing the "yellow" week. 
    
-Next let's look at the first line of the calendar, the "yellow" week. After a few hours of head-scratching we observe that the yellow week comprises two groups. A group of empty cells (in orange outlines) and a group of filled cells (pink outline). The total number of cells in these two groups is always 7 (``= DAYS_IN_WEEK``).
+Next let's look at the first line of the calendar, the "yellow" week. After a bit of head-scratching, we observe that the yellow week comprises two groups. A group of empty cells (in orange outlines) and a group of filled cells (pink outline). The total number of cells in these two groups is always 7 (``= DAYS_IN_WEEK``).
 
 Can we tell how many cells are in each group? In the example here, we see that if the first Sunday of the month is its second day, there are 6 empty cells. Pretty soon, we can see that the number of empty and filled cells for the yellow line depends on the date of the first Sunday of the month. The best formula for computing the number of blank cells is:
 
@@ -69,7 +69,7 @@ The corresponding Java statement (line 124 in the code below) uses the constant 
 Remaining analysis and observations
 +++++++++++++++++++++++++++++++++++
 
-The analysis above can be used to determine how to print the "green" week. After that, the only thing remaining is to determine how many "blue" weeks to print. And the final code will take the following form:
+The analysis above can be used to determine how to print the "green" week and the "blue" weeks. And the final code will take the following form:
 
 ::
 
@@ -81,9 +81,10 @@ The analysis above can be used to determine how to print the "green" week. After
 
 
 
-It is left as an exercise to determine the ``greenWeek`` method and the number of times we invoke ``blueWeek``.
+To determine the ``greenWeek`` method and the number of times we invoke ``blueWeek``, it's important to realize the importance of the ``yelloWeek``.  It tells us how many days are printed on the first row of the calendar. i And so, it tells us how many days are left to be printed. We can use that information to determine how may of ``blueWeek`` calls we need and also how many days to print in a ``greenWeek`` -- if one is needed.
 
-Let's close with an **observation.** The problem starts with the requirement to not use conditional statements. To be precise, what we have avoided so far is the explicit use of `if-then-else` statements. Because our code will contain for-loops, there will be *implied* conditions: the loops' terminating conditions. 
+Let's close with an **observation.** The problem starts with the requirement to not use conditional statements. To be precise, what we have avoided so far is the explicit use of `if-then-else` statements. Because our code will contain for-loops, there will be *implied* conditions: the loops' terminating conditions. It can also be argued that the modulo operator represents a conditional evaluation.
+
 
 The KF code
 +++++++++++
