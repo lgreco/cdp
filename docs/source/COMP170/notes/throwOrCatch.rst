@@ -3,7 +3,7 @@
 Throw or Catch?
 ================
 
-A method that employs a ``Scanner`` to process a ``File`` item often requires an exception in its signature. For example, method ``scanFile`` below accepts a string as input and returns a Scanner connected to a file with the name provided in the string:
+A method that employs a ``Scanner`` to process a ``File`` item often requires an exception in its header. For example, method ``scanFile`` below accepts a string as input and returns a Scanner connected to a file with the name provided in the string:
 
 .. code-block:: java
 
