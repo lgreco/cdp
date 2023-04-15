@@ -83,7 +83,7 @@ With this object of our own creation, we can rewrite the method that scans a fil
      return counts;
    }   // Inline comments not recommended; used here to keep code compact
 
-If we attempt to print the variable returned by  method ``countLinesWordsCharacters``, we will be disappointed. All we'll get is something like ``FileCounts@133314b``. The printout includes the class name of the object and its memory location (in this example ``133314b``). Obviously we need something more useful. And so we have to modify the ``FileCounts`` object and provide it with instructors how to represent itself as a string.
+If we attempt to print the variable returned by  method ``countLinesWordsCharacters``, we will be disappointed. All we'll get is something like ``FileCounts@133314b``. The printout includes the class name of the object and its memory location (in this example ``133314b``). Obviously we need something more useful. And so we have to modify the ``FileCounts`` object and provide it with instructions how to represent itself as a string.
 
 
 
