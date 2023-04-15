@@ -17,6 +17,7 @@ Leo's notes
    notes/binarySearch
    notes/throwOrCatch
    notes/courseRecap
+   notes/firstObject
 
 ..
    notes/booleanVariables
