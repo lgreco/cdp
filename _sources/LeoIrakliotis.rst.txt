@@ -7,4 +7,4 @@ As a consultant, I have worked with small and medium-size enterprises on technol
 
 In my free time, I am a photographer, diver, aviator, amateur radio operator, and the guardian of two dogs (Martin and Mina).
 
-2022
+
