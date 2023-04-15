@@ -103,7 +103,7 @@ If we attempt to print the variable returned by  method ``countLinesWordsCharact
      }
    }
 
-The addition of method ``toString()`` provides the object ``FileCounts`` with a way to behave as String when needed - for example, when called from a ``print`` statement.
+The addition of method ``toString()`` provides the object ``FileCounts`` with a way to behave as String when needed - for example, when called from a ``print`` statement. To be clear: the object behaved as a String before, when called to be printed. Its behavior, however, was not very useful because all it gave us was something like ``FileCounts@133314b``. With the addition of the ``toString()`` method, we determine a more useful way to behave as a string.
 
 
 
