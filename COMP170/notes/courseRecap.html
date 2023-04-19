@@ -75,6 +75,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#the-80-20-rule-in-programming">The 80/20 rule in programming</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#document-your-analysis">Document your analysis</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#naming-things">Naming things</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#strings">Strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arrays">Arrays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-break-and-continue-statements">The <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#remember-a-few-useful-techniques">Remember a few useful techniques</a></li>
 </ul>
 </li>
@@ -140,6 +143,24 @@
 <h2>Naming things<a class="headerlink" href="#naming-things" title="Permalink to this heading"></a></h2>
 <p>Phil Karlton, an iconic programmer and computer pioneer said that <em>there are only two hard things in Computer Science: cache invalidation and naming things</em>. I am not so sure about the first thing but I am absolutely certain that naming variables, methods, etc, can be challenging. <a class="reference external" href="https://google.github.io/styleguide/javaguide.html#s5-naming">Style guides</a> can be helpful and worth reading.</p>
 <p>(Karlton’s aphorism has been verified by his son David, in a <a class="reference external" href="https://skeptics.stackexchange.com/questions/19836/has-phil-karlton-ever-said-there-are-only-two-hard-things-in-computer-science">StackExchange post dated 8/10/2017</a>).</p>
+</section>
+<section id="strings">
+<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this heading"></a></h2>
+<p>Know a few important string methods and also be familiar with the documentation of the String class. At the very least, be familiar with methods like <code class="docutils literal notranslate"><span class="pre">length()</span></code>, <code class="docutils literal notranslate"><span class="pre">charAt()</span></code>, <code class="docutils literal notranslate"><span class="pre">substring()</span></code>, and <code class="docutils literal notranslate"><span class="pre">indexOf</span></code>. Be able to explain the difference:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Between this assignment,</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// this assignment, and</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// this assignment.</span>
+</pre></div>
+</div>
+</section>
+<section id="arrays">
+<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading"></a></h2>
+<p>Know how to perform simple array operations – even though they can be performed easily by using the <code class="docutils literal notranslate"><span class="pre">Arrays</span></code> class. You should be able to write a few lines of code to do the following, from scatch (without the <code class="docutils literal notranslate"><span class="pre">Arrays</span></code> class):</p>
+<p>Find the smallest value in an array; find the largest value in an array; find the average value in an array of numbers; find if a value exists in an array (without using a for loop).</p>
+</section>
+<section id="the-break-and-continue-statements">
+<h2>The <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements<a class="headerlink" href="#the-break-and-continue-statements" title="Permalink to this heading"></a></h2>
+<p>Should never be used. Unless you can write a 1000 word justification for their need.</p>
 </section>
 <section id="remember-a-few-useful-techniques">
 <h2>Remember a few useful techniques<a class="headerlink" href="#remember-a-few-useful-techniques" title="Permalink to this heading"></a></h2>

@@ -25,6 +25,31 @@ Phil Karlton, an iconic programmer and computer pioneer said that *there are onl
 
 (Karlton's aphorism has been verified by his son David, in a `StackExchange post dated 8/10/2017 <https://skeptics.stackexchange.com/questions/19836/has-phil-karlton-ever-said-there-are-only-two-hard-things-in-computer-science>`__).
 
+
+Strings
+-------
+
+Know a few important string methods and also be familiar with the documentation of the String class. At the very least, be familiar with methods like ``length()``, ``charAt()``, ``substring()``, and ``indexOf``. Be able to explain the difference:
+
+.. code-block:: java
+
+   String s1 = "Hello World"; // Between this assignment,
+   String s2 = "Hello World"; // this assignment, and
+   String s3 = new String("Hello World"); // this assignment.
+
+
+Arrays
+------
+
+Know how to perform simple array operations -- even though they can be performed easily by using the ``Arrays`` class. You should be able to write a few lines of code to do the following, from scatch (without the ``Arrays`` class):
+
+Find the smallest value in an array; find the largest value in an array; find the average value in an array of numbers; find if a value exists in an array (without using a for loop).
+
+The ``break`` and ``continue`` statements
+-----------------------------------------
+
+Should never be used. Unless you can write a 1000 word justification for their need.
+
  
 Remember a few useful techniques
 --------------------------------
