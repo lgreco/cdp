@@ -367,3 +367,21 @@ And yet, it is a matter of **programmer's pride** if we can accomplish the same 
     System.out.println(digit);
     n /= 10; // throw away the right-most digit
    } // note: this only works with integer numbers
+
+
+Enhanced for-loop
+..................
+
+Given an array of objects, for example a ``String[] words``, we can process each of its elements using the plain old for-loop:
+
+.. code-block:: java
+   for (int i = 0; i < words.length; i++) {
+     System.out.println(words[i]);
+   }
+
+Alternatively, and more elegantly, we can use the *enhanced* for loop:
+
+.. code-block:: java
+   for (String w: words) {
+     System.out.println(w);
+   }
