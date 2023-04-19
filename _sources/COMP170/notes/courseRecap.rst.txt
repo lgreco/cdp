@@ -375,6 +375,7 @@ Enhanced for-loop
 Given an array of objects, for example a ``String[] words``, we can process each of its elements using the plain old for-loop:
 
 .. code-block:: java
+
    for (int i = 0; i < words.length; i++) {
      System.out.println(words[i]);
    }
@@ -382,6 +383,7 @@ Given an array of objects, for example a ``String[] words``, we can process each
 Alternatively, and more elegantly, we can use the *enhanced* for loop:
 
 .. code-block:: java
+
    for (String w: words) {
      System.out.println(w);
    }
