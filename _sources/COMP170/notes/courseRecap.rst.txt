@@ -378,7 +378,7 @@ Pulling digits out of an integer
 
 | Assuming that we have an integer number properly initialized, e.g,
 | ``int n = 1234;``
-| how can we pull its digits apart from right to left? One *easy* way is to covert the number to a string and traverse it from its rightmost place to its leftmost:
+| how can we pull its digits apart from right to left? One *easy* way is to convert the number to a string and traverse it from its rightmost place to its leftmost:
 
 .. code-block:: java
 
