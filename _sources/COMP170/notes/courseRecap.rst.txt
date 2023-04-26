@@ -43,7 +43,10 @@ Arrays
 
 Know how to perform simple array operations -- even though they can be performed easily by using the ``Arrays`` class. You should be able to write a few lines of code to do the following, from scatch (without the ``Arrays`` class):
 
-Find the smallest value in an array; find the largest value in an array; find the average value in an array of numbers; find if a value exists in an array (without using a for loop).
+* Find the smallest value in an array; 
+* find the largest value in an array; 
+* find the average value in an array of numbers; 
+* find if a value exists in an array (without using a for loop).
 
 The ``break`` and ``continue`` statements
 -----------------------------------------
