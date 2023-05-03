@@ -10,4 +10,3 @@ COMP 170 Introduction to Java Programming
 	Course organization <organization>
 	Reading material <reading>
 
-	Leo's notes <notes>
