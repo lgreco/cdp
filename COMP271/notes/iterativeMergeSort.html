@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -120,7 +120,7 @@
            <div itemprop="articleBody">
              
   <section id="iterative-merge-sort">
-<h1>Iterative merge sort<a class="headerlink" href="#iterative-merge-sort" title="Permalink to this heading"></a></h1>
+<h1>Iterative merge sort<a class="headerlink" href="#iterative-merge-sort" title="Link to this heading"></a></h1>
 <p>For this problem, we have a method <code class="docutils literal notranslate"><span class="pre">merge</span></code> that takes two <em>sorted</em> arrays and merges them into an also sorted array. The strategy is to start with the smallest possible arrays as inputs to this method. These are arrays with one element only. Single-element arrays are, by definition, sorted. Merged pairs of single-element arrays are sorted arrays with two elements. Now we can take these 2-element arrays and merge them into 4-element arrays, and so on.</p>
 <p>Let’s work out this with an example, using an array with 8 elements:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="p">};</span>

@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -85,11 +85,11 @@
            <div itemprop="articleBody">
              
   <section id="review-of-week-4">
-<h1>Review of Week 4<a class="headerlink" href="#review-of-week-4" title="Permalink to this heading"></a></h1>
+<h1>Review of Week 4<a class="headerlink" href="#review-of-week-4" title="Link to this heading"></a></h1>
 <p>We are exploring a <a class="reference external" href="https://github.com/lgreco/cdp/blob/master/source/COMP180/code/measles.csv">data set with information about measles cases</a> for each state and each week, from 1928 to 2002. To manipulate the measles data, we are developing <a class="reference external" href="https://github.com/lgreco/cdp/blob/master/source/COMP180/code/eradication/US%20Measles%20analysis.ipynb">a notebook that allows us to transform and process the information in the data set</a>.</p>
 <p>The notebook contains the following components.</p>
 <section id="dependences">
-<h2>Dependences<a class="headerlink" href="#dependences" title="Permalink to this heading"></a></h2>
+<h2>Dependences<a class="headerlink" href="#dependences" title="Link to this heading"></a></h2>
 <p>This cell loads the necessary tools for our work.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="linenos">2</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -99,7 +99,7 @@
 </div>
 </section>
 <section id="extraction">
-<h2>Extraction<a class="headerlink" href="#extraction" title="Permalink to this heading"></a></h2>
+<h2>Extraction<a class="headerlink" href="#extraction" title="Link to this heading"></a></h2>
 <p>This cell reads the data from a <em>comma separated values</em> (CSV) file to a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframe. We also print a few rows from the dataframe (using the <code class="docutils literal notranslate"><span class="pre">.head()</span></code>) method, to make sure that the information was brought it correctly.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">measles</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;measles.csv&quot;</span><span class="p">)</span>
 <span class="linenos">2</span><span class="n">measles</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -107,7 +107,7 @@
 </div>
 </section>
 <section id="transform">
-<h2>Transform<a class="headerlink" href="#transform" title="Permalink to this heading"></a></h2>
+<h2>Transform<a class="headerlink" href="#transform" title="Link to this heading"></a></h2>
 <p>As we look at the data, we notice that the set compounds the information about year and week into a six-digit field, of the form <code class="docutils literal notranslate"><span class="pre">YYYYWW</span></code>, where <code class="docutils literal notranslate"><span class="pre">YYYY</span></code> is the year value and <code class="docutils literal notranslate"><span class="pre">WW</span></code> is the week value, e.g., 192801 is a label for the first week of 1928. Our analysis can benefit from clear separate values for year and number-of-week in that year, and that’s what happens in the block below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">measles</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">measles</span><span class="p">[</span><span class="s2">&quot;week&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]))</span>
 <span class="linenos">2</span><span class="n">measles</span><span class="p">[</span><span class="s2">&quot;week_num&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">measles</span><span class="p">[</span><span class="s2">&quot;week&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">4</span><span class="p">:</span><span class="mi">7</span><span class="p">]))</span>
@@ -117,7 +117,7 @@
 <p>By inspecting the data set, we note that the first four characters of the field <code class="docutils literal notranslate"><span class="pre">week</span></code> represent the actual year while the remaining two, a week in that year. Thus we use the Python function <code class="docutils literal notranslate"><span class="pre">str</span></code> to cleave the first four characters (via the <code class="docutils literal notranslate"><span class="pre">[0:4]</span></code> reference, and return that value as an <code class="docutils literal notranslate"><span class="pre">int</span></code> number into a new column within the dataframe, that we label <code class="docutils literal notranslate"><span class="pre">year</span></code>).</p>
 </section>
 <section id="aggregation">
-<h2>Aggregation<a class="headerlink" href="#aggregation" title="Permalink to this heading"></a></h2>
+<h2>Aggregation<a class="headerlink" href="#aggregation" title="Link to this heading"></a></h2>
 <p>Now that our data are clean and in the proper format, we need to think about aggradation. Aggregation means the ability to summarize data based on some common property. For example, pull together all the records for a given state, and add up all the measles cases: that will give us the total of measles in that state from 1928 to 2002. Or, pull together all the records for each state for each year, and add up the number of cases: this will give us the total number of cases per state, per year.</p>
 <p>Using dataframes in the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library, we can use the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> method to achieve the desired aggregation.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">aggregate</span><span class="p">(</span><span class="n">thisDataframe</span><span class="p">,</span> <span class="n">byThisColumn</span><span class="p">):</span>
@@ -140,7 +140,7 @@
 <p>The function above performs creates new dataframes and loads them with aggregate data of our choice.</p>
 </section>
 <section id="loading">
-<h2>Loading<a class="headerlink" href="#loading" title="Permalink to this heading"></a></h2>
+<h2>Loading<a class="headerlink" href="#loading" title="Link to this heading"></a></h2>
 <p>With the aggregate function in place, we can begin the loading stage of our analysis. This stage creates new dataframes that answer specific queries. For example, the dataframe <code class="docutils literal notranslate"><span class="pre">measles_yearly_data</span></code> below answers the query: how many measles cases were there in each state, for each year in our dataset? The dataframe <code class="docutils literal notranslate"><span class="pre">measlesByYear</span></code> answers the query, how many measles cases per year.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">measles_yearly_data</span> <span class="o">=</span> <span class="n">aggregate</span><span class="p">(</span><span class="n">measles</span><span class="p">,</span> <span class="n">byThisColumn</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;state_name&quot;</span><span class="p">])</span>
 <span class="linenos">2</span><span class="n">measlesByYear</span> <span class="o">=</span> <span class="n">aggregate</span><span class="p">(</span><span class="n">measles</span><span class="p">,</span> <span class="n">byThisColumn</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">])</span>

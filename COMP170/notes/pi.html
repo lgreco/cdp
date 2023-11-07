@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -86,12 +86,12 @@
            <div itemprop="articleBody">
              
   <section id="computing-pi-on-pi-day">
-<h1>Computing pi (on pi day!)<a class="headerlink" href="#computing-pi-on-pi-day" title="Permalink to this heading"></a></h1>
+<h1>Computing pi (on pi day!)<a class="headerlink" href="#computing-pi-on-pi-day" title="Link to this heading"></a></h1>
 <p>In observance of <strong>Pi Day</strong> (March 14), we worked out a numerical computation of the number <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
 <figure class="align-right" id="id1" style="width: 20%">
 <img alt="../../_images/pi-plain.png" src="../../_images/pi-plain.png" />
 <figcaption>
-<p><span class="caption-text">A circle inscribed in a square.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-text">A circle inscribed in a square.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>We started with the observation that a circle inscribed in a square covers <span class="math notranslate nohighlight">\(\pi/4\)</span> of the square’s surface. Consider the arrangement shown to the right. We have a square whose edge has length <span class="math notranslate nohighlight">\(2a\)</span>. Its surface area is <span class="math notranslate nohighlight">\(4a^2\)</span>. A circle inscribed in that square, has a diameter also <span class="math notranslate nohighlight">\(2a\)</span> and therefore a radius <span class="math notranslate nohighlight">\(a\)</span>. The surface of the circle is <span class="math notranslate nohighlight">\(\pi r^2\)</span> or, in this case, <span class="math notranslate nohighlight">\(\pi a^2\)</span>.</p>
@@ -109,7 +109,7 @@
 <figure class="align-right" id="id2" style="width: 60%">
 <img alt="../../_images/pi.png" src="../../_images/pi.png" />
 <figcaption>
-<p><span class="caption-text">Setting up the computational model we need.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Setting up the computational model we need.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The geometric set up is straight forward, and shown to the right. If our square has an edge with length <span class="math notranslate nohighlight">\(2a\)</span>, the inscribed circle has a radius of <span class="math notranslate nohighlight">\(a\)</span>. If we place these shapes at the center of <span class="math notranslate nohighlight">\(x\)</span>-<span class="math notranslate nohighlight">\(y\)</span> axes, any point inside the square can be described by coordinates <span class="math notranslate nohighlight">\((x, y)\)</span> such that <span class="math notranslate nohighlight">\(-a\leq x\leq a\)</span> and <span class="math notranslate nohighlight">\(-a\leq y\leq a\)</span>.</p>

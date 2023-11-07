@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -86,7 +86,7 @@
            <div itemprop="articleBody">
              
   <section id="variables">
-<h1>Variables<a class="headerlink" href="#variables" title="Permalink to this heading"></a></h1>
+<h1>Variables<a class="headerlink" href="#variables" title="Link to this heading"></a></h1>
 <p>Variables are nicknames for data. Data can be numbers, sequences of symbols (letters <em>are</em> symbols), images, etc. For example can have a variable for the year a person was born</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">birth_year</span> <span class="o">=</span> <span class="mi">2000</span>
 </pre></div>
@@ -95,11 +95,11 @@
 <p>Variable names can be descriptive, as in the example above, or obscure like <code class="docutils literal notranslate"><span class="pre">y=2000</span></code>. There was a time when programmers had to work with really annoying limits regarding the names of variables. This is no longer the case: we can name a variable just about anything we want to. There are still a few restrictions, but as long as a variable name doesn’t begin with a number or a silly symbol like an exclamation point, the sky is the limit. For example, <code class="docutils literal notranslate"><span class="pre">yob</span></code>, <code class="docutils literal notranslate"><span class="pre">year_of_birth</span></code>, <code class="docutils literal notranslate"><span class="pre">birthYear</span></code>, <code class="docutils literal notranslate"><span class="pre">yearThis_person_was_Born</span></code>, are all valid names.</p>
 <p>Naming variables is one of the hardest thing in computing. Thankfully, there are style guides for just about every language, including <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#316-naming">Python</a>. The important thing to remember is that, in Python, we prefer to name variables using lower-case letters with words separated by underscores.</p>
 <section id="variables-and-memory">
-<h2>Variables and memory<a class="headerlink" href="#variables-and-memory" title="Permalink to this heading"></a></h2>
+<h2>Variables and memory<a class="headerlink" href="#variables-and-memory" title="Link to this heading"></a></h2>
 <p>When we write on a piece of paper a simple expression like <span class="math notranslate nohighlight">\(x=2\)</span>, we use a the paper as a storage device. Indeed, prior to computers, paper, in the form of books, was humanity’s main information storage. And on that piece of paper we commit variable <span class="math notranslate nohighlight">\(x\)</span> to hold the value 2. And so in programming we use variables to store information. These variable are, in fact, locations in memory where the information is stored. A mechanical equivalent of variables is apartment numbers in a building. Over time, different tenants live in those apartments, but the apartment number (essentially, the name of the apartment) remains the same. Same with classrooms on campus. Cuneo Hall Room 218, abbreviated as CH218 is like a variable. Its contents vary over time.</p>
 </section>
 <section id="variables-and-data-types">
-<h2>Variables and data types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this heading"></a></h2>
+<h2>Variables and data types<a class="headerlink" href="#variables-and-data-types" title="Link to this heading"></a></h2>
 <p>In most programming languages, variables come with restrictions. In Java, for example, we must tell upfront what kind of data a variable will hold:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">numberOfApples</span><span class="p">;</span>
 <span class="n">numberOfApples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.5</span><span class="p">;</span><span class="w">  </span><span class="c1">// This will cause a compilation error</span>
@@ -114,7 +114,7 @@
 <p>Both approaches have their advantages and disadvantages. For now, we’ll enjoy the flexibility that Python offers, and we will not worry (much) about any restrictions on the range of values a variable can take.</p>
 </section>
 <section id="kinds-of-variables">
-<h2>Kinds of variables<a class="headerlink" href="#kinds-of-variables" title="Permalink to this heading"></a></h2>
+<h2>Kinds of variables<a class="headerlink" href="#kinds-of-variables" title="Link to this heading"></a></h2>
 <p>Most programming languages support at least two kinds of numbers: integers and real numbers. Python is no exception to that. In addition to numbers, Python supports strings, sequences of alphanumeric characters, like names, email addresses, etc. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span> <span class="o">=</span> <span class="s2">&quot;John&quot;</span>
 <span class="n">last_name</span> <span class="o">=</span> <span class="s2">&quot;Smith&quot;</span>
@@ -126,7 +126,7 @@
 <p>are all legal variable names and legal string contents in Python. Some of these variables and assignments are meaningless of course. It is more likely to see a variable called <code class="docutils literal notranslate"><span class="pre">first_name</span></code> than a variable called <code class="docutils literal notranslate"><span class="pre">john</span></code>. Nothing, but common sense, prevents such variable names.</p>
 </section>
 <section id="assignment-of-variables">
-<h2>Assignment of variables<a class="headerlink" href="#assignment-of-variables" title="Permalink to this heading"></a></h2>
+<h2>Assignment of variables<a class="headerlink" href="#assignment-of-variables" title="Link to this heading"></a></h2>
 <p>Variables get their value through the assignment operator. That operator is identical to the equal sign (<code class="docutils literal notranslate"><span class="pre">=</span></code>). Prior to taking a programming course, most people have seen and used the equal sign in mathematical expressions like <span class="math notranslate nohighlight">\(a=b\)</span>. In mathematics, “=” means that the variables on both sides are the same. By writing <span class="math notranslate nohighlight">\(a=b\)</span> we state a fact, a certainty, that <span class="math notranslate nohighlight">\(a\)</span> is the same as <span class="math notranslate nohighlight">\(b\)</span>.</p>
 <p>In programming, the symbol “=” is called the <em>assignment operator</em>. When we write an assignment expression</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
@@ -145,13 +145,13 @@
 <p>This operation takes place in three steps: first, the value of variable <code class="docutils literal notranslate"><span class="pre">a</span></code> is moved from the memory (let’s say that the value of <code class="docutils literal notranslate"><span class="pre">a</span></code> is 10). Second, the number one is added to that value of <code class="docutils literal notranslate"><span class="pre">a</span></code> and the sum is evaluated to 11. And third the new value, 11, is pushed back into the memory location for <code class="docutils literal notranslate"><span class="pre">a</span></code>. This three-step process is a simplified description of what actually happens. In reality there are a few more steps involved, but are beyond the scope of this discussion.</p>
 </section>
 <section id="why-do-we-need-integer-and-real-numbers">
-<h2>Why do we need integer and real numbers?<a class="headerlink" href="#why-do-we-need-integer-and-real-numbers" title="Permalink to this heading"></a></h2>
+<h2>Why do we need integer and real numbers?<a class="headerlink" href="#why-do-we-need-integer-and-real-numbers" title="Link to this heading"></a></h2>
 <p>Mathemagicians tell us that integer numbers are part of the set of real numbers. So if a machine can handle real numbers then, mathematically, it can also handle integer numbers. Why, then, programming languages separate these two kinds of numbers? Primarily, for two reasons.</p>
 <p>First, integer numbers are very useful for counting indivisible items, e.g., people waiting in line, seats in a theater, books on a shelf, etc. Second, because storing an integer number is technically less demanding than storing a real number.</p>
 <p>Computer programs do a lot of counting. It make sense to have a more efficient and economical way to keep track of that counting. That’s why we separate between integers and real numbers in programming, even though mathematically integers <em>are</em> real numbers.</p>
 </section>
 <section id="counting-from-zero">
-<h2>Counting from Zero<a class="headerlink" href="#counting-from-zero" title="Permalink to this heading"></a></h2>
+<h2>Counting from Zero<a class="headerlink" href="#counting-from-zero" title="Link to this heading"></a></h2>
 <p>Some time in the 1930s, comedians Bud Abbott and Lou Costello popularized a skit that came to be known as <em>Who’s on first?</em>  Lou wants to join  Bud’s baseball team, the fictitious St. Louis Wolves. And Bud begins to describe the team’s players and positions. Their exchange goes like this:</p>
 <ul class="simple">
 <li><p>Abbott: […] Well, let’s see, we have on the bags, Who’s on first, What’s on second, I Don’t Know is on third…</p></li>
@@ -180,7 +180,7 @@
 <figure class="align-center" id="id1">
 <img alt="../../_images/zeroBasedCounting.png" src="../../_images/zeroBasedCounting.png" />
 <figcaption>
-<p><span class="caption-text">Counting as humans (1st, 2nd, etc) and counting as computers (0, 1, etc)</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Counting as humans (1st, 2nd, etc) and counting as computers (0, 1, etc)</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>In most programming languages, including Python, we begin counting from zero.</p>
