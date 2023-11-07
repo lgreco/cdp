@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -116,13 +116,13 @@
            <div itemprop="articleBody">
              
   <section id="recursion-trees-and-the-idea-behind-the-master-theorem">
-<h1>Recursion trees and the idea behind the <em>Master Theorem</em><a class="headerlink" href="#recursion-trees-and-the-idea-behind-the-master-theorem" title="Permalink to this heading"></a></h1>
+<h1>Recursion trees and the idea behind the <em>Master Theorem</em><a class="headerlink" href="#recursion-trees-and-the-idea-behind-the-master-theorem" title="Link to this heading"></a></h1>
 <p>A recursion tree is a helpful way to visualize the time performance of a recursive process.</p>
 <p>The figure below shows a simple recursive process. The initial problem has size <span class="math notranslate nohighlight">\(n=8\)</span>. We can solve it by dividing into two smaller problems, each one half of the problem. These divisions are applied repeatedly until the resulting smaller problems cannot be divided any further.</p>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/simpleRecursion1.png"><img alt="../../_images/simpleRecursion1.png" src="../../_images/simpleRecursion1.png" style="width: 396.9px; height: 271.5px;" /></a>
 <figcaption>
-<p><span class="caption-text">A simple recursion tree with a problem of initial size <span class="math notranslate nohighlight">\(n=8\)</span> divided, repeatedly, into subproblems each scaled by <span class="math notranslate nohighlight">\(1/2\)</span>.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-text">A simple recursion tree with a problem of initial size <span class="math notranslate nohighlight">\(n=8\)</span> divided, repeatedly, into subproblems each scaled by <span class="math notranslate nohighlight">\(1/2\)</span>.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Because we are splitting in half, it takes <span class="math notranslate nohighlight">\(\log_2 n\)</span> steps to end up with the smallest possible problems – those whose size is just 1. In this example, we chose an initial size of <span class="math notranslate nohighlight">\(n=8\)</span>. The numbers work out nicely because <span class="math notranslate nohighlight">\(\log_2 8 = 3\)</span>. It takes three steps to scale down the problem of size 8 to problems of size 1. The <em>hope</em> here is that by the time we get to the smallest problems, we can solve them more easily than the original problem.</p>
@@ -147,11 +147,11 @@ Finally, dealing with the problems of size 1 will require <span class="math notr
 <p>Of course we need to know the value of <span class="math notranslate nohighlight">\(L\)</span>: how many terms will there be in the sum. Here, <span class="math notranslate nohighlight">\(L=\log_28=3\)</span> and there are four terms to the sum (since we start from <span class="math notranslate nohighlight">\(i=0\)</span>). Why is <span class="math notranslate nohighlight">\(L=\log_2n\)</span>, the logarithm, base-2, of the size of the problem? Because if you keep splitting a problem of size <span class="math notranslate nohighlight">\(n\)</span> in half, it will take <span class="math notranslate nohighlight">\(\log_2n\)</span> steps to reduce the size to just 1.</p>
 <p>Let’s go back to the sum <span class="math notranslate nohighlight">\(f(8) + 2f(4) + 4f(2) + 8f(1)\)</span>. There are three special cases regarding the relation between its terms: the terms can get progressively smaller, the terms are relatively equal, or the terms can get progressively larger.</p>
 <section id="progressively-smaller-terms">
-<h2>Progressively smaller terms<a class="headerlink" href="#progressively-smaller-terms" title="Permalink to this heading"></a></h2>
+<h2>Progressively smaller terms<a class="headerlink" href="#progressively-smaller-terms" title="Link to this heading"></a></h2>
 <p>If <span class="math notranslate nohighlight">\(f(8) &gt; 2f(4) &gt; 4f(2) &gt; 8f(1)\)</span>, it means that the <em>first</em> term dominates the sum. It is fair to assume that for sufficiently large values of <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(f(n)+2f(n/2)+\ldots\approx f(n)\)</span>. The heavy lifting of the recursive process that leads to this behavior is done at the top of the recursion tree. In this case, <span class="math notranslate nohighlight">\(f(n)\)</span> is the upper bound of the sum <span class="math notranslate nohighlight">\(T(n)\)</span>. In <em>big-Oh</em> notation, <span class="math notranslate nohighlight">\(T(n)\in\mathcal{O}(f(n))\)</span> or, more confusingly, <span class="math notranslate nohighlight">\(T(n)=\mathcal{O}(f(n))\)</span>. (It’s important to remember here that the symbol “=” before a complexity class like light big-oh does not mean “equals”, but that “the function to my left is in the complexity class to my right”).</p>
 </section>
 <section id="approximately-equal-terms">
-<h2>Approximately equal terms<a class="headerlink" href="#approximately-equal-terms" title="Permalink to this heading"></a></h2>
+<h2>Approximately equal terms<a class="headerlink" href="#approximately-equal-terms" title="Link to this heading"></a></h2>
 <p>If <span class="math notranslate nohighlight">\(f(8) \approx 2f(4) \approx 4f(2) \approx 8f(1)\)</span>, it means that <em>each</em> term contributes about the same to the process. The sum can be simplified:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}T(8) &amp;= f(8) + 2f(4) + 4f(2) + 8f(1) \\
@@ -162,12 +162,12 @@ Finally, dealing with the problems of size 1 will require <span class="math notr
 <p>For sufficiently large values of <span class="math notranslate nohighlight">\(n\)</span> we can assume that <span class="math notranslate nohighlight">\((1+\log_2n)\approx\log_2n\)</span> and therefore <span class="math notranslate nohighlight">\(T(n) \approx \log_2n\,f(n)\)</span>. In other words, <span class="math notranslate nohighlight">\(\log_2n\,f(n)\)</span> is the upper bound for the sum and therefore <span class="math notranslate nohighlight">\(T(n) \in\mathcal{O}(\log_{2}{n}\,f(n))\)</span>.</p>
 </section>
 <section id="progressively-larger-terms">
-<h2>Progressively larger terms<a class="headerlink" href="#progressively-larger-terms" title="Permalink to this heading"></a></h2>
+<h2>Progressively larger terms<a class="headerlink" href="#progressively-larger-terms" title="Link to this heading"></a></h2>
 <p>If <span class="math notranslate nohighlight">\(f(8) &lt; 2f(4) &lt; 4f(2) &lt; 8f(1)\)</span>, it means that the <em>last</em> term dominates the sum. It is fair to assume that for sufficiently large values of <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(f(n)+2f(n/2)+\ldots\approx 2^{?}f(1)\)</span>. All we have to do now is to figure what is the mystery exponent <span class="math notranslate nohighlight">\(2^?\)</span>. In the example above, where each problem is scaled down by half, its takes <span class="math notranslate nohighlight">\(\log_2{n}\)</span> splits to go down to the smallest possible problems. From a single problem of size 8, we go down to 2 smaller problems of size 4, then size 2, finally size 1. At the end, there are <span class="math notranslate nohighlight">\(2^{\log_2{n}}\)</span> problems of size 1.</p>
 <p>If you remember your logarithms, you might notice that <span class="math notranslate nohighlight">\(2^{\log_2{n}} = n^{\log_22}=n\)</span>. Are we doing all this mathematical work to state the obvious? Certainly not. It just so happens that we are dividing the problem size by 2 <em>and</em> we are spawning 2 subproblems. In general we may be dividing the problem size by <span class="math notranslate nohighlight">\(c\)</span> and spawning <span class="math notranslate nohighlight">\(r\)</span> subproblems. In this case there are <span class="math notranslate nohighlight">\(n^{\log_cr}\)</span> problems of the smallest size. It so happens in the simple example we use, that <span class="math notranslate nohighlight">\(c=r=2\)</span> and therefore <span class="math notranslate nohighlight">\(\log_22=1\)</span>.</p>
 </section>
 <section id="master-theorem">
-<h2>Master Theorem<a class="headerlink" href="#master-theorem" title="Permalink to this heading"></a></h2>
+<h2>Master Theorem<a class="headerlink" href="#master-theorem" title="Link to this heading"></a></h2>
 <p>Earlier, we saw that the if we are splitting a problem into two subproblems of half the size, the time required is:</p>
 <div class="math notranslate nohighlight">
 \[T(n) = 2T\left(\frac{n}{2}\right) + f(n)\]</div>
@@ -201,7 +201,7 @@ Finally, dealing with the problems of size 1 will require <span class="math notr
 \[T(n) = r T \left(\frac{n}{c}\right) + f(n)\]</div>
 <p>we can look for the conditions that cause the series <span class="math notranslate nohighlight">\(\sum_i r^if(n/c^i)\)</span> to converge, diverge, or remain the same.</p>
 <section id="series-sum-r-if-n-c-i-converges">
-<h3>Series <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> converges<a class="headerlink" href="#series-sum-r-if-n-c-i-converges" title="Permalink to this heading"></a></h3>
+<h3>Series <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> converges<a class="headerlink" href="#series-sum-r-if-n-c-i-converges" title="Link to this heading"></a></h3>
 <p>This means that terms are getting progressively smaller. For example we expect the first two terms to be:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}r^0 f(n/c^0) &amp; &gt; r^1f(n/c^1) \Rightarrow \\
@@ -212,7 +212,7 @@ f(n) &amp; &gt; rf(n/c)\end{split}\]</div>
 <p>In other words, when <span class="math notranslate nohighlight">\(c^d&gt;r\)</span> the heavy lifting in the recurrence is done at the top of the tree.</p>
 </section>
 <section id="series-sum-r-if-n-c-i-diverges">
-<h3>Series <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> diverges<a class="headerlink" href="#series-sum-r-if-n-c-i-diverges" title="Permalink to this heading"></a></h3>
+<h3>Series <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> diverges<a class="headerlink" href="#series-sum-r-if-n-c-i-diverges" title="Link to this heading"></a></h3>
 <p>In this case, the terms get progressively smaller. For example we expect the last two terms to be</p>
 <div class="math notranslate nohighlight">
 \[r^{L-1}f(n/c^{L-1}) &lt; r^Lf(n/c^L)\]</div>
@@ -225,7 +225,7 @@ c^d/c^{dL} &amp; &lt; r/c^{dL} \Rightarrow c^d &lt; r\end{split}\]</div>
 <p>When <span class="math notranslate nohighlight">\(c^d&lt;r\)</span>, the heavy lifting in the recurrence is done by the bottom of the tree (its leaves).</p>
 </section>
 <section id="series-sum-r-if-n-c-i-is-steady">
-<h3>Series <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> is steady<a class="headerlink" href="#series-sum-r-if-n-c-i-is-steady" title="Permalink to this heading"></a></h3>
+<h3>Series <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> is steady<a class="headerlink" href="#series-sum-r-if-n-c-i-is-steady" title="Link to this heading"></a></h3>
 <p>Finally, when each term of the series is the same, we can compare the first two terms:</p>
 <div class="math notranslate nohighlight">
 \[r^0f(n/c^0) = r^1f(n/c^1) \Rightarrow f(n) = rf(n/c)\]</div>
@@ -236,7 +236,7 @@ c^d/c^{dL} &amp; &lt; r/c^{dL} \Rightarrow c^d &lt; r\end{split}\]</div>
 </section>
 </section>
 <section id="summarize-our-findings">
-<h2>Summarize our findings<a class="headerlink" href="#summarize-our-findings" title="Permalink to this heading"></a></h2>
+<h2>Summarize our findings<a class="headerlink" href="#summarize-our-findings" title="Link to this heading"></a></h2>
 <p>The performance of the recurrence</p>
 <div class="math notranslate nohighlight">
 \[T(n) = r T \left(\frac{n}{c}\right) + \underbrace{\mathcal{O}(n^d)}_{f(n)}\]</div>

@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -86,7 +86,7 @@
              
   <p>** DRAFT ** NOT READY YET **</p>
 <section id="binary-search">
-<h1>Binary Search<a class="headerlink" href="#binary-search" title="Permalink to this heading"></a></h1>
+<h1>Binary Search<a class="headerlink" href="#binary-search" title="Link to this heading"></a></h1>
 <p>How did we end up talking about <em>binary search?</em> We started with a simple question: what are the chances that a few random letters put together can form an actual word? Here’s a simple strategy to answer this question.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">form</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="n">word</span>
 <span class="n">look</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">dictionary</span>
@@ -137,7 +137,7 @@
 </div>
 <p>The code snippet aove creates a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> object that connects to an <code class="docutils literal notranslate"><span class="pre">InputStreamReader</span></code>. This reader is a conduit, over the internet, between our computer and the website with the file we wish to process. That website is identified by a <code class="docutils literal notranslate"><span class="pre">URL</span></code> object.</p>
 <section id="working-with-files-is-fun-but">
-<h2>Working with files is fun, but …<a class="headerlink" href="#working-with-files-is-fun-but" title="Permalink to this heading"></a></h2>
+<h2>Working with files is fun, but …<a class="headerlink" href="#working-with-files-is-fun-but" title="Link to this heading"></a></h2>
 <p>Files are, usually, slow to access. Specifically, they are slower compared to computer memory. <em>Ideally,</em> we want to read them once (maaaaybe twice) and bring their data into the computer memory (if there is room). The easiest (and often best) memory container we have at our disposal is, of course, the humble array.</p>
 <p>How can we bring data from a file into an array? First, by making our life easier: let’s assume that each line in the file contains a single piece of data. Which is the case for the file with the english words.</p>
 <p>How can we bring the data from the file into an array? Here, we hit a snag. Before adding data to an array, we must declare and initialize it. For that, we need to know how many elements the array will store. And so it is necessary to know how much data are stored in the file that we want to move to the array. The surrest way is to go through the file, count the data, use that number of initialize the array, and then move the data from the file to the array, i.e.:</p>
@@ -172,7 +172,7 @@
 </div>
 </section>
 <section id="working-with-sorted-data">
-<h2>Working with sorted data<a class="headerlink" href="#working-with-sorted-data" title="Permalink to this heading"></a></h2>
+<h2>Working with sorted data<a class="headerlink" href="#working-with-sorted-data" title="Link to this heading"></a></h2>
 </section>
 </section>
 

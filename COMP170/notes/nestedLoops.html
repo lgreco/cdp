@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -86,10 +86,10 @@
            <div itemprop="articleBody">
              
   <section id="nested-loops">
-<h1>Nested Loops<a class="headerlink" href="#nested-loops" title="Permalink to this heading"></a></h1>
+<h1>Nested Loops<a class="headerlink" href="#nested-loops" title="Link to this heading"></a></h1>
 <p>Nested loops are a challenging technique in programming, yet one of the most versatiles ones. With nested loops we can scan through large and complex arrangements of data, perform repetitive tasks, compute useful and interesting formulas, etc.</p>
 <section id="a-simple-problem">
-<h2>A simple problem<a class="headerlink" href="#a-simple-problem" title="Permalink to this heading"></a></h2>
+<h2>A simple problem<a class="headerlink" href="#a-simple-problem" title="Link to this heading"></a></h2>
 <p>Compute the sum of <span class="math notranslate nohighlight">\(M\)</span> integers, beginning with <span class="math notranslate nohighlight">\(N\)</span>. For example, if <span class="math notranslate nohighlight">\(M=5\)</span> and <span class="math notranslate nohighlight">\(N=0\)</span>, the sum to compute is</p>
 <div class="math notranslate nohighlight">
 \[\underbrace{ \underbrace{0}_{N} + 1 + 2 + 3 + 4 }_{M=5\ \text{numbers}} = 10\]</div>
@@ -125,7 +125,7 @@
 </div>
 </section>
 <section id="a-simple-drawing">
-<h2>A simple drawing<a class="headerlink" href="#a-simple-drawing" title="Permalink to this heading"></a></h2>
+<h2>A simple drawing<a class="headerlink" href="#a-simple-drawing" title="Link to this heading"></a></h2>
 <p>Suppose we wish to print the following pattern. The pattern comprises 5 lines. Each line has 4 groups of symbols: first a group of 0-4 spaces, followed by a group of 0-4 stars, followed by two vertical bars, followed by a group of 0-4 stars.</p>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../../_images/PatternPrintingWithNestedLoops.png"><img alt="../../_images/PatternPrintingWithNestedLoops.png" src="../../_images/PatternPrintingWithNestedLoops.png" style="width: 400px;" /></a>
@@ -232,7 +232,7 @@
 <p>There are one level of nesting in this example: the outer loop (the <code class="docutils literal notranslate"><span class="pre">i</span></code>-loop) and a bunch of <code class="docutils literal notranslate"><span class="pre">k</span></code>-loops. The levels of nested loops is the count of loops that contain other loops. In our example, only the <code class="docutils literal notranslate"><span class="pre">i</span></code> loop contains loops. The <code class="docutils literal notranslate"><span class="pre">k</span></code> loops do not contain any other loops.</p>
 </section>
 <section id="the-restaurant-example">
-<h2>The Restaurant example<a class="headerlink" href="#the-restaurant-example" title="Permalink to this heading"></a></h2>
+<h2>The Restaurant example<a class="headerlink" href="#the-restaurant-example" title="Link to this heading"></a></h2>
 <p>Consider a restaurant with 36 tables, arranged in 6 rows. Each row has 6 tables. And each table seats four guests. We can write a simple report for each table, as follows:</p>
 <div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">tableCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// initialize table counter</span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="n">row</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -250,11 +250,11 @@
 <p>There are two levels of nesting here: the <code class="docutils literal notranslate"><span class="pre">row</span></code> loop contains the <code class="docutils literal notranslate"><span class="pre">column</span></code> loop which contains the <code class="docutils literal notranslate"><span class="pre">guest</span></code> loop.</p>
 </section>
 <section id="loop-structures">
-<h2>Loop structures<a class="headerlink" href="#loop-structures" title="Permalink to this heading"></a></h2>
+<h2>Loop structures<a class="headerlink" href="#loop-structures" title="Link to this heading"></a></h2>
 <figure class="align-right" id="id1" style="width: 50%">
 <img alt="../../_images/nestedLoops.png" src="../../_images/nestedLoops.png" />
 <figcaption>
-<p><span class="caption-text">An example of three nested loops.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-text">An example of three nested loops.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>A nested loop is a loop within a loop. There is no limit as to how many loops we nest, but practically most programmers rarely go beyond 8-10 nested loops. The figure to the right shows three nested loops. A simple example of such loops is the following code.</p>
@@ -272,7 +272,7 @@
 <figure class="align-right" id="id2" style="width: 50%">
 <img alt="../../_images/tandemLoops.png" src="../../_images/tandemLoops.png" />
 <figcaption>
-<p><span class="caption-text">An example of two tandem loops nested in another loop.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-text">An example of two tandem loops nested in another loop.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>A nested loop may contain tandem loops as shown to the right. In this case, the number of steps executed within the second loop will be <span class="math notranslate nohighlight">\(L1\times L2\)</span>. The number of steps executed in the third loop will be <span class="math notranslate nohighlight">\(L1\times L3\)</span>. And the total number of steps across this block of code will be <span class="math notranslate nohighlight">\(L1\times(L2+L3)\)</span>.</p>
@@ -291,7 +291,7 @@
 <figure class="align-right" id="id3" style="width: 50%">
 <img alt="../../_images/nestedAndTandemLoops.png" src="../../_images/nestedAndTandemLoops.png" />
 <figcaption>
-<p><span class="caption-text">An example of two tandem loops nested in another loop, with one more loop nested in the second tandem loop.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">An example of two tandem loops nested in another loop, with one more loop nested in the second tandem loop.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Loops can be nested in various ways, as needed. In the example to the right, <code class="docutils literal notranslate"><span class="pre">loop4</span></code> is within <code class="docutils literal notranslate"><span class="pre">loop3</span></code> which is within <code class="docutils literal notranslate"><span class="pre">loop1</span></code>. And there is <code class="docutils literal notranslate"><span class="pre">loop2</span></code> in tandem with <code class="docutils literal notranslate"><span class="pre">loop3</span></code>. The total number of steps taken by this combination of loops is <span class="math notranslate nohighlight">\(L1\times (L2+L3\times L4)\)</span>. The corresponding code is as follows.</p>
@@ -310,7 +310,7 @@
 </div>
 </section>
 <section id="loops-as-hierarchical-structures">
-<h2>Loops as hierarchical structures<a class="headerlink" href="#loops-as-hierarchical-structures" title="Permalink to this heading"></a></h2>
+<h2>Loops as hierarchical structures<a class="headerlink" href="#loops-as-hierarchical-structures" title="Link to this heading"></a></h2>
 <p>The Chicago Police Department has divided the city into <em>beats</em>, i.e., small geographic areas that are patrolled by one police officer. The beats are numbered by four digits in the following form:</p>
 <div class="math notranslate nohighlight">
 \[\underbrace{\texttt{##}}_{\textsf{District number}}
@@ -335,7 +335,7 @@
 </div>
 </section>
 <section id="estimating-the-length-of-a-loop">
-<h2>Estimating the length of a loop<a class="headerlink" href="#estimating-the-length-of-a-loop" title="Permalink to this heading"></a></h2>
+<h2>Estimating the length of a loop<a class="headerlink" href="#estimating-the-length-of-a-loop" title="Link to this heading"></a></h2>
 <p>It is important to be able to estimate the time that is consumed by loops. That time is related directly to the number of repetitions performed by a loop. As we saw above, we multiply the steps of nested loops and we add the steps of tandem loops. But how to tell the number of steps a loop repeats?</p>
 <p>For simple loops, e.g.,</p>
 <div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{...}</span>

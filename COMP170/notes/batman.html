@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -86,7 +86,7 @@
            <div itemprop="articleBody">
              
   <section id="riddler-s-next-caper">
-<h1>Riddler’s next caper<a class="headerlink" href="#riddler-s-next-caper" title="Permalink to this heading"></a></h1>
+<h1>Riddler’s next caper<a class="headerlink" href="#riddler-s-next-caper" title="Link to this heading"></a></h1>
 <p>In the assignment <em>Holy Digits Batman</em> we are trying to guess the street number for for Riddler’s next caper on Pennsylvania Avenue. We are told that the address on Pennsylvania is a four-digit number; all four digits are different; the digit in the thousands place is three times the digit in the tens place; the number is odd; and the sum of the digits is 27. Based on that information, can we find the street number?</p>
 <p>A novice programmer may attack this problem with brute force:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">useBruteForce</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -268,7 +268,7 @@
 <p>Method <strong>useOneForLoop</strong> above takes only 7 steps! Notice that since the conditions for the while loop in line 6 guarantee that <code class="docutils literal notranslate"><span class="pre">d!=u</span></code> we no longer need this condition in the test at line 10.</p>
 <p>There is at least one more improvement that can bring the performance down to 5 steps. Can you guess it? Can you do better (less) than 5?</p>
 <section id="a-bit-of-analysis-exploring-efficiency">
-<h2>A bit of analysis: exploring efficiency<a class="headerlink" href="#a-bit-of-analysis-exploring-efficiency" title="Permalink to this heading"></a></h2>
+<h2>A bit of analysis: exploring efficiency<a class="headerlink" href="#a-bit-of-analysis-exploring-efficiency" title="Link to this heading"></a></h2>
 <p>Before we look at faster solutions, it is worth asking, why they exist. From a brute force approach that conducted 9837 tests to the latest method that takes 7 steps – and promises to make them 5 – we have seen dramatic reduction in the effort to compute the solution. That’s because we have been trading randomness for logic. The brute force approach tests every number up to 9999 until it finds one that meets all the criteria. Soon the question arises: do we have to test all numbers? Are some that we can disqualify without even testing them? The answer is yes, and we can begin trading randomness for selectivity (and logic).</p>
 <p>The first trade was when we realized that we do not need numbers ending in 0, 2, 4, 6, and 8. The problem asks for an odd number. In the brute force approach we looked at every number, knowning that even numbers will fail the test. We removed them from consideration all together by making the last digit loop (the <code class="docutils literal notranslate"><span class="pre">u</span></code> loop) start at 1 and step by 2. This simple trick reduced the numbers we tested by half. This trade is demonstrated in method <strong>useOnlyOddUnits</strong> that requires only 4418 steps.</p>
 <p>The second trade was when we modified our code to observe the relation between the <code class="docutils literal notranslate"><span class="pre">k</span></code> and the <code class="docutils literal notranslate"><span class="pre">d</span></code> digits. The maximum value for the <code class="docutils literal notranslate"><span class="pre">k</span></code> digit is 9. That limits the maximum value of the <code class="docutils literal notranslate"><span class="pre">d</span></code> digit to 3, so that we can observe the restriction <span class="math notranslate nohighlight">\(\texttt{k}=3\cdot\texttt{d}\)</span>. Coding this relation into the corresponding for-loops, we reduce the number of tests that the program has to conduct even more, down to 433. The <code class="docutils literal notranslate"><span class="pre">k</span></code> loop runs from 3 to 9, with a step of 3, producing the values 3, 6, and 9. The <code class="docutils literal notranslate"><span class="pre">d</span></code> loop runs from 1 to 3, producing the values 1,2 and 3. This is done with method <strong>focusOn3000s,</strong> in 433 steps.</p>
@@ -308,7 +308,7 @@
 <p>The value of <code class="docutils literal notranslate"><span class="pre">h</span></code> can be simply computed as 27-7-3-9=8.</p>
 </section>
 <section id="an-afterthought">
-<h2>An afterthought<a class="headerlink" href="#an-afterthought" title="Permalink to this heading"></a></h2>
+<h2>An afterthought<a class="headerlink" href="#an-afterthought" title="Link to this heading"></a></h2>
 <p>At some point it becomes evident that the problem has one solution only and that we can find it without any computer code at all. Why do we bother with a programming solution when we can work the solution numerically? Mostly for the learning experience: the <em>Holy Digits</em> problem is an opportunity to reflect on brute force solutions and seek more effective approaches. Our search for more efficient approaches may give us insight into the structure of the problem and we may even find a solution without the aid of programming. And that’s absolutely fine: programming is an endeavor that sharpens our computational thinking skills. It’s these skills that lead us to solutions.</p>
 <p>Often however, we need to tackle problems that may not have a unique or numerically obtained solution. Such problems require us to find a solution to satisfy multiple Boolean conditions:</p>
 <div class="math notranslate nohighlight">

@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -86,7 +86,7 @@
            <div itemprop="articleBody">
              
   <section id="integer-division-and-modular-arithmetic">
-<h1>Integer division and modular arithmetic<a class="headerlink" href="#integer-division-and-modular-arithmetic" title="Permalink to this heading"></a></h1>
+<h1>Integer division and modular arithmetic<a class="headerlink" href="#integer-division-and-modular-arithmetic" title="Link to this heading"></a></h1>
 <p>The “<code class="docutils literal notranslate"><span class="pre">mod</span></code>” operator is a good opportunity to discuss integer division and modular arithmetic in programming. The <em>modulo</em> operation in Java is assigned to the operator <code class="docutils literal notranslate"><span class="pre">%</span></code>. The standard definition is that <code class="docutils literal notranslate"><span class="pre">m%n</span></code> returns the (integer) remainder of the (integer division) of <span class="math notranslate nohighlight">\(m\)</span> by <span class="math notranslate nohighlight">\(n\)</span>. The mathemagics of the operation are captured by the equation:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}m= \left[\frac{m}{n}\right]n+r&amp;\\ &amp;m,n,r\in\mathbb{Z}\end{split}\]</div>
@@ -95,7 +95,7 @@
 <figure class="align-default" id="id3">
 <img alt="../../_images/linear_2d.png" src="../../_images/linear_2d.png" />
 <figcaption>
-<p><span class="caption-text">Simple illustration of mapping a linear collection of 16 items to a two-dimensional arrangement of 4x4.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Simple illustration of mapping a linear collection of 16 items to a two-dimensional arrangement of 4x4.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>We begin by assigning each person a number, showing their position in line. From now on, when counting, we’ll start from 0. Initially it may feel a bit odd to assign the first person to 0, the second to 1, etc. But it makes sense. Think of the number assigned to a person as the count of people ahead in line. There are 0 people in front of the first person, 2 people ahead of the third person, etc.</p>
@@ -118,7 +118,7 @@
 <figure class="align-default" id="id4">
 <img alt="../../_images/linear_2d_box.png" src="../../_images/linear_2d_box.png" />
 <figcaption>
-<p><span class="caption-text">A simple mechanism to take a number and convert it to two numbers, representing a (row, column) reference in a two-dimensional grid.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-text">A simple mechanism to take a number and convert it to two numbers, representing a (row, column) reference in a two-dimensional grid.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The mechanism illustrated above can be implemente, naively for now, as follows.</p>

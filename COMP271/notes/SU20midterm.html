@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -85,9 +85,9 @@
            <div itemprop="articleBody">
              
   <section id="summer-2020-midterm-grading-notes">
-<h1>Summer 2020 Midterm grading notes<a class="headerlink" href="#summer-2020-midterm-grading-notes" title="Permalink to this heading"></a></h1>
+<h1>Summer 2020 Midterm grading notes<a class="headerlink" href="#summer-2020-midterm-grading-notes" title="Link to this heading"></a></h1>
 <section id="problem-1">
-<h2>Problem 1<a class="headerlink" href="#problem-1" title="Permalink to this heading"></a></h2>
+<h2>Problem 1<a class="headerlink" href="#problem-1" title="Link to this heading"></a></h2>
 <p>The solution to this problem was specified in the requirement <em>to extend</em> the original class. Extensions allow us to add and change parts of a class that we are not allowed to modify. There are two modifications to include in the extended class: first a new node to track the middle of the list. We already have two specially named nodes that track the beginning and the and of the list (called <code class="docutils literal notranslate"><span class="pre">Node</span> <span class="pre">head</span></code> and <code class="docutils literal notranslate"><span class="pre">Node</span> <span class="pre">tail</span></code> respectively). All we here is a third specially named node:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LeoLinkedList</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">OurLinkedList</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">Node</span><span class="w"> </span><span class="n">middle</span><span class="p">;</span>
@@ -118,7 +118,7 @@
 <p>The code of the derived <code class="docutils literal notranslate"><span class="pre">addNode</span></code> is identical to the base code except for two places. When the list is empty (<code class="docutils literal notranslate"><span class="pre">head==null</span></code>), we make the first node the list’s head and tail. In the derived method above, we also make that first node the list’s middle. If the list is not empty, we add an if-block to advance the middle node to its next node, every second insertion (whenever <code class="docutils literal notranslate"><span class="pre">size%2==1</span></code>).</p>
 </section>
 <section id="problem-2">
-<h2>Problem 2<a class="headerlink" href="#problem-2" title="Permalink to this heading"></a></h2>
+<h2>Problem 2<a class="headerlink" href="#problem-2" title="Link to this heading"></a></h2>
 <p>While simple in appearance, this problem requires some <strong>serious</strong> analysis first. We are given a restriction: lines cannot exceed 90 characters. The schematic we are provided with, suggests that we cannot hyphenate the contents of nodes and wrap them in the next line block. And, as long we we have nodes to print, each line block should end with the wrap pattern leading from the last node in that block to the first node in the next line block.</p>
 <figure class="align-right" style="width: 66%">
 <img alt="../../_images/LinkedListSnakeLayout.png" src="../../_images/LinkedListSnakeLayout.png" />
@@ -313,7 +313,7 @@
 </div>
 </section>
 <section id="problem-3-bonus">
-<h2>Problem 3 (bonus)<a class="headerlink" href="#problem-3-bonus" title="Permalink to this heading"></a></h2>
+<h2>Problem 3 (bonus)<a class="headerlink" href="#problem-3-bonus" title="Link to this heading"></a></h2>
 <p>Compared to problem 2, this was an easy one. The general case is to identify the node previous to the one to be removed and have its <code class="docutils literal notranslate"><span class="pre">next</span></code> field mapped to the node after the one to be removed. There are special cases, to be handled directly:
 * Removing the head node: in this case <code class="docutils literal notranslate"><span class="pre">head=head.next;</span></code> does the trick.
 * Removing the tail node: we find the node for which <code class="docutils literal notranslate"><span class="pre">.next==tail</span></code>, and we make it tail.
@@ -321,11 +321,11 @@
 * Removing a node in a list with <code class="docutils literal notranslate"><span class="pre">size==2</span></code>. In this case either <code class="docutils literal notranslate"><span class="pre">tail=head;</span></code> or <code class="docutils literal notranslate"><span class="pre">head=tail;</span></code></p>
 </section>
 <section id="problem-4">
-<h2>Problem 4<a class="headerlink" href="#problem-4" title="Permalink to this heading"></a></h2>
+<h2>Problem 4<a class="headerlink" href="#problem-4" title="Link to this heading"></a></h2>
 <p>The easiest solution to this problem is to swap the <code class="docutils literal notranslate"><span class="pre">.value</span></code> fields of the corresponding nodes.</p>
 </section>
 <section id="problem-5">
-<h2>Problem 5<a class="headerlink" href="#problem-5" title="Permalink to this heading"></a></h2>
+<h2>Problem 5<a class="headerlink" href="#problem-5" title="Link to this heading"></a></h2>
 <p>This is also a straight-forward problem, with a few special cases:
 * There is no previous node when <code class="docutils literal notranslate"><span class="pre">size==1</span></code>.
 * When <code class="docutils literal notranslate"><span class="pre">size==2</span></code> the previous node is <code class="docutils literal notranslate"><span class="pre">head</span></code>.

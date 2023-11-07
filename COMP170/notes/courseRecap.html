@@ -12,11 +12,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -85,23 +85,23 @@
            <div itemprop="articleBody">
              
   <section id="course-recap">
-<h1>Course Recap<a class="headerlink" href="#course-recap" title="Permalink to this heading"></a></h1>
+<h1>Course Recap<a class="headerlink" href="#course-recap" title="Link to this heading"></a></h1>
 <p>Here’s a list of things that I wish everyone could remember from an introductory programming course. Software is not written only to compile and run. It must be written so that others can read and maintain it. Those <em>others</em> include yourself 6 or more months after you wrote the program. The items below have been written with Java in mind. They apply to other languages as well.</p>
 <section id="the-80-20-rule-in-programming">
-<h2>The 80/20 rule in programming<a class="headerlink" href="#the-80-20-rule-in-programming" title="Permalink to this heading"></a></h2>
+<h2>The 80/20 rule in programming<a class="headerlink" href="#the-80-20-rule-in-programming" title="Link to this heading"></a></h2>
 <p>Delayed programming, is good programming! Spend some time thinking before you start writing code. Spending 80% of your time analyzing the problem you need to solve, leads to a very productive 20% of your time writing good code!</p>
 </section>
 <section id="document-your-analysis">
-<h2>Document your analysis<a class="headerlink" href="#document-your-analysis" title="Permalink to this heading"></a></h2>
+<h2>Document your analysis<a class="headerlink" href="#document-your-analysis" title="Link to this heading"></a></h2>
 <p>Use comments in the program to describe the analysis that led to the solution you are implementing.</p>
 </section>
 <section id="naming-things">
-<h2>Naming things<a class="headerlink" href="#naming-things" title="Permalink to this heading"></a></h2>
+<h2>Naming things<a class="headerlink" href="#naming-things" title="Link to this heading"></a></h2>
 <p>Phil Karlton, an iconic programmer and computer pioneer said that <em>there are only two hard things in Computer Science: cache invalidation and naming things</em>. I am not so sure about the first thing but I am absolutely certain that naming variables, methods, etc, can be challenging. <a class="reference external" href="https://google.github.io/styleguide/javaguide.html#s5-naming">Style guides</a> can be helpful and worth reading.</p>
 <p>(Karlton’s aphorism has been verified by his son David, in a <a class="reference external" href="https://skeptics.stackexchange.com/questions/19836/has-phil-karlton-ever-said-there-are-only-two-hard-things-in-computer-science">StackExchange post dated 8/10/2017</a>).</p>
 </section>
 <section id="strings">
-<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this heading"></a></h2>
+<h2>Strings<a class="headerlink" href="#strings" title="Link to this heading"></a></h2>
 <p>Know a few important string methods and also be familiar with the documentation of the String class. At the very least, be familiar with methods like <code class="docutils literal notranslate"><span class="pre">length()</span></code>, <code class="docutils literal notranslate"><span class="pre">charAt()</span></code>, <code class="docutils literal notranslate"><span class="pre">substring()</span></code>, and <code class="docutils literal notranslate"><span class="pre">indexOf</span></code>. Be able to explain the difference:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Between this assignment,</span>
 <span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// this assignment, and</span>
@@ -110,7 +110,7 @@
 </div>
 </section>
 <section id="arrays">
-<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading"></a></h2>
+<h2>Arrays<a class="headerlink" href="#arrays" title="Link to this heading"></a></h2>
 <p>Know how to perform simple array operations – even though they can be performed easily by using the <code class="docutils literal notranslate"><span class="pre">Arrays</span></code> class. You should be able to write a few lines of code to do the following, from scratch (without the <code class="docutils literal notranslate"><span class="pre">Arrays</span></code> class):</p>
 <ul class="simple">
 <li><p>Find the smallest value in an array;</p></li>
@@ -120,14 +120,14 @@
 </ul>
 </section>
 <section id="the-break-and-continue-statements">
-<h2>The <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements<a class="headerlink" href="#the-break-and-continue-statements" title="Permalink to this heading"></a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements<a class="headerlink" href="#the-break-and-continue-statements" title="Link to this heading"></a></h2>
 <p>Should never be used. Unless you can write a 1000 word justification for their need.</p>
 </section>
 <section id="remember-a-few-useful-techniques">
-<h2>Remember a few useful techniques<a class="headerlink" href="#remember-a-few-useful-techniques" title="Permalink to this heading"></a></h2>
+<h2>Remember a few useful techniques<a class="headerlink" href="#remember-a-few-useful-techniques" title="Link to this heading"></a></h2>
 <p>The following are a few simple programming techniques that are worth memorizing.</p>
 <section id="swap-values-of-two-variables">
-<h3>Swap values of two variables<a class="headerlink" href="#swap-values-of-two-variables" title="Permalink to this heading"></a></h3>
+<h3>Swap values of two variables<a class="headerlink" href="#swap-values-of-two-variables" title="Link to this heading"></a></h3>
 <p>To swap the values of two variables <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>, we need to introduce a third, temporary variable.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">temporary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span>
 <span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span>
@@ -136,7 +136,7 @@
 </div>
 </section>
 <section id="ternary-operator">
-<h3>Ternary operator<a class="headerlink" href="#ternary-operator" title="Permalink to this heading"></a></h3>
+<h3>Ternary operator<a class="headerlink" href="#ternary-operator" title="Link to this heading"></a></h3>
 <p>The ternary operator <code class="docutils literal notranslate"><span class="pre">?:</span></code>, is a compact form of the if-else statement. For example, consider the code below.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">parity</span><span class="p">;</span><span class="w">      </span><span class="c1">//   This can also be written as:</span>
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">       </span><span class="c1">//   String parity = &quot;Odd&quot;;</span>
@@ -151,7 +151,7 @@
 </div>
 </section>
 <section id="cumulative-operations">
-<h3>Cumulative operations<a class="headerlink" href="#cumulative-operations" title="Permalink to this heading"></a></h3>
+<h3>Cumulative operations<a class="headerlink" href="#cumulative-operations" title="Link to this heading"></a></h3>
 <p>There are two basic types of cumulative operations: additive and multiplicative. The additive operation has the following pattern.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">accumulator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// often renamed to sum</span>
 <span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">someCondition</span><span class="p">)</span>
@@ -167,7 +167,7 @@
 <p>The examples above use <code class="docutils literal notranslate"><span class="pre">int</span></code> data types. They will work with any kind of numeric data. The additive operation also works with strings. The <code class="docutils literal notranslate"><span class="pre">+</span></code> between two strings is the concatenation operator. The <code class="docutils literal notranslate"><span class="pre">while</span></code>-loops above can be replaced with <code class="docutils literal notranslate"><span class="pre">for</span></code>-loops, as needed.</p>
 </section>
 <section id="cast-if-you-must-and-only-then">
-<h3>Cast if you must – and only then<a class="headerlink" href="#cast-if-you-must-and-only-then" title="Permalink to this heading"></a></h3>
+<h3>Cast if you must – and only then<a class="headerlink" href="#cast-if-you-must-and-only-then" title="Link to this heading"></a></h3>
 <p>Casting between types is, sometimes, a sign of poor design. For example,</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">preciseValue</span><span class="p">;</span>
 <span class="c1">// some awesome computing later ...</span>
@@ -188,7 +188,7 @@
 </div>
 </section>
 <section id="while-and-for-loops">
-<h3><code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops<a class="headerlink" href="#while-and-for-loops" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops<a class="headerlink" href="#while-and-for-loops" title="Link to this heading"></a></h3>
 <p>When to use one instead of the other? My simple rule of thumb is this: use <code class="docutils literal notranslate"><span class="pre">for</span></code> loops if you know in advance how many iterations you need; or you can easily calculate how many iterations you need. And use the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop when you don’t know in advance how many iterations you need or there is no way to compute them.</p>
 <p>For example, to count how many times a value appears in an array <code class="docutils literal notranslate"><span class="pre">a</span></code>, we have to look at every element of the array. We know, in advance that we need <code class="docutils literal notranslate"><span class="pre">a.length</span></code> iterations. This is a good case for a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Or, if we want to print numbers in some sequence; for example, the first 10 odd numbers:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
@@ -199,11 +199,11 @@
 <p>On the other hand, to tell if a value is merely present in the array, we need to check every element of the array until we find a matching value or until we reach the end of the array. This is a good case for a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
 </section>
 <section id="the-difference-between-while-and-do-while-loops">
-<h3>The difference between <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loops<a class="headerlink" href="#the-difference-between-while-and-do-while-loops" title="Permalink to this heading"></a></h3>
+<h3>The difference between <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loops<a class="headerlink" href="#the-difference-between-while-and-do-while-loops" title="Link to this heading"></a></h3>
 <figure class="align-right" id="id1" style="width: 66%">
 <img alt="../../_images/coyote.jpg" src="../../_images/coyote.jpg" />
 <figcaption>
-<p><span class="caption-text">An excellent illustration of the difference between <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">do</span></code> loops. The best attribution I have for this image is a <a class="reference external" href="https://www.reddit.com/r/ProgrammerHumor/comments/a5mghb/the_importance_of_knowing_how_to_correctly_use/">2018 post</a> in the <strong>ProgrammerHumor</strong> Reddit thread.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-text">An excellent illustration of the difference between <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">do</span></code> loops. The best attribution I have for this image is a <a class="reference external" href="https://www.reddit.com/r/ProgrammerHumor/comments/a5mghb/the_importance_of_knowing_how_to_correctly_use/">2018 post</a> in the <strong>ProgrammerHumor</strong> Reddit thread.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> loops cover all of our needs for repeating and iterating tasks. Why do we need a third kind of a loop mechanism? And so similar to an existing one? As the cartoon to the right shows, there is one key difference between the <code class="docutils literal notranslate"><span class="pre">do</span></code> loop and the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop. The <code class="docutils literal notranslate"><span class="pre">do</span></code> loop always executes at least one iteration. The while loop may not execute at all.</p>
@@ -249,7 +249,7 @@ To illustrate this difference, consider the following code:<div class="highlight
 <p>With the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, we need to obtain a value both outside and inside the loop, to carry on with our program. The <code class="docutils literal notranslate"><span class="pre">do</span></code> loop simplifies things because it does not require a value obtained outside itself.</p>
 </section>
 <section id="boolean-variables-are-versatile">
-<h3>Boolean variables are versatile<a class="headerlink" href="#boolean-variables-are-versatile" title="Permalink to this heading"></a></h3>
+<h3>Boolean variables are versatile<a class="headerlink" href="#boolean-variables-are-versatile" title="Link to this heading"></a></h3>
 <p>Early in their development, programmers seem to be more comfortable with boolean <em>expressions</em> than boolean <em>variables.</em> For example, a programmer may prefer to write code like the following:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">temperature</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">80</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">humidity</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">65</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">windSpeed</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">temperature</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span>
 <span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Better stay inside.&quot;</span><span class="p">)</span>
@@ -268,7 +268,7 @@ To illustrate this difference, consider the following code:<div class="highlight
 <p>Boolean variables can improve the readability of the code. They are definitely worth using.</p>
 </section>
 <section id="the-equal-to-operator-and-boolean-variables">
-<h3>The equal-to operator <code class="docutils literal notranslate"><span class="pre">==</span></code> and boolean variables<a class="headerlink" href="#the-equal-to-operator-and-boolean-variables" title="Permalink to this heading"></a></h3>
+<h3>The equal-to operator <code class="docutils literal notranslate"><span class="pre">==</span></code> and boolean variables<a class="headerlink" href="#the-equal-to-operator-and-boolean-variables" title="Link to this heading"></a></h3>
 <div class="line-block">
 <div class="line">Many programmers are tempted, in their early code to write expressions like</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(someBooleanVariable</span> <span class="pre">==</span> <span class="pre">true)</span></code>  or</div>
@@ -281,7 +281,7 @@ To illustrate this difference, consider the following code:<div class="highlight
 </div>
 </section>
 <section id="sequential-traversal-with-option-to-stop-early">
-<h3>Sequential traversal with option to stop early<a class="headerlink" href="#sequential-traversal-with-option-to-stop-early" title="Permalink to this heading"></a></h3>
+<h3>Sequential traversal with option to stop early<a class="headerlink" href="#sequential-traversal-with-option-to-stop-early" title="Link to this heading"></a></h3>
 <p>This technique allows us to search for something in a sequential fashion. Consider an array with names, e.g., <code class="docutils literal notranslate"><span class="pre">String[]</span> <span class="pre">names</span></code>, in which we wish to find if the name <code class="docutils literal notranslate"><span class="pre">&quot;Java&quot;</span></code> is present. A naive search may look like this:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">names</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
@@ -301,7 +301,7 @@ To illustrate this difference, consider the following code:<div class="highlight
 <p>The <code class="docutils literal notranslate"><span class="pre">while</span></code> loop above stops when a match is found or when it reaches the end of the array. Because the loop stops as soon as it finds a match, it is a bit faster than a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop as long as there is a match to be found and it’s not in the last element of the array.</p>
 </section>
 <section id="sentinel-values">
-<h3>Sentinel values<a class="headerlink" href="#sentinel-values" title="Permalink to this heading"></a></h3>
+<h3>Sentinel values<a class="headerlink" href="#sentinel-values" title="Link to this heading"></a></h3>
 <p>Sentinel values signal the end of a loop or the unsuccessful conclusion of some  process. To illustrate a sentinel value as a signal of an unsuccessful process, let’s expand the example above where we look for a specific word in a string array. Only this time we are interested not only in the presence (or absence) of that word, but also in its location within the array. And what if the word does not exist in the array? What will be the resulting position? That’s where a sentinel value comes handy: we declare that -1 will indicate the absence of the word.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// Assume word is not present</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">//  index for array</span>
@@ -326,7 +326,7 @@ To illustrate this difference, consider the following code:<div class="highlight
 <p>The loop above ends when the user enters the string <code class="docutils literal notranslate"><span class="pre">&quot;---&quot;`</span></code>. This string is the sentinel value that we are watching for, and when we detect it, we know it’s time to end the repetitive cycle.</p>
 </section>
 <section id="off-by-one-errors-fencepost">
-<h3>Off-by-one errors (fencepost)<a class="headerlink" href="#off-by-one-errors-fencepost" title="Permalink to this heading"></a></h3>
+<h3>Off-by-one errors (fencepost)<a class="headerlink" href="#off-by-one-errors-fencepost" title="Link to this heading"></a></h3>
 <p>These errors arise from the difference between <em>spans</em> and <em>counts</em>. For example, the span between the numbers 8 and 11 is 3; but the count of numbers between 8 and 11 is 4. Spans and counts are <em>off-by-one</em>. Usually, this is not a big deal, but it can be quite annoying when using loops and expect some uniformity in the appearance of our data. For example:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -356,7 +356,7 @@ To illustrate this difference, consider the following code:<div class="highlight
 </div>
 </section>
 <section id="printf-instead-of-print-or-println">
-<h3><code class="docutils literal notranslate"><span class="pre">printf</span></code> instead of <code class="docutils literal notranslate"><span class="pre">print</span></code> or <code class="docutils literal notranslate"><span class="pre">println</span></code><a class="headerlink" href="#printf-instead-of-print-or-println" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">printf</span></code> instead of <code class="docutils literal notranslate"><span class="pre">print</span></code> or <code class="docutils literal notranslate"><span class="pre">println</span></code><a class="headerlink" href="#printf-instead-of-print-or-println" title="Link to this heading"></a></h3>
 <p>Printing information with the <code class="docutils literal notranslate"><span class="pre">println</span></code> command is quick and therefore convenient. Together with the plain <code class="docutils literal notranslate"><span class="pre">print</span></code> command, programmers can separate the output across multiple lines. And that’s as much control they have over the appearance of the output.</p>
 <p>The formatted print command, <code class="docutils literal notranslate"><span class="pre">printf</span></code> offers significantly more control over the output of the program. Admittedly, the command can be intimidating in the beginning, but it is worth the effort. First, because the flexibility it offers and second because once we learn how to use it, we can transfer the skill to other programming languages.</p>
 <p>Start with a simple program like the one below.</p>
@@ -373,7 +373,7 @@ To illustrate this difference, consider the following code:<div class="highlight
 you begin to develop familiarity with simple formatted output, <a class="reference external" href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">begin reading the formatting documentation from Java</a>.</p>
 </section>
 <section id="pulling-digits-out-of-an-integer">
-<h3>Pulling digits out of an integer<a class="headerlink" href="#pulling-digits-out-of-an-integer" title="Permalink to this heading"></a></h3>
+<h3>Pulling digits out of an integer<a class="headerlink" href="#pulling-digits-out-of-an-integer" title="Link to this heading"></a></h3>
 <div class="line-block">
 <div class="line">Assuming that we have an integer number properly initialized, e.g,</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">n</span> <span class="pre">=</span> <span class="pre">1234;</span></code></div>
@@ -394,7 +394,7 @@ you begin to develop familiarity with simple formatted output, <a class="referen
 </div>
 </section>
 <section id="enhanced-for-loop">
-<h3>Enhanced for-loop<a class="headerlink" href="#enhanced-for-loop" title="Permalink to this heading"></a></h3>
+<h3>Enhanced for-loop<a class="headerlink" href="#enhanced-for-loop" title="Link to this heading"></a></h3>
 <p>Given an array of objects, for example a <code class="docutils literal notranslate"><span class="pre">String[]</span> <span class="pre">words</span></code>, we can process each of its elements using the plain old for-loop:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">words</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">words</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
