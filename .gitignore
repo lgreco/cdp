@@ -1,3 +1,4 @@
+!*.graffle
 .DS_Store
 .buildinfo
 .git/
