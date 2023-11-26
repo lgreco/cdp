@@ -1,11 +1,13 @@
 COMP 264 Computer Systems
 ============================
 
-The focus of this course is data structures and the algorithms that support them. The course looks at how to organize, manage, process, sort, and compare data; how fast and efficiently can be done; and how such operations can be supported by programming languages in general and Java in particular.
+This course studies the hierarchy of abstractions and implementations that constitute a modern computer system, with a particular focus on issues of interest to programmers, typically including some systems programming instruction.
+
 
 ..	toctree::
 	:maxdepth: 1
 	
+	Outline <outline>
 	Course organization <organization>
 	Reading material <reading>
 	Leo's notes <notes>

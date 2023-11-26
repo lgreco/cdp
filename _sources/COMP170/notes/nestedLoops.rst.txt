@@ -16,7 +16,7 @@ Compute the sum of :math:`M` integers, beginning with :math:`N`. For example, if
 
 The relevant code is shown below and the full code is available on `GitHub <https://github.com/lgreco/cdp/blob/master/source/COMP170/notes/IntroProgramming/Loops/NestedLoops/src/ASimpleProblem.java>`_. A method takes two arguments, the beginning number :math:`N` and how many subsequent integers to add, :math:`M`. Then it builds a loop beginning at :math:`i=N` and continuing while :math:`i<N+M`. The last term that satisfies this condition is :math:`N+M-1`.
 
-.. literalinclude:: ../../../../../Projects/IntroProgramming/Loops/NestedLoops/src/ASimpleProblem.java 
+.. literalinclude:: ../../../../../IntroProgramming/Loops/NestedLoops/src/ASimpleProblem.java 
    :linenos:
    :lines: 16-23
    :language: java  
