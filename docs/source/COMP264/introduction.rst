@@ -1,3 +1,4 @@
+============================
 COMP 264 Computer Systems
 ============================
 
@@ -8,7 +9,8 @@ This course studies the hierarchy of abstractions and implementations that const
 	:maxdepth: 1
 	
 	Outline <outline>
-	Course organization <organization>
+	Textbook <textbook>
 	Reading material <reading>
 	Leo's notes <notes>
+	Course organization <../shared/organizationWithUngrading>
 	

@@ -13,11 +13,10 @@ Instructor's expectations
 
 * The internet is full of sites with “solutions” to problems. Be careful when using them. Most of the stuff posted there is **junk.** If you use code from these sites, you must **demonstrate** that you understand it fully.
 
-* Use the Programmer’s Pact as a checklist before you submit code for evaluation. 
+* If applicable, use the Programmers Pact as a checklist before you submit code for evaluation. 
 
 * No communications starting with the greeting **“hey”.**
  
-
 * For code troubleshooting **attach the program file** to an email or message. Please, no screenshots or links to cloud storage services. (If you are using a hosted IDE like Collaboratory or repl.it, send me a link to the code but make sure the file is shared).
 
 * **Be on time.** Commuting around Chicago is always full of surprises. Delays may be inevitable. Nevertheless, punctuality is a formidable professional skill. Learn it, practice it!
