@@ -3,9 +3,10 @@ COMP 363+460 Algorithms
 ==========================================================
 
 ..	toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	
-	Course organization <organization>
+	Outline <outline>
+	Textbook <textbook>
 	Reading material <reading>
 	Leo's notes <notes>
-
+	Course organization <../shared/organizationWithUngrading>
