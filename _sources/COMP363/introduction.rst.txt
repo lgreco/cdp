@@ -3,7 +3,7 @@ COMP 363+460 Algorithms
 ==========================================================
 
 ..	toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	
 	Outline <outline>
 	Textbook and tools <textbook>

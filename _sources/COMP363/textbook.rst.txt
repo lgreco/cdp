@@ -4,7 +4,7 @@ Textbook and tools
 Required reading
 ================
 
-`<em>Algorithms</em> <https://jeffe.cs.illinois.edu/teaching/algorithms/>`__, by Jeff Erikson. The book is available at no cost in PDF format. Inexpensive printed copies are also available for purchase.
+`Algorithms <https://jeffe.cs.illinois.edu/teaching/algorithms/>`__, by Jeff Erikson. The book is available at no cost in PDF format. Inexpensive printed copies are also available for purchase.
 
 Programming environment
 =======================
