@@ -2,24 +2,50 @@
 Outline
 -------
 
-This is the tentative outline for the course.
+The undergraduate course in algorithms comprises the following topics. Each unit spans approximately one week during the spring or the fall term. There is a weeklong assignment for each unit. Two of these assignments are designated as *exams:* a midterm and a last (final) exam.
 
-- Unit 1: tools and techniques. Python, the *Markdown* markup language, LaTex (another markup language), discrete mathematics. Upper bound notation (big-oh :math:`\mathcal{O}()` notation). Example of a simple algorithm: Newton's method to find :math:`\sqrt{x}`.  
+- Unit 1: tools and techniques. Python, the *Markdown* markup language, LaTeX (another markup language), discrete mathematics. Upper bound notation (big-oh :math:`\mathcal{O}()` notation). Example of a simple algorithm: Newton's method to find :math:`\sqrt{x}`.  
+
 
 - Unit 2: String alignment. Problems with optimal substructure. From brute force with nearly infinite scenarios to practical solutions that can be delivered in polynomial time. 
 
-- Unit: 
+- Unit 3: Recurrence relations. Divide and Conquer techniques. Derivation of the *Master Theorem.* Good recursion. Bad recursion. Factorial and Fibonacci computations. Multiplying *very* large integers.
 
-- Unit: 
+- Unit 4: Memoization and Dynamic Programming. 0/1 Knapsack (or, how to plan a museum heist). Minimum Weight Independent Set. 
 
-- Unit: 
+- Unit 5: Simple graphs. Review of graph definition and basic properties. Graph types. Parts of a graph. Representing a graph with arrays. Graph traversals. Stack v. queue-based traversals of a graph. Labeling and counting components.
 
-- Unit: 
+- Unit 6: Minimum spanning trees. Boruvka's algorithm. Relaxing tense edges. Correctness and complexity considerations. Evolution of Boruvka to Kruskal, Dijkstra and other variations.
 
-- Unit: 
+- Unit 7: Directed graphs. Adjacency matrix. Determining the reachability of a vertex. Shortest paths. Detecting cycles.
 
-- Unit: 
+- Unit 8: Maximum flows and minimum cuts or why Chicago is a more valuable strategic target than NYC. 
 
-- Unit: 
+- Unit 9: Greedy algorithms: Huffman encoding. 
 
-- Unit: 
+- Unit 10: Topological ordering.
+
+- Unit 11: P v NP and complexity theory. The SAT3 problem.
+
+For the graduate courses we combine topics as follows
+
+- Week 1: units 1 and 3
+- Week 2: units 2 and 4
+- Week 3: units 5 and 6
+- Week 4: units 7 and 10
+- Week 5: unit 8, by itself
+- Week 6: unit 9, by itself
+- Week 7: unit 11, by itself
+
+Then, for the last part of the term (weeks 8-12) we focus on special topics, including
+
+- Artificial neural networks
+- Large language models
+- Signal processing
+- Quantum computing
+- Cryptography
+- Numerical methods, etc.
+
+The precise mix of advanced topics depends on students' preferences and the overall group dynamic of the class.
+
+**Coding:** You may use any language you wish in the course. Classroom examples are written in Python as `Jupyter Notebooks <https://en.wikipedia.org/wiki/Project_Jupyter>`__.
