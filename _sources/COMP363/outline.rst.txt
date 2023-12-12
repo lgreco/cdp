@@ -4,7 +4,7 @@ Outline
 
 The undergraduate course in algorithms comprises the following topics. Each unit spans approximately one week during the spring or the fall term. There is a weeklong assignment for each unit. Two of these assignments are designated as *exams:* a midterm and a last (final) exam.
 
-- Unit 1: tools and techniques. Python, the *Markdown* markup language, LaTeX (another markup language), discrete mathematics. Upper bound notation (big-oh :math:`\mathcal{O}()` notation). Example of a simple algorithm: Newton's method to find :math:`\sqrt{x}`.  
+- Unit 1: Tools and techniques. Python, the *Markdown* markup language, LaTeX (another markup language), discrete mathematics. Upper bound notation (big-oh :math:`\mathcal{O}()` notation). Example of a simple algorithm: Newton's method to find :math:`\sqrt{x}`.  
 
 
 - Unit 2: String alignment. Problems with optimal substructure. From brute force with nearly infinite scenarios to practical solutions that can be delivered in polynomial time. 
@@ -44,6 +44,7 @@ Then, for the last part of the term (weeks 8-12) we focus on special topics, inc
 - Signal processing
 - Quantum computing
 - Cryptography
+- Complexity spaces
 - Numerical methods, etc.
 
 The precise mix of advanced topics depends on students' preferences and the overall group dynamic of the class.
