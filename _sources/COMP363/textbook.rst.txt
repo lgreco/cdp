@@ -15,7 +15,7 @@ Coding and implementation
 
 For this course, I use Jupyter Notebooks, hosted in Google's Colaboratory. These notebooks blend Python code and rich-text documentation that supports superb mathematical typography through LaTeX. 
 
-Jupyter Notebooks are, according to the journal *Nature*, one of the 10 computing projects that transformed Science in 2021. (`The article is available <https://www.nature.com/articles/d41586-021-00075-2>`__, through the LUC libraries, and worth reading.)
+Jupyter Notebooks are, according to the journal *Nature*, one of the 10 computing projects that transformed Science. (`The article is available <https://www.nature.com/articles/d41586-021-00075-2>`__, through the LUC libraries, and worth reading.)
 
 If you have a ``gmail`` account, you have access to Google Colaboratory. If you do not have a ``gmail`` account, you have a few options. 
 
