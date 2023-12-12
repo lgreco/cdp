@@ -23,7 +23,7 @@ If you have a ``gmail`` account, you have access to Google Colaboratory. If you 
 
 * Otherwise, you could download and install a free version of the `Anaconda Navigator <https://docs.anaconda.com/free/navigator/install/>`__. Then you can fork the course's Jupyter Notebooks from GitHub and execute them on the Navigator. Please take into consideration that the instructor cannot provide technical support for downloading, installing, and maintaining Anacoda on your computer.
 
-* If you prefer to use a different language than Python, you may do so. Most IDEs for languages like Java, C, C++, etc, however, do not support (easily) rich-text documentation or mathematical typography. The course does not expect you to produce much of either, but you will need to write some *Markdown* (available in Replit) and LaTeX (not available in Replit).
+* If you prefer to use a different language than Python, you may do so. Most IDEs for languages like Java, C, C++, etc, however, do not support (easily) rich-text documentation or mathematical typography. The course does not expect you to produce much of either, but it would be nice if you had the resources to try out *Markdown* and LaTeX.
 
 Documentation
 .............
