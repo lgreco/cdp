@@ -9,7 +9,7 @@ This course studies the hierarchy of abstractions and implementations that const
 	:maxdepth: 1
 	
 	Outline <outline>
-	Textbook <textbook>
+	Textbook and tools <textbook>
 	Reading material <reading>
 	Leo's notes <notes>
 	Course organization <../shared/organizationWithUngrading>
