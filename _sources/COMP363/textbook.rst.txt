@@ -13,9 +13,7 @@ Coding and implementation
 .........................
 
 
-For this course, I use Jupyter Notebooks, hosted in Google's Colaboratory. These notebooks blend Python code and rich-text documentation that supports superb mathematical typography through LaTeX. 
-
-Jupyter Notebooks are, according to the journal *Nature*, one of the 10 computing projects that transformed Science. (`The article is available <https://www.nature.com/articles/d41586-021-00075-2>`__, through the LUC libraries, and worth reading.)
+For this course, I use Jupyter Notebooks, hosted in Google's Colaboratory. These notebooks blend Python code and rich-text documentation that supports superb mathematical typography through LaTeX. These notebooks are, according to *Nature*, one of the 10 computing projects that transformed Science. (`The article is available <https://www.nature.com/articles/d41586-021-00075-2>`__, through the LUC libraries, and worth reading.)
 
 If you have a ``gmail`` account, you have access to Google Colaboratory. If you do not have a ``gmail`` account, you have a few options. 
 
@@ -28,7 +26,7 @@ If you have a ``gmail`` account, you have access to Google Colaboratory. If you 
 Documentation
 .............
 
-Rich-text documentation in this course is done with *Markdown*. Mathematics are typeset with *LaTeX*. You are **not** expected to be familiar with *Markdown* or *LaTeX.* And there is no requirement to learn either. But both are good skills to have and you may want to spend some time exploring them. *Markdown* easy to learn; *LaTeX* is a bit more demanding. 
+Rich-text documentation in this course is done with *Markdown*. Mathematics are typeset with *LaTeX*. **You are not expected** to be familiar with *Markdown* or *LaTeX.* And there is no requirement to learn either. But both are good skills to have and you may want to spend some time exploring them. *Markdown* easy to learn; *LaTeX* is a bit more demanding. 
 
 To learn more about these tools:
 
