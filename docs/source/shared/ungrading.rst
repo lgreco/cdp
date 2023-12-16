@@ -42,7 +42,7 @@ End-of-term reflection
 * Did you miss any significant work? 
 * Is there anything you are particularly proud of?
 * If, in the midterm reflection, you identified any areas for improvement/focus, how did you do?
-* What letter grade would you give yourself in this course? Choose from A, B, C, or D. (Ideally, I would give everyone the grade they give themselves, but I reserve the right to raise or lower grades as appropriate.)
+* What letter grade would you give yourself in this course? Choose from A, B, C, or D. (Ideally, I would give everyone the grade they give themselves, but I reserve the right to raise or lower grades as appropriate. Also notice that the grade you propose (A,B,C,D) is a range. The actual grade may vary slightly. For example, you may propose a B but end up with an A-. Or you may propose a B and earn a B-.)
 
 Frequently Asked Questions about *Ungrading*
 .............................................
