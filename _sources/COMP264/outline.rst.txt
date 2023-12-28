@@ -1,27 +1,54 @@
-
-
 Outline
 -------
 
-This is the tentative outline for the course.
+The tentative outline for the course follows the basic structure of the textbook. These topics may not be covered in the order appearing below.
 
+- **Introduction to Computer Systems:**
+Overview of computer organization and architecture.
+Basics of computer hardware and software interaction.
+Machine-level representation of data.
 
-- **Introduction to Computer Architecture and Organization:** Basics of computer architecture, von Neumann architecture, CPU, memory, I/O devices, etc. Instruction set architecture (ISA), addressing modes, and assembly language basics.
+- **Machine-Level Representation of Programs:**
+Understanding assembly language.
+Control and data representation in the CPU.
+Memory hierarchy and its impact on performance.
 
-- **Digital Logic and Circuits:** Boolean algebra, logic gates, combinational and sequential circuits. Design and analysis of digital circuits, flip-flops, registers, and counters.
+- **Processor Architecture:**
+CPU design principles.
+Instruction set architecture (ISA).
+Pipelining and its optimization techniques.
 
-- **Processor Architecture and Design:** CPU organization, datapath, control unit, instruction pipelining. Performance metrics, benchmarks, and techniques for improving processor performance.
+- **Optimizing Program Performance:**
+Understanding performance metrics.
+Techniques for enhancing program efficiency.
+Analysis of benchmarks and profiling tools.
 
-- **Memory Systems:** Types of memory (cache, primary, secondary), memory hierarchy, and memory management techniques. Virtual memory, paging, segmentation, and cache memory design principles.
+- **Memory Hierarchy:**
+Caching principles and optimizations.
+Virtual memory concepts and management.
+Memory allocation strategies and their impact.
 
-- **Input/Output Systems:** I/O organization, interfaces, and communication protocols. Device drivers, interrupt handling, and I/O performance optimization.
+- **Linking:**
+Linking process and executable file formats.
+Dynamic linking vs. static linking.
+Library design and usage.
 
-- **Storage Systems and File Systems:** Disk storage technologies, RAID, and storage subsystems. File system structures, access methods, and file organization.
+- **Exceptional Control Flow:**
+Handling exceptions and interrupts.
+Process control and context switching.
+System calls and their implementation.
 
-- **Operating Systems Concepts:** Overview of operating systems, processes, threads, and scheduling algorithms. Memory management, file systems, I/O systems, and synchronization techniques.
+- **I/O System:s**
+Principles of I/O devices and controllers.
+Buffering and caching for I/O performance.
+File system structures and organization.
 
-- **Networking Fundamentals:** Introduction to computer networks, OSI model, TCP/IP protocols. Network devices, routing, switching, and network security basics.
+- **Network Programming:**
+Basics of network protocols.
+Socket programming and communication.
+Client-server model and networked applications.
 
-- **Embedded Systems and Real-time Systems:** Basics of embedded systems, microcontrollers, and their applications. Real-time operating systems, scheduling in real-time systems, and challenges in real-time computing.
-
-- **Case Studies and Emerging Trends:** Analysis of case studies involving computer systems design and implementation. Discussion on emerging trends such as quantum computing, edge computing, and IoT in computer systems.
+- **Security and Protection:**
+Threats to computer systems.
+Access control and authentication mechanisms.
+Principles of cryptography and secure communication.
