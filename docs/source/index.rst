@@ -20,7 +20,6 @@ site.
    :caption: Courses
    
    COMP264/introduction
-   COMP271/introduction
    COMP306/introduction
    COMP363/introduction
 
@@ -30,6 +29,7 @@ site.
    
    COMP163/introduction
    COMP170/introduction
+   COMP271/introduction
    
    
 .. toctree::
