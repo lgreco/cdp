@@ -6,7 +6,6 @@ The undergraduate course in algorithms comprises the following topics. Each unit
 
 - Unit 1: Tools and techniques. Python, the *Markdown* markup language, LaTeX (another markup language), discrete mathematics. Upper bound notation (big-oh :math:`\mathcal{O}()` notation). Example of a simple algorithm: Newton's method to find :math:`\sqrt{x}`.  
 
-
 - Unit 2: String alignment. Problems with optimal substructure. From brute force with nearly infinite scenarios to practical solutions that can be delivered in polynomial time. 
 
 - Unit 3: Recurrence relations. Divide and Conquer techniques. Derivation of the *Master Theorem.* Good recursion. Bad recursion. Factorial and Fibonacci computations. Multiplying *very* large integers.
@@ -31,19 +30,19 @@ For the graduate courses we combine topics as follows
 
 - Week 1: units 1 and 3
 - Week 2: units 2 and 4
-- Week 3: units 5 and 6
-- Week 4: units 7 and 10
-- Week 5: unit 8, by itself
-- Week 6: unit 9, by itself
-- Week 7: unit 11, by itself
+- Week 3: units 5, 7, 7, and 10
+- Week 4: unit 8, by itself
+- Week 5: unit 9, by itself
+- Week 6: unit 11, by itself
 
-Then, for the last part of the term (weeks 8-12) we focus on special topics, including
+Depending on everyone's background and prior experience in the graduate class, we could condense the review part even more. Then, for the last part of the term (weeks 6-12) we focus on special topics, including
 
 - Artificial neural networks
 - Large language models
 - Signal processing
 - Quantum computing
 - Cryptography
+- Hypergraphs
 - Complexity spaces
 - Numerical methods, etc.
 
