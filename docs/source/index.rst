@@ -31,20 +31,12 @@ site.
    COMP163/introduction
    COMP170/introduction
    
-
-   
-.. toctree::
-   :maxdepth: 1
-   :caption: Projects
-   
-   DEI/DEI
-   DBD/introduction
-
    
 .. toctree::
    :maxdepth: 1
    :caption: Misc
    
+   Top10
    LeoIrakliotis
 
 
