@@ -17,7 +17,7 @@ The tentative outline for the course follows the basic structure of the textbook
 
 - **Exceptional Control Flow:** Handling exceptions and interrupts. Process control and context switching.System calls and their implementation.
 
-- **I/O System:s** Principles of I/O devices and controllers. Buffering and caching for I/O performance. File system structures and organization.
+- **I/O Systems:** Principles of I/O devices and controllers. Buffering and caching for I/O performance. File system structures and organization.
 
 - **Network Programming:** Basics of network protocols. Socket programming and communication. Client-server model and networked applications.
 
