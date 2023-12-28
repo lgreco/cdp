@@ -24,7 +24,7 @@ The undergraduate course in algorithms comprises the following topics. Each unit
 
 - Unit 10: Topological ordering.
 
-- Unit 11: P v NP and complexity theory. The SAT3 problem.
+- Unit 11: P versus NP and complexity theory. The SAT3 problem.
 
 The graduate course (COMP 460) comprises a review/refresh part and an advanced part. In the review part, we combine topics as follows:
 

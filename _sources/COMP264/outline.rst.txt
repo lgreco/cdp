@@ -3,10 +3,7 @@ Outline
 
 The tentative outline for the course follows the basic structure of the textbook. These topics may not be covered in the order appearing below.
 
-- **Introduction to Computer Systems:**
-Overview of computer organization and architecture.
-Basics of computer hardware and software interaction.
-Machine-level representation of data.
+- **Introduction to Computer Systems:** Overview of computer organization and architecture. Basics of computer hardware and software interaction. Machine-level representation of data.
 
 - **Machine-Level Representation of Programs:** Understanding assembly language. Control and data representation in the CPU. Memory hierarchy and its impact on performance.
 
