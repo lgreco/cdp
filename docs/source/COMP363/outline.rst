@@ -26,7 +26,7 @@ The undergraduate course in algorithms comprises the following topics. Each unit
 
 - Unit 11: P v NP and complexity theory. The SAT3 problem.
 
-For the graduate courses we combine topics as follows
+The graduate course (COMP 460) comprises a review/refresh part and an advanced part. In the review part, we combine topics as follows:
 
 - Week 1: units 1 and 3
 - Week 2: units 2 and 4
@@ -35,7 +35,7 @@ For the graduate courses we combine topics as follows
 - Week 5: unit 9, by itself
 - Week 6: unit 11, by itself
 
-Depending on everyone's background and prior experience in the graduate class, we could condense the review part even more. Then, for the last part of the term (weeks 6-12) we focus on special topics, including
+Depending on everyone's background and prior experience in the graduate class, we could condense the review part even more. Then, for the last part of the term (weeks 6-12) we focus on advanced and special topics, including
 
 - Artificial neural networks
 - Large language models
