@@ -32,23 +32,23 @@ Top-10 papers in Computer Science
 
 This is also a very subjective list whose primary focus is the history of evolution in computing. The list also reflects my own interests in computing which lie more on the applied side of things. No field, of course, can be summarized in just ten papers. These are only a beginning -- and many of the papers below were *the* beginning of a new discipline within computing.
 
-* *A Mathematical Theory of Communication* by Claude Shannon (1948)
+* *A Mathematical Theory of Communication,* by Claude Shannon (1948)
 
-* *A Relational Model of Data for Large Shared Data Banks* by E F Codd (1970)
+* *A Relational Model of Data for Large Shared Data Banks,* by E F Codd (1970)
 
-* *A Protocol for Packet Network Intercommunication* by Vint Cerf and Robert Kahn (1974)
+* *A Protocol for Packet Network Intercommunication,* by Vint Cerf and Robert Kahn (1974)
 
-* *The Evolution of the UNIX Time-sharing System* by Dennis Ritchie and Ken Thompson (1974) 
+* *The Evolution of the UNIX Time-sharing System,* by Dennis Ritchie and Ken Thompson (1974) 
 
-* *The Theory of Data* by Peter Chen (1976) 
+* *The Theory of Data,* by Peter Chen (1976) 
 
-* *The Dynamics of Software Development* by Edsger W. Dijkstra (1977)
+* *The Dynamics of Software Development,* by Edsger W. Dijkstra (1977)
 
-* *Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs* by John Backus (1977)
+* *Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs,* by John Backus (1977)
 
-* *Time, Clocks, and the Ordering of Events in a Distributed System* by Leslie Lamport (1978)
+* *Time, Clocks, and the Ordering of Events in a Distributed System,* by Leslie Lamport (1978)
 
-* *Reflections on Trusting Trust* by Ken Thompson (1984)
+* *Reflections on Trusting Trust,* by Ken Thompson (1984)
  
-* *MapReduce: Simplified Data Processing on Large Clusters* by Jeffrey Dean and Sanjay Ghemawat (2004)
+* *MapReduce: Simplified Data Processing on Large Clusters,* by Jeffrey Dean and Sanjay Ghemawat (2004)
 
