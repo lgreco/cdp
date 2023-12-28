@@ -3,7 +3,7 @@ Top-10 books in Computer Science
 
 These are the 10 most important books that aspiring computer scientists should have on their desk. The list is, of course, highly subjective.
 
-* *The C Programming Language*.
+* *The C Programming Language*,  by Brian Kernighan and Dennis Ritchie.
 
 * *Structure and Interpretation of Computer Programs,* by Harold Abelson and Gerald Jay Sussman.
 
@@ -11,7 +11,7 @@ These are the 10 most important books that aspiring computer scientists should h
 
 * *The Art of Computer Programming,* Volume 1, by Donald E. Knuth.
 
-* *An Introduction to Database Systems, * by C. J. Date.
+* *An Introduction to Database Systems,* by C. J. Date.
 
 * *The Mythical Man-Month: Essays on Software Engineering,* by Frederick P. Brooks Jr.
 
@@ -21,7 +21,7 @@ These are the 10 most important books that aspiring computer scientists should h
 
 * *Numerical Recipes.*
  
-* * *Computer Graphics: Principles and Practice,* by John F. Hughes, Andries van Dam, Morgan McGuire, David F. Sklar, James D. Foley, Steven K. Feiner, and Kurt Akeley.
+* *Computer Graphics: Principles and Practice,* by John F. Hughes, Andries van Dam, Morgan McGuire, David F. Sklar, James D. Foley, Steven K. Feiner, and Kurt Akeley.
 
 Top-10 papers in Computer Science
 ==================================
