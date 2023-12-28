@@ -1,5 +1,8 @@
+Top-10 books and papers in computing
+====================================
+
 Top-10 books in Computer Science
-=================================
+--------------------------------
 
 These are the 10 most important books that aspiring computer scientists should have on their desk. The list is, of course, highly subjective.
 
@@ -24,7 +27,8 @@ These are the 10 most important books that aspiring computer scientists should h
 * *Computer Graphics: Principles and Practice,* by John F. Hughes, Andries van Dam, Morgan McGuire, David F. Sklar, James D. Foley, Steven K. Feiner, and Kurt Akeley.
 
 Top-10 papers in Computer Science
-==================================
+----------------------------------
+
 
 This is also a very subjective list whose primary focus is the history of evolution in computing. The list also reflects my own interests in computing which lie more on the applied side of things. No field, of course, can be summarized in just ten papers. These are only a beginning -- and many of the papers below were *the* beginning of a new discipline within computing.
 
