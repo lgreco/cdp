@@ -5,13 +5,15 @@ Instructor's expectations
 
 * Read your **email** regularly and *always* before heading out to class.  
 
-* **Read** everything carefully! Assignments, announcements, class notes, and program contents contain 99% of the information you need.
+* **Read** everything carefully! Assignments, announcements, class notes, email messages, and program contents contain 99% of the information you need.
 
 * Make an **effort.** If you cannot finish the code, show some pseudocode.
 
 * **Ask for help.** Spend between 20 and 40 minutes on an assignment. If you feel you are not making progress, ask for help.
 
-* The internet is full of sites with “solutions” to problems. Be careful when using them. Most of the stuff posted there is **junk.** If you use code from these sites, you must **demonstrate** that you understand it fully.
+* The internet is full of sites with “solutions” to problems. Be careful when using them. Most of the stuff posted there is **junk.** If you use code you fond online, you must **demonstrate** that you understand it fully. Such demonstration makes the difference between *learning* and *plagiarizing.*
+
+* If you employ at AI tool, cite its use and list the prompts you used to derive your work. Work that has been found to be produced by generative AI without citation and listing of prompts, will receive a 0 grade.
 
 * If applicable, use the Programmers Pact as a checklist before you submit code for evaluation. 
 
@@ -31,5 +33,5 @@ Instructor's expectations
 
 * **Come to class.**
 
-* If you are taking an **asynchronous** course with me, please schedule at least 4 meetings with me during the term. These meetings must be spaced out throughout the semester. Plan your first meeting with me during week 3. It is a good idea to plan one meeting for the week after the midterm, to discuss progress. I also expect you to be in touch with me on a weekly basis, via email or messaging, with questions about your assignments, study, etc.
+* If you are taking an **asynchronous** course with me, please follow the course's directions for 1-on-1 meetings with me. These meetings must be spaced out throughout the semester. Plan your first meeting with me during week 2 or 3. I also expect you to be in touch with me on a weekly basis, via email or messaging, with questions about your assignments, study, etc.
 
