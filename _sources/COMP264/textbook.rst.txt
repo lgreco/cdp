@@ -10,3 +10,8 @@ Textbook
 
 
 These books sell for about $30-$40 in online stores. Used copies sell for a bit less. Buying used is a good sustainability practice, and you get to save a few bucks.
+
+Tools
+......
+
+Some of the coding in the course requires a C compiler. MacOS and Linux come with C compilers. Windows can be configured to work with C as well. A safer option is to use the shell in a hosted service like Replit. Alternatively, you may use a Raspberry Pi or similar single-board computers than can be purchased for less than $90.
