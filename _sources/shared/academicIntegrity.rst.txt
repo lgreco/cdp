@@ -1,6 +1,6 @@
 
 Academic integrity
-------------------
+++++++++++++++++++
 
 
 Students are expected and encouraged to work together. It is also expected that students will explore the vastness of the internet to discover information, knowledge, and solutions to problems. I consider all that to be part of your learning experience. It is up to you, however, to demonstrate your learning. 

@@ -1,6 +1,6 @@
 
 Instructor's expectations
---------------------------------------------------------
+++++++++++++++++++++++++++++++++++
 
 
 * Read your **email** regularly and *always* before heading out to class.  
