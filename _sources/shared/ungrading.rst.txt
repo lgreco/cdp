@@ -45,7 +45,7 @@ End-of-term reflection
 * What letter grade would you give yourself in this course? Choose from A, B, C, or D. (Ideally, I would give everyone the grade they give themselves, but I reserve the right to raise or lower grades as appropriate. Also notice that the grade you propose (A,B,C,D) is a range. The actual grade may vary slightly. For example, you may propose a B but end up with an A-. Or you may propose a B and earn a B-.)
 
 Frequently Asked Questions about *Ungrading*
-.............................................
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
 
 **What is the grade I see in Sakai?** Everytime you submit an assignment, you will earn 1 point. This is not the score of the assignment. This is just Sakai's way of keeping track who submitted an assignment. Whether your assignment is spot on or off the mark, you will earn 1 point for submitting it. These points do not translate to a score that determines a course grade.
