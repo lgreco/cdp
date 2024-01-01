@@ -1,7 +1,7 @@
 
 
 *Ungrading* and how it works
---------------------------------------------------------
+++++++++++++++++++++++++++++++++++
 
 *Ungrading* is a low-stress approach to evaluating progress through a course. 
 

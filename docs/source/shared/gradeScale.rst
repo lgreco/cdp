@@ -1,6 +1,6 @@
 
 Grade scale and grading principle
----------------------------------
+++++++++++++++++++++++++++++++++++
 
 Grading measures (or should measure) learning. Often, we learn the subject of the course. And sometimes we learn that it is not our favorite subject, or that it was not the best time to study for it. The principle that guides my grading is simple: reward learning at any level, even if it leads to the realization that it was not the best time for someone to take this course. Based on this principle, I use the following grade scale:
 
