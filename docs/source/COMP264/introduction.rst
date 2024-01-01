@@ -11,6 +11,6 @@ This course studies the hierarchy of abstractions and implementations that const
 	Outline <outline>
 	Textbook and tools <textbook>
 	Reading material <reading>
-	Leo's notes <notes>
 	Course organization <../shared/organizationWithUngrading>
+	Leo's notes <notes>
 	
