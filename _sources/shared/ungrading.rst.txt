@@ -20,7 +20,7 @@ As a teacher, I have found that most students have a good understanding of their
 
 
 Reflection statements
-+++++++++++++++++++++
+,,,,,,,,,,,,,,,,,,,,,
 
 
 For the midterm and end-of-term reflections statements, I use `Jesse Stommel's suggestions <https://www.jessestommel.com/ungrading-an-faq/>`__ with some additional questions.
