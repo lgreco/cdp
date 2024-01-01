@@ -1,7 +1,7 @@
 
 
 Grading scheme
---------------------------------------------------------
+++++++++++++++++++++++++++++++++++
 
 Course performance is determined using regular assignments, a midterm, and a final. Grading scheme aside, the objective of assessments in this course is to ensure **that students are learning.** In this context students make mistakes, understand them, and do not repeat them. To focus on improved performance, there will no grades given to assignments and exams. You will receive feedback about what you did well and what you need to work on. Your adherence to this feedback, as demonstrated in subsequent assignments, will determine your course grade. This style of assessment is called *ungrading* or *consultative assessment.*
 
