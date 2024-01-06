@@ -22,7 +22,7 @@ These are the 10 most important books that aspiring computer scientists should h
  
 * *Modern Operating Systems,* by Andrew S. Tanenbaum and Herbert Bos.
 
-* *Numerical Recipes.*
+* *Data Structures + Algorithms = Programs,* by Niklaus Wirth (the Pascal edition).
  
 * *Computer Graphics: Principles and Practice,* by John F. Hughes, Andries van Dam, Morgan McGuire, David F. Sklar, James D. Foley, Steven K. Feiner, and Kurt Akeley.
 
