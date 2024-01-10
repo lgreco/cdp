@@ -30,7 +30,7 @@ Top-10 papers in Computer Science
 ----------------------------------
 
 
-This is also a very subjective list whose primary focus is the history of evolution in computing. The list also reflects my own interests in computing which lie more on the applied side of things. No field, of course, can be summarized in just ten papers. These are only a beginning -- and many of the papers below were *the* beginning of a new discipline within computing.
+This is also a very subjective list whose primary focus is the history and evolution of computing. The list also reflects my own interests in computing which lie more on the applied side of things. No field, of course, can be summarized in just ten papers. These are only a beginning -- and many of the papers below were *the* beginning of a new discipline within computing.
 
 * *A Mathematical Theory of Communication,* by Claude Shannon (1948)
 
