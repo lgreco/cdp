@@ -48,4 +48,4 @@ Depending on everyone's background and prior experience in the graduate class, w
 
 The precise mix of advanced topics depends on students' preferences and the overall group dynamic of the class.
 
-**Coding:** You may use any language you wish in the course. Classroom examples are written in Python as `Jupyter Notebooks <https://en.wikipedia.org/wiki/Project_Jupyter>`__.
+**Coding:** You may use any language you wish in the course. Classroom examples are written in Python as `Jupyter Notebooks <https://en.wikipedia.org/wiki/Project_Jupyter>`__. The preferred platform for these notebooks is Google Colab.
