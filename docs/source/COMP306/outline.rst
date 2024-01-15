@@ -11,3 +11,9 @@ Outline
 * Classification and clustering. 
 * Rules, decision trees, Knn, K-means.
 * Neural networks.
+
+Course Map
+++++++++++
+
+The course is divided into two parts: the first part covers tools and methods necessary for datamining. The second part covers the theory and the techniques of datamining. (`Slide deck with course map <https://docs.google.com/presentation/d/1027RbBquXZb41ax80w6oxwN95g1irMA8Uglpw3FTv9c/edit?usp=sharing>`_).  
+
