@@ -58,7 +58,6 @@ There are two notable absences from the list above. Turing's 1937 paper "On Comp
 As it takes a while for a paper to become *seminal*, the list of papers above does not extend beyond the early 00s. Nevertheless, there are significant publications in CS that appeared in the past few years. These can be found on `arXiv <https://arxiv.org/>`_, the open-access archive for most things STEM.
 
 
-
 Honorable Mentions
 ---------------------
 
