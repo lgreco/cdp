@@ -52,7 +52,9 @@ This is also a very subjective list whose primary focus is the history and evolu
  
 * *MapReduce: Simplified Data Processing on Large Clusters,* by Jeffrey Dean and Sanjay Ghemawat (2004)
 
-There are two notable absences from the list above. Turing's 1937 paper "On Computable Numbers, with an Application to the Entscheidungsproblem" and an English translation of Gödel's 1931 paper "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I". The foundations of computer science rest on these papers. They are difficult to read with only an undergraduate background in computer science, especially Gödel's incompleteness theorems and that's the only reason they've been omitted from the list above.
+There are two notable absences from the list above. Turing's 1937 paper "On Computable Numbers, with an Application to the Entscheidungsproblem" and an English translation of Gödel's 1931 paper "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I". The foundations of computer science rest on these papers. They are difficult to read with only an undergraduate background in computer science, especially Gödel's incompleteness theorems. That's the only reason they've been omitted from the list above.
+
+As it takes a while for a paper to become *seminal*, the list of papers above does not extend beyond the early 00s. Nevertheless, there are significant publications in CS that appeared in the past few years. These can be found on `arXiv <https://arxiv.org/>`_, the open-access archive for most things STEM.
 
 Honorable Mentions
 ---------------------
