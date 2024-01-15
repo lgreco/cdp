@@ -10,10 +10,16 @@ To give you more flexibility with your time, `I have made my schedule available 
 For the Spring semester of 2024, Student Hours are as follows. Unless otherwise noted, all meetings are in Doyle 207.
 
 * Monday
- *  8:30-11 AM, (first come, first served)
- *  Monday 3-6 PM, *exclusively for COMP 306/406 students* (Zoom, by appointment)
+
+   *  8:30-11 AM, (first come, first served)
+ 
+   *  Monday 3-6 PM, *exclusively for COMP 306/406 students* (Zoom, by appointment)
+
 * Tuesday
- * 1-2 PM, (by appointment only)
+
+   * 1-2 PM, (by appointment only)
+
 * Wednesday
- * 1:30-3:30 PM, (first come, first served)
+
+   * 1:30-3:30 PM, (first come, first served)
 
