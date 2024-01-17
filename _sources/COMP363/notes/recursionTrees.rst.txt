@@ -169,7 +169,7 @@ In other words, when :math:`c^d>r` the heavy lifting in the recurrence is done a
 Sum :math:`\sum r^if(n/c^i)` has increasing terms
 ################################################
 
-In this case, the terms get progressively smaller. For example we expect the last two terms to be
+In this case, the terms get progressively larger. For example we expect the last two terms to be
 
 .. math::
 
