@@ -36,6 +36,7 @@ site.
    :maxdepth: 1
    :caption: Misc
    
+   RecommendationLetters
    Top10
    LeoIrakliotis
 
