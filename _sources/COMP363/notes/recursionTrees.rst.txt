@@ -147,8 +147,8 @@ Now that we have a fully parametric expression for the time required by the recu
 we can look for the conditions that cause the series :math:`\sum_i r^if(n/c^i)` to converge, diverge, or remain the same.
 
 
-Series :math:`\sum r^if(n/c^i)` converges
-############################################
+Sum :math:`\sum r^if(n/c^i)` has decreasing terms.
+####################################################
 
 This means that terms are getting progressively smaller. For example we expect the first two terms to be:
 
@@ -166,8 +166,8 @@ Let's assume that :math:`f(n)=n^d`. We can rewrite the inequality as:
 In other words, when :math:`c^d>r` the heavy lifting in the recurrence is done at the top of the tree.
 
 
-Series :math:`\sum r^if(n/c^i)` diverges
-############################################
+Sum :math:`\sum r^if(n/c^i)` has increasing terms
+################################################
 
 In this case, the terms get progressively smaller. For example we expect the last two terms to be
 
@@ -187,7 +187,7 @@ Again, let's assume that :math:`f(n) = n^d` and replace it:
 When :math:`c^d<r`, the heavy lifting in the recurrence is done by the bottom of the tree (its leaves).
 
 
-Series :math:`\sum r^if(n/c^i)` is steady
+Sum :math:`\sum r^if(n/c^i)` has equal terms
 ############################################
 
 Finally, when each term of the series is the same, we can compare the first two terms:

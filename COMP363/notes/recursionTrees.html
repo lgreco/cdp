@@ -192,8 +192,8 @@ Finally, dealing with the problems of size 1 will require <span class="math notr
 <div class="math notranslate nohighlight">
 \[T(n) = r T \left(\frac{n}{c}\right) + f(n)\]</div>
 <p>we can look for the conditions that cause the series <span class="math notranslate nohighlight">\(\sum_i r^if(n/c^i)\)</span> to converge, diverge, or remain the same.</p>
-<section id="series-sum-r-if-n-c-i-converges">
-<h3>Series <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> converges<a class="headerlink" href="#series-sum-r-if-n-c-i-converges" title="Link to this heading"></a></h3>
+<section id="sum-sum-r-if-n-c-i-has-decreasing-terms">
+<h3>Sum <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> has decreasing terms.<a class="headerlink" href="#sum-sum-r-if-n-c-i-has-decreasing-terms" title="Link to this heading"></a></h3>
 <p>This means that terms are getting progressively smaller. For example we expect the first two terms to be:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}r^0 f(n/c^0) &amp; &gt; r^1f(n/c^1) \Rightarrow \\
@@ -203,8 +203,8 @@ f(n) &amp; &gt; rf(n/c)\end{split}\]</div>
 \[n^d &gt; rn^d/c^d \Rightarrow 1 &gt; r/c^d \Rightarrow c^d &gt; r\]</div>
 <p>In other words, when <span class="math notranslate nohighlight">\(c^d&gt;r\)</span> the heavy lifting in the recurrence is done at the top of the tree.</p>
 </section>
-<section id="series-sum-r-if-n-c-i-diverges">
-<h3>Series <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> diverges<a class="headerlink" href="#series-sum-r-if-n-c-i-diverges" title="Link to this heading"></a></h3>
+<section id="sum-sum-r-if-n-c-i-has-increasing-terms">
+<h3>Sum <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> has increasing terms<a class="headerlink" href="#sum-sum-r-if-n-c-i-has-increasing-terms" title="Link to this heading"></a></h3>
 <p>In this case, the terms get progressively smaller. For example we expect the last two terms to be</p>
 <div class="math notranslate nohighlight">
 \[r^{L-1}f(n/c^{L-1}) &lt; r^Lf(n/c^L)\]</div>
@@ -216,8 +216,8 @@ r^{L-1}/c^{d(L-1)} &amp; &lt; r^L/c^{dL} \Rightarrow \\
 c^d/c^{dL} &amp; &lt; r/c^{dL} \Rightarrow c^d &lt; r\end{split}\]</div>
 <p>When <span class="math notranslate nohighlight">\(c^d&lt;r\)</span>, the heavy lifting in the recurrence is done by the bottom of the tree (its leaves).</p>
 </section>
-<section id="series-sum-r-if-n-c-i-is-steady">
-<h3>Series <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> is steady<a class="headerlink" href="#series-sum-r-if-n-c-i-is-steady" title="Link to this heading"></a></h3>
+<section id="sum-sum-r-if-n-c-i-has-equal-terms">
+<h3>Sum <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> has equal terms<a class="headerlink" href="#sum-sum-r-if-n-c-i-has-equal-terms" title="Link to this heading"></a></h3>
 <p>Finally, when each term of the series is the same, we can compare the first two terms:</p>
 <div class="math notranslate nohighlight">
 \[r^0f(n/c^0) = r^1f(n/c^1) \Rightarrow f(n) = rf(n/c)\]</div>
