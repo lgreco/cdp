@@ -5,7 +5,7 @@ Recursion trees and the idea behind the *Master Theorem*
 
 A recursion tree is a helpful way to visualize the time performance of a recursive process. 
 
-The figure below shows a simple recursive process. The initial problem has size :math:`n=8`. We can solve it by dividing into two smaller problems, each one half of the problem. These divisions are applied repeatedly until the resulting smaller problems cannot be divided any further.
+The figure below shows a simple recursive process. The initial problem has size :math:`n=8`. We can solve it by dividing into two smaller problems, each one half of the problem. These divisions are applied repeatedly until the resulting smaller problems cannot be divided any further. 
 
 
 .. figure:: ../images/simpleRecursion.png
@@ -14,7 +14,9 @@ The figure below shows a simple recursive process. The initial problem has size 
    
    A simple recursion tree with a problem of initial size :math:`n=8` divided, repeatedly, into subproblems each scaled by :math:`1/2`.
 
-Because we are splitting in half, it takes :math:`\log_2 n` steps to end up with the smallest possible problems -- those whose size is just 1. In this example, we chose an initial size of :math:`n=8`. The numbers work out nicely because :math:`\log_2 8 = 3`. It takes three steps to scale down the problem of size 8 to problems of size 1. The *hope* here is that by the time we get to the smallest problems, we can solve them more easily than the original problem.
+Because we are splitting in half, it takes :math:`\log_2 n` steps to end up with the smallest possible problems -- those whose size is just 1. In this example, we chose an initial size of :math:`n=8`. The numbers work out nicely because :math:`\log_2 8 = 3`. It takes three steps to scale down the problem of size 8 to problems of size 1. The *hope* here is that by the time we get to the smallest problems, we can solve them more easily than the original problem. 
+
+An example of such problem is the mergesort technique. It is relatively easy to merge two sorted arrays. And so our goal is to take a larger array, split it down to arrays with single elements which are, by definition sorted, and then start merging those sorted arrays into larger sorted arrays, and so on.
 
 Let's assume that scaling each problem of size :math:`n` takes :math:`f(n)` steps. In our simple example it happens so :math:`f(n)=n`. That's because it takes :math:`n` steps to find the middle point of the problem and split it in half. There are problems that may take more (or, rarely, fewer) steps to scale. So in general we assume that scaling requires :math:`f(n)` steps.
 
@@ -36,7 +38,7 @@ The issue now is that we don't know what :math:`T(n)` really looks like. It's a 
 But we can't keep doing this for ever.
             
 Going from one problem of size 8 to two problems of size 4 will require :math:`f(8)` steps. Going from two problems of size 4 to four problems of size 2 will require :math:`f(4)+f(4)` steps. Going from four problems of size 2 to eight problems of size 1 will require :math:`f(2)+f(2)+f(2)+f(2)`. 
-Finally, dealing with the problems of size 1 will require :math:`f(1)+f(1)+f(1)+f(1)+f(1)+f(1)+f(1)+f(1)` steps.
+Finally, dealing with the problems of size 1 will require :math:`f(1)+f(1)+f(1)+f(1)+f(1)+f(1)+f(1)+f(1)` steps. Technically, :math:`T(1)=2T(\dfrac{1}{2})+f(1)`. But since we cannot split a problem of size :math:`n=1` to any smaller size, :math:`T(\dfrac{1}{2})=0` and so :math:`T(1)=f(1)`.
 
 The total number of steps :math:`T(n)` (using multiplications instead of additions to keep things a bit short), is:
 
@@ -167,7 +169,7 @@ In other words, when :math:`c^d>r` the heavy lifting in the recurrence is done a
 
 
 Sum :math:`\sum r^if(n/c^i)` has increasing terms
-################################################
+##################################################
 
 In this case, the terms get progressively larger. For example we expect the last two terms to be
 
