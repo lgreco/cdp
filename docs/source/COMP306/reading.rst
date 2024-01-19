@@ -14,3 +14,8 @@ Reading material
 
    * In a Colab notebook, ``MarkDown`` can also render LaTeX expressions. LaTeX is another markup language, designed especially for mathematical typesetting. For a LaTeX tutorial look no further than `Overleaf <https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes>`_. (Note: you don't need to create an Overleaf account to practice LaTeX code. You can type it directly into the next cell of a Colab notebook).
  
+ * ``pandas``, ``matplotlib``, and visualization techniques
+
+   * `Pandas for Everyone: Python Data Analysis <https://learning.oreilly.com/library/view/pandas-for-everyone/9780137891146/>`_ is a good introductory book. The book is available at no cost, via the O'Reilly library. You will need to sign in with your LUC email address and go through the single sign-on (SSO) process. Part I of the book corresponds to this milestone in the course.
+
+   * Also from O'Reilly, you may want to watch all, or at least some, of the tutorial videos in `Data Science Prerequisites - Numpy, Matplotlib, and Pandas in Python <https://learning.oreilly.com/course/data-science-prerequisites/9781803241616/>`_. At the veru least watch chapters 4 and 3. If you have time, watch chapter 2 as well.
