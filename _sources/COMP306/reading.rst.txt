@@ -19,3 +19,7 @@ Reading material
    * `Pandas for Everyone: Python Data Analysis <https://learning.oreilly.com/library/view/pandas-for-everyone/9780137891146/>`_ is a good introductory book. The book is available at no cost, via the O'Reilly library. You will need to sign in with your LUC email address and go through the single sign-on (SSO) process. Part I of the book corresponds to this milestone in the course.
 
    * Also from O'Reilly, you may want to watch all, or at least some, of the tutorial videos in `Data Science Prerequisites - Numpy, Matplotlib, and Pandas in Python <https://learning.oreilly.com/course/data-science-prerequisites/9781803241616/>`_. At the veru least watch chapters 4 and 3. If you have time, watch chapter 2 as well.
+
+   * The pandas project offers a `good introduction <https://pandas.pydata.org/docs/user_guide/10min.html>`_ to the environment as well.
+
+ *  The matplotlib project offers a `good introduction <https://matplotlib.org/stable/tutorials/index.html>`_ to plots and visualization. At the very least, review the pyplot tutorial, and the lifecycle of a plot.
