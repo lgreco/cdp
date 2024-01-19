@@ -14,6 +14,7 @@ Reading material
 
    * In a Colab notebook, ``MarkDown`` can also render LaTeX expressions. LaTeX is another markup language, designed especially for mathematical typesetting. For a LaTeX tutorial look no further than `Overleaf <https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes>`_. (Note: you don't need to create an Overleaf account to practice LaTeX code. You can type it directly into the next cell of a Colab notebook).
  
+
  * ``pandas``, ``matplotlib``, and visualization techniques
 
 
@@ -23,4 +24,4 @@ Reading material
 
    * The pandas project offers a `good introduction <https://pandas.pydata.org/docs/user_guide/10min.html>`_ to the environment as well.
 
- *  The matplotlib project offers a `good introduction <https://matplotlib.org/stable/tutorials/index.html>`_ to plots and visualization. At the very least, review the pyplot tutorial, and the lifecycle of a plot.
+   *  The matplotlib project offers a `good introduction <https://matplotlib.org/stable/tutorials/index.html>`_ to plots and visualization. At the very least, review the pyplot tutorial, and the lifecycle of a plot.
