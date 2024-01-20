@@ -25,3 +25,8 @@ Reading material
    * The pandas project offers a `good introduction <https://pandas.pydata.org/docs/user_guide/10min.html>`_ to the environment as well.
 
    *  The matplotlib project offers a `good introduction <https://matplotlib.org/stable/tutorials/index.html>`_ to plots and visualization. At the very least, review the pyplot tutorial, and the lifecycle of a plot.
+
+* Learning Python and the Colab environment
+
+
+   * `David Beazley's Practical Python Programming <https://dabeaz-course.github.io/practical-python/Notes/Contents.html>`_ course is a great starting point if you are familiar with another programming language. Review sections 0, 1, 2, and 3.
