@@ -1,7 +1,7 @@
 Reading material
 ++++++++++++++++
 
-* Learning Python and the Colab environment
+* **Milestone: Learning Python and the Colab environment**
 
 
    * `David Beazley's Practical Python Programming <https://dabeaz-course.github.io/practical-python/Notes/Contents.html>`_ course is a great starting point if you are familiar with another programming language. Review sections 0, 1, 2, and 3.
@@ -15,7 +15,7 @@ Reading material
    * In a Colab notebook, ``MarkDown`` can also render LaTeX expressions. LaTeX is another markup language, designed especially for mathematical typesetting. For a LaTeX tutorial look no further than `Overleaf <https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes>`_. (Note: you don't need to create an Overleaf account to practice LaTeX code. You can type it directly into the next cell of a Colab notebook).
  
 
-* ``pandas``, ``matplotlib``, and visualization techniques
+* **Milestone: pandas, matplotlib, and visualization techniques**
 
 
    * `Pandas for Everyone: Python Data Analysis <https://learning.oreilly.com/library/view/pandas-for-everyone/9780137891146/>`_ is a good introductory book. The book is available at no cost, via the O'Reilly library. You will need to sign in with your LUC email address and go through the single sign-on (SSO) process. Part I of the book corresponds to this milestone in the course.
