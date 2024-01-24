@@ -22,6 +22,6 @@ Reading material
 
    * Also from O'Reilly, you may want to watch all, or at least some, of the tutorial videos in `Data Science Prerequisites - Numpy, Matplotlib, and Pandas in Python <https://learning.oreilly.com/course/data-science-prerequisites/9781803241616/>`_. At the very least watch chapters 4 and 3. If you have time, watch chapter 2 as well.
 
-   * The pandas project offers a `good introduction <https://pandas.pydata.org/docs/user_guide/10min.html>`_ to the environment as well.
+   * The pandas project offers a `good introduction <https://pandas.pydata.org/docs/user_guide/10min.html>`__ to the environment as well.
 
-   *  The matplotlib project offers a `good introduction <https://matplotlib.org/stable/tutorials/index.html>`_ to plots and visualization. At the very least, review the pyplot tutorial, and the lifecycle of a plot.
+   *  The matplotlib project offers a `good introduction <https://matplotlib.org/stable/tutorials/index.html>`__ to plots and visualization. At the very least, review the pyplot tutorial, and the lifecycle of a plot.
