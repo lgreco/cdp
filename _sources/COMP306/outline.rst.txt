@@ -17,3 +17,12 @@ Course Map
 
 The course is divided into two parts: the first part covers tools and methods necessary for datamining. The second part covers the theory and the techniques of datamining. (`Slide deck with course map <https://docs.google.com/presentation/d/1027RbBquXZb41ax80w6oxwN95g1irMA8Uglpw3FTv9c/edit?usp=sharing>`_).  
 
+
+Weekly maintenance meetings
++++++++++++++++++++++++++++
+
+Additional support for this asynchronous course is available every Monday, 6-7 PM, via videoconference. During these weekly sessions, I can help with coding, troubleshooting stuff, choosing datasets to analyze, etc. Attendance is optional and you may come and go as you please, to as many of these sessions as you wish. **I only ask that when you join the video session your camera is on.**
+
+For privacy, the details of the meeting are posted via email only.
+
+
