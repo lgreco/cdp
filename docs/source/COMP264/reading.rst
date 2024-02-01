@@ -45,7 +45,7 @@ If you have any questions, please let me know.
 
 
 
-Week 02
+Week 03
 ,,,,,,,
 
 For week 03, the reading assignment is from Chapter 3 of the book; specifically:
