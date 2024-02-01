@@ -55,6 +55,6 @@ For week 03, the reading assignment is from Chapter 3 of the book; specifically:
 * 3.3 Data Formats
 * 3.4 Accessing Information. This is a rather dense chapter and a bit challenging at first. We'll discuss it in class, extensively. You may skip 3.4.1. And you may stop at 3.4.4 (no need to read 3.4.4 and beyond, for now).
 
-It is also time to look at some material about C pointers. In the `collection of C books I have assembled for you<https://learning.oreilly.com/playlists/06ec0d45-aeb9-49c2-acb7-1077a7117d48>`__, there are two good readings: either chapter 10 of Slobodan Dmitrović's *
+It is also time to look at some material about C pointers. In the `collection of C books I have assembled for you <https://learning.oreilly.com/playlists/06ec0d45-aeb9-49c2-acb7-1077a7117d48>`_, there are two good readings: either chapter 10 of Slobodan Dmitrović's *
 Modern C for Absolute Beginners* or chapter 10 of Stephen G. Kochan's *
 Programming in C*.
