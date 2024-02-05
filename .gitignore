@@ -10,3 +10,4 @@ build/
 repo_management_notes.txt
 .DS_Store
 docs/source/.DS_Store
+docs/desktop.ini
