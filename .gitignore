@@ -8,3 +8,5 @@ get-current-version.sh
 requirements*
 build/
 repo_management_notes.txt
+.DS_Store
+docs/source/.DS_Store
