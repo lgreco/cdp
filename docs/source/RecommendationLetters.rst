@@ -1,11 +1,11 @@
 Recommendation Letters
 ======================
 
-Writing recommendation letters is one of the best part of my job. I am happy to write a recommendation for students who worked with me and did well. Usually, I expect that you have taken at least two courses with me and you have done reasonably well (B or beter in each course). Or, you have taken one course and you have done exceedingly well (you earned an A and an *"end-of-term" note*). 
+Writing recommendation letters is one of the best part of my job. I am happy to write a recommendation for students who worked with me and did well. Usually, I expect that you have taken at least two courses with me and you have done reasonably well (at least a B in the earlier course and a B+ or better in the later course). Or, you have taken one course and you have done exceedingly well (you earned an A and an *"end-of-term" note*). 
 
 If your only course with me was a B or lower, I may not be the best person to ask for a letter.
 
-May places, especially graduate schools, offer you the right to read the recommendation letter I wrote, after I submit it. They also offer you the option to waive your right to read the recommendation letter.
+Many places, especially graduate schools, offer you the right to read the recommendation letter I wrote, after I submit it. They also offer you the option to waive your right to read the recommendation letter.
 
 My suggestion is that you waive that right when asking for a letter from me. I will write the letter for you in either case, but the content will be different. Letters that can be read by their beneficiary are more boiler plate. That's to protect both you and myself from misunderstandings. If you waive your right to read the letter, I can be more candid in the letter and provide a more helpful assessment of your abilities.
 
