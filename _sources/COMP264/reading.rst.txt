@@ -61,3 +61,10 @@ Week 04
 ,,,,,,,
 
 Make sure you read the material for week 03, listed above, and also read chapter 3.4.4. Work on practice problem 3.5. 
+
+Week 05
+,,,,,,,
+
+Chapters 3.5 and 3.6 up to but not including 3.6.5 and beyond.
+
+Optionally 3.7 (we'll cover the topics in 3.7 (and 3.8) in the course later anyway, so this is good upfront reading).
