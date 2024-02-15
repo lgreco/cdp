@@ -5,6 +5,7 @@ Leo's notes
     :maxdepth: 1
     
     Recursion Trees and the Master Theorem <notes/recursionTrees.rst>
+    Dynamic Programming <notes/dynamicProgramming.rst>
 
 
 **Other material**
