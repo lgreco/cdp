@@ -14,8 +14,8 @@
 - Week 10: File-Reading, Token- and Line-Based Processing, File Output; 
 - Week 11: Array-Traversal Algorithms, Reference Semantics; 
 - Week 12: OO Programming, Object State and Behavior, Constructors; 
-- Week 13: Course review – classes end on April 28  
-- Week 14: Final Exam Week, May 1-6
+- Week 13: Course review; 
+- Week 14: Final Exam Week.
 
 
 
