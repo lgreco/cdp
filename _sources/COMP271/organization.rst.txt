@@ -6,7 +6,7 @@ This course explores the concepts of data abstraction and data structure, includ
 
 The tentative contents for the course is as follows.
 
- - Introduction to Java
+ - Review of Java
  - Object-Oriented Concepts
  - Additional Features of Programming and Java
  - Analysis of Algorithms
@@ -15,15 +15,12 @@ The tentative contents for the course is as follows.
  - Array-Based Lists
  - Linked Lists
  - Stacks and Queues
- - Binary Trees
  - Binary Search Trees
  - Sorting
  - Sets
  - Priority Queues
  - Hashing
  
-
-
 .. include:: ../shared/deadlines.rst
 
 
