@@ -4,7 +4,7 @@ Course operations
 
 In the **Fall 2024,** I teach **COMP 271/400B** (Data Structures I), **COMP 363,** (undergraduate Algorithms), and **COMP460** (graduate Algorithms). 
 
-**Student hours** (aka, office hours) are for Fall 2024 are as follows:
+**Student hours** (aka, office hours) for Fall 2024 are as follows:
 
 * Monday: 9:05 - 10 AM and 12:30-1:30 PM, in Cuneo 202. These hours are, by priority, for COMP 271 students. All others are welcome, but please make an appointment.
 
