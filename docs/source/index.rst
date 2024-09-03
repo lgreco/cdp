@@ -14,6 +14,8 @@ to a Github repository with native GitHub Actions that build the
 gh-pages branch. That's the branch visible from the github.io pages
 site.
 
+.. include:: ../shared/operations.rst
+
 
 .. toctree::
    :maxdepth: 1
