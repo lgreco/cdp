@@ -1,6 +1,5 @@
 :orphan:
 
-.. include:: ../shared/COVID19.rst
 
 .. include:: ../shared/organizationHeader.rst
 
