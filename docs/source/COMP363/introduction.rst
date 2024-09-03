@@ -2,7 +2,6 @@
 COMP 363+460 Algorithms
 ==========================================================
 
-.. include:: ../shared/operations.rst
 
 ..	toctree::
 	:maxdepth: 1
