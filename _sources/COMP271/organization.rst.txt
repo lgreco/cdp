@@ -2,7 +2,7 @@
 
 .. include:: ../shared/courseOutline.rst
 
-This course explores the concepts of data abstraction and data structure, including stacks, queues, lists, sets, and trees. The issues of implementing a data structure in a language such as Java are examined using classes, arrays, and linked structures. Sorting and searching techniques are analyzed. The concepts of correctness and efficiency of algorithms are developed. Time/space comparisons of iterative algorithms with recursive algorithms are made. 
+This course explores the concepts of data abstraction and data structure, including stacks, queues, lists, sets, and trees. The implementation of data structures gives us an opportunity to review design by interface, generic classes, and other important coding techniques. Sorting and searching techniques are analyzed. The concepts of correctness and efficiency of algorithms are developed. 
 
 The tentative contents for the course is as follows.
 
@@ -37,7 +37,11 @@ Recommended (but not required):
 
 Computer Equipment
 ++++++++++++++++++
-You will need access to a desktop or laptop computer with a simple text editor and a Java compiler. An Integrated Development Environments (IDEs) is a superb tool and   and `IntelliJ IDEA <https://www.jetbrains.com/idea/>`_, is the IDE of choice for this course. 
+You will need access to a desktop or laptop computer with a simple text editor and a Java compiler. An Integrated Development Environments (IDEs) is a superb tool. The course is based on GitHub and CodeSpaces. You are welcome to use the same tools. If you do not have time to manage a repository fork, you may want to consider one of the following options for editing and running Java programs:
+
+* [BlueJ](https://bluej.org) is a basic Java editor, easy to install and maintain.
+* [Replit](https://replit.com) is a web-based environment and you may sign up and use it at no cost. One issue with Replit is that the first class of each project must be named ``Main.java``.
+* `IntelliJ IDEA <https://www.jetbrains.com/idea/>`_, is a full-fledged IDE. Its community edition is available at no-cost to everyone. You may also sign up, with your LUC email, for an academic account for a free version of the Ultimate edition.
 
 .. include:: ../shared/ungrading.rst
 .. include:: ../shared/groundRules.rst
