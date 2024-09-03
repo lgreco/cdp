@@ -1,5 +1,5 @@
 Fall 2024 term
-=================
+++++++++++++++
 
 
 In the **Fall 2024,** I teach **COMP 271/400B** (Data Structures I), **COMP 363,** (undergraduate Algorithms), and **COMP460** (graduate Algorithms). 
