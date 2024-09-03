@@ -18,9 +18,7 @@ site.
 .. toctree::
    :maxdepth: 1
    :caption: Courses
-   
-   shared/operations
-   
+      
    COMP271/introduction
    COMP363/introduction
 
