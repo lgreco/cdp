@@ -1,0 +1,151 @@
+
+Review of Weeks 10, 11: counting and probabilities
+===================================================
+
+Weeks 10 and 11 focus on discrete probabilities.
+
+
+* From the recommended textbook: Chapters 6.7.
+
+* `Aspnes' chapter on probability <https://github.com/lgreco/cdp/blob/master/source/COMP163/OER/Aspnes-probability.pdf>`_. (Made available under a CC BY SA license).
+
+Solutions to in-class assignment 7 (conducted 4/1/20)
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Problem 1**. There are :math:`6^3` possible outcomes when rolling three dice.
+
+**Problem 2**. The most likely sum to roll two fair dice to is 7. Because this sum can be achieved by the largest possible combinations between the two dice, i.e., 1+6, 2+5, 3+4, 4+3, 5+2, and 6+1. (Grading notes: solutions that do not answer the "why" part of this problem, are incomplete).
+
+**Problem 3**. The planes with heavy damage in the outer wings and the rear fuselage, made it safely to their base. It means that such heavy damage did not affect the plane's ability to fly. Therefore these areas are the least likely candidates for armor plating. (This problem is a simplified rendering of a `true story <https://www.motherjones.com/kevin-drum/2010/09/counterintuitive-world/>`__).
+
+Solutions to in-class assigment 8 (conducted 4/8/20)
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Problem 1**. Assuming that the coins as properly glued, i.e., the head side of one coin is glued to the tail side of the other, the odds of tossing a head is the same as a single coin: 1/2. If the coins are glued tail-to-tail, the odds of tossing a head is 1. And if they are glued head-to-head, the odds are 0.
+
+**Problem 2**. If the coins as properly glued, i.e., the head side of one coin is glued to the tail side of the other, the odds of tossing two heads back-to-back is the same as with a single coin: 1/4. If the coins are glued tail-to-tail, the odds of tossing back-to-back heads is 1. And if they are glued head-to-head, the odds are 0.
+
+**Problem 3**. There are two correct answers to this problem, depending on how you interpret it: either 1/2 or 1/4.
+
+Bayes Theorem Example
++++++++++++++++++++++
+
+The standard expression of Bayes Theorem is:
+
+
+.. math::
+
+ P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+
+A medical test that diagnoses a disease, is characterized by its *sensitivity* and its *specificity*. The sensitivity of the test is its true positive rate, i.e., the fraction of patients who have the disease and test positive for it. For example if 100 patients have the disease and 90% of them test positive, the test's sensitivity is 0.9. The test's specificity is the fraction of people without the disease, who test negative. For example, if 100 people are known to not have the disease, and 95 of them test negative to it, the test's specificity is 0.95.
+
+Consider that a person undergoes a test with 0.90 sensitivity and 0.95 specificity, and tests positive for a disease that has a 13% rate in the population. What are the actual chances that the person has the disease? In other words what is the conditional probability:
+
+
+.. math::
+
+ P(\ \text{has disease}\ |\ \text{tests positive}\ )
+ 
+For simplicity, we rewrite the conditional probability :math:`P(D|+)` where D stands for "has disease" and :math:`+` stands for "tests positive". 
+
+According to Bayes theorem, the conditional probability above can be written as:
+
+
+.. math::
+
+ P(D|+) = \frac{P(+|D)P(D)}{P(+)}
+ 
+In the expression above, :math:`P(+|D)` is the sensitivity of the test and :math:`P(D)` is the prevalence of the disease. We know these values to be 0.9 and 0.13 respectively, so
+
+.. math::
+
+ P(D|+) = \frac{(0.9)(0.13)}{P(+)} = \frac{(0.117)}{P(+)}
+
+All we are missing is a value for :math:`P(+)`. This can be a bit tricky to obtain, but straight-forward once we realize with the quantity means. :math:`P(+)` is the probability that someone will test positive whether or not this person has the disease. This probability can be written as 
+
+.. math::
+
+ P(+) = P(+|D)P(D) + P(+|\overline{D})P(\overline{D})
+ 
+where :math:`P(+|\overline{D})` is the probability to test positive if not having the disease. 
+:math:`P(\overline{D})` is the probability to not have the disease and it is evaluated as :math:`1- P(D)`. Using the same law, we can also write :math:`P(+|\overline{D})=1-P(-|\overline{D})` where :math:`P(-|\overline{D})` is the probability of testing negagive if not having the disease; i.e. the test's specificity. Everything put together:
+
+.. math::
+
+ P(+) = (0.9)(0.13) + (1-0.95)(1-0.13) = 0.117 + 0.0435 = 0.1605
+
+And so
+
+.. math::
+
+ P(D|+) = \frac{(0.9)(0.13)}{P(+)} = \frac{0.117}{0.1605} = 0.7289
+
+In other words, someone who tests positive for a disease with a 13% prevalence, using a test with 90% sensitivity and 95% specificity, has a 73% chance that actually has the disease.
+
+Bayes Theorem in context with the COVID-19 pandemic
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Various countries across the world contemplate the manner in which they will "reopen" after lockdown measures taken in response to the SARS-CoV-2 virus. This is the virus that causes the COVID-19 disease. One of the candidate criteria for allowing individuals to return to their offices and other public work spaces, is whether or not they were infected by the virus. Those infected are *presumed* to be immune to new infections; if not permanently, at least for a while. And therefore safe to be in public, without risk of being infected and infecting others.
+
+Many people seem to have been infected by the virus but remained asymptomatic, or dismissed their light symptoms. Determining if someone was infected and, presuma]bly, is now immune to the disease requires a test that detects the presence of virus-specific antibodies. 
+
+In terms of conditional probabilities, we are interested in:
+
+.. math::
+
+ P\ (\ \text{was infected}\ |\ \text{antibody test positive}\ )
+ 
+and for simplicity we write it as :math:`P(I|+)`. In other words, if you take the antibody test and it comes positive, how likely is it that you were actually infected by the SAS-CoV-2 virus? Using Bayes' theorem, the conditional probability is expressed as:
+
+.. math::
+
+ P(I|+) = \frac{P(+|I)P(I)}{P(+)}
+ 
+As we saw earlier, :math:`P(+|I)` is the *sensitivity* of the test and :math:`P(I)` the prevalence of the infection. The denominator itself is the expected value of positive tests and can be evaluated directly as:
+
+.. math::
+
+ P(+) = P(+|I)P(I) + P(+|\overline{I})P(\overline{I})
+ 
+The conditional probability  :math:`P(I|+)` can be expressed now as a simple fraction:
+
+.. math::
+
+ P(I|+) &= \frac{\alpha}{\alpha+\beta}, \\ \\
+ \alpha &= P(+|I)P(I) \\
+ \beta &= P(+|\overline{I})P(\overline{I})
+
+Quantity :math:`\alpha` is known: it is the product of the test's sensitivity and the disease's prevalence. And quantity :math:`\beta` can be computed from its complements:
+
+.. math::
+
+ \beta &= P(+|\overline{I})P(\overline{I}) \\
+       &= (1-P(-|\overline{I}))\ (1-P(I))
+
+The quantity :math:`P(-|\overline{I})` is the test's *specificity,* i,e., the likelihood that someone without the disease will test negative to it.
+
+If :math:`p` is the prevalence of the disease, :math:`s` the sensitivity of the antibody test, and :math:`\sigma` the test's specificity, our conditional probability becomes:
+
+.. math::
+
+ P(I|+) &= \frac{\alpha}{\alpha+\beta}, \\ \\
+ \alpha &= sp \\
+ \beta &= (1-\sigma)(1-p) 
+
+A good antibody test is expected to have high sensitivity and high selectivity. Let's assume :math:`s=0.95` and :math:`\sigma=0.95`, and so :math:`P(I|+)=\frac{0.95p}{0.95p+0.05(1-p)}`.
+
+The only unknown now is the prevalence of the disease. For a relatively rare disease affecting 500 out of 100,000 people, the prevalence :math:`p=0.005` or 0.5%. If someone tests positive to an antibody test with 95% sensitivity and 95% selectivity, there is only a 8.7% chance they actually had the disease.
+
+If the prevalence is higher, let's say 5,000 out of 100,000 people, and :math:`p=0.05` or 5%, and someone tested positive, there is a 50% chance that they had the disease.
+
+And if the disease is rampant, i.e., half the population had it, and therefore :math:`p=0.5` or 50%, those testing positive have a 95% chance that they actually had the disease.
+
+We don't know yet what the actual prevalence of COVID-19 is. The `CDC reports incidence rates from 20.6 to 915.3 cases per 100,000 <https://www.cdc.gov/mmwr/volumes/69/wr/mm6915e4.htm>`__. Assuming, arbitrarily, a 100X factor between incidence and prevalence, we can guesstimate prevalence rate as: :math:`0.0206\leq p\leq 0.9153`. For the low-end :math:`p`, the conditional probability :math:`P(I|+)`, given an antibody test with 95% sensitivity and specificity, is :math:`P_{\text{low}}(I|+)\approx 31\%`. For the high-end prevalence indicating that 91.53% of the population gets infected, the conditional probability becomes: :math:`P_{\text{high}}(I|+)\approx 99\%`.
+
+The truth is somewhere in-between. But if the disease prevalence is in the low-end, e.g., below 25%, then the antibody tests will miss more than 13% of those tested. Meaning that individuals not immune to the virus will be thought to be immune and will be allowed to mingle with the general population. This may lead to subsequent flare ups of the infection.
+
+On the other hand, if the disease is very prevalent, e.g. :math:`p\geq 0.5`, then the tests will miss less than 4% of the cases, and this may be a manageable load.
+
+
+ 
+

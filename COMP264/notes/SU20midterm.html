@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer 2020 Midterm grading notes &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363+460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../DEI/DEI.html">DEI initiative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DBD/introduction.html">Databases Design</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Summer 2020 Midterm grading notes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP264/notes/SU20midterm.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="summer-2020-midterm-grading-notes">
+<h1>Summer 2020 Midterm grading notes<a class="headerlink" href="#summer-2020-midterm-grading-notes" title="Link to this heading"></a></h1>
+<section id="problem-1">
+<h2>Problem 1<a class="headerlink" href="#problem-1" title="Link to this heading"></a></h2>
+<p>The solution to this problem was specified in the requirement <em>to extend</em> the original class. Extensions allow us to add and change parts of a class that we are not allowed to modify. There are two modifications to include in the extended class: first a new node to track the middle of the list. We already have two specially named nodes that track the beginning and the and of the list (called <code class="docutils literal notranslate"><span class="pre">Node</span> <span class="pre">head</span></code> and <code class="docutils literal notranslate"><span class="pre">Node</span> <span class="pre">tail</span></code> respectively). All we here is a third specially named node:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LeoLinkedList</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">OurLinkedList</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Node</span><span class="w"> </span><span class="n">middle</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>That’s it really, for the first part of this problem.</p>
+<p>The second part for this problem is to ensure the new <code class="docutils literal notranslate"><span class="pre">Node</span> <span class="pre">middle</span></code> points to the middle of the list. We need to make an assignment here, similar to the assignments for nodes <code class="docutils literal notranslate"><span class="pre">head</span></code> and <code class="docutils literal notranslate"><span class="pre">tail</span></code>.  In the base class (<code class="docutils literal notranslate"><span class="pre">OurLinkedList</span></code>), the assignments for nodes <code class="docutils literal notranslate"><span class="pre">tail</span></code> and <code class="docutils literal notranslate"><span class="pre">head</span></code> are part of method <code class="docutils literal notranslate"><span class="pre">addNode</span></code>. That’s where the assignment for <code class="docutils literal notranslate"><span class="pre">middle</span></code> belongs. But we cannot modify the base class, so we have to replicate the method <code class="docutils literal notranslate"><span class="pre">addNode</span></code> to our derived class, and instruct the compiler to override the base method.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addNode</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">nodeExists</span><span class="p">(</span><span class="n">v</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Node</span><span class="w"> </span><span class="n">newNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<span class="w">        </span><span class="n">size</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">head</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newNode</span><span class="p">;</span>
+<span class="w">            </span><span class="n">tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
+<span class="hll"><span class="w">            </span><span class="n">middle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
+</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">tail</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newNode</span><span class="p">;</span>
+<span class="w">            </span><span class="n">tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newNode</span><span class="p">;</span>
+<span class="hll"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">                </span><span class="n">middle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">middle</span><span class="p">.</span><span class="na">next</span><span class="p">;</span>
+</span><span class="hll"><span class="w">            </span><span class="p">}</span>
+</span><span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The code of the derived <code class="docutils literal notranslate"><span class="pre">addNode</span></code> is identical to the base code except for two places. When the list is empty (<code class="docutils literal notranslate"><span class="pre">head==null</span></code>), we make the first node the list’s head and tail. In the derived method above, we also make that first node the list’s middle. If the list is not empty, we add an if-block to advance the middle node to its next node, every second insertion (whenever <code class="docutils literal notranslate"><span class="pre">size%2==1</span></code>).</p>
+</section>
+<section id="problem-2">
+<h2>Problem 2<a class="headerlink" href="#problem-2" title="Link to this heading"></a></h2>
+<p>While simple in appearance, this problem requires some <strong>serious</strong> analysis first. We are given a restriction: lines cannot exceed 90 characters. The schematic we are provided with, suggests that we cannot hyphenate the contents of nodes and wrap them in the next line block. And, as long we we have nodes to print, each line block should end with the wrap pattern leading from the last node in that block to the first node in the next line block.</p>
+<figure class="align-right" style="width: 66%">
+<img alt="../../_images/LinkedListSnakeLayout1.png" src="../../_images/LinkedListSnakeLayout1.png" />
+</figure>
+<p>We begin by studying the output pattern. In the example to the right we limit the line length to 40 characters, for clarity. Line-blocks are color-coded, also for clarity. We observe that there are two types of line blocks. Let’s call them content blocks (shown in pale blue) and connecting blocks (shown in pale green). As we study the layout, we notice repeating patterns, shown in more detail below.</p>
+<figure class="align-center" style="width: 90%">
+<img alt="../../_images/LinkedListSnakeLayoutDetail1.png" src="../../_images/LinkedListSnakeLayoutDetail1.png" />
+</figure>
+<p>The patterns we notice are:</p>
+<ul class="simple">
+<li><p>Corner element is a <code class="docutils literal notranslate"><span class="pre">+</span></code>.</p></li>
+<li><p>Horizontal line element is a <code class="docutils literal notranslate"><span class="pre">-</span></code>.</p></li>
+<li><p>Vertical line element is a <code class="docutils literal notranslate"><span class="pre">|</span></code>.</p></li>
+<li><p>Arrowhead element is a <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.</p></li>
+<li><p>The string value of a node is preceded and trailed by a single space.</p></li>
+<li><p>The arrow connecting two nodes on the same content block is preceded and trailed by a single space. We call this a <code class="docutils literal notranslate"><span class="pre">betweebArrow</span></code>.</p></li>
+<li><p>The arrow from the last node on a content block to the first node on the next content block, has the shape <code class="docutils literal notranslate"><span class="pre">--+</span></code>. We name this appendage, <code class="docutils literal notranslate"><span class="pre">snakeTail</span></code>.</p></li>
+<li><p>The last line of a content block includes a vertical element for the arrow that connects to the next content block.</p></li>
+<li><p>The first line of a content block (other than the first such block) contains a vertical element from the arrow from the previous node.</p></li>
+<li><p>The arrowhead for the first node in subsequent content blocks has two horizontal elements instead of the three we see in the arrows between nodes. We name this String <code class="docutils literal notranslate"><span class="pre">snakeHead</span></code>.</p></li>
+</ul>
+<p>With these observations, we can begin to estimate how many characters we need to display a node. First we look at two special cases: the head and tail nodes. The head node requires <code class="docutils literal notranslate"><span class="pre">head.value.length()+2+2</span></code> spaces to print and another <code class="docutils literal notranslate"><span class="pre">betweebArrow.lenght()+2</span></code> for its pointer to the next node, for a total of <code class="docutils literal notranslate"><span class="pre">head.value.length()+betweebArrow.length()+6</span></code> characters. The tail node requires only <code class="docutils literal notranslate"><span class="pre">tail.value.length()+4</span></code> characters because it doesn’t have an arrow pointing to another node.</p>
+<p>Next we move our attention to the pattern within a content block (that’s the block with the nodes’ content, shown in pale blue). Here, we notice that each node requires <code class="docutils literal notranslate"><span class="pre">node.value.length()+betweenArrow.length()+6</span></code> characters except for the head node (as discussed above). There are two more exceptions: the last node in a block line (as long as it is not the tail node) requires <code class="docutils literal notranslate"><span class="pre">node.value.length()+snakeTail.length()+5</span></code> characters. And the first node in every content block except the first such block, is offset by <code class="docutils literal notranslate"><span class="pre">snakeHead.length()+1</span></code> characters to the right.</p>
+<figure class="align-right" style="width: 50%">
+<img alt="../../_images/LinkedListSnakeLayoutFrames1.png" src="../../_images/LinkedListSnakeLayoutFrames1.png" />
+</figure>
+<p>With these character counts in place, we can begin constructing both content and connecting blocks. For this step, we need to look at the structure of these blocks. Each block comprises three lines. Let’s call the first line the <code class="docutils literal notranslate"><span class="pre">upperFrame</span></code> of the block, the second lines its <code class="docutils literal notranslate"><span class="pre">middleFrame</span></code>, and the last line the <code class="docutils literal notranslate"><span class="pre">lowerFrame</span></code>.</p>
+<p>At this point our analysis is complete and we can begin to plan how to build the functionality we need. Obviously we need at least a public method to invoke the printout, so let’s call it <code class="docutils literal notranslate"><span class="pre">printList</span></code>. We can put all the functionality in that method, or we can create a few private methods for <code class="docutils literal notranslate"><span class="pre">printList</span></code> to use. Either approach is fine. Usually, we start with a monolithic method and then we carve its code out to private methods, for reusability and clarity.</p>
+<p>The overall logic and structure is demonstrated in the code below. The code is monolithic, i.e., it does not call its own private methods. Fundamentally, it is a large loop that looks at each node, and whether or not it fits to be displayed within the remaining space of 90 characters. If not, it terminates the current content block, adds a connecting block, initiates a new content block, and places the node there, and so on.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="cm">/**</span>
+<span class="linenos">  2</span><span class="cm"> * Prints the string contents of nodes in a linked list, in a snake-path whose</span>
+<span class="linenos">  3</span><span class="cm"> * lines do not exceed a given WIDTH (in characters) in length. The printout</span>
+<span class="linenos">  4</span><span class="cm"> * format requires three strings:</span>
+<span class="linenos">  5</span><span class="cm"> *</span>
+<span class="linenos">  6</span><span class="cm"> *    formatted     required</span>
+<span class="linenos">  7</span><span class="cm"> *    output        strings</span>
+<span class="linenos">  8</span><span class="cm"> *</span>
+<span class="linenos">  9</span><span class="cm"> *    +-----+  .... upperFrame string</span>
+<span class="linenos"> 10</span><span class="cm"> *    | cat |  .... content string</span>
+<span class="linenos"> 11</span><span class="cm"> *    +-----+  .... lowerFrame string</span>
+<span class="linenos"> 12</span><span class="cm"> *</span>
+<span class="linenos"> 13</span><span class="cm"> * Note that when transitioning to a new line, strings content and lowerFrame</span>
+<span class="linenos"> 14</span><span class="cm"> * acquire additional content to begin the snake path to the next line, and</span>
+<span class="linenos"> 15</span><span class="cm"> * after printed, string upperFrame is initialized with the vertical element of</span>
+<span class="linenos"> 16</span><span class="cm"> * the snake path working its way to the first node of the next line.</span>
+<span class="linenos"> 17</span><span class="cm"> *</span>
+<span class="linenos"> 18</span><span class="cm"> *                                         +-----+</span>
+<span class="linenos"> 19</span><span class="cm"> *                                         | dog | --+</span>
+<span class="linenos"> 20</span><span class="cm"> *                                         +-----+   |  .... lowerFrame</span>
+<span class="linenos"> 21</span><span class="cm"> *                                                   |</span>
+<span class="linenos"> 22</span><span class="cm"> *                        +--------- ... ------------+</span>
+<span class="linenos"> 23</span><span class="cm"> *                        |</span>
+<span class="linenos"> 24</span><span class="cm"> *       upperFrame ....  |    +-----+</span>
+<span class="linenos"> 25</span><span class="cm"> *                        +--&gt; | cat | ---&gt; ...</span>
+<span class="linenos"> 26</span><span class="cm"> *                             +-----+</span>
+<span class="linenos"> 27</span><span class="cm"> */</span>
+<span class="linenos"> 28</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printList</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 29</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 30</span><span class="w">        </span><span class="cm">/** Drawing elements */</span>
+<span class="linenos"> 31</span><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">verticalElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;|&quot;</span><span class="p">;</span>
+<span class="linenos"> 32</span><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cornerElement</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;+&quot;</span><span class="p">;</span>
+<span class="linenos"> 33</span><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">lineElement</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="p">;</span>
+<span class="linenos"> 34</span><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">arrowElement</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&gt;&quot;</span><span class="p">;</span>
+<span class="linenos"> 35</span><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">spaceElement</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="linenos"> 36</span>
+<span class="linenos"> 37</span><span class="w">        </span><span class="cm">/** Misc constants */</span>
+<span class="linenos"> 38</span><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arrowLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="linenos"> 39</span><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">endOfLineLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="linenos"> 40</span><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">WIDTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">90</span><span class="p">;</span>
+<span class="linenos"> 41</span>
+<span class="linenos"> 42</span><span class="w">        </span><span class="cm">/**</span>
+<span class="linenos"> 43</span><span class="cm">         * OVERHEAD is the space required around the contents of a node, for example</span>
+<span class="linenos"> 44</span><span class="cm">         *    if node.value = &quot;dog&quot;,</span>
+<span class="linenos"> 45</span><span class="cm">         * the printout will be</span>
+<span class="linenos"> 46</span><span class="cm">         *    +-----+</span>
+<span class="linenos"> 47</span><span class="cm">         *    | dog |</span>
+<span class="linenos"> 48</span><span class="cm">         *    +-----+</span>
+<span class="linenos"> 49</span><span class="cm">         * The two vertical bars and the two spaces surrounding dog, are the overhead space.</span>
+<span class="linenos"> 50</span><span class="cm">         */</span>
+<span class="linenos"> 51</span><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">OVERHEAD</span>
+<span class="linenos"> 52</span><span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="n">verticalElement</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="c1">// |_                 // This variable assignment</span>
+<span class="linenos"> 53</span><span class="w">                </span><span class="n">spaceElement</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">       </span><span class="c1">// | _                // is just an addition of</span>
+<span class="linenos"> 54</span><span class="w">                </span><span class="n">spaceElement</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">       </span><span class="c1">// |      _           // mostly 1s but in a way</span>
+<span class="linenos"> 55</span><span class="w">                </span><span class="n">verticalElement</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">    </span><span class="c1">// |       |_         // that allows us to change</span>
+<span class="linenos"> 56</span><span class="w">                </span><span class="n">spaceElement</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">       </span><span class="c1">// |       | _        // the drawing elements</span>
+<span class="linenos"> 57</span><span class="w">                </span><span class="n">arrowLength</span><span class="w"> </span><span class="o">+</span><span class="w">                 </span><span class="c1">// |       | ---_     // without redoing the</span>
+<span class="linenos"> 58</span><span class="w">                </span><span class="n">arrowElement</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">       </span><span class="c1">// |       | ---&gt;_    // overhead space</span>
+<span class="linenos"> 59</span><span class="w">                </span><span class="n">spaceElement</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w">        </span><span class="c1">// |       | ---&gt; _   // computation.</span>
+<span class="linenos"> 60</span>
+<span class="linenos"> 61</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">upperFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">();</span>
+<span class="linenos"> 62</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">lowerFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">();</span>
+<span class="linenos"> 63</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">middleFrame</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">();</span>
+<span class="linenos"> 64</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">snake</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">();</span>
+<span class="linenos"> 65</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">snakeTail</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">();</span>
+<span class="linenos"> 66</span>
+<span class="linenos"> 67</span><span class="w">        </span><span class="cm">/** How many characters have we used for far? */</span>
+<span class="linenos"> 68</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">lineLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos"> 69</span>
+<span class="linenos"> 70</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nodeValue</span><span class="p">;</span>
+<span class="linenos"> 71</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">frontArrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="linenos"> 72</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">frontSpace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos"> 73</span><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">newline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="linenos"> 74</span><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">nothingPrinted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="linenos"> 75</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">nodeValueLength</span><span class="p">,</span><span class="w"> </span><span class="n">spaceNeeded</span><span class="p">;</span>
+<span class="linenos"> 76</span>
+<span class="linenos"> 77</span><span class="w">        </span><span class="n">Node</span><span class="w"> </span><span class="n">currentNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
+<span class="linenos"> 78</span>
+<span class="linenos"> 79</span><span class="w">        </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 80</span>
+<span class="linenos"> 81</span><span class="w">            </span><span class="n">nodeValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentNode</span><span class="p">.</span><span class="na">value</span><span class="p">;</span>
+<span class="linenos"> 82</span><span class="w">            </span><span class="n">nodeValueLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nodeValue</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+<span class="linenos"> 83</span><span class="w">            </span><span class="n">spaceNeeded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nodeValueLength</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">OVERHEAD</span><span class="p">;</span>
+<span class="linenos"> 84</span><span class="w">            </span><span class="n">lineLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lineLength</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">spaceNeeded</span><span class="p">;</span>
+<span class="linenos"> 85</span>
+<span class="linenos"> 86</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">lineLength</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">WIDTH</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 87</span><span class="w">                </span><span class="c1">// System.out.println(&quot;... line width exceeded&quot;);</span>
+<span class="linenos"> 88</span><span class="w">                </span><span class="c1">// next line</span>
+<span class="linenos"> 89</span><span class="w">                </span><span class="n">newline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="linenos"> 90</span><span class="w">                </span><span class="n">lineLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos"> 91</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos"> 92</span>
+<span class="linenos"> 93</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">newline</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 94</span>
+<span class="linenos"> 95</span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">upperFrame</span><span class="p">);</span>
+<span class="linenos"> 96</span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">middleFrame</span><span class="o">+</span><span class="n">cornerElement</span><span class="p">);</span>
+<span class="linenos"> 97</span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">lowerFrame</span><span class="o">+</span><span class="n">verticalElement</span><span class="p">);</span>
+<span class="linenos"> 98</span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">spaceElement</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">middleFrame</span><span class="p">.</span><span class="na">length</span><span class="p">())</span><span class="o">+</span><span class="n">verticalElement</span><span class="p">);</span>
+<span class="linenos"> 99</span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">cornerElement</span><span class="o">+</span><span class="n">lineElement</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">middleFrame</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">cornerElement</span><span class="p">);</span>
+<span class="linenos">100</span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">verticalElement</span><span class="p">);</span>
+<span class="linenos">101</span><span class="w">                </span><span class="c1">// print snake arrow</span>
+<span class="linenos">102</span>
+<span class="linenos">103</span><span class="w">                </span><span class="n">nothingPrinted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="linenos">104</span>
+<span class="linenos">105</span><span class="w">                </span><span class="n">upperFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">verticalElement</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">endOfLineLength</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="linenos">106</span><span class="w">                </span><span class="n">lowerFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spaceElement</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">endOfLineLength</span><span class="o">+</span><span class="mi">2</span><span class="p">);</span>
+<span class="linenos">107</span><span class="w">                </span><span class="n">middleFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cornerElement</span><span class="p">;</span>
+<span class="linenos">108</span><span class="w">                </span><span class="n">frontArrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lineElement</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">endOfLineLength</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arrowElement</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span><span class="p">;</span>
+<span class="linenos">109</span><span class="w">                </span><span class="n">frontSpace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frontArrow</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="o">-</span><span class="mi">3</span><span class="p">;</span>
+<span class="linenos">110</span><span class="w">                </span><span class="n">lineLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lineLength</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">middleFrame</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">frontSpace</span><span class="p">;</span>
+<span class="linenos">111</span><span class="w">                </span><span class="n">newline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="linenos">112</span>
+<span class="linenos">113</span><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">114</span><span class="w">                </span><span class="c1">//System.out.println(&quot;... no new line&quot;);</span>
+<span class="linenos">115</span><span class="w">                </span><span class="n">frontSpace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos">116</span><span class="w">                </span><span class="n">frontArrow</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="linenos">117</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos">118</span>
+<span class="linenos">119</span><span class="w">            </span><span class="n">upperFrame</span>
+<span class="linenos">120</span><span class="w">                    </span><span class="o">=</span><span class="w"> </span><span class="n">upperFrame</span>
+<span class="linenos">121</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">frontSpace</span><span class="p">)</span>
+<span class="linenos">122</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">cornerElement</span>
+<span class="linenos">123</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">lineElement</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">nodeValueLength</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">spaceElement</span><span class="p">.</span><span class="na">length</span><span class="p">())</span>
+<span class="linenos">124</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">cornerElement</span>
+<span class="linenos">125</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span>
+<span class="linenos">126</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">arrowLength</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">127</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span><span class="p">;</span>
+<span class="linenos">128</span>
+<span class="linenos">129</span><span class="w">            </span><span class="n">lowerFrame</span>
+<span class="linenos">130</span><span class="w">                    </span><span class="o">=</span><span class="w"> </span><span class="n">lowerFrame</span>
+<span class="linenos">131</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">frontSpace</span><span class="p">)</span>
+<span class="linenos">132</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">cornerElement</span>
+<span class="linenos">133</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">lineElement</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">nodeValueLength</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">spaceElement</span><span class="p">.</span><span class="na">length</span><span class="p">())</span>
+<span class="linenos">134</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">cornerElement</span>
+<span class="linenos">135</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span>
+<span class="linenos">136</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">arrowLength</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">137</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span><span class="p">;</span>
+<span class="linenos">138</span>
+<span class="linenos">139</span><span class="w">            </span><span class="n">middleFrame</span>
+<span class="linenos">140</span><span class="w">                    </span><span class="o">=</span><span class="w"> </span><span class="n">middleFrame</span>
+<span class="linenos">141</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">frontArrow</span>
+<span class="linenos">142</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">verticalElement</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span>
+<span class="linenos">143</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">nodeValue</span>
+<span class="linenos">144</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">verticalElement</span>
+<span class="linenos">145</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span>
+<span class="linenos">146</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">lineElement</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">arrowLength</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arrowElement</span>
+<span class="linenos">147</span><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">spaceElement</span><span class="p">;</span>
+<span class="linenos">148</span>
+<span class="linenos">149</span><span class="w">            </span><span class="n">lineLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lineLength</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">middleFrame</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+<span class="linenos">150</span>
+<span class="linenos">151</span><span class="w">            </span><span class="n">currentNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentNode</span><span class="p">.</span><span class="na">next</span><span class="p">;</span>
+<span class="linenos">152</span>
+<span class="linenos">153</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">currentNode</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<span class="linenos">154</span>
+<span class="linenos">155</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nothingPrinted</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">currentNode</span><span class="p">.</span><span class="na">next</span><span class="o">==</span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">156</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">upperFrame</span><span class="p">);</span>
+<span class="linenos">157</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">middleFrame</span><span class="p">);</span>
+<span class="linenos">158</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">lowerFrame</span><span class="p">);</span>
+<span class="linenos">159</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">160</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">161</span><span class="p">}</span><span class="w"> </span><span class="c1">// method printList</span>
+</pre></div>
+</div>
+</section>
+<section id="problem-3-bonus">
+<h2>Problem 3 (bonus)<a class="headerlink" href="#problem-3-bonus" title="Link to this heading"></a></h2>
+<p>Compared to problem 2, this was an easy one. The general case is to identify the node previous to the one to be removed and have its <code class="docutils literal notranslate"><span class="pre">next</span></code> field mapped to the node after the one to be removed. There are special cases, to be handled directly:
+* Removing the head node: in this case <code class="docutils literal notranslate"><span class="pre">head=head.next;</span></code> does the trick.
+* Removing the tail node: we find the node for which <code class="docutils literal notranslate"><span class="pre">.next==tail</span></code>, and we make it tail.
+* Removing the node in a list with <code class="docutils literal notranslate"><span class="pre">size==1</span></code>: we empty the list: <code class="docutils literal notranslate"><span class="pre">head=null;</span></code>
+* Removing a node in a list with <code class="docutils literal notranslate"><span class="pre">size==2</span></code>. In this case either <code class="docutils literal notranslate"><span class="pre">tail=head;</span></code> or <code class="docutils literal notranslate"><span class="pre">head=tail;</span></code></p>
+</section>
+<section id="problem-4">
+<h2>Problem 4<a class="headerlink" href="#problem-4" title="Link to this heading"></a></h2>
+<p>The easiest solution to this problem is to swap the <code class="docutils literal notranslate"><span class="pre">.value</span></code> fields of the corresponding nodes.</p>
+</section>
+<section id="problem-5">
+<h2>Problem 5<a class="headerlink" href="#problem-5" title="Link to this heading"></a></h2>
+<p>This is also a straight-forward problem, with a few special cases:
+* There is no previous node when <code class="docutils literal notranslate"><span class="pre">size==1</span></code>.
+* When <code class="docutils literal notranslate"><span class="pre">size==2</span></code> the previous node is <code class="docutils literal notranslate"><span class="pre">head</span></code>.
+For <code class="docutils literal notranslate"><span class="pre">size&gt;2</span></code>, we simply conduct a traversal of the list.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2023, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
