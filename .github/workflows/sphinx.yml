@@ -17,7 +17,7 @@ jobs:
                 ref: gh-pages
             - run: git config --global user.email "lgreco@gmail.com"
             - run: git config --global user.name "Leo Irakliotis"
-            - run: pip3 install sphinx
+            - run: apt-get install python3-sphinx
             - run: pip3 install sphinx-rtd-theme
             - run: pip3 install sphinxcontrib.gist
             - run: sphinx-build -b html docs/source . 
