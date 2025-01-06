@@ -21,11 +21,12 @@ Detailed outline
 
   * Character mismatch penalties.
   * Gap penalties.
-  * Contrived example: `---CAT` and `DOG---`, with :math:`\alpha_\text{gap}<0`.
+  * Contrived example: ``---CAT`` and ``DOG---``, with :math:`\alpha_\text{gap}<0`.
   * Brute force time performance.
   * Observation towards optimal substructure (focus on the "last column").
   * Needleman-Wunch algorithm and performance analysis.
-  * **Assignment:** backtrace Needleman-Wunch scores to construct alignment. <br/>
+  * **Assignment:** backtrace Needleman-Wunch scores to construct alignment. 
+  | 
 
 
 * Week 03: Recurrence Relations 
