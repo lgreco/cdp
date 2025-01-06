@@ -1,6 +1,5 @@
-
 Inclusion statement
-++++++++++++++++++++++++++++++++++++
+===================
 
    *A university is a place where the universality of the human experience manifests itself.* -- Albert Einstein
    
