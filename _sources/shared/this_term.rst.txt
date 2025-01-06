@@ -1,6 +1,5 @@
-
 Spring 2025 term
-+++++++++++++++++
+================
 
 
 In the **Spring 2025,** I teach **COMP 150** (Introduction to Computing), **COMP 363,** (undergraduate Algorithms), and **COMP460** (graduate Algorithms). 

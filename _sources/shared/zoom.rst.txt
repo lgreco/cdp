@@ -1,5 +1,5 @@
 Zoom
-++++
+====
 
 If the class is asynchronous or online, you'll need a conferencing tool like Zoom or Teams video to connect with me. It is a good idea to have such a tool handy even for synchronous courses that meet on campus. For example, during inclement weather, I may move the class meeting to Zoom, to keep everyone safe, dry, and warm.
 
