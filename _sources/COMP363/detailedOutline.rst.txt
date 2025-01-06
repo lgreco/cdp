@@ -43,7 +43,7 @@ Detailed outline
 
 * Week 04: Memoization and Dynamic Programming
 
-  * 0/1 Knapsack (or, how to plan a museum heist). 
+  * 0/1 Knapsack. 
   * Minimum Weight Independent Set. 
   * **Assignment:** tbd
 
@@ -65,7 +65,7 @@ Detailed outline
   * Boruvka's algorithm. Relaxing tense edges. 
   * Correctness and complexity considerations. 
   * Evolution of Boruvka to Kruskal, Dijkstra and other variations.
-  * **Assignment:** implement Boruvka's algorith.<br/>
+  * **Assignment:** implement Boruvka's algorith.
   
 
 * Week 07: Directed Graphs
@@ -109,7 +109,7 @@ Detailed outline
    * Reductions
 
 
-* Week 13: Neural Networks.
+* Week 13: Neural Networks
 
 The graduate course (COMP 460) comprises a review/refresh part and an advanced part. In the review part, we combine topics as follows:
 
