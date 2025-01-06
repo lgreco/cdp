@@ -1,4 +1,3 @@
-:orphan:
 
 Detailed outline
 ----------------

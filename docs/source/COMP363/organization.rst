@@ -1,4 +1,3 @@
-:orphan:
 
 
 .. include:: ../shared/organizationHeader.rst
