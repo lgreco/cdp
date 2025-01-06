@@ -1,11 +1,20 @@
 :orphan:
 
-Outline
--------
+Detailed outline
+----------------
 
-The undergraduate course in algorithms comprises the following topics. Each unit spans approximately one week during the spring or the fall term. There is a weeklong assignment for each unit. Two of these assignments are designated as *exams:* a midterm and a last (final) exam. The exact order in which these topics are covered, may differ from term to term.
+* Week 01
 
-- Unit 1: Tools and techniques. Python, the *Markdown* markup language, LaTeX (another markup language), discrete mathematics. Upper bound notation (big-oh :math:`\mathcal{O}()` notation). Example of a simple algorithm: Newton's method to find :math:`\sqrt{x}`.  
+  * The Colab environment: code cells v. text cells.
+  * Basic Python syntax. Java-to-Python transition.
+  * Markup languages: SGML, HTML, XML, TeX, LaTeX, MarkDown.
+  * MarkDown syntax
+  * LaTeX syntax
+  * A simple algorithm described in MD, LaTeX, and Python. Discuss the nature of a *numerical* algorithm.
+  * A simple algorithm to solve a 2x2 system of equations, then for a 3x3 system of equations. What about a :math:`n\times n` with :math:`n>3`? Introduction to Gaussian elimination and analysis of its performance.
+
+
+* Week 02
 
 - Unit 2: String alignment. Problems with optimal substructure. From brute force with nearly infinite scenarios to practical solutions that can be delivered in polynomial time. 
 
