@@ -88,24 +88,65 @@
   <section id="detailed-outline">
 <h1>Detailed outline<a class="headerlink" href="#detailed-outline" title="Link to this heading"></a></h1>
 <ul class="simple">
-<li><p>Week 01</p>
+<li><p>Week 01: Tools and Basic Techniques</p>
 <ul>
 <li><p>The Colab environment: code cells v. text cells.</p></li>
 <li><p>Basic Python syntax. Java-to-Python transition.</p></li>
 <li><p>Markup languages: SGML, HTML, XML, TeX, LaTeX, MarkDown.</p></li>
-<li><p>MarkDown syntax</p></li>
-<li><p>LaTeX syntax</p></li>
-<li><p>A simple algorithm described in MD, LaTeX, and Python. Discuss the nature of a <em>numerical</em> algorithm.</p></li>
-<li><p>A simple algorithm to solve a 2x2 system of equations, then for a 3x3 system of equations. What about a <span class="math notranslate nohighlight">\(n\times n\)</span> with <span class="math notranslate nohighlight">\(n&gt;3\)</span>? Introduction to Gaussian elimination and analysis of its performance.</p></li>
+<li><p>MarkDown syntax.</p></li>
+<li><p>LaTeX syntax.</p></li>
+<li><p>A simple algorithm described in <cite>md</cite>, LaTeX, and Python.</p></li>
+<li><p>Discuss the nature of a <em>numerical</em> algorithm.</p></li>
+<li><p>A simple algorithm to solve a 2x2 system of equations, then for a 3x3 system of equations.</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\times n\)</span> with <span class="math notranslate nohighlight">\(n&gt;3\)</span> and Gaussian elimination; performance analysis.</p></li>
+<li><p><strong>Assignment:</strong> implement Gaussian elimination in Python.</p></li>
 </ul>
 </li>
-<li><p>Week 02</p></li>
+<li><p>Week 02: String Alignment</p>
+<ul>
+<li><p>Character mismatch penalties.</p></li>
+<li><p>Gap penalties.</p></li>
+<li><p>Contrived example: <cite>—CAT</cite> and <cite>DOG—</cite>, with <span class="math notranslate nohighlight">\(\alpha_\text{gap}&lt;0\)</span>.</p></li>
+<li><p>Brute force time performance.</p></li>
+<li><p>Observation towards optimal substructure (focus on the “last column”).</p></li>
+<li><p>Needleman-Wunch algorithm and performance analysis.</p></li>
+<li><p><strong>Assignment:</strong> backtrace Needleman-Wunch scores to construct alignment.</p></li>
+</ul>
+</li>
+<li><p>Week 03: Recurrence Relations</p>
+<ul>
+<li><p>Review of mergesort.</p></li>
+<li><p>Identify the <em>divide</em> and <em>conquer</em> components of the algorithm.</p></li>
+<li><p>Measure its time complexity.</p></li>
+<li><p>Generalize the concept of recurrence as <span class="math notranslate nohighlight">\(T(n)=rT(n/c)+f(n)\)</span></p></li>
+<li><p>Derivation of the <em>Master Theorem.</em></p></li>
+<li><p>Good recursion. Bad recursion.</p></li>
+<li><p>Factorial and Fibonacci computations.</p></li>
+<li><p>Multiplying <em>very</em> large integers.</p></li>
+<li><p><strong>Assignment:</strong> Karatsuba multiplication performance measurements.</p></li>
+</ul>
+</li>
+<li><p>Week 04: Memoization and Dynamic Programming</p>
+<ul>
+<li><p>0/1 Knapsack (or, how to plan a museum heist).</p></li>
+<li><p>Minimum Weight Independent Set.</p></li>
+<li><p><strong>Assignment:</strong> tbd</p></li>
+</ul>
+</li>
+<li><p>Week 05: Simple Graphs</p>
+<ul>
+<li><p>Review of graph definition and basic properties.</p></li>
+<li><p>Graph types.</p></li>
+<li><p>Parts of a graph.</p></li>
+<li><p>Representing a graph with arrays.</p></li>
+<li><p>Graph traversals.</p></li>
+<li><p>Stack v. queue-based traversals of a graph.</p></li>
+<li><p>Labeling and counting components.</p></li>
+<li><p><strong>Assignment:</strong> tbd</p></li>
+</ul>
+</li>
 </ul>
 <ul class="simple">
-<li><p>Unit 2: String alignment. Problems with optimal substructure. From brute force with nearly infinite scenarios to practical solutions that can be delivered in polynomial time.</p></li>
-<li><p>Unit 3: Recurrence relations. Divide and Conquer techniques. Derivation of the <em>Master Theorem.</em> Good recursion. Bad recursion. Factorial and Fibonacci computations. Multiplying <em>very</em> large integers.</p></li>
-<li><p>Unit 4: Memoization and Dynamic Programming. 0/1 Knapsack (or, how to plan a museum heist). Minimum Weight Independent Set.</p></li>
-<li><p>Unit 5: Simple graphs. Review of graph definition and basic properties. Graph types. Parts of a graph. Representing a graph with arrays. Graph traversals. Stack v. queue-based traversals of a graph. Labeling and counting components.</p></li>
 <li><p>Unit 6: Minimum spanning trees. Boruvka’s algorithm. Relaxing tense edges. Correctness and complexity considerations. Evolution of Boruvka to Kruskal, Dijkstra and other variations.</p></li>
 <li><p>Unit 7: Directed graphs. Adjacency matrix. Determining the reachability of a vertex. Shortest paths. Detecting cycles.</p></li>
 <li><p>Unit 8: Maximum flows and minimum cuts or why Chicago is a more important strategic target than NYC.</p></li>
