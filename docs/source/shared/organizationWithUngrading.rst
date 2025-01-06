@@ -2,7 +2,7 @@ Course organization and logistics
 ---------------------------------
 
 
-.. include:: ./deadlines.rst
+.. include:: ../shared/deadlines.rst
 .. include:: ../shared/makeUp.rst
 .. include:: ../shared/assignments.rst
 .. include:: ../shared/grading.rst
