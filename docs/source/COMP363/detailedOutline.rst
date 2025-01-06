@@ -14,7 +14,7 @@ Detailed outline
   * Discuss the nature of a *numerical* algorithm.
   * A simple algorithm to solve a 2x2 system of equations, then for a 3x3 system of equations. 
   * :math:`n\times n` with :math:`n>3` and Gaussian elimination; performance analysis.
-  * **Assignment:** implement Gaussian elimination in Python.
+  * **Assignment:** implement Gaussian elimination in Python.<br/>
 
 
 * Week 02: String Alignment
@@ -25,7 +25,7 @@ Detailed outline
   * Brute force time performance.
   * Observation towards optimal substructure (focus on the "last column").
   * Needleman-Wunch algorithm and performance analysis.
-  * **Assignment:** backtrace Needleman-Wunch scores to construct alignment. 
+  * **Assignment:** backtrace Needleman-Wunch scores to construct alignment. <br/>
 
 
 * Week 03: Recurrence Relations 
@@ -38,14 +38,14 @@ Detailed outline
   * Good recursion. Bad recursion. 
   * Factorial and Fibonacci computations. 
   * Multiplying *very* large integers.
-  * **Assignment:** Karatsuba multiplication performance measurements.
+  * **Assignment:** Karatsuba multiplication performance measurements.<br/>
 
 
 * Week 04: Memoization and Dynamic Programming
 
   * 0/1 Knapsack (or, how to plan a museum heist). 
   * Minimum Weight Independent Set. 
-  * **Assignment:** tbd
+  * **Assignment:** tbd<br/>
 
 * Week 05: Simple Graphs 
 
@@ -56,14 +56,14 @@ Detailed outline
   * Graph traversals. 
   * Stack v. queue-based traversals of a graph. 
   * Labeling and counting components.
-  * **Assignment:** tbd
+  * **Assignment:** tbd<br/>
 
 * Week 06: Minimum Spanning Trees
 
   * Boruvka's algorithm. Relaxing tense edges. 
   * Correctness and complexity considerations. 
   * Evolution of Boruvka to Kruskal, Dijkstra and other variations.
-  * **Assignment:** implement Boruvka's algorith.
+  * **Assignment:** implement Boruvka's algorith.<br/>
   
 
 - Unit 7: Directed graphs. Adjacency matrix. Determining the reachability of a vertex. Shortest paths. Detecting cycles.
