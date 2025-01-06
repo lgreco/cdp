@@ -3,6 +3,7 @@ COMP 363+460 Algorithms
 ==========================================================
 
 ..	toctree::
+	:maxdepth: 2
 
 	
 .. include:: ./outcomes.rst
