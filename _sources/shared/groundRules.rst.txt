@@ -1,5 +1,5 @@
 Ground rules
-++++++++++++++++++++++++++++++++++
+============
 
 In my experience, the single most common cause of poor performance in any course is when students are not proactive. When you are proactive you can recognize and address any issues with your courses, while you have time to do something about it. Learning to be proactive is one of the most valuable skills you can acquire in college. 
 
