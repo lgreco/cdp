@@ -58,7 +58,13 @@ Detailed outline
   * Labeling and counting components.
   * **Assignment:** tbd
 
-- Unit 6: Minimum spanning trees. Boruvka's algorithm. Relaxing tense edges. Correctness and complexity considerations. Evolution of Boruvka to Kruskal, Dijkstra and other variations.
+* Week 06: Minimum Spanning Trees
+
+  * Boruvka's algorithm. Relaxing tense edges. 
+  * Correctness and complexity considerations. 
+  * Evolution of Boruvka to Kruskal, Dijkstra and other variations.
+  * **Assignment:** implement Boruvka's algorith.
+  
 
 - Unit 7: Directed graphs. Adjacency matrix. Determining the reachability of a vertex. Shortest paths. Detecting cycles.
 
