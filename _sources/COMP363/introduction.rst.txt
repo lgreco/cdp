@@ -9,4 +9,4 @@ COMP 363+460 Algorithms
 .. include:: ./detailedOutline.rst
 .. include:: ./textbook.rst
 .. include:: ./reading.rst
-.. include:: ../shared/organizationWithUngrading
+.. include:: ../shared/organizationWithUngrading.rst
