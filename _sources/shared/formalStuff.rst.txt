@@ -1,6 +1,5 @@
-
 Formal notices
-++++++++++++++++++++++++++++++++++
+===============
 
 * The `university's official Academic Calendar <http://www.luc.edu/academics/schedules>`_.
 

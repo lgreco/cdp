@@ -1,6 +1,5 @@
-
 Be cool, like a *pro*
-++++++++++++++++++++++++++++++++++
+=====================
 
 In additional to the technical content of the course, there is a professional element to it. The professional element of the course is meant to cultivate your **essential work skills** (some call them "soft skills"). These skills are highly sought after by employers. Essential skills include communication skills, neatness, punctuality, dependability, ability to work in teams, problem solving skills, etc.
 
