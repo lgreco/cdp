@@ -10,7 +10,7 @@ Detailed outline
   * Markup languages: SGML, HTML, XML, TeX, LaTeX, MarkDown.
   * MarkDown syntax.
   * LaTeX syntax.
-  * A simple algorithm described in `md`, LaTeX, and Python. 
+  * A simple algorithm described in ``md``, LaTeX, and Python. 
   * Discuss the nature of a *numerical* algorithm.
   * A simple algorithm to solve a 2x2 system of equations, then for a 3x3 system of equations. 
   * :math:`n\times n` with :math:`n>3` and Gaussian elimination; performance analysis.
