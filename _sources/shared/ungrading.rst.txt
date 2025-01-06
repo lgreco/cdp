@@ -1,7 +1,5 @@
-
-
 *Ungrading* and how it works
-++++++++++++++++++++++++++++++++++
+============================
 
 *Ungrading* is a low-stress approach to evaluating progress through a course. 
 
@@ -26,7 +24,7 @@ Reflection statements
 For the midterm and end-of-term reflections statements, I use `Jesse Stommel's suggestions <https://www.jessestommel.com/ungrading-an-faq/>`__ with some additional questions.
 
 Midterm reflection
-==================
+,,,,,,,,,,,,,,,,,,
 
 * What aspects of the course have been the most successful for you so far? 
 * What thing that you've learned are you most excited about?
@@ -35,7 +33,8 @@ Midterm reflection
 * Based on your performance so far, what do you feel your course grade should be? Choose from A, B, C, or D.
 
 End-of-term reflection
-======================
+,,,,,,,,,,,,,,,,,,,,,,,
+
 * Write me a short letter that reflects on your work in this class. 
 * Consider the work you did on exams, assignments, and lab/studio sessions, the feedback you gave and received, and how you met your own goals. 
 * Feel free to include examples of your work as necessary. 
@@ -43,6 +42,7 @@ End-of-term reflection
 * Is there anything you are particularly proud of?
 * If, in the midterm reflection, you identified any areas for improvement/focus, how did you do?
 * What letter grade would you give yourself in this course? Choose from A, B, C, or D. (Ideally, I would give everyone the grade they give themselves, but I reserve the right to raise or lower grades as appropriate. Also notice that the grade you propose (A,B,C,D) is a range. The actual grade may vary slightly. For example, you may propose a B but end up with an A-. Or you may propose a B and earn a B-.)
+
 
 Frequently Asked Questions about *Ungrading*
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
