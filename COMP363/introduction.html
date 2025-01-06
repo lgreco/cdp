@@ -47,14 +47,15 @@
               <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">COMP 363+460 Algorithms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#outline">Outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#course-description-and-outcomes">Course description and outcomes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#detailed-outline">Detailed outline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#textbook-and-tools">Textbook and tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#required-reading">Required reading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#programming-environment">Programming environment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#reading-material">Reading material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#leo-s-notes">Leo’s notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#programming-environment">Programming environment</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#reading-material">Reading material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#leo-s-notes">Leo’s notes</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -103,23 +104,121 @@
 <h1>COMP 363+460 Algorithms<a class="headerlink" href="#comp-363-460-algorithms" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<section id="outline">
-<h2>Outline<a class="headerlink" href="#outline" title="Link to this heading"></a></h2>
-<p>The undergraduate course in algorithms comprises the following topics. Each unit spans approximately one week during the spring or the fall term. There is a weeklong assignment for each unit. Two of these assignments are designated as <em>exams:</em> a midterm and a last (final) exam. The exact order in which these topics are covered, may differ from term to term.</p>
+<section id="course-description-and-outcomes">
+<h2>Course description and outcomes<a class="headerlink" href="#course-description-and-outcomes" title="Link to this heading"></a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">orphan<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</section>
+<section id="detailed-outline">
+<h2>Detailed outline<a class="headerlink" href="#detailed-outline" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Week 01: Tools and Basic Techniques</p>
 <ul class="simple">
-<li><p>Unit 1: Tools and techniques. Python, the <em>Markdown</em> markup language, LaTeX (another markup language), discrete mathematics. Upper bound notation (big-oh <span class="math notranslate nohighlight">\(\mathcal{O}()\)</span> notation). Example of a simple algorithm: Newton’s method to find <span class="math notranslate nohighlight">\(\sqrt{x}\)</span>.</p></li>
-<li><p>Unit 2: String alignment. Problems with optimal substructure. From brute force with nearly infinite scenarios to practical solutions that can be delivered in polynomial time.</p></li>
-<li><p>Unit 3: Recurrence relations. Divide and Conquer techniques. Derivation of the <em>Master Theorem.</em> Good recursion. Bad recursion. Factorial and Fibonacci computations. Multiplying <em>very</em> large integers.</p></li>
-<li><p>Unit 4: Memoization and Dynamic Programming. 0/1 Knapsack (or, how to plan a museum heist). Minimum Weight Independent Set.</p></li>
-<li><p>Unit 5: Simple graphs. Review of graph definition and basic properties. Graph types. Parts of a graph. Representing a graph with arrays. Graph traversals. Stack v. queue-based traversals of a graph. Labeling and counting components.</p></li>
-<li><p>Unit 6: Minimum spanning trees. Boruvka’s algorithm. Relaxing tense edges. Correctness and complexity considerations. Evolution of Boruvka to Kruskal, Dijkstra and other variations.</p></li>
-<li><p>Unit 7: Directed graphs. Adjacency matrix. Determining the reachability of a vertex. Shortest paths. Detecting cycles.</p></li>
-<li><p>Unit 8: Maximum flows and minimum cuts or why Chicago is a more important strategic target than NYC.</p></li>
-<li><p>Unit 9: (two header): Greedy algorithms: Huffman encoding. Topological ordering.</p></li>
-<li><p>Unit 10: Tree algorithms.</p></li>
-<li><p>Unit 11: tbd</p></li>
-<li><p>Week 12: P versus NP and complexity theory. The SAT3 problem.</p></li>
-<li><p>Week 13: A gentle introduction to neural networks.</p></li>
+<li><p>The Colab environment: code cells v. text cells.</p></li>
+<li><p>Basic Python syntax. Java-to-Python transition.</p></li>
+<li><p>Markup languages: SGML, HTML, XML, TeX, LaTeX, MarkDown.</p></li>
+<li><p>MarkDown syntax.</p></li>
+<li><p>LaTeX syntax.</p></li>
+<li><p>A simple algorithm described in <code class="docutils literal notranslate"><span class="pre">md</span></code>, LaTeX, and Python.</p></li>
+<li><p>Discuss the nature of a <em>numerical</em> algorithm.</p></li>
+<li><p>A simple algorithm to solve a 2x2 system of equations, then for a 3x3 system of equations.</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\times n\)</span> with <span class="math notranslate nohighlight">\(n&gt;3\)</span> and Gaussian elimination; performance analysis.</p></li>
+<li><p><strong>Assignment:</strong> implement Gaussian elimination in Python.</p></li>
+</ul>
+</li>
+<li><p>Week 02: String Alignment</p>
+<ul class="simple">
+<li><p>Character mismatch penalties.</p></li>
+<li><p>Gap penalties.</p></li>
+<li><p>Contrived example: <code class="docutils literal notranslate"><span class="pre">---CAT</span></code> and <code class="docutils literal notranslate"><span class="pre">DOG---</span></code>, with <span class="math notranslate nohighlight">\(\alpha_\text{gap}&lt;0\)</span>.</p></li>
+<li><p>Brute force time performance.</p></li>
+<li><p>Observation towards optimal substructure (focus on the “last column”).</p></li>
+<li><p>Needleman-Wunch algorithm and performance analysis.</p></li>
+<li><p><strong>Assignment:</strong> backtrace Needleman-Wunch scores to construct alignment.</p></li>
+</ul>
+</li>
+<li><p>Week 03: Recurrence Relations</p>
+<ul class="simple">
+<li><p>Review of mergesort.</p></li>
+<li><p>Identify the <em>divide</em> and <em>conquer</em> components of the algorithm.</p></li>
+<li><p>Measure its time complexity.</p></li>
+<li><p>Generalize the concept of recurrence as <span class="math notranslate nohighlight">\(T(n)=rT(n/c)+f(n)\)</span></p></li>
+<li><p>Derivation of the <em>Master Theorem.</em></p></li>
+<li><p>Good recursion. Bad recursion.</p></li>
+<li><p>Factorial and Fibonacci computations.</p></li>
+<li><p>Multiplying <em>very</em> large integers.</p></li>
+<li><p><strong>Assignment:</strong> Karatsuba multiplication performance measurements.</p></li>
+</ul>
+</li>
+<li><p>Week 04: Memoization and Dynamic Programming</p>
+<ul class="simple">
+<li><p>0/1 Knapsack.</p></li>
+<li><p>Minimum Weight Independent Set.</p></li>
+<li><p><strong>Assignment:</strong> tbd</p></li>
+</ul>
+</li>
+<li><p>Week 05: Simple Graphs</p>
+<ul class="simple">
+<li><p>Review of graph definition and basic properties.</p></li>
+<li><p>Graph types.</p></li>
+<li><p>Parts of a graph.</p></li>
+<li><p>Representing a graph with arrays.</p></li>
+<li><p>Graph traversals.</p></li>
+<li><p>Stack v. queue-based traversals of a graph.</p></li>
+<li><p>Labeling and counting components.</p></li>
+<li><p><strong>Assignment:</strong> tbd</p></li>
+</ul>
+</li>
+<li><p>Week 06: Minimum Spanning Trees</p>
+<ul class="simple">
+<li><p>Boruvka’s algorithm. Relaxing tense edges.</p></li>
+<li><p>Correctness and complexity considerations.</p></li>
+<li><p>Evolution of Boruvka to Kruskal, Dijkstra and other variations.</p></li>
+<li><p><strong>Assignment:</strong> implement Boruvka’s algorith.</p></li>
+</ul>
+</li>
+<li><p>Week 07: Directed Graphs</p>
+<ul class="simple">
+<li><p>Adjacency matrix.</p></li>
+<li><p>Reachability of a vertex.</p></li>
+<li><p>Shortest paths.</p></li>
+<li><p>Tense and relaxed edges.</p></li>
+<li><p>Topological sorting</p></li>
+<li><p><strong>Assignment:</strong> Detecting cycles.</p></li>
+</ul>
+</li>
+<li><p>Week 08: Maximum Flows / Minimum Cut</p>
+<ul class="simple">
+<li><p>Conservation of flow.</p></li>
+<li><p>Residual graph.</p></li>
+<li><p>Residual capacity.</p></li>
+<li><p>Operating on the residual graph.</p></li>
+<li><p>Augmented paths.</p></li>
+<li><p>Computing the maximum flow across a graph.</p></li>
+<li><p><strong>Assignment:</strong> determine the minimum cut of a graph.</p></li>
+</ul>
+</li>
+<li><p>Week 09: Greedy Algorithms</p>
+<ul class="simple">
+<li><p>Greedy algorithms that work: Huffman encoding.</p></li>
+<li><p>Greedy algorithms that do not work: MWIS.</p></li>
+<li><p><strong>Assignment:</strong> tbd</p></li>
+</ul>
+</li>
+<li><p>Week 10: Tree Algorithms</p></li>
+<li><p>Week 11: tbd</p></li>
+<li><p>Week 12: P versus NP</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Complexity theory.</p></li>
+<li><p>The SAT3 problem.</p></li>
+<li><p>Reductions</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Week 13: Neural Networks</p></li>
 </ul>
 <p>The graduate course (COMP 460) comprises a review/refresh part and an advanced part. In the review part, we combine topics as follows:</p>
 <ul class="simple">
@@ -165,8 +264,10 @@
 <li><p><a class="reference external" href="https://www.markdownguide.org/getting-started/">Getting started with Markdown</a>.</p></li>
 <li><p><a class="reference external" href="https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_1)">Introduction to LaTeX</a>.</p></li>
 </ul>
+</section>
+</section>
 <section id="reading-material">
-<h4>Reading material<a class="headerlink" href="#reading-material" title="Link to this heading"></a></h4>
+<h2>Reading material<a class="headerlink" href="#reading-material" title="Link to this heading"></a></h2>
 <p>In addition to the textbook for COMP 363, a number of alternative open educational resources (OER) with introductory and ancillary material are available:</p>
 <ul class="simple">
 <li><ol class="upperalpha simple" start="12">
@@ -184,11 +285,9 @@
 </ul>
 </section>
 <section id="leo-s-notes">
-<h4>Leo’s notes<a class="headerlink" href="#leo-s-notes" title="Link to this heading"></a></h4>
+<h2>Leo’s notes<a class="headerlink" href="#leo-s-notes" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 </div>
-</section>
-</section>
 </section>
 </section>
 
