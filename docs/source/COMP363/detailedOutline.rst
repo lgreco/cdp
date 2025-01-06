@@ -14,7 +14,7 @@ Detailed outline
   * Discuss the nature of a *numerical* algorithm.
   * A simple algorithm to solve a 2x2 system of equations, then for a 3x3 system of equations. 
   * :math:`n\times n` with :math:`n>3` and Gaussian elimination; performance analysis.
-  * **Assignment:** implement Gaussian elimination in Python.<br/>
+  * **Assignment:** implement Gaussian elimination in Python.
 
 
 * Week 02: String Alignment
@@ -26,7 +26,6 @@ Detailed outline
   * Observation towards optimal substructure (focus on the "last column").
   * Needleman-Wunch algorithm and performance analysis.
   * **Assignment:** backtrace Needleman-Wunch scores to construct alignment. 
-  | 
 
 
 * Week 03: Recurrence Relations 
@@ -39,14 +38,15 @@ Detailed outline
   * Good recursion. Bad recursion. 
   * Factorial and Fibonacci computations. 
   * Multiplying *very* large integers.
-  * **Assignment:** Karatsuba multiplication performance measurements.<br/>
+  * **Assignment:** Karatsuba multiplication performance measurements.
 
 
 * Week 04: Memoization and Dynamic Programming
 
   * 0/1 Knapsack (or, how to plan a museum heist). 
   * Minimum Weight Independent Set. 
-  * **Assignment:** tbd<br/>
+  * **Assignment:** tbd
+
 
 * Week 05: Simple Graphs 
 
@@ -57,7 +57,8 @@ Detailed outline
   * Graph traversals. 
   * Stack v. queue-based traversals of a graph. 
   * Labeling and counting components.
-  * **Assignment:** tbd<br/>
+  * **Assignment:** tbd
+
 
 * Week 06: Minimum Spanning Trees
 
@@ -67,19 +68,48 @@ Detailed outline
   * **Assignment:** implement Boruvka's algorith.<br/>
   
 
-- Unit 7: Directed graphs. Adjacency matrix. Determining the reachability of a vertex. Shortest paths. Detecting cycles.
+* Week 07: Directed Graphs
 
-- Unit 8: Maximum flows and minimum cuts or why Chicago is a more important strategic target than NYC. 
+  * Adjacency matrix. 
+  * Reachability of a vertex. 
+  * Shortest paths. 
+  * Tense and relaxed edges.
+  * Topological sorting
+  * **Assignment:** Detecting cycles.
 
-- Unit 9: (two header): Greedy algorithms: Huffman encoding. Topological ordering.
 
-- Unit 10: Tree algorithms.
+* Week 08: Maximum Flows / Minimum Cut
 
-- Unit 11: tbd
+  * Conservation of flow.
+  * Residual graph.
+  * Residual capacity.
+  * Operating on the residual graph.
+  * Augmented paths.
+  * Computing the maximum flow across a graph.
+  * **Assignment:** determine the minimum cut of a graph.
 
-- Week 12: P versus NP and complexity theory. The SAT3 problem.
 
-- Week 13: A gentle introduction to neural networks.
+* Week 09: Greedy Algorithms
+
+  * Greedy algorithms that work: Huffman encoding.
+  * Greedy algorithms that do not work: MWIS.
+  * **Assignment:** tbd
+
+
+* Week 10: Tree Algorithms
+
+
+* Week 11: tbd
+
+
+* Week 12: P versus NP
+ 
+   * Complexity theory. 
+   * The SAT3 problem.
+   * Reductions
+
+
+* Week 13: Neural Networks.
 
 The graduate course (COMP 460) comprises a review/refresh part and an advanced part. In the review part, we combine topics as follows:
 
