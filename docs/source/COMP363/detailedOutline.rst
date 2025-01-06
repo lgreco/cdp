@@ -4,7 +4,6 @@ Detailed outline
 ----------------
 
 * Week 01: Tools and Basic Techniques
-
   * The Colab environment: code cells v. text cells.
   * Basic Python syntax. Java-to-Python transition.
   * Markup languages: SGML, HTML, XML, TeX, LaTeX, MarkDown.
@@ -18,7 +17,6 @@ Detailed outline
 
 
 * Week 02: String Alignment
-
   * Character mismatch penalties.
   * Gap penalties.
   * Contrived example: ``---CAT`` and ``DOG---``, with :math:`\alpha_\text{gap}<0`.
@@ -29,7 +27,6 @@ Detailed outline
 
 
 * Week 03: Recurrence Relations 
-
   * Review of mergesort.
   * Identify the *divide* and *conquer* components of the algorithm.
   * Measure its time complexity.
@@ -42,14 +39,12 @@ Detailed outline
 
 
 * Week 04: Memoization and Dynamic Programming
-
   * 0/1 Knapsack. 
   * Minimum Weight Independent Set. 
   * **Assignment:** tbd
 
 
 * Week 05: Simple Graphs 
-
   * Review of graph definition and basic properties. 
   * Graph types. 
   * Parts of a graph. 
@@ -61,7 +56,6 @@ Detailed outline
 
 
 * Week 06: Minimum Spanning Trees
-
   * Boruvka's algorithm. Relaxing tense edges. 
   * Correctness and complexity considerations. 
   * Evolution of Boruvka to Kruskal, Dijkstra and other variations.
@@ -69,7 +63,6 @@ Detailed outline
   
 
 * Week 07: Directed Graphs
-
   * Adjacency matrix. 
   * Reachability of a vertex. 
   * Shortest paths. 
@@ -79,7 +72,6 @@ Detailed outline
 
 
 * Week 08: Maximum Flows / Minimum Cut
-
   * Conservation of flow.
   * Residual graph.
   * Residual capacity.
@@ -90,7 +82,6 @@ Detailed outline
 
 
 * Week 09: Greedy Algorithms
-
   * Greedy algorithms that work: Huffman encoding.
   * Greedy algorithms that do not work: MWIS.
   * **Assignment:** tbd
@@ -103,7 +94,6 @@ Detailed outline
 
 
 * Week 12: P versus NP
- 
    * Complexity theory. 
    * The SAT3 problem.
    * Reductions
