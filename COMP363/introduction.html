@@ -17,6 +17,7 @@
       <script src="../_static/documentation_options.js?v=5929fcd5"></script>
       <script src="../_static/doctools.js?v=888ff710"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -45,7 +46,17 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">COMP 363+460 Algorithms</a><ul class="simple">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">COMP 363+460 Algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#outline">Outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#textbook-and-tools">Textbook and tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#required-reading">Required reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#programming-environment">Programming environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reading-material">Reading material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#leo-s-notes">Leo’s notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -90,8 +101,97 @@
              
   <section id="comp-363-460-algorithms">
 <h1>COMP 363+460 Algorithms<a class="headerlink" href="#comp-363-460-algorithms" title="Link to this heading"></a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">orphan<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<section id="outline">
+<h2>Outline<a class="headerlink" href="#outline" title="Link to this heading"></a></h2>
+<p>The undergraduate course in algorithms comprises the following topics. Each unit spans approximately one week during the spring or the fall term. There is a weeklong assignment for each unit. Two of these assignments are designated as <em>exams:</em> a midterm and a last (final) exam. The exact order in which these topics are covered, may differ from term to term.</p>
+<ul class="simple">
+<li><p>Unit 1: Tools and techniques. Python, the <em>Markdown</em> markup language, LaTeX (another markup language), discrete mathematics. Upper bound notation (big-oh <span class="math notranslate nohighlight">\(\mathcal{O}()\)</span> notation). Example of a simple algorithm: Newton’s method to find <span class="math notranslate nohighlight">\(\sqrt{x}\)</span>.</p></li>
+<li><p>Unit 2: String alignment. Problems with optimal substructure. From brute force with nearly infinite scenarios to practical solutions that can be delivered in polynomial time.</p></li>
+<li><p>Unit 3: Recurrence relations. Divide and Conquer techniques. Derivation of the <em>Master Theorem.</em> Good recursion. Bad recursion. Factorial and Fibonacci computations. Multiplying <em>very</em> large integers.</p></li>
+<li><p>Unit 4: Memoization and Dynamic Programming. 0/1 Knapsack (or, how to plan a museum heist). Minimum Weight Independent Set.</p></li>
+<li><p>Unit 5: Simple graphs. Review of graph definition and basic properties. Graph types. Parts of a graph. Representing a graph with arrays. Graph traversals. Stack v. queue-based traversals of a graph. Labeling and counting components.</p></li>
+<li><p>Unit 6: Minimum spanning trees. Boruvka’s algorithm. Relaxing tense edges. Correctness and complexity considerations. Evolution of Boruvka to Kruskal, Dijkstra and other variations.</p></li>
+<li><p>Unit 7: Directed graphs. Adjacency matrix. Determining the reachability of a vertex. Shortest paths. Detecting cycles.</p></li>
+<li><p>Unit 8: Maximum flows and minimum cuts or why Chicago is a more important strategic target than NYC.</p></li>
+<li><p>Unit 9: (two header): Greedy algorithms: Huffman encoding. Topological ordering.</p></li>
+<li><p>Unit 10: Tree algorithms.</p></li>
+<li><p>Unit 11: tbd</p></li>
+<li><p>Week 12: P versus NP and complexity theory. The SAT3 problem.</p></li>
+<li><p>Week 13: A gentle introduction to neural networks.</p></li>
+</ul>
+<p>The graduate course (COMP 460) comprises a review/refresh part and an advanced part. In the review part, we combine topics as follows:</p>
+<ul class="simple">
+<li><p>Week 1: units 1 and 3</p></li>
+<li><p>Week 2: units 2 and 4</p></li>
+<li><p>Week 3: units 5, 7, 7, and 10</p></li>
+<li><p>Week 4: unit 8, by itself</p></li>
+<li><p>Week 5: unit 9, by itself</p></li>
+<li><p>Week 6: unit 11, by itself</p></li>
+</ul>
+<p>Depending on everyone’s background and prior experience in the graduate class, we could condense the review part even more. Then, for the last part of the term (weeks 6-12) we focus on advanced and special topics, including</p>
+<ul class="simple">
+<li><p>Artificial neural networks</p></li>
+<li><p>Large language models</p></li>
+<li><p>Signal processing</p></li>
+<li><p>Quantum computing</p></li>
+<li><p>Cryptography</p></li>
+<li><p>Hypergraphs</p></li>
+<li><p>Complexity spaces</p></li>
+<li><p>Numerical methods, etc.</p></li>
+</ul>
+<p>The precise mix of advanced topics depends on students’ preferences and the overall group dynamic of the class.</p>
+<p><strong>Coding:</strong> You may use any language you wish in the course. Classroom examples are written in Python as <a class="reference external" href="https://en.wikipedia.org/wiki/Project_Jupyter">Jupyter Notebooks</a>. The preferred platform for these notebooks is Google Colab.</p>
+</section>
+<section id="textbook-and-tools">
+<h2>Textbook and tools<a class="headerlink" href="#textbook-and-tools" title="Link to this heading"></a></h2>
+<section id="required-reading">
+<h3>Required reading<a class="headerlink" href="#required-reading" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="https://jeffe.cs.illinois.edu/teaching/algorithms/">Algorithms</a>, by Jeff Erikson. The book is available at no cost in PDF format. Inexpensive printed copies are also available for purchase.</p>
+</section>
+<section id="programming-environment">
+<h3>Programming environment<a class="headerlink" href="#programming-environment" title="Link to this heading"></a></h3>
+<p>For this course, I use Jupyter Notebooks, hosted in Google’s Colaboratory. These notebooks blend Python code and rich-text documentation that supports superb mathematical typography through LaTeX. The notebooks are, according to <em>Nature</em>, one of the 10 computing projects that transformed Science. (<a class="reference external" href="https://www.nature.com/articles/d41586-021-00075-2">The article is available</a>, through the LUC libraries, and worth reading.)</p>
+<p>If you have a <code class="docutils literal notranslate"><span class="pre">gmail</span></code> account, you have access to Google Colaboratory. If you do not have a <code class="docutils literal notranslate"><span class="pre">gmail</span></code> account, you have a few options.</p>
+<ul class="simple">
+<li><p>Your best bet is to just establish a <code class="docutils literal notranslate"><span class="pre">gmail</span></code> account.</p></li>
+<li><p>Otherwise, you could download and install a free version of the <a class="reference external" href="https://docs.anaconda.com/free/navigator/install/">Anaconda Navigator</a>. Then you can fork the course’s Jupyter Notebooks from GitHub and execute them on the Navigator. Please take into consideration that the instructor cannot provide technical support for downloading, installing, and maintaining Anacoda on your computer, and for managing git forks.</p></li>
+<li><p>If you prefer to use a different language than Python, you may do so. Most IDEs for languages like Java, C, C++, etc, however, do not support (easily) rich-text documentation or mathematical typography. The course does not expect you to produce much of either, but it would be nice if you tried out <em>Markdown</em> and LaTeX.</p></li>
+</ul>
+<p>Rich-text documentation in this course is done with <em>Markdown</em>. Mathematics are typeset with <em>LaTeX</em>. <strong>You are not expected</strong> to be familiar with <em>Markdown</em> or <em>LaTeX.</em> And there is no requirement to learn either. But both are good skills to have and you may want to spend some time exploring them. <em>Markdown</em> easy to learn; <em>LaTeX</em> is a bit more demanding.</p>
+<p>To learn more about these tools:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.markdownguide.org/getting-started/">Getting started with Markdown</a>.</p></li>
+<li><p><a class="reference external" href="https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_1)">Introduction to LaTeX</a>.</p></li>
+</ul>
+<section id="reading-material">
+<h4>Reading material<a class="headerlink" href="#reading-material" title="Link to this heading"></a></h4>
+<p>In addition to the textbook for COMP 363, a number of alternative open educational resources (OER) with introductory and ancillary material are available:</p>
+<ul class="simple">
+<li><ol class="upperalpha simple" start="12">
+<li><p>Lovasz and K. Vesztergombi’s <a class="reference external" href="https://github.com/lgreco/cdp/blob/master/source/COMP163/OER/LovaszVesztergombi.pdf">lecture notes on Discrete Mathematics</a> (made available online by <a class="reference external" href="http://web.cs.elte.hu/~lovasz">L. Lovasz</a>).</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="15">
+<li><p>Levin’s <a class="reference external" href="https://github.com/lgreco/cdp/blob/master/source/COMP163/OER/Levin.pdf">Discrete Mathematics</a> (distributed under a CC BY SA license).</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="10">
+<li><p>Aspnes’ <a class="reference external" href="https://github.com/lgreco/cdp/blob/master/source/COMP163/OER/Aspnes.pdf">Notes on Discrete Mathematics</a> (distributed under a CC BY SA license).</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="leo-s-notes">
+<h4>Leo’s notes<a class="headerlink" href="#leo-s-notes" title="Link to this heading"></a></h4>
 <div class="toctree-wrapper compound">
 </div>
+</section>
+</section>
+</section>
 </section>
 
 
