@@ -1,10 +1,8 @@
-:orphan:
-
 Course organization and logistics
 ---------------------------------
 
 
-.. include:: ../shared/deadlines.rst
+.. include:: ./deadlines.rst
 .. include:: ../shared/makeUp.rst
 .. include:: ../shared/assignments.rst
 .. include:: ../shared/grading.rst
