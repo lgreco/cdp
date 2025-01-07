@@ -2,134 +2,78 @@
 Detailed outline
 ----------------
 
-* Week 01: Tools and Basic Techniques
 
-  * The Colab environment: code cells v. text cells.
-  * Basic Python syntax. Java-to-Python transition.
-  * Markup languages: SGML, HTML, XML, TeX, LaTeX, MarkDown.
-  * MarkDown syntax.
-  * LaTeX syntax.
-  * A simple algorithm described in ``md``, LaTeX, and Python. 
-  * Discuss the nature of a *numerical* algorithm.
-  * A simple algorithm to solve a 2x2 system of equations, then for a 3x3 system of equations. 
-  * :math:`n\times n` with :math:`n>3` and Gaussian elimination; performance analysis.
-  * **Assignment:** implement Gaussian elimination in Python.
+Module 1: Foundations and Review (Weeks 1-2)
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
+**Week 1: Algorithm Analysis and Complexity**
+- Review of asymptotic notation: Big-O, Big-Theta, Big-Omega
+- Master theorem and recurrence relations
+- Lower and upper bounds, amortized analysis
 
-* Week 02: String Alignment
+**Week 2: Advanced Data Structures**
+- Persistent data structures
+- Union-Find with path compression and rank
+- Fibonacci heaps and self-balancing trees
 
-  * Character mismatch penalties.
-  * Gap penalties.
-  * Contrived example: ``---CAT`` and ``DOG---``, with :math:`\alpha_\text{gap}<0`.
-  * Brute force time performance.
-  * Observation towards optimal substructure (focus on the "last column").
-  * Needleman-Wunch algorithm and performance analysis.
-  * **Assignment:** backtrace Needleman-Wunch scores to construct alignment. 
+Module 2: Algorithm Design Paradigms (Weeks 3-6)
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
+**Week 3: Divide and Conquer**
+- Advanced applications: Strassen's matrix multiplication, FFT
 
-* Week 03: Recurrence Relations 
+**Week 4: Dynamic Programming (DP)**
+- Optimizations: Space reduction, Bitmask DP, Knuth optimization
+- Examples: Edit distance, optimal matrix chain multiplication
 
-  * Review of mergesort.
-  * Identify the *divide* and *conquer* components of the algorithm.
-  * Measure its time complexity.
-  * Generalize the concept of recurrence as :math:`T(n)=rT(n/c)+f(n)`
-  * Derivation of the *Master Theorem.* 
-  * Good recursion. Bad recursion. 
-  * Factorial and Fibonacci computations. 
-  * Multiplying *very* large integers.
-  * **Assignment:** Karatsuba multiplication performance measurements.
+**Week 5: Greedy Algorithms**
+- Matroid theory and applications
+- Huffman coding, minimum spanning trees (Kruskal, Prim)
 
+**Week 6: Network Flow and Applications**
+- Max-flow/min-cut theorem
+- Ford-Fulkerson, Edmonds-Karp algorithms
+- Applications: Bipartite matching, circulation problems
 
-* Week 04: Memoization and Dynamic Programming
+Module 3: Complexity Theory and Intractability (Weeks 7-9)
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
-  * 0/1 Knapsack. 
-  * Minimum Weight Independent Set. 
-  * **Assignment:** tbd
+**Week 7: Computational Complexity**
+- P vs NP, NP-hardness, NP-completeness
+- Polynomial-time reductions
 
+**Week 8: Approximation Algorithms**
+- Greedy approximation, primal-dual schema
+- PTAS and FPTAS for optimization problems
 
-* Week 05: Simple Graphs 
+**Week 9: Randomized Algorithms**
+- Monte Carlo vs Las Vegas algorithms
+- Randomized quicksort, hashing, and sampling
 
-  * Review of graph definition and basic properties. 
-  * Graph types. 
-  * Parts of a graph. 
-  * Representing a graph with arrays. 
-  * Graph traversals. 
-  * Stack v. queue-based traversals of a graph. 
-  * Labeling and counting components.
-  * **Assignment:** tbd
+Module 4: Specialized Topics (Weeks 10-13)
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
+**Week 10: Advanced Graph Algorithms**
+- Planar graph algorithms
+- Graph coloring and topological sorting
+- Applications in social networks and biology
 
-* Week 06: Minimum Spanning Trees
+**Week 11: String Algorithms**
+- Suffix arrays, suffix trees
+- KMP and Boyer-Moore string matching
+- Applications in bioinformatics
 
-  * Boruvka's algorithm. Relaxing tense edges. 
-  * Correctness and complexity considerations. 
-  * Evolution of Boruvka to Kruskal, Dijkstra and other variations.
-  * **Assignment:** implement Boruvka's algorith.
-  
+**Week 12: Parallel and Distributed Algorithms**
+- Models of computation: PRAM, MapReduce
+- Parallel sorting and graph algorithms
 
-* Week 07: Directed Graphs
+**Week 13: Machine Learning and Optimization Algorithms**
+- Gradient descent and stochastic gradient descent
+- Convex optimization and Lagrange multipliers
 
-  * Adjacency matrix. 
-  * Reachability of a vertex. 
-  * Shortest paths. 
-  * Tense and relaxed edges.
-  * Topological sorting
-  * **Assignment:** Detecting cycles.
+Module 5: Recent Advances and Applications
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
-
-* Week 08: Maximum Flows / Minimum Cut
-
-  * Conservation of flow.
-  * Residual graph.
-  * Residual capacity.
-  * Operating on the residual graph.
-  * Augmented paths.
-  * Computing the maximum flow across a graph.
-  * **Assignment:** determine the minimum cut of a graph.
-
-
-* Week 09: Greedy Algorithms
-
-  * Greedy algorithms that work: Huffman encoding.
-  * Greedy algorithms that do not work: MWIS.
-  * **Assignment:** tbd
-
-
-* Week 10: Tree Algorithms
-
-
-* Week 11: tbd
-
-
-* Week 12: P versus NP
-
-   * Complexity theory. 
-   * The SAT3 problem.
-   * Reductions
-
-
-* Week 13: Neural Networks
-
-The graduate course (COMP 460) comprises a review/refresh part and an advanced part. In the review part, we combine topics as follows:
-
-- Week 1: units 1 and 3
-- Week 2: units 2 and 4
-- Week 3: units 5, 7, 7, and 10
-- Week 4: unit 8, by itself
-- Week 5: unit 9, by itself
-- Week 6: unit 11, by itself
-
-Depending on everyone's background and prior experience in the graduate class, we could condense the review part even more. Then, for the last part of the term (weeks 6-12) we focus on advanced and special topics, including
-
-- Artificial neural networks
-- Large language models
-- Signal processing
-- Quantum computing
-- Cryptography
-- Hypergraphs
-- Complexity spaces
-- Numerical methods, etc.
-
-The precise mix of advanced topics depends on students' preferences and the overall group dynamic of the class.
-
-**Coding:** You may use any language you wish in the course. Classroom examples are written in Python as `Jupyter Notebooks <https://en.wikipedia.org/wiki/Project_Jupyter>`__. The preferred platform for these notebooks is Google Colab.
+**Week 14: Quantum Algorithms**
+- Introduction to quantum computation
+- Shor's algorithm and Grover's algorithm 
