@@ -1,3 +1,4 @@
+
 Detailed outline
 ----------------
 
@@ -109,5 +110,26 @@ Detailed outline
 
 * Week 13: Neural Networks
 
+The graduate course (COMP 460) comprises a review/refresh part and an advanced part. In the review part, we combine topics as follows:
+
+- Week 1: units 1 and 3
+- Week 2: units 2 and 4
+- Week 3: units 5, 7, 7, and 10
+- Week 4: unit 8, by itself
+- Week 5: unit 9, by itself
+- Week 6: unit 11, by itself
+
+Depending on everyone's background and prior experience in the graduate class, we could condense the review part even more. Then, for the last part of the term (weeks 6-12) we focus on advanced and special topics, including
+
+- Artificial neural networks
+- Large language models
+- Signal processing
+- Quantum computing
+- Cryptography
+- Hypergraphs
+- Complexity spaces
+- Numerical methods, etc.
+
+The precise mix of advanced topics depends on students' preferences and the overall group dynamic of the class.
 
 **Coding:** You may use any language you wish in the course. Classroom examples are written in Python as `Jupyter Notebooks <https://en.wikipedia.org/wiki/Project_Jupyter>`__. The preferred platform for these notebooks is Google Colab.
