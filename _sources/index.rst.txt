@@ -22,6 +22,7 @@ site.
    :caption: Courses
       
    COMP363/introduction
+   COMP460/introduction
 
 .. toctree::
    :maxdepth: 1
