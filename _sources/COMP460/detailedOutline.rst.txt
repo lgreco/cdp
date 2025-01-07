@@ -2,6 +2,7 @@
 Detailed outline
 ----------------
 
+The outline below is typical for a graduate course in algorithms. Depending on group interests, dynamic, and priorities, there may be slight modifications, including substitution of topics.
 
 Module 1: Foundations and Review (Weeks 1-2)
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
