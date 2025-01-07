@@ -1,10 +1,12 @@
 Textbook and tools
 ------------------
 
-Required reading
-================
+Recommended reading
+=====================
 
-`Algorithms <https://jeffe.cs.illinois.edu/teaching/algorithms/>`__, by Jeff Erikson. The book is available at no cost in PDF format. Inexpensive printed copies are also available for purchase.
+* `Algorithms <https://jeffe.cs.illinois.edu/teaching/algorithms/>`__, by Jeff Erikson. The book is available at no cost in PDF format. Inexpensive printed copies are also available for purchase.
+
+* Donald E. Knuth's `The Art of Computer Programming, Volume I <https://learning.oreilly.com/library/view/art-of-computer/9780321635754/>`_. (Available online at no cost when you log into the O'Reilly platform using your ``luc.edu`` email).
 
 Programming environment
 =======================

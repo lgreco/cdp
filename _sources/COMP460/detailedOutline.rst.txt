@@ -13,7 +13,7 @@ Module 1: Foundations and Review (Weeks 1-2)
 - Lower and upper bounds, amortized analysis
 
 **Week 2: Advanced Data Structures**
-- Persistent data structures
+- Persistent data structures (:download:`Driscoll et al <../OER/making-data-structures-persistent.pdf>`)
 - Union-Find with path compression and rank
 - Fibonacci heaps and self-balancing trees
 
