@@ -24,7 +24,7 @@ Module 2: Algorithm Design Paradigms (Weeks 3-6)
 
 **Week 3: Divide and Conquer**
 
-* Advanced applications: Strassen's matrix multiplication, FFT
+* Advanced applications: :download:`Strassen's matrix multiplication <../OER/Strassen_1969.pdf>`, FFT
 
 **Week 4: Dynamic Programming (DP)**
 

@@ -1,4 +1,4 @@
-*Ungrading* and how it works
+Ungrading and how it works
 ============================
 
 *Ungrading* is a low-stress approach to evaluating progress through a course. 
@@ -18,13 +18,13 @@ As a teacher, I have found that most students have a good understanding of their
 
 
 Reflection statements
-,,,,,,,,,,,,,,,,,,,,,
+-----------------------
 
 
 For the midterm and end-of-term reflections statements, I use `Jesse Stommel's suggestions <https://www.jessestommel.com/ungrading-an-faq/>`__ with some additional questions.
 
 Midterm reflection
-,,,,,,,,,,,,,,,,,,
+-----------------------
 
 * What aspects of the course have been the most successful for you so far? 
 * What thing that you've learned are you most excited about?
@@ -33,7 +33,7 @@ Midterm reflection
 * Based on your performance so far, what do you feel your course grade should be? Choose from A, B, C, or D.
 
 End-of-term reflection
-,,,,,,,,,,,,,,,,,,,,,,,
+-----------------------
 
 * Write me a short letter that reflects on your work in this class. 
 * Consider the work you did on exams, assignments, and lab/studio sessions, the feedback you gave and received, and how you met your own goals. 
@@ -45,7 +45,7 @@ End-of-term reflection
 
 
 Frequently Asked Questions about *Ungrading*
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+----------------------------------------------
 
 
 **What is the grade I see in Sakai?** Everytime you submit an assignment, you will earn 1 point. This is not the score of the assignment. This is just Sakai's way of keeping track who submitted an assignment. Whether your assignment is spot on or off the mark, you will earn 1 point for submitting it. These points do not translate to a score that determines a course grade.

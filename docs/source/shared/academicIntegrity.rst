@@ -1,4 +1,3 @@
-
 Academic integrity
 ==================
 
