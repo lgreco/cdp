@@ -19,9 +19,7 @@
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Reading material" href="reading.html" />
-    <link rel="prev" title="Outline" href="outline.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,29 +42,15 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="introduction.html">COMP 363+460 Algorithms</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="outline.html">Outline</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Textbook and tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#required-reading">Required reading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#programming-environment">Programming environment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#coding-and-implementation">Coding and implementation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#documentation">Documentation</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="reading.html">Reading material</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notes.html">Leo's notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../shared/organizationWithUngrading.html">Course organization</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../COMP460/introduction.html">COMP 460 Algorithms</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
 </ul>
@@ -91,7 +75,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="introduction.html">COMP 363+460 Algorithms</a></li>
       <li class="breadcrumb-item active">Textbook and tools</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/COMP363/textbook.rst.txt" rel="nofollow"> View page source</a>
@@ -110,18 +93,13 @@
 </section>
 <section id="programming-environment">
 <h2>Programming environment<a class="headerlink" href="#programming-environment" title="Link to this heading"></a></h2>
-<section id="coding-and-implementation">
-<h3>Coding and implementation<a class="headerlink" href="#coding-and-implementation" title="Link to this heading"></a></h3>
-<p>For this course, I use Jupyter Notebooks, hosted in Google’s Colaboratory. These notebooks blend Python code and rich-text documentation that supports superb mathematical typography through LaTeX. These notebooks are, according to <em>Nature</em>, one of the 10 computing projects that transformed Science. (<a class="reference external" href="https://www.nature.com/articles/d41586-021-00075-2">The article is available</a>, through the LUC libraries, and worth reading.)</p>
+<p>For this course, I use Jupyter Notebooks, hosted in Google’s Colaboratory. These notebooks blend Python code and rich-text documentation that supports superb mathematical typography through LaTeX. The notebooks are, according to <em>Nature</em>, one of the 10 computing projects that transformed Science. (<a class="reference external" href="https://www.nature.com/articles/d41586-021-00075-2">The article is available</a>, through the LUC libraries, and worth reading.)</p>
 <p>If you have a <code class="docutils literal notranslate"><span class="pre">gmail</span></code> account, you have access to Google Colaboratory. If you do not have a <code class="docutils literal notranslate"><span class="pre">gmail</span></code> account, you have a few options.</p>
 <ul class="simple">
 <li><p>Your best bet is to just establish a <code class="docutils literal notranslate"><span class="pre">gmail</span></code> account.</p></li>
-<li><p>Otherwise, you could download and install a free version of the <a class="reference external" href="https://docs.anaconda.com/free/navigator/install/">Anaconda Navigator</a>. Then you can fork the course’s Jupyter Notebooks from GitHub and execute them on the Navigator. Please take into consideration that the instructor cannot provide technical support for downloading, installing, and maintaining Anacoda on your computer.</p></li>
-<li><p>If you prefer to use a different language than Python, you may do so. Most IDEs for languages like Java, C, C++, etc, however, do not support (easily) rich-text documentation or mathematical typography. The course does not expect you to produce much of either, but it would be nice if you had the resources to try out <em>Markdown</em> and LaTeX.</p></li>
+<li><p>Otherwise, you could download and install a free version of the <a class="reference external" href="https://docs.anaconda.com/free/navigator/install/">Anaconda Navigator</a>. Then you can fork the course’s Jupyter Notebooks from GitHub and execute them on the Navigator. Please take into consideration that the instructor cannot provide technical support for downloading, installing, and maintaining Anacoda on your computer, and for managing git forks.</p></li>
+<li><p>If you prefer to use a different language than Python, you may do so. Most IDEs for languages like Java, C, C++, etc, however, do not support (easily) rich-text documentation or mathematical typography. The course does not expect you to produce much of either, but it would be nice if you tried out <em>Markdown</em> and LaTeX.</p></li>
 </ul>
-</section>
-<section id="documentation">
-<h3>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h3>
 <p>Rich-text documentation in this course is done with <em>Markdown</em>. Mathematics are typeset with <em>LaTeX</em>. <strong>You are not expected</strong> to be familiar with <em>Markdown</em> or <em>LaTeX.</em> And there is no requirement to learn either. But both are good skills to have and you may want to spend some time exploring them. <em>Markdown</em> easy to learn; <em>LaTeX</em> is a bit more demanding.</p>
 <p>To learn more about these tools:</p>
 <ul class="simple">
@@ -130,20 +108,16 @@
 </ul>
 </section>
 </section>
-</section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="outline.html" class="btn btn-neutral float-left" title="Outline" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="reading.html" class="btn btn-neutral float-right" title="Reading material" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2019-2024, Leo Irakliotis.</p>
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -1,13 +1,13 @@
 ==========================================================
-COMP 363+460 Algorithms
+COMP 363 Design and Analysis of Algorithms
 ==========================================================
 
-
 ..	toctree::
-	:maxdepth: 1
+	:maxdepth: 2
+
 	
-	Outline <outline>
-	Textbook and tools <textbook>
-	Reading material <reading>
-	Leo's notes <notes>
-	Course organization <../shared/organizationWithUngrading>
+.. include:: ./outcomes.rst
+.. include:: ./detailedOutline.rst
+.. include:: ./textbook.rst
+.. include:: ./reading.rst
+.. include:: ../shared/organizationWithUngrading.rst
