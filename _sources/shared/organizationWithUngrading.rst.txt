@@ -4,7 +4,9 @@ Course organization and logistics
 ..	toctree::
 
 .. include:: ../shared/deadlines.rst
+
 .. include:: ../shared/makeUp.rst
+    
 .. include:: ../shared/assignments.rst
 .. include:: ../shared/grading.rst
 .. include:: ../shared/ungrading.rst
