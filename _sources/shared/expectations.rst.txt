@@ -1,4 +1,3 @@
-
 Instructor's expectations
 =========================
 
