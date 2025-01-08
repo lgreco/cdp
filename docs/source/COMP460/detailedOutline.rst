@@ -15,7 +15,7 @@ Module 1: Foundations and Review (Weeks 1-2)
 
 **Week 2: Advanced Data Structures**
 
-* Persistent data structures (:download:`Driscoll et al <../OER/making-data-structures-persistent.pdf>`)
+* Persistent data structures (:download:`Driscoll 1989 <../OER/making-data-structures-persistent.pdf>`)
 * Union-Find with path compression and rank
 * Fibonacci heaps and self-balancing trees
 
@@ -47,7 +47,7 @@ Module 3: Complexity Theory and Intractability (Weeks 7-9)
 
 **Week 7: Computational Complexity**
 
-* P vs NP, NP-hardness, NP-completeness
+* P vs NP, NP-hardness, NP-completeness (:download:`Fortnow, 2009 <../OER/Fortnow_P_NP.pdf>`)
 * Polynomial-time reductions
 
 **Week 8: Approximation Algorithms**
