@@ -1,6 +1,6 @@
-*****************
+=======================
 Reading material
-*****************
+=======================
 
 In addition to the textbook for COMP 460, a number of alternative open educational resources (OER) with introductory and ancillary material are available:
 
