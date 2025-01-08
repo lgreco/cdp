@@ -1,11 +1,11 @@
-*****************
+=====================================
 Detailed outline
-*****************
+=====================================
 
 The outline below is typical for a graduate course in algorithms. Depending on group interests, dynamic, and priorities, there may be slight modifications, including substitution of topics.
 
 Module 1: Foundations and Review (Weeks 1-2)
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+----------------------------------------------------
 
 **Week 1: Algorithm Analysis and Complexity**
 
@@ -20,7 +20,7 @@ Module 1: Foundations and Review (Weeks 1-2)
 * Fibonacci heaps and self-balancing trees
 
 Module 2: Algorithm Design Paradigms (Weeks 3-6)
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+----------------------------------------------------
 
 **Week 3: Divide and Conquer**
 
@@ -43,7 +43,7 @@ Module 2: Algorithm Design Paradigms (Weeks 3-6)
 * Applications: Bipartite matching, circulation problems
 
 Module 3: Complexity Theory and Intractability (Weeks 7-9)
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+-----------------------------------------------------------------------
 
 **Week 7: Computational Complexity**
 
@@ -61,7 +61,7 @@ Module 3: Complexity Theory and Intractability (Weeks 7-9)
 * Randomized quicksort, hashing, and sampling
 
 Module 4: Specialized Topics (Weeks 10-13)
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+----------------------------------------------------
 
 **Week 10: Advanced Graph Algorithms**
 
@@ -86,7 +86,7 @@ Module 4: Specialized Topics (Weeks 10-13)
 * Convex optimization and Lagrange multipliers
 
 Module 5: Recent Advances and Applications
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+----------------------------------------------------
 
 **Week 14: Quantum Algorithms**
 
