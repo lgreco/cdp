@@ -1,5 +1,5 @@
 Make-up assignments
-===================
+====================
 
 In 200-level and higher courses I do not offer make up assigmemnts. That's because of the *Ungrading* system I use in those courses, where students self-evaluate their performance.
 

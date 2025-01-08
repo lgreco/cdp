@@ -1,6 +1,6 @@
-
+********************************
 Course description and outcomes
--------------------------------
+********************************
 
 This graduate course in algorithms reinforces and expands your understanding of algorithm design, analysis, and implementation. The course will provide a methodical framework to study algorithms -- from complexity notation to a taxonomy of algorithms. Against this backdrop, the course will then explore quantitative characteristics of classic and novel algorithms, and demonstrate proofs of correctness and completion. Finally the course will cover advanced algorithmic techniques, including probabilistic methods, statistical frameworks, parallelization, and numeric computations.
 
