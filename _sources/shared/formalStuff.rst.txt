@@ -14,3 +14,27 @@ Formal notices
 * Statement about **online recording.** If the course uses software to record class discussions: as a student in this class, your participation in live class discussions will be recorded. These recordings will be made available only to students enrolled in the class, to assist those who cannot attend the live session or to serve as a resource for those who would like to review content that was presented. All recordings will become unavailable to students in the class when the Sakai course is unpublished (i.e. shortly after the course ends, per the `Sakai administrative schedule <https://www.luc.edu/its/itrs/sakai/administrativeschedule/>`__). The use of all video recordings will be in keeping with the University Privacy Statement shown below.
 
 * **Privacy Statement.** Assuring privacy among faculty and students engaged in online and face-to-face instructional activities helps promote open and robust conversations and mitigates concerns that comments made within the context of the class will be shared beyond the classroom. As such, recordings of instructional activities occurring in online or face-to-face classes may be used solely for internal class purposes by the faculty member and students registered for the course, and only during the period in which the course is offered. Students will be informed of such recordings by a statement in the syllabus for the course in which they will be recorded. Instructors who wish to make subsequent use of recordings that include student activity may do so only with informed written consent of the students involved or if all student activity is removed from the recording. Recordings including student activity that have been initiated by the instructor may be retained by the instructor only for individual use. 
+
+* **Notice of Reporting Obligations for Responsible Campus Partners**
+
+As an instructor, I am a Responsible Campus Partner (“RCP”) under Loyola’s Comprehensive Policy and Procedures for Addressing Discrimination, Sexual Misconduct, and Retaliation (available at www.luc.edu/equity). While my goal is for you to be able to engage fully and authentically with our course material through class discussions and written work, I also want to be transparent that as a RCP, I am must notify the Office for Equity & Compliance ("OEC")/Title IX Coordinator when I have any information about conduct that reasonably may constitute Title IX Sex-Based Discrimination. Title IX Sex-Based Discrimination includes any of the following conduct, when the conduct was within the University's education program or activity:
+
+  * Discrimination or discriminatory harassment on the basis of sex (including sex stereotypes, sex characteristics, gender identity, sexual orientation, and Pregnancy or Related Conditions),
+  * Sexual harassment (including quid pro quo and hostile environment sexual harassment),
+Sexual assault,
+  * Dating and/or domestic violence, and/or
+  * Stalking
+
+As the University’s Title IX office, the OEC coordinates the University's response to reports and complaints of sexual misconduct (as well as discrimination of any kind) to ensure students' rights are protected.
+
+As an instructor, I also have an obligation under Illinois law to report disclosures of or suspected instances of child abuse or neglect (https://www.luc.edu/hr/legal-notices/mandatedreportingofchildabuseandneglect/).
+
+The University maintains such reporting requirements to ensure that any student who experiences sexual/gender-based violence receives accurate information about available resources and support. Such reports will not generate a report to law enforcement (no student will ever be forced to file a report with the police). Additionally, the University’s resources and supports are available to all students even if a student chooses that they do not want any other action taken. If you have any questions about this policy, you are encouraged to contact the OEC at equity@luc.edu or 773-508-7766. 
+
+If you ever wish to speak with a confidential resource regarding gender-based violence, I encourage you to call The Line at 773-494-3810. The Line is staffed by confidential advocates from 8:30am-5pm M-F and 24 hours on the weekend when school is in session. Advocates can provide support, talk through your options (medical, legal, LUC reporting, safety planning, etc.), and connect you with resources as needed -- without generating a report or record with the OEC. More information about The Line can be found at luc.edu/wellness.
+
+* **Use of Appropriate Names and Pronouns**
+
+Addressing one another at all times by using one's chosen modes of address (including preferred names and gender pronouns) honors and affirms individuals of all gender identities and gender expressions. Misgendering and heteronormative language excludes the experiences of individuals whose identities may not fit within a gender binary, and/or who may not identify with the sex they were assigned at birth.
+
+If you wish, please share your gender pronouns with me and the class when you introduce yourself, on your name placard, and/or on your Zoom profile. If you do not wish to be called by the name that appears on the class roster or attendance sheet, please let me know privately and I will work diligently to honor your wishes. My goal is to create an affirming environment for all students so that everyone can learn and engage as our full and true selves.
