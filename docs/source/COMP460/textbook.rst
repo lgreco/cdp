@@ -1,10 +1,10 @@
-===================
+*********************
 Textbook and tools
-===================
+*********************
 
 
 Recommended reading
---------------------
+=========================
 
 * `Algorithms <https://jeffe.cs.illinois.edu/teaching/algorithms/>`__, by Jeff Erikson. The book is available at no cost in PDF format. Inexpensive printed copies are also available for purchase.
 
@@ -12,7 +12,7 @@ Recommended reading
 
 
 Programming environment
--------------------------
+===========================
 
 For this course, I use Jupyter Notebooks, hosted in Google's Colaboratory. These notebooks blend Python code and rich-text documentation that supports superb mathematical typography through LaTeX. The notebooks are, according to *Nature*, one of the 10 computing projects that transformed Science. (`The article is available <https://www.nature.com/articles/d41586-021-00075-2>`__, through the LUC libraries, and worth reading.)
 
