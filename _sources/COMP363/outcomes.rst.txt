@@ -1,6 +1,6 @@
-=========================================
+*******************************************************************************
 Course description and outcomes
-=========================================
+*******************************************************************************
 
 In this course, you will deepen your understanding of algorithm design, analysis, and implementation. You will evaluate algorithm efficiency using complexity notations and explore advanced paradigms like divide-and-conquer, dynamic programming, and greedy algorithms. You will work with sophisticated data structures, tackle graph problems, and develop solutions for NP-complete challenges through approximation and heuristics. You will also engage with specialized topics such as string matching and computational geometry. Through practical projects, you will evaluate algorithm performance and gain insights into trade-offs in efficiency and resource use, preparing you to solve real-world computational problems critically and ethically.
 
