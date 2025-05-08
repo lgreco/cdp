@@ -10,4 +10,4 @@ If you miss a class meeting it is your responsibility to recover notes and other
 
 If you miss more than 1/4 of the class meetings, you final grade will be an F.
 
-The university classifies certain absences as excused (see [Undergraduate Attendance Policy](https://catalog.luc.edu/academic-standards-regulations/undergraduate/)). These excused absences do not count as absences in the class.
+The university classifies certain absences as excused (see `Undergraduate Attendance Policy <https://catalog.luc.edu/academic-standards-regulations/undergraduate/>`_). These excused absences do not count as absences in the class.
