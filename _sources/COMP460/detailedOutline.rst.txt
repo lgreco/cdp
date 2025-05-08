@@ -15,7 +15,7 @@ The outline below is typical for a graduate course in algorithms. Depending on g
   * **Week 2: Advanced Data Structures**
 
     * Persistent data structures (:download:`Driscoll 1989 <../OER/making-data-structures-persistent.pdf>`)
-    * Union-Find with path compression and rank (:download:`Galler 1964 <../OER/Galler_1964.pdf``)
+    * Union-Find with path compression and rank (:download:`Galler 1964 <../OER/Galler_1964.pdf>`)
     * Fibonacci heaps and self-balancing trees
 
 * Module 2: Algorithm Design Paradigms (Weeks 3-6)
