@@ -11,8 +11,8 @@ Here's how you can be proactive, so you can succeed in this coure.
 
 * Skipped or missed assignments are also a warning sign. In some cases, circumstances beyond your control may force you to miss an assignment. This is understandable. The course is designed in a way that allows you to recover from a few missed assessments. If you miss more than 3 assignments, recovery may not be possible.
 
-* Come to class and take notes. Form or join a study group comprising fellow students.
+* Come to class and take notes. Form or join a study group comprising fellow students. (Attendance is required).
 
-* If, for any reason, you need to be absent from class, let me know in advance. I don't need to know the reason, but I need to know about the duration of your absense.
+* If, for any reason, you need to be absent from class, let me know in advance. I don't need to know the reason, but I need to know about the duration of your absense. Everyone is expected to miss a class meeting now and then. Missing more than 10% of the class meetings in a term will have a serious impact on your final grade. Missing more, will have a detrimental impact. Coming to class 5 or more minutes late or leaving 5 or more minutes early counts as a missed class.
 
 * Check your official Loyola email at least daily and absolutely an hour before class meetings.
