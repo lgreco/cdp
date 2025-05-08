@@ -1,8 +1,11 @@
-Spring 2025 term
+Summer 2025 term
 ================
 
 
-In the **Spring 2025,** I teach **COMP 150** (Introduction to Computing), **COMP 363,** (undergraduate Algorithms), and **COMP460** (graduate Algorithms). 
+In the **Summer 2025,** I teach **COMP 170** (Introduction to Object Oriented Programming) and **COMP 271** (Data Structures I). 
+
+
+.. In the **Spring 2025,** I teach **COMP 150** (Introduction to Computing), **COMP 363,** (undergraduate Algorithms), and **COMP460** (graduate Algorithms). 
 
 **Student hours** (office hours) for this term are posted on `Calendly, which allows you to schedule an appointment <https://calendly.com/leo_irakliotis/20min>`__. 
 

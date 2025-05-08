@@ -1,3 +1,4 @@
+:orphan:
 
 Grade scale and grading principle
 ++++++++++++++++++++++++++++++++++

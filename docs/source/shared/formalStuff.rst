@@ -20,8 +20,8 @@ Formal notices
 As an instructor, I am a Responsible Campus Partner (“RCP”) under Loyola’s Comprehensive Policy and Procedures for Addressing Discrimination, Sexual Misconduct, and Retaliation (available at www.luc.edu/equity). While my goal is for you to be able to engage fully and authentically with our course material through class discussions and written work, I also want to be transparent that as a RCP, I am must notify the Office for Equity & Compliance ("OEC")/Title IX Coordinator when I have any information about conduct that reasonably may constitute Title IX Sex-Based Discrimination. Title IX Sex-Based Discrimination includes any of the following conduct, when the conduct was within the University's education program or activity:
 
   * Discrimination or discriminatory harassment on the basis of sex (including sex stereotypes, sex characteristics, gender identity, sexual orientation, and Pregnancy or Related Conditions),
-  * Sexual harassment (including quid pro quo and hostile environment sexual harassment),
-Sexual assault,
+  * Sexual harassment (including quid pro quo and hostile environment sexual harassment), 
+  * Sexual assault,
   * Dating and/or domestic violence, and/or
   * Stalking
 
