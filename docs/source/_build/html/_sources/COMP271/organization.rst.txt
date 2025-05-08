@@ -39,6 +39,7 @@ Computer Equipment
 ++++++++++++++++++
 You will need access to a desktop or laptop computer and a web browser. We will use GitHub's Codespaces. This is a web-based development with a Visual Studio Code interface. At some point, you way want to download and install VSC on your computer but there is no need to do so in the beginning of the course.
 
+.. include:: ../shared/attendance.rst
 .. include:: ../shared/ungrading.rst
 .. include:: ../shared/groundRules.rst
 .. include:: ../shared/studentHours.rst
