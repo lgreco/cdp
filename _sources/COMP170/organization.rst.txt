@@ -27,6 +27,7 @@ Computer Equipment
 ++++++++++++++++++
 You will need access to a desktop or laptop computer with the appropriate software. 
 
+.. include:: ../shared/attendance.rst
 .. include:: ../shared/groundRules.rst
 
 Grading scheme
