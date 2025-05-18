@@ -1,54 +1,53 @@
+:orphan:
 
 .. include:: ../shared/organizationHeader.rst
+
 .. include:: ../shared/courseOutline.rst
 
-- Week 1: Introduction – Programming and Java  
-- Week 2: Algorithms and Static Methods  
-- Week 3: Basic Data Concepts, Variables  
-- Week 4: The for Loop, Managing Complexity, Array Basics  
-- Week 5: Introduction to Parameters, Return Values, and basic objects (Strings and Scanners); Review of topics to date, Exam 1  
-- Week 6: Conditional Execution: if/else, Cumulative Algorithms  
-- Week 7: Text Processing, Methods with Conditional Execution, throw exceptions  
-- Week 8: The while Loop, Files and Arrays, Fencepost Algorithms, The boolean Type
-- Week 9: User Errors, Assertions and Program Logic; Random numbers; Exam 2  
-- Week 10: File-Reading, Token- and Line-Based Processing, File Output; 
-- Week 11: Array-Traversal Algorithms, Reference Semantics; 
-- Week 12: OO Programming, Object State and Behavior, Constructors; 
-- Week 13: Course review; 
-- Week 14: Final Exam Week.
+This course explores the concepts of data abstraction and data structure, including stacks, queues, lists, sets, and trees. The implementation of data structures gives us an opportunity to review design by interface, generic classes, and other important coding techniques. Sorting and searching techniques are analyzed. The concepts of correctness and efficiency of algorithms are developed. 
+
+The tentative contents for the course is as follows.
+
+ - Review of Java
+ - Object-Oriented Concepts
+ - Additional Features of Programming and Java
+ - Analysis of Algorithms
+ - Java Collections Framework
+ - Recursion
+ - Array-Based Lists
+ - Linked Lists
+ - Stacks and Queues
+ - Binary Search Trees
+ - Sorting
+ - Sets
+ - Priority Queues
+ - Hashing
+ 
+.. include:: ../shared/deadlines.rst
+
+
+Exam dates
+++++++++++
+The final and midterm exams will be a take-home assignments. Exact dates will be posted on Sakai.
 
 
 
 Textbook
 ++++++++
-The textbook for this course is *Building Java Programs,* 5th edition, by Stuart Reges and Martin Stepp. 
+Recommended (but not required): 
+*Building Java Programs: A Back to Basics Approach,* 5th Edition, by Stuart Reges and Marty Stepp. (Yes, this is the textbook used in COMP 170)
 
 Computer Equipment
 ++++++++++++++++++
-You will need access to a desktop or laptop computer with the appropriate software. 
+You will need access to a desktop or laptop computer and a web browser. We will use GitHub's Codespaces. This is a web-based development with a Visual Studio Code interface. At some point, you way want to download and install VSC on your computer but there is no need to do so in the beginning of the course.
 
 .. include:: ../shared/attendance.rst
+.. include:: ../shared/ungrading.rst
 .. include:: ../shared/groundRules.rst
-
-Grading scheme
-++++++++++++++
-
-See Ungrading
-
-.. include:: ../shared/deadlines.rst
-.. include:: ../shared/inClassAssignments.rst
-
-
-Exam dates
-++++++++++
-
-(tbd)
-
-
-.. include:: ../COMP170/TA.rst
 .. include:: ../shared/studentHours.rst
 .. include:: ../shared/academicIntegrity.rst
 .. include:: ../shared/professionalism.rst
-.. include:: ../shared/zoom.rst
 .. include:: ../shared/formalStuff.rst
 .. include:: ../shared/DEI_statement.rst
+ 
+ 

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 00 &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="COMP 271 Data Structures I" href="../../COMP271/introduction.html" />
+    <link rel="prev" title="COMP 170 Introduction to [Object Oriented] Programming" href="../introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to [Object Oriented] Programming</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Week 00</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#workload-expectation">Workload expectation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preview-quiz-to-test-your-comprehension">Preview quiz to test your comprehension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#homework">Homework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beginning-to-program-in-python">Beginning to Program in Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dissecting-a-simple-program">Dissecting a simple program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#syntax-rules-and-good-practices-for-function-names">Syntax rules and good practices for function names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples-of-valid-function-names">Examples of valid function names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples-of-invalid-function-names">Examples of invalid function names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#knowledge-test">Knowledge test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#f-strings">f-strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#variables-and-boolean-logic">Variables and Boolean logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dissecting-the-code">Dissecting the code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Knowledge test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#working-with-numbers">Working with numbers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Dissecting the code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Knowledge test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#booleans-and-truth-tables">Booleans and truth tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#truth-tables">Truth Tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#truthiness-and-falsiness-in-general">Truthiness and Falsiness in General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#truthiness-and-falsiness-in-python">Truthiness and Falsiness in Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#variable-naming-rules-in-python">Variable Naming Rules in Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-data-types-in-python">Common Data Types in Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-annotations-in-python">Type Annotations in Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#introduction-to-data-structures">Introduction to Data Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lists">Lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dictionaries">Dictionaries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Knowledge test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lists-and-dictionary-example-usage">Lists and Dictionary: Example Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Dissecting the code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Knowledge test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unit-tests-and-loops">Unit tests and loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Dissecting the code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Knowledge test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 170 Introduction to [Object Oriented] Programming</a></li>
+      <li class="breadcrumb-item active">Week 00</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP170/weekly/week00.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="week-00">
+<h1>Week 00<a class="headerlink" href="#week-00" title="Link to this heading"></a></h1>
+<section id="workload-expectation">
+<h2>Workload expectation<a class="headerlink" href="#workload-expectation" title="Link to this heading"></a></h2>
+<p>In general, each credit hour in a 100-200 level course will require an average of 3 hours per week spent on work for that course, outside of the synchronous meeting time.</p>
+</section>
+<section id="preview-quiz-to-test-your-comprehension">
+<h2>Preview quiz to test your comprehension<a class="headerlink" href="#preview-quiz-to-test-your-comprehension" title="Link to this heading"></a></h2>
+<p>The quiz isn’t timed in the traditional sense. The quiz will be available for a limited amount of time, generally for 24-48 hours before the class (probably on the weekend). Its technically open book/open notes; open internet reall. The quiz aim is primarily to help you develop confidence in your preparedness to come to class and participate in discussion. If you take the quiz and you feel like you didn’t do well, or you have questions, be sure to write them down and bring them to class!</p>
+</section>
+<section id="homework">
+<h2>Homework<a class="headerlink" href="#homework" title="Link to this heading"></a></h2>
+<p>Homework is due 7 days after assigned. No extensions.</p>
+<p>Learning to program takes <em>time.</em> Sometimes you read a problem, write some code, and try to figure out why the code doesn’t work. You struggle with it, and go to the next problem, you sleep on it, you wrestle with it again, you go to tutoring or office hours, and you finally figure it out. To some, the process of debugging code comes naturally, for other you will need to build up a new set of skills.</p>
+</section>
+<section id="beginning-to-program-in-python">
+<h2>Beginning to Program in Python<a class="headerlink" href="#beginning-to-program-in-python" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">our_first_program</span><span class="p">():</span>
+<span class="linenos">2</span>  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world!&quot;</span><span class="p">)</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="n">our_first_program</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="dissecting-a-simple-program">
+<h3>Dissecting a simple program<a class="headerlink" href="#dissecting-a-simple-program" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span></code>: a reserved string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hour_first_program</span></code> a function name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">()</span></code> an empty list of parameters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">print</span></code> another reserved string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;hello</span> <span class="pre">world&quot;</span></code>: a string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">our_first_program()</span></code>: invocation of a function.</p></li>
+</ul>
+<p><strong>Known words above:</strong> a, an, empty, of, another.</p>
+</section>
+<section id="syntax-rules-and-good-practices-for-function-names">
+<h3>Syntax rules and good practices for function names<a class="headerlink" href="#syntax-rules-and-good-practices-for-function-names" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Start with a Letter or Underscore</strong>: A function name must start with a letter (uppercase or lowercase) or an underscore (<cite>_</cite>). It cannot start with a number or special character.</p></li>
+<li><p><strong>Alphanumeric and Underscore</strong>: After the first character, a function name can contain letters, numbers, and underscores. No spaces or special characters are allowed.</p></li>
+<li><p><strong>Case-Sensitive</strong>: Function names in Python are case-sensitive, so <code class="docutils literal notranslate"><span class="pre">myfunction</span></code>, <code class="docutils literal notranslate"><span class="pre">myFunction</span></code>, and <code class="docutils literal notranslate"><span class="pre">MYFUNCTION</span></code> are all different functions.</p></li>
+<li><p><strong>No Reserved Words</strong>: You cannot use Python’s reserved words as function names. These include words like <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">return</span></code>, etc.</p></li>
+<li><p><strong>Snake Case</strong>: By convention, function names in Python are usually written in snake_case, where all letters are lowercase, and words are separated by underscores. For example, <code class="docutils literal notranslate"><span class="pre">my_function_name</span></code>.</p></li>
+<li><p><strong>Avoid Leading Underscores Unless Necessary</strong>: A leading underscore in a function name (e.g., <code class="docutils literal notranslate"><span class="pre">_my_function</span></code>) typically indicates that the function is intended for internal use within a module or class and should not be accessed from outside. It’s a convention, not a strict rule, so it won’t prevent access, but it signals to other developers that the function is considered “private” or “protected.”</p></li>
+<li><p><strong>Descriptive Names</strong>: It’s good practice to choose function names that clearly describe what the function does. This makes the code more readable and maintainable.</p></li>
+</ol>
+</section>
+<section id="examples-of-valid-function-names">
+<h3>Examples of valid function names<a class="headerlink" href="#examples-of-valid-function-names" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+
+<span class="k">def</span> <span class="nf">_internal_use_only</span><span class="p">():</span>
+
+<span class="k">def</span> <span class="nf">calculate_sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</pre></div>
+</div>
+</section>
+<section id="examples-of-invalid-function-names">
+<h3>Examples of invalid function names<a class="headerlink" href="#examples-of-invalid-function-names" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="mi">123</span><span class="n">_function</span><span class="p">():</span> <span class="c1"># Starts with a number</span>
+
+<span class="k">def</span> <span class="nf">my</span><span class="o">-</span><span class="n">function</span><span class="p">():</span> <span class="c1"># Contains a special character</span>
+
+<span class="k">def</span> <span class="nf">for</span><span class="p">():</span> <span class="c1"># Uses a reserved word</span>
+</pre></div>
+</div>
+</section>
+<section id="knowledge-test">
+<h3>Knowledge test<a class="headerlink" href="#knowledge-test" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Basic Understanding</strong></p>
+<ul>
+<li><p>What does the <code class="docutils literal notranslate"><span class="pre">def</span></code> keyword do in Python?</p></li>
+<li><p>What is the purpose of the <code class="docutils literal notranslate"><span class="pre">print</span></code> statement in the code?</p></li>
+<li><p>How would you describe the function’s name and its naming convention?</p></li>
+</ul>
+</li>
+<li><p><strong>Function Concepts</strong></p>
+<ul>
+<li><p>What does the <code class="docutils literal notranslate"><span class="pre">hello_world</span></code> function do when it is called?</p></li>
+<li><p>How many parameters does the <code class="docutils literal notranslate"><span class="pre">hello_world</span></code> function take? Can you explain what a parameter is?</p></li>
+</ul>
+</li>
+<li><p><strong>Code Execution</strong></p>
+<ul>
+<li><p>What will be the output of the code when it is run?</p></li>
+<li><p>In what order are the lines of code executed?</p></li>
+</ul>
+</li>
+<li><p><strong>Indentation and Structure</strong>
+* Why is indentation important in defining the body of a function?
+* What is the significance of the colon <code class="docutils literal notranslate"><span class="pre">:</span></code> at the end of the function definition?</p></li>
+<li><p><strong>Application and Extension</strong></p>
+<ul>
+<li><p>Can you write a similar function that prints a different message?</p></li>
+<li><p>How would you modify the <code class="docutils literal notranslate"><span class="pre">hello_world</span></code> function to take a name as a parameter and print “Hello, [name]!”?</p></li>
+</ul>
+</li>
+<li><p><strong>Understanding Errors</strong> (Advanced)</p>
+<ul>
+<li><p>What would happen if you removed the indentation from line 2? Why?</p></li>
+<li><p>What would happen if you tried to call the <code class="docutils literal notranslate"><span class="pre">hello_world</span></code> function before defining it?</p></li>
+</ul>
+</li>
+</ul>
+<p>(<a class="reference internal" href="week00-answers.html"><span class="doc">Answers</span></a>)</p>
+</section>
+<section id="f-strings">
+<h3>f-strings<a class="headerlink" href="#f-strings" title="Link to this heading"></a></h3>
+<p>An f-string is created by placing an <code class="docutils literal notranslate"><span class="pre">f</span></code> before the opening quotation mark of a string and including expressions inside curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code> within the string. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;John&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">greeting</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">! You are </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span>
+</pre></div>
+</div>
+<p>Here, the variables <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code> are directly embedded within the string, resulting in the greeting: <code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">John!</span> <span class="pre">You</span> <span class="pre">are</span> <span class="pre">25</span> <span class="pre">years</span> <span class="pre">old.</span></code></p>
+<p>f-strings provide a concise way to include variables or expressions inside strings.By embedding values directly in the string, the code remains clean and easy to read. The expressions inside the curly braces are evaluated at runtime, allowing for dynamic string creation.</p>
+<p>f-strings are an essential tool in Python programming, and you’ll often find them used to create clear and efficient string representations.</p>
+</section>
+<section id="variables-and-boolean-logic">
+<h3>Variables and Boolean logic<a class="headerlink" href="#variables-and-boolean-logic" title="Link to this heading"></a></h3>
+<p>This next example will introduce variables, boolean values, boolean logic, and function parameters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">check_age</span><span class="p">(</span><span class="n">age</span><span class="p">):</span>
+<span class="linenos"> 2</span>  <span class="n">is_adult</span> <span class="o">=</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span>
+<span class="linenos"> 3</span>  <span class="n">is_teenager</span> <span class="o">=</span> <span class="mi">13</span> <span class="o">&lt;=</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span>
+<span class="linenos"> 4</span>  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Age provided: </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos"> 5</span>  <span class="k">if</span> <span class="n">is_adult</span><span class="p">:</span>
+<span class="linenos"> 6</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are an adult.&quot;</span><span class="p">)</span>
+<span class="linenos"> 7</span>  <span class="k">elif</span> <span class="n">is_teenager</span><span class="p">:</span>
+<span class="linenos"> 8</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are a teenager.&quot;</span><span class="p">)</span>
+<span class="linenos"> 9</span>  <span class="k">else</span><span class="p">:</span>
+<span class="linenos">10</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are a child.&quot;</span><span class="p">)</span>
+<span class="linenos">11</span>  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Is adult? </span><span class="si">{</span><span class="n">is_adult</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos">12</span>  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Is teenager? </span><span class="si">{</span><span class="n">is_teenager</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>  <span class="n">check_age</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The function takes an input parameter, “age”, and then produces text output that changes depending on the value used. Let’s go through this example line by line.</p>
+</section>
+<section id="dissecting-the-code">
+<h3>Dissecting the code<a class="headerlink" href="#dissecting-the-code" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Line 1</strong>: <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">check_age(age):</span></code> - Defines a function named <code class="docutils literal notranslate"><span class="pre">check_age</span></code> that takes one parameter, <code class="docutils literal notranslate"><span class="pre">age</span></code>.</p></li>
+<li><p><strong>Line 2</strong>: <code class="docutils literal notranslate"><span class="pre">is_adult</span> <span class="pre">=</span> <span class="pre">age</span> <span class="pre">&gt;=</span> <span class="pre">18</span></code> - Declares a boolean variable <code class="docutils literal notranslate"><span class="pre">is_adult</span></code>, which is <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">age</span></code> is 18 or older.</p></li>
+<li><p><strong>Line 3</strong>: <code class="docutils literal notranslate"><span class="pre">is_teenager</span> <span class="pre">=</span> <span class="pre">13</span> <span class="pre">&lt;=</span> <span class="pre">age</span> <span class="pre">&lt;</span> <span class="pre">18</span></code> - Declares a boolean variable <code class="docutils literal notranslate"><span class="pre">is_teenager</span></code>, which is <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">age</span></code> is between 13 and 17 (inclusive).</p></li>
+<li><p><strong>Line 4</strong>: <code class="docutils literal notranslate"><span class="pre">print(f&quot;Age</span> <span class="pre">provided:</span> <span class="pre">{age}&quot;)</span></code> - Prints the provided age using an f-string.</p></li>
+<li><p><strong>Line 5</strong>: <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">is_adult:</span></code> - Begins an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement that checks if <code class="docutils literal notranslate"><span class="pre">is_adult</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><strong>Line 6</strong>: <code class="docutils literal notranslate"><span class="pre">print(&quot;You</span> <span class="pre">are</span> <span class="pre">an</span> <span class="pre">adult.&quot;)</span></code> - Prints a message if <code class="docutils literal notranslate"><span class="pre">is_adult</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><strong>Line 7</strong>: <code class="docutils literal notranslate"><span class="pre">elif</span> <span class="pre">is_teenager:</span></code> - Begins an <code class="docutils literal notranslate"><span class="pre">elif</span></code> statement that checks if <code class="docutils literal notranslate"><span class="pre">is_teenager</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><strong>Line 8</strong>: <code class="docutils literal notranslate"><span class="pre">print(&quot;You</span> <span class="pre">are</span> <span class="pre">a</span> <span class="pre">teenager.&quot;)</span></code> - Prints a message if <code class="docutils literal notranslate"><span class="pre">is_teenager</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><strong>Line 9-10</strong>: <code class="docutils literal notranslate"><span class="pre">else:</span></code> / <code class="docutils literal notranslate"><span class="pre">print(&quot;You</span> <span class="pre">are</span> <span class="pre">a</span> <span class="pre">child.&quot;)</span></code> - If neither <code class="docutils literal notranslate"><span class="pre">is_adult</span></code> nor <code class="docutils literal notranslate"><span class="pre">is_teenager</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, this message is printed.</p></li>
+<li><p><strong>Line 11-12</strong>: <code class="docutils literal notranslate"><span class="pre">print(f&quot;Is</span> <span class="pre">adult?</span> <span class="pre">{is_adult}&quot;)</span></code> / <code class="docutils literal notranslate"><span class="pre">print(f&quot;Is</span> <span class="pre">teenager?</span> <span class="pre">{is_teenager}&quot;)</span></code> - Prints the values of the boolean variables.</p></li>
+<li><p><strong>Line 14</strong>: <code class="docutils literal notranslate"><span class="pre">check_age(20)</span></code> - Calls the <code class="docutils literal notranslate"><span class="pre">check_age</span></code> function with an argument of 20.</p></li>
+</ul>
+</section>
+<section id="id1">
+<h3>Knowledge test<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>What is the output of the code when <code class="docutils literal notranslate"><span class="pre">check_age(20)</span></code> is called?</p></li>
+<li><p>How would the output change if the age provided was 15?</p></li>
+<li><p>What are the boolean variables <code class="docutils literal notranslate"><span class="pre">is_adult</span></code> and <code class="docutils literal notranslate"><span class="pre">is_teenager</span></code>, and how are they used in the code?</p></li>
+<li><p>Can you write a similar function that checks and prints whether a number is positive, negative, or zero?</p></li>
+</ul>
+<p>(<a class="reference internal" href="week00-answers.html"><span class="doc">Answers</span></a>)</p>
+</section>
+<section id="working-with-numbers">
+<h3>Working with numbers<a class="headerlink" href="#working-with-numbers" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">calculate_statistics</span><span class="p">(</span><span class="n">number1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">number2</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculates and returns a summary of statistics.</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="sd">    Args:</span>
+<span class="linenos"> 5</span><span class="sd">        number1 (int): An integer input.</span>
+<span class="linenos"> 6</span><span class="sd">        number2 (float): A decimal input.</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="sd">    Returns:</span>
+<span class="linenos"> 9</span><span class="sd">        str: A string summary of the statistics.</span>
+<span class="linenos">10</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos">11</span>    <span class="n">sum_result</span> <span class="o">=</span> <span class="n">number1</span> <span class="o">+</span> <span class="n">number2</span>  <span class="c1"># Addition</span>
+<span class="linenos">12</span>    <span class="n">product</span> <span class="o">=</span> <span class="n">number1</span> <span class="o">*</span> <span class="n">number2</span>     <span class="c1"># Multiplication</span>
+<span class="linenos">13</span>    <span class="n">is_odd</span> <span class="o">=</span> <span class="n">number1</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span>       <span class="c1"># Modulo operation to check odd</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="n">summary</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sum of </span><span class="si">{</span><span class="n">number1</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">number2</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">sum_result</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="linenos">16</span>               <span class="sa">f</span><span class="s2">&quot;Product of </span><span class="si">{</span><span class="n">number1</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">number2</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">product</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="linenos">17</span>               <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">number1</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="s1">&#39;odd&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">is_odd</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;even&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>    <span class="k">return</span> <span class="n">summary</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="nb">print</span><span class="p">(</span><span class="n">calculate_statistics</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h3>Dissecting the code<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Line 1</strong>: <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">calculate_statistics(number1:</span> <span class="pre">int,</span> <span class="pre">number2:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">str:</span></code> - Defines a function with type annotations for the parameters and return type. This improves code readability and helps tools provide better analysis.</p></li>
+<li><p><strong>Line 2-10</strong>: These lines form the docstring, which provides a detailed explanation of the function, its parameters, and its return value. This is essential for understanding the function’s purpose and usage.</p></li>
+<li><p><strong>Line 11</strong>: <code class="docutils literal notranslate"><span class="pre">sum_result</span> <span class="pre">=</span> <span class="pre">number1</span> <span class="pre">+</span> <span class="pre">number2</span>&#160; <span class="pre">#</span> <span class="pre">Addition</span></code> - Calculates the sum of <code class="docutils literal notranslate"><span class="pre">number1</span></code> and <code class="docutils literal notranslate"><span class="pre">number2</span></code> and stores it in <code class="docutils literal notranslate"><span class="pre">sum_result</span></code>. The inline comment explains the operation.</p></li>
+<li><p><strong>Line 12</strong>: <code class="docutils literal notranslate"><span class="pre">product</span> <span class="pre">=</span> <span class="pre">number1</span> <span class="pre">*</span> <span class="pre">number2</span>&#160;&#160;&#160;&#160; <span class="pre">#</span> <span class="pre">Multiplication</span></code> - Calculates the product of the numbers.</p></li>
+<li><p><strong>Line 13</strong>: <code class="docutils literal notranslate"><span class="pre">is_odd</span> <span class="pre">=</span> <span class="pre">number1</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">1</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">#</span> <span class="pre">Modulo</span> <span class="pre">operation</span> <span class="pre">to</span> <span class="pre">check</span> <span class="pre">odd</span></code> - Uses the modulo operator <code class="docutils literal notranslate"><span class="pre">%</span></code> to check if <code class="docutils literal notranslate"><span class="pre">number1</span></code> is odd. If <code class="docutils literal notranslate"><span class="pre">number1</span></code> divided by 2 has a remainder of 1, it’s odd.</p></li>
+<li><p><strong>Line 15-17</strong>: Constructs a summary string that includes the results of the previous calculations and whether <code class="docutils literal notranslate"><span class="pre">number1</span></code> is odd or even.</p></li>
+<li><p><strong>Line 19</strong>: <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">summary</span></code> - Returns the summary string.</p></li>
+<li><p><strong>Line 21</strong>: <code class="docutils literal notranslate"><span class="pre">print(calculate_statistics(3,</span> <span class="pre">4.5))</span></code> - Calls the function with an integer and a float, and prints the result.</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Knowledge test<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>What is the purpose of the type annotations in the function definition, and how are they used?</p></li>
+<li><p>What is a docstring, and why is it included in the code?</p></li>
+<li><p>How does the code determine if <code class="docutils literal notranslate"><span class="pre">number1</span></code> is odd or even?</p></li>
+<li><p>What will be the output of the code when <code class="docutils literal notranslate"><span class="pre">calculate_statistics(3,</span> <span class="pre">4.5)</span></code> is called?</p></li>
+</ul>
+<p>(<a class="reference internal" href="week00-answers.html"><span class="doc">Answers</span></a>)</p>
+</section>
+<section id="booleans-and-truth-tables">
+<h3>Booleans and truth tables<a class="headerlink" href="#booleans-and-truth-tables" title="Link to this heading"></a></h3>
+<p>Booleans are a fundamental data type in programming that represents one of two values: <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. They are named after George Boole, who first defined an algebraic system of logic in the mid-1800s.</p>
+<p>In Python, booleans are often used to represent the results of logical comparisons, such as equality or inequality tests.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">is_greater</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>  <span class="c1"># Evaluates to True</span>
+<span class="n">is_equal</span> <span class="o">=</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span>   <span class="c1"># Evaluates to False</span>
+</pre></div>
+</div>
+</section>
+<section id="truth-tables">
+<h3>Truth Tables<a class="headerlink" href="#truth-tables" title="Link to this heading"></a></h3>
+<p>A truth table is a mathematical table used to represent the values of logical expressions based on their possible inputs. It’s a systematic way to list every possible combination of truth values for a given logical operation, such as AND, OR, and NOT.</p>
+<p>Here are the truth tables for the three basic logical operations:</p>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text">(A <strong>AND</strong> B) Truth Table: both must be true</span><a class="headerlink" href="#id9" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A AND B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">(A <strong>OR</strong>  B) Truth Table: at least one must be true</span><a class="headerlink" href="#id10" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A OR B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id11">
+<caption><span class="caption-text">(<strong>NOT</strong> A) Truth Table: reverses the truth value</span><a class="headerlink" href="#id11" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>NOT A</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+<p>Booleans and truth tables are fundamental to understanding logic in programming. They form the basis of conditional statements and control flow, allowing programs to make decisions and perform different actions depending on certain conditions. Understanding these concepts will enable you to write more complex and dynamic code.
+### What does it mean for something to be evaluated in a boolean context: Truthiness and Falsiness</p>
+<p>In programming, the concepts of truthiness and falsiness refer to how non-boolean values are treated when evaluated in a boolean context. Essentially, truthiness and falsiness determine how values are interpreted as <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> when used in conditions, such as in an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
+</section>
+<section id="truthiness-and-falsiness-in-general">
+<h3>Truthiness and Falsiness in General<a class="headerlink" href="#truthiness-and-falsiness-in-general" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Truthiness</strong>: A value is considered “truthy” if it evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code> in a boolean context, even if it is not explicitly the boolean value <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><strong>Falsiness</strong>: Conversely, a value is considered “falsy” if it evaluates to <code class="docutils literal notranslate"><span class="pre">False</span></code> in a boolean context, even if it is not explicitly the boolean value <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ul>
+<p>Different programming languages have different rules for what values are considered truthy or falsy.</p>
+</section>
+<section id="truthiness-and-falsiness-in-python">
+<h3>Truthiness and Falsiness in Python<a class="headerlink" href="#truthiness-and-falsiness-in-python" title="Link to this heading"></a></h3>
+<p>In Python, the following values are considered falsy:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p>Zero of any numeric type, such as <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">0.0</span></code>, <code class="docutils literal notranslate"><span class="pre">0j</span></code></p></li>
+<li><p>Any empty sequence, such as <code class="docutils literal notranslate"><span class="pre">''`,</span> <span class="pre">``[]</span></code>, <code class="docutils literal notranslate"><span class="pre">()</span></code></p></li>
+<li><p>Any empty mapping, such as <code class="docutils literal notranslate"><span class="pre">{}</span></code></p></li>
+<li><p>Custom objects that implement a <code class="docutils literal notranslate"><span class="pre">__bool__()</span></code> or <code class="docutils literal notranslate"><span class="pre">__len__()</span></code> method that returns <code class="docutils literal notranslate"><span class="pre">False</span></code> or <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+</ul>
+<p>All other values are considered truthy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;hello&#39;</span><span class="p">:</span>           <span class="c1"># Truthy, because the string is not empty</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;True&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="p">[]:</span>                <span class="c1"># Falsy, because the list is empty</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;True&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;False&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="mi">42</span><span class="p">:</span>                <span class="c1"># Truthy, because the number is not zero</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;True&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="mf">0.0</span><span class="p">:</span>               <span class="c1"># Falsy, because the number is zero</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;True&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;False&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Understanding truthiness and falsiness is vital for writing conditional statements and working with logical operations. It allows you to leverage non-boolean values in conditions and can lead to more concise and expressive code. However, it’s essential to be aware of these rules, as unexpected truthiness or falsiness can lead to subtle bugs in a program.</p>
+</section>
+<section id="variable-naming-rules-in-python">
+<h3>Variable Naming Rules in Python<a class="headerlink" href="#variable-naming-rules-in-python" title="Link to this heading"></a></h3>
+<p>Variables are used to store data in a program, and their names should be chosen to convey meaning. In Python, the rules for naming variables are:</p>
+<ol class="arabic simple">
+<li><p><strong>Start with a Letter or Underscore</strong>: Variable names must start with a letter (either uppercase or lowercase) or an underscore.</p></li>
+<li><p><strong>Contain Only Alphanumeric Characters and Underscores</strong>: The rest of the name can consist of letters, numbers, and underscores.</p></li>
+<li><p><strong>Cannot Be a Reserved Word</strong>: Python’s reserved words, such as <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span></code>, cannot be used as variable names.</p></li>
+<li><p><strong>Case-Sensitive</strong>: Variable names are case-sensitive, so <code class="docutils literal notranslate"><span class="pre">myVariable</span></code> and <code class="docutils literal notranslate"><span class="pre">myvariable</span></code> are different.</p></li>
+<li><p><strong>Conventions</strong>: By convention, variable names are written in snake_case (e.g., <code class="docutils literal notranslate"><span class="pre">my_variable</span></code>), and constants are written in UPPERCASE.</p></li>
+</ol>
+</section>
+<section id="common-data-types-in-python">
+<h3>Common Data Types in Python<a class="headerlink" href="#common-data-types-in-python" title="Link to this heading"></a></h3>
+<p>Python has several built-in data types that can be grouped into the following categories:</p>
+<ol class="arabic simple">
+<li><p><strong>Numeric Types</strong>: Integers (<cite>int</cite>), Floating-Point Numbers (<cite>float</cite>), Complex Numbers (<cite>complex</cite>).</p></li>
+<li><p><strong>Sequence Types</strong>: Lists (<cite>list</cite>), Tuples (<cite>tuple</cite>), Ranges (<cite>range</cite>).</p></li>
+<li><p><strong>Text Type</strong>: Strings (<cite>str</cite>).</p></li>
+<li><p><strong>Mapping Type</strong>: Dictionaries (<cite>dict</cite>).</p></li>
+<li><p><strong>Set Types</strong>: Sets (<cite>set</cite>), Frozen Sets (<cite>frozenset</cite>).</p></li>
+<li><p><strong>Boolean Type</strong>: Boolean (<cite>bool</cite>), with values <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>Binary Types</strong>: Bytes (<cite>bytes</cite>), Byte Arrays (<cite>bytearray</cite>).</p></li>
+</ol>
+</section>
+<section id="type-annotations-in-python">
+<h3>Type Annotations in Python<a class="headerlink" href="#type-annotations-in-python" title="Link to this heading"></a></h3>
+<p>Type annotations are used to indicate the expected type of a variable, parameter, or return value. They enhance code readability and can help with error checking.</p>
+<p>Here’s how you can use type annotations for different types:</p>
+<ul class="simple">
+<li><p><strong>Integers</strong>: <code class="docutils literal notranslate"><span class="pre">x:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">10</span></code></p></li>
+<li><p><strong>Floats</strong>: <code class="docutils literal notranslate"><span class="pre">y:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">5.5</span></code></p></li>
+<li><p><strong>Strings</strong>: <code class="docutils literal notranslate"><span class="pre">name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;Alice&quot;</span></code></p></li>
+<li><p><strong>Lists</strong>: <code class="docutils literal notranslate"><span class="pre">numbers:</span> <span class="pre">list[int]</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code></p></li>
+<li><p><strong>Dictionaries</strong>: <code class="docutils literal notranslate"><span class="pre">mapping:</span> <span class="pre">dict[str,</span> <span class="pre">int]</span> <span class="pre">=</span> <span class="pre">{'a':</span> <span class="pre">1}</span></code></p></li>
+<li><p><strong>Booleans</strong>: <code class="docutils literal notranslate"><span class="pre">is_active:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></code></p></li>
+<li><p><strong>Function Parameters and Return Types</strong>:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+  <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>Understanding the rules for naming variables, the common types in Python, and how to use type annotations will enable you to write clear, expressive, and maintainable code. It’s an essential foundation for programming in Python.</p>
+</section>
+<section id="introduction-to-data-structures">
+<h3>Introduction to Data Structures<a class="headerlink" href="#introduction-to-data-structures" title="Link to this heading"></a></h3>
+<p>Data structures are a way of organizing and storing data in a computer. They provide a means to manage large amounts of data efficiently for uses such as large databases and internet indexing services. In Python, two fundamental data structures are lists and dictionaries.</p>
+</section>
+<section id="lists">
+<h3>Lists<a class="headerlink" href="#lists" title="Link to this heading"></a></h3>
+<p>Lists are ordered collections of items and are one of the most versatile data structures in Python. They can contain items of different types, but usually, all the items in a list are of the same type.</p>
+</section>
+<section id="dictionaries">
+<h3>Dictionaries<a class="headerlink" href="#dictionaries" title="Link to this heading"></a></h3>
+<p>Dictionaries are unordered collections where data is stored in key-value pairs. Keys must be unique and immutable, while values can be of any type.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_to_list</span><span class="p">(</span><span class="n">lst</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Add an item to the list.&quot;&quot;&quot;</span>
+  <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+ <span class="k">def</span> <span class="nf">read_from_list</span><span class="p">(</span><span class="n">lst</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;Read an item from the list by index.&quot;&quot;&quot;</span>
+     <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+ <span class="k">def</span> <span class="nf">update_list</span><span class="p">(</span><span class="n">lst</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;Update an item in the list by index.&quot;&quot;&quot;</span>
+     <span class="n">lst</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
+
+ <span class="k">def</span> <span class="nf">delete_from_list</span><span class="p">(</span><span class="n">lst</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;Delete an item from the list by index.&quot;&quot;&quot;</span>
+     <span class="n">lst</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+
+ <span class="k">def</span> <span class="nf">create_dict</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;Create a new dictionary.&quot;&quot;&quot;</span>
+     <span class="k">return</span> <span class="p">{}</span>
+
+ <span class="k">def</span> <span class="nf">add_to_dict</span><span class="p">(</span><span class="n">dct</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;Add a key-value pair to the dictionary.&quot;&quot;&quot;</span>
+     <span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+ <span class="k">def</span> <span class="nf">read_from_dict</span><span class="p">(</span><span class="n">dct</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;Read a value from the dictionary by key.&quot;&quot;&quot;</span>
+     <span class="k">return</span> <span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+ <span class="k">def</span> <span class="nf">update_dict</span><span class="p">(</span><span class="n">dct</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;Update a value in the dictionary by key.&quot;&quot;&quot;</span>
+     <span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+ <span class="k">def</span> <span class="nf">delete_from_dict</span><span class="p">(</span><span class="n">dct</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;Delete a key-value pair from the dictionary by key.&quot;&quot;&quot;</span>
+     <span class="k">del</span> <span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>Knowledge test<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>What are lists and dictionaries, and how are they used in Python?</p></li>
+<li><p>Explain the CRUD operations performed on lists and dictionaries in the code.</p></li>
+<li><p>How can you handle situations where you attempt to read from or delete a non-existing index or key?</p></li>
+<li><p>What are some use cases for using lists and dictionaries in programming?</p></li>
+</ul>
+<p>(<a class="reference internal" href="week00-answers.html"><span class="doc">Answers</span></a>)</p>
+</section>
+<section id="lists-and-dictionary-example-usage">
+<h3>Lists and Dictionary: Example Usage<a class="headerlink" href="#lists-and-dictionary-example-usage" title="Link to this heading"></a></h3>
+<p>Here’s a code example for a function that takes two lists as input and creates a dictionary where the keys are from the first list and the values are from the second list. The function ensures that the lists are of the same length.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">create_dict_from_lists</span><span class="p">(</span><span class="n">keys</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">values</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="linenos"> 2</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Create a dictionary from two lists of equal length.</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="sd">     Args:</span>
+<span class="linenos"> 5</span><span class="sd">         keys (list[str]): A list of keys.</span>
+<span class="linenos"> 6</span><span class="sd">         values (list[int]): A list of values.</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="sd">     Returns:</span>
+<span class="linenos"> 9</span><span class="sd">         dict[str, int]: A dictionary with keys from the first list and values from the second list.</span>
+<span class="linenos">10</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="linenos">11</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>  <span class="c1"># Check if lists are of the same length</span>
+<span class="linenos">12</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Keys and values must be of the same length.&quot;</span><span class="p">)</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>     <span class="n">result_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="linenos">15</span>     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">)):</span>  <span class="c1"># Iterate through indices of both lists</span>
+<span class="linenos">16</span>         <span class="n">key</span> <span class="o">=</span> <span class="n">keys</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="linenos">17</span>         <span class="n">value</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="linenos">18</span>         <span class="n">result_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>     <span class="k">return</span> <span class="n">result_dict</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3>Dissecting the code<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Line 1</strong>: Function definition with type annotations for parameters and return type.</p></li>
+<li><p><strong>Lines 2-10</strong>: Docstring explaining the purpose, parameters, and return value of the function.</p></li>
+<li><p><strong>Line 11</strong>: An inline comment mentioning the purpose of the upcoming condition.</p></li>
+<li><p><strong>Line 12</strong>: Checks if the lengths of the keys and values lists are the same; if not, raises a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>.</p></li>
+<li><p><strong>Line 14</strong>: Initializes an empty dictionary to store the result.</p></li>
+<li><p><strong>Line 15</strong>: Uses a for loop to iterate through the indices of the keys list (and implicitly, the values list since they have the same length).</p></li>
+<li><p><strong>Line 16</strong>: Retrieves the key from the keys list using the current index.</p></li>
+<li><p><strong>Line 17</strong>: Retrieves the value from the values list using the current index.</p></li>
+<li><p><strong>Line 18</strong>: Assigns the value to the corresponding key in the result dictionary.</p></li>
+<li><p><strong>Line 20</strong>: Returns the created dictionary.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>Knowledge test<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>What is the purpose of the <code class="docutils literal notranslate"><span class="pre">create_dict_from_lists</span></code> function, and how does it ensure that the input lists are of the same length?</p></li>
+<li><p>How does the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop work in this code, and how are the keys and values retrieved using the index?</p></li>
+<li><p>What error will be raised if the input lists have different lengths, and how can it be handled?</p></li>
+<li><p>How would you write a test case to verify that the function works correctly with valid input lists?</p></li>
+</ol>
+<p>(<a class="reference internal" href="week00-answers.html"><span class="doc">Answers</span></a>)</p>
+</section>
+<section id="unit-tests-and-loops">
+<h3>Unit tests and loops<a class="headerlink" href="#unit-tests-and-loops" title="Link to this heading"></a></h3>
+<p>In this final section we’ll introduce loops (although you got a sneak peak last section to the _for_ loop) and unit tests. We’ll also showcase the test() function you’ll use in future homework and lab assignments.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+ <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">did_pass</span><span class="p">):</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;Print the result of a test.&quot;&quot;&quot;</span>
+     <span class="n">linenum</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">_getframe</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">f_lineno</span>
+     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Test at line </span><span class="si">{0}</span><span class="s2"> </span><span class="si">{1}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">linenum</span><span class="p">,</span> <span class="s2">&quot;ok&quot;</span> <span class="k">if</span> <span class="n">did_pass</span> <span class="k">else</span> <span class="s2">&quot;FAILED&quot;</span><span class="p">)</span>
+     <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+ <span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;Calculate the factorial of a non-negative integer.</span>
+
+<span class="sd">     Args:</span>
+<span class="sd">         n (int): A non-negative integer.</span>
+
+<span class="sd">     Returns:</span>
+<span class="sd">         int: The factorial of n.</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># For loop to iterate through the range</span>
+         <span class="n">result</span> <span class="o">*=</span> <span class="n">i</span>
+     <span class="k">return</span> <span class="n">result</span>
+
+ <span class="k">def</span> <span class="nf">count_odds</span><span class="p">(</span><span class="n">numbers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;Count the number of odd numbers in a list.</span>
+
+<span class="sd">     Args:</span>
+<span class="sd">         numbers (list[int]): A list of integers.</span>
+
+<span class="sd">     Returns:</span>
+<span class="sd">         int: The count of odd numbers in the list.</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>  <span class="c1"># While loop to iterate through the list</span>
+         <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+             <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+         <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+     <span class="k">return</span> <span class="n">count</span>
+
+ <span class="k">def</span> <span class="nf">test_suite</span><span class="p">():</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;Run the suite of tests for code in this module (this file).&quot;&quot;&quot;</span>
+     <span class="n">test</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">120</span><span class="p">)</span>
+     <span class="n">test</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+     <span class="n">test</span><span class="p">(</span><span class="n">count_odds</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+     <span class="n">test</span><span class="p">(</span><span class="n">count_odds</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+
+ <span class="n">test_suite</span><span class="p">()</span>  <span class="c1"># Here is the call to run the tests</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h3>Dissecting the code<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Line 1</strong>: Imports the <code class="docutils literal notranslate"><span class="pre">sys</span></code> module, needed to obtain the line number of the calling code in the test function.</p></li>
+<li><p><strong>Lines 3-7</strong>: Defines the <code class="docutils literal notranslate"><span class="pre">test</span></code> function, which takes a boolean and prints a success or failure message, including the line number of the test.</p></li>
+<li><p><strong>Lines 9-21</strong>: Defines the <code class="docutils literal notranslate"><span class="pre">factorial</span></code> function, which calculates the factorial of a non-negative integer using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. The docstring and type annotations provide details about the function.</p></li>
+<li><p><strong>Lines 23-38</strong>: Defines the <code class="docutils literal notranslate"><span class="pre">count_odds</span></code> function, which counts the number of odd numbers in a list using a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p></li>
+<li><p><strong>Lines 40-46</strong>: Defines the <code class="docutils literal notranslate"><span class="pre">test_suite</span></code> function, which runs a series of tests to verify the functionality of the <code class="docutils literal notranslate"><span class="pre">factorial</span></code> and <code class="docutils literal notranslate"><span class="pre">count_odds</span></code> functions.</p></li>
+<li><p><strong>Line 48</strong>: Calls the <code class="docutils literal notranslate"><span class="pre">test_suite</span></code> function to run the tests.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Knowledge test<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>What is the purpose of the <code class="docutils literal notranslate"><span class="pre">test</span></code> function, and how does it obtain the line number of the calling code?</p></li>
+<li><p>Explain the use of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop in the <code class="docutils literal notranslate"><span class="pre">factorial</span></code> function.</p></li>
+<li><p>Describe how the <code class="docutils literal notranslate"><span class="pre">count_odds</span></code> function uses a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to achieve its goal.</p></li>
+<li><p>What are the benefits of including docstrings and type annotations in the functions?</p></li>
+<li><p>How can you write a test to verify that the <code class="docutils literal notranslate"><span class="pre">factorial</span></code> function returns an error for negative input?</p></li>
+</ol>
+<p>(<a class="reference internal" href="week00-answers.html"><span class="doc">Answers</span></a>)</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../introduction.html" class="btn btn-neutral float-left" title="COMP 170 Introduction to [Object Oriented] Programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../COMP271/introduction.html" class="btn btn-neutral float-right" title="COMP 271 Data Structures I" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
