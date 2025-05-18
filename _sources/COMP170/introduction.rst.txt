@@ -1,11 +1,12 @@
-COMP 170 Introduction to Java Programming
-=========================================
+========================================================
+COMP 170 Introduction to [Object Oriented] Programming
+========================================================
 
-.. include:: ../shared/leo.rst
+This course provides the foundation for computer programming.
+
 
 ..	toctree::
 	:maxdepth: 1
 	
-	Course organization <organization>
-	Reading material <reading>
+	Week 00 <weekly/week00>
 
