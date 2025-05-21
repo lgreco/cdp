@@ -3,7 +3,7 @@
 Answers to knowledge test
 ..........................
 
-Did you take a chance to think about the questions in advanced? If you didn't you're only cheating yourself. Learning takes time. Give yourself the time to succeed.
+Did you take a chance to think about the questions in advance? If you didn't you're only cheating yourself. Learning takes time. Give yourself the time to succeed.
 
 **What does the ``def`` keyword do in Python?**
   Answer: The ``def`` keyword is used to define a new function in Python. It marks the beginning of a function declaration.
