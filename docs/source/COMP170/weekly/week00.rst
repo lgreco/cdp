@@ -6,11 +6,6 @@ Workload expectation
 ---------------------
 In general, each credit hour in a 100-200 level course will require an average of 3 hours per week spent on work for that course, outside of the synchronous meeting time.
 
-Preview quiz to test your comprehension
----------------------------------------
-The quiz isn't timed in the traditional sense. The quiz will be available for a limited amount of time, generally for 24-48 hours before the class (probably on the weekend). Its technically open book/open notes; open internet reall. The quiz aim is primarily to help you develop confidence in your preparedness to come to class and participate in discussion. If you take the quiz and you feel like you didn't do well, or you have questions, be sure to write them down and bring them to class!  
-
-
 Homework
 ---------
 
