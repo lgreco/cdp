@@ -560,6 +560,8 @@ Knowledge test
 Unit tests and loops
 .......................
 
+*Advanced topic -- mentioned here just as an fyi*
+
 
 In this final section we'll introduce loops (although you got a sneak peak last section to the _for_ loop) and unit tests. We'll also showcase the test() function you'll use in future homework and lab assignments.
 
