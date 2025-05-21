@@ -95,8 +95,8 @@ Knowledge test
 
 * **Function Concepts**
 
-  * What does the ``hello_world`` function do when it is called?
-  * How many parameters does the ``hello_world`` function take? Can you explain what a parameter is?
+  * What does the ``our_first_program`` function do when it is called?
+  * How many parameters does the ``our_first_program`` function take? Can you explain what a parameter is?
 
 * **Code Execution**
 
@@ -110,12 +110,12 @@ Knowledge test
 * **Application and Extension**
 
   * Can you write a similar function that prints a different message?
-  * How would you modify the ``hello_world`` function to take a name as a parameter and print "Hello, [name]!"?
+  * How would you modify the ``our_first_program`` function to take a name as a parameter and print "Hello, [name]!"?
 
 * **Understanding Errors** (Advanced)
 
   * What would happen if you removed the indentation from line 2? Why?
-  * What would happen if you tried to call the ``hello_world`` function before defining it?
+  * What would happen if you tried to call the ``our_first_program`` function before defining it?
 
 
 (:doc:`Answers <week00-answers>`)
