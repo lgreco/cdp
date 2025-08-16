@@ -2,6 +2,7 @@ Student hours (aka office hours)
 ================================
 
 **Fall 2025**
+
 * Monday: 9:30-10:45 AM - walk-in/first-come first-served, Doyle 207
 * Tuesday: 8-9:45 AM - online and by appointment only
 * Wednesday: 9:30-10:45 AM - walk-in/first-come first-served, Doyle 207
