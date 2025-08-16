@@ -19,20 +19,7 @@ site.
    :maxdepth: 1
    :caption: Courses
    
-   COMP141/introduction
-   COMP163/introduction   
-   COMP170/introduction
-   COMP180/introduction
-   COMP271/introduction
-   COMP363/introduction
-
-   
-.. toctree::
-   :maxdepth: 1
-   :caption: Projects
-   
-   DEI/DEI
-   DBD/introduction
+   tbd
 
    
 .. toctree::
