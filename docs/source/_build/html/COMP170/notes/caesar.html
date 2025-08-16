@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caesar Cipher &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Caesar Cipher</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP170/notes/caesar.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="caesar-cipher">
+<h1>Caesar Cipher<a class="headerlink" href="#caesar-cipher" title="Link to this heading"></a></h1>
+<p>Caesar’s Cipher is a simple (and therefore not very safe) encryption technique. Its implementation is a good opportunity to discuss a few useful ideas.</p>
+<p>The implementation requires a method that accepts a string and an integer. The method transforms the string by shifting every letter by as many positions as indicated by the integer number. Then it returns the encoded string with the scrambled letters. For example, <code class="docutils literal notranslate"><span class="pre">caesarCipher(&quot;HAL&quot;,</span> <span class="pre">1)</span></code> will result to <code class="docutils literal notranslate"><span class="pre">&quot;IBM&quot;</span></code> because <code class="docutils literal notranslate"><span class="pre">'H'</span></code>, <code class="docutils literal notranslate"><span class="pre">'A'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'L'</span></code> will all be shifted one letter to the right. Based on that, we may rush to code something like this.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">caesarCipher</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">encodedMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="linenos">3</span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="linenos">4</span><span class="w">        </span><span class="n">encodedMessage</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+<span class="linenos">5</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">encodedMessage</span><span class="p">;</span>
+<span class="linenos">6</span><span class="p">}</span><span class="w">  </span><span class="c1">// method caesarCipher</span>
+</pre></div>
+</div>
+<p>The method above works well until we try something <code class="docutils literal notranslate"><span class="pre">caesarCipher(&quot;Zoo&quot;,</span> <span class="pre">1)</span></code>. The output will be <code class="docutils literal notranslate"><span class="pre">&quot;[pp&quot;</span></code>. This is problematic, because we want letters to be replaced by other letters. Julius Caesar used letters only, and so must we. Encoding “Zoo” by shifting all letters one position to the right should yield “App”. This implies that letter A is to the <em>right</em> of letter Z. But how is that possible? Z is the last letter of the alphabet; there is no letter to its right!</p>
+<figure class="align-right" id="id1" style="width: 66%">
+<img alt="../../_images/alphabetWheel.png" src="../../_images/alphabetWheel.png" />
+<figcaption>
+<p><span class="caption-text">The alphabet wheel.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Instead of imagining the letters arranged along a line, it helps if we look at them positioned around a circle, as shown to the figure in the right. There are letters after Z. And there are letters before A!
+(To keep things simple, we’ll use upper case letters only from now on).</p>
+<p>How do we model the alphabet wheel arithmetically? How do we show that moving <em>any</em> number of positions the right (or the left) of a letter, always returns a letter? For example, <span class="math notranslate nohighlight">\(\text{'A'}+1 = \text{'B'}\)</span>, <span class="math notranslate nohighlight">\(\text{'B'}+1 = \text{'C'}\)</span>,  <span class="math notranslate nohighlight">\(\text{'Z'}+1 = \text{'A'}\)</span>, etc.</p>
+<p>As we explore the properties of the alphabet wheel above, we begin to see a periodic pattern:</p>
+<div class="math notranslate nohighlight">
+\[\text{'A'} + 1 = \text{'A'} + 27 = \text{'A'} + 53  = \text{'A'} + 90 =  \ldots\]</div>
+<p>The letter one place after ‘A’ is the same as the letter <span class="math notranslate nohighlight">\(1+26\)</span> positions after ‘A’, and also <span class="math notranslate nohighlight">\(1+(26+26)\)</span> positions, <span class="math notranslate nohighlight">\(1+(26+26+26)\)</span> positions, and so on. If we start at ‘A’ and we make 90, 53, or 27 steps to its right, we’ll always end up in the same place as if we had made only one step: at the letter ‘B’.</p>
+<p>Similar results exist for the other letters in the alphabet wheel. This behavior can be summarized in the following table. The first row is the number of steps we make to the right of the letter shown in the first column. The corresponding cell shows the letter we end up with. For example, <span class="math notranslate nohighlight">\(\text{'B'}+2 = \text{'D'}\)</span>. The numbers in parentheses are the numeric codes for the letters (the <a class="reference external" href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> values).</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td></td>
+<td><p><strong>1</strong></p></td>
+<td><p><strong>2</strong></p></td>
+<td><p>…</p></td>
+<td><p><strong>26</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>A (65)</strong></p></td>
+<td><p>B (66)</p></td>
+<td><p>C (67)</p></td>
+<td><p>…</p></td>
+<td><p>A (65)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>B (66)</strong></p></td>
+<td><p>C (67)</p></td>
+<td><p>D (68)</p></td>
+<td><p>…</p></td>
+<td><p>B (66)</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Z (90)</strong></p></td>
+<td><p>A (65)</p></td>
+<td><p>B (66)</p></td>
+<td></td>
+<td><p>Z (90)</p></td>
+</tr>
+</tbody>
+</table>
+<p>In  general, periodic behavior among discrete, finite items is an indication of a <a class="reference external" href="https://en.wikipedia.org/wiki/Modulo_operation">modulo operation</a>. Letters are discrete (there is nothing between them) and finite (only 26). The alphabet wheel repeats itself with a period of 26. And so we can write</p>
+<div class="math notranslate nohighlight">
+\[\text{letter} + m = \text{letter} + (m\bmod 26)\]</div>
+<p>Variable <span class="math notranslate nohighlight">\(m\)</span> above corresponds to variable <code class="docutils literal notranslate"><span class="pre">key</span></code> in the method we are trying to build: the amount by which we shift letters to the right (or to the left if <code class="docutils literal notranslate"><span class="pre">key</span></code> is negative). In Java parlance:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">newLetter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentLetter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="o">%</span><span class="mi">26</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If only it were that simple! This formula works on the alphabet wheel because it tells that the letter 27 steps to the right of Z is still A. On a circle. Computers, however, are very linear things.</p>
+<figure class="align-left" id="id2" style="width: 50%">
+<img alt="../../_images/alphabetLine.png" src="../../_images/alphabetLine.png" />
+<figcaption>
+<p><span class="caption-text">The alphabet line.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The cyclic approach tells us that one step to the right of Z is the letter A. But in the linear way that computers arrange symbols (like the ASCII code), one place to the right of Z we find the opening square bracket <code class="docutils literal notranslate"><span class="pre">[</span></code>. The simple expression <span class="math notranslate nohighlight">\(m\bmod 26\)</span> (or, <code class="docutils literal notranslate"><span class="pre">key%26</span></code> in Java), cycles through <span class="math notranslate nohighlight">\(\{0,1,\ldots,25\}\)</span>. In programming, we are interested in cycling through <span class="math notranslate nohighlight">\(\{65, 66, \ldots, 90\}\)</span>; these are the ASCII values that correspond to letters A through Z.</p>
+<p>The desired cycling can be obtained by the expression <span class="math notranslate nohighlight">\(65+(m\bmod 26)\)</span>. Any value of <span class="math notranslate nohighlight">\(m\)</span> will return a value between 65 and 90, inclusive.</p>
+<p>Now that we have an expression to stay within the ASCII codes for letters A through Z, we can use it for our cipher. The cipher replaces a letter with another letter, <code class="docutils literal notranslate"><span class="pre">key</span></code> positions away. If the letter’s ASCII value is stored in variable``c``, we want the expression <code class="docutils literal notranslate"><span class="pre">c+key</span></code> to stay between 65 and 90. The corresponding Java expression will be</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">newLetter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">65</span><span class="p">)</span><span class="o">%</span><span class="mi">26</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The expression above ranges between 65 and 90, inclusive, and so it corresponds to a letter between A and Z. Let’s demonstrate this with an example. If <code class="docutils literal notranslate"><span class="pre">c=90</span></code> (the letter Z) and we want to obtain the letter immediately to its right, so <code class="docutils literal notranslate"><span class="pre">key=1</span></code> and the sum <code class="docutils literal notranslate"><span class="pre">c+key</span></code> is 91. Subtracting 65 yields 26 and 26%26 is 0, so <code class="docutils literal notranslate"><span class="pre">newLetter</span></code> will be <code class="docutils literal notranslate"><span class="pre">65+(90+1-65)%26</span></code> which is <code class="docutils literal notranslate"><span class="pre">65+0</span></code>, i.e., the code for the letter A.</p>
+<p>What we have done here is to write an expression that finds the ciphered value for any letter, as a number of steps after the letter A. We always start with the letter A (65) and we add to it the number of steps we make to the right (or left) to find the new letter. That number of steps is always between 0 and 25.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Encrypts a string with a simple shift algorithm. This implementation works in upper case</span>
+<span class="cm"> * only, by transforming the input message to upper case.</span>
+<span class="cm"> * @param message String to encrypt</span>
+<span class="cm"> * @param key int for shifting letters</span>
+<span class="cm"> * @return string with encrypted message</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">caesarCipher</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// These variables can be moved outside the method as class constants.</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ASCII_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// ASCII value for letter A</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ASCII_Z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="sc">&#39;Z&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// ASCII value for letter Z</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">alphabetLetters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">+</span><span class="n">ASCII_Z</span><span class="o">-</span><span class="n">ASCII_A</span><span class="p">;</span><span class="w">  </span><span class="c1">// Number of letters in the alphabet</span>
+<span class="w">    </span><span class="c1">// Bring input message to upper case</span>
+<span class="w">    </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">// Initialize output string</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">encodedMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Loop over every character in the input string</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Is this a letter character?</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">ASCII_A</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">ASCII_Z</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Shift c to its new position</span>
+<span class="w">            </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASCII_A</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="o">+</span><span class="n">key</span><span class="o">-</span><span class="n">ASCII_A</span><span class="p">)</span><span class="o">%</span><span class="n">alphabetLetters</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// Add c to the output message</span>
+<span class="w">        </span><span class="n">encodedMessage</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">encodedMessage</span><span class="p">;</span>
+<span class="p">}</span><span class="w">  </span><span class="c1">// method caesarCipher</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

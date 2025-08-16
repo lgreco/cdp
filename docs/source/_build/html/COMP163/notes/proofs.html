@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proofs &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Mathematical Induction" href="induction.html" />
+    <link rel="prev" title="Algorithms" href="algorithms.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 163 Discrete Structures</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../notes.html">Leo's notes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sets.html">Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html">Algorithms</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Proofs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#direct-proofs">Direct proofs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#proofs-by-contradiction">Proofs by contradiction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="induction.html">Mathematical Induction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conditional_propositions.html">Conditional propositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="binary_relations.html">Binary relations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poker.html">The probabilities of poker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../latex.html">LaTeX schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outlines.html">Outlines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 163 Discrete Structures</a></li>
+          <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
+      <li class="breadcrumb-item active">Proofs</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP163/notes/proofs.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="proofs">
+<h1>Proofs<a class="headerlink" href="#proofs" title="Link to this heading"></a></h1>
+<p>Proofs have been an central element of our civilization for thousands of years. In Odyssey, Homer gives us proof of Ulysses identity when he describes how he is recognized by his aged, faithful dog. In Bible, the resurrected Christ allows Thomas to touch his wounds, leading to the first acclamation of Jesus as God (John 20:24–29). In the Lord of the Rings, Aragorn’s rightful claim to the thrones of Arnor and Gondor is established by the Ring of Barahir and his wielding of the Andúril sword. In fiction and scripture, proofs have been used to establish veracity of deeds and royal or divine status. Proofs satisfy our doubts and skepticism and give meaning to faith and theory alike.</p>
+<p>In mathematics, proofs are arguments that establish the truthfulness of various statements. These arguments are based on the building blocks of mathematical systems: axioms, definitions, and theorems.</p>
+<section id="direct-proofs">
+<h2>Direct proofs<a class="headerlink" href="#direct-proofs" title="Link to this heading"></a></h2>
+<p>This is the easiest kind of proofs, relatively speaking.
+In direct proofs we usually have a statement of the form:</p>
+<div class="math notranslate nohighlight">
+\[p\ \text{implies}\ q\]</div>
+<p>The approach we take is to look at axioms, definitions, and theorems available to us based on <span class="math notranslate nohighlight">\(p\)</span> and find the right transformations to arrive to <span class="math notranslate nohighlight">\(q\)</span>. For example, let’s consider</p>
+<div class="math notranslate nohighlight">
+\[p=\text{if}\ n\ \text{is odd}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[q=n^2\ \text{is odd}\]</div>
+<p>In this example, if <span class="math notranslate nohighlight">\(n\)</span> is odd then <span class="math notranslate nohighlight">\(n=2x+1\)</span> and by squaring both sides,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}n^2&amp;=(2x+1)^2\\ &amp;=4x^2+4x+1\\ &amp;=2(2x^2+2x)+1\\ &amp;= 2z+1\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(z=2x^2+2x\)</span>. So we showed that <span class="math notranslate nohighlight">\(n^2=2z+1\)</span> which is an odd number.</p>
+<section id="sum-of-two-odd-numbers-is-an-even-number">
+<h3>Sum of two odd numbers is an even number<a class="headerlink" href="#sum-of-two-odd-numbers-is-an-even-number" title="Link to this heading"></a></h3>
+<p>Another example of a direct proof is to show that if two numbers are odd, their sum is an even number, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\text{if}\ m,n\ \text{odd} \rightarrow m+n\ \text{even}\]</div>
+<p>The proof is quite straight forward: if <span class="math notranslate nohighlight">\(m\)</span> is odd then <span class="math notranslate nohighlight">\(m=2x+1\)</span>, i.e. it is, by definition, a multiple of 2 (<span class="math notranslate nohighlight">\(2x\)</span>) plus one. Similarly, <span class="math notranslate nohighlight">\(n=2y+1\)</span>; where <span class="math notranslate nohighlight">\(x\ \text{and}\ y\)</span> are arbitrary integer numbers. Adding them together:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left.\begin{array}{c}m=2x+1\\n=2y+1\end{array}\right\} \Rightarrow m+n &amp;= 2x+2y+2\\ &amp;= 2(x+y+1)\\ &amp;= 2k\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(k=x+y+1\)</span>. Thus we showed that the sum of two odd numbers is a multiple of 2, which by definition is an even number.</p>
+</section>
+<section id="the-product-of-odd-and-even-numbers-is-an-even-number">
+<h3>The product of odd and even numbers is an even number<a class="headerlink" href="#the-product-of-odd-and-even-numbers-is-an-even-number" title="Link to this heading"></a></h3>
+<p>Another direct proof is to show that the product of an odd and an even number is an even number. Assuming <span class="math notranslate nohighlight">\(m=2x+1\)</span> (the odd number) and <span class="math notranslate nohighlight">\(n=2y\)</span> (the even number), their product <span class="math notranslate nohighlight">\(mn\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[mn = (2x+1)2y = 4xy+2y = 2(2xy+y)\]</div>
+<p>In other words, <span class="math notranslate nohighlight">\(mn\)</span> is a multiple of 2, therefore an even number.</p>
+</section>
+<section id="the-square-of-an-even-number-is-an-even-number">
+<h3>The square of an even number is an even number<a class="headerlink" href="#the-square-of-an-even-number-is-an-even-number" title="Link to this heading"></a></h3>
+<p>Can show that if <span class="math notranslate nohighlight">\(n\)</span> is even, then <span class="math notranslate nohighlight">\(n^2\)</span> is also even? An even number is a multiple of 2, so we can write <span class="math notranslate nohighlight">\(n=2x\)</span>. Squaring both sides gives us <span class="math notranslate nohighlight">\(n^2=4x^2=2(2x^2)=2z\)</span>, where <span class="math notranslate nohighlight">\(z=2x^2\)</span>. By showing that <span class="math notranslate nohighlight">\(n^2=2z\)</span> we have proved that <span class="math notranslate nohighlight">\(n^2\)</span> is even.</p>
+</section>
+</section>
+<section id="proofs-by-contradiction">
+<h2>Proofs by contradiction<a class="headerlink" href="#proofs-by-contradiction" title="Link to this heading"></a></h2>
+<p>Some times, a direct proof may not be possible. For example, can we prove that if <span class="math notranslate nohighlight">\(n^2\)</span> is even then <span class="math notranslate nohighlight">\(n\)</span> is also even? Trying a direct proof we can write:</p>
+<div class="math notranslate nohighlight">
+\[n^2=2x \rightarrow n=\sqrt{2x}\]</div>
+<p>There is no way to tell if <span class="math notranslate nohighlight">\(\sqrt{2x}\)</span> is an odd or even number. Clearly, a direct proof approach does not work in this case. What if we took a different approach and assumed that if  <span class="math notranslate nohighlight">\(n^2\)</span> is even then <span class="math notranslate nohighlight">\(n\)</span> is <strong>odd?</strong> If <span class="math notranslate nohighlight">\(n\)</span> is odd, then <span class="math notranslate nohighlight">\(n=2x+1\)</span>. And by squaring both sizes of the equation,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}n^2&amp;=(2x+1)^2\\ &amp;=4x^2+4x+1\\ &amp;=2(2x^2+2x)+1\\ &amp;=2z+1\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(z=2x^2+2x\)</span>. Therefore <span class="math notranslate nohighlight">\(n^2\)</span> is an odd number though our initial assumption is that <span class="math notranslate nohighlight">\(n^2\)</span> is even. By assuming the opposite conclusion of the statement we tried to prove, we reach a contradiction and that allows us to conclude that the initial statement was actually true.</p>
+<p>In general, a proof by contradiction works when a statement of the form</p>
+<div class="math notranslate nohighlight">
+\[h\ \rightarrow \  c\]</div>
+<p>cannot be proved directly; here <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(c\)</span> are the hypothesis and conclusion parts of the statement and “<span class="math notranslate nohighlight">\(\rightarrow\)</span>” means “implies”. In this case, the proof by contradiction can be established as follows.</p>
+<p>First, we assume that the opposite conclusion is true, i.e., that <span class="math notranslate nohighlight">\(h\rightarrow\neg c\)</span> is true. Remember, “<span class="math notranslate nohighlight">\(\neg\)</span>” is the negation operator and therefore <span class="math notranslate nohighlight">\(\neg c\)</span> is the opposite of <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<p>Next, given that we accept <span class="math notranslate nohighlight">\(h\rightarrow\neg c\)</span> as true, we can now focus on its conclusion and test if we can derive <span class="math notranslate nohighlight">\(h\)</span> from <span class="math notranslate nohighlight">\(\neg c\)</span>. In other words, given that <span class="math notranslate nohighlight">\(h\rightarrow\neg c\)</span> is true can we show that <span class="math notranslate nohighlight">\(\neg c\rightarrow h\)</span>? Attempting to do so will yield a result other than <span class="math notranslate nohighlight">\(h\)</span>. Therefore the assumption <span class="math notranslate nohighlight">\(h\rightarrow\neg c\)</span> that allowed us to test if  <span class="math notranslate nohighlight">\(\neg c\rightarrow h\)</span>, is false. If <span class="math notranslate nohighlight">\(h\rightarrow\neg c\)</span> is false, then <span class="math notranslate nohighlight">\(h\rightarrow c\)</span> must be true. And that concludes our proof!</p>
+<p>To illustrate this method, let’s look at the earlier example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}h&amp;:\ n^2\ \text{even} \\
+c&amp;:\ n\ \text{even} \\
+\text{prove}&amp;:\ h\rightarrow c \\
+\text{no direct proof available;}\\
+\text{trying contradiction}\\
+\text{assume true}&amp;:\ h\rightarrow\neg c \\
+\neg c&amp;:\ n\ \text{not even, i.e.,}\ n\ \text{odd} \\
+h\rightarrow\neg c&amp;:\ \text{if}\ n^2\ \text{even}\rightarrow n\ \text{odd} \\
+n&amp;=2x+1 \\
+n^2&amp;=(2x+1)^2 \\
+&amp;=4x^2+4x+1\\
+&amp;=2(2x^2+2x)+1 \\
+&amp;=2z+1,\ (\text{where}\ z=2x^2+2x\\
+n^2&amp;:\ \text{odd}\\
+\text{but}&amp;:\ \text{we assumed}\ h\ (n^2\ \text{even})\\\end{split}\]</div>
+<section id="example-if-n-2-is-odd-then-n-is-odd">
+<h3>Example: if <span class="math notranslate nohighlight">\(n^2\)</span> is odd then <span class="math notranslate nohighlight">\(n\)</span> is odd<a class="headerlink" href="#example-if-n-2-is-odd-then-n-is-odd" title="Link to this heading"></a></h3>
+<p>If we tried direct proof here, we’ll end with the expression <span class="math notranslate nohighlight">\(n=\sqrt{2x+1}\)</span> which is of inconclusive parity. Therefore, a proof by contradiction may be a better strategy. Our hypothesis is <span class="math notranslate nohighlight">\(h:\ n^2\ \text{odd}\)</span>. Our conclusion is <span class="math notranslate nohighlight">\(c:\ n\ \text{odd}\)</span>. And since we cannot prove directly <span class="math notranslate nohighlight">\(h\rightarrow c\)</span>, we will assume that <span class="math notranslate nohighlight">\(h\rightarrow\neg c\)</span> is true. Given this assumption, <span class="math notranslate nohighlight">\(n\)</span> is odd and therefore <span class="math notranslate nohighlight">\(n=2x\)</span>. Squaring both sides of the equation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}n^2&amp;=4x^2 \\
+&amp;= 2(2x^2) \\
+&amp;= 2z,\ (\text{where}\ z=2x^2)\end{split}\]</div>
+<p>Therefore <span class="math notranslate nohighlight">\(n^2\)</span> is an even number contrary to the assumed truthfulness of <span class="math notranslate nohighlight">\(h\rightarrow\neg c\)</span>. Our assumption <span class="math notranslate nohighlight">\(h\rightarrow\neg c\)</span> is false, leading to the conclusion that <span class="math notranslate nohighlight">\(h\rightarrow c\)</span> is true. In other words,  if <span class="math notranslate nohighlight">\(n^2\)</span> is odd then <span class="math notranslate nohighlight">\(n\)</span> is also odd.</p>
+</section>
+<section id="example-if-a-b-in-mathbb-z-then-a-2-4b-neq-2">
+<h3>Example: if <span class="math notranslate nohighlight">\(a,b \in \mathbb{Z}\)</span> then <span class="math notranslate nohighlight">\(a^2-4b\neq 2\)</span><a class="headerlink" href="#example-if-a-b-in-mathbb-z-then-a-2-4b-neq-2" title="Link to this heading"></a></h3>
+<p>The hypothesis here is <span class="math notranslate nohighlight">\(h:\ a,b \in \mathbb{Z}\)</span>. And the conclusion is <span class="math notranslate nohighlight">\(c:\ a^2-4b\neq 2\)</span>. There is no direct way to show <span class="math notranslate nohighlight">\(h\rightarrow c\)</span>, and it would seem that a proof by contradiction is the preferred strategy. We begin by assuming that <span class="math notranslate nohighlight">\(h\rightarrow\neg c\)</span> is true, i.e., there are integer numbers <span class="math notranslate nohighlight">\(a,b\)</span> such that <span class="math notranslate nohighlight">\(a^2-4b=2\)</span>. Given that, we can write:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a^2-4b&amp;=2 \\
+a^2&amp;=4b+2 \\
+&amp;2(2b+1)\end{split}\]</div>
+<p>From the above we can tell that <span class="math notranslate nohighlight">\(a^2\)</span> is even and therefore <span class="math notranslate nohighlight">\(a\)</span> is also even and thus can be written as a multiple of 2: <span class="math notranslate nohighlight">\(a=2x\)</span> and substituting this in the original expression:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a^2-4b &amp;= 2 \\
+(2x)^2-4b &amp;= 2 \\
+4x^2-4b &amp;= 2 \\
+2x^2-2b &amp;= 1 \\
+2(x^2-b) &amp;= 1\\
+2z &amp;=1,\ (\text{where}\ z=x^2-b)\end{split}\]</div>
+<p>We just concluded that <span class="math notranslate nohighlight">\(1\)</span> is an even number! That’s because the assumption that led us to this astonishing conclusion is false. The assumption was that there are integer numbers <span class="math notranslate nohighlight">\(a,b\)</span> such that <span class="math notranslate nohighlight">\(a^2-4b=2\)</span>. This assumption is false which means that there are no integers <span class="math notranslate nohighlight">\(a,b\)</span> such that  <span class="math notranslate nohighlight">\(a^2-4b=2\)</span>. Therefore, the original statement <span class="math notranslate nohighlight">\(a,b \in \mathbb{Z}\rightarrow a^2-4b\neq 2\)</span>, is true.</p>
+</section>
+<section id="example-there-is-no-largest-number">
+<h3>Example: there is no largest number<a class="headerlink" href="#example-there-is-no-largest-number" title="Link to this heading"></a></h3>
+<p>Let’s suppose that there is a largest number, <span class="math notranslate nohighlight">\(L\)</span>, such that <span class="math notranslate nohighlight">\(L\geq x,\ \forall x\)</span>. Given that <span class="math notranslate nohighlight">\(1&gt;0\)</span>, we can add <span class="math notranslate nohighlight">\(L\)</span> to both sides, resulting to <span class="math notranslate nohighlight">\(L+1 &gt; L\)</span> which cannot be true, because we assumed that <span class="math notranslate nohighlight">\(L\)</span> is the greatest number, and we just showed that it’s less than <span class="math notranslate nohighlight">\(L+1\)</span>.</p>
+</section>
+<section id="step-by-step-template-for-proofs-by-contradiction">
+<h3>Step-by-step template for proofs by contradiction<a class="headerlink" href="#step-by-step-template-for-proofs-by-contradiction" title="Link to this heading"></a></h3>
+<p>Given a theorem in the form <span class="math notranslate nohighlight">\(h\rightarrow c\)</span>, where <span class="math notranslate nohighlight">\(h\)</span> is a hypothesis and <span class="math notranslate nohighlight">\(c\)</span> a conclusion, that cannot be proven directly, proof by contradiction may be our next best bet.</p>
+<figure class="align-right" id="id1" style="width: 33%">
+<img alt="../../_images/seattle_nyc.png" src="../../_images/seattle_nyc.png" />
+<figcaption>
+<p><span class="caption-text">A road sign as a metaphor for proof by contradiction.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To illustrate proof by contradiction, consider this scenario. While driving to Seattle, you come to the road sign shown to the right. You decide to check if the sign is correct but in an indirect way: you turn right. After several hours, you arrive to New York City. The sign was correct: Seattle was to the left.</p>
+<p>The theorem to prove is:</p>
+<div class="math notranslate nohighlight">
+\[\textsf{get to Seattle}\rightarrow\textsf{make left turn}\]</div>
+<p>You made the assumption that you can still get to Seattle by making the opposite of a left turn (i.e., a right turn). You assumed, in other words, that the following theorem is correct:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textsf{get to Seattle}&amp;\rightarrow&amp;\ \textit{not}\ \textsf{make left turn}, \ \textsf{i.e.,}\\
+\textsf{get to Seattle}&amp;\rightarrow&amp;\ \textsf{make}\ \textit{right}\  \textsf{turn}\end{split}\]</div>
+<p>Accepting this as true, you turn right and drive until you reach NYC. Evidently, the right-turn theorem is wrong. Therefore, the left-turn theorem is the correct one.</p>
+<section id="the-most-important-first-step">
+<h4>The most important <em>first</em> step<a class="headerlink" href="#the-most-important-first-step" title="Link to this heading"></a></h4>
+<p>When trying to prove a theorem, the first thing to do is to identify the hypothesis and the conclusion propositions. Theorems are often stated as</p>
+<div class="math notranslate nohighlight">
+\[\textit{if}\ h\ \textit{then}\ c\]</div>
+<p>So, finding the <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(c\)</span> propositions can be done with relative ease.</p>
+</section>
+<section id="formulate-the-contradicting-condition">
+<h4>Formulate the contradicting condition<a class="headerlink" href="#formulate-the-contradicting-condition" title="Link to this heading"></a></h4>
+<p>Using the hypothesis <span class="math notranslate nohighlight">\(h\)</span> and conclusion <span class="math notranslate nohighlight">\(c\)</span> from the previous step, write the contradicting condition:</p>
+<div class="math notranslate nohighlight">
+\[\textit{if}\ h\ \textit{then not}\ c\]</div>
+<p>Let’s resume using mathematical notation and write the contradicting condition as <span class="math notranslate nohighlight">\(h\rightarrow\neg c\)</span>.</p>
+</section>
+<section id="accept-the-contradicting-condition-as-true">
+<h4>Accept the contradicting condition as true<a class="headerlink" href="#accept-the-contradicting-condition-as-true" title="Link to this heading"></a></h4>
+<p>State the assumption that <span class="math notranslate nohighlight">\(h\rightarrow\neg c\)</span> is true. You need to write this statement both for your benefit and also for the benefit of those reading your proof. This statement is a “contract” with yourself. You have to believe that the contradicting condition is true until you can <em>prove</em> that it is not.</p>
+</section>
+<section id="work-the-neg-c">
+<h4>Work the <span class="math notranslate nohighlight">\(\neg c\)</span><a class="headerlink" href="#work-the-neg-c" title="Link to this heading"></a></h4>
+<p>Much like you started driving after turning right earlier and kept driving until you arrived to a place other than Seattle, you need to work on <span class="math notranslate nohighlight">\(\neg c\)</span> will take you. If the first step is the most important, this step is the most difficult. With practice and experience you develop intuition on the direction that you can take the <span class="math notranslate nohighlight">\(\neg c\)</span>.</p>
+</section>
+</section>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
+<section id="show-that-if-n-2-is-odd-then-n-odd">
+<h4>Show that if <span class="math notranslate nohighlight">\(n^2\)</span> is odd then <span class="math notranslate nohighlight">\(n\)</span> odd<a class="headerlink" href="#show-that-if-n-2-is-odd-then-n-odd" title="Link to this heading"></a></h4>
+<p>We worked this example before but we repeat here to focus on two things: first, how to separate <span class="math notranslate nohighlight">\(h\)</span> from <span class="math notranslate nohighlight">\(c\)</span> and second how to work your way from <span class="math notranslate nohighlight">\(\neg c\)</span> to the contradiction. In this case, identifying <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(c\)</span> is straight forward: they are both present in the problem statement.</p>
+<div class="math notranslate nohighlight">
+\[\underbrace{\text{if}\ n^2\ \text{is odd}}_{h}
+\rightarrow
+\underbrace{n\ \text{is odd}}_{c}\]</div>
+<p>So it’s easy to formulate the contradictory condition <span class="math notranslate nohighlight">\(h\rightarrow\neg c\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\underbrace{\text{if}\ n^2\ \text{is odd}}_{h}
+\rightarrow
+\underbrace{n\ \text{is even}}_{\neg c}\]</div>
+<p>The next challenge is where to take the <span class="math notranslate nohighlight">\(\neg g\)</span>. One good place to start with is: definitions. What does it mean for a number to be even? It must be a multiple of two: <span class="math notranslate nohighlight">\(n=2k, k\in\mathbb{Z}\)</span>. What to do with this? Well, we are interested in the properties of <span class="math notranslate nohighlight">\(n^2\)</span>, so let’s square it: <span class="math notranslate nohighlight">\(n^2=(2k)^2=4k^2=2(2k^2)\)</span>. This is a multiple of two; in other words <span class="math notranslate nohighlight">\(n^2\)</span> is even which contradicts our assumption that <span class="math notranslate nohighlight">\(n^2\)</span> is odd.</p>
+</section>
+<section id="show-that-there-is-no-largest-integer-number">
+<h4>Show that there is no largest integer number<a class="headerlink" href="#show-that-there-is-no-largest-integer-number" title="Link to this heading"></a></h4>
+<p>This is also an example that we worked on above, only it is not immediately obvious what is its <span class="math notranslate nohighlight">\(h\)</span> and what is its <span class="math notranslate nohighlight">\(c\)</span>. When a problem is stated as a fact (“there is no largest integer number”), a good strategy is to turn the fact on its head, i.e., to accept (temporarily) that the opposite fact is true: there <em>is</em> a largest interest number.</p>
+<p>Let’s call that number <span class="math notranslate nohighlight">\(L\)</span>. What does it mean to be the largest integer number. It means that there is no integer number <span class="math notranslate nohighlight">\(x\)</span> such that <span class="math notranslate nohighlight">\(x&gt;L\)</span>. But can this be true? Can we not think of a number larger than <span class="math notranslate nohighlight">\(L\)</span>?</p>
+<p>Here comes the intuition. Let’s take two numbers, one larger than the other, for example <span class="math notranslate nohighlight">\(3 &lt; 4\)</span>. If we add <span class="math notranslate nohighlight">\(L\)</span> to both sides, we get <span class="math notranslate nohighlight">\(L+3 &lt; L+4\)</span>. This is interesting because it suggests that a number larger than <span class="math notranslate nohighlight">\(L\)</span> (specifically, <span class="math notranslate nohighlight">\(L+3\)</span>) is greater than another number (<span class="math notranslate nohighlight">\(L+4\)</span>) also larger than <span class="math notranslate nohighlight">\(L\)</span>. But this is not conclusive enough. The intuition is in the right direction, we need to experiment a bit, maybe by trying a different pair of numbers. Eventually, we come across the fact <span class="math notranslate nohighlight">\(0 &lt; 1\)</span>. Adding <span class="math notranslate nohighlight">\(L\)</span> to both sides yield <span class="math notranslate nohighlight">\(L&lt;L+1\)</span>. But if <span class="math notranslate nohighlight">\(L\)</span> is <em>the largest</em> number, how can it be smaller than <span class="math notranslate nohighlight">\(L+1\)</span>? There shouldn’t be any number greater that <span class="math notranslate nohighlight">\(L\)</span>. This contradicts our assumption that there is a largest integer number and therefore the original statement must be true: there is no largest integer number.</p>
+<p>What was the “magic” above? We started with <span class="math notranslate nohighlight">\(3&lt;4\)</span> and said we should experiment with other ordered pairs of integers. For example, we could have tried <span class="math notranslate nohighlight">\(11&lt;13\)</span> or <span class="math notranslate nohighlight">\(-18 &lt; 2\)</span>, etc. Adding <span class="math notranslate nohighlight">\(L\)</span> to both sides would have given the same pattern:</p>
+<div class="math notranslate nohighlight">
+\[L\ \text{plus something } &lt; L\ \text{plus something else}\]</div>
+<p>Eventually we come to the realization that we want just <span class="math notranslate nohighlight">\(L\)</span> on the left-hand side of the expression above. And the only “something” that we can add to <span class="math notranslate nohighlight">\(L\)</span> and still get <span class="math notranslate nohighlight">\(L\)</span> is zero. No we need an ordered pair with 0 to the left and something greater than zero to the right. We could try <span class="math notranslate nohighlight">\(0&lt;629\)</span> but in mathematics we strive for the least necessary quantity to prove our point, so we end up with <span class="math notranslate nohighlight">\(0&lt;1\)</span>.</p>
+</section>
+<section id="the-square-root-of-2-is-not-a-rational-number">
+<h4>The square root of 2 is not a rational number<a class="headerlink" href="#the-square-root-of-2-is-not-a-rational-number" title="Link to this heading"></a></h4>
+<p>It is not immediately clear what is the hypothesis and what is the conclusion here. We discussed above that when a property is stated as a fact, to look at the opposite fact and work our way from there. The opposite fact in this case is: <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> <em>is a rational number.</em></p>
+<p>We can write the original statement as:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\underbrace{\sqrt{2}=\frac{a}{b}}_{h}
+\rightarrow
+\underbrace{a, b\not\in\mathbb{Z}}_{c}\]</div>
+</div></blockquote>
+<p>Here, <span class="math notranslate nohighlight">\(h\)</span> says that <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> <em>can be writen as a fraction of two numbers.</em> And <span class="math notranslate nohighlight">\(c\)</span> says that these two numbers <em>are not integers.</em> And we can write a contradicting condition as:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\underbrace{\sqrt{2}=\frac{a}{b}}_{h}
+\rightarrow
+\underbrace{a, b\in\mathbb{Z}}_{\neg c}\]</div>
+</div></blockquote>
+<p>The rest goes as follows: given that <span class="math notranslate nohighlight">\(a,b\)</span> are integers <span class="math notranslate nohighlight">\(a\neq b\)</span>, multiplyin both sides with <span class="math notranslate nohighlight">\(b\)</span> and squaring them yields: <span class="math notranslate nohighlight">\(2b^2=a^2\)</span>. Therefore <span class="math notranslate nohighlight">\(a^2\)</span> is a multiple of two, therefore even, and as we proved elsewhere <span class="math notranslate nohighlight">\(a\)</span> is also even and can be writen as <span class="math notranslate nohighlight">\(a=2k\)</span> (i.e., a multiple of two). Substituting <span class="math notranslate nohighlight">\(2k\)</span> for <span class="math notranslate nohighlight">\(a\)</span> we get that <span class="math notranslate nohighlight">\(2b^2=4k^2\Rightarrow b^2=2k^2\)</span>, therefore <span class="math notranslate nohighlight">\(b^2\)</span> is even, and so must be <span class="math notranslate nohighlight">\(b\)</span>, i.e., <span class="math notranslate nohighlight">\(b=2l\)</span>. Now the fraction <span class="math notranslate nohighlight">\(\dfrac{a^2}{b^2}\)</span> can be re-written as <span class="math notranslate nohighlight">\(\dfrac{(2k)^2}{(2l)^2}=\dfrac{k^2}{l^2}\)</span>, with <span class="math notranslate nohighlight">\(k\neq l\)</span>.</p>
+<p>Great! All we accomplished so far is to write a fraction of squared numbers (<span class="math notranslate nohighlight">\(a^2/b^2\)</span>) as a fraction of two other squared numbers (<span class="math notranslate nohighlight">\(k^2/l^2\)</span>). While there is no major award for our accomplishment, there is a notable difference between the two fractions. For the first fraction, we know that <span class="math notranslate nohighlight">\(a^2\)</span> and <span class="math notranslate nohighlight">\(b^2\)</span> are <em>both</em> even numbers. There is no such certainty about <span class="math notranslate nohighlight">\(k^2\)</span> and <span class="math notranslate nohighlight">\(l^2\)</span>. We can use this uncertainty to our advantage as follows.</p>
+<ul class="simple">
+<li><p>If both <span class="math notranslate nohighlight">\(k^2\)</span> and <span class="math notranslate nohighlight">\(l^2\)</span> are even, we can follow the same logic as above to reduce <span class="math notranslate nohighlight">\(k^2/l^2\)</span> to <span class="math notranslate nohighlight">\(m^2/n^2\)</span>, and continue doing so until we reach a fraction where either the numerator or the denominator or both are odd numbers. And that takes us to the next case.</p></li>
+<li><p>If either <span class="math notranslate nohighlight">\(k^2\)</span> or <span class="math notranslate nohighlight">\(l^2\)</span> (or both) is an odd number, then</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sqrt{2} &amp;= \frac{2u}{2v+1} \Rightarrow \\
+2 &amp;= \frac{4u^2}{4v^2+4v+1} \Rightarrow \\ \\
+\underbrace{2u^2}_{\textsf{even}} &amp;= \underbrace{4v^2+4v+1}_{\textsf{odd}} \\
+\textsf{because:}\\
+2u^2 &amp;= \underbrace{2(2v^2+2v)+1}_{\textsf{multiple of 2 plus 1}}\end{split}\]</div>
+<p>The analysis above assumes that one part of the fraction is odd and the other is even, leading to the contradiction that an odd number can be equal to an even one. What if both parts of the fraction were odd numbers? In this case, we reach a similar impossibility:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sqrt{2} &amp;= \frac{2u+1}{2v+1} \Rightarrow \\
+2 &amp;= \frac{4u^2+4u+1}{4v^2+4v+1} \Rightarrow \\ \\
+\underbrace{4u^2+4u+1}_{\textsf{odd}} &amp;= \underbrace{2(4v^2+4v+1)}_{\textsf{even}} \\
+\textsf{because:}\\
+\underbrace{2(2u^2+2u) +1}_{\textsf{multiple of 2 plus 1}} &amp; =\underbrace{2(4v^2+4v+1)}_{\textsf{multiple of 2}}\end{split}\]</div>
+<p>There is a way to avoid all these different cases (now he tells us!). We can go back to the original contradicting condition and state that since <span class="math notranslate nohighlight">\(\sqrt{2}=a/b\)</span>, we want <span class="math notranslate nohighlight">\(a\neq b\)</span> and also we want at least one of them to be odd (so that they do not have 2 as a common factor). Then we show that both <span class="math notranslate nohighlight">\(a,b\)</span> are even numbers, which cannot be true since we just specified that one of them must be odd.</p>
+<p>How do we know to make this assumption about not sharing 2 as a common factor? By doing the <em>looong</em> analysis first, realizing that the secret is in fact to write <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> as a fraction where at least one part is odd, and then simplify the presentation of our proof. In other words, we still need to do the long haul but our presentation can be more elegant.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="algorithms.html" class="btn btn-neutral float-left" title="Algorithms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="induction.html" class="btn btn-neutral float-right" title="Mathematical Induction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Set operations &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363+460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Set operations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP460/notes/sets.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>A <em>set</em> is a collection of distinct objects. For example the colors <em>red, green,</em> and <em>blue</em>, together form the set <span class="math notranslate nohighlight">\(C=\{\text{red},\text{green},\text{blue}\}\)</span>. A set can also be defined in <em>set-builder</em> notation:</p>
+<div class="math notranslate nohighlight">
+\[B = \{ x|x^2-4=0\}\]</div>
+<p>The notation above means that <span class="math notranslate nohighlight">\(B\)</span> is a set with two elements only: <span class="math notranslate nohighlight">\(\{-2,2\}\)</span>.</p>
+<p>Sets can also be denoted by pattern, e.g., <span class="math notranslate nohighlight">\(A=\{1,3,5,\ldots, 1001\}\)</span> implies a set of odd numbers from  1 to 1001.</p>
+<p>A very important property of a set is its <em>cardinality</em>. The cardinality is the size of the set, a number that tells us how many elements are in the set. For the sets in the previous examples, the cardinalities are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|C|&amp;=3 \\
+|B|&amp;=2 \\
+|A|&amp;=501\end{split}\]</div>
+<p>Sets exhibit two interesting behaviors: first, order is irrelevant. For example, <span class="math notranslate nohighlight">\(\{1,2\}\)</span> is the same set as <span class="math notranslate nohighlight">\(\{2,1\}\)</span>. And second, duplicate elements count only once. For example, <span class="math notranslate nohighlight">\(\{1,2,2,2,2\}\)</span> and <span class="math notranslate nohighlight">\(\{1,1,2\}\)</span> have the same number of elements, i.e., their cardinality is 2. And they are also equal sets because they have identical elements.</p>
+<p>A set may be contained in another set. For example, set <span class="math notranslate nohighlight">\(D\)</span> below is contained in set <span class="math notranslate nohighlight">\(E\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}D &amp;= \{0,1\} \\
+E &amp;= \{0,1,2,3,4\}\end{split}\]</div>
+<p>When this happens, we say that <span class="math notranslate nohighlight">\(D\)</span> is a subset of <span class="math notranslate nohighlight">\(E\)</span>. The notation is <span class="math notranslate nohighlight">\(D\subset E\)</span>. Conversely, <span class="math notranslate nohighlight">\(E\)</span> is a superset of <span class="math notranslate nohighlight">\(D\)</span>, i.e., <span class="math notranslate nohighlight">\(E\supset D\)</span>.</p>
+<p>Sets are fundamental constructs that affect every branch of mathematics and science. In computer science, sets are of particular interest because they form the mathematical foundation for relational databases. Since the 1980s, these databases are the dominant paradigm for collecting, organizing, and processing information.</p>
+<section id="set-operations">
+<h1>Set operations<a class="headerlink" href="#set-operations" title="Link to this heading"></a></h1>
+<p>We looked at three set operations that can be very useful in the context of data analysis.</p>
+<section id="set-union">
+<h2>Set union<a class="headerlink" href="#set-union" title="Link to this heading"></a></h2>
+<p>The union of two sets is a set that contains all their elements. For example, if <span class="math notranslate nohighlight">\(S=\{1,3,5\}\)</span> and <span class="math notranslate nohighlight">\(T=\{2,4\}\)</span>, their union <span class="math notranslate nohighlight">\(S\cup T\)</span> is the set <span class="math notranslate nohighlight">\(\{1,2,3,4,5\}\)</span>. Here, <span class="math notranslate nohighlight">\(\cup\)</span> is the union operator.</p>
+</section>
+<section id="set-intersection">
+<h2>Set intersection<a class="headerlink" href="#set-intersection" title="Link to this heading"></a></h2>
+<p>The intersection of two sets is a set that contains only the elements that are common to both sets. For example, if <span class="math notranslate nohighlight">\(V=\{0,1,2,3,4\}\)</span> and <span class="math notranslate nohighlight">\(X=\{0,1\}\)</span>, their intersection <span class="math notranslate nohighlight">\(V\cap X\)</span> is the set <span class="math notranslate nohighlight">\(\{0,1\}\)</span>.</p>
+</section>
+<section id="cartesian-product">
+<h2>Cartesian product<a class="headerlink" href="#cartesian-product" title="Link to this heading"></a></h2>
+<p>The Cartesian product of two sets is a set that contains ordered pairs of all combinations of elements from the first set with elements of the second set. For example, if <span class="math notranslate nohighlight">\(Y=\{a,b\}\)</span> and <span class="math notranslate nohighlight">\(Z=\{c,d\}\)</span>, their Cartesian product is:</p>
+<div class="math notranslate nohighlight">
+\[Y\times Z = \{ (a,c), (a,d), (b,c), (b,d) \}\]</div>
+<p>Cartesian products contain ordered pairs (in case of a two sets product) or ordered tuples (in case of a three or more sets product). An ordered pair is a collection of two items whose order is significant, i.e., the pair <span class="math notranslate nohighlight">\((a,b)\)</span> is not the same as the pair <span class="math notranslate nohighlight">\((b,a)\)</span>.</p>
+</section>
+<section id="cardinalities-for-union-intersection-and-cartesian-product">
+<h2>Cardinalities for union, intersection, and Cartesian product<a class="headerlink" href="#cardinalities-for-union-intersection-and-cartesian-product" title="Link to this heading"></a></h2>
+<p>Given two sets <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(W\)</span>, the following rule (known as the <em>inclusion-exclusion</em> principle) applies:</p>
+<div class="math notranslate nohighlight">
+\[|R\cup W| = |R| + |W| - |R\cap W|\]</div>
+<p>The cardinality of their (Cartesian) product is: <span class="math notranslate nohighlight">\(|R\times W|=|R|\cdot |W|\)</span>.</p>
+</section>
+<section id="operations-with-three-or-more-sets">
+<h2>Operations with three or more sets<a class="headerlink" href="#operations-with-three-or-more-sets" title="Link to this heading"></a></h2>
+<p>The operations above can be generalized to three or more sets. For example, <span class="math notranslate nohighlight">\(A\cup B\cup C\)</span> is the union of three sets, i.e., a set that contains all the elements of sets <span class="math notranslate nohighlight">\(A, B\)</span> and <span class="math notranslate nohighlight">\(C\)</span>. Similarly, <span class="math notranslate nohighlight">\(A\cap B\cap C\)</span> is the set that contains only elements that are common on all three sets. And <span class="math notranslate nohighlight">\(A\times B\times C\)</span> is a set that contains ordered triplets with all possible combinations of elements from <span class="math notranslate nohighlight">\(A\)</span>, with elements from <span class="math notranslate nohighlight">\(B\)</span>, with elements from <span class="math notranslate nohighlight">\(C\)</span>. For example, if</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A &amp; = \{i,j\} \\
+B &amp; = \{m,n\} \\
+C &amp; = \{x,y\} \\\end{split}\]</div>
+<p>then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A\times B\times C = \{ &amp;(i,m,x), (i,m,y), \\
+                       &amp;(i,n,x), (i,n,y), \\
+                                               &amp;(j,m,x), (j,m,y), \\
+                                               &amp;(j,n,x), (j,n,y) \}\end{split}\]</div>
+<p>In general we can expect that <span class="math notranslate nohighlight">\(A\times B\times C = (A\times B)\times C = A\times (B\times C)\)</span>; <span class="math notranslate nohighlight">\(A\cup B\cup C=(A\cup B)\cup C=A\cup (B\cup C)\)</span>, etc.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

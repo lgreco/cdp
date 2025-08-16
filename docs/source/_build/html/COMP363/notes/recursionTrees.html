@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recursion trees and the idea behind the Master Theorem &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Recursion trees and the idea behind the <em>Master Theorem</em></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP363/notes/recursionTrees.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="recursion-trees-and-the-idea-behind-the-master-theorem">
+<h1>Recursion trees and the idea behind the <em>Master Theorem</em><a class="headerlink" href="#recursion-trees-and-the-idea-behind-the-master-theorem" title="Link to this heading"></a></h1>
+<p>A recursion tree is a helpful way to visualize the time performance of a recursive process.</p>
+<p>The figure below shows a simple recursive process. The initial problem has size <span class="math notranslate nohighlight">\(n=8\)</span>. We can solve it by dividing into two smaller problems, each one half of the problem. These divisions are applied repeatedly until the resulting smaller problems cannot be divided any further.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/simpleRecursion.png"><img alt="../../_images/simpleRecursion.png" src="../../_images/simpleRecursion.png" style="width: 396.9px; height: 271.5px;" /></a>
+<figcaption>
+<p><span class="caption-text">A simple recursion tree with a problem of initial size <span class="math notranslate nohighlight">\(n=8\)</span> divided, repeatedly, into subproblems each scaled by <span class="math notranslate nohighlight">\(1/2\)</span>.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Because we are splitting in half, it takes <span class="math notranslate nohighlight">\(\log_2 n\)</span> steps to end up with the smallest possible problems – those whose size is just 1. In this example, we chose an initial size of <span class="math notranslate nohighlight">\(n=8\)</span>. The numbers work out nicely because <span class="math notranslate nohighlight">\(\log_2 8 = 3\)</span>. It takes three steps to scale down the problem of size 8 to problems of size 1. The <em>hope</em> here is that by the time we get to the smallest problems, we can solve them more easily than the original problem.</p>
+<p>An example of such problem is the merge sort technique. It is relatively easy to merge two sorted arrays. And so our goal is to take a larger array, split it down to arrays with single elements which are, by definition sorted, and then start merging those sorted arrays into larger sorted arrays, and so on.</p>
+<p>Let’s assume that assemblying the solution of each problem of size <span class="math notranslate nohighlight">\(n\)</span> after we split it into smaller problems, takes <span class="math notranslate nohighlight">\(f(n)\)</span> steps. In the example of merge sort <span class="math notranslate nohighlight">\(f(n)=n\)</span>. That’s because it takes approximately <span class="math notranslate nohighlight">\(n\)</span> steps to merge two sorted arrays of size <span class="math notranslate nohighlight">\(n/2\)</span> each. There are problems that may take more (or, rarely, fewer) steps. So in general we assume that combining the smaller solutions requires <span class="math notranslate nohighlight">\(f(n)\)</span> steps.</p>
+<p>The time it takes to process the problem of size <span class="math notranslate nohighlight">\(n\)</span> is a function of <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[T(n) = 2T\left(\frac{n}{2}\right) + f(n)\]</div>
+<p>We already described the term <span class="math notranslate nohighlight">\(f(n)\)</span>, so let’s talk a bit about the term <span class="math notranslate nohighlight">\(2T(n/2)\)</span>. Splitting the problem of size <span class="math notranslate nohighlight">\(n\)</span> into two smaller problems of size <span class="math notranslate nohighlight">\(n/2\)</span> means that each of these problems will take <span class="math notranslate nohighlight">\(T(n/2)\)</span> time to process further. And because there are two of these smaller problems, they will take <span class="math notranslate nohighlight">\(2T(n/2)\)</span> in total.</p>
+<p>The issue now is that we don’t know what <span class="math notranslate nohighlight">\(T(n)\)</span> really looks like. It’s a function of <span class="math notranslate nohighlight">\(n\)</span> that is defined as the value of itself for a smaller argument (<span class="math notranslate nohighlight">\(n/2\)</span>). We are just kicking the can down the road:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(n) = 2&amp;T\left(\frac{n}{2}\right) + f(n) \\
+&amp;T\left(\frac{n}{2}\right) = 2T\left(\frac{n}{4}\right) + f\left(\frac{n}{2}\right),\ \text{etc}\end{split}\]</div>
+<p>But we can’t keep doing this for ever.</p>
+<p>Combining the solution of two smaller problems (of size, say, 4) to the solution of a larger problem, of size 8, will require <span class="math notranslate nohighlight">\(f(8)\)</span> steps.</p>
+<p>Combining the solutions of two smaller problems (of size 2) to the solution of a larger problem of size 4, will require <span class="math notranslate nohighlight">\(f(4)\)</span> steps. But we have two of those larger problems to solve, so it will take <span class="math notranslate nohighlight">\(f(4)+f(4)\)</span> steps.</p>
+<p>Combining the solutions of two smaller problems (of size 1) to the solution of a larger problem, of size 2, will require <span class="math notranslate nohighlight">\(f(2)\)</span> steps. But since there are four such problems to solve, we’ll need a total of <span class="math notranslate nohighlight">\(f(2)+f(2)+f(2)+f(2)\)</span> steps.</p>
+<p>Finally, when we get to solving those size <span class="math notranslate nohighlight">\(n=1\)</span> problems, there is no smaller subproblems to combine. At this level <span class="math notranslate nohighlight">\(f(1)\)</span> is the time to combine these uniquely simple problems. There are eight such problems, and the total time will be <span class="math notranslate nohighlight">\(f(1)+f(1)+f(1)+f(1)+f(1)+f(1)+f(1)+f(1)\)</span> steps.</p>
+<p>The total number of steps <span class="math notranslate nohighlight">\(T(n)\)</span> (using multiplications instead of additions to keep the equation short), is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(8) = f(8) + 2f(4) + 4f(2) + 8f(1) \\\end{split}\]</div>
+<p>We can write this sum in a compact form, which is more useful that writing <span class="math notranslate nohighlight">\(T(n)\)</span> in terms of <span class="math notranslate nohighlight">\(T(n/2)\)</span> as we attempted earlier.</p>
+<div class="math notranslate nohighlight">
+\[T(n) = \sum_{i=0}^L 2^i f\left(\frac{n}{2^i}\right)\]</div>
+<p>Of course we need to know the value of <span class="math notranslate nohighlight">\(L\)</span>: how many terms will there be in the sum. Here, <span class="math notranslate nohighlight">\(L=\log_28=3\)</span> and there are four terms to the sum (since we start from <span class="math notranslate nohighlight">\(i=0\)</span>). Why is <span class="math notranslate nohighlight">\(L=\log_2n\)</span>, the logarithm, base-2, of the size of the problem? Because if you keep splitting a problem of size <span class="math notranslate nohighlight">\(n\)</span> in half, it will take <span class="math notranslate nohighlight">\(\log_2n\)</span> steps to reduce the size to just 1.</p>
+<p>Let’s go back to the sum <span class="math notranslate nohighlight">\(f(8) + 2f(4) + 4f(2) + 8f(1)\)</span>. There are three special cases regarding the relation between its terms: the terms can get progressively smaller, the terms are relatively equal, or the terms can get progressively larger.</p>
+<section id="progressively-smaller-terms">
+<h2>Progressively smaller terms<a class="headerlink" href="#progressively-smaller-terms" title="Link to this heading"></a></h2>
+<p>If <span class="math notranslate nohighlight">\(f(8) &gt; 2f(4) &gt; 4f(2) &gt; 8f(1)\)</span>, it means that the <em>first</em> term dominates the sum. It is fair to assume that for sufficiently large values of <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(f(n)+2f(n/2)+\ldots\approx f(n)\)</span>. The heavy lifting of the recursive process that leads to this behavior is done at the top of the recursion tree. In this case, <span class="math notranslate nohighlight">\(f(n)\)</span> is the upper bound of the sum <span class="math notranslate nohighlight">\(T(n)\)</span>. In <em>big-Oh</em> notation, <span class="math notranslate nohighlight">\(T(n)\in\mathcal{O}(f(n))\)</span> or, more confusingly, <span class="math notranslate nohighlight">\(T(n)=\mathcal{O}(f(n))\)</span>. (It’s important to remember here that the symbol “=” before a complexity class like light big-oh does not mean “equals”, but that “the function to my left is in the complexity class to my right”).</p>
+</section>
+<section id="approximately-equal-terms">
+<h2>Approximately equal terms<a class="headerlink" href="#approximately-equal-terms" title="Link to this heading"></a></h2>
+<p>If <span class="math notranslate nohighlight">\(f(8) \approx 2f(4) \approx 4f(2) \approx 8f(1)\)</span>, it means that <em>each</em> term contributes about the same to the process. The sum can be simplified:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(8) &amp;= f(8) + 2f(4) + 4f(2) + 8f(1) \\
+&amp;\approx f(8)+f(8)+f(8)+f(8) \\
+&amp;=4f(8) \\
+&amp;=(1+3)\,f(8) \\
+&amp;=(1+\log_28)\,f(8) = (1+\log_2n)\,f(n)\end{split}\]</div>
+<p>For sufficiently large values of <span class="math notranslate nohighlight">\(n\)</span> we can assume that <span class="math notranslate nohighlight">\((1+\log_2n)\approx\log_2n\)</span> and therefore <span class="math notranslate nohighlight">\(T(n) \approx \log_2n\,f(n)\)</span>. In other words, <span class="math notranslate nohighlight">\(\log_2n\,f(n)\)</span> is the upper bound for the sum and therefore <span class="math notranslate nohighlight">\(T(n) \in\mathcal{O}(\log_{2}{n}\,f(n))\)</span>.</p>
+</section>
+<section id="progressively-larger-terms">
+<h2>Progressively larger terms<a class="headerlink" href="#progressively-larger-terms" title="Link to this heading"></a></h2>
+<p>If <span class="math notranslate nohighlight">\(f(8) &lt; 2f(4) &lt; 4f(2) &lt; 8f(1)\)</span>, it means that the <em>last</em> term dominates the sum. It is fair to assume that for sufficiently large values of <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(f(n)+2f(n/2)+\ldots\approx 2^{?}f(1)\)</span>. All we have to do now is to figure what is the mystery exponent <span class="math notranslate nohighlight">\(2^?\)</span>. In the example above, where each problem is scaled down by half, its takes <span class="math notranslate nohighlight">\(\log_2{n}\)</span> splits to go down to the smallest possible problems. From a single problem of size 8, we go down to 2 smaller problems of size 4, then size 2, finally size 1. At the end, there are <span class="math notranslate nohighlight">\(2^{\log_2{n}}\)</span> problems of size 1.</p>
+<p>If you remember your logarithms, you might notice that <span class="math notranslate nohighlight">\(2^{\log_2{n}} = n^{\log_22}=n\)</span>. Are we doing all this mathematical work to state the obvious? Certainly not. It just so happens that we are dividing the problem size by 2 <em>and</em> we are spawning 2 subproblems. In general we may be dividing the problem size by <span class="math notranslate nohighlight">\(c\)</span> and spawning <span class="math notranslate nohighlight">\(r\)</span> subproblems. In this case there are <span class="math notranslate nohighlight">\(n^{\log_cr}\)</span> problems of the smallest size. It so happens in the simple example we use, that <span class="math notranslate nohighlight">\(c=r=2\)</span> and therefore <span class="math notranslate nohighlight">\(\log_22=1\)</span>.</p>
+</section>
+<section id="master-theorem">
+<h2>Master Theorem<a class="headerlink" href="#master-theorem" title="Link to this heading"></a></h2>
+<p>Earlier, we saw that the if we are splitting a problem into two subproblems of half the size, the time required is:</p>
+<div class="math notranslate nohighlight">
+\[T(n) = 2T\left(\frac{n}{2}\right) + f(n)\]</div>
+<p>Others problems may have different solutions. For example, we may be creating 3 subproblems each one fifth of the size. In general, we may be creating <span class="math notranslate nohighlight">\(r\)</span> subproblems, scaled down by a factor of <span class="math notranslate nohighlight">\(1/c\)</span>. In this case we can write the recurrence relation – that’s what we call the formula that kicks the can down the road – as:</p>
+<div class="math notranslate nohighlight">
+\[T(n) = r T\left(\frac{n}{c}\right) + f(n)\]</div>
+<p>If we write <span class="math notranslate nohighlight">\(T(n/c)\)</span> in terms of the next step:</p>
+<div class="math notranslate nohighlight">
+\[T\left(\frac{n}{c}\right) = r T\left(\frac{n}{c^2}\right) + f\left(\frac{n}{c}\right)\]</div>
+<p>and we substitute this in the expression for <span class="math notranslate nohighlight">\(T(n)\)</span> we get:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(n) = &amp; r T\left(\frac{n}{c}\right) + f(n) \\ \\
+     = &amp; r\underbrace{ \left[r T\left(\frac{n}{c^2}\right) + f\left(\frac{n}{c}\right)\right]}_{T(n/c)}  + f(n) \\ \\
+     = &amp; r^2T\left(\frac{n}{c^2}\right) + rf\left(\frac{n}{c}\right) + f(n)\end{split}\]</div>
+<p>Next, if we write <span class="math notranslate nohighlight">\(T(n/c^2)\)</span> as <span class="math notranslate nohighlight">\(rT(n/c^3)+f(n/c^2)\)</span> and substitute above, we get:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}T(n) = &amp; r^2\underbrace{ \left[r T\left(\frac{n}{c^3}\right) + f(\frac{n}{c^2})\right]}_{T(n/c^2)} + rf\left(\frac{n}{c}\right) + f(n) \\ \\\end{split}\\\begin{split}= &amp; r^3T\left(\frac{n}{c^3}\right) + r^2f(\frac{n}{c^2}) + rf\left(\frac{n}{c}\right) + f(n) \\\end{split}\end{aligned}\end{align} \]</div>
+<p>Eventually, we will reach a value <span class="math notranslate nohighlight">\(L\)</span> for which <span class="math notranslate nohighlight">\(n/c^L=1\)</span>. At this point we cannot continue scaling the problem by <span class="math notranslate nohighlight">\(1/c\)</span>, i.e,. we cannot write that <span class="math notranslate nohighlight">\(T(1) = rT(1/c) +f(1)\)</span>. Instead, we reached the point where we can directly solve the problem of size 1 without kicking the proverbial can any further down the road. Here, <span class="math notranslate nohighlight">\(T(1)=f(1)\)</span>. And so, the sum for <span class="math notranslate nohighlight">\(T(n)\)</span> can be rewritten as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(n) &amp; =  r^L f\underbrace{\left(\frac{n}{c^L}\right)}_{T(n/c^L)=f(1)} + r^{L-1} f\left(\frac{n}{c^{L-1}}\right) +\ldots  + r^2 f(\frac{n}{c^2}) + r f\left(\frac{n}{c}\right) + f(n) \\ \\
+&amp; =  \sum_{i=0}^L r^i f\left(\frac{n}{c^i}\right) \\\end{split}\]</div>
+<p>For <span class="math notranslate nohighlight">\(i=0\)</span>, the first term of the sum is just <span class="math notranslate nohighlight">\(f(n)\)</span>. When <span class="math notranslate nohighlight">\(i=L\)</span>, the last term of the sum is <span class="math notranslate nohighlight">\(r^L f(n/c^L)\)</span>. Since <span class="math notranslate nohighlight">\(n/c^L=1\)</span>, the last term of the sum is just <span class="math notranslate nohighlight">\(r^Lf(1)\)</span>. As we saw earlier, these two terms are important. If the terms of the sum are decreasing monotonically, the first term <span class="math notranslate nohighlight">\(f(n)\)</span> is the dominant term. And if the terms of the sum increase monotonically, the last term <span class="math notranslate nohighlight">\(r^Lf(1)\)</span> dominates.</p>
+<p>If the terms of the sum are equal (or equal-ish) to each other, we can write:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(n) &amp; = &amp; \sum_{i=0}^L r^i f\left(\frac{n}{c^i}\right) \\
+     &amp; =\, &amp; (L+1) f(n) \\
+     &amp;\approx&amp; L f(n)\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(L\)</span> is the number of problem reductions we go before we reach the smallest possible problem size. If we start with a problem of size <span class="math notranslate nohighlight">\(n\)</span> and we keep reducing it into smaller problems scaled by <span class="math notranslate nohighlight">\(1/c\)</span>, it will take <span class="math notranslate nohighlight">\(\log_cn\)</span> reductions to get there. So <span class="math notranslate nohighlight">\(L=\log_cn\)</span>.</p>
+<p>Now that we have a fully parametric expression for the time required by the recursion</p>
+<div class="math notranslate nohighlight">
+\[T(n) = r T \left(\frac{n}{c}\right) + f(n)\]</div>
+<p>we can look for the conditions that cause the series <span class="math notranslate nohighlight">\(\sum_i r^if(n/c^i)\)</span> to converge, diverge, or remain the same.</p>
+<section id="sum-sum-r-if-n-c-i-has-decreasing-terms">
+<h3>Sum <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> has decreasing terms.<a class="headerlink" href="#sum-sum-r-if-n-c-i-has-decreasing-terms" title="Link to this heading"></a></h3>
+<p>This means that terms are getting progressively smaller. For example we expect the first two terms to be:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}r^0 f(n/c^0) &amp; &gt; r^1f(n/c^1) \Rightarrow \\
+f(n) &amp; &gt; rf(n/c)\end{split}\]</div>
+<p>Let’s assume that <span class="math notranslate nohighlight">\(f(n)=n^d\)</span>. We can rewrite the inequality as:</p>
+<div class="math notranslate nohighlight">
+\[n^d &gt; rn^d/c^d \Rightarrow 1 &gt; r/c^d \Rightarrow c^d &gt; r\]</div>
+<p>In other words, when <span class="math notranslate nohighlight">\(c^d&gt;r\)</span> the heavy lifting in the recurrence is done at the top of the tree.</p>
+</section>
+<section id="sum-sum-r-if-n-c-i-has-increasing-terms">
+<h3>Sum <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> has increasing terms<a class="headerlink" href="#sum-sum-r-if-n-c-i-has-increasing-terms" title="Link to this heading"></a></h3>
+<p>In this case, the terms get progressively larger. For example we expect the last two terms to be</p>
+<div class="math notranslate nohighlight">
+\[r^{L-1}f(n/c^{L-1}) &lt; r^Lf(n/c^L)\]</div>
+<p>Again, let’s assume that <span class="math notranslate nohighlight">\(f(n) = n^d\)</span> and replace it:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}r^{L-1}n^d/c^{d(L-1)} &amp; &lt; r^Ln^d/c^{dL} \Rightarrow \\
+r^{L-1}/c^{d(L-1)} &amp; &lt; r^L/c^{dL} \Rightarrow \\
+1/c^{d(L-1)} &amp; &lt; r/c^{dL} \Rightarrow \\
+c^d/c^{dL} &amp; &lt; r/c^{dL} \Rightarrow c^d &lt; r\end{split}\]</div>
+<p>When <span class="math notranslate nohighlight">\(c^d&lt;r\)</span>, the heavy lifting in the recurrence is done by the bottom of the tree (its leaves).</p>
+</section>
+<section id="sum-sum-r-if-n-c-i-has-equal-terms">
+<h3>Sum <span class="math notranslate nohighlight">\(\sum r^if(n/c^i)\)</span> has equal terms<a class="headerlink" href="#sum-sum-r-if-n-c-i-has-equal-terms" title="Link to this heading"></a></h3>
+<p>Finally, when each term of the series is the same, we can compare the first two terms:</p>
+<div class="math notranslate nohighlight">
+\[r^0f(n/c^0) = r^1f(n/c^1) \Rightarrow f(n) = rf(n/c)\]</div>
+<p>Substituting <span class="math notranslate nohighlight">\(f(n)=n^d\)</span> gives us:</p>
+<div class="math notranslate nohighlight">
+\[n^d = rn^d/c^d \Rightarrow 1 = r/c^d \Rightarrow c^d = r\]</div>
+<p>The condition for a steady series is, therefore, <span class="math notranslate nohighlight">\(c^d=r\)</span>.</p>
+</section>
+</section>
+<section id="summarize-our-findings">
+<h2>Summarize our findings<a class="headerlink" href="#summarize-our-findings" title="Link to this heading"></a></h2>
+<p>The performance of the recurrence</p>
+<div class="math notranslate nohighlight">
+\[T(n) = r T \left(\frac{n}{c}\right) + \underbrace{\mathcal{O}(n^d)}_{f(n)}\]</div>
+<p>can be found from</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(n) = \begin{cases}
+         \mathcal{O}\left( n^d\log n \right)\ &amp;\text{if}\ r=c^d \\
+         \mathcal{O}\left( n^d \right)\ &amp;\text{if}\ r &lt; c^d \\
+         \mathcal{O}\left( n^{\log_cr} \right)\ &amp;\text{if}\ r &gt; c^d \\
+       \end{cases}\end{split}\]</div>
+<p>The expression above is known as the <em>Master Theorem</em> for the standard recurrence.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conditional propositions &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Binary relations" href="binary_relations.html" />
+    <link rel="prev" title="Mathematical Induction" href="induction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 163 Discrete Structures</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../notes.html">Leo's notes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sets.html">Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html">Algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proofs.html">Proofs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="induction.html">Mathematical Induction</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Conditional propositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="binary_relations.html">Binary relations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poker.html">The probabilities of poker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../latex.html">LaTeX schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outlines.html">Outlines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 163 Discrete Structures</a></li>
+          <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
+      <li class="breadcrumb-item active">Conditional propositions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP163/notes/conditional_propositions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="conditional-propositions">
+<h1>Conditional propositions<a class="headerlink" href="#conditional-propositions" title="Link to this heading"></a></h1>
+<p>Conditional propositions can be confusing at the start. The conditional proposition involves two simple propositions <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span> in the following expression:</p>
+<div class="math notranslate nohighlight">
+\[p\rightarrow q\]</div>
+<p>The expression above means <span class="math notranslate nohighlight">\(p\)</span> implies <span class="math notranslate nohighlight">\(q\)</span>. The truth table for the conditional proposition is the following, where “T” stands for true and “F” for false.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(p\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(q\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(p\rightarrow q\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+</tr>
+</tbody>
+</table>
+<p>The behavior of the conditional proposition as shown above is a bit puzzling, especially when proposition <span class="math notranslate nohighlight">\(p\)</span> is false. The easiest way to illustrate the behavior of the conditional proposition is with a simple example. Consider the following two statements:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p&amp;:\textsf{born in Chicago} \\
+q&amp;:\textsf{born in Illinois}\end{split}\]</div>
+<p>Proposition <span class="math notranslate nohighlight">\(p\)</span> can be true or false, and so can <span class="math notranslate nohighlight">\(q\)</span>. All the possible combinations between <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span> are shown below, along with the value of the conditional proposition.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(p\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(q\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(p\rightarrow q\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>born in Chicago</p></td>
+<td><p>born in Illinois</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>born in Chicago</p></td>
+<td><p>not born in Illinois</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>not born in Chicago</p></td>
+<td><p>born in Illinois</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>not born in Chicago</p></td>
+<td><p>not born in Illinois</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+<p>Let’s analyse each case shown above.</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\left(\textsf{born in Chicago}\rightarrow\textsf{born in Illinois}\right)=\textsf{true}\)</span></p>
+<p>because Chicago is a city in Illinois, and a person born in the city is also born within the state.</p>
+</li>
+</ul>
+<hr class="docutils" />
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\left(\textsf{born in Chicago}\rightarrow\textsf{not born in Illinois}\right)=\textsf{false}\)</span></p>
+<p>because there is no way that a person born in Chicago is born outside the state of Illinois.</p>
+</li>
+</ul>
+<hr class="docutils" />
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\left(\textsf{not born in Chicago}\rightarrow\textsf{born in Illinois}\right)=\textsf{true}\)</span></p>
+<p>because there are other places in Illinois other than Chicago.</p>
+</li>
+</ul>
+<hr class="docutils" />
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\left(\textsf{not born in Chicago}\rightarrow\textsf{not born in Illinois}\right)=\textsf{true}\)</span></p>
+<p>because there are cities outside Illinois.</p>
+</li>
+</ul>
+<hr class="docutils" />
+<p>Here’s another example.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p&amp;: \textsf{visited the Eiffel tower} \\
+q&amp;: \textsf{traveled to France}\end{split}\]</div>
+<p>A person may travel to France without ever seeing the Eiffel tower, e.g. someone who flies and spends time only in Nice (<span class="math notranslate nohighlight">\((\neg p\rightarrow q)=\texttt{T}\)</span>.) A person who has not seen the tower maybe someone who has not traveled to France at all (<span class="math notranslate nohighlight">\((\neg p\rightarrow\neg q)=\texttt{T}\)</span>). But no person who has ever being to the Eiffel tower can claim they have not visited France (<span class="math notranslate nohighlight">\((p\rightarrow\neg q)=\texttt{F}\)</span>). Sorry, the Eiffel Tower in Las Vegas, or the various scaled models of the tower across other cities, are not acceptable alternatives!</p>
+<p>One more example is always helpful.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p&amp;: \textsf{major in computer science} \\
+q&amp;: \textsf{learn to program}\end{split}\]</div>
+<p>The case <span class="math notranslate nohighlight">\(p\rightarrow q = \texttt{T}\)</span> is straight forward. Every student of computer science learns to program. The  case <span class="math notranslate nohighlight">\(p\rightarrow \neg q=\texttt{F}\)</span> can be explained by the fact that there is no computer science student who can skip programming. The case <span class="math notranslate nohighlight">\(\neg p\rightarrow q=\texttt{T}\)</span> suggests that learning to program is not exclusive to computer science majors; physics majors for example, learn to program. Finally, the case   <span class="math notranslate nohighlight">\(\neg p\rightarrow \neg q=\texttt{T}\)</span> can be explained by the fact that there are many college majors that do not include programming.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="induction.html" class="btn btn-neutral float-left" title="Mathematical Induction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="binary_relations.html" class="btn btn-neutral float-right" title="Binary relations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

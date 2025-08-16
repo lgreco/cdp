@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iterative merge sort &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="The keyword this" href="this.html" />
+    <link rel="prev" title="Loops" href="loops.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 271 Data Structures I</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#reflection-statements">Reflection statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#midterm-reflection">Midterm reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#end-of-term-reflection">End-of-term reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#frequently-asked-questions-about-ungrading">Frequently Asked Questions about <em>Ungrading</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../notes.html">Leo's notes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="checklist.html">    Checklist prior to starting COMP271</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jfk.html">JFK Jr.'s Last Flight and What We Learnt From It</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cta.html">The CTA Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequentialTraversals.html">Traversing in sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reversal.html">The saga of reversing a linked list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="palindrome.html">Palindrome</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loops.html">Loops</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Iterative merge sort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="this.html">The keyword this</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 271 Data Structures I</a></li>
+          <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
+      <li class="breadcrumb-item active">Iterative merge sort</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP271/notes/iterativeMergeSort.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="iterative-merge-sort">
+<h1>Iterative merge sort<a class="headerlink" href="#iterative-merge-sort" title="Link to this heading"></a></h1>
+<p>For this problem, we have a method <code class="docutils literal notranslate"><span class="pre">merge</span></code> that takes two <em>sorted</em> arrays and merges them into an also sorted array. The strategy is to start with the smallest possible arrays as inputs to this method. These are arrays with one element only. Single-element arrays are, by definition, sorted. Merged pairs of single-element arrays are sorted arrays with two elements. Now we can take these 2-element arrays and merge them into 4-element arrays, and so on.</p>
+<p>Let’s work out this with an example, using an array with 8 elements:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="p">};</span>
+</pre></div>
+</div>
+<p>And for simplicity of notation, let’s assume that <code class="docutils literal notranslate"><span class="pre">arr[p:q]</span></code> is a subarray of <code class="docutils literal notranslate"><span class="pre">arr</span></code> from position <code class="docutils literal notranslate"><span class="pre">p</span></code> up to (but not including) position <code class="docutils literal notranslate"><span class="pre">q</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">arr[7:8]</span></code> will be <code class="docutils literal notranslate"><span class="pre">[38]</span></code>. (This is just a notation; in Java we must use a method to do that, for example <code class="docutils literal notranslate"><span class="pre">slice(arr,p,q)</span></code> as we did in the classroom; or use <code class="docutils literal notranslate"><span class="pre">Arrays.copyOfRange</span></code>.)</p>
+<p>Our first task is to partition <code class="docutils literal notranslate"><span class="pre">arr</span></code> into the following single element arrays:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">5</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">8</span><span class="o">]</span>
+<span class="c1">//  [44]      [11]      [34]      [21]      [13]      [12]      [10]      [38]</span>
+</pre></div>
+</div>
+<p>Now we can merge these arrays in pairs:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// merged result [11,44]</span>
+<span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// merged result [21,34]</span>
+<span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">5</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// merged result [12,13]</span>
+<span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">8</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// merged result [10,38]</span>
+</pre></div>
+</div>
+<p>The next step is to put these results back into array <code class="docutils literal notranslate"><span class="pre">arr</span></code>, which becomes:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="o">]</span><span class="w"> </span><span class="c1">// arr after putting merged results back in</span>
+</pre></div>
+</div>
+<p>At this point <code class="docutils literal notranslate"><span class="pre">arr</span></code> is far from sorted, but now we can partition it into sorted subarrays of size 2:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span><span class="w">    </span><span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span><span class="w">    </span><span class="n">arr</span><span class="o">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="o">]</span><span class="p">,</span><span class="w">    </span><span class="n">arr</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="o">]</span>
+<span class="c1">//  [11,44]      [21,34]      [12,13]      [10,38]</span>
+</pre></div>
+</div>
+<p>And we can pass these pairs of 2-element subarrays to our <code class="docutils literal notranslate"><span class="pre">merge</span></code> method:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// merged result [11,21,34,44]</span>
+<span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// merged result [10,12,13,38]</span>
+</pre></div>
+</div>
+<p>These results will go back into <code class="docutils literal notranslate"><span class="pre">arr</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="o">]</span><span class="w"> </span><span class="c1">// arr after putting merged results back in</span>
+</pre></div>
+</div>
+<p>The array is not quite sorted yet, but we are getting there. Because now it can be partitioned into two subarrays of size 4 that they are already sorted. This pair of 4-element arrays will go into the <code class="docutils literal notranslate"><span class="pre">merge</span></code> method:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">8</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// merged result [10,11,12,13,21,34,38,44]</span>
+</pre></div>
+</div>
+<p>The last step is to copy the results of the merge back to the array. And now <code class="docutils literal notranslate"><span class="pre">arr</span></code> is finally sorted.</p>
+<p>To summarize our partition and merge strategy:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// merge calls for subarray size = 1</span>
+
+<span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">//</span>
+<span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// Merging</span>
+<span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">5</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// 4 pairs</span>
+<span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">8</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">//</span>
+
+<span class="c1">// merge calls for subarray size = 2</span>
+
+<span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// Merging</span>
+<span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// 2 pairs</span>
+
+<span class="c1">// merge calls for subarray size = 4</span>
+
+<span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">8</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// Merging 1 pair</span>
+</pre></div>
+</div>
+<p>Is there a way to relate the subarray size to the number of pairs we must merge? Yes; first by recognizing that the largest subarray we can have in a pair is half the size of the array we attempt to sort. If the array has <span class="math notranslate nohighlight">\(n\)</span> elements – and we can assume that <span class="math notranslate nohighlight">\(n\)</span> is a power of 2 – then the subarray sizes will progress from 1 to <span class="math notranslate nohighlight">\(n/2\)</span>, doubling at each step, This can be accomplished with a for-loop:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The loop above will give the subarray sizes but we also need a way to determine where each subarray of a given size begins and ends. It helps to see how the size of subarrays determines the number of pairs we get, and where the subarrays in these pairs begin and end.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> size = 1      size = 2      size = 4
+ 4 pairs       2 pairs       1 pair
+
+begin:end     begin:end     begin:end
+
+    0:1           0:2           0:4
+    1:2           2:4           4:8
+
+    2:3           4:6
+    3:4           6:8
+
+    4:5
+    5:6
+
+    6:7
+    7:8
+</pre></div>
+</div>
+<p>Looking at the column for <code class="docutils literal notranslate"><span class="pre">size=1</span></code> above, we see a pattern for the pairs: the first pair begins at position 0, the second pair begins at position 2, the third at position 4, and the last pair at position 6. This seems like a loop along <code class="docutils literal notranslate"><span class="pre">arr</span></code> with step 2.</p>
+<p>Next, look at the column for <code class="docutils literal notranslate"><span class="pre">size=2</span></code>. The first pair begins at 0 and the second pair at 4. This seems like a loop along <code class="docutils literal notranslate"><span class="pre">arr</span></code> with step 4.</p>
+<p>And the last column, for <code class="docutils literal notranslate"><span class="pre">size=4</span></code> has only one pair that begins at 0. This seems like a loop along <code class="docutils literal notranslate"><span class="pre">arr</span></code> with step 8.</p>
+<p>In each case above, we need a loop along <code class="docutils literal notranslate"><span class="pre">arr</span></code>. The step of the loop changes as the size of subarrays changes. Specifically, the loop step is <code class="docutils literal notranslate"><span class="pre">2*size</span></code>. This implies that the loop along <code class="docutils literal notranslate"><span class="pre">arr</span></code> depends on the loop for <code class="docutils literal notranslate"><span class="pre">size</span></code> we wrote above, leading to the following nested loop snippet:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Are we there yet? Yes we are! We have a loop that tells us where each pair of a given size begins. Each part of the pair is an array with <code class="docutils literal notranslate"><span class="pre">size</span></code> number of elements. If the first part of the pair begins at position <code class="docutils literal notranslate"><span class="pre">i</span></code>, it corresponds to the array slice <code class="docutils literal notranslate"><span class="pre">arr[i:i+size]</span></code>. Its second part will begin at <code class="docutils literal notranslate"><span class="pre">i+size</span></code> and because it also have <code class="docutils literal notranslate"><span class="pre">size</span></code> elements it will end at <code class="docutils literal notranslate"><span class="pre">i+size+size</span></code>. The two subarrays in this pair, let’s call them <code class="docutils literal notranslate"><span class="pre">foo</span></code> and <code class="docutils literal notranslate"><span class="pre">bar</span></code> can be added to the code:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">size</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">+</span><span class="n">size</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">size</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Finally, we need to merge the pair <code class="docutils literal notranslate"><span class="pre">foo</span></code> and <code class="docutils literal notranslate"><span class="pre">bar</span></code> and place their merged result back to the array, at the positions where that pair came from.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">size</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">+</span><span class="n">size</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">size</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">merge</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span><span class="n">bar</span><span class="p">);</span><span class="w">  </span><span class="c1">// merge the pair</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">temp</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// copy the result of the merge back to input arr</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In the code snippets above we use the notation <code class="docutils literal notranslate"><span class="pre">arr[p:q]</span></code> to indicate a subarray of <code class="docutils literal notranslate"><span class="pre">arr</span></code> from position <code class="docutils literal notranslate"><span class="pre">p</span></code> up to but not including <code class="docutils literal notranslate"><span class="pre">q</span></code>. This notation does not work in Java, so we’ll need to replace it either with a our own method (e.g., <code class="docutils literal notranslate"><span class="pre">slice</span></code>) or use <code class="docutils literal notranslate"><span class="pre">Arrays.copyOfRange</span></code>. The final method is shown below.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">iterativeMergeSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slice</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="n">size</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slice</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">size</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">merge</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span><span class="n">bar</span><span class="p">);</span><span class="w">  </span><span class="c1">// merge the pair</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">temp</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// copy the result of the merge back to input arr</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The code above can be shortened a bit by omitting <code class="docutils literal notranslate"><span class="pre">foo</span></code> and <code class="docutils literal notranslate"><span class="pre">bar</span></code> and writing the slices directly into the merge method:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">iterativeMergeSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">merge</span><span class="p">(</span><span class="n">slice</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="n">size</span><span class="p">),</span><span class="w"> </span><span class="n">slice</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">size</span><span class="p">));</span><span class="w">  </span><span class="c1">// merge the pair</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">temp</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// copy the result of the merge back to input arr</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="loops.html" class="btn btn-neutral float-left" title="Loops" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="this.html" class="btn btn-neutral float-right" title="The keyword this" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

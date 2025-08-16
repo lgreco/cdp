@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Six weeks of Data Structures &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Six weeks of Data Structures</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP271/notes/first6weeks.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="six-weeks-of-data-structures">
+<h1>Six weeks of Data Structures<a class="headerlink" href="#six-weeks-of-data-structures" title="Link to this heading"></a></h1>
+<p>In the first six weeks of the course, we covered the following topics.</p>
+<section id="palindromes">
+<h2>Palindromes<a class="headerlink" href="#palindromes" title="Link to this heading"></a></h2>
+<p>The course started with writing <a class="reference external" href="https://github.com/lgreco/DataStructures/blob/master/ClassroomCoding/ThePalindromeSaga/src/StringUtilities.java">methods to determine if a string is a palindrome</a>. This was a refresher of basic programming techniques including class <a class="reference external" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html">String and some of its methods</a>. We looked at code efficiency asking ourselves if we really need a <em>for-loop</em> or are we better off with a <em>while-loop</em>.</p>
+</section>
+<section id="breaking-and-mending-arrays">
+<h2>Breaking and mending arrays<a class="headerlink" href="#breaking-and-mending-arrays" title="Link to this heading"></a></h2>
+<p>We put our palindrome method to test, scanning an actual book, and storing its palindromes to a String array. <a class="reference external" href="https://www.gutenberg.org/">Project Gutenberg</a> offers a great variety of books to use. We implemented a <cite>Scanner</cite> object to access the plain text of a book, via a web datastream (employing instances of classes <code class="docutils literal notranslate"><span class="pre">URL</span></code> and <code class="docutils literal notranslate"><span class="pre">InputStream</span></code> along the way), writing <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code> blocks to prevent embarrassing program failures. Soon we run into a major issue with arrays: we cannot resize them, and if we run out of space, bad things happen. And so we set off to design our own array storage mechanism, that changes its size on demand. The mechanisms we developed for <a class="reference external" href="https://github.com/lgreco/DataStructures/blob/master/TodaysLab/src/EnchantedArray.java">our Enchanted Arrays</a> are simpler but accurate representations of how Java’s <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">ArrayList class</a> works.</p>
+</section>
+<section id="binary-search-trees">
+<h2>Binary search trees<a class="headerlink" href="#binary-search-trees" title="Link to this heading"></a></h2>
+<p>Enchanted Arrays and ArrayLists are fine, but we run into another problem now that we have a size-on-demand storage mechanism: duplicates. We want every palindrome found in a book to be stored only once. And also we want to have them sorted alphabetically. Certainly we can write additional methods in our <code class="docutils literal notranslate"><span class="pre">EnchantedArrary</span></code> class to add only unique data; for example a method <code class="docutils literal notranslate"><span class="pre">addUnique(String</span> <span class="pre">palindrome)</span></code>. And another method to sort the palindromes alphabetically. Together, these two tasks may take some time to complete. Maybe resizeable arrays are not the right data structure for this problem. And so we turned our attention to the <em>binary search tree,</em> the computational equivalent of how we record and search for information in a printed dictionary or phone book.</p>
+<p>Here we discovered something <em>major:</em> <a class="reference external" href="https://github.com/lgreco/DataStructures/tree/master/Assignments/TreesAndNodes">cooperating classes</a>. A binary search tree comprises two classes: <code class="docutils literal notranslate"><span class="pre">Node</span></code> and <code class="docutils literal notranslate"><span class="pre">Tree</span></code>. A Tree object is built on a single Node object; we name that Node <code class="docutils literal notranslate"><span class="pre">root</span></code>. This root branches out to other nodes within the Tree object. A tree may have thousands of nodes branching out from its root and yet it still have only one field: that root. Pretty wild, huh?</p>
+</section>
+<section id="interfaces-and-inheritance">
+<h2>Interfaces and Inheritance<a class="headerlink" href="#interfaces-and-inheritance" title="Link to this heading"></a></h2>
+<p>Right after trees, it was a good time to take a different direction and talk about <a class="reference external" href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">interfaces</a> and <a class="reference external" href="https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html">inheritance</a>. We discussed how the interface is a contract for the methods a class will have and what they’ll do. The <code class="docutils literal notranslate"><span class="pre">String</span></code> class, for example, implements the <code class="docutils literal notranslate"><span class="pre">Comparable</span></code> interface. The class promises (and delivers) a method to compares its objects. The comparison is described by an integer number that the method returns. The method’s name is specified in the interface; in this case it is the <code class="docutils literal notranslate"><span class="pre">compareTo</span></code> method. We even implemented the <code class="docutils literal notranslate"><span class="pre">Comparable</span></code> interface on a <a class="reference external" href="https://github.com/lgreco/DataStructures/blob/master/LabSessions/The%20CTA/src/CTALocation.java">class that we wrote</a> for the next topic in our adventure.</p>
+</section>
+<section id="the-cta-project">
+<h2>The CTA project<a class="headerlink" href="#the-cta-project" title="Link to this heading"></a></h2>
+<p>The <a class="reference external" href="https://github.com/lgreco/DataStructures/tree/master/LabSessions/The%20CTA/src">CTA project</a> is the most ambitious adventure we had in the course so far. The project focuses on sequential data structures and introduces the concepts of <em>linked lists.</em> Prior to exploring linked lists however, we use the premises of this project to build our own inherited classes (<code class="docutils literal notranslate"><span class="pre">CTAStation</span></code> and <code class="docutils literal notranslate"><span class="pre">CTAStop</span></code> are extensions of <code class="docutils literal notranslate"><span class="pre">CTALocation</span></code>), implement the <code class="docutils literal notranslate"><span class="pre">Comparable</span></code> interface, and extract actual data from the Chicago Data Portal, tranform them, and load them into <code class="docutils literal notranslate"><span class="pre">CTAStation</span></code> objects held together in an ArrayList or even a humble array.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

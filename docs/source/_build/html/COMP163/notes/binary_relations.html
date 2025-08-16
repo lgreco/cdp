@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binary relations &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Probabilities of poker" href="poker.html" />
+    <link rel="prev" title="Conditional propositions" href="conditional_propositions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 163 Discrete Structures</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../notes.html">Leo's notes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sets.html">Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html">Algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proofs.html">Proofs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="induction.html">Mathematical Induction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conditional_propositions.html">Conditional propositions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Binary relations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poker.html">The probabilities of poker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../latex.html">LaTeX schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outlines.html">Outlines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 163 Discrete Structures</a></li>
+          <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
+      <li class="breadcrumb-item active">Binary relations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP163/notes/binary_relations.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="binary-relations">
+<h1>Binary relations<a class="headerlink" href="#binary-relations" title="Link to this heading"></a></h1>
+<p>A binary relation is a set that describes how two other sets relate to each other. For example, consider the following two sets with a few upper and lower case letters.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathcal{U} &amp;= \{ A, D, G, K, S\}\ \textrm{and}\\
+\mathcal{L} &amp;= \{ a, b, g, j, k\}\end{split}\]</div>
+<p>Their cartesian produce is the set</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathcal{U} \times \mathcal{L} = \{
+&amp;(A,a),\ &amp;(A,b),\ &amp;(A,g),\ &amp;(A,j),\ &amp;(A,k), \\
+&amp;(D,a),\ &amp;(D,b),\ &amp;(D,g),\ &amp;(D,j),\ &amp;(D,k), \\
+&amp;(G,a),\ &amp;(G,b),\ &amp;(G,g),\ &amp;(G,j),\ &amp;(G,k), \\
+&amp;(K,a),\ &amp;(K,b),\ &amp;(K,g),\ &amp;(K,j),\ &amp;(K,k), \\
+&amp;(S,a),\ &amp;(S,b),\ &amp;(S,g),\ &amp;(S,j),\ &amp;(S,k)
+\}\end{split}\]</div>
+<p>An interesting subset of <span class="math notranslate nohighlight">\(\mathcal{U} \times \mathcal{L}\)</span> above is the set</p>
+<div class="math notranslate nohighlight">
+\[R = \{ (A,a), (G,g), (K,k)\}\]</div>
+<p>How can we describe this set <span class="math notranslate nohighlight">\(R\)</span>? One suitable description is: <em>the pairs of upper and lower cases for letters in set</em> <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> <em>and set</em> <span class="math notranslate nohighlight">\(\mathcal{L}\)</span>. In other words, <span class="math notranslate nohighlight">\(R\)</span> <strong>embodies the relation</strong> that matches an upper case letter in set <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> with its corresponding letter in set <span class="math notranslate nohighlight">\(\mathcal{L}\)</span>.</p>
+<p>We notice that since <span class="math notranslate nohighlight">\(R \subset (\mathcal{U} \times \mathcal{L})\)</span>, the cardinality of <span class="math notranslate nohighlight">\(R\)</span> is less than the cardinality of the product, ie, <span class="math notranslate nohighlight">\(|R| &lt; |\mathcal{U} \times \mathcal{L}|\)</span>. In some way, a relationship between two sets looks at their Cartesian product (which can be a very large set) and finds smaller, more meaningful sets. Let’s illustrate this with a practical example.</p>
+<p>We’ll consider two sets of ordered pairs. First a set with a few students and their ID numbers.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S = \{\
+( 1001,\ &amp;\textrm{Frodo}), \\
+( 1002,\ &amp;\textrm{Galadriel}), \\
+( 1003,\ &amp;\textrm{Legolas})\
+\}\end{split}\]</div>
+<p>And second a set of courses with their course codes.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}C = \{\
+( \textrm{COMP 163},\ &amp;\textrm{Discrete Mathemagics}), \\
+( \textrm{COMP 271},\ &amp;\textrm{Data Scriptures}), \\
+( \textrm{COMP 363},\ &amp;\textrm{Algorunes})\
+\}\end{split}\]</div>
+<p>The Cartesian produce of these two sets will have 9 elements, as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S\times C = \{\
+(\ ( 1001,\ &amp;\textrm{Frodo}),\ &amp;( \textrm{COMP 163},\ &amp;\textrm{Discrete Mathemagics})\ ), \\
+(\ ( 1001,\ &amp;\textrm{Frodo}),\ &amp;( \textrm{COMP 271},\ &amp;\textrm{Data Scriptures})\ ), \\
+(\ ( 1001,\ &amp;\textrm{Frodo}),\ &amp;( \textrm{COMP 363},\ &amp;\textrm{Algorunes})\ ), \\
+(\ ( 1002,\ &amp;\textrm{Galadriel}),\ &amp;( \textrm{COMP 163},\ &amp;\textrm{Discrete Mathemagics})\ ), \\
+(\ ( 1002,\ &amp;\textrm{Galadriel}),\ &amp;( \textrm{COMP 271},\ &amp;\textrm{Data Scriptures})\ ), \\
+(\ ( 1002,\ &amp;\textrm{Galadriel}),\ &amp;( \textrm{COMP 363},\ &amp;\textrm{Algorunes})\ ), \\
+(\ ( 1003,\ &amp;\textrm{Legolas}),\ &amp;( \textrm{COMP 163},\ &amp;\textrm{Discrete Mathemagics})\ ), \\
+(\ ( 1003,\ &amp;\textrm{Legolas}),\ &amp;( \textrm{COMP 271},\ &amp;\textrm{Data Scriptures})\ ), \\
+(\ ( 1003,\ &amp;\textrm{Legolas}),\ &amp;( \textrm{COMP 363},\ &amp;\textrm{Algorunes})\ ) \
+\}\end{split}\]</div>
+<p>In the example above we have only 3 students and only 3 courses, and their Cartesian product is becoming unwieldy. Imagine a Cartesian product when you have 10,000 students and 2,000 courses. Things become more cumbersone when we throw in more details, e.g., in addition to student IDs and names we also track date of birth, gender, phone number, etc. The Cartesian product of such large sets, unmanageable in size as it becomes, contains some valuable information that we may wish to isolate and examine. What if we knew that Frodo is taking <em>Data Scriptures</em> this term, Galadriel is in <em>Discrete Mathemagics</em>  and <em>Algorunes</em>, and Legolas is sitting this term out, helping his family’s forestry business. This information is contained in a subset of <span class="math notranslate nohighlight">\(S\times C\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} R = \{\
+(\ ( 1001,\ &amp;\textrm{Frodo}),\ &amp;( \textrm{COMP 271},\ &amp;\textrm{Data Scriptures})\ ), \\
+(\ ( 1002,\ &amp;\textrm{Galadriel}),\ &amp;( \textrm{COMP 163},\ &amp;\textrm{Discrete Mathemagics})\ ), \\
+(\ ( 1002,\ &amp;\textrm{Galadriel}),\ &amp;( \textrm{COMP 363},\ &amp;\textrm{Algorunes})\ ) \
+\}\end{split}\]</div>
+<p>Set <span class="math notranslate nohighlight">\(R\)</span> above embodies a very useful relationship: the students enrolled in this term’s courses. We can write, a bit more formally,</p>
+<div class="math notranslate nohighlight">
+\[R = \{
+(s,c)\ |\ s\in S, c\in C,\ \textrm{and}\ s\ \textrm{enrolled in}\ c\ \textrm{this term}
+\}\]</div>
+<p>Or a little less formally, <span class="math notranslate nohighlight">\((s\ R\ c)\)</span> which reads “<span class="math notranslate nohighlight">\(s\)</span> relates to <span class="math notranslate nohighlight">\(c\)</span>”. In plain language, this particular relation beween elements of the set <span class="math notranslate nohighlight">\(S\)</span> and the set <span class="math notranslate nohighlight">\(C\)</span> is called <em>course registration</em>. And if we can guarantee that each student ID is unique and that each course code is also unique, we can compact <span class="math notranslate nohighlight">\(R\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} R = \{\
+(\ &amp;( 1001),\ &amp;( \textrm{COMP 271})\ ), \\
+(\ &amp;( 1002)\ &amp;( \textrm{COMP 163})\ ), \\
+(\ &amp;( 1002),\ &amp;( \textrm{COMP 363})\ ) \
+\}\end{split}\]</div>
+<p>With the guarantee of unique student IDs and course codes, the set <span class="math notranslate nohighlight">\(R\)</span> becomes a pillar of data management and engineering. In database parlance, <span class="math notranslate nohighlight">\(R\)</span> is now a <em>transaction</em> between student and course records.</p>
+<p>The simplicity of <span class="math notranslate nohighlight">\(R\)</span>’s compacted form is elusive. It contains everything we need to know without repeating extraneous data (such as duplicating student names or course titles). Admittedly, the contents are not easy to ready. For example <span class="math notranslate nohighlight">\(R\)</span>’s element <span class="math notranslate nohighlight">\((( 1002)\ ( \textrm{COMP 163})\)\)</span> means that the student whose ID is <code class="docutils literal notranslate"><span class="pre">1002</span></code> is enrolled in a course whose code is <code class="docutils literal notranslate"><span class="pre">COMP</span> <span class="pre">163</span></code>. But who is this student and what is that course? To obtain that information, we need to go over the set <span class="math notranslate nohighlight">\(S\)</span>, find the element whose ID component is <code class="docutils literal notranslate"><span class="pre">1002</span></code> and retrieve the student name. Similarly, for the course title, we need to look in set <span class="math notranslate nohighlight">\(C\)</span>, first the entry with code <code class="docutils literal notranslate"><span class="pre">COMP</span> <span class="pre">163</span></code> and retrieve the title.</p>
+<p>Thankfully we have a language to perform such queries.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">studentName</span><span class="p">,</span><span class="w"> </span><span class="k">C</span><span class="p">.</span><span class="n">courseTitle</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="k">C</span><span class="p">,</span><span class="w"> </span><span class="n">R</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">ID</span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">courseCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">C</span><span class="p">.</span><span class="n">courseCode</span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1002</span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="k">C</span><span class="p">.</span><span class="n">courseCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;COMP 163&#39;</span>
+</pre></div>
+</div>
+<p>The output of the query above would be <code class="docutils literal notranslate"><span class="pre">Galadriel</span> <span class="pre">Discrete</span> <span class="pre">Mathemagics</span></code>.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="conditional_propositions.html" class="btn btn-neutral float-left" title="Conditional propositions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="poker.html" class="btn btn-neutral float-right" title="Probabilities of poker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

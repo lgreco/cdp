@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algorithms &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Algorithms</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP141/notes/algorithms.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="algorithms">
+<h1>Algorithms<a class="headerlink" href="#algorithms" title="Link to this heading"></a></h1>
+<p>Algorithms are groups of instructions that perform specific tasks, like solving problems. These groups of well defined instructions receive their name from <a class="reference external" href="https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi">Muhammad ibn Musa al-Khwarizmi</a>, a Persian scholar who lived in the 8th century and developed methods for problem solving that are considered the first algorithms.</p>
+<p>Algorithms can be simple procedures, like the following one that finds the largest of two numbers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">largestOfTwo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="n">largest</span> <span class="o">&lt;--</span> <span class="n">a</span><span class="p">;</span>
+<span class="k">if</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">largest</span><span class="p">:</span>
+  <span class="n">largest</span> <span class="o">&lt;--</span> <span class="n">b</span><span class="p">;</span>
+<span class="k">return</span> <span class="n">largest</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>In the notation above, the left arrow <code class="docutils literal notranslate"><span class="pre">&lt;--</span></code>, is the assignment operator. <code class="docutils literal notranslate"><span class="pre">largest&lt;--a;</span></code> means that the value of <code class="docutils literal notranslate"><span class="pre">a</span></code> is assigned to the variable <code class="docutils literal notranslate"><span class="pre">largest</span></code>. This is similar to the algebraic operator <span class="math notranslate nohighlight">\(=\)</span>, but with the following caveat. In algebra, the expression <span class="math notranslate nohighlight">\(x=x+y\)</span> implies that <span class="math notranslate nohighlight">\(y=0\)</span>. In algorithms (and in programming), the expression <code class="docutils literal notranslate"><span class="pre">x=x+y</span></code> (or <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;--</span> <span class="pre">x+y</span></code>) means that we first evaluate the right part and then we assign its value to the left part.</p>
+<a class="reference internal image-reference" href="../../_images/max.png"><img alt="../../_images/max.png" class="align-right" src="../../_images/max.png" style="height: 300px;" /></a>
+<p>Algorithms are described visually, as flow charts shown to the right, or verbally, as shown above. The verbal description of algorithms is called <strong>pseudocode.</strong> In many ways pseudocode resembles a computer program but without the syntax rigor of programming languages. Because of that resemblance, pseudocode is usually a better way to express an algorithm than a flow chart.</p>
+<p>Algorithms can be more complex, like the following one that finds the largest number in a sequence <span class="math notranslate nohighlight">\(s(n)\)</span> of <span class="math notranslate nohighlight">\(n\)</span> numbers, <span class="math notranslate nohighlight">\(s_1, s_2, \ldots, s_n\)</span>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">largestInSequence</span> <span class="p">(</span> <span class="n">s</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">largest</span> <span class="o">&lt;--</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">i</span> <span class="o">&lt;--</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">largest</span><span class="p">:</span>
+    <span class="n">largest</span> <span class="o">&lt;--</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+  <span class="n">i</span> <span class="o">&lt;--</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="n">largest</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>We devise algorithms to solve problems of various difficulty. Finding the largest of two numbers, or the largest of a sequence of numbers, are relatively easy problems to solve. As the problem difficulty increases, our task is not just find any algorithm to solve it but the most efficient algorithm to do so. Consider, for example, the following algorithm that solves the quadratic equation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solveQuadratic</span> <span class="p">(</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="p">)</span>
+
+<span class="k">if</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">&lt;</span><span class="mi">0</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s2">&quot;No real solutions&quot;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="n">x1</span> <span class="o">&lt;--</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="o">-</span><span class="n">SQRT</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+  <span class="n">x2</span> <span class="o">&lt;--</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="o">+</span><span class="n">SQRT</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The algorithm does solve the problem, but it performs repetitive tasks. For example, the quantity <span class="math notranslate nohighlight">\(b^2-4ac\)</span> is evaluated three times. The square root <span class="math notranslate nohighlight">\(\sqrt{b^2-4ac}\)</span> is evaluated twice. These repetitions can be avoided as follows.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solveQuadratic</span> <span class="p">(</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="p">)</span>
+
+<span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span>
+<span class="k">if</span> <span class="n">delta</span><span class="o">&lt;</span><span class="mi">0</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s2">&quot;No real solutions&quot;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="n">sqrtDelta</span> <span class="o">&lt;--</span> <span class="n">SQRT</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">);</span>
+  <span class="n">x1</span> <span class="o">&lt;--</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="o">-</span><span class="n">sqrtDelta</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+  <span class="n">x2</span> <span class="o">&lt;--</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="o">+</span><span class="n">sqrtDelta</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Further optimization is possible:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solveQuadratic</span> <span class="p">(</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="p">)</span>
+
+<span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span>
+<span class="k">if</span> <span class="n">delta</span><span class="o">&lt;</span><span class="mi">0</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s2">&quot;No real solutions&quot;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="n">e</span> <span class="o">&lt;--</span> <span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+  <span class="n">g</span> <span class="o">&lt;--</span> <span class="n">SQRT</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+  <span class="n">x1</span> <span class="o">&lt;--</span> <span class="n">e</span><span class="o">-</span><span class="n">g</span><span class="p">;</span>
+  <span class="n">x2</span> <span class="o">&lt;--</span> <span class="n">e</span><span class="o">+</span><span class="n">g</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>One final optimization can be achieved by removing the duplicate operation involving <span class="math notranslate nohighlight">\(2a\)</span>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solveQuadratic</span> <span class="p">(</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="p">)</span>
+
+<span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span>
+<span class="k">if</span> <span class="n">delta</span><span class="o">&lt;</span><span class="mi">0</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s2">&quot;No real solutions&quot;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="n">f</span> <span class="o">&lt;--</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">;</span>
+  <span class="n">e</span> <span class="o">&lt;--</span> <span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="n">f</span><span class="p">;</span>
+  <span class="n">g</span> <span class="o">&lt;--</span> <span class="n">SQRT</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">/</span><span class="n">f</span><span class="p">;</span>
+  <span class="n">x1</span> <span class="o">&lt;--</span> <span class="n">e</span><span class="o">-</span><span class="n">g</span><span class="p">;</span>
+  <span class="n">x2</span> <span class="o">&lt;--</span> <span class="n">e</span><span class="o">+</span><span class="n">g</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Algorithms are characterized by their complexity, but also by their correctness, and their ability to terminate. The complexity tells us what resources the algorithm requires, e.g., how much time (or memory, or both) will it take to complete its tasks. The correctness assures us that the algorithm solves every variance of the problem it was designed for. And the ability to terminate (the finiteness) is a guarantee that the algorithm will not run for ever.</p>
+<p>Consider the following example of an algorithm that approximates the square root of a number.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squareRoot</span> <span class="p">(</span> <span class="n">n</span><span class="p">,</span> <span class="n">epsilon</span> <span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="n">n</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">x</span> <span class="o">&lt;--</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="k">while</span> <span class="p">(</span> <span class="n">diff</span> <span class="o">&gt;</span> <span class="n">epsilon</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">nextx</span> <span class="o">&lt;--</span> <span class="p">(</span> <span class="n">x</span> <span class="o">+</span> <span class="n">n</span><span class="o">/</span><span class="n">x</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">diff</span> <span class="o">&lt;--</span> <span class="n">absolute_value_of</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">nextx</span><span class="p">);</span>
+        <span class="n">x</span> <span class="o">&lt;--</span> <span class="n">nextx</span><span class="p">;</span>
+      <span class="p">}</span> <span class="o">//</span> <span class="k">while</span>
+<span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span> <span class="o">//</span> <span class="k">if</span>
+</pre></div>
+</div>
+<p>The parameter <code class="docutils literal notranslate"><span class="pre">epsilon</span></code> is a measure of convergence. As successive values of <code class="docutils literal notranslate"><span class="pre">nextx</span></code> are computed, we measure how close they are to each other. If they are sufficiently close, we consider the approximation good enough and we terminate the algorithm. Usually for values of epsilon around <span class="math notranslate nohighlight">\(0.00001\)</span>, the algorithm above yields very accurate results. For example, the following table shows the progression as we try to compute <span class="math notranslate nohighlight">\(\sqrt{10}\)</span>:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Term</strong>  (<span class="math notranslate nohighlight">\(n=10\)</span>)</p></td>
+<td><p><strong>Value</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">diff</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_0\)</span></p></td>
+<td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(|x_{k+1}-x_k|\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_1=(x_0+n/x_0)/2\)</span></p></td>
+<td><p>5.5</p></td>
+<td><p>4.5</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_2=(x_1+n/x_1)/2`\)</span></p></td>
+<td><p>3.659090909</p></td>
+<td><p>1.840909091</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_3=(x_2+n/x_2)/2`\)</span></p></td>
+<td><p>3.196005082</p></td>
+<td><p>0.4630858272</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_4=(x_3+n/x_3)/2`\)</span></p></td>
+<td><p>3.162455623</p></td>
+<td><p>0.03354945907</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_5=(x_4+n/x_4)/2`\)</span></p></td>
+<td><p>3.162277665</p></td>
+<td><p>0.0001779576282</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x_6=(x_5+n/x_5)/2`\)</span></p></td>
+<td><p>3.16227766</p></td>
+<td><p>0.000000005007295911</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x_7=(x_6+n/x_6)/2`\)</span></p></td>
+<td><p>3.16227766</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>After only six iterations, the algorithm converges within less that one thousandth.
+The difference between <span class="math notranslate nohighlight">\(x-5\)</span> and <span class="math notranslate nohighlight">\(x_4\)</span> is less than <span class="math notranslate nohighlight">\(0.001\)</span>.
+After two more iterations, the algorithm converges within 0, i.e., finds the actual value of <span class="math notranslate nohighlight">\(\sqrt{10}\)</span>.
+In fact, the algorithm works nicely for large numbers too.
+For example, it takes 70 iterations to compute the following root with a convergence (<code class="docutils literal notranslate"><span class="pre">epsilon</span></code>) value of <span class="math notranslate nohighlight">\(10^{-10}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\sqrt{948923748327487287482785776826574129023}\]</div>
+<p>In some cases, when we are not sure that our algorithm will terminate after a finite number of steps, we introduce an artificial mechanism to stop it. For example, after a few experiments with the square root algorithm above, we may come to the conclusion that the algorithm stops after 500 iterations, i.e., it terminates successfully. So, if the algorithm takes more than 1000 iterations, it either works on a difficult number that we have not thought of, or there is an error that creates an infinite loop and the algorithm will not stop. To prevent such infinite loop, we modify the square root algorithm as follows: we introduce an iteration counter, and when that counter exceeds a large value, we force the algorithm to end.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squareRoot</span> <span class="p">(</span> <span class="n">n</span><span class="p">,</span> <span class="n">epsilon</span> <span class="p">)</span>
+
+
+<span class="k">if</span> <span class="p">(</span> <span class="n">n</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">RUNAWAY</span> <span class="o">&lt;--</span> <span class="mi">5000</span><span class="p">;</span>
+  <span class="n">counter</span> <span class="o">&lt;--</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">x</span> <span class="o">&lt;--</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="k">while</span> <span class="p">(</span> <span class="n">diff</span> <span class="o">&gt;</span> <span class="n">epsilon</span> <span class="n">AND</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="n">RUNAWAY</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">nextx</span> <span class="o">&lt;--</span> <span class="p">(</span> <span class="n">x</span> <span class="o">+</span> <span class="n">n</span><span class="o">/</span><span class="n">x</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">diff</span> <span class="o">&lt;--</span> <span class="n">absolute_value_of</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">nextx</span><span class="p">);</span>
+        <span class="n">x</span> <span class="o">&lt;--</span> <span class="n">nextx</span><span class="p">;</span>
+        <span class="n">counter</span> <span class="o">&lt;--</span> <span class="n">counter</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+      <span class="p">}</span> <span class="o">//</span> <span class="k">while</span>
+<span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span> <span class="o">//</span> <span class="k">if</span>
+</pre></div>
+</div>
+<p>The algorithm above will terminate after 5000 iterations. But now we cannot guarantee its correctness. Because if we are computing a square root that might have required 5050 iterations, we stop the algorithm 50 iterations short of the answer. There is no way to tell if the value of <span class="math notranslate nohighlight">\(x\)</span> that the algorithm returns has met the converge criterion or it’s because we reached the iteration limit (set by <code class="docutils literal notranslate"><span class="pre">RUNAWAY</span></code>).</p>
+<p>It is left as an exercise, to modify the algorithm above in such as way to inform us how it terminated: either successfully by meeting the convergence criterion (<code class="docutils literal notranslate"><span class="pre">diff&lt;=epsilon</span></code>) or abruptly because it exceeded the allowed number of iterations (<code class="docutils literal notranslate"><span class="pre">counter&gt;=RUNAWAY</span></code>).</p>
+<section id="sorting-algorithms">
+<h2>Sorting algorithms<a class="headerlink" href="#sorting-algorithms" title="Link to this heading"></a></h2>
+</section>
+<section id="performance">
+<h2>Performance<a class="headerlink" href="#performance" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

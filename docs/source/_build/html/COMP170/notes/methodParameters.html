@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Method parameters &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Method parameters</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP170/notes/methodParameters.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="method-parameters">
+<h1>Method parameters<a class="headerlink" href="#method-parameters" title="Link to this heading"></a></h1>
+<p>For one of the assignments, we developed a class called <code class="docutils literal notranslate"><span class="pre">Window</span></code> with methods that drew the following pattern:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+===+===+</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>
+<span class="o">+===+===+</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>
+<span class="o">+===+===+</span>
+</pre></div>
+</div>
+<p>The class (<a class="reference external" href="https://github.com/lgreco/IntroProgramming/blob/main/Loops/src/Window.java">available on Github</a>) uses methods <code class="docutils literal notranslate"><span class="pre">frame</span></code> and <code class="docutils literal notranslate"><span class="pre">glassPanes</span></code> to draw the <code class="docutils literal notranslate"><span class="pre">+===+===+</span></code> and <code class="docutils literal notranslate"><span class="pre">|</span>&#160;&#160; <span class="pre">|</span>&#160;&#160; <span class="pre">|</span></code> parts respectively. These methods rely on class constants that determine the <code class="docutils literal notranslate"><span class="pre">SIZE</span></code> of the shape (that looks like a <a class="reference external" href="https://en.wikipedia.org/wiki/Sash_window">sash window</a>), and the symbols used to draw it. Character <code class="docutils literal notranslate"><span class="pre">+</span></code> is used as the <code class="docutils literal notranslate"><span class="pre">CORNER</span></code> element, <code class="docutils literal notranslate"><span class="pre">=</span></code> as the <code class="docutils literal notranslate"><span class="pre">HORIZONTAL</span></code> element, <code class="docutils literal notranslate"><span class="pre">|</span></code> as <code class="docutils literal notranslate"><span class="pre">VERTICAL</span></code> and the space as the <code class="docutils literal notranslate"><span class="pre">GLASS</span></code> element. Using these constants we developed loops based on the following observations.</p>
+<p>The horizontal frame is derived by the following pattern:</p>
+<div class="math notranslate nohighlight">
+\[\left( 2\ \text{times}\ \left( \texttt{CORNER}\ \text{followed by}\ \texttt{SIZE}\ \text{times}\ \texttt{HORIZONTAL} \right)\right) \  \text{followed by}\  \texttt{CORNER}\]</div>
+<p>while the glassy part is generated by the pattern:</p>
+<div class="math notranslate nohighlight">
+\[\left( 2\ \text{times}\ \left( \texttt{VERTICAL}\ \text{followed by}\ \texttt{SIZE}\ \text{times}\ \texttt{GLASS} \right)\right) \  \text{followed by}\  \texttt{VERTICAL}\]</div>
+<p>There is similarity in these two patterns. Basically they are following the same formula:</p>
+<div class="math notranslate nohighlight">
+\[\left( 2\ \text{times}\ \left( \texttt{C1}\ \text{followed by}\ \texttt{SIZE}\ \text{times}\ \texttt{C2} \right)\right) \  \text{followed by}\  \texttt{C1}\]</div>
+<p>All that changes is the value of characters <code class="docutils literal notranslate"><span class="pre">C1</span></code> and <code class="docutils literal notranslate"><span class="pre">C2</span></code>. These similar patterns are also evident in the code highlighted below.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">frame</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pane</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">pane</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">PANES</span><span class="p">;</span><span class="w"> </span><span class="n">pane</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">CORNER</span><span class="p">);</span>
+</span><span class="hll"><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">SIZE</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">HORIZONTAL</span><span class="p">);</span>
+</span><span class="hll"><span class="w">      </span><span class="p">}</span>
+</span><span class="hll"><span class="w">  </span><span class="p">}</span>
+</span><span class="hll"><span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">CORNER</span><span class="p">);</span>
+</span><span class="p">}</span>
+
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">glassPanes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">SIZE</span><span class="p">;</span><span class="w"> </span><span class="n">height</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pane</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">pane</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">PANES</span><span class="p">;</span><span class="w"> </span><span class="n">pane</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">VERTICAL</span><span class="p">);</span>
+</span><span class="hll"><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">SIZE</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">GLASS</span><span class="p">);</span>
+</span><span class="hll"><span class="w">      </span><span class="p">}</span>
+</span><span class="hll"><span class="w">    </span><span class="p">}</span>
+</span><span class="hll"><span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">VERTICAL</span><span class="p">);</span>
+</span><span class="hll"><span class="w">  </span><span class="p">}</span>
+</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>In both methods above, the outer loop runs <code class="docutils literal notranslate"><span class="pre">PANES</span></code> times. The inner loop runs <code class="docutils literal notranslate"><span class="pre">SIZE</span></code> times. The only difference between them is the characters printed. Such similarity, in fact duplication of code, is an opportunity to simplify things. Simplification, here, means extracting the duplicate code in a separate method, and replace the code with that new method. The new method must recognize what characters we want to print. We provide that information as arguments when we call the method. The need for these arguments is specified in the method header as parameters.</p>
+<p>Let’s call the new method, that will simplify the code above, <code class="docutils literal notranslate"><span class="pre">printCharacters</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printCharacters</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">C1</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">C2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pane</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">pane</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">PANES</span><span class="p">;</span><span class="w"> </span><span class="n">pane</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">C1</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">SIZE</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">C2</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">C1</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Using this new method, we can simplify methods <code class="docutils literal notranslate"><span class="pre">frame</span></code> and <code class="docutils literal notranslate"><span class="pre">glassPanes</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">frame</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">  </span><span class="n">printCharacters</span><span class="p">(</span><span class="n">CORNER</span><span class="p">,</span><span class="w"> </span><span class="n">HORIZONTAL</span><span class="p">);</span>
+</span><span class="p">}</span>
+
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">glassPanes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">SIZE</span><span class="p">;</span><span class="w"> </span><span class="n">height</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="n">printCharacters</span><span class="p">(</span><span class="n">VERTICAL</span><span class="p">,</span><span class="w"> </span><span class="n">GLASS</span><span class="p">);</span>
+</span><span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>So far we have been writing methods with no parameters, i.e., the name of the method was followed by an empty pair of parentheses. Only the main method had parameters passed to it. That was not our choice but a language requirement. Now, we begin to write methods, like <code class="docutils literal notranslate"><span class="pre">printCharacters</span></code> above that accept parameters. These parameters are listed in the method header. A <em>method parameter</em> is defined by its data type and an variable name. A method can have multiple parameters. Good design practices suggest a maximum of 5-10 parameters.</p>
+<p>When we use a parametric method, we provide values that match the position and the data type of its parameters. These values are called the arguments of the call (to the method).</p>
+<p>In the example above, the parameters of <code class="docutils literal notranslate"><span class="pre">printCharacters</span></code> are <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">C1</span></code> and <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">C2</span></code>. When the method is called from within <code class="docutils literal notranslate"><span class="pre">frame</span></code>, it is given the arguments <code class="docutils literal notranslate"><span class="pre">CORNER</span></code> and <code class="docutils literal notranslate"><span class="pre">FRAME</span></code>. These arguments take the place of <code class="docutils literal notranslate"><span class="pre">C1</span></code> and <code class="docutils literal notranslate"><span class="pre">C2</span></code> respectively, as the called method is executed.</p>
+<p>The name of the method together with the number of its parameters, their data types, and their order or appearance constitute the <strong>signature of the method.</strong> In the examples above, the signatures are as follows:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>method name</p></td>
+<td><p>number of parameters</p></td>
+<td><p>types and order of appearance</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">frame</span></code></p></td>
+<td><p>0</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">glassPanes</span></code></p></td>
+<td><p>0</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">printCharacters</span></code></p></td>
+<td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">char</span></code>, <code class="docutils literal notranslate"><span class="pre">char</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

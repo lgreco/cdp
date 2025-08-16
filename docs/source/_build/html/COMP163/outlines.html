@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outlines &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="COMP 170 Introduction to Java Programming" href="../COMP170/introduction.html" />
+    <link rel="prev" title="LaTeX in COMP 163" href="latex.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="introduction.html">COMP 163 Discrete Structures</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reading.html">Reading material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes.html">Leo's notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="latex.html">LaTeX schedule</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Outlines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sets">Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#direct-proofs">Direct proofs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#proof-by-counterexample">Proof by counterexample</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-mistakes-in-proofs">Common mistakes in proofs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#indirect-proofs">Indirect proofs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#propositional-logic">Propositional logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#from-simple-logic-functions-to-biconditional-propositions">From simple logic functions to biconditional propositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#binary-relations-br">Binary relations (BR)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#induction">Induction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="introduction.html">COMP 163 Discrete Structures</a></li>
+      <li class="breadcrumb-item active">Outlines</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/COMP163/outlines.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="outlines">
+<h1>Outlines<a class="headerlink" href="#outlines" title="Link to this heading"></a></h1>
+<section id="sets">
+<h2>Sets<a class="headerlink" href="#sets" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Notion of set as a collection of items with some relevance to each other. No order. No duplicates.</p></li>
+<li><p>Explicit and implicit definition of sets. How to evaluate set membership conditions (ie how to read and apply a condition like <span class="math notranslate nohighlight">\(\{x|x^2-4=0\}\)</span>).</p></li>
+<li><p>Special sets: <span class="math notranslate nohighlight">\(\mathbb{Z, Q, R}\)</span>. Also <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> versus <span class="math notranslate nohighlight">\(\mathbb{N}_0\)</span>.</p></li>
+<li><p>Cardinality.</p></li>
+<li><p>Equal sets. <span class="math notranslate nohighlight">\(A=B\Leftrightarrow \forall x\in A, x\in B\ \textrm{and}\ \forall x\in B, x\in A\)</span>. Universal quantifier.</p></li>
+<li><p>Subsets and proper subsets. Powerset. <span class="math notranslate nohighlight">\(|\mathcal{P}(A)|=2^{|A|}\)</span>.</p></li>
+<li><p>Union. <span class="math notranslate nohighlight">\(A\cup B = \{x|x\in A\ \textrm{or}\ x\in B\}\)</span>. Examples: if <span class="math notranslate nohighlight">\(A=\{x|x \textrm{is a vowel}\}, B=\{x|x \textrm{is a consonant}\}\)</span>, then what is <span class="math notranslate nohighlight">\(A\cup B\)</span>? If <span class="math notranslate nohighlight">\(A=\{x|x \textrm{resident of IL}\}\)</span> and <span class="math notranslate nohighlight">\(B=\{x|x \textrm{resident of WI}\}\)</span>, then describe <span class="math notranslate nohighlight">\(A\cup B\)</span>.</p></li>
+<li><p>Intersection. <span class="math notranslate nohighlight">\(A\cap B = \{x|x\in A\ \textrm{and}\ x\in B\}\)</span>. Examples. If <span class="math notranslate nohighlight">\(A=\{x|x\ \textrm{actor in ST:TOS}\}\)</span> and <span class="math notranslate nohighlight">\(B=\{x|x\ \textrm{actor in ST:TNG}\}\)</span>, what is <span class="math notranslate nohighlight">\(A\cap B\)</span> (cross overs from TOS to TNG include Majel Barrett, Diana Muldaur, DeForest Kelley, Mark Lenard, Leonard Nimoy, and James Doohan).</p></li>
+<li><p>Venn diagrams.</p></li>
+<li><p>Cartesian product. <span class="math notranslate nohighlight">\(A\times B\)</span>: set of all ordered pairs <span class="math notranslate nohighlight">\((x,y): x\in A\ \textrm{and}\ y\in B\)</span>. Focus on ordered pairs, <span class="math notranslate nohighlight">\((a,b) \neq (b,a)\)</span> and <span class="math notranslate nohighlight">\((a,b) = (c,d) \Leftrightarrow a=c\ \textrm{and}\ b=d\)</span>. Examples. <span class="math notranslate nohighlight">\(F=\{\textrm{John},\ \textrm{Jane}\}\)</span>, <span class="math notranslate nohighlight">\(L=\{\textrm{Smith},\ \textrm{Taylor}\}\)</span> then <span class="math notranslate nohighlight">\(F\times L = \{\textrm{(John,Smith)},\ \textrm{(John,Taylor)},\ \textrm{(Jane,Smith)},\ \textrm{(Jane,Taylor)} \}\)</span>. Cardinality of a product <span class="math notranslate nohighlight">\(|F\times L| = |F|\times |L|\)</span>; and in general: <span class="math notranslate nohighlight">\(|A\times B\times C\times \ldots| = |A|\times |B|\times |C|\times \ldots\)</span>.</p></li>
+<li><p>Cartesian products as the basis of database queries; the join operation: combine seemingly irrelevant sets based on some common property.</p></li>
+</ul>
+</section>
+<section id="direct-proofs">
+<h2>Direct proofs<a class="headerlink" href="#direct-proofs" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Mathematical systems: axioms, definitions, undefined terms. Theorems, lemmas, corollaries. Examples.</p></li>
+<li><p>Direct proofs.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\textrm{for all}\ x_1, x_2, \ldots, x_n,\ \textrm{if}\ p(x_1, x_2,\ldots, x_n)\ \textrm{then}\ q(x_1, x_2, \ldots, x_n)\]</div>
+<ul class="simple">
+<li><p>Focus on <span class="math notranslate nohighlight">\(p\ \textrm{then}\ q\)</span>: we assume <span class="math notranslate nohighlight">\(p\)</span> is true and we work our way to show that <span class="math notranslate nohighlight">\(q\)</span> is true, using the mathematical systems’ axioms, definitions, and already proven theorems.</p></li>
+</ul>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>if <span class="math notranslate nohighlight">\(m\)</span> is odd and <span class="math notranslate nohighlight">\(n\)</span> is even then <span class="math notranslate nohighlight">\(m+n\)</span> is odd. Here it is implied that we want to prove this for all <span class="math notranslate nohighlight">\(n,m\in\mathbb{Z}\)</span>. Use <em>definition</em> of odd and even numbers. <span class="math notranslate nohighlight">\(m=2k, n=2j+1\)</span> and see what happens when applying these into the expression we want to prove: <span class="math notranslate nohighlight">\(m+n = 2k+2j+1 = 2(k+j)+1=2l+1\)</span> with <span class="math notranslate nohighlight">\(l=k+j\)</span>; showing that <span class="math notranslate nohighlight">\(n+m\)</span> is written in the form of an odd number definition (multiple of two plus 1).</p></li>
+<li><p>the sum of two odd integers is an even integer. Since <span class="math notranslate nohighlight">\(a=2m+1\)</span> and <span class="math notranslate nohighlight">\(a=2n+1\)</span>, their sum can be written as <span class="math notranslate nohighlight">\(a+b = (2m+1) + (2n+1) = 2m+2n+2 = 2(m+n+1)\)</span>, i.e., a multiple of 2.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(X\cap Y = X\cap Z\)</span> and <span class="math notranslate nohighlight">\(X\cup Y = X\cup Z\)</span> then <span class="math notranslate nohighlight">\(Y=Z\)</span>. (<em>Hint:</em> if <span class="math notranslate nohighlight">\(Y=Z\)</span> then <span class="math notranslate nohighlight">\(Y\subseteq Z\)</span> and <span class="math notranslate nohighlight">\(Z\subseteq Y\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal{P}(A\cap B)= \mathcal{P}(A)\cap \mathcal{P}(B)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((A\cup B)\cup C = A\cup(B\cup C)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A\cap B =B\cap A\)</span></p></li>
+<li><p>If <span class="math notranslate nohighlight">\(|A\times B|=1\)</span>, what is <span class="math notranslate nohighlight">\(|A|\)</span> and <span class="math notranslate nohighlight">\(|B|\)</span>?</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(|A\times B|=\textit{prime}\)</span>, what is <span class="math notranslate nohighlight">\(|A|\)</span> and <span class="math notranslate nohighlight">\(|B|\)</span>?</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(|A\times B|=0\)</span>, what is <span class="math notranslate nohighlight">\(|A|\)</span> and <span class="math notranslate nohighlight">\(|B|\)</span>?</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(|A\times B|=n\)</span>, with <span class="math notranslate nohighlight">\(n&gt;1\)</span> and not a prime number, what is <span class="math notranslate nohighlight">\(|A|\)</span> and <span class="math notranslate nohighlight">\(|B|\)</span>?</p></li>
+<li><p>Prove that <span class="math notranslate nohighlight">\(100\ldots1\)</span>, i.e., a number that begins and ends with 1 and has at least <span class="math notranslate nohighlight">\(3n-1\)</span> zeros inbetween, with <span class="math notranslate nohighlight">\(n&gt;0\)</span>, is a composite number. A composite number is the product of other natural numbers, all greater than 1. <em>Hint:</em> <span class="math notranslate nohighlight">\(x^3+y^3=(x+y)(x^2-xy+y^2)\)</span>.</p></li>
+<li><p>Show that if <span class="math notranslate nohighlight">\(x_1, x_2\)</span> are distinct roots of the polynomial <span class="math notranslate nohighlight">\(p(x) = x^2+bx+c\)</span>, then <span class="math notranslate nohighlight">\(x_1+x_2=-b\)</span> and <span class="math notranslate nohighlight">\(x_1 x_2=c\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(a\)</span> divides <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(a\)</span> divides <span class="math notranslate nohighlight">\(c\)</span> then <span class="math notranslate nohighlight">\(a\)</span> divides <span class="math notranslate nohighlight">\(b+c\)</span>, where <span class="math notranslate nohighlight">\(a,b,c\in\mathbb{N}_{&gt;0}\)</span>. Remember that for <span class="math notranslate nohighlight">\(x,y\in\mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(x&gt;0\)</span>, we say that <span class="math notranslate nohighlight">\(x\)</span> divides <span class="math notranslate nohighlight">\(y\)</span> (and we write <span class="math notranslate nohighlight">\(x\backslash y\)</span>), when <span class="math notranslate nohighlight">\(\exists z\in\mathbb{N}: xz=y\)</span>.</p></li>
+<li><p>Prove that an integer divisible by 4 is the difference of two perfect squares.</p></li>
+<li><p>Prove that <span class="math notranslate nohighlight">\(\forall x,y\in\mathbb{R}, x^2+y^2\geq 2xy\)</span>.</p></li>
+<li><p>Prove that the sum of two rational numbers is a rational number.</p></li>
+<li><p>Prove that if <span class="math notranslate nohighlight">\(x_1, x_2, x_3\)</span> are three distinct roots of the polynomial <span class="math notranslate nohighlight">\(p(x)= x^3+bx^2+cx+d\)</span> then <span class="math notranslate nohighlight">\(x_1 x_2 + x_1 x_3 + x_2 x_3 = c\)</span>.</p></li>
+</ul>
+</section>
+<section id="proof-by-counterexample">
+<h3>Proof by counterexample<a class="headerlink" href="#proof-by-counterexample" title="Link to this heading"></a></h3>
+<p>The statement <span class="math notranslate nohighlight">\(\forall n \in\mathbb{Z}^+: 2^n+1\ \textrm{is prime}\)</span>, can be proven wrong with just one counterexample: for <span class="math notranslate nohighlight">\(n=3, 2^3+1 = 9\)</span> which is not a prime.</p>
+</section>
+<section id="common-mistakes-in-proofs">
+<h3>Common mistakes in proofs<a class="headerlink" href="#common-mistakes-in-proofs" title="Link to this heading"></a></h3>
+<section id="stoping-short-of-a-definition">
+<h4>Stoping short of a definition<a class="headerlink" href="#stoping-short-of-a-definition" title="Link to this heading"></a></h4>
+<p>Definitions are not negotiable! For example, an odd number is <span class="math notranslate nohighlight">\(2n+1\)</span>, with <span class="math notranslate nohighlight">\(n\in\mathbb{Z}\)</span>, i.e., a multiple of two plus 1. So if you arrive at the conclusion that some number equals <span class="math notranslate nohighlight">\(2n+3\)</span> and you then state this is an odd number, you have not met the rigor of proof. Yes, <span class="math notranslate nohighlight">\(2n+3\)</span> <em>looks</em> like an odd number. But within the mathematical system of integer numbers it is not proven to be odd until you can demonstrate that it’s a multiple of two plus one, i.e., <span class="math notranslate nohighlight">\(2n+3 = 2n+2+1=2(n+1)+1\)</span>.</p>
+<p>Of course, in the interest of time you may end up with <span class="math notranslate nohighlight">\(2n+5\)</span> and then simply state that “by further factorization, this is <span class="math notranslate nohighlight">\(2k+1\)</span>”. That’s fine too, as long as you communicate that there is one more step needed, what it involves (“further factorization”, in this example), and where it leads (<span class="math notranslate nohighlight">\(2k+1\)</span>, the definition of an odd number). In such case, the further step that you narrate instead of executing, needs to be trivial. For example, further factorization of <span class="math notranslate nohighlight">\(2n+5\)</span> leads to <span class="math notranslate nohighlight">\(2(n+2)+1\)</span> and this is – or should be – obvious to everyone.</p>
+</section>
+<section id="symbology-issues">
+<h4>Symbology issues<a class="headerlink" href="#symbology-issues" title="Link to this heading"></a></h4>
+<p>You are asked to prove that the sum of two odd numbers is an even number. You proceed in defining the odd numbers as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a = 2n+1 \\
+b = 2n+1\end{split}\]</div>
+<p>thinking that because you use different symbols (<span class="math notranslate nohighlight">\(a,b\)</span>), the two numbers are different. They are not. In fact <span class="math notranslate nohighlight">\(a=b\)</span>. Yes, they are both odd. More precisely, they are the same odd number. You work through your proof finally concluding that <span class="math notranslate nohighlight">\(a+b=2(2n+1)\)</span>. Great! You just proved that an odd number, multiplied be two, is an even number. But this is not the same as proving that <em>any two odd numbers</em> add to an even number. Therefore, you need to define your <span class="math notranslate nohighlight">\(a\)</span> and  <span class="math notranslate nohighlight">\(b\)</span> as different numbers, e.g.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a = 2n+1,\ \textit{or}\ a = 2n_a+1 \\
+b = 2m+1,\ \textit{or}\ b = 2n_b+1\end{split}\]</div>
+<p>In other words: do not hesitate to use different symbols.</p>
+</section>
+<section id="attempts-at-proofs-by-miracle">
+<h4>Attempts at proofs by miracle<a class="headerlink" href="#attempts-at-proofs-by-miracle" title="Link to this heading"></a></h4>
+<p>Miraculous proofs are known to happen late at night or within seconds before an assignment deadline. Such proofs should be avoided at all cost as they are considered harmful to one’s reputation and detrimental for a final grade.</p>
+<figure class="align-center" id="id1" style="width: 350px">
+<a class="reference internal image-reference" href="../_images/miracle.jpg"><img alt="../_images/miracle.jpg" src="../_images/miracle.jpg" style="width: 333px;" /></a>
+<figcaption>
+<p><span class="caption-text">(Cartoon by Sydney Harris; (C) 1977-2021. Used with the kind permission of the author.)</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="attempts-at-proofs-by-brute-force">
+<h4>Attempts at proofs by brute force<a class="headerlink" href="#attempts-at-proofs-by-brute-force" title="Link to this heading"></a></h4>
+<p>Use of violence is often illegal, totally inappropriate, probably grounds for expulsion, and always unconvincing.</p>
+<figure class="align-center" id="id2" style="width: 350px">
+<a class="reference internal image-reference" href="../_images/brute_force.jpg"><img alt="../_images/brute_force.jpg" src="../_images/brute_force.jpg" style="width: 333px;" /></a>
+<figcaption>
+<p><span class="caption-text">(Cartoon by Sydney Harris; used with the kind permission of the author.)</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+<section id="indirect-proofs">
+<h2>Indirect proofs<a class="headerlink" href="#indirect-proofs" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The direct approach, if <span class="math notranslate nohighlight">\(p\)</span> then <span class="math notranslate nohighlight">\(q\)</span> does not always work.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(n^2\)</span> is even, then <span class="math notranslate nohighlight">\(n\)</span> is even too. Where to start? Writing <span class="math notranslate nohighlight">\(n^2=2k\)</span> can takes us only as far as <span class="math notranslate nohighlight">\(n=\sqrt{2k}\)</span>. We cannot tell if <span class="math notranslate nohighlight">\(\sqrt{2k}\)</span> is a multiple of 2. Instead,  try: if <span class="math notranslate nohighlight">\((n^2:\textit{even}\Rightarrow n:\textit{odd})\)</span>.</p></li>
+<li><p>In general, <span class="math notranslate nohighlight">\(h\Rightarrow c\)</span>. If no direct path from <span class="math notranslate nohighlight">\(h\)</span> to <span class="math notranslate nohighlight">\(c\)</span>, then <em>assume</em> <span class="math notranslate nohighlight">\(h\Rightarrow \neg c\)</span>. Explore <span class="math notranslate nohighlight">\(\neg c\)</span>. Can we go from <span class="math notranslate nohighlight">\(\neg c\)</span> to <span class="math notranslate nohighlight">\(h\)</span>? If not, the assumption was wrong therefore its opposite (the original statement) must be true.</p></li>
+<li><p>Example: <span class="math notranslate nohighlight">\(n^2:\textit{odd}\Rightarrow n:\textit{odd}\)</span>. Identify <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(c\)</span> parts.</p></li>
+<li><p>Example: <span class="math notranslate nohighlight">\(a,b\in\mathbb{Z}\Rightarrow a^2-4b\neq 2\)</span>. (Hint: 1 is not an even number).</p></li>
+<li><p>Example: There is a largest number. (<span class="math notranslate nohighlight">\(L\geq x, \forall x\in\mathbb{R}\)</span>. Add <span class="math notranslate nohighlight">\(L\)</span> to both sides of <span class="math notranslate nohighlight">\(1&gt;0\)</span>).</p></li>
+<li><p>Example: <span class="math notranslate nohighlight">\(n^3+5:\textit{odd}\Rightarrow n:\textit{even}\)</span>.</p></li>
+<li><p>Example: <span class="math notranslate nohighlight">\(\sqrt{2}\not\in\mathbb{Q}\)</span>.</p></li>
+<li><p>Example: <span class="math notranslate nohighlight">\(x\in\mathbb{Q}, y\not\in\mathbb{Q} \Rightarrow (x+y)\not\in\mathbb{Q}\)</span>.</p></li>
+<li><p>Example: <span class="math notranslate nohighlight">\(x\not\in\mathbb{Q}, m\in\mathbb{Z}\ \Rightarrow mx\not\in\mathbb{Q}\)</span>.</p></li>
+<li><p>Example: <span class="math notranslate nohighlight">\(\forall x\in\mathbb{R}: x(1-x)\leq\dfrac{1}{4}\)</span>. (Counter example; simple).</p></li>
+</ul>
+</section>
+<section id="propositional-logic">
+<h2>Propositional logic<a class="headerlink" href="#propositional-logic" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Definition of proposition: statement that can be proved to be true or false but not both.</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Example: <em>Chicago is in Illinois</em></p></li>
+<li><p>Example: <em>This will be a great year</em></p></li>
+<li><p>Example: <span class="math notranslate nohighlight">\(\pi\)</span> <em>is not an integer number</em></p></li>
+<li><p>Example: <em>Earth is round or Earth is flat</em></p></li>
+<li><p>Example: <span class="math notranslate nohighlight">\(1+1=3\)</span></p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Notation: <span class="math notranslate nohighlight">\(p:\textit{Chicago is in Illinois}\)</span></p></li>
+<li><p>Notation: <span class="math notranslate nohighlight">\(p:\textit{Earth is round}\)</span>, <span class="math notranslate nohighlight">\(q:\textit{Earth is flat}\)</span>, together <span class="math notranslate nohighlight">\(p\ \textit{or}\ q\)</span> and in full notation: <span class="math notranslate nohighlight">\(p\vee q\)</span>.</p></li>
+<li><p>Notation: <span class="math notranslate nohighlight">\(p:\textit{It's February}\)</span>, <span class="math notranslate nohighlight">\(q:\textit{It is cold}\)</span>, together <span class="math notranslate nohighlight">\(p\wedge q\)</span>.</p></li>
+<li><p>Truth tables</p></li>
+<li><p>More than two propositions</p></li>
+<li><p>The not operator <span class="math notranslate nohighlight">\(\neg\)</span>, with examples <span class="math notranslate nohighlight">\(\neg (\textit{Earth is flat})\)</span>.</p></li>
+<li><p>Conditional proposition: if <span class="math notranslate nohighlight">\(p\)</span> then <span class="math notranslate nohighlight">\(q\)</span>. Notation: <span class="math notranslate nohighlight">\(p\rightarrow q\)</span>. Terminology: <span class="math notranslate nohighlight">\(p\)</span> hypothesis, <span class="math notranslate nohighlight">\(q\)</span> conclusion. (Antecendent and consequent).</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Example: <span class="math notranslate nohighlight">\(\textsf{You are born in Chicago}\rightarrow\textsf{You are from Illinois}\)</span>.</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(p:\textsf{You are born in Chicago}\)</span></p>
+<p><span class="math notranslate nohighlight">\(q:\textsf{You are from Illinois}\)</span></p>
+<p><span class="math notranslate nohighlight">\(p\)</span> can be true or false. <span class="math notranslate nohighlight">\(q\)</span> can be true or false. Let’s examine them.</p>
+</div></blockquote>
+<p>Simple table:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(p\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(q\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(p\rightarrow q\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>You are born in Chicago</p></td>
+<td><p>You are from Illinois</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>You are born in Chicago</p></td>
+<td><p>You are not from Illinois</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>You are not born in Chicago</p></td>
+<td><p>You are from Illinois</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>You are not born in Chicago</p></td>
+<td><p>You are not from Illinois</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="from-simple-logic-functions-to-biconditional-propositions">
+<h2>From simple logic functions to biconditional propositions<a class="headerlink" href="#from-simple-logic-functions-to-biconditional-propositions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>AND, OR, NOT</p></li>
+<li><p>Combinations thereof: NAND, NOR</p></li>
+<li><p>The XOR function</p></li>
+<li><p>Sneak preview of logic gates</p></li>
+<li><p>Simple (half) adder</p></li>
+<li><p>Conditional proposition</p></li>
+<li><p>Necessary condition: a condition that does not guarantee an outcome, but without it the outcome cannot be achieved. E.g., a necessary condition to visit the Eiffel tower is to travel to France. (Another: win lotto, buy ticket).</p></li>
+<li><p>Sufficient condition: a condition that guarantees an outcome, even though the outcome is still possible without the condition. A sufficient condition that you traveled to France is that you’ve been to the Eiffel tower.</p></li>
+<li><p>Biconditional (truth table: TFFT) <span class="math notranslate nohighlight">\(p\Leftrightarrow q: (p\rightarrow q)\wedge (q\rightarrow p)\)</span>. Example: <span class="math notranslate nohighlight">\(x^2-x-12=0 \Leftrightarrow x=-3\ \text{or}\ x=4\)</span></p></li>
+<li><p>De Morgan’s Laws. Augustus De Morgan, 19th c. Brit. math.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\neg (p\vee q) &amp;\equiv \neg p \wedge \neg q \\
+\neg (p\wedge q) &amp;\equiv \neg p \vee \neg q\end{split}\]</div>
+<ul class="simple">
+<li><p>Java: <code class="docutils literal notranslate"><span class="pre">(x&lt;10</span> <span class="pre">||</span> <span class="pre">x&gt;20)</span></code> <span class="math notranslate nohighlight">\(\equiv\)</span> <code class="docutils literal notranslate"><span class="pre">!(x&gt;=10</span> <span class="pre">&amp;&amp;</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">20)</span></code></p></li>
+<li><p>Quantifiers: universal <span class="math notranslate nohighlight">\(\forall\)</span>; existential <span class="math notranslate nohighlight">\(\exists\)</span>.</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p: n\ \text{is an odd number}\)</span>. We cannot tell is <span class="math notranslate nohighlight">\(p\)</span> is T/F without knowing <span class="math notranslate nohighlight">\(n\)</span>, so as it stands, <span class="math notranslate nohighlight">\(p\)</span> is not a proposition. But <span class="math notranslate nohighlight">\(\forall n\in\mathbb{Z}, p(n)\)</span> can be true or false, hence <span class="math notranslate nohighlight">\(p(n)\)</span>, as universaly quantified, is a proposition. In this case <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is the <em>domain of discourse</em>. To prove <span class="math notranslate nohighlight">\(\forall x P(x)\)</span> we must show <span class="math notranslate nohighlight">\(P\)</span> is true for <em>every</em> <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p>Existentially quantified statement: <span class="math notranslate nohighlight">\(\exists x P(x)\)</span>, provable as long as we find at least one <span class="math notranslate nohighlight">\(x\)</span> that satisfied <span class="math notranslate nohighlight">\(P(x)\)</span>. Example: <span class="math notranslate nohighlight">\(\exists x (\dfrac{x}{x^2+1}=\dfrac{2}{5})\)</span>, with <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="binary-relations-br">
+<h2>Binary relations (BR)<a class="headerlink" href="#binary-relations-br" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>BR describe how elements from one set relate to elements of another set (or the set itself)</p></li>
+<li><p><span class="math notranslate nohighlight">\(R: X\mapsto Y: R\subset X\times Y\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\((x,y)\in R\)</span> we write <span class="math notranslate nohighlight">\(x\ R\ y\)</span>, i.e., <span class="math notranslate nohighlight">\(x\)</span> is related to <span class="math notranslate nohighlight">\(y\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(X\)</span> is called the domain of <span class="math notranslate nohighlight">\(R\)</span>. <span class="math notranslate nohighlight">\(Y\)</span> is the codomain. (Set of departure and set of destination, respectively).</p></li>
+<li><p>Infix notation: <span class="math notranslate nohighlight">\((x,y)\in R\equiv x\ R\ y\)</span>. Here, <span class="math notranslate nohighlight">\(R\)</span> can be replaced with a symbol operationalizing the relation, e.g., if <span class="math notranslate nohighlight">\(R\)</span> is the equality over elements of <span class="math notranslate nohighlight">\(X\)</span>, then <span class="math notranslate nohighlight">\((x,y)\in R \equiv x=y\)</span>.</p></li>
+<li><p>Digraphs for <span class="math notranslate nohighlight">\(R:X\mapsto X\)</span>: vertices, directed edges, loops.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R: X\mapsto X\)</span> is reflexive if <span class="math notranslate nohighlight">\((x,x)\in R, \forall x\in X\)</span>. Examples of reflexive relations: <span class="math notranslate nohighlight">\(\forall x\in\mathbb{Z}, x=x\)</span>; <span class="math notranslate nohighlight">\(\forall x\in\mathbb{R}, x\geq x\)</span>; etc. Non reflexive relations: <span class="math notranslate nohighlight">\(x&gt;x`(NB: loop terminating condition); :math:`x\neq x\)</span>. Worth noting that <span class="math notranslate nohighlight">\(xy:\textrm{even}\)</span> is reflexive in <span class="math notranslate nohighlight">\(\mathbb{Z}_{\textrm{even}}\)</span> and irreflexive in <span class="math notranslate nohighlight">\(\mathbb{Z}_{\textrm{odd}}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R: X\mapsto X\)</span> is symmetric if <span class="math notranslate nohighlight">\(\forall x,y \in X\)</span>, if <span class="math notranslate nohighlight">\((x,y)\in R\)</span> then <span class="math notranslate nohighlight">\((y,x)\in R\)</span>. Examples of symmetric relations: <span class="math notranslate nohighlight">\(\forall x,y\in\mathbb{R}: x=y\Leftrightarrow y=x\)</span>; <span class="math notranslate nohighlight">\(R=\textrm{sibling of}: x\ R\ y\Leftrightarrow y\ R\ x\)</span>. Example of non symmetric relation: <span class="math notranslate nohighlight">\(R=\textrm{student of}: x\ R\ y\not\Leftrightarrow y\ R\ x\)</span>.  Special case, <span class="math notranslate nohighlight">\(R=\textrm{student of Leo}: x\ R\ y\Leftrightarrow y\ R\ x\)</span> (I am learning from each and every one of my students).</p></li>
+<li><p><span class="math notranslate nohighlight">\(R: X\mapsto X\)</span> is antisymmetric if <span class="math notranslate nohighlight">\(\forall x,y\in X\)</span>, if <span class="math notranslate nohighlight">\((x,y)\in R\)</span> and <span class="math notranslate nohighlight">\((y,x)\in R\)</span> then <span class="math notranslate nohighlight">\(x=y\)</span>. Example <span class="math notranslate nohighlight">\(\forall x,y\in\mathbb{Z}\)</span>, if <span class="math notranslate nohighlight">\(x\setminus y\)</span> and <span class="math notranslate nohighlight">\(y\setminus x\)</span> then <span class="math notranslate nohighlight">\(x=y\)</span> (illustrate with <span class="math notranslate nohighlight">\(9\setminus 3\)</span> true but <span class="math notranslate nohighlight">\(3\setminus 9\)</span> not true. Only <span class="math notranslate nohighlight">\(9\setminus 9\)</span> is true; also <span class="math notranslate nohighlight">\(3\setminus 3\)</span>). Notice that if <span class="math notranslate nohighlight">\(x\leq y\)</span> and <span class="math notranslate nohighlight">\(y\leq x\)</span> then <span class="math notranslate nohighlight">\(x=y\)</span>. So the relation <span class="math notranslate nohighlight">\(\leq\)</span> is antisymmetric.</p></li>
+<li><p>Alternative notation for antisymmetric relation: if <span class="math notranslate nohighlight">\(x\neq y\)</span> then <span class="math notranslate nohighlight">\((x,y)\not\in R\)</span> or <span class="math notranslate nohighlight">\((y,x)\not\in R\)</span>.</p></li>
+<li><p>Show that a relationship can be both symmetric and antisymmetric. <span class="math notranslate nohighlight">\(A=\{1,2\}\)</span>; <span class="math notranslate nohighlight">\(A\times A = \{(1,1), (1,2), (2,1), (2,2)\}\)</span>; <span class="math notranslate nohighlight">\(R=\{(1,1), (2,2)\}\)</span>; <span class="math notranslate nohighlight">\(R\subset A\times A\)</span>; <span class="math notranslate nohighlight">\(R\)</span> is symmetric, because for every <span class="math notranslate nohighlight">\((x,y)\in R\)</span>, <span class="math notranslate nohighlight">\((y,x)\)</span> also in <span class="math notranslate nohighlight">\(R\)</span>. The relation is also antisymmetric because <span class="math notranslate nohighlight">\((x,y)\in R\)</span> and <span class="math notranslate nohighlight">\((y,x)\in R\)</span> are satisfied only when <span class="math notranslate nohighlight">\(x=y\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R: X\mapsto X\)</span> is transitive if <span class="math notranslate nohighlight">\(\forall x,y,z\in X\)</span>, if <span class="math notranslate nohighlight">\((x,y)\in R\)</span> and <span class="math notranslate nohighlight">\((y,z)\in R\)</span> then <span class="math notranslate nohighlight">\((x,z)\in R\)</span>. Example: the <span class="math notranslate nohighlight">\(&gt;\)</span> operation. If <span class="math notranslate nohighlight">\(x&gt;y\)</span> and <span class="math notranslate nohighlight">\(y&gt;z\)</span> then <span class="math notranslate nohighlight">\(x&gt;z\)</span>. Also, if Dayton, Ohio is east of Chicago, Ill., and Chicago, Ill. is east of Denver, Colo., then Dayton is east of Denver. If <span class="math notranslate nohighlight">\(a\setminus b\)</span> and <span class="math notranslate nohighlight">\(b\setminus c\)</span> then <span class="math notranslate nohighlight">\(a\setminus c\)</span>.</p></li>
+<li><p>A reflexive, antisymmetric, and transitive relation is called <em>a partial order</em>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(R:X\mapsto Y\)</span>, the inverse relation <span class="math notranslate nohighlight">\(R^{-1}:Y\mapsto X\)</span> is defined as <span class="math notranslate nohighlight">\(R^{-1}=\{(y,x)| (x,y)\in R\}\)</span>.</p></li>
+<li><p>Injective relation: <span class="math notranslate nohighlight">\(\forall x,z\in X\)</span>, and <span class="math notranslate nohighlight">\(\forall y\in Y\)</span>, if <span class="math notranslate nohighlight">\(xRy\)</span> and <span class="math notranslate nohighlight">\(zRy\)</span>, then <span class="math notranslate nohighlight">\(x=z\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> is called the <em>primary key</em> of <span class="math notranslate nohighlight">\(R\)</span>. Example: student ID in registration records. Mathemagical examples: <span class="math notranslate nohighlight">\(y=x\)</span> (linear function); <span class="math notranslate nohighlight">\(x=y^2\)</span> (square root).</p></li>
+<li><p>Functional relation: <span class="math notranslate nohighlight">\(\forall x\in X\)</span> and <span class="math notranslate nohighlight">\(\forall y,z\in Y\)</span> if <span class="math notranslate nohighlight">\(xRy\)</span> and <span class="math notranslate nohighlight">\(xRz\)</span> then <span class="math notranslate nohighlight">\(y=z\)</span>. <span class="math notranslate nohighlight">\(X\)</span> is a primary key for <span class="math notranslate nohighlight">\(R\)</span>. Example <span class="math notranslate nohighlight">\(y=x\)</span> (again!); also <span class="math notranslate nohighlight">\(y=x^2\)</span>.</p></li>
+</ul>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td></td>
+<td><p>injective</p></td>
+<td><p>not injective</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>functional</p></td>
+<td><p>one-to-one</p></td>
+<td><p>many-to-one</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(y=x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(y=x^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>not functional</p></td>
+<td><p>one-to-many</p></td>
+<td><p>many to many</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x=y^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x^2+y^2=1\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="induction">
+<h2>Induction<a class="headerlink" href="#induction" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Peano’s axioms: 0 is a natural number; <span class="math notranslate nohighlight">\(x=x\)</span> (equality reflexive); <span class="math notranslate nohighlight">\(x=y\Rightarrow y=x\)</span> (symmetry of equality); <span class="math notranslate nohighlight">\(x=y\)</span> and <span class="math notranslate nohighlight">\(y=z\)</span> then <span class="math notranslate nohighlight">\(x=z\)</span> (equality is transitive); if <span class="math notranslate nohighlight">\(a\in\mathbb{N}\)</span> and <span class="math notranslate nohighlight">\(a=b\)</span> then <span class="math notranslate nohighlight">\(b\in\mathbb{N}\)</span> (closed under equality); <span class="math notranslate nohighlight">\(\forall n\in\mathbb{N}, S(n)\in\mathbb{N}\)</span> (closure under <span class="math notranslate nohighlight">\(S\)</span>);  <span class="math notranslate nohighlight">\(\forall m,n\in\mathbb{N}\)</span>, if <span class="math notranslate nohighlight">\(S(n)=S(m)\)</span> then <span class="math notranslate nohighlight">\(n=m\)</span> (<span class="math notranslate nohighlight">\(S\)</span> is injective); <span class="math notranslate nohighlight">\(\not\exists n\in\mathbb{N}: S(n)=0\)</span>; if <span class="math notranslate nohighlight">\(K\)</span> is a set such that <span class="math notranslate nohighlight">\(0\in K\)</span> and <span class="math notranslate nohighlight">\(\forall n\in\mathbb{N}: n\in K\Rightarrow S(n)\in\mathbb{K}\)</span> then <span class="math notranslate nohighlight">\(K=\mathbb{N}\)</span> (induction).</p></li>
+<li><p>Climb-the-ladder analogy (Knuth).</p></li>
+<li><p>Traffic light analogy (unknown).</p></li>
+<li><p>Everyone’s favorite example: <span class="math notranslate nohighlight">\(1+2+\ldots+n = n(n+1)/2\)</span>.</p></li>
+<li><p>Any postage <span class="math notranslate nohighlight">\(\geq\)</span> $0.12 with $0.05 and $0.04 stamps.</p></li>
+<li><p>Sum of odd numbers: <span class="math notranslate nohighlight">\(1+3+\ldots + (2n-1) = n^2\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(5|6^n-1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(5|11^n-6\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1^2+2^2+3^2+\ldots +n^2 = n(n+1)(2n+1)/6\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(n=3x+5y, n\geq 8\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(12|(n^4-n^2)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1+2+4+\ldots +2^n = 2^{n+1}-1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1+x)^n\geq 1+nx\)</span>.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="latex.html" class="btn btn-neutral float-left" title="LaTeX in COMP 163" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../COMP170/introduction.html" class="btn btn-neutral float-right" title="COMP 170 Introduction to Java Programming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

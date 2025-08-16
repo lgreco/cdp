@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nested Loops &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nested Loops</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP170/notes/nestedLoops.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nested-loops">
+<h1>Nested Loops<a class="headerlink" href="#nested-loops" title="Link to this heading"></a></h1>
+<p>Nested loops are a challenging technique in programming, yet one of the most versatiles ones. With nested loops we can scan through large and complex arrangements of data, perform repetitive tasks, compute useful and interesting formulas, etc.</p>
+<section id="a-simple-problem">
+<h2>A simple problem<a class="headerlink" href="#a-simple-problem" title="Link to this heading"></a></h2>
+<p>Compute the sum of <span class="math notranslate nohighlight">\(M\)</span> integers, beginning with <span class="math notranslate nohighlight">\(N\)</span>. For example, if <span class="math notranslate nohighlight">\(M=5\)</span> and <span class="math notranslate nohighlight">\(N=0\)</span>, the sum to compute is</p>
+<div class="math notranslate nohighlight">
+\[\underbrace{ \underbrace{0}_{N} + 1 + 2 + 3 + 4 }_{M=5\ \text{numbers}} = 10\]</div>
+<p>The relevant code is shown below and the full code is available on <a class="reference external" href="https://github.com/lgreco/cdp/blob/master/source/COMP170/notes/IntroProgramming/Loops/NestedLoops/src/ASimpleProblem.java">GitHub</a>. A method takes two arguments, the beginning number <span class="math notranslate nohighlight">\(N\)</span> and how many subsequent integers to add, <span class="math notranslate nohighlight">\(M\)</span>. Then it builds a loop beginning at <span class="math notranslate nohighlight">\(i=N\)</span> and continuing while <span class="math notranslate nohighlight">\(i&lt;N+M\)</span>. The last term that satisfies this condition is <span class="math notranslate nohighlight">\(N+M-1\)</span>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">rollingSum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">M</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// initialize sum variable</span>
+<span class="linenos">3</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="o">+</span><span class="n">M</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// loop from N to N+M-1</span>
+<span class="linenos">4</span><span class="w">            </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="o">+</span><span class="n">i</span><span class="p">;</span>
+<span class="linenos">5</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">6</span><span class="w">        </span><span class="c1">// report result</span>
+<span class="linenos">7</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;\n\nSum of the first %d integers beginning at %d = %d\n\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">sum</span><span class="p">);</span>
+<span class="linenos">8</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// method rollingSum</span>
+</pre></div>
+</div>
+<p>Thus to compute the sum <span class="math notranslate nohighlight">\(0+1+2+3+4\)</span>, we must invoke <code class="docutils literal notranslate"><span class="pre">rollingSum(0,5)</span></code>. Now, let’s say that for some weird reason we also wish to compute the following sums.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}1 + 2 + 3 + 4 + 5 &amp; \\
+2 + 3 + 4 + 5 + 6 &amp; \\
+3 + 4 + 5 + 6 + 7 &amp; \ \ \textrm{and} \\
+4 + 5 + 6 + 7 + 8 &amp;\end{split}\]</div>
+<p>We will invoke the method <code class="docutils literal notranslate"><span class="pre">RollingSum</span></code> as follows:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">rollingSum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">rollingSum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">rollingSum</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">rollingSum</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Or, if we wish to be efficient, we can use a loop.</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">rollingSum</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now let keep the loop over <code class="docutils literal notranslate"><span class="pre">k</span></code> above but replace the <code class="docutils literal notranslate"><span class="pre">rollingSum</span></code> method with the actual code we used earlier:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// initialize sum variable</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">k</span><span class="o">+</span><span class="mi">5</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// loop from k to k+5</span>
+<span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="o">+</span><span class="n">i</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// print out the value of sum</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="a-simple-drawing">
+<h2>A simple drawing<a class="headerlink" href="#a-simple-drawing" title="Link to this heading"></a></h2>
+<p>Suppose we wish to print the following pattern. The pattern comprises 5 lines. Each line has 4 groups of symbols: first a group of 0-4 spaces, followed by a group of 0-4 stars, followed by two vertical bars, followed by a group of 0-4 stars.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/PatternPrintingWithNestedLoops.png"><img alt="../../_images/PatternPrintingWithNestedLoops.png" src="../../_images/PatternPrintingWithNestedLoops.png" style="width: 400px;" /></a>
+</figure>
+<p>It helps to describe the groups of characters, line by line. Notice that even though it is not immediately obvious from the first line (Line 0), each line starts with spaces. It’s just that the first line has 0 spaces.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>i</p></th>
+<th class="head"><p>Spaces</p></th>
+<th class="head"><p>Stars</p></th>
+<th class="head"><p>Bars</p></th>
+<th class="head"><p>Stars</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Line 0</p></td>
+<td><p>0</p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line 1</p></td>
+<td><p>1</p></td>
+<td><p>3</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Line 2</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line 3</p></td>
+<td><p>3</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>Line 4</p></td>
+<td><p>4</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table>
+<p>The first thing to notice is that the number of bars on each line is constant. The other numbers change from line to line. Specifically, we notice the following patterns:</p>
+<ul class="simple">
+<li><p>the <em>i</em>-th line has <span class="math notranslate nohighlight">\(i\)</span> spaces;</p></li>
+<li><p>followed by <span class="math notranslate nohighlight">\(4-i\)</span> stars;</p></li>
+<li><p>followed by 2 bars</p></li>
+<li><p>followed by <span class="math notranslate nohighlight">\(i\)</span> stars.</p></li>
+</ul>
+<p>Where is that 4 coming from? It’s the number of lines in the pattern, minus 1. If we wish to print <span class="math notranslate nohighlight">\(N\)</span> lines, then we end up with <span class="math notranslate nohighlight">\(N-1\)</span> spaces at most, and that many stars. We can replace the number 4 above, with <span class="math notranslate nohighlight">\(N-1\)</span>.</p>
+<p>Let’s start putting the code together.</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// print i spaces</span>
+<span class="w">  </span><span class="c1">// print (N-1)-i stars</span>
+<span class="w">  </span><span class="c1">// print 2 bars</span>
+<span class="w">  </span><span class="c1">// print i stars</span>
+<span class="w">  </span><span class="c1">// print a new line</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>How can we print <span class="math notranslate nohighlight">\(i\)</span> spaces, <span class="math notranslate nohighlight">\((N-1)-i\)</span> stars, etc? One way to do it is to use the <code class="docutils literal notranslate"><span class="pre">repeat()</span></code> method:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">i</span><span class="p">));</span><span class="w"> </span><span class="c1">// print k spaces</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">));</span><span class="w"> </span><span class="c1">// print (N-1)-k stars</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;||&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// print 2 bars</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">i</span><span class="p">));</span><span class="w"> </span><span class="c1">// print k stars</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span><span class="w"> </span><span class="c1">// print a new line</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>We can achieve the same result with nested loops instead of <code class="docutils literal notranslate"><span class="pre">repeat()</span></code>.</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// print k spaces</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// print (N-1)-k stars</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;||&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// print 2 bars</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="c1">// print k stars</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Notice that the inner loops are written in a single line for simplicity. Each of the inner loops (i.e., those with loop variables named <code class="docutils literal notranslate"><span class="pre">k</span></code>) depends on the current value of the outer loop (the <code class="docutils literal notranslate"><span class="pre">i</span></code> variable). So, when <span class="math notranslate nohighlight">\(i=0\)</span>, at the first iteration of the outer loop, the inner loops will run as follows:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// print 0 spaces</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// print (N-1) stars</span>
+<span class="c1">// etc</span>
+</pre></div>
+</div>
+<p>In the second iteration of the outer loop, <span class="math notranslate nohighlight">\(i=1\)</span> and the inner loops will look like:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// print 1 spaces</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// print (N-1)-1 stars</span>
+<span class="c1">// etc</span>
+</pre></div>
+</div>
+<p>In the third iteration of the outer loop, <span class="math notranslate nohighlight">\(i=2\)</span> and the inner loops will look like:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// print 2 spaces</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// print (N-1)-2 stars</span>
+<span class="c1">// etc</span>
+</pre></div>
+</div>
+<p>And so on. In other words, the outer loop in this example controls the behavior of the inner loops.</p>
+<p>There are one level of nesting in this example: the outer loop (the <code class="docutils literal notranslate"><span class="pre">i</span></code>-loop) and a bunch of <code class="docutils literal notranslate"><span class="pre">k</span></code>-loops. The levels of nested loops is the count of loops that contain other loops. In our example, only the <code class="docutils literal notranslate"><span class="pre">i</span></code> loop contains loops. The <code class="docutils literal notranslate"><span class="pre">k</span></code> loops do not contain any other loops.</p>
+</section>
+<section id="the-restaurant-example">
+<h2>The Restaurant example<a class="headerlink" href="#the-restaurant-example" title="Link to this heading"></a></h2>
+<p>Consider a restaurant with 36 tables, arranged in 6 rows. Each row has 6 tables. And each table seats four guests. We can write a simple report for each table, as follows:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">tableCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// initialize table counter</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="n">row</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Table %2d is in row %d, column %d, with guests: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tableCount</span><span class="p">,</span><span class="w"> </span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">column</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">guest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">guest</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">guest</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%2d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">guest</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span><span class="w"> </span><span class="c1">// new line</span>
+<span class="w">    </span><span class="n">tableCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tableCount</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// increment table count</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>There are two levels of nesting here: the <code class="docutils literal notranslate"><span class="pre">row</span></code> loop contains the <code class="docutils literal notranslate"><span class="pre">column</span></code> loop which contains the <code class="docutils literal notranslate"><span class="pre">guest</span></code> loop.</p>
+</section>
+<section id="loop-structures">
+<h2>Loop structures<a class="headerlink" href="#loop-structures" title="Link to this heading"></a></h2>
+<figure class="align-right" id="id1" style="width: 50%">
+<img alt="../../_images/nestedLoops.png" src="../../_images/nestedLoops.png" />
+<figcaption>
+<p><span class="caption-text">An example of three nested loops.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A nested loop is a loop within a loop. There is no limit as to how many loops we nest, but practically most programmers rarely go beyond 8-10 nested loops. The figure to the right shows three nested loops. A simple example of such loops is the following code.</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">loop1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">loop1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">loop1</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">loop2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">loop2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">loop2</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">loop3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">loop3</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">loop3</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// some profound code</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The code within the third loop will be executed <span class="math notranslate nohighlight">\(L1\times L2\times L3\)</span> times, where <span class="math notranslate nohighlight">\(L1\)</span>, <span class="math notranslate nohighlight">\(L2\)</span>, and <span class="math notranslate nohighlight">\(L3\)</span> are the number of steps performed by first, second, and third loop respectively.</p>
+<p>In most loops, the number of steps is the difference between the loop’s stopping and starting value. For example, the loop <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">(int</span> <span class="pre">i=0;</span> <span class="pre">i&lt;10;</span> <span class="pre">i++)</span></code> has a stoping value of 10 and a starting value of 0. Therefore it will execute 10 steps. This estimate however, is not rigorous. The loop <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">(int</span> <span class="pre">i=0;</span> <span class="pre">i&lt;=10;</span> <span class="pre">i++)</span></code> executes 11 times, because its terminating condition includes the stoping value (<span class="math notranslate nohighlight">\(i\leq 10\)</span>). Also, notice that the loop <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">(int</span> <span class="pre">i=0;</span> <span class="pre">i&lt;10;</span> <span class="pre">i=i+3)</span></code> executes only 4 times, because its variable is incremented in steps of 3.</p>
+<figure class="align-right" id="id2" style="width: 50%">
+<img alt="../../_images/tandemLoops.png" src="../../_images/tandemLoops.png" />
+<figcaption>
+<p><span class="caption-text">An example of two tandem loops nested in another loop.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>A nested loop may contain tandem loops as shown to the right. In this case, the number of steps executed within the second loop will be <span class="math notranslate nohighlight">\(L1\times L2\)</span>. The number of steps executed in the third loop will be <span class="math notranslate nohighlight">\(L1\times L3\)</span>. And the total number of steps across this block of code will be <span class="math notranslate nohighlight">\(L1\times(L2+L3)\)</span>.</p>
+<p>A simple example of tandem loops is the following code.</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">loop1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">loop1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">loop1</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">loop2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">loop2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">loop2</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// some profound code</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">loop3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">loop3</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">loop3</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// more profound code following the previous profound code</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For every iteration of the outer loop (<code class="docutils literal notranslate"><span class="pre">loop1</span></code>), the two inner loops execute one after the other. First, <code class="docutils literal notranslate"><span class="pre">loop2</span></code> runs its course, then <code class="docutils literal notranslate"><span class="pre">loop3</span></code>. This continues until <code class="docutils literal notranslate"><span class="pre">loop1</span></code> had gone through its cycle.</p>
+<figure class="align-right" id="id3" style="width: 50%">
+<img alt="../../_images/nestedAndTandemLoops.png" src="../../_images/nestedAndTandemLoops.png" />
+<figcaption>
+<p><span class="caption-text">An example of two tandem loops nested in another loop, with one more loop nested in the second tandem loop.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Loops can be nested in various ways, as needed. In the example to the right, <code class="docutils literal notranslate"><span class="pre">loop4</span></code> is within <code class="docutils literal notranslate"><span class="pre">loop3</span></code> which is within <code class="docutils literal notranslate"><span class="pre">loop1</span></code>. And there is <code class="docutils literal notranslate"><span class="pre">loop2</span></code> in tandem with <code class="docutils literal notranslate"><span class="pre">loop3</span></code>. The total number of steps taken by this combination of loops is <span class="math notranslate nohighlight">\(L1\times (L2+L3\times L4)\)</span>. The corresponding code is as follows.</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">loop1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">loop1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">loop1</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">loop2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">loop2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">loop2</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// some profound code</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">loop3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">loop3</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">loop3</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// more profound code following the previous profound code</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">loop4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">loop4</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">loop4</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// additional awesome code</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="loops-as-hierarchical-structures">
+<h2>Loops as hierarchical structures<a class="headerlink" href="#loops-as-hierarchical-structures" title="Link to this heading"></a></h2>
+<p>The Chicago Police Department has divided the city into <em>beats</em>, i.e., small geographic areas that are patrolled by one police officer. The beats are numbered by four digits in the following form:</p>
+<div class="math notranslate nohighlight">
+\[\underbrace{\texttt{##}}_{\textsf{District number}}
+\overbrace{\texttt{##}}^{\textsf{Beat}}\]</div>
+<p>For example, the CDP car with number 1712 belongs to the 17th District (Albany Park), and patrols the district’s 12th beat. There are about 40 beats per district, though this number varies. In general, we can use a pair of two nested loops to print all patrol car numbers, as follows.</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">district</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">district</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">26</span><span class="p">;</span><span class="w"> </span><span class="n">district</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">beat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">beat</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span><span class="w"> </span><span class="n">beat</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Car number %02d%02d \n&quot;</span><span class="p">,</span><span class="n">district</span><span class="p">,</span><span class="n">beat</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The code above is not fully accurate. The CPD does not have a 13th district, so we need to find a way to skip that value for loop variable <code class="docutils literal notranslate"><span class="pre">district</span></code>. This can be accomplished with conditional logic. In Java, such logic is implemented easily with <code class="docutils literal notranslate"><span class="pre">if-then-else</span></code> statements. Here’s a preview:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">district</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">district</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">26</span><span class="p">;</span><span class="w"> </span><span class="n">district</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">beat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">beat</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span><span class="w"> </span><span class="n">beat</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">district</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">13</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Car number %02d%02d \n&quot;</span><span class="p">,</span><span class="n">district</span><span class="p">,</span><span class="n">beat</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="estimating-the-length-of-a-loop">
+<h2>Estimating the length of a loop<a class="headerlink" href="#estimating-the-length-of-a-loop" title="Link to this heading"></a></h2>
+<p>It is important to be able to estimate the time that is consumed by loops. That time is related directly to the number of repetitions performed by a loop. As we saw above, we multiply the steps of nested loops and we add the steps of tandem loops. But how to tell the number of steps a loop repeats?</p>
+<p>For simple loops, e.g.,</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{...}</span>
+</pre></div>
+</div>
+<p>the number of steps are straight forward: <span class="math notranslate nohighlight">\(N\)</span>. In case the terminating condition is inclusive, i.e.,</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{...}</span>
+</pre></div>
+</div>
+<p>the number of steps is <span class="math notranslate nohighlight">\(N+1\)</span>.</p>
+<p>Simple loops like those above have a well-defined starting value, usually <code class="docutils literal notranslate"><span class="pre">i=0</span></code> or <code class="docutils literal notranslate"><span class="pre">i=1</span></code>. The terminating condition of these simple loops is also quite plain. The loops are basically counters, starting from 0 or 1 and counting up to a given number. The increment step of such loops is 1, i.e., <code class="docutils literal notranslate"><span class="pre">i++</span></code> (which is shorthand for <code class="docutils literal notranslate"><span class="pre">i=i+1</span></code>).</p>
+<p>Loops can have more complex definitions, however. For example, the loop</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{...}</span>
+</pre></div>
+</div>
+<p>has an increment of 3. Its variable will be <span class="math notranslate nohighlight">\(i=0, 3, 6, 9, \ldots\)</span>. The loop will execute until it reaches that largest multiple of 3 that is less than <span class="math notranslate nohighlight">\(N\)</span>. If, for example, <span class="math notranslate nohighlight">\(N=10\)</span>, the loop will execute 4 times.</p>
+<p>In a for-loop, the terminating condition usually involves the loop variable (<code class="docutils literal notranslate"><span class="pre">i</span></code> in the examples above). It doesn’t have too. The terminating condition of the loop is a boolean expression. The loop continues as long as this boolean expression evaluates to true, and stops when it evaluates to false. For example, how many times will the following loop run? (You may try it in JShell).</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In all fairness however, for-loops that do not involve the loop variable in the termination condition are rather rare. Good programming practice dictates that for-loops use their variable in the terminating condition. Java offers two more loop tools, better suited for broader terminating conditions. These tools are the <code class="docutils literal notranslate"><span class="pre">while-do</span></code> loop and the <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

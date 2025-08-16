@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traversing in sequence &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="The saga of reversing a linked list" href="reversal.html" />
+    <link rel="prev" title="The CTA Class" href="cta.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 271 Data Structures I</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#reflection-statements">Reflection statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#midterm-reflection">Midterm reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#end-of-term-reflection">End-of-term reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#frequently-asked-questions-about-ungrading">Frequently Asked Questions about <em>Ungrading</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../notes.html">Leo's notes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="checklist.html">    Checklist prior to starting COMP271</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jfk.html">JFK Jr.'s Last Flight and What We Learnt From It</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cta.html">The CTA Class</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Traversing in sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reversal.html">The saga of reversing a linked list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="palindrome.html">Palindrome</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loops.html">Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iterativeMergeSort.html">Iterative merge sort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="this.html">The keyword this</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 271 Data Structures I</a></li>
+          <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
+      <li class="breadcrumb-item active">Traversing in sequence</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP271/notes/sequentialTraversals.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="traversing-in-sequence">
+<h1>Traversing in sequence<a class="headerlink" href="#traversing-in-sequence" title="Link to this heading"></a></h1>
+<p>The easiest way to traverse an array, maybe to print its elements, is to write a for-loop as follows.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>We can rewrite this traversal in a rather verbose, yet illustrative, manner:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                     </span><span class="c1">// the starting position</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span><span class="w">               </span><span class="c1">// initialize cursor</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">current</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="c1">// repeat while there are elements</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">current</span><span class="o">]</span><span class="p">)</span><span class="w">  </span><span class="c1">// print element</span>
+<span class="w">  </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="w">            </span><span class="c1">// advance cursor to next element</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>We can even write these little, cutesy functions</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span><span class="w"> </span><span class="nf">hasNext</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">current</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">current</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">getNext</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">current</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">current</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and place them in our code:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                     </span><span class="c1">// the starting position</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span><span class="w">               </span><span class="c1">// initialize cursor</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">hasNext</span><span class="p">(</span><span class="n">current</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">        </span><span class="c1">// repeat while there are elements</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">current</span><span class="o">]</span><span class="p">)</span><span class="w">  </span><span class="c1">// print an element</span>
+<span class="w">  </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNext</span><span class="p">(</span><span class="n">current</span><span class="p">);</span><span class="w">     </span><span class="c1">// advance cursor to next element</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Preposterous as the code above may be, it illustrates the traversal of an array, in full detail. It also allows us to get a better understanding of sequential traversal.</p>
+<p>A sequential traversal moves from one item to another, based on our knowledge about the structure of the sequence. In an array with <span class="math notranslate nohighlight">\(n\)</span> elements, the structure of the sequence is described by the array index: we traverse the elements from the first element (at position index 0) to the last element (at position index <span class="math notranslate nohighlight">\(n-1\)</span>). The transition from one item in the sequence to another is based on obtaining the next position index, as long as there is one.</p>
+<p>In a linked list, the structure of the sequence is encoded in its nodes. The node is an object that can be as simple as:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Node</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Node</span><span class="w"> </span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Then we add nodes one after another, forming a chain (that we call linked list). The linked list is defined only by its starting node that we call <code class="docutils literal notranslate"><span class="pre">head</span></code>. Everything else can be accessed through that node.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">LinkedList</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Node</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Much like an integer index for an array that points to the next position (by adding 1 to itself), a node in a linked list points to the next node.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/linkedList.png"><img alt="../../_images/linkedList.png" src="../../_images/linkedList.png" style="width: 504.0px; height: 129.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">A simple linked list with <span class="math notranslate nohighlight">\(n\)</span> nodes.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>And so the traversal becomes very similar to that of an array. In an array, we start with its first element (given by position index 0). In a linked list, we start from its first node, which is called <code class="docutils literal notranslate"><span class="pre">head</span></code>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Node</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span><span class="w">                </span><span class="c1">// initialize cursor</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">hasNext</span><span class="p">(</span><span class="n">current</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">          </span><span class="c1">// repeat while there are elements</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">current</span><span class="p">)</span><span class="w">       </span><span class="c1">// prints the node</span>
+<span class="w">  </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNext</span><span class="p">(</span><span class="n">current</span><span class="p">);</span><span class="w">       </span><span class="c1">// advance cursor to next element</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Methods <code class="docutils literal notranslate"><span class="pre">hasNext</span></code> and <code class="docutils literal notranslate"><span class="pre">getNext</span></code> above are different than those we used for the array traversal:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span><span class="w"> </span><span class="nf">hasNext</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">current</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">current</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">getNext</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">current</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">current</span><span class="p">.</span><span class="na">next</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Using classes <code class="docutils literal notranslate"><span class="pre">Node</span></code> and <code class="docutils literal notranslate"><span class="pre">LinkedList</span></code> above, we can build a simple linked list as an example:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Node</span><span class="w"> </span><span class="n">chi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="p">();</span><span class="w"> </span><span class="c1">// Create node object called chi</span>
+<span class="n">Node</span><span class="w"> </span><span class="n">smt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="p">();</span><span class="w"> </span><span class="c1">// Create node object called smt</span>
+<span class="n">Node</span><span class="w"> </span><span class="n">jol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="p">();</span><span class="w"> </span><span class="c1">// Create node object called jol</span>
+<span class="n">Node</span><span class="w"> </span><span class="n">dwi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="p">();</span><span class="w"> </span><span class="c1">// Create node object called dwi</span>
+
+<span class="n">chi</span><span class="p">.</span><span class="na">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Chicago&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// Assign value to chi&#39;s data string</span>
+<span class="n">smt</span><span class="p">.</span><span class="na">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Summit&quot;</span><span class="p">;</span><span class="w">   </span><span class="c1">// Assign value to smt&#39;s data string</span>
+<span class="n">jol</span><span class="p">.</span><span class="na">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Joliet&quot;</span><span class="p">;</span><span class="w">   </span><span class="c1">// Assign value to jol&#39;s data string</span>
+<span class="n">dwi</span><span class="p">.</span><span class="na">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dwight&quot;</span><span class="p">;</span><span class="w">   </span><span class="c1">// Assign value to dwi&#39;s data string</span>
+
+<span class="n">chi</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">smt</span><span class="p">;</span><span class="w">        </span><span class="c1">// Assign smt as chi&#39;s next node</span>
+<span class="n">smt</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jol</span><span class="p">;</span><span class="w">        </span><span class="c1">// Assign jol as smt&#39;s next node</span>
+<span class="n">jol</span><span class="p">.</span><span class="na">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dwi</span><span class="p">;</span><span class="w">        </span><span class="c1">// Assign dwi as jol&#39;s next node</span>
+</pre></div>
+</div>
+<p>For the code above, we dropped the requirement that all class fields must be private, to keep the example simple. If the Node fields were private and we had a basic constructor:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="nf">Node</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>the code would be as follows.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Node</span><span class="w"> </span><span class="n">chi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;Chicago&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Create node object called chi and assign string field</span>
+<span class="n">Node</span><span class="w"> </span><span class="n">smt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;Summit&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Create node object called smt and assign string field</span>
+<span class="n">Node</span><span class="w"> </span><span class="n">jol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;Joliet&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Create node object called jol and assign string field</span>
+<span class="n">Node</span><span class="w"> </span><span class="n">dwi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;Dwight&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Create node object called dwi and assign string field</span>
+
+<span class="n">chi</span><span class="p">.</span><span class="na">setNExt</span><span class="p">(</span><span class="n">smt</span><span class="p">);</span><span class="w">               </span><span class="c1">// Assign smt as chi&#39;s next node</span>
+<span class="n">smt</span><span class="p">.</span><span class="na">setNExt</span><span class="p">(</span><span class="n">jol</span><span class="p">);</span><span class="w">               </span><span class="c1">// Assign jol as smt&#39;s next node</span>
+<span class="n">jol</span><span class="p">.</span><span class="na">setNExt</span><span class="p">(</span><span class="n">dwi</span><span class="p">);</span><span class="w">               </span><span class="c1">// Assign dwi as jol&#39;s next node</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cta.html" class="btn btn-neutral float-left" title="The CTA Class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="reversal.html" class="btn btn-neutral float-right" title="The saga of reversing a linked list" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

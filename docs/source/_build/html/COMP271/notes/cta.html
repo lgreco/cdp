@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The CTA Class &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Traversing in sequence" href="sequentialTraversals.html" />
+    <link rel="prev" title="JFK Jr.’s Last Flight and What We Learnt From It" href="jfk.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 271 Data Structures I</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#reflection-statements">Reflection statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#midterm-reflection">Midterm reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#end-of-term-reflection">End-of-term reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#frequently-asked-questions-about-ungrading">Frequently Asked Questions about <em>Ungrading</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../notes.html">Leo's notes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="checklist.html">    Checklist prior to starting COMP271</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jfk.html">JFK Jr.'s Last Flight and What We Learnt From It</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The CTA Class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#implement-an-interface">Implement an interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#help-is-always-given-to-those-who-ask-for-it">Help is always given to those who ask for it</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-distance-method">The <code class="docutils literal notranslate"><span class="pre">distance</span></code> method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building-a-train-route">Building a train route</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reverse-a-route">Reverse a route</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sequentialTraversals.html">Traversing in sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reversal.html">The saga of reversing a linked list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="palindrome.html">Palindrome</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loops.html">Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iterativeMergeSort.html">Iterative merge sort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="this.html">The keyword this</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 271 Data Structures I</a></li>
+          <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
+      <li class="breadcrumb-item active">The CTA Class</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP271/notes/cta.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-cta-class">
+<h1>The CTA Class<a class="headerlink" href="#the-cta-class" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="https://github.com/lgreco/DataStructures/tree/master/LabSessions/The%20CTA/src">The CTA class</a> is a nice playground to explore interfaces and inheritance. The class is based on data about the train and bus services offered by the Chicago Transit Authority. The data are available from the city’s data portal. This example requires some familiarity with CTA train and bus routes, so if you are not a Chicago resident you may want to open a map!</p>
+<p>We begin with a simple model: one superclass for locations, extended by two class one for train stations and one for bus stops. The class diagram is shown below.</p>
+<figure class="align-default">
+<img alt="../../_images/TheCTA.png" src="../../_images/TheCTA.png" />
+</figure>
+<p>The next step is to expand class <code class="docutils literal notranslate"><span class="pre">CTALocation</span></code> with two more fields:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">latitude</span><span class="p">,</span><span class="w"> </span><span class="n">longitude</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>that capture the geographic coordinates of a location. These coordinates are part of a CSV file with station information that is <a class="reference external" href="https://data.cityofchicago.org/Transportation/CTA-System-Information-List-of-L-Stops/8pix-ypme">available from the Chicago Data Portal</a>. This expansion may necessitate a new constructor for the class:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="nf">CTALocation</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">latitude</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">longitude</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="k">this</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+</span><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">latitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">latitude</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">longitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">longitude</span><span class="p">;</span>
+<span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The highlighted line above is a call to the class’s basic constructor. Once that basic constructor initializes the object, the constructor above assigns values to the <code class="docutils literal notranslate"><span class="pre">latitude</span></code> and <code class="docutils literal notranslate"><span class="pre">longitude</span></code> fields.</p>
+<section id="implement-an-interface">
+<h2>Implement an interface<a class="headerlink" href="#implement-an-interface" title="Link to this heading"></a></h2>
+<p>The next step in this mini-project was to implement the <code class="docutils literal notranslate"><span class="pre">Comparable</span></code> interface in <code class="docutils literal notranslate"><span class="pre">CTALocation</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CTALocation</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Comparable</span><span class="o">&lt;</span><span class="n">CTALocation</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{...}</span>
+</pre></div>
+</div>
+<p>When a class <strong>implements</strong> an interface, it promises to include the behavior outlined in the interface. The interface is really a list of method signatures. The implementation of these methods is left to the programmer. The interface (should) provide extensive commentary for each method signature it contains, communicating to programmers how to best implement the methods.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Comparable</span></code> interface, for example, <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T-">lists only one method</a>. The documentation for that method is sufficient to help a developer write suitable code. We know that the method must return a negative integer number if the invoking object (<code class="docutils literal notranslate"><span class="pre">this</span></code>) is less than the passed object; zero if they are equal, and; a positive integer is the invoking object is greater. Based on this information we can set up a skeleton method and complete it step-by-step.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compareTo</span><span class="p">(</span><span class="n">CTALocation</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">thisDistance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">distance</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">latitude</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">longitude</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">otherDistance</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">distance</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">latitude</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="na">longitude</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+<span class="hll"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">thisDistance</span><span class="o">-</span><span class="n">otherDistance</span><span class="p">);</span>
+</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>We don’t know yet how method <code class="docutils literal notranslate"><span class="pre">distance</span></code>, shown above, works but we can assume that it returns the distance between downtown Chicago and a location specified by latitude and longitude. The important thing is the return line above. Consider the following invocation of the method:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ohare</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">western</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>and assume that <code class="docutils literal notranslate"><span class="pre">ohare</span></code> and <code class="docutils literal notranslate"><span class="pre">western</span></code> are <code class="docutils literal notranslate"><span class="pre">CTALocation</span></code> objects for the CTA stations at O’Hare airport and on Western (and Lawrence) avenue. Intuitively, we know that O’Hare is further away from downtown that Western. Indeed, the O’Hare station is about 15.5 miles from downtown; the Western station, 6.5 miles. We can verify these distances with a tool like Google Earth. Based on that, we expect variable <code class="docutils literal notranslate"><span class="pre">x</span></code> above to be positive, with a value of <code class="docutils literal notranslate"><span class="pre">8</span></code> or <code class="docutils literal notranslate"><span class="pre">9</span></code>, depending on the exact distances and their difference.</p>
+</section>
+<section id="help-is-always-given-to-those-who-ask-for-it">
+<h2>Help is always given to those who ask for it<a class="headerlink" href="#help-is-always-given-to-those-who-ask-for-it" title="Link to this heading"></a></h2>
+<p>All that remains is the method that computes the distance from downtown. At this point the programming becomes highly specialized and we must ask for help. <em>Help is always given at Loyola to those who ask for it.</em> The <code class="docutils literal notranslate"><span class="pre">distance</span></code> method is shown in the next section. It computes the distance between any two points on earth, specified by the respective latitudes and longitudes. We need to compute distances from downtown, so we can <strong>overload</strong> the method as follows.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">lat</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">lon</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">MADISON_STATE_LAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">41.882067</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">MADISON_STATE_LON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">87.6283605</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">distance</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span><span class="w"> </span><span class="n">lon</span><span class="p">,</span><span class="w"> </span><span class="n">MADISON_STATE_LAT</span><span class="p">,</span><span class="w"> </span><span class="n">MADISON_STATE_LON</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Alternatively, we can overload <code class="docutils literal notranslate"><span class="pre">distance</span></code> by passing a <code class="docutils literal notranslate"><span class="pre">CTALocation</span></code> object and let the method pull the data, as follows:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">CTALocation</span><span class="w"> </span><span class="n">ctaLocation</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">MADISON_STATE_LAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">41.882067</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">MADISON_STATE_LON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">87.6283605</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">distance</span><span class="p">(</span><span class="n">ctaLocation</span><span class="p">.</span><span class="na">latitude</span><span class="p">,</span><span class="w"> </span><span class="n">ctaLocation</span><span class="p">.</span><span class="na">longitude</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MADISON_STATE_LAT</span><span class="p">,</span><span class="w"> </span><span class="n">MADISON_STATE_LON</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Of course, we can skip overloading altogether by writing the Madison and State coordinates as <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">static</span></code>, <code class="docutils literal notranslate"><span class="pre">final</span></code> variables in class <code class="docutils literal notranslate"><span class="pre">CTALocation</span></code>, and then invoke <code class="docutils literal notranslate"><span class="pre">distance</span></code> in method <code class="docutils literal notranslate"><span class="pre">compareTo</span></code> as follows.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compareTo</span><span class="p">(</span><span class="n">CTALocation</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">thisDistance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">distance</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">latitude</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">longitude</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MADISON_STATE_LAT</span><span class="p">,</span><span class="w"> </span><span class="n">MADISON_STATE_LON</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">otherDistance</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">distance</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">latitude</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="na">longitude</span>
+<span class="w">        </span><span class="n">MADISON_STATE_LAT</span><span class="p">,</span><span class="w"> </span><span class="n">MADISON_STATE_LON</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">thisDistance</span><span class="o">-</span><span class="n">otherDistance</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="the-distance-method">
+<h2>The <code class="docutils literal notranslate"><span class="pre">distance</span></code> method<a class="headerlink" href="#the-distance-method" title="Link to this heading"></a></h2>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="cm">/**</span>
+<span class="linenos"> 2</span><span class="cm">  * Compute Great Circle distance between two points on Earth.</span>
+<span class="linenos"> 3</span><span class="cm">  *</span>
+<span class="linenos"> 4</span><span class="cm">  * Usage:</span>
+<span class="linenos"> 5</span><span class="cm">  *</span>
+<span class="linenos"> 6</span><span class="cm">  *         double dist = distance(lat1, lon1, lat2, lon2)</span>
+<span class="linenos"> 7</span><span class="cm">  *                                ----------  ----------</span>
+<span class="linenos"> 8</span><span class="cm">  *                                     |           |</span>
+<span class="linenos"> 9</span><span class="cm">  *                                     |           Geographic coordinates</span>
+<span class="linenos">10</span><span class="cm">  *                                     |           of second point, in degrees</span>
+<span class="linenos">11</span><span class="cm">  *                                     |           of latitude and longitude.</span>
+<span class="linenos">12</span><span class="cm">  *                                     |</span>
+<span class="linenos">13</span><span class="cm">  *                                     Geographic coordinates</span>
+<span class="linenos">14</span><span class="cm">  *                                     of first point, in degrees</span>
+<span class="linenos">15</span><span class="cm">  *                                     of latitude and longitude.</span>
+<span class="linenos">16</span><span class="cm">  *</span>
+<span class="linenos">17</span><span class="cm">  * Based on the haversine formula (https://en.wikipedia.org/wiki/Haversine_formula):</span>
+<span class="linenos">18</span><span class="cm">  *</span>
+<span class="linenos">19</span><span class="cm">  * d = 2 * r * arcsin(sqrt(</span>
+<span class="linenos">20</span><span class="cm">  *                         hav(lat2-lat1) +</span>
+<span class="linenos">21</span><span class="cm">  *                         cos(lat1)*cos(lat2)*hav(lon2-lon1)</span>
+<span class="linenos">22</span><span class="cm">  *                         ))</span>
+<span class="linenos">23</span><span class="cm">  *</span>
+<span class="linenos">24</span><span class="cm">  * where hav is the haversine function, hav(x) = sin^2(x/2).</span>
+<span class="linenos">25</span><span class="cm">  *</span>
+<span class="linenos">26</span><span class="cm">  * The computed distance is subject to slight numerical errors because (a) the formula</span>
+<span class="linenos">27</span><span class="cm">  * assumes that Earth is a sphere, when it is not, and; (b) Math&#39;s toRadians is prone</span>
+<span class="linenos">28</span><span class="cm">  * to rounding errors.</span>
+<span class="linenos">29</span><span class="cm">  *</span>
+<span class="linenos">30</span><span class="cm">  * @param lat1 Latitude of first point</span>
+<span class="linenos">31</span><span class="cm">  * @param lon1 Longitude of first point</span>
+<span class="linenos">32</span><span class="cm">  * @param lat2 Latitude of second point</span>
+<span class="linenos">33</span><span class="cm">  * @param lon2 Longitude of second point</span>
+<span class="linenos">34</span><span class="cm">  * @return distance between two points</span>
+<span class="linenos">35</span><span class="cm">  */</span>
+<span class="linenos">36</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">lat1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">lon1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">lat2</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">lon2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="w">     </span><span class="c1">// Radius of earth, in miles. Use 6371 to compute in kilometers.</span>
+<span class="linenos">39</span><span class="w">     </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">EARTH_RADIUS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3958.8</span><span class="p">;</span>
+<span class="linenos">40</span>
+<span class="linenos">41</span><span class="w">     </span><span class="cm">/*</span>
+<span class="linenos">42</span><span class="cm">     Convert latitudes to radians (the unit used by Math&#39;s trig functions). No such conversion</span>
+<span class="linenos">43</span><span class="cm">     is needed for the longitude values because they are not used individually in a trigonometric</span>
+<span class="linenos">44</span><span class="cm">     function. Instead, convert their different to radians to use in the second hav() function.</span>
+<span class="linenos">45</span><span class="cm">      */</span>
+<span class="linenos">46</span><span class="w">     </span><span class="n">lat1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">toRadians</span><span class="p">(</span><span class="n">lat1</span><span class="p">);</span>
+<span class="linenos">47</span><span class="w">     </span><span class="n">lat2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">toRadians</span><span class="p">(</span><span class="n">lat2</span><span class="p">);</span>
+<span class="linenos">48</span>
+<span class="linenos">49</span><span class="w">     </span><span class="c1">// Latitude difference for hav function (they are already in radians)</span>
+<span class="linenos">50</span><span class="w">     </span><span class="kt">double</span><span class="w"> </span><span class="n">deltaLatitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lat2</span><span class="o">-</span><span class="n">lat1</span><span class="p">;</span>
+<span class="linenos">51</span><span class="w">     </span><span class="c1">// Longitude difference for hav function (converted to radians)</span>
+<span class="linenos">52</span><span class="w">     </span><span class="kt">double</span><span class="w"> </span><span class="n">deltaLongitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">toRadians</span><span class="p">(</span><span class="n">lon2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lon1</span><span class="p">);</span>
+<span class="linenos">53</span>
+<span class="linenos">54</span><span class="w">     </span><span class="cm">/*</span>
+<span class="linenos">55</span><span class="cm">     Build haversine formula step-by-step, for clarity. First compute the haversine functions</span>
+<span class="linenos">56</span><span class="cm">     for latitude and longitude using the substitution hav(x) = sin^2(x/2). Next, assemble the</span>
+<span class="linenos">57</span><span class="cm">     trig expression that goes the square root. And finally build the formula.</span>
+<span class="linenos">58</span><span class="cm">      */</span>
+<span class="linenos">59</span>
+<span class="linenos">60</span><span class="w">     </span><span class="kt">double</span><span class="w"> </span><span class="n">latHav</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">sin</span><span class="p">(</span><span class="n">deltaLatitude</span><span class="o">/</span><span class="mf">2.0</span><span class="p">),</span><span class="w"> </span><span class="mf">2.0</span><span class="p">);</span>
+<span class="linenos">61</span><span class="w">     </span><span class="kt">double</span><span class="w"> </span><span class="n">lonHav</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">sin</span><span class="p">(</span><span class="n">deltaLongitude</span><span class="o">/</span><span class="mf">2.0</span><span class="p">),</span><span class="w"> </span><span class="mf">2.0</span><span class="p">);</span>
+<span class="linenos">62</span><span class="w">     </span><span class="kt">double</span><span class="w"> </span><span class="n">cosines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">cos</span><span class="p">(</span><span class="n">lat1</span><span class="p">)</span><span class="o">*</span><span class="n">Math</span><span class="p">.</span><span class="na">cos</span><span class="p">(</span><span class="n">lat2</span><span class="p">);</span>
+<span class="linenos">63</span><span class="w">     </span><span class="kt">double</span><span class="w"> </span><span class="n">underRoot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">latHav</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cosines</span><span class="o">*</span><span class="n">lonHav</span><span class="p">;</span>
+<span class="linenos">64</span>
+<span class="linenos">65</span><span class="w">     </span><span class="c1">// Return value, assigned negative in case we fail to compute formula</span>
+<span class="linenos">66</span><span class="w">     </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">1.0</span><span class="p">;</span>
+<span class="linenos">67</span><span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">underRoot</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span>
+<span class="linenos">68</span><span class="w">         </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">EARTH_RADIUS</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">asin</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">underRoot</span><span class="p">));</span>
+<span class="linenos">69</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<span class="linenos">70</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// method distance</span>
+</pre></div>
+</div>
+</section>
+<section id="building-a-train-route">
+<h2>Building a train route<a class="headerlink" href="#building-a-train-route" title="Link to this heading"></a></h2>
+<p>As our CTA project continues to grow, we have designed and build quite some useful tools. In addition to method <code class="docutils literal notranslate"><span class="pre">distance</span></code> above, class <code class="docutils literal notranslate"><span class="pre">CTAUtilities</span></code> has one more useful method: <code class="docutils literal notranslate"><span class="pre">pullCTAData</span></code>. <a class="reference external" href="https://github.com/lgreco/DataStructures/blob/52a5312ebc713edecd10bf9be15aa48d93bb4b11/LabSessions/The%20CTA/src/CTAUtilities.java#L88">This method</a> reads a CSV file, creates <code class="docutils literal notranslate"><span class="pre">CTAStation</span></code> objects, and stores them in an arraylist. There are about 100 stations in the CTA system. Each of them is described in a detailed CSV file that is available from the Chicago Data Portal.  Method <code class="docutils literal notranslate"><span class="pre">pullCTAData</span></code> creates about 100 <code class="docutils literal notranslate"><span class="pre">CTAStation</span></code> objects, complete with station name, latitude and longitude, ADA accessibility, etc. The method access the CSV file with the help of another method, <code class="docutils literal notranslate"><span class="pre">CTAScanner</span></code> that establishes a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> connection to the data.</p>
+<p>The output of <code class="docutils literal notranslate"><span class="pre">pullCTAData</span></code> is an <code class="docutils literal notranslate"><span class="pre">ArrayList&lt;CTAStation&gt;</span></code> collection, illustrated below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/allStations.png"><img alt="../../_images/allStations.png" src="../../_images/allStations.png" style="width: 304.8px; height: 244.0px;" /></a>
+</figure>
+<p>This collection of station objects is not very useful by itself. Train stations are located along train routes. If we want to construct a train route, we need to know the order in which it traverses stations. For example, the southbound route for CTA’s <strong>Red Line</strong> travels from <em>Howard</em>, to <em>Jarvis</em>, to <em>Morse</em>, …, and ends at the <em>95th/Dan Ryan</em> station. For an accurate representation of the Red Line, we need to select some stations from the collection above, and place them in a specified order. To do that, we need a list of the stations to select and the order to place them. And because this information is not available in the CSV file, we have to provide ourselves. The easiest way to do this, is to write a plain text file with just the names of the stations in the order they should appear. That’s the sequence file below (also <a class="reference external" href="https://raw.githubusercontent.com/lgreco/DataStructures/master/data/stations.csv">available on GitHub</a>).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/sequence.png"><img alt="../../_images/sequence.png" src="../../_images/sequence.png" style="width: 424.0px; height: 233.20000000000002px;" /></a>
+</figure>
+<p>With that sequence file, we can execute a simple procedure as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Create</span> <span class="n">a</span> <span class="n">trainRoute</span><span class="p">:</span>
+  <span class="k">for</span> <span class="n">every</span> <span class="n">station</span> <span class="n">name</span> <span class="kn">from</span> <span class="nn">sequence</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">find</span> <span class="n">the</span> <span class="n">corresponding</span> <span class="n">station</span> <span class="nb">object</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">array</span> <span class="nb">list</span>
+    <span class="n">add</span> <span class="n">the</span> <span class="n">station</span> <span class="nb">object</span> <span class="n">to</span> <span class="n">the</span> <span class="n">trainRoute</span>
+  <span class="k">return</span> <span class="n">trainRoute</span>
+</pre></div>
+</div>
+<p>This simple procedure can be implemented with the following method. The method, if successful, returns a <code class="docutils literal notranslate"><span class="pre">CTATrainRoute</span></code> object, which is essentially a linked list. To build the train route, the method first creates a collection of <strong>all stations</strong>, as described above. This collection is <code class="docutils literal notranslate"><span class="pre">ArrayList&lt;CTAStation&gt;</span> <span class="pre">allStations</span></code>. Its contents are assigned with the <code class="docutils literal notranslate"><span class="pre">pullCTAData</span></code> method in line 9 below.</p>
+<p>For every station name pulled from the sequence file, we search every station in the collection <code class="docutils literal notranslate"><span class="pre">allStations</span></code> to find a matching one. The match is determined by comparing the name pulled from the sequence file and the name field of the <code class="docutils literal notranslate"><span class="pre">CTAStation</span></code> objects in <code class="docutils literal notranslate"><span class="pre">allStations</span></code> (line 17, below).</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="n">CTATrainRoute</span><span class="w"> </span><span class="nf">buildRoute</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">linkToSequenceFile</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="c1">// Set up the train route object we&#39;ll be returning.</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="n">CTATrainRoute</span><span class="w"> </span><span class="n">ctaTrainRoute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CTATrainRoute</span><span class="p">();</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="c1">// Set up a scanner to the file with the station sequence.</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sequence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CTAUtilities</span><span class="p">.</span><span class="na">CTAScanner</span><span class="p">(</span><span class="n">linkToSequenceFile</span><span class="p">);</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="c1">// If null, we can&#39;t connect to file.</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sequence</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="c1">// Pull all stations into an array list.</span>
+<span class="hll"><span class="linenos"> 9</span><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">CTAStation</span><span class="o">&gt;</span><span class="w"> </span><span class="n">allStations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CTAUtilities</span><span class="p">.</span><span class="na">pullCTAData</span><span class="p">(</span><span class="n">ALL_STATIONS_CSV</span><span class="p">);</span>
+</span><span class="linenos">10</span><span class="w">        </span><span class="c1">// Go through the sequence file, line by line.</span>
+<span class="linenos">11</span><span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">sequence</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">12</span><span class="w">            </span><span class="c1">// Each line in the sequence file is the name of a station.</span>
+<span class="linenos">13</span><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">nameFromSequence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sequence</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="linenos">14</span><span class="w">            </span><span class="c1">// Use the enhanced for-loop go over the CTAStation objects in the array list.</span>
+<span class="linenos">15</span><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">CTAStation</span><span class="w"> </span><span class="n">station</span><span class="p">:</span><span class="w"> </span><span class="n">allStations</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">16</span><span class="w">                </span><span class="c1">// If a CTAStation has the same name as what we get from sequence, add the object to the route.</span>
+<span class="linenos">17</span><span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">station</span><span class="p">.</span><span class="na">getName</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">nameFromSequence</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">18</span><span class="w">                    </span><span class="n">ctaTrainRoute</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">station</span><span class="p">);</span>
+<span class="linenos">19</span><span class="w">                </span><span class="p">}</span>
+<span class="linenos">20</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos">21</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">22</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">23</span><span class="w">    </span><span class="c1">// Return the (hopefully populated) route.</span>
+<span class="linenos">24</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ctaTrainRoute</span><span class="p">;</span>
+<span class="linenos">25</span><span class="p">}</span><span class="w"> </span><span class="c1">// method buildRoute</span>
+</pre></div>
+</div>
+<p>The process in method <code class="docutils literal notranslate"><span class="pre">buildRoute</span></code> above, can be visualized as follows.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/buildRoute.png"><img alt="../../_images/buildRoute.png" src="../../_images/buildRoute.png" style="width: 523.2px; height: 289.0px;" /></a>
+</figure>
+<p>The method receives data from two sources: the CSV file with all stations and the text file with the sequence of station in a particular route. Using the data from these sources, method <code class="docutils literal notranslate"><span class="pre">buildRoute</span></code> creates a <code class="docutils literal notranslate"><span class="pre">CTATrainRoute</span></code> object with a starting station object (the <code class="docutils literal notranslate"><span class="pre">head</span></code> node), pointing to the next station object, and so on. The last station in the route can be recognized by its <code class="docutils literal notranslate"><span class="pre">.next</span></code> pointer set to <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+<p>One last thing to discuss about <code class="docutils literal notranslate"><span class="pre">buildRoute</span></code> is its place: do we add this method in the <code class="docutils literal notranslate"><span class="pre">CTAUtilities</span></code> class or somewhere else? Our initial choice may be <code class="docutils literal notranslate"><span class="pre">CTAUtilities</span></code>. But when we look closer, we see that method <code class="docutils literal notranslate"><span class="pre">buildRoute</span></code> is basically a construction process for a new train route object. Not quite a <strong>constructor</strong> but we could turn it into such, with a few minor edits. Because the method is so close related to the <code class="docutils literal notranslate"><span class="pre">CTATrainRoute</span></code> class, it should be placed there.</p>
+</section>
+<section id="reverse-a-route">
+<h2>Reverse a route<a class="headerlink" href="#reverse-a-route" title="Link to this heading"></a></h2>
+<p>This is an interesting problem: can we reverse a route while traversing it forward? One analogy would be to board a southbound train, and by the time it reaches its destination, have its stations written in the northbound direction. We can accomplish this with pen and paper, writing station names from the bottom of the page and moving up. If something can be done on paper, it can be done with coding! Here’s how.</p>
+<p>We start with a plain traversal. In addition to the all familiar by now <code class="docutils literal notranslate"><span class="pre">current</span></code> pointer, we employ two more points: <code class="docutils literal notranslate"><span class="pre">previous</span></code> and <code class="docutils literal notranslate"><span class="pre">following</span></code>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/invertList.png"><img alt="../../_images/invertList.png" src="../../_images/invertList.png" style="width: 643.2px; height: 118.2px;" /></a>
+</figure>
+<p>Pointers <code class="docutils literal notranslate"><span class="pre">previous</span></code> and <code class="docutils literal notranslate"><span class="pre">following</span></code> help us remember what is before and after the current station. When <code class="docutils literal notranslate"><span class="pre">current</span></code> moves to a new station, we can assign <code class="docutils literal notranslate"><span class="pre">following</span> <span class="pre">=</span> <span class="pre">current.getNext()</span></code>. Then we can “disconnect” <code class="docutils literal notranslate"><span class="pre">current</span></code> from <code class="docutils literal notranslate"><span class="pre">following</span></code> by reassigning <code class="docutils literal notranslate"><span class="pre">current.setNext(previous)</span></code>. We are ready to advance to the next node. Because <code class="docutils literal notranslate"><span class="pre">current</span></code> now points backwards, we cannot use its <code class="docutils literal notranslate"><span class="pre">.next</span></code> to find where to move next. That’s why we need the pointer <code class="docutils literal notranslate"><span class="pre">following</span></code> to remind us where to go. And thus <code class="docutils literal notranslate"><span class="pre">following</span></code> becomes <code class="docutils literal notranslate"><span class="pre">current</span></code> as shown below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/invertListDetail.png"><img alt="../../_images/invertListDetail.png" src="../../_images/invertListDetail.png" style="width: 316.6px; height: 103.2px;" /></a>
+</figure>
+<p>The basic mechanism is straight forward. Pointer <code class="docutils literal notranslate"><span class="pre">following</span></code> keeps track of where to slide the <code class="docutils literal notranslate"><span class="pre">current</span></code> pointer. Usually, we really on <code class="docutils literal notranslate"><span class="pre">current.getNext()</span></code> to traverse down the route. Here, however, we reassign <code class="docutils literal notranslate"><span class="pre">current</span></code>’s <code class="docutils literal notranslate"><span class="pre">next</span></code> field to point to its <code class="docutils literal notranslate"><span class="pre">previous</span></code> node. Invoking <code class="docutils literal notranslate"><span class="pre">getNext()</span></code> on <code class="docutils literal notranslate"><span class="pre">current</span></code> will send us backwards. Pointer <code class="docutils literal notranslate"><span class="pre">following</span></code> comes to our rescue. The basic code is below:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">CTATStation</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
+<span class="linenos">2</span><span class="n">CTAStation</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="linenos">3</span><span class="n">CTAStation</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="linenos">4</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">current</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">5</span><span class="w">  </span><span class="n">following</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="p">.</span><span class="na">getNext</span><span class="p">();</span>
+<span class="linenos">6</span><span class="w">  </span><span class="n">current</span><span class="p">.</span><span class="na">setNext</span><span class="p">(</span><span class="n">previous</span><span class="p">);</span>
+<span class="linenos">7</span><span class="w">  </span><span class="n">previous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="p">;</span>
+<span class="linenos">8</span><span class="w">  </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">following</span><span class="p">;</span>
+<span class="linenos">9</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Every train route has two special stations. Correspondigly every linked list has two special nodes: the head and the end. We need to take extra care to process them. After we complete the loop above, pointer <code class="docutils literal notranslate"><span class="pre">head</span></code> still points to the first station of the original route. We want it to point to the first station of the reversed route. Luckily, pointer <code class="docutils literal notranslate"><span class="pre">previous</span></code> is already at the last station of the original route (which is the first station of the reversed route). So we assign <code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">=</span> <span class="pre">previous</span></code>.</p>
+<p>The second special case is the last node of the reversed list, the last station of the reversed route. That’s the <code class="docutils literal notranslate"><span class="pre">head</span></code> of the original structure. Notice, in the code above, that where we are at the beginning, when <code class="docutils literal notranslate"><span class="pre">current</span></code> is the <code class="docutils literal notranslate"><span class="pre">head</span></code>, <code class="docutils literal notranslate"><span class="pre">previous</span></code> is <code class="docutils literal notranslate"><span class="pre">null</span></code>.   And the assignment of line 6 above reassigns that station to point to null: making it the last station of the reversed route.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="jfk.html" class="btn btn-neutral float-left" title="JFK Jr.’s Last Flight and What We Learnt From It" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sequentialTraversals.html" class="btn btn-neutral float-right" title="Traversing in sequence" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

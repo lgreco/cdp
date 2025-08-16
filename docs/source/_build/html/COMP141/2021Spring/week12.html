@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review of Weeks 12: course review and Turing machines &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Review of Weeks 12: course review and Turing machines</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP141/2021Spring/week12.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="review-of-weeks-12-course-review-and-turing-machines">
+<h1>Review of Weeks 12: course review and Turing machines<a class="headerlink" href="#review-of-weeks-12-course-review-and-turing-machines" title="Link to this heading"></a></h1>
+<section id="solutions-for-last-homework-assignment">
+<h2>Solutions for last homework assignment<a class="headerlink" href="#solutions-for-last-homework-assignment" title="Link to this heading"></a></h2>
+<section id="problem-1">
+<h3>Problem 1<a class="headerlink" href="#problem-1" title="Link to this heading"></a></h3>
+<p>The cardinality <span class="math notranslate nohighlight">\(|S|\)</span> of <span class="math notranslate nohighlight">\(S = \{x|\sin{(mx)} = 0\}\)</span>, where <span class="math notranslate nohighlight">\(m \geq 0\)</span> and <span class="math notranslate nohighlight">\(0
+\leq x \leq 2\pi\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|S| = \begin{cases} \infty, m=0 \\ 2m+1, m&gt;0 \end{cases}\end{split}\]</div>
+</section>
+<section id="problem-2">
+<h3>Problem 2<a class="headerlink" href="#problem-2" title="Link to this heading"></a></h3>
+<p>Prove that the sum of a rational number and an irrational number, is an irrational number.</p>
+<p>The sum of two rational numbers is:</p>
+<div class="math notranslate nohighlight">
+\[\frac{a}{b} + \frac{c}{d}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a, b, c, d\)</span> are integers. Working out the fraction we get</p>
+<div class="math notranslate nohighlight">
+\[\frac{ad+bc}{bd}\]</div>
+<p>where both numerators and denominators are integer numbers and the sum/products of integers, and thus the fraction is a rational number.</p>
+</section>
+<section id="problem-3">
+<h3>Problem 3<a class="headerlink" href="#problem-3" title="Link to this heading"></a></h3>
+<p>If <span class="math notranslate nohighlight">\(a, b, c\)</span> are odd integers, show that <span class="math notranslate nohighlight">\(ax^2+ bx + c = 0\)</span> has no rational solutions.</p>
+<p>The solutions to the quadratic equation are</p>
+<div class="math notranslate nohighlight">
+\[x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}\]</div>
+<p>These solutions are rational, if both the numerator and demominator are integer numbers. The denominator is an integer number as the product of two integer numbers. For the numerator to be an integer number, the square root must be an integer, therefore the quantity <span class="math notranslate nohighlight">\(b^2-4ac\)</span> (known as the <em>discriminant,</em> <span class="math notranslate nohighlight">\(\delta\)</span>) must be a perfect square, i.e <span class="math notranslate nohighlight">\(\delta^2=b^2-4ac\)</span>. Manipulating this requirement yields:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}b^2-\delta^2 &amp;= 4ac \\
+(b-\delta)(b+\delta) &amp;= 4ac\end{split}\]</div>
+<p>This leaves us with two scenarios:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}b-\delta = 4a\ \ &amp;\text{and}\ \ b+\delta=c \\ &amp;\text{or}\\ b-\delta = c\ \ &amp;\text{and}\ \ b+\delta=4a\end{split}\]</div>
+<p>Looking at the first scenario and adding its two equations together: <span class="math notranslate nohighlight">\(2b=4a+c\)</span>. If <span class="math notranslate nohighlight">\(a,b,c\)</span> are odd, then <span class="math notranslate nohighlight">\(2b\)</span> is even, <span class="math notranslate nohighlight">\(4a\)</span> is even, and <span class="math notranslate nohighlight">\(4a+c\)</span> is odd, leading to even=odd which cannot be true. The same can be shown for the second scenario.</p>
+</section>
+<section id="problem-4">
+<h3>Problem 4<a class="headerlink" href="#problem-4" title="Link to this heading"></a></h3>
+<p>You are standing at the bottom of a long stair, with a friend. You do not know how many
+steps are there, nor are you allowed to count them. But you tell your friend that you can find
+the middle step, without counting the number of steps, and only by moving up the stairs.
+How can you accomplish that?</p>
+<p>You start climbing the stairs, but for every step you take, your friend takes two. When your friend reaches the top of the staircase, you’ve reached the middle. (This is a popular interview question for software engineers: the actual question asks them how to find the middle of a linked list – a data structure very similar to a staircase – in a single pass.)</p>
+</section>
+<section id="problem-5">
+<h3>Problem 5<a class="headerlink" href="#problem-5" title="Link to this heading"></a></h3>
+<p>A bag contains four quarters, one nickel, one dime, and five pennies. We reach with our hand
+and pull out two coins at random. What are the chances that we pull $0.15 worth of coins?</p>
+<p>You may obtain $0.15 by drawing a dime first and a nickel second, or vice versa. In other words:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P[\text{\$0.15}] &amp;=    P[\text{dime}] \cdot P[\text{nickel}] + P[\text{nickel}] \cdot P[\text{dime}] \\
+   &amp;= \left(\frac{1}{11}\right)\left(\frac{1}{10}\right)+\left(\frac{1}{11}\right)\left(\frac{1}{10}\right) \\
+   &amp;=\frac{2}{110} = \frac{1}{55} = 1.818\%\end{split}\]</div>
+</section>
+<section id="problem-6">
+<h3>Problem 6<a class="headerlink" href="#problem-6" title="Link to this heading"></a></h3>
+<p>A person takes a test to detect the occurence of a disease. The test’s characteristics are
+such that a person testing positive has actually a 70% chance actually having contracted the
+disease. Meaning that a person not having contracted the disease has a 30% chance of testing
+positive to it.
+The test’s results are used to allow a person to exit a quarantine – because having the disease
+makes them immune to it and they are no longer in risk of being infected. But as we saw,
+30% of those presumed to have had the disease, have not actually gone through it. If they
+allowed into the general population, they risk being infected.
+What would you do to ensure that a smaller number of those “false positives”, i.e., people
+who test positive without having contracted the disease, are allowed to exit the quarantine?</p>
+<p>Administer two tests, allow those two test positive to both tests to return to the general population.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

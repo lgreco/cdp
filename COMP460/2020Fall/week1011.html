@@ -1,0 +1,201 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review of Weeks 10, 11: counting and probabilities &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363+460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Review of Weeks 10, 11: counting and probabilities</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP460/2020Fall/week1011.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="review-of-weeks-10-11-counting-and-probabilities">
+<h1>Review of Weeks 10, 11: counting and probabilities<a class="headerlink" href="#review-of-weeks-10-11-counting-and-probabilities" title="Link to this heading"></a></h1>
+<p>Weeks 10 and 11 focus on discrete probabilities.</p>
+<ul class="simple">
+<li><p>From the recommended textbook: Chapters 6.7.</p></li>
+<li><p><a class="reference external" href="https://github.com/lgreco/cdp/blob/master/source/COMP163/OER/Aspnes-probability.pdf">Aspnes’ chapter on probability</a>. (Made available under a CC BY SA license).</p></li>
+</ul>
+<section id="solutions-to-in-class-assignment-7-conducted-4-1-20">
+<h2>Solutions to in-class assignment 7 (conducted 4/1/20)<a class="headerlink" href="#solutions-to-in-class-assignment-7-conducted-4-1-20" title="Link to this heading"></a></h2>
+<p><strong>Problem 1</strong>. There are <span class="math notranslate nohighlight">\(6^3\)</span> possible outcomes when rolling three dice.</p>
+<p><strong>Problem 2</strong>. The most likely sum to roll two fair dice to is 7. Because this sum can be achieved by the largest possible combinations between the two dice, i.e., 1+6, 2+5, 3+4, 4+3, 5+2, and 6+1. (Grading notes: solutions that do not answer the “why” part of this problem, are incomplete).</p>
+<p><strong>Problem 3</strong>. The planes with heavy damage in the outer wings and the rear fuselage, made it safely to their base. It means that such heavy damage did not affect the plane’s ability to fly. Therefore these areas are the least likely candidates for armor plating. (This problem is a simplified rendering of a <a class="reference external" href="https://www.motherjones.com/kevin-drum/2010/09/counterintuitive-world/">true story</a>).</p>
+</section>
+<section id="solutions-to-in-class-assigment-8-conducted-4-8-20">
+<h2>Solutions to in-class assigment 8 (conducted 4/8/20)<a class="headerlink" href="#solutions-to-in-class-assigment-8-conducted-4-8-20" title="Link to this heading"></a></h2>
+<p><strong>Problem 1</strong>. Assuming that the coins as properly glued, i.e., the head side of one coin is glued to the tail side of the other, the odds of tossing a head is the same as a single coin: 1/2. If the coins are glued tail-to-tail, the odds of tossing a head is 1. And if they are glued head-to-head, the odds are 0.</p>
+<p><strong>Problem 2</strong>. If the coins as properly glued, i.e., the head side of one coin is glued to the tail side of the other, the odds of tossing two heads back-to-back is the same as with a single coin: 1/4. If the coins are glued tail-to-tail, the odds of tossing back-to-back heads is 1. And if they are glued head-to-head, the odds are 0.</p>
+<p><strong>Problem 3</strong>. There are two correct answers to this problem, depending on how you interpret it: either 1/2 or 1/4.</p>
+</section>
+<section id="bayes-theorem-example">
+<h2>Bayes Theorem Example<a class="headerlink" href="#bayes-theorem-example" title="Link to this heading"></a></h2>
+<p>The standard expression of Bayes Theorem is:</p>
+<div class="math notranslate nohighlight">
+\[P(A|B) = \frac{P(B|A)P(A)}{P(B)}\]</div>
+<p>A medical test that diagnoses a disease, is characterized by its <em>sensitivity</em> and its <em>specificity</em>. The sensitivity of the test is its true positive rate, i.e., the fraction of patients who have the disease and test positive for it. For example if 100 patients have the disease and 90% of them test positive, the test’s sensitivity is 0.9. The test’s specificity is the fraction of people without the disease, who test negative. For example, if 100 people are known to not have the disease, and 95 of them test negative to it, the test’s specificity is 0.95.</p>
+<p>Consider that a person undergoes a test with 0.90 sensitivity and 0.95 specificity, and tests positive for a disease that has a 13% rate in the population. What are the actual chances that the person has the disease? In other words what is the conditional probability:</p>
+<div class="math notranslate nohighlight">
+\[P(\ \text{has disease}\ |\ \text{tests positive}\ )\]</div>
+<p>For simplicity, we rewrite the conditional probability <span class="math notranslate nohighlight">\(P(D|+)\)</span> where D stands for “has disease” and <span class="math notranslate nohighlight">\(+\)</span> stands for “tests positive”.</p>
+<p>According to Bayes theorem, the conditional probability above can be written as:</p>
+<div class="math notranslate nohighlight">
+\[P(D|+) = \frac{P(+|D)P(D)}{P(+)}\]</div>
+<p>In the expression above, <span class="math notranslate nohighlight">\(P(+|D)\)</span> is the sensitivity of the test and <span class="math notranslate nohighlight">\(P(D)\)</span> is the prevalence of the disease. We know these values to be 0.9 and 0.13 respectively, so</p>
+<div class="math notranslate nohighlight">
+\[P(D|+) = \frac{(0.9)(0.13)}{P(+)} = \frac{(0.117)}{P(+)}\]</div>
+<p>All we are missing is a value for <span class="math notranslate nohighlight">\(P(+)\)</span>. This can be a bit tricky to obtain, but straight-forward once we realize with the quantity means. <span class="math notranslate nohighlight">\(P(+)\)</span> is the probability that someone will test positive whether or not this person has the disease. This probability can be written as</p>
+<div class="math notranslate nohighlight">
+\[P(+) = P(+|D)P(D) + P(+|\overline{D})P(\overline{D})\]</div>
+<p>where <span class="math notranslate nohighlight">\(P(+|\overline{D})\)</span> is the probability to test positive if not having the disease.
+<span class="math notranslate nohighlight">\(P(\overline{D})\)</span> is the probability to not have the disease and it is evaluated as <span class="math notranslate nohighlight">\(1- P(D)\)</span>. Using the same law, we can also write <span class="math notranslate nohighlight">\(P(+|\overline{D})=1-P(-|\overline{D})\)</span> where <span class="math notranslate nohighlight">\(P(-|\overline{D})\)</span> is the probability of testing negagive if not having the disease; i.e. the test’s specificity. Everything put together:</p>
+<div class="math notranslate nohighlight">
+\[P(+) = (0.9)(0.13) + (1-0.95)(1-0.13) = 0.117 + 0.0435 = 0.1605\]</div>
+<p>And so</p>
+<div class="math notranslate nohighlight">
+\[P(D|+) = \frac{(0.9)(0.13)}{P(+)} = \frac{0.117}{0.1605} = 0.7289\]</div>
+<p>In other words, someone who tests positive for a disease with a 13% prevalence, using a test with 90% sensitivity and 95% specificity, has a 73% chance that actually has the disease.</p>
+</section>
+<section id="bayes-theorem-in-context-with-the-covid-19-pandemic">
+<h2>Bayes Theorem in context with the COVID-19 pandemic<a class="headerlink" href="#bayes-theorem-in-context-with-the-covid-19-pandemic" title="Link to this heading"></a></h2>
+<p>Various countries across the world contemplate the manner in which they will “reopen” after lockdown measures taken in response to the SARS-CoV-2 virus. This is the virus that causes the COVID-19 disease. One of the candidate criteria for allowing individuals to return to their offices and other public work spaces, is whether or not they were infected by the virus. Those infected are <em>presumed</em> to be immune to new infections; if not permanently, at least for a while. And therefore safe to be in public, without risk of being infected and infecting others.</p>
+<p>Many people seem to have been infected by the virus but remained asymptomatic, or dismissed their light symptoms. Determining if someone was infected and, presuma]bly, is now immune to the disease requires a test that detects the presence of virus-specific antibodies.</p>
+<p>In terms of conditional probabilities, we are interested in:</p>
+<div class="math notranslate nohighlight">
+\[P\ (\ \text{was infected}\ |\ \text{antibody test positive}\ )\]</div>
+<p>and for simplicity we write it as <span class="math notranslate nohighlight">\(P(I|+)\)</span>. In other words, if you take the antibody test and it comes positive, how likely is it that you were actually infected by the SAS-CoV-2 virus? Using Bayes’ theorem, the conditional probability is expressed as:</p>
+<div class="math notranslate nohighlight">
+\[P(I|+) = \frac{P(+|I)P(I)}{P(+)}\]</div>
+<p>As we saw earlier, <span class="math notranslate nohighlight">\(P(+|I)\)</span> is the <em>sensitivity</em> of the test and <span class="math notranslate nohighlight">\(P(I)\)</span> the prevalence of the infection. The denominator itself is the expected value of positive tests and can be evaluated directly as:</p>
+<div class="math notranslate nohighlight">
+\[P(+) = P(+|I)P(I) + P(+|\overline{I})P(\overline{I})\]</div>
+<p>The conditional probability  <span class="math notranslate nohighlight">\(P(I|+)\)</span> can be expressed now as a simple fraction:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P(I|+) &amp;= \frac{\alpha}{\alpha+\beta}, \\ \\
+\alpha &amp;= P(+|I)P(I) \\
+\beta &amp;= P(+|\overline{I})P(\overline{I})\end{split}\]</div>
+<p>Quantity <span class="math notranslate nohighlight">\(\alpha\)</span> is known: it is the product of the test’s sensitivity and the disease’s prevalence. And quantity <span class="math notranslate nohighlight">\(\beta\)</span> can be computed from its complements:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\beta &amp;= P(+|\overline{I})P(\overline{I}) \\
+      &amp;= (1-P(-|\overline{I}))\ (1-P(I))\end{split}\]</div>
+<p>The quantity <span class="math notranslate nohighlight">\(P(-|\overline{I})\)</span> is the test’s <em>specificity,</em> i,e., the likelihood that someone without the disease will test negative to it.</p>
+<p>If <span class="math notranslate nohighlight">\(p\)</span> is the prevalence of the disease, <span class="math notranslate nohighlight">\(s\)</span> the sensitivity of the antibody test, and <span class="math notranslate nohighlight">\(\sigma\)</span> the test’s specificity, our conditional probability becomes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P(I|+) &amp;= \frac{\alpha}{\alpha+\beta}, \\ \\
+\alpha &amp;= sp \\
+\beta &amp;= (1-\sigma)(1-p)\end{split}\]</div>
+<p>A good antibody test is expected to have high sensitivity and high selectivity. Let’s assume <span class="math notranslate nohighlight">\(s=0.95\)</span> and <span class="math notranslate nohighlight">\(\sigma=0.95\)</span>, and so <span class="math notranslate nohighlight">\(P(I|+)=\frac{0.95p}{0.95p+0.05(1-p)}\)</span>.</p>
+<p>The only unknown now is the prevalence of the disease. For a relatively rare disease affecting 500 out of 100,000 people, the prevalence <span class="math notranslate nohighlight">\(p=0.005\)</span> or 0.5%. If someone tests positive to an antibody test with 95% sensitivity and 95% selectivity, there is only a 8.7% chance they actually had the disease.</p>
+<p>If the prevalence is higher, let’s say 5,000 out of 100,000 people, and <span class="math notranslate nohighlight">\(p=0.05\)</span> or 5%, and someone tested positive, there is a 50% chance that they had the disease.</p>
+<p>And if the disease is rampant, i.e., half the population had it, and therefore <span class="math notranslate nohighlight">\(p=0.5\)</span> or 50%, those testing positive have a 95% chance that they actually had the disease.</p>
+<p>We don’t know yet what the actual prevalence of COVID-19 is. The <a class="reference external" href="https://www.cdc.gov/mmwr/volumes/69/wr/mm6915e4.htm">CDC reports incidence rates from 20.6 to 915.3 cases per 100,000</a>. Assuming, arbitrarily, a 100X factor between incidence and prevalence, we can guesstimate prevalence rate as: <span class="math notranslate nohighlight">\(0.0206\leq p\leq 0.9153\)</span>. For the low-end <span class="math notranslate nohighlight">\(p\)</span>, the conditional probability <span class="math notranslate nohighlight">\(P(I|+)\)</span>, given an antibody test with 95% sensitivity and specificity, is <span class="math notranslate nohighlight">\(P_{\text{low}}(I|+)\approx 31\%\)</span>. For the high-end prevalence indicating that 91.53% of the population gets infected, the conditional probability becomes: <span class="math notranslate nohighlight">\(P_{\text{high}}(I|+)\approx 99\%\)</span>.</p>
+<p>The truth is somewhere in-between. But if the disease prevalence is in the low-end, e.g., below 25%, then the antibody tests will miss more than 13% of those tested. Meaning that individuals not immune to the virus will be thought to be immune and will be allowed to mingle with the general population. This may lead to subsequent flare ups of the infection.</p>
+<p>On the other hand, if the disease is very prevalent, e.g. <span class="math notranslate nohighlight">\(p\geq 0.5\)</span>, then the tests will miss less than 4% of the cases, and this may be a manageable load.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

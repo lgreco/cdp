@@ -1,0 +1,13 @@
+!*.graffle
+.DS_Store
+.buildinfo
+.git/
+.github/
+.travis.yml
+get-current-version.sh
+requirements*
+build/
+repo_management_notes.txt
+.DS_Store
+docs/source/.DS_Store
+docs/desktop.ini

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integer division and modular arithmetic &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Integer division and modular arithmetic</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP170/notes/integerDivision.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="integer-division-and-modular-arithmetic">
+<h1>Integer division and modular arithmetic<a class="headerlink" href="#integer-division-and-modular-arithmetic" title="Link to this heading"></a></h1>
+<p>The “<code class="docutils literal notranslate"><span class="pre">mod</span></code>” operator is a good opportunity to discuss integer division and modular arithmetic in programming. The <em>modulo</em> operation in Java is assigned to the operator <code class="docutils literal notranslate"><span class="pre">%</span></code>. The standard definition is that <code class="docutils literal notranslate"><span class="pre">m%n</span></code> returns the (integer) remainder of the (integer division) of <span class="math notranslate nohighlight">\(m\)</span> by <span class="math notranslate nohighlight">\(n\)</span>. The mathemagics of the operation are captured by the equation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}m= \left[\frac{m}{n}\right]n+r&amp;\\ &amp;m,n,r\in\mathbb{Z}\end{split}\]</div>
+<p>The square brackets above are the <em>integer</em> part, <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> e.g. <span class="math notranslate nohighlight">\([3.14] = 3\)</span>. The operator <code class="docutils literal notranslate"><span class="pre">%</span></code> returns <span class="math notranslate nohighlight">\(r\)</span> from the equation above. It can be shown that <span class="math notranslate nohighlight">\(0\leq r\leq n-1,\forall m\in\mathbb{Z}\)</span>. This is an interesting property of the remainder operation <code class="docutils literal notranslate"><span class="pre">m%n</span></code>. For a fixed <span class="math notranslate nohighlight">\(n\)</span>, as <span class="math notranslate nohighlight">\(m\)</span> assumes different values, the result of <code class="docutils literal notranslate"><span class="pre">m%n</span></code> steps from <span class="math notranslate nohighlight">\(0\)</span>, to <span class="math notranslate nohighlight">\(1, \ldots\)</span> to <span class="math notranslate nohighlight">\(n-1\)</span>, and then back to <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>We can use this modular property in many ways, computationally. A popular use is to convert a serial collection to a two-dimensional arrangement. Imagine, for example, 16 people waiting to be seated in a (very) small theater with 4 rows, each with 4 seats. How can we group these people, 4-to-row, as shown below?</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/linear_2d.png" src="../../_images/linear_2d.png" />
+<figcaption>
+<p><span class="caption-text">Simple illustration of mapping a linear collection of 16 items to a two-dimensional arrangement of 4x4.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>We begin by assigning each person a number, showing their position in line. From now on, when counting, we’ll start from 0. Initially it may feel a bit odd to assign the first person to 0, the second to 1, etc. But it makes sense. Think of the number assigned to a person as the count of people ahead in line. There are 0 people in front of the first person, 2 people ahead of the third person, etc.</p>
+<p>Next we assign each person to the following row number.</p>
+<div class="math notranslate nohighlight">
+\[\textrm{row number} = \left[\frac{\textrm{position number in line}}{\textrm{number of seats per row}}\right]\]</div>
+<p>The square brackets indicate integer division. There are 4 sears per row, so:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+[0/4]  &amp;=0     &amp;[1/4]  &amp;=0     &amp;[2/4]  &amp;=0             &amp;[3/4]&amp;=0\\
+[4/4]  &amp;=1     &amp;[5/4]  &amp;=1     &amp;[6/4]  &amp;=1             &amp;[7/4]&amp;=1 \\
+[8/4]  &amp;=2     &amp;[9/4]  &amp;=2     &amp;[10/4] &amp;=2             &amp;[11/4]&amp;=2 \\
+[12/4] &amp;=3             &amp;[13/4] &amp;=3             &amp;[14/4] &amp;=3             &amp;[15/4]&amp;=3
+\end{align*}\end{split}\]</div>
+<p>The column for each person can be found in a similar way.</p>
+<p>These two integer operations (division and remainder) allow us to map a linear collection (e.g., people waiting in line) to a two-dimensional structure (e.g., seats in an airplane, stadium, etc).</p>
+<div class="math notranslate nohighlight">
+\[\textrm{column number} = (\textrm{position number in line})\ \%\ (\textrm{number of seats per row})\]</div>
+<p>The column number above, will cycle through <span class="math notranslate nohighlight">\(0, 1, \ldots\)</span> up to <span class="math notranslate nohighlight">\(\textrm{number of seats per row}-1\)</span>.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/linear_2d_box.png" src="../../_images/linear_2d_box.png" />
+<figcaption>
+<p><span class="caption-text">A simple mechanism to take a number and convert it to two numbers, representing a (row, column) reference in a two-dimensional grid.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The mechanism illustrated above can be implemente, naively for now, as follows.</p>
+<dl class="simple">
+<dt>..literalinclude:: ../codeExamples/IntroProgramming/IntegerOperations/src/NaiveLinearTo2D.java</dt><dd><dl class="field-list simple">
+<dt class="field-odd">linenos<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">language<span class="colon">:</span></dt>
+<dd class="field-even"><p>java</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Technically, the integer part <span class="math notranslate nohighlight">\([x]\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}[x] = \left\{ \begin{align*} \lfloor x \rfloor,\ \textit{if}\  x\geq 0 \\
+                              \lceil x \rceil,\ \textit{if}\ x&lt;0
+                                                                   \end{align*} \right.\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\lfloor x \rfloor = \max{\{m\in\mathbb{Z}: m\leq x\}}\)</span> and <span class="math notranslate nohighlight">\(\lceil x \rceil = \min{\{n\in\mathbb{Z}: n\geq x\}}\)</span>.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

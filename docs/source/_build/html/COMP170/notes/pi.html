@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computing pi (on pi day!) &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Computing pi (on pi day!)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP170/notes/pi.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="computing-pi-on-pi-day">
+<h1>Computing pi (on pi day!)<a class="headerlink" href="#computing-pi-on-pi-day" title="Link to this heading"></a></h1>
+<p>In observance of <strong>Pi Day</strong> (March 14), we worked out a numerical computation of the number <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
+<figure class="align-right" id="id1" style="width: 20%">
+<img alt="../../_images/pi-plain.png" src="../../_images/pi-plain.png" />
+<figcaption>
+<p><span class="caption-text">A circle inscribed in a square.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>We started with the observation that a circle inscribed in a square covers <span class="math notranslate nohighlight">\(\pi/4\)</span> of the square’s surface. Consider the arrangement shown to the right. We have a square whose edge has length <span class="math notranslate nohighlight">\(2a\)</span>. Its surface area is <span class="math notranslate nohighlight">\(4a^2\)</span>. A circle inscribed in that square, has a diameter also <span class="math notranslate nohighlight">\(2a\)</span> and therefore a radius <span class="math notranslate nohighlight">\(a\)</span>. The surface of the circle is <span class="math notranslate nohighlight">\(\pi r^2\)</span> or, in this case, <span class="math notranslate nohighlight">\(\pi a^2\)</span>.</p>
+<p>The fraction of the square’s surface covered by the circle is given by:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\text{area of circle with radius}\ r=a}{\text{area of square with edge}\ 2a} = \frac{\pi a^2}{4a^2} = \frac{\pi}{4}\]</div>
+<p>Any point inside the square has a <span class="math notranslate nohighlight">\(\pi/4\)</span> chance of also being inside the circle. And if we consider a sufficient number of points inside the square, at random, we expect about <span class="math notranslate nohighlight">\(\pi/4\)</span> of them to be inside the circle. In other words: we have a way of computing <span class="math notranslate nohighlight">\(\pi\)</span> by throwing random points inside a square surface! The process is simple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">a</span> <span class="n">square</span> <span class="k">with</span> <span class="n">an</span> <span class="n">inscribed</span> <span class="n">circle</span><span class="p">:</span>
+<span class="n">N</span> <span class="o">&lt;--</span> <span class="n">number</span> <span class="n">of</span> <span class="n">points</span> <span class="n">thrown</span> <span class="n">at</span> <span class="n">random</span><span class="p">,</span> <span class="n">inside</span> <span class="n">square</span>
+<span class="n">M</span> <span class="o">&lt;--</span> <span class="n">number</span> <span class="n">of</span> <span class="n">points</span> <span class="n">inside</span> <span class="n">circle</span>
+<span class="k">return</span> <span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="n">M</span><span class="o">/</span><span class="n">N</span><span class="p">)</span> <span class="k">as</span> <span class="n">approximation</span> <span class="n">of</span> <span class="n">pi</span>
+</pre></div>
+</div>
+<p>The first thing we need to do is to set up the square with an inscribed circle, in a way that we can manipulate computationally. Next we need a way to tell if a random point inside a square is also inside the circle. And, of course, we need a way to generate random numbers.</p>
+<figure class="align-right" id="id2" style="width: 60%">
+<img alt="../../_images/pi.png" src="../../_images/pi.png" />
+<figcaption>
+<p><span class="caption-text">Setting up the computational model we need.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The geometric set up is straight forward, and shown to the right. If our square has an edge with length <span class="math notranslate nohighlight">\(2a\)</span>, the inscribed circle has a radius of <span class="math notranslate nohighlight">\(a\)</span>. If we place these shapes at the center of <span class="math notranslate nohighlight">\(x\)</span>-<span class="math notranslate nohighlight">\(y\)</span> axes, any point inside the square can be described by coordinates <span class="math notranslate nohighlight">\((x, y)\)</span> such that <span class="math notranslate nohighlight">\(-a\leq x\leq a\)</span> and <span class="math notranslate nohighlight">\(-a\leq y\leq a\)</span>.</p>
+<p>Consider a point inside the square as shown in the figure. This point, at <span class="math notranslate nohighlight">\((x_1, y_1)\)</span> is also inside the circle. The distance of any point from the center is given by the Pythagorean theorem; in the case of the point at <span class="math notranslate nohighlight">\((x_1, y_1)\)</span>, that distance is <span class="math notranslate nohighlight">\(z_1 = \sqrt{x_1^2+y_1^2}\)</span>. We can tell that the point is inside the circle because <span class="math notranslate nohighlight">\(z_1 \leq a\)</span>.</p>
+<p>Now, we can begin putting together some code in Java.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">pi</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// how many points inside circle</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// loop to throw N points</span>
+<span class="w">    </span><span class="c1">// x = random number anywhere from -a to a</span>
+<span class="w">    </span><span class="c1">// y = random number anywhere from -a to a</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">);</span><span class="w">  </span><span class="c1">// distance of random point (x,y) from center</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w">  </span><span class="c1">// is distance less than radius?</span>
+<span class="w">      </span><span class="n">M</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// point is inside circle; count it.</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mf">4.0</span><span class="o">*</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">N</span><span class="p">);</span><span class="w">  </span><span class="c1">// approximate value of pi</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The last thing we need to analyze is how to find a random number in the interval from <span class="math notranslate nohighlight">\(-a\)</span> to <span class="math notranslate nohighlight">\(a\)</span>. Java can generate random numbers in the range from 0 to 1. The transform we want, should work as follows:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Java random number</p></td>
+<td><p>random number between <span class="math notranslate nohighlight">\(-a\)</span> and <span class="math notranslate nohighlight">\(a\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p><span class="math notranslate nohighlight">\(-a\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>1/2</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>This can be accomplished with the following expression:</p>
+<div class="math notranslate nohighlight">
+\[(\text{random number from} -a\ \text{to}\ a)\ =\ -a +2a\rho\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho\)</span> is a Java-generated random number. The final code is shown below.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/**</span>
+<span class="linenos"> 2</span><span class="cm"> * Computes pi by throwing N points, at random, inside a square and counting how many</span>
+<span class="linenos"> 3</span><span class="cm"> * fall within an inscribed circle.</span>
+<span class="linenos"> 4</span><span class="cm"> *</span>
+<span class="linenos"> 5</span><span class="cm"> * @param N int number of random points to throw inside the square</span>
+<span class="linenos"> 6</span><span class="cm"> * @return an approximate value of pi</span>
+<span class="linenos"> 7</span><span class="cm"> */</span>
+<span class="linenos"> 8</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">pi</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// Set up a random number generator</span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">Random</span><span class="w"> </span><span class="n">rng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// Radius of inscribed circle; also determines size of square</span>
+<span class="linenos">12</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="linenos">13</span><span class="w">    </span><span class="c1">// Initialize counter of points inside circle</span>
+<span class="linenos">14</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos">15</span><span class="w">    </span><span class="c1">// Set up loop to try N random points</span>
+<span class="linenos">16</span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">17</span><span class="w">        </span><span class="c1">// Obtain coordinates for random point</span>
+<span class="linenos">18</span><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2.0</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">rng</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+<span class="linenos">19</span><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2.0</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">rng</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+<span class="linenos">20</span><span class="w">        </span><span class="c1">// Distance of random point from center</span>
+<span class="linenos">21</span><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">);</span>
+<span class="linenos">22</span><span class="w">        </span><span class="c1">// If this point is within circle, update count</span>
+<span class="linenos">23</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">r</span><span class="p">)</span>
+<span class="linenos">24</span><span class="w">            </span><span class="n">M</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos">25</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">26</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">4.0</span><span class="o">*</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">M</span><span class="o">/</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">N</span><span class="p">);</span>
+<span class="linenos">27</span><span class="p">}</span><span class="w">  </span><span class="c1">// method pi</span>
+</pre></div>
+</div>
+<p>Casting both <code class="docutils literal notranslate"><span class="pre">M</span></code> and <code class="docutils literal notranslate"><span class="pre">N</span></code> as <code class="docutils literal notranslate"><span class="pre">double</span></code> variables in the return statement is a bit redundant. It suffices to cast as <code class="docutils literal notranslate"><span class="pre">double</span></code> only one of them. Nevertheless, it makes the code appear more purposeful, at least in my eyes.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

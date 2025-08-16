@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Largest letters &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Largest letters</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP170/notes/largestLetters.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="largest-letters">
+<h1>Largest letters<a class="headerlink" href="#largest-letters" title="Link to this heading"></a></h1>
+<p>This is a design example we worked in class on 3/28. The specification is to write a program that asks users to type letters (one letter at a time). When the user types a number instead of a letter, the program reports the two <em>largest</em> letters typed by the user thus far, and stops. Size is defined by the position of the letter in the alphabet. We assume that only lower case letters are entered. Smallest letter is <code class="docutils literal notranslate"><span class="pre">'a'</span></code> and largest letter  is  <code class="docutils literal notranslate"><span class="pre">'z'</span></code>.  The code must have at least two methods (including <code class="docutils literal notranslate"><span class="pre">main</span></code>). We can assume that the first two items entered by the user will be letters.</p>
+<p>The overall structure for our pseudocode is as follows.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">initialize</span> <span class="n">data</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">character</span> <span class="n">entered</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">number</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">letter</span> <span class="n">just</span> <span class="n">entered</span> <span class="n">greater</span> <span class="n">than</span> <span class="n">either</span> <span class="n">of</span> <span class="n">the</span> <span class="n">two</span> <span class="n">largest</span> <span class="n">letters</span> <span class="n">so</span> <span class="n">far</span><span class="p">,</span> <span class="n">then</span><span class="p">:</span>
+          <span class="n">replace</span> <span class="n">smallest</span> <span class="n">of</span> <span class="n">two</span> <span class="n">largest</span> <span class="n">letters</span> <span class="k">with</span> <span class="n">letter</span> <span class="n">just</span> <span class="n">entered</span>
+   <span class="nb">input</span> <span class="n">a</span> <span class="n">new</span> <span class="n">character</span>
+
+<span class="nb">print</span> <span class="n">the</span> <span class="n">two</span> <span class="n">largest</span> <span class="n">letters</span>
+</pre></div>
+</div>
+<p>The pseudocode above is very broad. Let’s consider some details: for example, how do we initialize data? For that matter, what are the initial data we need? How can we replace the smallest of two letters? How can we tell if a character is not a number, etc? Let’s look at these questions, one at a time.</p>
+<section id="initializing-data">
+<h2>Initializing data<a class="headerlink" href="#initializing-data" title="Link to this heading"></a></h2>
+<p>What data are we tracking in this program? At the very least, the two letters we print at the end. And because we need to compare both letters with a newly entered character, we need a third variable as well. Additionally, we’ll need a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to accept the keyboard inputs. To complete the initialization, we need to obtain the first values for the required variables.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// initialize data</span>
+<span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="s">&quot;System.in&quot;</span><span class="p">);</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">largest</span><span class="p">,</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">,</span><span class="w"> </span><span class="n">entered</span><span class="p">;</span>
+<span class="c1">// Obtain the first values for the required variables</span>
+<span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">entered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The use of <code class="docutils literal notranslate"><span class="pre">next().charAt(0)</span></code> is a substitute for <code class="docutils literal notranslate"><span class="pre">Scanner</span></code>’s lack of a method to read <code class="docutils literal notranslate"><span class="pre">char</span></code> data. Instead we read a String through <code class="docutils literal notranslate"><span class="pre">next()</span></code> and we take the first character (<code class="docutils literal notranslate"><span class="pre">charAt(0)</span></code>) from that string.</p>
+</section>
+<section id="loop-condition">
+<h2>Loop condition<a class="headerlink" href="#loop-condition" title="Link to this heading"></a></h2>
+<p>The loop runs while the the character entered is not a number. So we need a condition for that.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can make this condition a bit more tight. We can let the loop run only when the entered character is a lower case letter:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Thus the loop will end when we type a non-letter character: a number, for example.</p>
+</section>
+<section id="loop-contents">
+<h2>Loop contents<a class="headerlink" href="#loop-contents" title="Link to this heading"></a></h2>
+<p>The variables <code class="docutils literal notranslate"><span class="pre">largest</span></code> and <code class="docutils literal notranslate"><span class="pre">nextLargest</span></code> imply a relative order. We rely on this order when, inside the loop, we need to replace the smallest of two largest letters with the letter just entered. Therefore, at the beginning of the loop we must ensure that <code class="docutils literal notranslate"><span class="pre">largest</span></code> is indeed greater than <code class="docutils literal notranslate"><span class="pre">nextLargest</span></code>; otherwise swap them.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Ensure that largest &gt; nextLargest ... if not, swap them</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nextLargest</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">largest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">temporary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">largest</span><span class="p">;</span>
+<span class="w">  </span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">;</span>
+<span class="w">  </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temporary</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// Now we can guarantee largest &gt; nextLargest</span>
+</pre></div>
+</div>
+<p>Next, according to the earlier pseudocode, we should check if the letter just entered is greater than either of the two largest letters. And for that, we may think that the condition</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">largest</span><span class="p">,</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>would suffice. It does not. We guarantee that <code class="docutils literal notranslate"><span class="pre">largest</span> <span class="pre">&gt;</span> <span class="pre">nextLargest</span></code> always. And so the <code class="docutils literal notranslate"><span class="pre">max</span></code> function above will always return <code class="docutils literal notranslate"><span class="pre">largest</span></code>. The condition is essentially the same as</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">largest</span>
+</pre></div>
+</div>
+<p>What if <code class="docutils literal notranslate"><span class="pre">entered</span> <span class="pre">&lt;</span> <span class="pre">largest</span></code> and <code class="docutils literal notranslate"><span class="pre">entered</span> <span class="pre">&gt;</span> <span class="pre">nextLargest</span></code>? For example, if</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span>
+<span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;d&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>and then we type the letter <code class="docutils literal notranslate"><span class="pre">'f'</span></code> as the next entered? The condition</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">largest</span><span class="p">,</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>will evaluate to <code class="docutils literal notranslate"><span class="pre">false</span></code>. And yet, in the example above, the new value (<code class="docutils literal notranslate"><span class="pre">'f'</span></code>) needs to replace <code class="docutils literal notranslate"><span class="pre">'d'</span></code> as one of the two largest letters.</p>
+<p>The condition we really need is</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nextLargest</span>
+</pre></div>
+</div>
+<p>This condition tells us if the entered letter is greater than the lesser of the two largest letter. If it is, the entered letter takes the place of the lesser of the two largest letters. Now, we can implement the last pseudocode statement:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// if letter just entered &gt; than either of the two largest letters so far, then:</span>
+<span class="c1">// replace smallest of two largest letters with letter just entered</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">)</span>
+<span class="w">  </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entered</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Every time we change a value in the pair of the two largest letters, we need to ensure that <code class="docutils literal notranslate"><span class="pre">largest</span> <span class="pre">&gt;</span> <span class="pre">nextLargest</span></code>. That’s because the value we change is always the <code class="docutils literal notranslate"><span class="pre">nextLargest</span></code>. For example, if</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nextLargest</span> <span class="p">:</span> <span class="n">f</span>
+<span class="n">largest</span>     <span class="p">:</span> <span class="n">g</span>
+<span class="n">entered</span>     <span class="p">:</span> <span class="n">h</span>
+</pre></div>
+</div>
+<p>we see that `` h &gt; f `` and therefore we replace the contents of <code class="docutils literal notranslate"><span class="pre">nextLargest</span></code> with <code class="docutils literal notranslate"><span class="pre">h</span></code>. Now we have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nextLargest</span> <span class="p">:</span> <span class="n">h</span>
+<span class="n">largest</span>     <span class="p">:</span> <span class="n">g</span>
+</pre></div>
+</div>
+<p>The implied order <code class="docutils literal notranslate"><span class="pre">largest</span> <span class="pre">&gt;</span> <span class="pre">nextLargest</span></code> is not longer present, and it must be restored. That’s why we always check for this order at the beginning of the while loo.</p>
+<p>Finally, we can put the code together in a method.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">findTwoLargestLetters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Set up a scanner</span>
+<span class="w">  </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Set up two variables to track the two largest letters and obtain initial values</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// set up a variable for the recurring entries and obtain initial value</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Run a loop as long as entered is a lower case letter</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Make sure that largest is always &gt; nextLargest</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nextLargest</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">largest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Otherwise, swap them</span>
+<span class="w">      </span><span class="kt">char</span><span class="w"> </span><span class="n">temporary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">largest</span><span class="p">;</span>
+<span class="w">      </span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">;</span>
+<span class="w">      </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temporary</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// Is newly entered letter greater than either of large letters?</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">entered</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// replace smallest of the two largest letters with newly entered one</span>
+<span class="w">      </span><span class="n">nextLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entered</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// Get a new character and try again</span>
+<span class="w">    </span><span class="n">entered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// After loop ends, print the two largest letters</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;The two largest letters are %s and %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">largest</span><span class="p">,</span><span class="w"> </span><span class="n">nextLargest</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

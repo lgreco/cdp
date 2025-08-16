@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drawing Sears Tower &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Drawing Sears Tower</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP170/notes/searsTower.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="drawing-sears-tower">
+<h1>Drawing Sears Tower<a class="headerlink" href="#drawing-sears-tower" title="Link to this heading"></a></h1>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/SearsTower100dpi.png"><img alt="../../_images/SearsTower100dpi.png" src="../../_images/SearsTower100dpi.png" style="width: 400px;" /></a>
+</figure>
+<p>Drawing the Sears Tower (known as Willis Tower these days) can be accomplished with four methods. The tower can be split into four distinct tiers. Each tier can then be drawn using a dedicated method. Further abstraction is possible but for now, let’s go with four distinct methods as follows:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">masts()</span></code> to draw the antennas on top of the tower;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">top()</span></code> to draw the top tier of the tower;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">middle</span></code> to draw the middle tier of the tower, and;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bottom()</span></code> to draw the bottom tier.</p></li>
+</ul>
+<p>The only variable that needs to be determined by the user, is the heigh of the tower, expressed in lines (remember, we are doing this as <a class="reference external" href="https://en.wikipedia.org/wiki/ASCII_art">ASCII art</a>.) The heigh is captured as <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">int</span> <span class="pre">N;</span></code> <a class="reference external" href="https://github.com/lgreco/IntroProgramming/blob/master/Sears/src/SearsTower.java">in our program</a>.</p>
+<p>The rest of the dimensions, as shown in the schematic, are derived based on that variable <code class="docutils literal notranslate"><span class="pre">N</span></code>. The highlighted code below shows the corresponding calculations.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/**</span>
+<span class="linenos"> 2</span><span class="cm"> * Class with parameterized methods drawing the Sears tower.</span>
+<span class="linenos"> 3</span><span class="cm"> *</span>
+<span class="linenos"> 4</span><span class="cm"> * The class assembles a tower with three tiers: bottom, middle, and top. Each tier</span>
+<span class="linenos"> 5</span><span class="cm"> * is build in proportion to the total height of the tower -- specified in number</span>
+<span class="linenos"> 6</span><span class="cm"> * of lines to print. The proportions are captured in three groups of class variables.</span>
+<span class="linenos"> 7</span><span class="cm"> *</span>
+<span class="linenos"> 8</span><span class="cm"> * Class variables for height (suffixed _HEIGHT_FACTOR) specify the height of</span>
+<span class="linenos"> 9</span><span class="cm"> * each tier as a percentage of the tower&#39;s height, based on realistic measurements.</span>
+<span class="linenos">10</span><span class="cm"> *</span>
+<span class="linenos">11</span><span class="cm"> * Class variables for width (suffixed _WIDTH_FACTOR) specify the width of</span>
+<span class="linenos">12</span><span class="cm"> * each tier as a percentage of the tower&#39;s height, based on a realistic aspect</span>
+<span class="linenos">13</span><span class="cm"> * ratio of 1/6.45 (see https://skyscraperpage.com/cities/?buildingID=5).</span>
+<span class="linenos">14</span><span class="cm"> *</span>
+<span class="linenos">15</span><span class="cm"> * A third group of class variables is used for the symbols used in the drawing.</span>
+<span class="linenos">16</span><span class="cm"> *</span>
+<span class="linenos">17</span><span class="cm"> */</span>
+<span class="linenos">18</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SearsTower</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">    </span><span class="c1">// Class variables for height</span>
+<span class="linenos">21</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">BOTTOM_HEIGHT_FACTOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.45</span><span class="p">;</span>
+<span class="linenos">22</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">MIDDLE_HEIGHT_FACTOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.36</span><span class="p">;</span>
+<span class="linenos">23</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">TOP_HEIGHT_FACTOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.18</span><span class="p">;</span>
+<span class="linenos">24</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">WEST_ANTENNA_HEIGHT_FACTOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.19</span><span class="p">;</span>
+<span class="linenos">25</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">EAST_ANTENNA_HEIGHT_FACTOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.19</span><span class="p">;</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="w">    </span><span class="c1">// Class variables for width</span>
+<span class="linenos">28</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">BOTTOM_WIDTH_FACTOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="o">/</span><span class="mf">6.45</span><span class="p">;</span><span class="w"> </span><span class="c1">// aspect ratio</span>
+<span class="linenos">29</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">MIDDLE_WIDTH_FACTOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BOTTOM_WIDTH_FACTOR</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// half aspect</span>
+<span class="linenos">30</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">TOP_WIDTH_FACTOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MIDDLE_WIDTH_FACTOR</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// quarter aspect</span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="w">    </span><span class="c1">// Class variables for the symbols used in the drawing</span>
+<span class="linenos">33</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">BUILDING_ELEMENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;H&quot;</span><span class="p">;</span>
+<span class="linenos">34</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ANTENNA_ELEMENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;|&quot;</span><span class="p">;</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="w">    </span><span class="cm">/**</span>
+<span class="linenos">37</span><span class="cm">     * Prints the bottom tier of the tower, in proportion to a</span>
+<span class="linenos">38</span><span class="cm">     * user specified height.</span>
+<span class="linenos">39</span><span class="cm">     * @param towerHeight the height of the tower in number of lines to print</span>
+<span class="linenos">40</span><span class="cm">     */</span>
+<span class="linenos">41</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">bottomTier</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">towerHeight</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">42</span><span class="w">        </span><span class="c1">// How tall is this section in proportion to the tower&#39;s height?</span>
+<span class="linenos">43</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">bottomTierHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">BOTTOM_HEIGHT_FACTOR</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">towerHeight</span><span class="p">);</span>
+<span class="linenos">44</span><span class="w">        </span><span class="c1">// How wide is this section in proportion to the tower&#39;s height?</span>
+<span class="linenos">45</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">bottomTierWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">BOTTOM_WIDTH_FACTOR</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">towerHeight</span><span class="p">);</span>
+<span class="linenos">46</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">bottomTierHeight</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">47</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">BUILDING_ELEMENT</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">bottomTierWidth</span><span class="p">));</span>
+<span class="linenos">48</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">49</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// method bottomTier</span>
+<span class="linenos">50</span>
+<span class="linenos">51</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">middleTier</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">towerHeight</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">52</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">middleTierHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">MIDDLE_HEIGHT_FACTOR</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">towerHeight</span><span class="p">);</span>
+<span class="linenos">53</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">middleTierWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">MIDDLE_WIDTH_FACTOR</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">towerHeight</span><span class="p">);</span>
+<span class="linenos">54</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">middleTierHeight</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">55</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">BUILDING_ELEMENT</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">middleTierWidth</span><span class="p">));</span>
+<span class="linenos">56</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">57</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// method middleTier</span>
+<span class="linenos">58</span>
+<span class="linenos">59</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">topTier</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">towerHeight</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">60</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">topTierHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">TOP_HEIGHT_FACTOR</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">towerHeight</span><span class="p">);</span>
+<span class="linenos">61</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">topTierWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">TOP_WIDTH_FACTOR</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">towerHeight</span><span class="p">);</span>
+<span class="linenos">62</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">topTierHeight</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">63</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">BUILDING_ELEMENT</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">topTierWidth</span><span class="p">));</span>
+<span class="linenos">64</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">65</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// method topTier</span>
+<span class="linenos">66</span>
+<span class="linenos">67</span><span class="w">    </span><span class="c1">// driver method (main)</span>
+<span class="linenos">68</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">69</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span><span class="w"> </span><span class="c1">// desired height</span>
+<span class="linenos">70</span><span class="w">        </span><span class="n">topTier</span><span class="p">(</span><span class="n">N</span><span class="p">);</span><span class="w"> </span><span class="c1">// top tier for the desired height</span>
+<span class="linenos">71</span><span class="w">        </span><span class="n">middleTier</span><span class="p">(</span><span class="n">N</span><span class="p">);</span><span class="w"> </span><span class="c1">// middle tier for the desired height</span>
+<span class="linenos">72</span><span class="w">        </span><span class="n">bottomTier</span><span class="p">(</span><span class="n">N</span><span class="p">);</span><span class="w"> </span><span class="c1">// bottom tier for the desired height</span>
+<span class="linenos">73</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">74</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -23,7 +23,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Leo Irakliotis\' courses'
-copyright = '2019-2021, Leo Irakliotis'
+copyright = '2023, Leo Irakliotis'
 author = 'Leo Irakliotis'
 
 
@@ -69,13 +69,14 @@ html_static_path = []
 # These paths are either relative to html_static_path
 # or fully qualified paths (eg. https://...)
 html_css_files = [
-    'css/custom.css',
+    'css/custom.css'
 ]
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
+#html_theme = "classic"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mathematical Induction &mdash; Leo Irakliotis&#39; courses  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Leo Irakliotis' courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Past courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Java Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Leo Irakliotis' courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Mathematical Induction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/COMP397/notes/induction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mathematical-induction">
+<h1>Mathematical Induction<a class="headerlink" href="#mathematical-induction" title="Link to this heading"></a></h1>
+<p>Mathematical induction – often, just induction – is one of the simplest and yet most challenging concepts to master. It is also one of the most rewarding proof techniques. Induction allows us to prove a property for natural numbers, for which we have a hunch but we need solid proof. For example, we believe that the sum of the first <span class="math notranslate nohighlight">\(n\)</span> numbers is <span class="math notranslate nohighlight">\(n(n+1)/2\)</span>. In fact, every time we try for a different <span class="math notranslate nohighlight">\(n\)</span>, our hunch turns out to be true:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}n=3,\ \ 1+2+3 = 6 &amp;= \frac{3(3+1)}{2}=\frac{12}{2} \\ \\
+n=4,\ \ 1+2+3+4 = 10 &amp;= \frac{4(4+1)}{2}=\frac{20}{2} \\ \\
+n=5,\ \ 1+2+3+4+5 = 15 &amp;= \frac{5(5+1)}{2}=\frac{30}{2}\end{split}\]</div>
+<p>There is a story that when Gauss was 10 years old, he derived the sum formula</p>
+<div class="math notranslate nohighlight">
+\[1+2+\ldots+n = \frac{n(n+1)}{2}\]</div>
+<p>with a simple observation. When he was asked by a teacher to calculate the sum for <span class="math notranslate nohighlight">\(n=10\)</span>, he noticed that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}1+2+3+4+5&amp;+6+7+8+9+10 = \\ \\
+(1+10) + (2+9) + (3&amp;+8) + (4+7) + (5+6) = \\ \\
+11     + 11    &amp;+ 11     + 11    + 11 = \\ \\
+5\cdot 11 &amp; = \frac{10}{2}\cdot (10+1)= \\ \\
+\frac{n}{2}&amp;\cdot (n+1)\end{split}\]</div>
+<p>But deriving a formula is not the same as proving it. We can claim that the formula <span class="math notranslate nohighlight">\(1+2+\ldots+n = n(n+1)/2\)</span> works for <span class="math notranslate nohighlight">\(n=3\)</span> or 4 or 5 or even 10, but that doesn’t mean that it works for every natural number. We need a more rigorous tool to prove this property. The rigor, in this case, comes from the axiomatic foundation of natural numbers.</p>
+<p>In 1889, Giuseppe Peano, an Italian mathematician, put together a few fundamental statements about natural numbers. These statements, known as Peano’s Axioms, are the building blocks of the natural numbers set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>. An axiom is a statement that we accept as true. Peano stated five axioms. The last one is the rigorous tool we need to prove <span class="math notranslate nohighlight">\(1+2+\ldots+n = n(n+1)/2\)</span>. It is worth, however, to review all five axioms first.</p>
+<p>Before stating his axioms, Peano defined a <em>successor function,</em> i.e., a function that takes a natural number as input and returns the next successive natural number:</p>
+<div class="math notranslate nohighlight">
+\[S(n) = n+1\]</div>
+<p>Using the successor function, we can write:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}1 &amp;= S(0) \\
+2 &amp;= S(S(0)) \\
+3 &amp;= S(S(S(0)))\\
+&amp;\vdots\end{split}\]</div>
+<section id="peano-s-axioms">
+<h2>Peano’s Axioms<a class="headerlink" href="#peano-s-axioms" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(0\)</span> is a natural number.</p></li>
+<li><p>For every natural number <span class="math notranslate nohighlight">\(x\)</span>, its successor <span class="math notranslate nohighlight">\(S(x)\)</span> is also a natural number.</p></li>
+<li><p>For two natural numbers <span class="math notranslate nohighlight">\(x, y\)</span>, if <span class="math notranslate nohighlight">\(x=y \Leftrightarrow S(x)=S(y)\)</span>.</p></li>
+<li><p>There is no natural number <span class="math notranslate nohighlight">\(x\)</span> such that <span class="math notranslate nohighlight">\(S(x)=0\)</span>.</p></li>
+<li><p>If a set <span class="math notranslate nohighlight">\(K\)</span> contains <span class="math notranslate nohighlight">\(0\)</span>, and if for every natural number <span class="math notranslate nohighlight">\(n\)</span> being in <span class="math notranslate nohighlight">\(K\)</span> implies that <span class="math notranslate nohighlight">\(S(n)\)</span> is also in <span class="math notranslate nohighlight">\(K\)</span>, then <span class="math notranslate nohighlight">\(K\)</span> contains every natural number.</p></li>
+</ol>
+<p>The last axiom is the basis for mathematical induction. Let’s demonstrate it with the summation formula <span class="math notranslate nohighlight">\(1+2+\ldots+n = n(n+1)/2\)</span>. We want to show that the formula works for every natural number. So far, we have shown that it works for <span class="math notranslate nohighlight">\(n=3, 4, 5\)</span> and <span class="math notranslate nohighlight">\(10\)</span>.</p>
+<p>We start by defining a set <span class="math notranslate nohighlight">\(K\)</span> to contain the natural numbers that we have shown to work with the formula: <span class="math notranslate nohighlight">\(K=\{3, 4, 5, 10\}\)</span>. We can show that <span class="math notranslate nohighlight">\(0\)</span> also belongs to <span class="math notranslate nohighlight">\(K\)</span>, because <span class="math notranslate nohighlight">\(0=0\cdot(0+1)/2\)</span>. Thus, set <span class="math notranslate nohighlight">\(K\)</span> fulfills the first condition of the induction axiom, i.e., <span class="math notranslate nohighlight">\(0 \in K\)</span>.</p>
+<p>The next step is to <em>assume</em> that a natural number <span class="math notranslate nohighlight">\(n\)</span> is in <span class="math notranslate nohighlight">\(K\)</span> and then <em>prove</em> that <span class="math notranslate nohighlight">\(n+1\)</span> is also in <span class="math notranslate nohighlight">\(K\)</span>. If we do, then we prove (based on Peano’s fifth axiom) that all natural numbers are in set <span class="math notranslate nohighlight">\(K\)</span>; or in other words <span class="math notranslate nohighlight">\(K=\mathbb{N}\)</span>. And why is this important? Because <span class="math notranslate nohighlight">\(K\)</span> is the set with the numbers for which the sum formula works. And if  <span class="math notranslate nohighlight">\(K=\mathbb{N}\)</span>, then the formula works for every natural number, which is the proof we wanted!</p>
+<p>Let’s assume then that <span class="math notranslate nohighlight">\(n\in K\)</span>, therefore:</p>
+<div class="math notranslate nohighlight">
+\[1+2+\ldots + n = \frac{n(n+1)}{2}\]</div>
+<p>Next we examine if and how we can show that <span class="math notranslate nohighlight">\(n+1\)</span> is in <span class="math notranslate nohighlight">\(K\)</span>. If — and for now, that’s a big if — this is true, if <span class="math notranslate nohighlight">\(n+1\)</span> is indeed in K, we expect that</p>
+<div class="math notranslate nohighlight">
+\[1+2+\dots + n +(n+1) = \frac{(n+1)(n+2)}{2}\]</div>
+<p>Our objective now is to start from the left side of the expression above and see if we can arrive to the right side. When we observe the left side:</p>
+<div class="math notranslate nohighlight">
+\[1+2+\dots + n +(n+1)\]</div>
+<p>we notice that it contains the expression from the case for <span class="math notranslate nohighlight">\(n\)</span>. And since we assumed that the case is true, we can substitute <span class="math notranslate nohighlight">\(1+2+\ldots + n\)</span> with <span class="math notranslate nohighlight">\(\frac{n(n+1)}{2}\)</span>. The substitution give us:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}1+2+\dots + n +(n+1) =\\ \\
+\frac{n(n+1)}{2} + (n+1) = \\ \\
+\frac{n(n+1)+2(n+1)}{2} = \\ \\
+\frac{(n+1)(n+2)}{2}\end{split}\]</div>
+<p>And so, we have shown that</p>
+<div class="math notranslate nohighlight">
+\[1+2+\dots + n +(n+1) = \frac{(n+1)(n+2)}{2}\]</div>
+<p>and therefore <span class="math notranslate nohighlight">\(n+1\in K\)</span>. Or, in other words, every natural number belongs to <span class="math notranslate nohighlight">\(K\)</span> and thus <span class="math notranslate nohighlight">\(K=\mathbb{N}\)</span>.</p>
+<p>The “price of admission” to set <span class="math notranslate nohighlight">\(K\)</span> is for a natural number <span class="math notranslate nohighlight">\(n\)</span> to satisfy the formula <span class="math notranslate nohighlight">\(1+2+\ldots + n = n(n+1)/2\)</span>. And since we showed that all natural numbers are in <span class="math notranslate nohighlight">\(K\)</span>, we have proved that the formula works for any natural number.</p>
+</section>
+<section id="a-template-for-induction-proofs">
+<h2>A template for induction proofs<a class="headerlink" href="#a-template-for-induction-proofs" title="Link to this heading"></a></h2>
+<p>Induction problems ask us to prove a property of the form</p>
+<div class="math notranslate nohighlight">
+\[L(n) = R(n)\]</div>
+<p>In the example above, <span class="math notranslate nohighlight">\(L(n)= 1+2+\ldots+n\)</span> and <span class="math notranslate nohighlight">\(R(n)=n(n+1)/2\)</span>.</p>
+<p>Given a problem in the form <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span>, the induction proof can be done in three steps.</p>
+<section id="step-1">
+<h3>Step 1<a class="headerlink" href="#step-1" title="Link to this heading"></a></h3>
+<p>Show that <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span> holds for <span class="math notranslate nohighlight">\(n=1\)</span>. (Yes, Peano says to show for <span class="math notranslate nohighlight">\(n=0\)</span> but <span class="math notranslate nohighlight">\(1\)</span> is just as good).</p>
+</section>
+<section id="step-2">
+<h3>Step 2<a class="headerlink" href="#step-2" title="Link to this heading"></a></h3>
+<p>Assume that <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span> holds for <span class="math notranslate nohighlight">\(n=k\)</span>, i.e., <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> is true.</p>
+</section>
+<section id="step-3">
+<h3>Step 3<a class="headerlink" href="#step-3" title="Link to this heading"></a></h3>
+<p>Start with <span class="math notranslate nohighlight">\(L(k+1)\)</span> and show that it equals <span class="math notranslate nohighlight">\(R(k+1)\)</span>. You will notice that the expression   <span class="math notranslate nohighlight">\(L(k+1)\)</span> always contains <span class="math notranslate nohighlight">\(L(k)\)</span>. And since you just assumed that <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> in Step 2, you can write</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}L(k+1) &amp;= L(k) + (n+1) \\
+&amp;= R(k) + (n+1)\end{split}\]</div>
+<p>From here, the problem is reduced to simple (usually) derivations to show that
+<span class="math notranslate nohighlight">\(R(k) + (n+1) = R(k+1)\)</span>. Showing that, completes the proof.</p>
+</section>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="the-summation-formula">
+<h3>The summation formula<a class="headerlink" href="#the-summation-formula" title="Link to this heading"></a></h3>
+<p>Prove that</p>
+<div class="math notranslate nohighlight">
+\[1+2+\ldots + n = \frac{n(n+1)}{2}\]</div>
+<p>We worked this formula above to demonstrate the inductive method. We repeat the proof here in a more formal manner.</p>
+<section id="id1">
+<h4>Step 1<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<p>For this step, first we need to identify the expressions <span class="math notranslate nohighlight">\(L(n)\)</span> and <span class="math notranslate nohighlight">\(R(n)\)</span>. In this case, it’s fairly easy:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}L(n) &amp;= 1+2+\ldots + n \\ \\
+R(n) &amp;= \frac{n(n+1)}{2}\end{split}\]</div>
+<p>Next we have to test if <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span> for a specific value of <span class="math notranslate nohighlight">\(n\)</span>. Peano said to use <span class="math notranslate nohighlight">\(n=0\)</span> but we prefer to test for <span class="math notranslate nohighlight">\(n=1\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}L(1)&amp;=1  \\ \\
+R(1)&amp;=\frac{1(1+1)}{2}=1\end{split}\]</div>
+<p>So, <span class="math notranslate nohighlight">\(L(1)=R(1)\)</span>.</p>
+</section>
+<section id="id2">
+<h4>Step 2<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
+<p>This is a simple and quick step. We only have to state that for an arbritrary <span class="math notranslate nohighlight">\(n=k\)</span> the expression <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> is true; in other words:</p>
+<div class="math notranslate nohighlight">
+\[1+2+\ldots +k = \frac{k(k+1)}{2}\]</div>
+</section>
+<section id="id3">
+<h4>Step 3<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<p>Here we use the next number up from the previous step. In Step 2 we looked at <span class="math notranslate nohighlight">\(n=k\)</span>. The next number up is <span class="math notranslate nohighlight">\(k+1\)</span>. The question we must answer in this step now is if <span class="math notranslate nohighlight">\(L(k+1)\)</span> equals <span class="math notranslate nohighlight">\(R(k+1)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[L(k+1) = 1+2+\ldots +k + (k+1)\]</div>
+<p>Notice that <span class="math notranslate nohighlight">\(L(k+1)=L(k)+k+1\)</span>. Step 2 empowers us to replace <span class="math notranslate nohighlight">\(L(k)\)</span> with <span class="math notranslate nohighlight">\(R(k)\)</span>, therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}L(k+1) &amp;= \underbrace{1+2+\ldots +k}_{=L(k)=R(k)} + (k+1) \\ \\
+       &amp;= R(k)+(k+1) \\ \\
+               &amp;= \frac{k(k+1)}{2} + (k+1)\\ \\
+               &amp;= \frac{(k+1)(k+2)}{2} \\ \\
+               &amp;= R(k+1)\end{split}\]</div>
+<p>We just proved that given  <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> the equation holds for the successor of <span class="math notranslate nohighlight">\(k\)</span> as well, <span class="math notranslate nohighlight">\(L(k+1)=R(k+1)\)</span>, and thefore the original expression</p>
+<div class="math notranslate nohighlight">
+\[1+2+\ldots + n = \frac{n(n+1)}{2}\]</div>
+<p>is true for every natural number.</p>
+</section>
+</section>
+<section id="the-stamps-problems">
+<h3>The stamps problems<a class="headerlink" href="#the-stamps-problems" title="Link to this heading"></a></h3>
+<p>Show that any postage amount greater than $0.17 can be formed with $0.03 and $0.10 stamps. For example, $0.22 worth of postage comprises one $0.10 stamp and four $0.03 stamps.</p>
+<section id="id4">
+<h4>Step 1<a class="headerlink" href="#id4" title="Link to this heading"></a></h4>
+<p>Problems like this one do not have a readily available expression of the form <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span>. We have to derive the formula by restating the problem. Basically, the problem says that any number greater than 17 can be written as the sum of multiples of 3 and multiples of 10:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}n&amp;=3a+10b\\n&amp;\geq 18\end{aligned}\end{align} \]</div>
+<p>Here <span class="math notranslate nohighlight">\(L(n)=n\)</span> but what about <span class="math notranslate nohighlight">\(R(n)\)</span>? The right side of the question does not contain <span class="math notranslate nohighlight">\(n\)</span>. Or does it? We can always write <span class="math notranslate nohighlight">\(3b+10b=3a+10b+0n\)</span>, and this will be our <span class="math notranslate nohighlight">\(R(n)\)</span>. So the problem is restated as follows:</p>
+<div class="math notranslate nohighlight">
+\[\underbrace{n}_{L(n)} = \underbrace{3a+10b+0n}_{R(n)}\]</div>
+<p>Now that we have established <span class="math notranslate nohighlight">\(L(n)\)</span> and <span class="math notranslate nohighlight">\(R(n)\)</span> we have to test that they hold true. We cannot test for <span class="math notranslate nohighlight">\(n=1\)</span> because the problem states that the property applies only to numbers <span class="math notranslate nohighlight">\(n\geq 18\)</span>. So we should try for <span class="math notranslate nohighlight">\(L(18)=R(18)\)</span>, in other words, can we write 18 as a sum of multiples of 3 and 10? Indeed we can:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}18 =3a+10b\\\text{when}\ a=6, b=0\end{aligned}\end{align} \]</div>
+</section>
+<section id="id5">
+<h4>Step 2<a class="headerlink" href="#id5" title="Link to this heading"></a></h4>
+<p>This is the easiest step of the proof. We assume that the property holds for an arbitrary integer <span class="math notranslate nohighlight">\(k\)</span>, i.e., <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span>.</p>
+</section>
+<section id="id6">
+<h4>Step 3<a class="headerlink" href="#id6" title="Link to this heading"></a></h4>
+<p>Can we now prove that the property works for <span class="math notranslate nohighlight">\(S(k)\)</span>, by working our way from <span class="math notranslate nohighlight">\(L(k+1)\)</span> to <span class="math notranslate nohighlight">\(R(k+1)\)</span>. Just remember that for this problem, <span class="math notranslate nohighlight">\(R\)</span> simply means a sum of multiples of 3 and 10.</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}L(k+1) &amp;= k+1\ \ \ \ (\text{and from step 2,}\ k=3a+10b)\\               &amp;=3a+10b+1\ \ \ \ (\text{rewrite}\ 1=10-9)\\               &amp;=3a+10b+10-9\\               &amp;=3(a-3)+10(b+1)\ \ \ \ (\text{substituting}\ a'=a-3,\ b'=b+1)\\               &amp;=3a'+10b'\end{aligned}\end{align} \]</div>
+<p>What the expression above says is that <span class="math notranslate nohighlight">\(k+1\)</span> is also a sum of multiples of 3 and 10, and therefore <span class="math notranslate nohighlight">\(L(k+1)=R(k+1)\)</span>.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-2025, Leo Irakliotis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
