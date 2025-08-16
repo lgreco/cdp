@@ -4,25 +4,8 @@
 
 .. include:: ../shared/courseOutline.rst
 
-This course explores the concepts of data abstraction and data structure, including stacks, queues, lists, sets, and trees. The implementation of data structures gives us an opportunity to review design by interface, generic classes, and other important coding techniques. Sorting and searching techniques are analyzed. The concepts of correctness and efficiency of algorithms are developed. 
+Using Python, the course follows the textbook to introduce simple statements, basic programs, data types, branching logic, organizing code into functions, building complex programs with methods, etc.
 
-The tentative contents for the course is as follows.
-
- - Review of Java
- - Object-Oriented Concepts
- - Additional Features of Programming and Java
- - Analysis of Algorithms
- - Java Collections Framework
- - Recursion
- - Array-Based Lists
- - Linked Lists
- - Stacks and Queues
- - Binary Search Trees
- - Sorting
- - Sets
- - Priority Queues
- - Hashing
- 
 .. include:: ../shared/deadlines.rst
 
 
@@ -34,12 +17,14 @@ The final and midterm exams will be a take-home assignments. Exact dates will be
 
 Textbook
 ++++++++
-Recommended (but not required): 
-*Building Java Programs: A Back to Basics Approach,* 5th Edition, by Stuart Reges and Marty Stepp. (Yes, this is the textbook used in COMP 170)
+
+*Building Python Programs,* 1st edition
+by Stuart Reges, Marty Stepp, and Allison Obourn.
+This textbook is **required.**
 
 Computer Equipment
 ++++++++++++++++++
-You will need access to a desktop or laptop computer and a web browser. We will use GitHub's Codespaces. This is a web-based development with a Visual Studio Code interface. At some point, you way want to download and install VSC on your computer but there is no need to do so in the beginning of the course.
+You will need access to a desktop or laptop computer and a web browser. Consult the course's Sakai site for the programming tools you'll need to install.
 
 .. include:: ../shared/attendance.rst
 .. include:: ../shared/ungrading.rst
