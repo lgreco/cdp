@@ -21,18 +21,7 @@ site.
    :maxdepth: 1
    :caption: Courses
       
-   COMP170/introduction
-   COMP271/introduction
-   COMP363/introduction
-   COMP460/introduction
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Past courses
-   
-   COMP163/introduction
-   COMP264/introduction
-   COMP306/introduction
+   tbd
    
    
 .. toctree::
