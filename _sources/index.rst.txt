@@ -21,7 +21,8 @@ site.
    :maxdepth: 1
    :caption: Courses
       
-   tbd
+   COMP363/introduction
+   COMP460/introduction
    
    
 .. toctree::
