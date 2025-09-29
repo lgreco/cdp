@@ -1,3 +1,11 @@
+Religious accommodations
+========================
+
+As a Jesuit, Catholic university, Loyola University Chicago invites people of all faiths and traditions to be a part of our community and we are committed to supporting students in their faith journeys. As a faculty members I will make reasonable accommodations for students when the observance of a major religious holiday conflicts with academic responsibilities. If you are unable to attend class, take an exam or quiz, give a presentation, or submit an assignment due to a religious observance, you will be excused and given the opportunity to make up the work. 
+
+You remain responsible for all assigned coursework and should notify me in advance via Loyola email about any religious observances that may affect your class participation. Campus Ministry has compiled a list of religious holidays that may impact Loyola students, available on the Campus Ministry website. However, this calendar is advisory– I will make reasonable accommodations for students observing significant holidays, including those not listed.  
+
+
 Inclusion statement
 ===================
 
