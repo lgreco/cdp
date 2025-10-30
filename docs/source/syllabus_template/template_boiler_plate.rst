@@ -1,48 +1,6 @@
 
 :orphan: 
-
-Course Information
-------------------
-
-COMP 1234 - 000
-
-Course name and description (from LOCUS)
-
-Meets: when and where
-
-Prerequisites are listed on LOCUS
-
-
-.. include:: instructor_information
-
-
-Learning
----------
-
-Learning outcomes, objectives, and/or competencies
-
-Brief description of learning activities planned to achieve those outcomes, objectives and/or competencies (e.g., lecture, small group projects, readings and discussion, class presentations)
-
-A timeline that the instructor sets that describes the overall organization of the course, as well as when readings, assignments, and assessments will occur
-
-Information about Academic Integrity
--------------------------------------
-
-i. Link to the University Policy posted in the Undergraduate Academic Standards
-and Regulations. Please open the foldout for the third item, “Academic
-Integrity.
-
-ii. If you have an additional academic integrity policy specific to your college or
-school, you may add that as well as the university policy linked here.
-
-Required Materials, and/or Equipment
----------------------------------------
-
-i. Textbooks and/or course texts
-ii. Other materials and/or equipment, as well as whether they must be purchased
-or will be provided (e.g., calculators, art supplies, lab safety equipment, medical
-equipment, hardware requirements, software access, virtual proctoring
-requirements, digital storage devices, special clothing, musical instruments)
+ 
 
 Evaluation and Grading
 -----------------------
@@ -70,13 +28,13 @@ As a teacher, I have found that most students have a good understanding of their
 
 
 Reflection statements
------------------------
+============================
 
 
 For the midterm and end-of-term reflections statements, I use `Jesse Stommel's suggestions <https://www.jessestommel.com/ungrading-an-faq/>`__ with some additional questions.
 
 Midterm reflection
------------------------
+============================
 
 * What aspects of the course have been the most successful for you so far? 
 * What thing that you've learned are you most excited about?
@@ -85,7 +43,7 @@ Midterm reflection
 * Based on your performance so far, what do you feel your course grade should be? Choose from A, B, C, or D.
 
 End-of-term reflection
------------------------
+============================
 
 * Write me a short letter that reflects on your work in this class. 
 * Consider the work you did on exams, assignments, and lab/studio sessions, the feedback you gave and received, and how you met your own goals. 
@@ -97,7 +55,7 @@ End-of-term reflection
 
 
 Frequently Asked Questions about *Ungrading*
-----------------------------------------------
+==================================================
 
 
 **What is the grade I see in Sakai?** Everytime you submit an assignment, you will earn 1 point. This is not the score of the assignment. This is just Sakai's way of keeping track who submitted an assignment. Whether your assignment is spot on or off the mark, you will earn 1 point for submitting it. These points do not translate to a score that determines a course grade.
@@ -112,7 +70,8 @@ Frequently Asked Questions about *Ungrading*
 **Why?**  *Ungrading* is very similar to a job situation. We receive feedback from peers and supervisors. The feedback tells us what we do well and what needs more attention. We use the feedback to meet new challenges, improve our skills, and advance our careers. *Ungrading* is also less stressful because you do not have to worry about a grade scale. It allows you to focus on learning and it is forgiving with mistakes that are not repeated.
 
 Attendance
------------
+----------------
+
 
 Programming-intensive courses involve live coding, hands-on demonstration, and discussions. Therefore, **attendance is required.**
 
