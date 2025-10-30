@@ -40,4 +40,4 @@ or will be provided (e.g., calculators, art supplies, lab safety equipment, medi
 equipment, hardware requirements, software access, virtual proctoring
 requirements, digital storage devices, special clothing, musical instruments)
 
-.. include:: template_boiler_plate
+.. include:: template_boiler_plate.rst
