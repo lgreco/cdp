@@ -2,7 +2,7 @@ Spring 2026 term
 =================
 
 
-In the **Spring 2026,** I teach **COMP 271** (Data Structures I), **COMP 363** (Design and Analysis of Algorithms) and **COMP 460** (Algorithms, in the graduate school), and **HONR 204** (Honors class Science and Society)
+In the **Spring 2026,** I teach **COMP 271** (Data Structures I), **COMP 363** (Design and Analysis of Algorithms) and **COMP 460** (Algorithms, in the graduate school), and **HONR 204** (Honors class in Science and Society).
 
 .. In the **Spring 2025,** I teach **COMP 150** (Introduction to Computing), **COMP 363,** (undergraduate Algorithms), and **COMP460** (graduate Algorithms). 
 
