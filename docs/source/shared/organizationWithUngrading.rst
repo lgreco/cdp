@@ -5,6 +5,7 @@ Course organization and logistics
 ..	toctree::
 
 .. include:: ../shared/deadlines.rst
+.. include:: ../shared/attendance.rst
 
 .. include:: ../shared/makeUp.rst
 
