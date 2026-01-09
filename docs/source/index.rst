@@ -21,6 +21,9 @@ site.
    :maxdepth: 1
    :caption: Courses
       
+   
+   HONR204/introduction
+   COMP271/introduction
    COMP363/introduction
    COMP460/introduction
    
