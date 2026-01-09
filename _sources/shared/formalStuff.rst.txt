@@ -33,7 +33,7 @@ The University maintains such reporting requirements to ensure that any student 
 
 If you ever wish to speak with a confidential resource regarding gender-based violence, I encourage you to call The Line at 773-494-3810. The Line is staffed by confidential advocates from 8:30am-5pm M-F and 24 hours on the weekend when school is in session. Advocates can provide support, talk through your options (medical, legal, LUC reporting, safety planning, etc.), and connect you with resources as needed -- without generating a report or record with the OEC. More information about The Line can be found at luc.edu/wellness.
 
-* **Use of Appropriate Names and Pronouns**
+**Use of Appropriate Names and Pronouns**
 
 Addressing one another at all times by using one's chosen modes of address (including preferred names and gender pronouns) honors and affirms individuals of all gender identities and gender expressions. Misgendering and heteronormative language excludes the experiences of individuals whose identities may not fit within a gender binary, and/or who may not identify with the sex they were assigned at birth.
 
