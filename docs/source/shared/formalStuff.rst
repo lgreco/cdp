@@ -23,7 +23,7 @@ Formal notices
   * Dating and/or domestic violence, and/or
   * Stalking
 
-  Title IX Office.** As the University’s Title IX office, the OEC coordinates the University's response to reports and complaints of sexual misconduct (as well as discrimination of any kind) to ensure students' rights are protected.
+    Title IX Office.** As the University’s Title IX office, the OEC coordinates the University's response to reports and complaints of sexual misconduct (as well as discrimination of any kind) to ensure students' rights are protected.
 
   As an instructor, I also have an obligation under Illinois law to report disclosures of or suspected instances of child abuse or neglect (https://www.luc.edu/hr/legal-notices/mandatedreportingofchildabuseandneglect/).
 
