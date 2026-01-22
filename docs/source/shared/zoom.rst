@@ -1,7 +1,7 @@
 Online meetings
 ================
 
-If the class is asynchronous or online, you'll need [Microsoft Teams to participate](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software).
+If the class is asynchronous or online, you'll need `Microsoft Teams to participate <https://www.microsoft.com/en-us/microsoft-teams/group-chat-software>`__.
 
 It is a good idea to have this app handy even for synchronous courses that meet on campus. For example, during inclement weather, I may move the class meeting to online, to keep everyone safe, dry, and warm.
 
