@@ -6,7 +6,7 @@ Course organization and logistics
 
 .. include:: ../shared/deadlines.rst
 .. include:: ../shared/attendance.rst
-
+.. include:: ../shared/weather.rst
 .. include:: ../shared/makeUp.rst
 
 .. include:: ../shared/assignments.rst
