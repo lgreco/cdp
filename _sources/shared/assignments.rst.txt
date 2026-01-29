@@ -5,4 +5,4 @@ Course performance is evaluated with a series of assignments. In a 200-level cou
 
 Exams are usually a mix of take-home work and in-person, oral one-one sessions with me. 
 
-There are no deadline expectations or make-up assignments in this course. 
+There are no deadline extensions or make-up assignments in this course. 
