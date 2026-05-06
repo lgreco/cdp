@@ -5,7 +5,7 @@
 .github/
 .travis.yml
 get-current-version.sh
-requirements*
+requirements_local*
 build/
 repo_management_notes.txt
 .DS_Store

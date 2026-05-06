@@ -29,7 +29,7 @@ author = 'Leo Irakliotis'
 
 # -- General configuration ---------------------------------------------------
 
-master_doc = 'index'
+root_doc = 'index'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -37,8 +37,11 @@ master_doc = 'index'
 extensions = [
     "sphinx_rtd_theme",
     "sphinxcontrib.gist",
-    "sphinx.ext.githubpages" # needed for GH actions
+    "sphinx.ext.githubpages", # needed for GH actions
+    "sphinx.ext.autosectionlabel",
 ]
+
+autosectionlabel_prefix_document = True
 
 # allows sphinx to ignore errors in parsing ipynb files
 # to be used with nbsphinx extenesion after it is added to 
@@ -61,23 +64,11 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # -- Options for HTML output -------------------------------------------------
 
-# These folders are copied to the documentation's HTML output
-html_static_path = ['_static']
-
-# These paths are either relative to html_static_path
-# or fully qualified paths (eg. https://...)
-html_css_files = [
-    'css/custom.css'
-]
-
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
 #html_theme = "classic"
 
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-#html_static_path = ['_static']
-html_static_path = []
+html_title = "Leo Irakliotis' Courses"
+html_last_updated_fmt = "%B %d, %Y"
