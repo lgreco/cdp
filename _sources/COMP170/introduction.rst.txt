@@ -1,10 +1,15 @@
 ========================================================
-COMP 170 Introduction to [Object Oriented] Programming
+COMP 170 Introduction to Object-Oriented Programming
 ========================================================
 
-This is the starting point for most students interested in learning how to program at a professional level. The course is just the first in a sequence of several courses that impart professional-grade programming skills. This course starts with the basics, introducing students to the fundamental concepts of programming including loops, arrays, branching, strings, data types, and object-oriented principles. The course also explores the role, benefits, and problems of AI in coding.
+This is the starting point for most students interested in learning how to program at a professional level. The course is the first in a sequence of several courses that develop professional-grade programming skills.
+
+The course covers Python programming from first principles along three parallel tracks: programming concepts (following *Think Python* by Allen Downey), Unix command-line tools and environment (following *The Linux Command Line* by William Shotts), and mathematical foundations — logic, functions, sets, and introductory algorithm analysis — drawn from course notes. By the end of the course students write multi-class Python programs with docstrings and assertion-based tests, navigate the command line fluently, and can connect programming constructs to the discrete-math ideas behind them.
 
 ..	toctree::
 	:maxdepth: 1
-	
+
+	organization
+	reading
+	notes
 

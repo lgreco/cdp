@@ -6,17 +6,16 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The CTA Class &mdash; Leo Irakliotis&#39; courses  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+  <title>The CTA Class &mdash; Leo Irakliotis&#39; Courses</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../../_static/doctools.js?v=888ff710"></script>
-      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -47,6 +46,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 271 Data Structures I</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional Courses</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Object-Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP397/introduction.html">COMP 397 Research Methods in Computer Science</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Misc</span></p>
 <ul>
@@ -230,15 +238,17 @@
 <p>As our CTA project continues to grow, we have designed and build quite some useful tools. In addition to method <code class="docutils literal notranslate"><span class="pre">distance</span></code> above, class <code class="docutils literal notranslate"><span class="pre">CTAUtilities</span></code> has one more useful method: <code class="docutils literal notranslate"><span class="pre">pullCTAData</span></code>. <a class="reference external" href="https://github.com/lgreco/DataStructures/blob/52a5312ebc713edecd10bf9be15aa48d93bb4b11/LabSessions/The%20CTA/src/CTAUtilities.java#L88">This method</a> reads a CSV file, creates <code class="docutils literal notranslate"><span class="pre">CTAStation</span></code> objects, and stores them in an arraylist. There are about 100 stations in the CTA system. Each of them is described in a detailed CSV file that is available from the Chicago Data Portal.  Method <code class="docutils literal notranslate"><span class="pre">pullCTAData</span></code> creates about 100 <code class="docutils literal notranslate"><span class="pre">CTAStation</span></code> objects, complete with station name, latitude and longitude, ADA accessibility, etc. The method access the CSV file with the help of another method, <code class="docutils literal notranslate"><span class="pre">CTAScanner</span></code> that establishes a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> connection to the data.</p>
 <p>The output of <code class="docutils literal notranslate"><span class="pre">pullCTAData</span></code> is an <code class="docutils literal notranslate"><span class="pre">ArrayList&lt;CTAStation&gt;</span></code> collection, illustrated below.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/allStations.png"><img alt="../../_images/allStations.png" src="../../_images/allStations.png" style="width: 304.8px; height: 244.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/allStations.png"><img alt="../../_images/allStations.png" height="244" src="../../_images/allStations.png" width="305" />
+</a>
 </figure>
 <p>This collection of station objects is not very useful by itself. Train stations are located along train routes. If we want to construct a train route, we need to know the order in which it traverses stations. For example, the southbound route for CTA’s <strong>Red Line</strong> travels from <em>Howard</em>, to <em>Jarvis</em>, to <em>Morse</em>, …, and ends at the <em>95th/Dan Ryan</em> station. For an accurate representation of the Red Line, we need to select some stations from the collection above, and place them in a specified order. To do that, we need a list of the stations to select and the order to place them. And because this information is not available in the CSV file, we have to provide ourselves. The easiest way to do this, is to write a plain text file with just the names of the stations in the order they should appear. That’s the sequence file below (also <a class="reference external" href="https://raw.githubusercontent.com/lgreco/DataStructures/master/data/stations.csv">available on GitHub</a>).</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/sequence.png"><img alt="../../_images/sequence.png" src="../../_images/sequence.png" style="width: 424.0px; height: 233.20000000000002px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sequence.png"><img alt="../../_images/sequence.png" height="233" src="../../_images/sequence.png" width="424" />
+</a>
 </figure>
 <p>With that sequence file, we can execute a simple procedure as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Create</span> <span class="n">a</span> <span class="n">trainRoute</span><span class="p">:</span>
-  <span class="k">for</span> <span class="n">every</span> <span class="n">station</span> <span class="n">name</span> <span class="kn">from</span> <span class="nn">sequence</span> <span class="n">file</span><span class="p">:</span>
+  <span class="k">for</span> <span class="n">every</span> <span class="n">station</span> <span class="n">name</span> <span class="kn">from</span><span class="w"> </span><span class="nn">sequence</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">find</span> <span class="n">the</span> <span class="n">corresponding</span> <span class="n">station</span> <span class="nb">object</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">array</span> <span class="nb">list</span>
     <span class="n">add</span> <span class="n">the</span> <span class="n">station</span> <span class="nb">object</span> <span class="n">to</span> <span class="n">the</span> <span class="n">trainRoute</span>
   <span class="k">return</span> <span class="n">trainRoute</span>
@@ -275,7 +285,8 @@
 </div>
 <p>The process in method <code class="docutils literal notranslate"><span class="pre">buildRoute</span></code> above, can be visualized as follows.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/buildRoute.png"><img alt="../../_images/buildRoute.png" src="../../_images/buildRoute.png" style="width: 523.2px; height: 289.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/buildRoute.png"><img alt="../../_images/buildRoute.png" height="289" src="../../_images/buildRoute.png" width="523" />
+</a>
 </figure>
 <p>The method receives data from two sources: the CSV file with all stations and the text file with the sequence of station in a particular route. Using the data from these sources, method <code class="docutils literal notranslate"><span class="pre">buildRoute</span></code> creates a <code class="docutils literal notranslate"><span class="pre">CTATrainRoute</span></code> object with a starting station object (the <code class="docutils literal notranslate"><span class="pre">head</span></code> node), pointing to the next station object, and so on. The last station in the route can be recognized by its <code class="docutils literal notranslate"><span class="pre">.next</span></code> pointer set to <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
 <p>One last thing to discuss about <code class="docutils literal notranslate"><span class="pre">buildRoute</span></code> is its place: do we add this method in the <code class="docutils literal notranslate"><span class="pre">CTAUtilities</span></code> class or somewhere else? Our initial choice may be <code class="docutils literal notranslate"><span class="pre">CTAUtilities</span></code>. But when we look closer, we see that method <code class="docutils literal notranslate"><span class="pre">buildRoute</span></code> is basically a construction process for a new train route object. Not quite a <strong>constructor</strong> but we could turn it into such, with a few minor edits. Because the method is so close related to the <code class="docutils literal notranslate"><span class="pre">CTATrainRoute</span></code> class, it should be placed there.</p>
@@ -285,11 +296,13 @@
 <p>This is an interesting problem: can we reverse a route while traversing it forward? One analogy would be to board a southbound train, and by the time it reaches its destination, have its stations written in the northbound direction. We can accomplish this with pen and paper, writing station names from the bottom of the page and moving up. If something can be done on paper, it can be done with coding! Here’s how.</p>
 <p>We start with a plain traversal. In addition to the all familiar by now <code class="docutils literal notranslate"><span class="pre">current</span></code> pointer, we employ two more points: <code class="docutils literal notranslate"><span class="pre">previous</span></code> and <code class="docutils literal notranslate"><span class="pre">following</span></code>.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/invertList.png"><img alt="../../_images/invertList.png" src="../../_images/invertList.png" style="width: 643.2px; height: 118.2px;" /></a>
+<a class="reference internal image-reference" href="../../_images/invertList.png"><img alt="../../_images/invertList.png" height="118" src="../../_images/invertList.png" width="643" />
+</a>
 </figure>
 <p>Pointers <code class="docutils literal notranslate"><span class="pre">previous</span></code> and <code class="docutils literal notranslate"><span class="pre">following</span></code> help us remember what is before and after the current station. When <code class="docutils literal notranslate"><span class="pre">current</span></code> moves to a new station, we can assign <code class="docutils literal notranslate"><span class="pre">following</span> <span class="pre">=</span> <span class="pre">current.getNext()</span></code>. Then we can “disconnect” <code class="docutils literal notranslate"><span class="pre">current</span></code> from <code class="docutils literal notranslate"><span class="pre">following</span></code> by reassigning <code class="docutils literal notranslate"><span class="pre">current.setNext(previous)</span></code>. We are ready to advance to the next node. Because <code class="docutils literal notranslate"><span class="pre">current</span></code> now points backwards, we cannot use its <code class="docutils literal notranslate"><span class="pre">.next</span></code> to find where to move next. That’s why we need the pointer <code class="docutils literal notranslate"><span class="pre">following</span></code> to remind us where to go. And thus <code class="docutils literal notranslate"><span class="pre">following</span></code> becomes <code class="docutils literal notranslate"><span class="pre">current</span></code> as shown below.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/invertListDetail.png"><img alt="../../_images/invertListDetail.png" src="../../_images/invertListDetail.png" style="width: 316.6px; height: 103.2px;" /></a>
+<a class="reference internal image-reference" href="../../_images/invertListDetail.png"><img alt="../../_images/invertListDetail.png" height="103" src="../../_images/invertListDetail.png" width="317" />
+</a>
 </figure>
 <p>The basic mechanism is straight forward. Pointer <code class="docutils literal notranslate"><span class="pre">following</span></code> keeps track of where to slide the <code class="docutils literal notranslate"><span class="pre">current</span></code> pointer. Usually, we really on <code class="docutils literal notranslate"><span class="pre">current.getNext()</span></code> to traverse down the route. Here, however, we reassign <code class="docutils literal notranslate"><span class="pre">current</span></code>’s <code class="docutils literal notranslate"><span class="pre">next</span></code> field to point to its <code class="docutils literal notranslate"><span class="pre">previous</span></code> node. Invoking <code class="docutils literal notranslate"><span class="pre">getNext()</span></code> on <code class="docutils literal notranslate"><span class="pre">current</span></code> will send us backwards. Pointer <code class="docutils literal notranslate"><span class="pre">following</span></code> comes to our rescue. The basic code is below:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">CTATStation</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
@@ -316,7 +329,9 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2019-2026, Leo Irakliotis.</p>
+    <p>&#169; Copyright 2019-2026, Leo Irakliotis.
+      <span class="lastupdated">Last updated on May 15, 2026.
+      </span></p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

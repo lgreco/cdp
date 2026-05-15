@@ -6,21 +6,22 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proofs &mdash; Leo Irakliotis&#39; courses  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+  <title>Proofs &mdash; Leo Irakliotis&#39; Courses</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../../_static/doctools.js?v=888ff710"></script>
-      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Mathematical Induction" href="induction.html" />
+    <link rel="prev" title="Algorithms" href="algorithms.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,6 +50,36 @@
 <li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Additional Courses</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Object-Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">COMP 163 Discrete Structures</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html#course-outline">Course outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../notes.html">Leo's notes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sets.html">Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html">Algorithms</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Proofs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#direct-proofs">Direct proofs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#proofs-by-contradiction">Proofs by contradiction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="induction.html">Mathematical Induction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conditional_propositions.html">Conditional propositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="binary_relations.html">Binary relations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poker.html">The probabilities of poker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../latex.html">LaTeX schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outlines.html">Outlines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../COMP397/introduction.html">COMP 397 Research Methods in Computer Science</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Misc</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
@@ -70,6 +101,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../introduction.html">COMP 163 Discrete Structures</a></li>
+          <li class="breadcrumb-item"><a href="../notes.html">Leo’s notes</a></li>
       <li class="breadcrumb-item active">Proofs</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/COMP163/notes/proofs.rst.txt" rel="nofollow"> View page source</a>
@@ -297,12 +330,17 @@ a^2&amp;=4b+2 \\
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="algorithms.html" class="btn btn-neutral float-left" title="Algorithms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="induction.html" class="btn btn-neutral float-right" title="Mathematical Induction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2019-2026, Leo Irakliotis.</p>
+    <p>&#169; Copyright 2019-2026, Leo Irakliotis.
+      <span class="lastupdated">Last updated on May 15, 2026.
+      </span></p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
