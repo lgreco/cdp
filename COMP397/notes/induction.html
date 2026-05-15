@@ -1,95 +1,430 @@
 
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../../">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mathematical Induction &mdash; Leo Irakliotis&#39; Courses</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mathematical Induction &#8212; Leo Irakliotis&#39; Courses</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'COMP397/notes/induction';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="May 15, 2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
   
-      <script src="../../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
-      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-    <script src="../../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
-</head>
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
 
-          
-          
-          <a href="../../index.html" class="icon icon-home">
-            Leo Irakliotis' courses
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../HONR204/introduction.html">HONR 204 Science and Society</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Leo Irakliotis' Courses</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../HONR204/introduction.html">HONR 204 Science and Society</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Additional Courses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Object-Oriented Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">COMP 397 Research Methods in Computer Science</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../COMP271/introduction.html">COMP 271 Data Structures I</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
-<ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../COMP460/introduction.html">COMP 460 Algorithms</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Courses</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../COMP170/introduction.html">COMP 170 Introduction to Object-Oriented Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/methodParameters.html">Method parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/calendar.html">The Calendar Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/pi.html">Computing pi (on pi day!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/returns.html">On multiple returns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/caesar.html">Caesar Cipher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/fileToArray.html">Reading a file into an array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/resizeArrays.html">Resizing an array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/largestLetters.html">Largest letters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/fractionSum.html">The <code class="docutils literal notranslate"><span class="pre">fractionSum</span></code> problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/binarySearch.html">Binary Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/throwOrCatch.html">Throw or Catch?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/courseRecap.html">Course Recap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP170/notes/firstObject.html">Single Variable Returns</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../COMP264/introduction.html">COMP 264 Computer Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP264/outline.html">Outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP264/textbook.html">Textbook and tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP264/reading.html">Reading material</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../shared/organizationWithUngrading.html">Course organization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../COMP264/notes.html">Leo's notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP141/organization.html">Course organization and logistics</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../COMP141/reading.html">Reading material</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../COMP141/notes.html">Leo's notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../COMP141/2021Spring/weeklyReviews.html">Spring 2021 weekly reviews</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP141/2021Spring/week2.html">Review of Week 1 and Week 2: Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP141/2021Spring/week3.html">Review of Week 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP141/2021Spring/week4.html">Review of Weeks 4 and 5: Algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP141/2021Spring/week6.html">Review of Week 6: Proofs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP141/2021Spring/week789.html">Review of Weeks 7, 8, and 9: Binary trees; counting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP141/2021Spring/week1011.html">Review of Weeks 10, 11: counting and probabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP141/2021Spring/week12.html">Review of Weeks 12: course review and Turing machines</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../COMP163/introduction.html">COMP 163 Discrete Structures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP163/organization.html">Course organization and logistics</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../COMP163/reading.html">Reading material</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../COMP163/notes.html">Leo's notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP163/notes/sets.html">Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP163/notes/algorithms.html">Algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP163/notes/proofs.html">Proofs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP163/notes/induction.html">Mathematical Induction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP163/notes/conditional_propositions.html">Conditional propositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP163/notes/binary_relations.html">Binary relations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../COMP163/notes/poker.html">The probabilities of poker</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP163/latex.html">LaTeX schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP163/outlines.html">Outlines</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../COMP306/introduction.html">COMP 306+406 Data mining</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP306/outline.html">Outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP306/textbook.html">Textbook and tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../COMP306/reading.html">Reading material</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../shared/organizationWithUngrading.html">Course organization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../COMP306/notes.html">Leo's notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction.html">COMP 397 Research Methods in Computer Science</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../organization.html">Course organization and logistics</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../reading.html">Reading material</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../RecommendationLetters.html">Recommendation Letters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Top10.html">Top-10 books and papers in computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../LeoIrakliotis.html">Shameless self-promotion</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Leo Irakliotis' courses</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Mathematical Induction</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/COMP397/notes/induction.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/COMP397/notes/induction.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mathematical Induction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peano-s-axioms">Peano’s Axioms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-template-for-induction-proofs">A template for induction proofs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">Step 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">Step 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">Step 3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-summation-formula">The summation formula</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Step 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Step 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Step 3</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-stamps-problems">The stamps problems</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Step 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Step 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Step 3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="mathematical-induction">
-<h1>Mathematical Induction<a class="headerlink" href="#mathematical-induction" title="Link to this heading"></a></h1>
+<h1>Mathematical Induction<a class="headerlink" href="#mathematical-induction" title="Link to this heading">#</a></h1>
 <p>Mathematical induction – often, just induction – is one of the simplest and yet most challenging concepts to master. It is also one of the most rewarding proof techniques. Induction allows us to prove a property for natural numbers, for which we have a hunch but we need solid proof. For example, we believe that the sum of the first <span class="math notranslate nohighlight">\(n\)</span> numbers is <span class="math notranslate nohighlight">\(n(n+1)/2\)</span>. In fact, every time we try for a different <span class="math notranslate nohighlight">\(n\)</span>, our hunch turns out to be true:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}n=3,\ \ 1+2+3 = 6 &amp;= \frac{3(3+1)}{2}=\frac{12}{2} \\ \\
@@ -117,7 +452,7 @@ n=5,\ \ 1+2+3+4+5 = 15 &amp;= \frac{5(5+1)}{2}=\frac{30}{2}\end{split}\]</div>
 3 &amp;= S(S(S(0)))\\
 &amp;\vdots\end{split}\]</div>
 <section id="peano-s-axioms">
-<h2>Peano’s Axioms<a class="headerlink" href="#peano-s-axioms" title="Link to this heading"></a></h2>
+<h2>Peano’s Axioms<a class="headerlink" href="#peano-s-axioms" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(0\)</span> is a natural number.</p></li>
 <li><p>For every natural number <span class="math notranslate nohighlight">\(x\)</span>, its successor <span class="math notranslate nohighlight">\(S(x)\)</span> is also a natural number.</p></li>
@@ -150,22 +485,22 @@ n=5,\ \ 1+2+3+4+5 = 15 &amp;= \frac{5(5+1)}{2}=\frac{30}{2}\end{split}\]</div>
 <p>The “price of admission” to set <span class="math notranslate nohighlight">\(K\)</span> is for a natural number <span class="math notranslate nohighlight">\(n\)</span> to satisfy the formula <span class="math notranslate nohighlight">\(1+2+\ldots + n = n(n+1)/2\)</span>. And since we showed that all natural numbers are in <span class="math notranslate nohighlight">\(K\)</span>, we have proved that the formula works for any natural number.</p>
 </section>
 <section id="a-template-for-induction-proofs">
-<h2>A template for induction proofs<a class="headerlink" href="#a-template-for-induction-proofs" title="Link to this heading"></a></h2>
+<h2>A template for induction proofs<a class="headerlink" href="#a-template-for-induction-proofs" title="Link to this heading">#</a></h2>
 <p>Induction problems ask us to prove a property of the form</p>
 <div class="math notranslate nohighlight">
 \[L(n) = R(n)\]</div>
 <p>In the example above, <span class="math notranslate nohighlight">\(L(n)= 1+2+\ldots+n\)</span> and <span class="math notranslate nohighlight">\(R(n)=n(n+1)/2\)</span>.</p>
 <p>Given a problem in the form <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span>, the induction proof can be done in three steps.</p>
 <section id="step-1">
-<h3>Step 1<a class="headerlink" href="#step-1" title="Link to this heading"></a></h3>
+<h3>Step 1<a class="headerlink" href="#step-1" title="Link to this heading">#</a></h3>
 <p>Show that <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span> holds for <span class="math notranslate nohighlight">\(n=1\)</span>. (Yes, Peano says to show for <span class="math notranslate nohighlight">\(n=0\)</span> but <span class="math notranslate nohighlight">\(1\)</span> is just as good).</p>
 </section>
 <section id="step-2">
-<h3>Step 2<a class="headerlink" href="#step-2" title="Link to this heading"></a></h3>
+<h3>Step 2<a class="headerlink" href="#step-2" title="Link to this heading">#</a></h3>
 <p>Assume that <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span> holds for <span class="math notranslate nohighlight">\(n=k\)</span>, i.e., <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> is true.</p>
 </section>
 <section id="step-3">
-<h3>Step 3<a class="headerlink" href="#step-3" title="Link to this heading"></a></h3>
+<h3>Step 3<a class="headerlink" href="#step-3" title="Link to this heading">#</a></h3>
 <p>Start with <span class="math notranslate nohighlight">\(L(k+1)\)</span> and show that it equals <span class="math notranslate nohighlight">\(R(k+1)\)</span>. You will notice that the expression   <span class="math notranslate nohighlight">\(L(k+1)\)</span> always contains <span class="math notranslate nohighlight">\(L(k)\)</span>. And since you just assumed that <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> in Step 2, you can write</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}L(k+1) &amp;= L(k) + (n+1) \\
@@ -175,15 +510,15 @@ n=5,\ \ 1+2+3+4+5 = 15 &amp;= \frac{5(5+1)}{2}=\frac{30}{2}\end{split}\]</div>
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
 <section id="the-summation-formula">
-<h3>The summation formula<a class="headerlink" href="#the-summation-formula" title="Link to this heading"></a></h3>
+<h3>The summation formula<a class="headerlink" href="#the-summation-formula" title="Link to this heading">#</a></h3>
 <p>Prove that</p>
 <div class="math notranslate nohighlight">
 \[1+2+\ldots + n = \frac{n(n+1)}{2}\]</div>
 <p>We worked this formula above to demonstrate the inductive method. We repeat the proof here in a more formal manner.</p>
 <section id="id1">
-<h4>Step 1<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<h4>Step 1<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <p>For this step, first we need to identify the expressions <span class="math notranslate nohighlight">\(L(n)\)</span> and <span class="math notranslate nohighlight">\(R(n)\)</span>. In this case, it’s fairly easy:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}L(n) &amp;= 1+2+\ldots + n \\ \\
@@ -195,13 +530,13 @@ R(1)&amp;=\frac{1(1+1)}{2}=1\end{split}\]</div>
 <p>So, <span class="math notranslate nohighlight">\(L(1)=R(1)\)</span>.</p>
 </section>
 <section id="id2">
-<h4>Step 2<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
+<h4>Step 2<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <p>This is a simple and quick step. We only have to state that for an arbritrary <span class="math notranslate nohighlight">\(n=k\)</span> the expression <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span> is true; in other words:</p>
 <div class="math notranslate nohighlight">
 \[1+2+\ldots +k = \frac{k(k+1)}{2}\]</div>
 </section>
 <section id="id3">
-<h4>Step 3<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<h4>Step 3<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <p>Here we use the next number up from the previous step. In Step 2 we looked at <span class="math notranslate nohighlight">\(n=k\)</span>. The next number up is <span class="math notranslate nohighlight">\(k+1\)</span>. The question we must answer in this step now is if <span class="math notranslate nohighlight">\(L(k+1)\)</span> equals <span class="math notranslate nohighlight">\(R(k+1)\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[L(k+1) = 1+2+\ldots +k + (k+1)\]</div>
@@ -219,10 +554,10 @@ R(1)&amp;=\frac{1(1+1)}{2}=1\end{split}\]</div>
 </section>
 </section>
 <section id="the-stamps-problems">
-<h3>The stamps problems<a class="headerlink" href="#the-stamps-problems" title="Link to this heading"></a></h3>
+<h3>The stamps problems<a class="headerlink" href="#the-stamps-problems" title="Link to this heading">#</a></h3>
 <p>Show that any postage amount greater than $0.17 can be formed with $0.03 and $0.10 stamps. For example, $0.22 worth of postage comprises one $0.10 stamp and four $0.03 stamps.</p>
 <section id="id4">
-<h4>Step 1<a class="headerlink" href="#id4" title="Link to this heading"></a></h4>
+<h4>Step 1<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <p>Problems like this one do not have a readily available expression of the form <span class="math notranslate nohighlight">\(L(n)=R(n)\)</span>. We have to derive the formula by restating the problem. Basically, the problem says that any number greater than 17 can be written as the sum of multiples of 3 and multiples of 10:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}n&amp;=3a+10b\\n&amp;\geq 18\end{aligned}\end{align} \]</div>
@@ -234,11 +569,11 @@ R(1)&amp;=\frac{1(1+1)}{2}=1\end{split}\]</div>
 \[ \begin{align}\begin{aligned}18 =3a+10b\\\text{when}\ a=6, b=0\end{aligned}\end{align} \]</div>
 </section>
 <section id="id5">
-<h4>Step 2<a class="headerlink" href="#id5" title="Link to this heading"></a></h4>
+<h4>Step 2<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <p>This is the easiest step of the proof. We assume that the property holds for an arbitrary integer <span class="math notranslate nohighlight">\(k\)</span>, i.e., <span class="math notranslate nohighlight">\(L(k)=R(k)\)</span>.</p>
 </section>
 <section id="id6">
-<h4>Step 3<a class="headerlink" href="#id6" title="Link to this heading"></a></h4>
+<h4>Step 3<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <p>Can we now prove that the property works for <span class="math notranslate nohighlight">\(S(k)\)</span>, by working our way from <span class="math notranslate nohighlight">\(L(k+1)\)</span> to <span class="math notranslate nohighlight">\(R(k+1)\)</span>. Just remember that for this problem, <span class="math notranslate nohighlight">\(R\)</span> simply means a sum of multiples of 3 and 10.</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}L(k+1) &amp;= k+1\ \ \ \ (\text{and from step 2,}\ k=3a+10b)\\               &amp;=3a+10b+1\ \ \ \ (\text{rewrite}\ 1=10-9)\\               &amp;=3a+10b+10-9\\               &amp;=3(a-3)+10(b+1)\ \ \ \ (\text{substituting}\ a'=a-3,\ b'=b+1)\\               &amp;=3a'+10b'\end{aligned}\end{align} \]</div>
@@ -249,33 +584,111 @@ R(1)&amp;=\frac{1(1+1)}{2}=1\end{split}\]</div>
 </section>
 
 
-           </div>
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peano-s-axioms">Peano’s Axioms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-template-for-induction-proofs">A template for induction proofs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">Step 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">Step 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">Step 3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-summation-formula">The summation formula</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Step 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Step 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Step 3</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-stamps-problems">The stamps problems</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Step 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Step 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Step 3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
           </div>
-          <footer>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Leo Irakliotis
+</p>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2019-2026, Leo Irakliotis.
-      <span class="lastupdated">Last updated on May 15, 2026.
-      </span></p>
   </div>
+  
+  <div class="footer-item">
+    
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+  <p class="copyright">
+    
+      © Copyright 2019-2026, Leo Irakliotis.
+      <br/>
+    
+  </p>
 
-</footer>
-        </div>
-      </div>
-    </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on May 15, 2026.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
 
-</body>
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

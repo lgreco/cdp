@@ -1,161 +1,455 @@
 
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>COMP 170 Introduction to Object-Oriented Programming &mdash; Leo Irakliotis&#39; Courses</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>COMP 170 Introduction to Object-Oriented Programming &#8212; Leo Irakliotis&#39; Courses</title>
   
-      <script src="../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
-    <script src="../_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'COMP170/introduction';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Method parameters" href="notes/methodParameters.html" />
-    <link rel="prev" title="COMP 460 Algorithms" href="../COMP460/introduction.html" /> 
-</head>
+    <link rel="prev" title="COMP 460 Algorithms" href="../COMP460/introduction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="May 15, 2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-          
-          
-          <a href="../index.html" class="icon icon-home">
-            Leo Irakliotis' courses
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Courses</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../HONR204/introduction.html">HONR 204 Science and Society</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../COMP271/introduction.html">COMP 271 Data Structures I</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../COMP460/introduction.html">COMP 460 Algorithms</a></li>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Leo Irakliotis' Courses</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Courses</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../HONR204/introduction.html">HONR 204 Science and Society</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Additional Courses</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">COMP 170 Introduction to Object-Oriented Programming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#course-organization-and-logistics">Course organization and logistics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#course-outline">Course outline</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#deadlines">Deadlines</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#exam-dates">Exam dates</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#textbooks">Textbooks</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#computer-equipment">Computer Equipment</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../COMP271/introduction.html">COMP 271 Data Structures I</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#attendance-policy-attendance-is-required">Attendance policy: attendance is required</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#attendance-for-online-courses">Attendance for online courses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ungrading-and-how-it-works">Ungrading and how it works</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../COMP363/introduction.html">COMP 363 Design and Analysis of Algorithms</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#reflection-statements">Reflection statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#midterm-reflection">Midterm reflection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#end-of-term-reflection">End-of-term reflection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#frequently-asked-questions-about-ungrading">Frequently Asked Questions about <em>Ungrading</em></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ground-rules">Ground rules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#academic-integrity">Academic integrity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#be-cool-like-a-pro">Be cool, like a <em>pro</em></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#formal-notices">Formal notices</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#religious-accommodations">Religious accommodations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#inclusion-statement">Inclusion statement</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../COMP460/introduction.html">COMP 460 Algorithms</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#reading-material">Reading material</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#leo-s-notes">Leo’s notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="notes/methodParameters.html">Method parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes/calendar.html">The Calendar Problem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes/pi.html">Computing pi (on pi day!)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes/returns.html">On multiple returns</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes/caesar.html">Caesar Cipher</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes/fileToArray.html">Reading a file into an array</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes/resizeArrays.html">Resizing an array</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes/largestLetters.html">Largest letters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes/fractionSum.html">The <code class="docutils literal notranslate"><span class="pre">fractionSum</span></code> problem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes/binarySearch.html">Binary Search</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes/throwOrCatch.html">Throw or Catch?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes/courseRecap.html">Course Recap</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes/firstObject.html">Single Variable Returns</a></li>
+</details></li>
 </ul>
-</li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Courses</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">COMP 170 Introduction to Object-Oriented Programming</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="notes/methodParameters.html">Method parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/calendar.html">The Calendar Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/pi.html">Computing pi (on pi day!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/returns.html">On multiple returns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/caesar.html">Caesar Cipher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/fileToArray.html">Reading a file into an array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/resizeArrays.html">Resizing an array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/largestLetters.html">Largest letters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/fractionSum.html">The <code class="docutils literal notranslate"><span class="pre">fractionSum</span></code> problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/binarySearch.html">Binary Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/throwOrCatch.html">Throw or Catch?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/courseRecap.html">Course Recap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/firstObject.html">Single Variable Returns</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../COMP264/introduction.html">COMP 264 Computer Systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../COMP163/introduction.html">COMP 163 Discrete Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../COMP306/introduction.html">COMP 306+406 Data mining</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../COMP397/introduction.html">COMP 397 Research Methods in Computer Science</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../COMP264/introduction.html">COMP 264 Computer Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../COMP264/outline.html">Outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../COMP264/textbook.html">Textbook and tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../COMP264/reading.html">Reading material</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../shared/organizationWithUngrading.html">Course organization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
-<ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../COMP264/notes.html">Leo's notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../COMP141/introduction.html">COMP 141 Introduction to Computing Tools and Techniques</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../COMP141/organization.html">Course organization and logistics</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../COMP141/reading.html">Reading material</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../COMP141/notes.html">Leo's notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../COMP141/2021Spring/weeklyReviews.html">Spring 2021 weekly reviews</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../COMP141/2021Spring/week2.html">Review of Week 1 and Week 2: Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../COMP141/2021Spring/week3.html">Review of Week 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../COMP141/2021Spring/week4.html">Review of Weeks 4 and 5: Algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../COMP141/2021Spring/week6.html">Review of Week 6: Proofs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../COMP141/2021Spring/week789.html">Review of Weeks 7, 8, and 9: Binary trees; counting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../COMP141/2021Spring/week1011.html">Review of Weeks 10, 11: counting and probabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../COMP141/2021Spring/week12.html">Review of Weeks 12: course review and Turing machines</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../COMP163/introduction.html">COMP 163 Discrete Structures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../COMP163/organization.html">Course organization and logistics</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../COMP163/reading.html">Reading material</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../COMP163/notes.html">Leo's notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../COMP163/notes/sets.html">Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../COMP163/notes/algorithms.html">Algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../COMP163/notes/proofs.html">Proofs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../COMP163/notes/induction.html">Mathematical Induction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../COMP163/notes/conditional_propositions.html">Conditional propositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../COMP163/notes/binary_relations.html">Binary relations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../COMP163/notes/poker.html">The probabilities of poker</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../COMP163/latex.html">LaTeX schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../COMP163/outlines.html">Outlines</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../COMP306/introduction.html">COMP 306+406 Data mining</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../COMP306/outline.html">Outline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../COMP306/textbook.html">Textbook and tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../COMP306/reading.html">Reading material</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../shared/organizationWithUngrading.html">Course organization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../COMP306/notes.html">Leo's notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../COMP397/introduction.html">COMP 397 Research Methods in Computer Science</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../COMP397/organization.html">Course organization and logistics</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../COMP397/reading.html">Reading material</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../RecommendationLetters.html">Recommendation Letters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Top10.html">Top-10 books and papers in computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../LeoIrakliotis.html">Shameless self-promotion</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Leo Irakliotis' courses</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">COMP 170 Introduction to Object-Oriented Programming</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/COMP170/introduction.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/COMP170/introduction.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>COMP 170 Introduction to Object-Oriented Programming</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-organization-and-logistics">Course organization and logistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-outline">Course outline</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deadlines">Deadlines</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exam-dates">Exam dates</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#textbooks">Textbooks</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-equipment">Computer Equipment</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attendance-policy-attendance-is-required">Attendance policy: attendance is required</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attendance-for-online-courses">Attendance for online courses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ungrading-and-how-it-works">Ungrading and how it works</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-statements">Reflection statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#midterm-reflection">Midterm reflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#end-of-term-reflection">End-of-term reflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-asked-questions-about-ungrading">Frequently Asked Questions about <em>Ungrading</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ground-rules">Ground rules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#academic-integrity">Academic integrity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#be-cool-like-a-pro">Be cool, like a <em>pro</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-notices">Formal notices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#religious-accommodations">Religious accommodations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inclusion-statement">Inclusion statement</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-material">Reading material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leo-s-notes">Leo’s notes</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="comp-170-introduction-to-object-oriented-programming">
-<h1>COMP 170 Introduction to Object-Oriented Programming<a class="headerlink" href="#comp-170-introduction-to-object-oriented-programming" title="Link to this heading"></a></h1>
+<h1>COMP 170 Introduction to Object-Oriented Programming<a class="headerlink" href="#comp-170-introduction-to-object-oriented-programming" title="Link to this heading">#</a></h1>
 <p>This is the starting point for most students interested in learning how to program at a professional level. The course is the first in a sequence of several courses that develop professional-grade programming skills.</p>
 <p>The course covers Python programming from first principles along three parallel tracks: programming concepts (following <em>Think Python</em> by Allen Downey), Unix command-line tools and environment (following <em>The Linux Command Line</em> by William Shotts), and mathematical foundations — logic, functions, sets, and introductory algorithm analysis — drawn from course notes. By the end of the course students write multi-class Python programs with docstrings and assertion-based tests, navigate the command line fluently, and can connect programming constructs to the discrete-math ideas behind them.</p>
 <div class="toctree-wrapper compound">
 </div>
 <section id="course-organization-and-logistics">
-<h2>Course organization and logistics<a class="headerlink" href="#course-organization-and-logistics" title="Link to this heading"></a></h2>
+<h2>Course organization and logistics<a class="headerlink" href="#course-organization-and-logistics" title="Link to this heading">#</a></h2>
 </section>
 <section id="course-outline">
-<h2>Course outline<a class="headerlink" href="#course-outline" title="Link to this heading"></a></h2>
+<h2>Course outline<a class="headerlink" href="#course-outline" title="Link to this heading">#</a></h2>
 <p>Using Python, the course integrates three parallel threads: programming concepts, Unix command-line tools, and mathematical foundations. Topics progress from running a first script through data types, functions, control flow, lists, file I/O, and object-oriented design, while building fluency with the command line and connecting each programming construct to the discrete-math idea behind it.</p>
 <section id="deadlines">
-<h3>Deadlines<a class="headerlink" href="#deadlines" title="Link to this heading"></a></h3>
+<h3>Deadlines<a class="headerlink" href="#deadlines" title="Link to this heading">#</a></h3>
 <p>:ref</p>
 <p>Deadlines are posted on the cource’s Sakai page. In general, late homework is not accepted. <em>Bona fide</em> emergencies are handled on a case-by-case basis. However, if you miss three or more assignment deadlines, you may find it difficult to finish the course with a qualifying grade.</p>
 <section id="exam-dates">
-<h4>Exam dates<a class="headerlink" href="#exam-dates" title="Link to this heading"></a></h4>
+<h4>Exam dates<a class="headerlink" href="#exam-dates" title="Link to this heading">#</a></h4>
 <p>The final and midterm exams will be take-home assignments. Exact dates will be posted on Sakai.</p>
 </section>
 <section id="textbooks">
-<h4>Textbooks<a class="headerlink" href="#textbooks" title="Link to this heading"></a></h4>
+<h4>Textbooks<a class="headerlink" href="#textbooks" title="Link to this heading">#</a></h4>
 <p>All course materials are free and open:</p>
 <ul class="simple">
 <li><p><strong>Think Python</strong>, 3rd edition, by Allen Downey — <a class="reference external" href="https://greenteapress.com/wp/think-python-3rd-edition/">https://greenteapress.com/wp/think-python-3rd-edition/</a></p></li>
@@ -164,12 +458,12 @@
 </ul>
 </section>
 <section id="computer-equipment">
-<h4>Computer Equipment<a class="headerlink" href="#computer-equipment" title="Link to this heading"></a></h4>
+<h4>Computer Equipment<a class="headerlink" href="#computer-equipment" title="Link to this heading">#</a></h4>
 <p>You will need access to a desktop or laptop computer running Linux, macOS, or Windows with WSL2 enabled. Consult the course’s Sakai site for setup instructions.</p>
 </section>
 </section>
 <section id="attendance-policy-attendance-is-required">
-<h3>Attendance policy: attendance is required<a class="headerlink" href="#attendance-policy-attendance-is-required" title="Link to this heading"></a></h3>
+<h3>Attendance policy: attendance is required<a class="headerlink" href="#attendance-policy-attendance-is-required" title="Link to this heading">#</a></h3>
 <p>Everyone is expected to miss a class meeting now and then. Missing more than 10% of the class meetings in a term will have a serious impact on your final grade. Missing more, will have a detrimental impact. Coming to class 5 or more minutes late or leaving 5 or more minutes before class is dismissed counts as a missed class.</p>
 <p>If you miss a class meeting, it is your responsibility to recover notes and other information from your classmates. Student hours (aka office hours) are not a substitute for missed class meetings.</p>
 <p>If you miss more than 1/4 of the class meetings, you final grade will be an F.</p>
@@ -180,7 +474,7 @@
 <p>If you’re experiencing ongoing difficulties that may affect your attendance, please don’t hesitate to reach out sooner rather than later. I’m always available to talk and help you think through your options.</p>
 </section>
 <section id="attendance-for-online-courses">
-<h3>Attendance for online courses<a class="headerlink" href="#attendance-for-online-courses" title="Link to this heading"></a></h3>
+<h3>Attendance for online courses<a class="headerlink" href="#attendance-for-online-courses" title="Link to this heading">#</a></h3>
 <p>In addition to the attendance policy above, online courses have two more requirements.</p>
 <ul class="simple">
 <li><p>You must join the online meeting from a laptop or a desktop computer. Using tablets in a programming course is marginal; using a smart phone is out of the question.</p></li>
@@ -188,7 +482,7 @@
 </ul>
 </section>
 <section id="ungrading-and-how-it-works">
-<h3>Ungrading and how it works<a class="headerlink" href="#ungrading-and-how-it-works" title="Link to this heading"></a></h3>
+<h3>Ungrading and how it works<a class="headerlink" href="#ungrading-and-how-it-works" title="Link to this heading">#</a></h3>
 <p><em>Ungrading</em> is a low-stress approach to evaluating progress through a course.</p>
 <p>We are accustomed to the traditional method of grading, where assignments are returned with a numeric score or letter grade, but the feedback may not be sufficient to understand areas of improvement. Additionally, we are penalized for our mistakes, despite the fact that they are an essential part of the learning process.</p>
 <p><em>Ungrading</em> emphasizes on feedback that is aimed at helping students improve. Each assignment is viewed as a learning opportunity, where students can reflect on what they did well, and what needs to be improved. Feedback received helps students identify areas of strength and areas that require more work. Progress is tracked by evaluating how well the feedback has been incorporated into the work, and this progress is used to determine a course grade that the student feels they have earned.</p>
@@ -199,11 +493,11 @@
 </section>
 </section>
 <section id="reflection-statements">
-<h2>Reflection statements<a class="headerlink" href="#reflection-statements" title="Link to this heading"></a></h2>
+<h2>Reflection statements<a class="headerlink" href="#reflection-statements" title="Link to this heading">#</a></h2>
 <p>For the midterm and end-of-term reflections statements, I use <a class="reference external" href="https://www.jessestommel.com/ungrading-an-faq/">Jesse Stommel’s suggestions</a> with some additional questions.</p>
 </section>
 <section id="midterm-reflection">
-<h2>Midterm reflection<a class="headerlink" href="#midterm-reflection" title="Link to this heading"></a></h2>
+<h2>Midterm reflection<a class="headerlink" href="#midterm-reflection" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>What aspects of the course have been the most successful for you so far?</p></li>
 <li><p>What thing that you’ve learned are you most excited about?</p></li>
@@ -213,7 +507,7 @@
 </ul>
 </section>
 <section id="end-of-term-reflection">
-<h2>End-of-term reflection<a class="headerlink" href="#end-of-term-reflection" title="Link to this heading"></a></h2>
+<h2>End-of-term reflection<a class="headerlink" href="#end-of-term-reflection" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Write me a short letter that reflects on your work in this class.</p></li>
 <li><p>Consider the work you did on exams, assignments, and lab/studio sessions, the feedback you gave and received, and how you met your own goals.</p></li>
@@ -225,14 +519,14 @@
 </ul>
 </section>
 <section id="frequently-asked-questions-about-ungrading">
-<h2>Frequently Asked Questions about <em>Ungrading</em><a class="headerlink" href="#frequently-asked-questions-about-ungrading" title="Link to this heading"></a></h2>
+<h2>Frequently Asked Questions about <em>Ungrading</em><a class="headerlink" href="#frequently-asked-questions-about-ungrading" title="Link to this heading">#</a></h2>
 <p><strong>What is the grade I see in Sakai?</strong> Everytime you submit an assignment, you will earn 1 point. This is not the score of the assignment. This is just Sakai’s way of keeping track who submitted an assignment. Whether your assignment is spot on or off the mark, you will earn 1 point for submitting it. These points do not translate to a score that determines a course grade.</p>
 <p><strong>Is there a grade scale?</strong> Yes. Students that do not repeat mistakes, usually finish with an A or an A-. Students that require 1-2 reminders for the same mistakes may end the course with a grade in the B range. Students that require more frequent feedback for repeating mistakes but do finally move on, will end the course with a grade in the C range. Students that do not incorporate the feedback will probably finish the course with a D. Rarely, a student may finish the course with an F. I try to avoid this grade; if I feel that you are heading towards an F, I’ll reach out to you to discuss improvement or alternative plans.</p>
 <p><strong>Will there be make-up assignments?</strong> Every assignment is a make-up assignment: an opportunity to improve on issues that were identified in previous assignments. There will be no extra assignments, however.</p>
 <p><strong>I still see homework grades in Sakai, what’s up with this?</strong> These are not really grades. You get 1 point in Sakai for each assignment you submit. That’s really a counter of how many assignments you turned in, not actual evaluative score.</p>
 <p><strong>Why?</strong>  <em>Ungrading</em> is very similar to a job situation. We receive feedback from peers and supervisors. The feedback tells us what we do well and what needs more attention. We use the feedback to meet new challenges, improve our skills, and advance our careers. <em>Ungrading</em> is also less stressful because you do not have to worry about a grade scale. It allows you to focus on learning and it is forgiving with mistakes that are not repeated.)</p>
 <section id="ground-rules">
-<h3>Ground rules<a class="headerlink" href="#ground-rules" title="Link to this heading"></a></h3>
+<h3>Ground rules<a class="headerlink" href="#ground-rules" title="Link to this heading">#</a></h3>
 <p>In my experience, the single most common cause of poor performance in any course is when students are not proactive. When you are proactive you can recognize and address any issues with your courses, while you have time to do something about it. Learning to be proactive is one of the most valuable skills you can acquire in college.</p>
 <p>Here’s how you can be proactive, so you can succeed in this coure.</p>
 <ul class="simple">
@@ -245,14 +539,14 @@
 </ul>
 </section>
 <section id="student-hours-aka-office-hours">
-<h3>Student hours (aka office hours)<a class="headerlink" href="#student-hours-aka-office-hours" title="Link to this heading"></a></h3>
+<h3>Student hours (aka office hours)<a class="headerlink" href="#student-hours-aka-office-hours" title="Link to this heading">#</a></h3>
 <p>Student hours for the current semester are posted on <a class="reference external" href="https://calendly.com/leo_irakliotis/20min">my schedule on Calendly</a>.</p>
 <p>You can schedule an appointment with me by finding the best time slot that works for you. If there are no available time slots or if they conflict with your schedule, please notify me, suggest a couple of other time slots that will work for you, and I will do my best to find us time to meet.</p>
 <p>Walk-ins are welcome but <a class="reference external" href="https://calendly.com/leo_irakliotis/15min">appointments are highly recommended</a>. Students with an appointment take precedence. My office is in <strong>Doyle 207</strong>. For online meetings, I use Zoom or Microsoft Teams.</p>
 <p><em>Why “student hours” and not “office hours”?</em> I prefer the term “student hours” because it emphasizes that these hours are dedicated to supporting students, rather than being solely about my availability in an office.</p>
 </section>
 <section id="academic-integrity">
-<h3>Academic integrity<a class="headerlink" href="#academic-integrity" title="Link to this heading"></a></h3>
+<h3>Academic integrity<a class="headerlink" href="#academic-integrity" title="Link to this heading">#</a></h3>
 <p>Students are expected and encouraged to work together. It is also expected that students will explore the vastness of the internet to discover information, knowledge, and solutions to problems. I consider all that to be part of your learning experience. It is up to you, however, to demonstrate your learning.</p>
 <p>In practical terms this means that you should be able to describe in your own words how a piece of code works or how you arrived to a mathematical derivation, etc. Failure to do so will affect your course performance and, ultimately, your grade. It may also raise concerns related to academic integrity. <em>Verbatim</em> use of material obtained from others is considered a violation of the university’s policies for academic integrity.</p>
 <p>Please note that if you can search for an answer on the internet, so can your instructor. When it comes to programming, there are several websites with good code examples. These are <a class="reference external" href="https://www.geeksforgeeks.org/">geeksforgeeks</a>, <a class="reference external" href="https://stackoverflow.com/">stackoverflow</a>, etc. You are expected to explore these sites. The code you find there can be extremely useful. <strong>It is up to you to turn these websites into a learning experience.</strong> How? By internalizing the code that you discover in these sites and adopt for your assignments.</p>
@@ -260,7 +554,7 @@
 <p>Computing, i.e., programming and its foundational topics such as mathematics, is something that is best learned by example. But copying other people’s work alone is not sufficient. We must internalize that work, i.e., we must understand how someone else’s code works, how it does it, and why. Without that internalization, we simply copy someone else’s work. And that is not sufficient to pass a course.</p>
 </section>
 <section id="be-cool-like-a-pro">
-<h3>Be cool, like a <em>pro</em><a class="headerlink" href="#be-cool-like-a-pro" title="Link to this heading"></a></h3>
+<h3>Be cool, like a <em>pro</em><a class="headerlink" href="#be-cool-like-a-pro" title="Link to this heading">#</a></h3>
 <p>In additional to the technical content of the course, there is a professional element to it. The professional element of the course is meant to cultivate your <strong>essential work skills</strong> (some call them “soft skills”). These skills are highly sought after by employers. Essential skills include communication skills, neatness, punctuality, dependability, ability to work in teams, problem solving skills, etc.</p>
 <p>In the context of this course, professionalism and essential skills are as follows.</p>
 <ul class="simple">
@@ -308,7 +602,7 @@
 </div></blockquote>
 </section>
 <section id="formal-notices">
-<h3>Formal notices<a class="headerlink" href="#formal-notices" title="Link to this heading"></a></h3>
+<h3>Formal notices<a class="headerlink" href="#formal-notices" title="Link to this heading">#</a></h3>
 <ul>
 <li><p>The <a class="reference external" href="http://www.luc.edu/academics/schedules">university’s official Academic Calendar</a>.</p></li>
 <li><p>Every effort is made in this course to use open source, freely available material. However materials from the course cannot be shared outside the course without the instructor’s <em>written permission.</em></p></li>
@@ -335,12 +629,12 @@
 </ul>
 </section>
 <section id="religious-accommodations">
-<h3>Religious accommodations<a class="headerlink" href="#religious-accommodations" title="Link to this heading"></a></h3>
+<h3>Religious accommodations<a class="headerlink" href="#religious-accommodations" title="Link to this heading">#</a></h3>
 <p>As a Jesuit, Catholic university, Loyola University Chicago invites people of all faiths and traditions to be a part of our community and we are committed to supporting students in their faith journeys. As a faculty members I will make reasonable accommodations for students when the observance of a major religious holiday conflicts with academic responsibilities. If you are unable to attend class, take an exam or quiz, give a presentation, or submit an assignment due to a religious observance, you will be excused and given the opportunity to make up the work.</p>
 <p>You remain responsible for all assigned coursework and should notify me in advance via Loyola email about any religious observances that may affect your class participation. Campus Ministry has compiled a list of religious holidays that may impact Loyola students, available on the Campus Ministry website. However, this calendar is advisory– I will make reasonable accommodations for students observing significant holidays, including those not listed.</p>
 </section>
 <section id="inclusion-statement">
-<h3>Inclusion statement<a class="headerlink" href="#inclusion-statement" title="Link to this heading"></a></h3>
+<h3>Inclusion statement<a class="headerlink" href="#inclusion-statement" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><p><em>A university is a place where the universality of the human experience manifests itself.</em> – Albert Einstein</p>
 </div></blockquote>
@@ -349,13 +643,13 @@
 </section>
 </section>
 <section id="reading-material">
-<h2>Reading material<a class="headerlink" href="#reading-material" title="Link to this heading"></a></h2>
+<h2>Reading material<a class="headerlink" href="#reading-material" title="Link to this heading">#</a></h2>
 <p>The textbook for the course is Building Python Programs,* [1st edition](<a class="reference external" href="https://www.buildingpythonprograms.com/">https://www.buildingpythonprograms.com/</a>),
 by Stuart Reges, Marty Stepp, and Allison Obourn.</p>
 <p>For the Summer 2026 section of COMP 170, the book is <strong>not</strong> required. However, if you plan to take COMP 271 later, some instructors may require the book.</p>
 </section>
 <section id="leo-s-notes">
-<h2>Leo’s notes<a class="headerlink" href="#leo-s-notes" title="Link to this heading"></a></h2>
+<h2>Leo’s notes<a class="headerlink" href="#leo-s-notes" title="Link to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="notes/methodParameters.html">Method parameters</a></li>
@@ -421,36 +715,135 @@ by Stuart Reges, Marty Stepp, and Allison Obourn.</p>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../COMP460/introduction.html" class="btn btn-neutral float-left" title="COMP 460 Algorithms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="notes/methodParameters.html" class="btn btn-neutral float-right" title="Method parameters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2019-2026, Leo Irakliotis.
-      <span class="lastupdated">Last updated on May 15, 2026.
-      </span></p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../COMP460/introduction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">COMP 460 Algorithms</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="notes/methodParameters.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Method parameters</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-organization-and-logistics">Course organization and logistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-outline">Course outline</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deadlines">Deadlines</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exam-dates">Exam dates</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#textbooks">Textbooks</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-equipment">Computer Equipment</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attendance-policy-attendance-is-required">Attendance policy: attendance is required</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attendance-for-online-courses">Attendance for online courses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ungrading-and-how-it-works">Ungrading and how it works</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-statements">Reflection statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#midterm-reflection">Midterm reflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#end-of-term-reflection">End-of-term reflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-asked-questions-about-ungrading">Frequently Asked Questions about <em>Ungrading</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ground-rules">Ground rules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#student-hours-aka-office-hours">Student hours (aka office hours)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#academic-integrity">Academic integrity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#be-cool-like-a-pro">Be cool, like a <em>pro</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-notices">Formal notices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#religious-accommodations">Religious accommodations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inclusion-statement">Inclusion statement</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-material">Reading material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leo-s-notes">Leo’s notes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Leo Irakliotis
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2019-2026, Leo Irakliotis.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on May 15, 2026.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>
