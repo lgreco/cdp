@@ -1,5 +1,3 @@
-:orphan:
-
 .. include:: ../shared/organizationHeader.rst
 
 .. include:: ../shared/courseOutline.rst
