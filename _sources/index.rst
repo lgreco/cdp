@@ -19,24 +19,23 @@ site.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Courses
+   :caption: Current term's courses
       
-   
-   HONR204/introduction
+   COMP170/introduction
    COMP271/introduction
-   COMP363/introduction
-   COMP460/introduction
    
    
 .. toctree::
    :maxdepth: 1
-   :caption: Additional Courses
-
-   COMP170/introduction
-   COMP264/introduction
+   :caption: Past (and possibly future) terms' courses
+   
+   HONR204/introduction
    COMP141/introduction
    COMP163/introduction
+   COMP264/introduction
    COMP306/introduction
+   COMP363/introduction
+   COMP460/introduction
    COMP397/introduction
 
 
