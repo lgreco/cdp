@@ -2,6 +2,49 @@
 Detailed outline
 *******************************************************************************
 
+.. list-table::
+   :header-rows: 1
+   :widths: 50 50
+
+   * - Fall and Spring timetables
+     - Summer timetable
+   * - **Week 01**: Building on prior programming knowledge
+     - **Week 01**: Building on prior programming knowledge
+   * - **Week 02**: From a simple program to code refactoring
+     - **Week 02**: Code refactoring and class definitions
+   * - **Week 03**: A simple class definition and usage
+     - *(combined with Week 02)*
+   * - **Week 04**: Python's object model: attributes and methods
+     - **Week 03**: Python's object model: attributes and methods
+   * - **Week 05**: Abstract Data Types (ADTs) and a lookup table
+     - **Week 04**: Abstract Data Types (ADTs) and a lookup table
+   * - **Week 06**: Trainlines and linked lists
+     - **Week 05**: Trainlines and linked lists
+   * - **Week 07**: Software contracts and unit testing
+     - **Week 06**: Software contracts and unit testing
+   * - **Week 08**: *Spring Break*
+     - —
+   * - **Week 09**: Stacks and queues
+     - **Week 07**: Stacks and queues
+   * - **Week 10**: Hash tables
+     - **Week 08**: Hash tables and collision resolution
+   * - **Week 11**: Hashing functions and collision resolution
+     - *(combined with Week 08)*
+   * - **Week 12**: Priority queues and heaps
+     - **Week 09**: Priority queues and heaps
+   * - **Week 13**: Non-linear data structures: graphs
+     - **Week 10**: Graphs and course review
+   * - **Week 14**: Review and wrap-up
+     - *(combined with Week 10)*
+   * - **Week 15**: Oral exams
+     - **Week 11**: Oral exams and final exam
+   * - **Week 16**: Final exam
+     - *(combined with Week 11)*
+
+
+Fall and Spring — detailed topics
+-----------------------------------
+
 * Week 01: Building on prior programming knowledge.
 
   * The House that Jack Built: a simple Python program illustrating basic programming constructs.
