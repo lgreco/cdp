@@ -37,7 +37,7 @@ jobs:
           pip download "sphinxcontrib-gist>=0.0.6" --no-deps -d /tmp/gist-dl
           cd /tmp && tar xzf gist-dl/sphinxcontrib.gist-*.tar.gz
           sed -i '/declare_namespace/d' sphinxcontrib.gist-*/sphinxcontrib/__init__.py
-          pip install sphinxcontrib.gist-*/
+          pip install --no-build-isolation sphinxcontrib.gist-*/
 
       - name: Build HTML
         run: sphinx-build -b html docs/source .
