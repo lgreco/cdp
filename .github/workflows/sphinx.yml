@@ -36,8 +36,9 @@ jobs:
           pip install "Sphinx>=7.0" "sphinx-rtd-theme>=2.0"
           pip download "sphinxcontrib-gist>=0.0.6" --no-deps -d /tmp/gist-dl
           cd /tmp && tar xzf gist-dl/sphinxcontrib.gist-*.tar.gz
-          sed -i '/declare_namespace/d' sphinxcontrib.gist-*/sphinxcontrib/__init__.py
-          pip install --no-build-isolation sphinxcontrib.gist-*/
+          SITE=$(python -c "import site; print(site.getsitepackages()[0])")
+          mkdir -p "$SITE/sphinxcontrib"
+          cp -r sphinxcontrib.gist-*/sphinxcontrib/gist "$SITE/sphinxcontrib/"
 
       - name: Build HTML
         run: sphinx-build -b html docs/source .
