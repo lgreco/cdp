@@ -56,9 +56,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          # Install Sphinx and the Read-the-Docs theme normally.
+          # Install Sphinx and the Sphinx Book Theme normally.
           # Both ship as pre-built wheels so there is no compilation step.
-          pip install "Sphinx>=7.0" "sphinx-rtd-theme>=2.0"
+          pip install "Sphinx>=7.0" "sphinx-book-theme>=1.0"
 
           # --- sphinxcontrib-gist: manual install workaround ---
           #
