@@ -7,7 +7,6 @@ Detailed outline
   * The House that Jack Built: a simple Python program illustrating basic programming constructs.
   * Mississippi in block letters, *horizontally.*
   * The tools of the trade: GitHub Codespaces, Jupyter Notebooks, and *MarkDown.*
-  * Is El alive?
   * The Programmer's Pact. Oral exams and final exam.
 
 * Week 02: From a simple program to code refactoring.
