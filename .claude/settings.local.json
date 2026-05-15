@@ -9,7 +9,10 @@
       "Bash(git push *)",
       "PowerShell(Get-ChildItem -Path \"E:\\\\GitHub_Clones\\\\cdp\" -Force | Select-Object Name, @{n='Type';e={if\\($_.PSIsContainer\\){'Directory'}else{'File'}}} | Sort-Object Name)",
       "Bash(git *)",
-      "Bash(xargs cat)"
+      "Bash(xargs cat)",
+      "Bash(pip install *)",
+      "Bash(make html *)",
+      "Bash(open *)"
     ]
   }
 }

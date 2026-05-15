@@ -35,7 +35,6 @@ root_doc = 'index'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx_rtd_theme",
     "sphinxcontrib.gist",
     "sphinx.ext.githubpages", # needed for GH actions
     "sphinx.ext.autosectionlabel",
@@ -67,8 +66,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
-#html_theme = "classic"
+html_theme = "sphinx_book_theme"
 
 html_title = "Leo Irakliotis' Courses"
 html_last_updated_fmt = "%B %d, %Y"
