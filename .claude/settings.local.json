@@ -7,7 +7,8 @@
       "Bash(git fetch *)",
       "Bash(git update-ref *)",
       "Bash(git push *)",
-      "PowerShell(Get-ChildItem -Path \"E:\\\\GitHub_Clones\\\\cdp\" -Force | Select-Object Name, @{n='Type';e={if\\($_.PSIsContainer\\){'Directory'}else{'File'}}} | Sort-Object Name)"
+      "PowerShell(Get-ChildItem -Path \"E:\\\\GitHub_Clones\\\\cdp\" -Force | Select-Object Name, @{n='Type';e={if\\($_.PSIsContainer\\){'Directory'}else{'File'}}} | Sort-Object Name)",
+      "Bash(git *)"
     ]
   }
 }
