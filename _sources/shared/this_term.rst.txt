@@ -11,4 +11,10 @@ In the **Spring 2026,** I teach **COMP 271** (Data Structures I), **COMP 363** (
 It is my commitment to make the courses as engaging and productive as possible. To achieve that, I will need your help. Please reach out to me at any time with suggestions, concerns, and ideas related to the course and to your studies. If you prefer to share your thoughts in a confidential way, you can `use an anonymous feedback form <https://docs.google.com/forms/d/e/1FAIpQLSfbbQkdO0buLZp17udHjphZYgZwkcZBgp3Tx6k0f6iMV_TykQ/viewform?usp=sf_link>`_. Communications are key!
 
 
+Summer 2026 term
+=================
+
+In the **Summer 2026,** I teach **COMP 170** (Introduction to Object-Oriented Programming) and **COMP 271** (Data Structures I), along with their graduate-level equivalents **COMP 400A** and **COMP 400B** respectively. Course pages for COMP 400A and COMP 400B are coming soon.
+
+
 
