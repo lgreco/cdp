@@ -1,30 +1,48 @@
-#
-# Action to build and publish Leo's Course Documentation Project.
-# Triggers on push to gh-pages, builds the Sphinx HTML tree,
-# and commits the output back to gh-pages.
-# [skip ci] in the auto-deploy commit message prevents a trigger loop.
-#
-# Leo Irakliotis - lgreco@gmail.com
-#
+name: Build and publish course documentation
+
+# Triggers on push to gh-pages (where source lives) and supports manual runs.
+# Builds the Sphinx HTML tree and commits the output back to gh-pages.
+# [skip ci] in the auto-commit message prevents a trigger loop.
 
 on:
-    push:
-        branches: [gh-pages]
+  push:
+    branches: [gh-pages]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
 
 jobs:
-    build-and-publish-cdp:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                ref: gh-pages
-            - uses: actions/setup-python@v5
-              with:
-                python-version: '3.x'
-                cache: 'pip'
-            - run: git config --global user.email "lgreco@gmail.com"
-            - run: git config --global user.name "Leo Irakliotis"
-            - run: pip install -r requirements.txt
-            - run: sphinx-build -b html docs/source .
-            - run: git add .
-            - run: git diff --staged --quiet || (git commit -m "Auto deployment [skip ci]" && git push)
+  build-and-publish-cdp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build HTML
+        run: sphinx-build -b html docs/source .
+
+      - name: Commit and push built output
+        run: |
+          git config user.email "lgreco@gmail.com"
+          git config user.name "Leo Irakliotis"
+          git add .
+          if ! git diff --staged --quiet; then
+            git commit -m "Auto deployment [skip ci]"
+            git push
+          fi
