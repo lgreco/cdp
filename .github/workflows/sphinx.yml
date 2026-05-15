@@ -1,17 +1,33 @@
 name: Build and publish course documentation
 
-# Triggers on push to gh-pages (where source lives) and supports manual runs.
-# Builds the Sphinx HTML tree and commits the output back to gh-pages.
-# [skip ci] in the auto-commit message prevents a trigger loop.
+# WHEN THIS RUNS
+# ---------------
+# 1. Automatically on every push to the gh-pages branch (where both the RST
+#    source and the built HTML live together).
+# 2. Manually from the GitHub Actions tab ("Run workflow" button) via
+#    workflow_dispatch — useful for forcing a rebuild without changing any file.
+#
+# WHAT IT DOES
+# ------------
+# Checks out gh-pages, installs Sphinx, builds the HTML tree from
+# docs/source/ into the repo root, then commits the output back to gh-pages.
+# The commit message contains "[skip ci]" so GitHub Actions does not
+# re-trigger this workflow on the auto-commit (which would create an
+# infinite loop).
 
 on:
   push:
     branches: [gh-pages]
   workflow_dispatch:
 
+# The workflow writes back to the repo (auto-commit of built HTML),
+# so it needs write access to contents.
 permissions:
   contents: write
 
+# If two pushes land in quick succession, queue the second run rather than
+# cancelling it. cancel-in-progress: false ensures no build is silently
+# dropped; the second run simply waits for the first to finish.
 concurrency:
   group: gh-pages-deploy
   cancel-in-progress: false
@@ -23,32 +39,95 @@ jobs:
       - name: Check out gh-pages branch
         uses: actions/checkout@v4
         with:
+          # gh-pages is the working branch — source RST and built HTML both
+          # live here. Do not switch to main; main is essentially unused.
           ref: gh-pages
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
+          # Pinned to 3.12 (not '3.x') to avoid breakage when GitHub bumps
+          # the default to a newer Python release. 3.12 is an LTS-style release
+          # with long support and is known-good with all dependencies here.
           python-version: '3.12'
+          # Cache the pip download cache between runs so repeated builds do not
+          # re-download the same wheels.
           cache: 'pip'
 
       - name: Install dependencies
         run: |
+          # Install Sphinx and the Read-the-Docs theme normally.
+          # Both ship as pre-built wheels so there is no compilation step.
           pip install "Sphinx>=7.0" "sphinx-rtd-theme>=2.0"
+
+          # --- sphinxcontrib-gist: manual install workaround ---
+          #
+          # sphinxcontrib-gist is an unmaintained package (last release 2017).
+          # Its setup.py does two things that break all modern pip install paths:
+          #
+          #   1. sphinxcontrib/__init__.py calls
+          #        __import__('pkg_resources').declare_namespace(__name__)
+          #      pkg_resources is part of setuptools, but setuptools 71+ no
+          #      longer exposes it inside pip's isolated build subprocess.
+          #
+          #   2. setup.py imports sphinxcontrib.gist to read __version__,
+          #      but the package is not yet installed at build time.  pip's
+          #      isolated build environment already has the sphinxcontrib
+          #      namespace (from Sphinx's own dependencies) but without the
+          #      gist subpackage, so the import fails.
+          #
+          # Even pip download triggers metadata resolution which runs the
+          # build hook, so we cannot use pip at all for this package.
+          #
+          # SOLUTION: fetch the source tarball directly from PyPI via Python's
+          # built-in urllib (no pip, no build hooks), extract it, and copy the
+          # gist/ subpackage straight into the sphinxcontrib namespace directory
+          # in site-packages.  Sphinx only needs the module to be importable —
+          # it does not care whether pip has a registration record for it.
+          #
+          # If sphinxcontrib-gist is ever replaced or the RST files stop using
+          # the .. gist:: directive, this entire block can be deleted and the
+          # package removed from requirements.txt.
+
+          # Step 1: Ask PyPI for the sdist download URL (avoids hardcoding a
+          # hash-containing path that could change between releases).
           GIST_URL=$(python3 -c "import urllib.request,json; d=json.loads(urllib.request.urlopen('https://pypi.org/pypi/sphinxcontrib-gist/json').read()); print([u['url'] for u in d['urls'] if u['packagetype']=='sdist'][0])")
+
+          # Step 2: Download and extract the tarball into /tmp.
           curl -sL "$GIST_URL" | tar xz -C /tmp
+
+          # Step 3: Find the site-packages directory for this Python install.
           SITE=$(python3 -c "import site; print(site.getsitepackages()[0])")
+
+          # Step 4: Copy the gist subpackage into the sphinxcontrib namespace.
+          # mkdir -p guards against the edge case where no other sphinxcontrib-*
+          # package has been installed yet (which would mean the directory does
+          # not exist).
           mkdir -p "$SITE/sphinxcontrib"
           cp -r /tmp/sphinxcontrib.gist-*/sphinxcontrib/gist "$SITE/sphinxcontrib/"
 
       - name: Build HTML
+        # Reads RST source from docs/source/ (configured in docs/source/conf.py)
+        # and writes the HTML tree to the repo root (.).
+        # The repo root is where GitHub Pages serves files from on gh-pages.
         run: sphinx-build -b html docs/source .
 
       - name: Commit and push built output
         run: |
           git config user.email "lgreco@gmail.com"
           git config user.name "Leo Irakliotis"
+
+          # Stage everything — new/changed HTML, _static/, _images/, etc.
+          # The .gitignore on gh-pages is tuned to exclude source-control files
+          # and the docs/source/ tree so they are not swept into this commit.
           git add .
+
+          # Only commit if there are actual changes; a no-op build (e.g. a
+          # push that only touched a file excluded by .gitignore) should not
+          # produce an empty commit.
           if ! git diff --staged --quiet; then
+            # [skip ci] in the message tells GitHub Actions not to re-trigger
+            # this workflow on the auto-commit, preventing an infinite loop.
             git commit -m "Auto deployment [skip ci]"
             git push
           fi

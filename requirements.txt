@@ -1,3 +1,25 @@
+# Python dependencies for building the Sphinx documentation site.
+# Used by GitHub Actions (.github/workflows/sphinx.yml) and local builds.
+#
+# To build locally:
+#   pip install -r requirements.txt   (then see note on sphinxcontrib-gist below)
+#   make html
+#
+# --------------------------------------------------------------------------
+# NOTE: sphinxcontrib-gist cannot be installed with a plain pip install
+# because its setup.py is incompatible with modern pip/setuptools (see the
+# lengthy comment in sphinx.yml for the full explanation).
+#
+# In CI this is handled automatically by the workflow.
+# For a LOCAL install, run these commands instead of including this package
+# in the pip install call:
+#
+#   python3 -c "import urllib.request,json; d=json.loads(urllib.request.urlopen('https://pypi.org/pypi/sphinxcontrib-gist/json').read()); print([u['url'] for u in d['urls'] if u['packagetype']=='sdist'][0])" | xargs curl -sL | tar xz -C /tmp
+#   SITE=$(python3 -c "import site; print(site.getsitepackages()[0])")
+#   mkdir -p "$SITE/sphinxcontrib"
+#   cp -r /tmp/sphinxcontrib.gist-*/sphinxcontrib/gist "$SITE/sphinxcontrib/"
+# --------------------------------------------------------------------------
+
 Sphinx>=7.0
 sphinx-rtd-theme>=2.0
-sphinxcontrib-gist>=0.0.6
+# sphinxcontrib-gist>=0.0.6  <-- intentionally excluded; installed manually in CI (see above)
