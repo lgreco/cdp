@@ -34,11 +34,11 @@ jobs:
       - name: Install dependencies
         run: |
           pip install "Sphinx>=7.0" "sphinx-rtd-theme>=2.0"
-          pip download "sphinxcontrib-gist>=0.0.6" --no-deps -d /tmp/gist-dl
-          cd /tmp && tar xzf gist-dl/sphinxcontrib.gist-*.tar.gz
-          SITE=$(python -c "import site; print(site.getsitepackages()[0])")
+          GIST_URL=$(python3 -c "import urllib.request,json; d=json.loads(urllib.request.urlopen('https://pypi.org/pypi/sphinxcontrib-gist/json').read()); print([u['url'] for u in d['urls'] if u['packagetype']=='sdist'][0])")
+          curl -sL "$GIST_URL" | tar xz -C /tmp
+          SITE=$(python3 -c "import site; print(site.getsitepackages()[0])")
           mkdir -p "$SITE/sphinxcontrib"
-          cp -r sphinxcontrib.gist-*/sphinxcontrib/gist "$SITE/sphinxcontrib/"
+          cp -r /tmp/sphinxcontrib.gist-*/sphinxcontrib/gist "$SITE/sphinxcontrib/"
 
       - name: Build HTML
         run: sphinx-build -b html docs/source .
