@@ -12,7 +12,8 @@
       "Bash(xargs cat)",
       "Bash(pip install *)",
       "Bash(make html *)",
-      "Bash(open *)"
+      "Bash(open *)",
+      "Bash(gh run *)"
     ]
   }
 }
