@@ -70,3 +70,5 @@ html_theme = "sphinx_book_theme"
 
 html_title = "Leo Irakliotis' Courses"
 html_last_updated_fmt = "%B %d, %Y"
+html_static_path = ['_static']
+html_favicon = '_static/favicon.svg'
