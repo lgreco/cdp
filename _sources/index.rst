@@ -48,3 +48,17 @@ site.
    LeoIrakliotis
 
 
+----
+
+Use of AI
+---------
+
+I use AI agents in the preparation of this site and the courses it documents.
+Specifically, AI assists with three tasks: organizing material I have developed,
+editing text for clarity and consistency, and summarizing transcripts of recorded
+class meetings. The original content — ideas, explanations, examples, and
+assessments — is mine, and I take full responsibility for the final result.
+
+For any project where AI is used in these ways, the prompts that drive the AI
+are published in the corresponding repository on my
+`GitHub account <https://github.com/lgreco>`_.
