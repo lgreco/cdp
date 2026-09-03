@@ -25,7 +25,7 @@ outcomes instead, since the book's 1st edition doesn't cover that material.
    * - **Week 02**
      - Tools and basic techniques
      - Ch. 00 — *Algorithms*
-     - Colab/Python/Markdown/LaTeX setup; Gaussian elimination; complexity/performance analysis
+     - Colab/Python/Markdown/LaTeX setup; the Newton-Raphson method; complexity/performance analysis
    * - **Week 03**
      - String alignment
      - Ch. 03 — *Dynamic Programming* (edit-distance)
@@ -89,9 +89,9 @@ Fall 2026 — detailed topics
   * Basic Python syntax.
   * Markup languages: Markdown and LaTeX.
   * A simple algorithm described in Markdown, LaTeX, and Python.
-  * A simple algorithm to solve a 2×2 system of equations, then a 3×3 system.
-  * :math:`n \times n` with :math:`n > 3` and Gaussian elimination; performance analysis.
-  * **Assignment:** implement Gaussian elimination in Python.
+  * Root-finding by tangent-line approximation: deriving the Newton-Raphson update rule :math:`x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}` from a first-order Taylor argument.
+  * Quadratic convergence near a simple root; standard failure modes (:math:`f'(x_n) \approx 0`, poor initial guess, repeated roots) and stopping criteria; performance analysis.
+  * **Assignment:** implement Newton-Raphson root-finding in Python.
 
 * Week 03: String alignment.
 
