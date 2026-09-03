@@ -2,153 +2,131 @@
 Detailed outline
 *******************************************************************************
 
+Fall 2026 is a 13-technical-week course (the two extra weeks beyond the Summer
+term's 11 are spent on two additions — **sorting** and **trees** — inserted
+where they fit the existing arc, not tacked onto the end). A testing habit is
+seeded starting Week 3, rather than taught as a single dedicated lesson.
+
 .. list-table::
    :header-rows: 1
-   :widths: 50 50
+   :widths: 15 85
 
-   * - Fall and Spring timetables
-     - Summer timetable
-   * - **Week 01**: Building on prior programming knowledge
-     - **Week 01**: Building on prior programming knowledge
-   * - **Week 02**: From a simple program to code refactoring
-     - **Week 02**: Code refactoring and class definitions
-   * - **Week 03**: A simple class definition and usage
-     - *(combined with Week 02)*
-   * - **Week 04**: Python's object model: attributes and methods
-     - **Week 03**: Python's object model: attributes and methods
-   * - **Week 05**: Abstract Data Types (ADTs) and a lookup table
-     - **Week 04**: Abstract Data Types (ADTs) and a lookup table
-   * - **Week 06**: Trainlines and linked lists
-     - **Week 05**: Trainlines and linked lists
-   * - **Week 07**: Software contracts and unit testing
-     - **Week 06**: Software contracts and unit testing
-   * - **Week 08**: *Spring Break*
-     - —
-   * - **Week 09**: Stacks and queues
-     - **Week 07**: Stacks and queues
-   * - **Week 10**: Hash tables
-     - **Week 08**: Hash tables and collision resolution
-   * - **Week 11**: Hashing functions and collision resolution
-     - *(combined with Week 08)*
-   * - **Week 12**: Priority queues and heaps
-     - **Week 09**: Priority queues and heaps
-   * - **Week 13**: Non-linear data structures: graphs
-     - **Week 10**: Graphs and course review
-   * - **Week 14**: Review and wrap-up
-     - *(combined with Week 10)*
-   * - **Week 15**: Oral exams
-     - **Week 11**: Oral exams and final exam
-   * - **Week 16**: Final exam
-     - *(combined with Week 11)*
+   * - Week
+     - Topic
+   * - **Week 01**
+     - Separating data from behavior
+   * - **Week 02**
+     - Arrays, objects, and the first class
+   * - **Week 03**
+     - Resizing, magic numbers, and encapsulation
+   * - **Week 04**
+     - Dunder methods, bounds checking, and delegation
+   * - **Week 05**
+     - Contracts, composition, and the first linked node
+   * - **Week 06**
+     - Linked traversal, tail pointers, and Big O
+   * - **Week 07**
+     - Sorting
+   * - **Week 08**
+     - Generic nodes and a doubly linked list
+   * - **Week 09**
+     - Trees
+   * - **Week 10**
+     - Discontinuity, cycles, and reversal
+   * - **Week 11**
+     - O(1) ends, recursion, and stack/queue
+   * - **Week 12**
+     - Circular buffers and graphs
+   * - **Week 13**
+     - Hashing, and a capstone
 
 
-Fall and Spring — detailed topics
+Fall 2026 — detailed topics
 -----------------------------------
 
-* Week 01: Building on prior programming knowledge.
+* Week 01: Separating data from behavior.
 
-  * The House that Jack Built: a simple Python program illustrating basic programming constructs.
-  * Mississippi in block letters, *horizontally.*
-  * The tools of the trade: GitHub Codespaces, Jupyter Notebooks, and *MarkDown.*
-  * The Programmer's Pact. Oral exams and final exam.
+  * The Mississippi progression: letter shapes as data (a list of strings) versus letter shapes baked into ``print()`` calls.
+  * ``pasta.py`` refactored into ``get_guests()`` / ``pasta_recipe()`` / ``display_recipe()`` / ``main()`` as a counter-example.
+  * Quick vim/terminal fluency check — this course assumes COMP 170's habits.
 
-* Week 02: From a simple program to code refactoring.
+* Week 02: Arrays, objects, and the first class.
 
-  * Functions for `add`, `add_unique`, `remove_first`, and `remove_all` on a simple list.
-  * Functions for `contains`, `index_of`, `index_of_all` etc on a simple list.
+  * True arrays (fixed size, single type) versus Python's dynamic list.
+  * Classes as blueprints, objects as instances; ``__init__``, ``self``.
+  * The first ``DynamicArray``, with sentinel ``-1`` slots and ``add_zip_code()``.
 
-* Week 03: A simple class definition and usage.
+* Week 03: Resizing, magic numbers, and encapsulation.
 
-  * What is an object?
-  * Defining a class in Python.
-  * Creating instances of a class.
-  * Using attributes and methods of a class.  
-  * Public v. private attributes and methods in Python.
-  * The *all adults* principle.
+  * ``resize()``'s three steps: allocate double, copy, replace.
+  * The magic-number smell, replaced by ``DEFAULT_CAPACITY`` / ``RESIZE_BY``.
+  * The ``int()``-truncation bug and its ``math.ceil()`` fix.
+  * ``_zip_codes`` renamed to ``_underlying``; single- vs. double-underscore privacy.
+  * **Testing habit starts here:** an ``assert`` against ``resize()``'s expected post-condition, checked before trusting the printed output.
 
-* Week 04: Python's object model: attributes and methods.
+* Week 04: Dunder methods, bounds checking, and delegation.
 
-  * Special methods: `__init__`, `__str__`, `__repr__`, `__eq__`, `__lt__`, etc.
-  * Class variables v. instance variables.
-  * Class methods and static methods.
-  * Constants v. magic values
+  * ``__str__``, ``__len__``.
+  * The negative-index trap in ``get()``.
+  * Refactoring ``contains()`` to delegate to ``index_of()``.
+  * The shift-and-clear ``remove()`` algorithm.
+  * Generalizing ``_underlying`` from ``list[int]`` to ``list``.
 
-* Week 05: Abstract Data Types (ADTs) and practical implementations: a lookup table
+* Week 05: Contracts, composition, and the first linked node.
 
-  * What is an ADT?
-  * The Lookup Table ADT: operations and specifications.
-  * A simple implementation using a list of key-value pairs.
-  * Performance analysis of the simple implementation.
-  * Limitations of the simple implementation.
+  * The data-structure contract (``contains``, ``index_of``, ``index_of_all``, ``count``, ``remove``) as an abstract base class.
+  * ``FellowshipRoster`` as composition rather than inheritance.
+  * Docstrings, ``str.join()`` over repeated concatenation.
+  * ``station.py``: the first object whose field points to another object of the same class.
 
-* Week 06: Trainlines and linked lists.
+* Week 06: Linked traversal, tail pointers, and Big O.
 
-  * The Trainline ADT: operations and specifications.
-  * A linked list implementation of the Trainline ADT.
-  * Node class definition.
-  * Linked list traversal.
-  * Insertion and deletion in a linked list.
-  * Performance analysis of linked list operations.
+  * Traversal-based ``add()`` and its :math:`\mathcal{O}(n)` cost; a ``_tail`` pointer bringing it to :math:`\mathcal{O}(1)`.
+  * Big O as an upper bound vs. Big Theta as a tight bound: :math:`f(n) \in \mathcal{O}(g(n))` when :math:`f(n) \le c \cdot g(n)`.
+  * The full contract implemented on ``Trainline``; ``__iter__`` via ``yield``.
 
-* Week 07: Software contracts and unit testing. 
+* Week 07: Sorting.
 
-  * What is a software contract?
-  * Writing preconditions, postconditions, and invariants.
-  * Introduction to unit testing with `unittest`.
-  * Writing test cases for the Lookup Table and Trainline ADTs.
-  * Running tests and interpreting results.
+  * Selection sort and insertion sort, both :math:`\mathcal{O}(n^2)`, traced by hand and implemented on the array structure built in Weeks 2–4.
+  * Counting comparisons and swaps as a direct application of Week 6's :math:`\mathcal{O}(n)` vs. :math:`\mathcal{O}(n^2)` distinction.
+  * A forward pointer — not a full treatment — to :math:`\mathcal{O}(n \log n)` divide-and-conquer sorts (merge sort), covered properly in COMP 363 with recurrence-relation machinery.
 
-* Week 08: *Spring Break*
+* Week 08: Generic nodes and a doubly linked list.
 
-* Week 09: Stacks and queues.
+  * ``Node`` generalized with ``TypeVar``/``Generic``.
+  * ``DoubleLinkedList``'s constructor.
+  * The slow/fast cursor technique for finding a list's middle node in one pass, with a count field to make it :math:`\mathcal{O}(1)` to check.
 
-  * The Stack ADT: operations and specifications.
-  * Array-based implementation of the Stack ADT.
-  * Linked list-based implementation of the Stack ADT.
-  * The Queue ADT: operations and specifications.
-  * Array-based implementation of the Queue ADT.
-  * Linked list-based implementation of the Queue ADT.
-  * Performance analysis of stack and queue operations.
+* Week 09: Trees.
 
-* Week 10: Hash tables.
+  * A ``TreeNode`` with ``left``/``right`` instead of ``next`` — one field short of the ``Node`` from Week 8.
+  * Building a small binary search tree; implementing one traversal (in-order); insert and search.
+  * Framed as a bridge to non-linear data structures — depth, balancing, and deletion are out of scope this term.
 
-  * The Hash Table ADT: operations and specifications.
-  * Hash functions and their properties.
-  * Collision resolution techniques: chaining and open addressing.
-  * Implementing a hash table using chaining.
-  * Performance analysis of hash table operations.
+* Week 10: Discontinuity, cycles, and reversal.
 
+  * Completing ``add()`` on the doubly linked list.
+  * Detecting a broken bidirectional link.
+  * Detecting a cycle in :math:`\mathcal{O}(1)` by inspecting a well-maintained ``_tail`` or a ring-wired head/tail pair.
+  * Reversing a forward-only list in place by rewiring pointers.
 
-* Week 11: Hashing functions and collision resolution.
+* Week 11: O(1) ends, recursion, and stack/queue.
 
-  * Designing effective hash functions.
-  * Load factor and its impact on performance.
-  * Rehashing and dynamic resizing of hash tables.
-  * Implementing a hash table using open addressing.
-  * Performance analysis of different collision resolution techniques.
+  * Removing the head or tail of a doubly linked list in three constant-time steps.
+  * Recursion and the maximum-recursion-depth crash as a bridge to the call stack.
+  * ``push``/``pop``, ``enqueue``/``dequeue``, ``peek``, ``is_empty``.
+  * ``BoundedCollection`` as a shared superclass for ``Stack`` and ``Queue`` via inheritance.
 
-* Week 12: Priority queues and heaps.
+* Week 12: Circular buffers and graphs.
 
-  * The Priority Queue ADT: operations and specifications.
-  * Binary heap data structure.
-  * Array-based implementation of a binary heap.
-  * Insertion and deletion in a binary heap.
-  * Performance analysis of priority queue operations.
+  * Circular queues and stacks via front/back pointers and modulo arithmetic.
+  * Graphs as vertices and edges; adjacency list and adjacency matrix.
+  * ``naive_reachability``'s traversal loop, and the early-stopping refinement.
 
-* Week 13: Non-linear data structures: graphs and adjacency matrices.
-  * How things are done in Java
-  * Graph definition and basic properties. 
-  * Graph types. 
-  * Parts of a graph. 
-  * Representing a graph with arrays. 
-  * Graph traversals. 
-  * Stack v. queue-based traversals of a graph.
+* Week 13: Hashing, and a capstone.
 
-* Weeks 14: Review and wrap-up.
-
-  * Summary of key concepts.
-  * Technical interview practice
-
-* Week 15: Oral exams.
-
-* Week 16: Final exam.
+  * A file-backed queue/stack, covered as a brief demonstration.
+  * Hotel-room assignment by first letter; the pigeonhole principle named explicitly as the reason collisions are unavoidable.
+  * Linear probing; chaining as "an array of the linked lists from Week 8."
+  * Load factor :math:`\alpha = \frac{\text{slots used}}{\text{capacity}}`; Python's ``dict`` named as exactly this structure.
+  * Final assignment: ``SimpleHash``.
