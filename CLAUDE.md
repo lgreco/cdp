@@ -9,9 +9,9 @@ A Sphinx/RST static documentation site for Leo Irakliotis' computer science cour
 ## Tech stack
 
 - Python / Sphinx (`sphinx-build -b html docs/source .`)
-- Theme: `sphinx_rtd_theme` (Read the Docs)
+- Theme: `sphinx_book_theme` (switched from `sphinx_rtd_theme` in commit `4556d81f`)
 - Extensions: `sphinxcontrib.gist`, `sphinx.ext.githubpages`, `sphinx.ext.autosectionlabel`
-- Dependencies: `requirements.txt` (Sphinx ≥ 7.0, sphinx-rtd-theme ≥ 2.0, sphinxcontrib-gist)
+- Dependencies: `requirements.txt` (Sphinx ≥ 7.0, sphinx-book-theme ≥ 1.0, sphinxcontrib-gist)
 - CI/CD: `.github/workflows/sphinx.yml` — builds on push to `gh-pages`, also supports `workflow_dispatch` for manual runs
 
 ## Project layout
@@ -35,10 +35,12 @@ sphinx.sh             ← local build helper (activates venv, runs make html/epu
 
 Built HTML (`.html`, `_static/`, `_images/`, etc.) is committed to the repo root on `gh-pages`. The `.gitignore` is tuned to keep build artifacts out of unintended `git add .` scope.
 
-## Active courses (Spring 2026)
+## Active courses (Fall 2026)
 
-Listed under "Courses" in `index.rst`: HONR204, COMP271, COMP363, COMP460.  
-Listed under "Additional Courses": COMP170, COMP264, COMP141, COMP163, COMP306, COMP397.
+Current term is set in `docs/source/shared/this_term.rst`. Listed under "Current term's courses" in `index.rst`: COMP170, COMP271, COMP363.  
+Listed under "Past (and possibly future) terms' courses": HONR204, COMP141, COMP163, COMP264, COMP306, COMP460, COMP397.
+
+When the term changes, update `docs/source/shared/this_term.rst` and reorder the two toctrees in `docs/source/index.rst` to match.
 
 ## COMP 170 restructuring — important context
 
@@ -60,23 +62,13 @@ OER abbreviations used in the outline:
 - **TLCL** = The Linux Command Line 6th ed.
 - **notes** = course repository mathematical notes
 
-## What was done in this session (2026-05-15)
+## COMP 170 reading material
 
-### COMP 170 content updates
-- `docs/source/COMP170/introduction.rst`: updated course description to name the three parallel tracks; replaced empty toctree with entries for `organization`, `reading`, `notes`; fixed title (removed brackets from `[Object Oriented]`)
-- `docs/source/COMP170/organization.rst`: updated course overview paragraph to describe the three-track structure; replaced *Building Python Programs* (paid) with Think Python + The Linux Command Line (both free OERs) + course notes; updated computer equipment note to mention WSL2
+`docs/source/COMP170/reading.rst` and `docs/source/COMP170/organization.rst` both list the course's OER textbooks: Think Python 3rd ed., The Linux Command Line 6th ed., and the course notes. There is no paid textbook for COMP 170 — keep these two files in sync if the reading list changes.
 
-### GitHub Actions cleanup
-- **Deleted** `.travis.yml` — legacy Travis CI config (Python 3.4, `travis-sphinx`), fully superseded
-- **Deleted** `get-current-version.sh` — only ever used by `.travis.yml`
-- **Rewrote** `.github/workflows/sphinx.yml`:
-  - Added top-level `name:`
-  - Added `workflow_dispatch:` trigger for manual builds from the GitHub UI
-  - Added explicit `permissions: contents: write`
-  - Added `concurrency:` block to queue rather than race on rapid pushes
-  - Named every step
-  - Switched from `--global` git config to repo-local
-  - Replaced `||`/`&&` one-liner with a clear `if` block
+## GitHub Actions
+
+`.github/workflows/sphinx.yml` is the only CI config (legacy `.travis.yml` and its helper script were removed). It builds on push to `gh-pages` and also supports manual `workflow_dispatch` runs from the GitHub UI, with `contents: write` permission to auto-commit built HTML back to the branch, and a `concurrency` block to queue rather than race on rapid pushes.
 
 ## Local build
 

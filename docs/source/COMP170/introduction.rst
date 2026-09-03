@@ -10,6 +10,7 @@ The course covers Python programming from first principles along three parallel 
 	:maxdepth: 2
 
 .. include:: ./organization.rst
+.. include:: ./detailedOutline.rst
 .. include:: ./reading.rst
 .. include:: ./notes.rst
 

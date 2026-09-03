@@ -1,9 +1,11 @@
 
-Summer 2026 term
-=================
+Fall 2026 term
+==============
 
-In the **Summer 2026,** I teach **COMP 170** (Introduction to Object-Oriented Programming) and **COMP 271** (Data Structures I), along with their graduate-level equivalents **COMP 400A** and **COMP 400B** respectively. Course pages for COMP 400A and COMP 400B are coming soon.
+In the **Fall 2026,** I teach **COMP 170** (Introduction to Object-Oriented Programming), **COMP 271** (Data Structures I), and **COMP 363** (Design and Analysis of Algorithms).
 
+
+.. In the **Summer 2026,** I teach **COMP 170** (Introduction to Object-Oriented Programming) and **COMP 271** (Data Structures I), along with their graduate-level equivalents **COMP 400A** and **COMP 400B** respectively. Course pages for COMP 400A and COMP 400B are coming soon.
 
 .. In the **Spring 2026,** I teach **COMP 271** (Data Structures I), **COMP 363** (Design and Analysis of Algorithms) and **COMP 460** (Algorithms, in the graduate school), and **HONR 204** (Honors class in Science and Society).
 
