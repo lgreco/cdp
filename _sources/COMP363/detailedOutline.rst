@@ -10,6 +10,9 @@ chapter is noted; a few weeks (Tree Algorithms, String Matching and
 Computational Geometry, Neural Networks) draw on the course's own learning
 outcomes instead, since the book's 1st edition doesn't cover that material.
 
+*The outline is tentative and is shown here as a guideline for the course. The
+actual material to be covered depends on the group's interests and dynamics*
+
 .. list-table::
    :header-rows: 1
    :widths: 10 30 20 40
