@@ -7,6 +7,15 @@ Required reading
 
 There is no required textbook for this course. All course materials, including lecture notes, assignments, and readings, are provided online through the course website and GitHub repository.
 
+Supplemental reading
+======================
+
+Two freely available Python books are used as reading sources for some course material (readings, assignments) generated during the term. Neither is required or graded on its own — assigned excerpts, when any, are called out in the relevant lecture note or assignment.
+
+* `Think Python, 3rd edition <https://allendowney.github.io/ThinkPython/>`__, by Allen Downey. Free online; also available in print.
+
+* `Introducing Python, 3rd edition <https://learning.oreilly.com/library/view/introducing-python-3rd/9781098174392/>`__, by Bill Lubanovic. Free on the O'Reilly platform if you log in with your LUC email — see the curated reading list on the :doc:`reading` page.
+
 Programming environment
 ========================
 
