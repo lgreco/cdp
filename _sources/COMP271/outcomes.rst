@@ -4,6 +4,8 @@ Course description and outcomes
 
 In this course, you will improve your programming skills, learn about object-oriented design, and explore fundamental data structures such as arrays, linked lists, stacks, queues, trees, and hash tables. You will look at hoe these data structures are implemented and how to use them effectively to solve computational problems. The course emphasizes algorithm analysis, efficiency, and practical applications using the Python programming language. You will also gain experience in debugging, testing, and documenting code, preparing you for more advanced studies in computer science and software development.
 
+**Linear Data Structures and Algorithm Design:** Students learn linear data structures and the performance of their operations, and they learn to solve simple computational problems by designing suitable algorithms and efficient data structures.
+
 **Data Structures:** Understand and implement fundamental data structures including arrays, linked lists, stacks, queues, trees, and hash tables. Analyze their performance characteristics and choose appropriate structures for different applications.
 
 **Object-Oriented Programming:** Apply object-oriented programming principles such as encapsulation, inheritance, and polymorphism to design and implement modular and reusable code in Python.

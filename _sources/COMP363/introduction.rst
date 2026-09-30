@@ -2,6 +2,8 @@
 COMP 363 Design and Analysis of Algorithms
 ############################################
 
+Curious who's teaching you? Indulge the instructor in a little :doc:`shameless self-promotion </LeoIrakliotis>`.
+
 ..	toctree::
 	:maxdepth: 2
 

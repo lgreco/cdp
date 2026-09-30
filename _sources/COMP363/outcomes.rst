@@ -6,6 +6,8 @@ In this course, you will deepen your understanding of algorithm design, analysis
 
 
 
+**Foundational Algorithm Outcomes:** The ability to design and analyze efficient algorithms; understanding of the necessary models and mathematical tools; understanding of a variety of useful data structures and fundamental algorithms; exposure to the classification of computational problems into different complexity classes.
+
 **Algorithm Analysis and Complexity:** Evaluate the time and space complexity of algorithms using Big-O, Big-Theta, and Big-Omega notations. Differentiate between worst-case, average-case, and best-case complexities and apply these analyses to problem-solving.
 
 **Design and Implementation of Algorithms:** Apply algorithm design paradigms such as divide-and-conquer, dynamic programming, greedy algorithms, and backtracking to solve complex computational problems. Develop and implement efficient algorithms for fundamental problems in sorting, searching, graph traversal, and optimization.
