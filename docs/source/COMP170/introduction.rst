@@ -6,7 +6,7 @@ This is the starting point for most students interested in learning how to progr
 
 The course covers Python programming from first principles along three parallel tracks: programming concepts (following *Think Python* by Allen Downey), Unix command-line tools and environment (following *The Linux Command Line* by William Shotts), and mathematical foundations — logic, functions, sets, and introductory algorithm analysis — drawn from course notes. By the end of the course students write multi-class Python programs with docstrings and assertion-based tests, navigate the command line fluently, and can connect programming constructs to the discrete-math ideas behind them.
 
-Curious who's teaching you? Indulge the instructor in a little :doc:`shameless self-promotion </LeoIrakliotis>`.
+For instructor information and contact, see :doc:`shameless self-promotion </LeoIrakliotis>`.
 
 ..	toctree::
 	:maxdepth: 2
