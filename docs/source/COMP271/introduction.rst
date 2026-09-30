@@ -4,7 +4,7 @@ COMP 271 Data Structures I
 
 The focus of this course is data structures and the algorithms that support them. The course looks at how to organize, manage, process, sort, and compare data; how fast and efficiently can be done; and how such operations can be supported by programming languages in general and Java in particular.
 
-
+Curious who's teaching you? Indulge the instructor in a little :doc:`shameless self-promotion </LeoIrakliotis>`.
 
 ..	toctree::
 	:maxdepth: 2
