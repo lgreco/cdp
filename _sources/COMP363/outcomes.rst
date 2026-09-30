@@ -6,15 +6,15 @@ In this course, you will deepen your understanding of algorithm design, analysis
 
 
 
-Official course learning outcome (CLO)
----------------------------------------
+Official course learning outcomes (CLOs)
+------------------------------------------
 
 The ability to design and analyze efficient algorithms; understanding of the necessary models and mathematical tools; understanding of a variety of useful data structures and fundamental algorithms; exposure to the classification of computational problems into different complexity classes.
 
-How this CLO is operationalized
----------------------------------------
+How these CLOs are operationalized
+------------------------------------
 
-The outcomes below describe how the official CLO above is operationalized across the course's topics and assignments.
+The outcomes below describe how the official CLOs above are operationalized across the course's topics and assignments.
 
 **Algorithm Analysis and Complexity:** Evaluate the time and space complexity of algorithms using Big-O, Big-Theta, and Big-Omega notations. Differentiate between worst-case, average-case, and best-case complexities and apply these analyses to problem-solving.
 
