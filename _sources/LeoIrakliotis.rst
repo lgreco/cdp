@@ -7,7 +7,7 @@ At Loyola I teach a range of introductory and senior-level courses in computer s
 
 As a consultant, I have worked with small and medium-size enterprises on technology and strategy. I have served as a consulting expert in intellectual property litigations, and as credentials expert on immigration cases.
 
-In my free time, I am a photographer, diver, aviator, amateur radio operator, and the guardian of two dogs (Martin and Mina).
+In my free time, I am a photographer, diver, aviator, amateur radio operator, and the guardian of two dogs (Mina and Arlo).
 
 Reach me at `leo@cs.luc.edu <mailto:leo@cs.luc.edu>`_.
 
