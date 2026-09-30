@@ -11,5 +11,5 @@ In my free time, I am a photographer, diver, aviator, amateur radio operator, an
 
 Reach me at `leo@cs.luc.edu <mailto:leo@cs.luc.edu>`_.
 
-**A note for students:** My pop culture framework spans the 1980s and the 1990s. If you want to understand half the things I utter in class, watch a few episodes of the following: *Frazier, Star Trek the Next Generation, MASH,* and *Doctor Who.* I know who *Happy Potter* is. And there are three, and only three, *Star Wars* movies. Don't even try to debate otherwise with me. In terms of literature you should know who *Tom Bombadil* was. Seriously!
+**A note for students:** My pop culture framework spans the 1980s and the 1990s. If you want to understand half the things I utter in class, watch a few episodes of the following: *Frazier, Star Trek the Next Generation, MASH,* and *Doctor Who.* I know who *Happy Potter* is. And there are three, and only three, *Star Wars* movies. Don't even try to debate otherwise with me. In terms of literature you should know who *Tom Bombadil* and Leopold Bloom were. Seriously!
 
